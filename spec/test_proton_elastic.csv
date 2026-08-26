@@ -1,0 +1,13 @@
+corpus,sector,projectile,target_A,target_Z,target_label,energy_mev,energy_hi_mev,subentry,pointer,pdf_page
+test,proton_elastic,proton,24,12,24Mg,7.4,,F1277002,,31
+test,proton_elastic,proton,58,28,58Ni,172.0,,D0350003,,31
+test,proton_elastic,proton,58,28,58Ni,250.0,,E2042003,,31
+test,proton_elastic,proton,64,30,64Zn,24.0,,O2165003,,31
+test,proton_elastic,proton,116,50,116Sn,295.0,,E2098002,,31
+test,proton_elastic,proton,118,50,118Sn,295.0,,E2098003,,31
+test,proton_elastic,proton,120,50,120Sn,200.0,,E2042007,,31
+test,proton_elastic,proton,120,50,120Sn,250.0,,E2042010,,31
+test,proton_elastic,proton,120,50,120Sn,295.0,,E2098004,,31
+test,proton_elastic,proton,120,50,120Sn,300.0,,E2042012,,31
+test,proton_elastic,proton,122,50,122Sn,295.0,,E2098005,,31
+test,proton_elastic,proton,124,50,124Sn,295.0,,E2098006,,31

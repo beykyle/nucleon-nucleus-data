@@ -1,0 +1,5 @@
+corpus,sector,projectile,target_A,target_Z,target_label,energy_mev,energy_hi_mev,subentry,pointer,pdf_page
+test,proton_reaction,proton,40,20,40Ca,81.0,180.0,D0356003,,33
+test,proton_reaction,proton,58,28,58Ni,81.0,,D0356004,,33
+test,proton_reaction,proton,90,40,90Zr,81.0,180.0,D0356005,,33
+test,proton_reaction,proton,208,82,208Pb,81.0,180.0,D0356006,,33

@@ -1,0 +1,15 @@
+corpus,sector,projectile,target_A,target_Z,target_label,energy_mev,energy_hi_mev,subentry,pointer,pdf_page
+test,proton_ay,proton,58,28,58Ni,172.0,,D0350004,,32
+test,proton_ay,proton,58,28,58Ni,250.0,,E2042004,,32
+test,proton_ay,proton,58,28,58Ni,295.0,,E2291009,,32
+test,proton_ay,proton,116,50,116Sn,295.0,,E2098007,,32
+test,proton_ay,proton,118,50,118Sn,295.0,,E2098008,,32
+test,proton_ay,proton,120,50,120Sn,200.0,,E2042008,,32
+test,proton_ay,proton,120,50,120Sn,250.0,,E2042011,,32
+test,proton_ay,proton,120,50,120Sn,295.0,,E2098009,,32
+test,proton_ay,proton,120,50,120Sn,300.0,,E2042013,,32
+test,proton_ay,proton,122,50,122Sn,295.0,,E2098010,,32
+test,proton_ay,proton,124,50,124Sn,295.0,,E2098011,,32
+test,proton_ay,proton,204,82,204Pb,295.0,,E2291006,,32
+test,proton_ay,proton,206,82,206Pb,295.0,,E2291007,,32
+test,proton_ay,proton,208,82,208Pb,295.0,,E2291008,,32

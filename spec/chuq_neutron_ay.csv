@@ -1,0 +1,12 @@
+corpus,sector,projectile,target_A,target_Z,target_label,energy_mev,energy_hi_mev,subentry,pointer,pdf_page
+chuq,neutron_ay,neutron,40,20,40Ca,10.935,,12996004,,21
+chuq,neutron_ay,neutron,40,20,40Ca,13.904,,12996004,,21
+chuq,neutron_ay,neutron,40,20,40Ca,16.923,,12996004,,21
+chuq,neutron_ay,neutron,58,28,58Ni,9.92,,12930010,,21
+chuq,neutron_ay,neutron,58,28,58Ni,13.91,,12930010,,21
+chuq,neutron_ay,neutron,116,50,116Sn,9.907,,13158002,,21
+chuq,neutron_ay,neutron,116,50,116Sn,13.894,,13158002,,21
+chuq,neutron_ay,neutron,120,50,120Sn,9.906,,13158003,,21
+chuq,neutron_ay,neutron,120,50,120Sn,13.894,,13158003,,21
+chuq,neutron_ay,neutron,208,82,208Pb,9.97,,12844007,,21
+chuq,neutron_ay,neutron,208,82,208Pb,13.9,,12844007,,21
