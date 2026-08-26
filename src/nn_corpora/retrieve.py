@@ -43,6 +43,7 @@ class RowOutcome:
     subentry: str = ""
     energy: float | None = None
     n_points: int = 0
+    substituted: bool = False
 
 
 @dataclass
@@ -70,6 +71,11 @@ class SectorData:
         return [o for o in self.outcomes if not o.resolved]
 
     @property
+    def substitutions(self) -> list[RowOutcome]:
+        """Rows satisfied by a renumbered subentry rather than the one tabulated."""
+        return [o for o in self.outcomes if o.substituted]
+
+    @property
     def coverage(self) -> float:
         rows = [o for o in self.outcomes if o.row.in_exfor]
         if not rows:
@@ -85,6 +91,7 @@ def build_sector(
     *,
     vocal: bool = False,
     min_num_pts: int = 1,
+    allow_substitution: bool = True,
 ) -> SectorData:
     """Retrieve every data set a corpus-sector's table asks for.
 
@@ -105,7 +112,8 @@ def build_sector(
                 row, False, "the supplement marks this row as absent from EXFOR"))
 
     for (target, entry), group in sorted(by_group.items(), key=lambda kv: kv[0][1]):
-        _retrieve_group(data, target, entry, group, vocal=vocal, min_num_pts=min_num_pts)
+        _retrieve_group(data, target, entry, group, vocal=vocal, min_num_pts=min_num_pts,
+                        allow_substitution=allow_substitution)
 
     return data
 
@@ -118,6 +126,7 @@ def _retrieve_group(
     *,
     vocal: bool,
     min_num_pts: int,
+    allow_substitution: bool = True,
 ) -> None:
     projectile = group[0].projectile_AZ
     reaction = Reaction(target=target, projectile=projectile, process=data.process)
@@ -138,6 +147,11 @@ def _retrieve_group(
             continue
 
         assignment = errors.resolve_subentry(row.entry, row.subentry, row.pointer)
+        if assignment.rule == "missing":
+            # The tabulated subentry is gone but the entry is not; resolve from the
+            # entry's prevailing column layout so retrieval can still run, and let
+            # substitution below find the renumbered data set.
+            assignment = errors.resolve_entry(row.entry)
         if not assignment.resolved:
             unresolvable.append((row, f"uncertainty unresolved ({assignment.rule}): "
                                       f"{assignment.reason}"))
@@ -178,18 +192,19 @@ def _retrieve_group(
                     row, False, "retrieval failed: " + "; ".join(failures)))
             continue
 
-        _match_rows(data, retrieved, plan_rows)
+        _match_rows(data, retrieved, plan_rows, allow_substitution=allow_substitution)
 
 
-def _match_rows(data: SectorData, retrieved: list[ExforEntry], rows: list[SpecRow]) -> None:
+def _match_rows(data: SectorData, retrieved: list[ExforEntry], rows: list[SpecRow],
+                *, allow_substitution: bool = True) -> None:
     """Assign each row the measurement it asked for, preferring earlier quantities."""
-    wanted = {row.subentry for row in rows}
-    # (preference rank, ExforEntry, measurement) for every candidate measurement
+    # (preference rank, ExforEntry, measurement) for every measurement of the entry.
+    # Deliberately not restricted to the tabulated subentries: substitution below needs
+    # to see the entry's other subentries when a tabulated one has been renumbered.
     available = [
         (rank, exfor_entry, m)
         for rank, exfor_entry in enumerate(retrieved)
         for m in exfor_entry.measurements
-        if m.subentry in wanted
     ]
     integral = data.quantities == ("XS",)
     claimed: set[int] = set()
@@ -200,25 +215,69 @@ def _match_rows(data: SectorData, retrieved: list[ExforEntry], rows: list[SpecRo
             if m.subentry == row.subentry and i not in claimed
             and (integral or energy_matches(row.energy_mev, float(m.Einc)))
         ]
+        if not candidates and allow_substitution and not integral:
+            candidates = _substitution_candidates(available, row, claimed)
+            if candidates:
+                data.outcomes.append(_record(
+                    data, retrieved, row, candidates, claimed, integral,
+                    substituted=True))
+                continue
+
         if not candidates:
             data.outcomes.append(RowOutcome(row, False, _why_not(retrieved, row)))
             continue
 
-        # Prefer the earlier quantity, then the closest energy when a subentry reports
-        # several within tolerance.
-        candidates.sort(key=lambda c: (
-            c[1], 0.0 if integral else abs(float(c[3].Einc) - row.energy_mev)))
-        index, _, exfor_entry, measurement = candidates[0]
-        claimed.add(index)
+        data.outcomes.append(
+            _record(data, retrieved, row, candidates, claimed, integral))
 
-        data.entries.setdefault(exfor_entry.entry, exfor_entry)
-        data.measurements[exfor_entry.entry].append(measurement)
-        measurement.spec_row = row
-        data.outcomes.append(RowOutcome(
-            row, True, subentry=measurement.subentry,
-            energy=float(getattr(measurement, "Einc", row.energy_mev)),
-            n_points=measurement.rows,
-        ))
+
+def _substitution_candidates(available, row, claimed):
+    """Measurements in the same entry that match the row's energy, at any subentry.
+
+    EXFOR renumbers subentries between releases -- O0208 has since moved its analyzing
+    powers from subentries 006-009 to 010-014, and O0091 likewise -- so the subentry the
+    supplement tabulates may no longer exist while the data still do. Substitution is
+    confined to the same entry, which is the same publication and measurement campaign,
+    is only attempted when the tabulated subentry is genuinely absent, and requires an
+    unambiguous energy match. Every substitution is reported.
+    """
+    matches = [
+        (i, rank, exfor_entry, m) for i, (rank, exfor_entry, m) in enumerate(available)
+        if i not in claimed and energy_matches(row.energy_mev, float(m.Einc))
+    ]
+    # ambiguous matches are not substituted
+    if len({m.subentry for _, _, _, m in matches}) != 1:
+        return []
+    return matches
+
+
+def _record(data, retrieved, row, candidates, claimed, integral, substituted=False):
+    """Claim the best candidate for a row and record the outcome."""
+    # Prefer the earlier quantity, then the closest energy when a subentry reports
+    # several within tolerance.
+    candidates.sort(key=lambda c: (
+        c[1], 0.0 if integral else abs(float(c[3].Einc) - row.energy_mev)))
+    index, _, exfor_entry, measurement = candidates[0]
+    claimed.add(index)
+
+    data.entries.setdefault(exfor_entry.entry, exfor_entry)
+    data.measurements[exfor_entry.entry].append(measurement)
+    measurement.spec_row = row
+    if substituted:
+        from .munge import note
+        note(measurement,
+             f"the supplement tabulates subentry {row.subentry} for this data set, which "
+             f"is no longer in EXFOR; taken from {measurement.subentry} in the same entry "
+             "at the same scattering energy")
+    return RowOutcome(
+        row, True,
+        reason=(f"substituted {measurement.subentry} for the tabulated {row.subentry}"
+                if substituted else ""),
+        subentry=measurement.subentry,
+        energy=float(getattr(measurement, "Einc", row.energy_mev)),
+        n_points=measurement.rows,
+        substituted=substituted,
+    )
 
 
 def _why_not(retrieved: list[ExforEntry], row: SpecRow) -> str:

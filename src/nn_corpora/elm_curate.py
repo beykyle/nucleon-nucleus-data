@@ -1,0 +1,216 @@
+"""Curation of the ELM corpus.
+
+The ELM corpus is a query rather than a table: every EXFOR data set for elastic
+nucleon scattering, or (p,n) to the isobaric analog state, on a set of near-spherical
+targets within an energy window. The decisions that turn that query into a corpus are
+in :mod:`nn_corpora.elm`; this module applies them.
+
+Output follows the same conventions as the other corpora, which means one departure
+from the ELM notebooks: proton elastic data are stored as a ratio to Rutherford
+throughout, so data sets EXFOR reports as absolute cross sections are divided by the
+Rutherford cross section rather than kept in b/sr.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass, field
+
+import numpy as np
+
+from exfor_tools import curate as exfor_curate
+from exfor_tools.reaction import Reaction
+
+from . import elm, munge, serialize, spec
+from .kinematics import lab_to_cm_angle_elastic
+
+#: ELM sector -> (quantities, process, output directory name).
+ELM_SECTORS = {
+    "elastic_diff_xs": (("dXS/dA", "dXS/dRuth"), "el"),
+    "elastic_ay": (("Ay",), "el"),
+    "charge_exchange": (("dXS/dA",), "pn"),
+}
+
+
+@dataclass
+class ElmSectorResult:
+    sector: str
+    data: dict = field(default_factory=dict)
+    records: list[serialize.Record] = field(default_factory=list)
+    excluded: list[str] = field(default_factory=list)
+    repaired: list[str] = field(default_factory=list)
+    dropped: list[str] = field(default_factory=list)
+
+    @property
+    def n_points(self) -> int:
+        return sum(len(r.payload["data"]["x"]) for r in self.records)
+
+    def summary(self) -> str:
+        lines = [
+            f"elm/{self.sector}",
+            f"  targets                {len(self.data)}",
+            f"  measurements           {len(self.records)}",
+            f"  data points            {self.n_points}",
+        ]
+        for label, items in (("excluded", self.excluded), ("repaired", self.repaired),
+                             ("dropped", self.dropped)):
+            if items:
+                lines.append(f"  {label}")
+                lines.extend(f"    {i}" for i in items)
+        return "\n".join(lines)
+
+
+def query_elastic(projectile: tuple[int, int], quantities: tuple[str, ...],
+                  targets, einc_range, min_num_pts: int, vocal: bool = False) -> dict:
+    """Query EXFOR for elastic scattering on every ELM target."""
+    settings = {
+        "Einc_range": list(einc_range),
+        "filter_kwargs": {"min_num_pts": min_num_pts, "allow_cos": True,
+                          "filter_lab_angle": False},
+    }
+    return {
+        target: exfor_curate.MultiQuantityReactionData(
+            Reaction(target=target, projectile=projectile, process="el"),
+            quantities=list(quantities), settings=settings, vocal=vocal,
+        )
+        for target in targets
+    }
+
+
+def repair_failed_parses(data: dict, quantities: tuple[str, ...], result: ElmSectorResult) -> None:
+    """Re-parse entries that failed, naming the uncertainty columns explicitly.
+
+    The recipes come from reading each entry's EXFOR ERR-ANALYS text, as recorded in
+    the ELM notebooks.
+    """
+    for target, multi in data.items():
+        for quantity in quantities:
+            entries = multi.data[quantity]
+            for entry_id in list(entries.failed_parses):
+                recipe = elm.PARSE_RECIPES.get(entry_id)
+                if recipe is None:
+                    continue
+                entries.reattempt_parse(entry_id, recipe.parsing_kwargs)
+                if entry_id in entries.entries:
+                    result.repaired.append(f"{quantity} {entry_id} via {recipe.statistical}")
+
+
+def exclude_entries(data: dict, quantity: str, exclusions: dict[str, str],
+                    result: ElmSectorResult) -> None:
+    """Remove entries the ELM notebooks reject, recording the reason."""
+    for target, multi in data.items():
+        entries = multi.data[quantity]
+        for entry_id, reason in exclusions.items():
+            for store in (entries.entries, entries.failed_parses):
+                if entry_id in store:
+                    del store[entry_id]
+                    result.excluded.append(f"{quantity} {entry_id}: {reason}")
+
+
+def apply_point_fixes(data: dict, result: ElmSectorResult) -> None:
+    """Correct individual points that the ELM notebooks identify as mistranscribed."""
+    for fix in elm.POINT_FIXES:
+        multi = data.get(fix.target)
+        if multi is None or fix.quantity not in multi.data:
+            continue
+        entry = multi.data[fix.quantity].entries.get(fix.entry)
+        if entry is None or len(entry.measurements) <= fix.measurement_index:
+            continue
+        measurement = entry.measurements[fix.measurement_index]
+        measurement.y[fix.point_index] *= fix.factor
+        if fix.scale_uncertainty:
+            measurement.statistical_err[fix.point_index] *= fix.factor
+        munge.note(measurement, fix.note)
+        result.repaired.append(f"{fix.entry} {fix.note}")
+
+
+def apply_uncertainty_patches(data: dict, result: ElmSectorResult) -> None:
+    """Supply uncertainties EXFOR omits, from the original publications."""
+    for entry_id, quantity, index, point, value, note in elm.UNCERTAINTY_PATCHES:
+        for multi in data.values():
+            if quantity not in multi.data:
+                continue
+            entry = multi.data[quantity].entries.get(entry_id)
+            if entry is None or len(entry.measurements) <= index:
+                continue
+            measurement = entry.measurements[index]
+            if point is None:
+                mask = measurement.statistical_err <= 0
+                if not np.any(mask):
+                    continue
+                measurement.statistical_err[mask] = value
+            else:
+                measurement.statistical_err[point] = value
+            munge.note(measurement, note)
+            result.repaired.append(f"{entry_id}: {note}")
+
+
+def apply_uncertainty_transplant(data: dict, result: ElmSectorResult) -> None:
+    """144Sm: take the normalization from one 65 MeV data set and the errors from the other."""
+    spec_ = elm.UNCERTAINTY_TRANSPLANT
+    multi = data.get(spec_["target"])
+    if multi is None or spec_["quantity"] not in multi.data:
+        return
+    entries = multi.data[spec_["quantity"]].entries
+    into, source = entries.get(spec_["into"]), entries.get(spec_["from"])
+    if into is None or source is None:
+        return
+    into.measurements[0].statistical_err = source.measurements[0].statistical_err.copy()
+    munge.note(into.measurements[0], spec_["note"])
+    del entries[spec_["from"]]
+    result.repaired.append(f"{spec_['into']} uncertainties taken from {spec_['from']}")
+
+
+def finalize(data: dict, sector: str, projectile: str, result: ElmSectorResult,
+             default_norm_err: float = munge.DEFAULT_SYSTEMATIC_NORM_ERR) -> None:
+    """Munge and serialize every measurement of one ELM sector."""
+    for target, multi in data.items():
+        for quantity, entries in multi.data.items():
+            for entry_id, entry in entries.entries.items():
+                citation = entry.meta.citation() if entry.meta is not None else ""
+                for measurement in list(entry.measurements):
+                    why = _munge_one(measurement, sector, target, projectile, quantity,
+                                     default_norm_err)
+                    if why is not None:
+                        result.dropped.append(f"{measurement.subentry}: {why}")
+                        entry.measurements.remove(measurement)
+                        continue
+                    result.records.append(serialize.to_record(
+                        measurement, corpus="elm", sector=sector,
+                        projectile=projectile, target=target, citation=citation,
+                    ))
+
+
+def _munge_one(measurement, sector, target, projectile_name, quantity,
+               default_norm_err) -> str | None:
+    projectile = spec.PROJECTILES[projectile_name]
+    munge.to_cm_degrees(measurement, target, projectile)
+
+    # ELM stores charged-projectile elastic data as a ratio to Rutherford, matching the
+    # other corpora in this repo; the ELM notebooks keep absolute cross sections where
+    # EXFOR reports them that way.
+    if sector == "elastic_diff_xs" and projectile[1] > 0:
+        munge.to_ratio_to_rutherford(measurement, target, projectile)
+        if measurement.rows == 0:
+            return "no points remain above the minimum ratio angle"
+
+    munge.homogenize_units(measurement)
+
+    floor = elm.MIN_STAT_ERR.get(measurement.quantity, 0.0)
+    if measurement.rows == 0 or np.any(measurement.statistical_err < floor):
+        return f"one or more uncertainties below the {measurement.quantity} floor {floor:g}"
+
+    munge.apply_default_norm_err(measurement, default_norm_err)
+    return None
+
+
+def convert_lab_angles(entry, target: tuple[int, int], projectile: tuple[int, int]) -> None:
+    """Convert an entry's lab-frame angles to the CM frame.
+
+    Kept for entries curated by hand in the notebooks; :func:`finalize` does the same
+    for everything else.
+    """
+    for measurement in entry.measurements:
+        if measurement.x_units == "LAB-degrees":
+            measurement.x = lab_to_cm_angle_elastic(measurement.x, target, projectile)
+            measurement.x_units = "CM-degrees"
+            munge.note(measurement, "converted scattering angles from the lab to the CM frame")

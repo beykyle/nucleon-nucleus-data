@@ -1,0 +1,51 @@
+[
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "D0356003",
+        "source": "A.Auce, A.Ingemarsson, et al., Physical Review, Part C, Nuclear Physics 71, 064606 (2005); Conf.on Nucl.Data for Sci.and Techn., Santa Fe 2004 1, 846 (2004);  Data taken from the EXFOR database, file EXFOR D0356001 dated 2005, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                81.0,
+                100.0,
+                119.0,
+                141.0,
+                158.0,
+                180.0
+            ],
+            "y": [
+                0.66,
+                0.604,
+                0.563,
+                0.536,
+                0.524,
+                0.517
+            ],
+            "y_err": [
+                0.025,
+                0.024,
+                0.012,
+                0.008,
+                0.008,
+                0.007
+            ],
+            "x_err": [
+                0.15,
+                0.15,
+                0.15,
+                0.15,
+                0.15,
+                0.15
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

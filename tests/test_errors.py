@@ -83,11 +83,6 @@ class TestUnresolved:
         a = errors.resolve("X", ["EN", "ANG-CM", "DATA-CM"])
         assert not a.resolved and a.rule == "no-uncertainty"
 
-    def test_repeated_column_is_unparseable(self):
-        """exfor_tools rejects repeated columns before categorisation is reached."""
-        a = errors.resolve("X", ["DATA-ERR", "DATA-ERR"])
-        assert not a.resolved and a.rule == "duplicate-columns"
-
     def test_unrecognised_partial_errors(self):
         """ERR-1/ERR-2 carry no standard meaning; these need an explicit override."""
         a = errors.resolve("X", ["ERR-1", "ERR-2"])
@@ -96,6 +91,31 @@ class TestUnresolved:
     def test_unresolved_assignment_selects_nothing(self):
         a = errors.resolve("X", ["ERR-1", "ERR-2"])
         assert a.parsing_kwargs["statistical_err_labels"] == []
+
+
+class TestRepeatedColumns:
+    """A repeated label means partial uncertainties split across columns.
+
+    The CHUQ notes for the Mellema (n,n) data sets: "the first and second DATA-ERR
+    columns listed errors in percent and in absolute units, respectively. The first
+    column contained mostly 'null' values ... we converted the percent errors that did
+    exist in the first DATA-ERR column into absolute units, then merged the two columns
+    into one absolute DATA-ERR column." Nulls parse as zero, so quadrature is that merge.
+    """
+
+    def test_both_occurrences_are_taken(self):
+        a = errors.resolve("X", ["DATA-ERR", "DATA-ERR"])
+        assert a.resolved
+        assert a.chosen == ["DATA-ERR", "DATA-ERR"]
+        assert a.treatment == "independent"
+        assert a.rule.endswith(":merged")
+
+    def test_unrepeated_label_is_not_marked_merged(self):
+        assert not errors.resolve("X", ["DATA-ERR"]).rule.endswith(":merged")
+
+    def test_repeat_does_not_override_preference(self):
+        a = errors.resolve("X", ["DATA-ERR", "DATA-ERR", "ERR-T"])
+        assert a.chosen == ["ERR-T"]
 
 
 def test_parsing_kwargs_shape():

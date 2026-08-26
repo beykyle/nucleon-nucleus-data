@@ -148,21 +148,19 @@ def resolve(subentry: str, labels) -> ErrorAssignment:
             resolved=False, reason="subentry reports no uncertainty on the observable",
         )
 
-    duplicates = {c for c in candidates if candidates.count(c) > 1}
-    if duplicates:
-        # exfor_tools raises "Expected only one <label> column" before categorisation
-        # is ever reached, so no choice of labels can rescue these.
-        return ErrorAssignment(
-            subentry, list(labels), [], "independent", rule="duplicate-columns",
-            resolved=False,
-            reason=f"repeated uncertainty column(s) {sorted(duplicates)}",
-        )
-
     for group, treatment in PREFERENCE:
         if all(label in candidates for label in group):
+            # A label repeated in one subentry denotes partial uncertainties split
+            # across columns -- typically one in per-cent and one absolute, each mostly
+            # null. The CHUQ notes for the Mellema (n,n) data sets direct that these be
+            # merged into a single absolute column; since nulls parse as zero, summing
+            # them in quadrature is exactly that merge.
+            chosen = [label for label in candidates if label in group]
+            repeated = len(chosen) > len(group)
             return ErrorAssignment(
-                subentry, list(labels), list(group), treatment,
-                rule=f"preference:{'+'.join(group)}",
+                subentry, list(labels), chosen,
+                "independent" if repeated else treatment,
+                rule=f"preference:{'+'.join(group)}" + (":merged" if repeated else ""),
             )
 
     numbered = [label for label in NUMBERED_DATA_ERR if label in candidates]
@@ -176,6 +174,34 @@ def resolve(subentry: str, labels) -> ErrorAssignment:
         resolved=False,
         reason=f"no preferred uncertainty column among {candidates}",
     )
+
+
+def resolve_entry(entry: str) -> ErrorAssignment:
+    """Resolve the overall uncertainty from an entry's most common column layout.
+
+    Used when the subentry the supplement tabulates is no longer in EXFOR but the entry
+    is, so that retrieval can still run and substitute a renumbered subentry. Subentries
+    of one entry come from one measurement campaign and normally share a layout.
+    """
+    try:
+        blocks = entry_data_sets(entry)
+    except EntryUnavailable as exc:
+        return ErrorAssignment(
+            entry, [], [], "independent", rule="entry-unavailable",
+            resolved=False, reason=str(exc),
+        )
+
+    counts: dict[tuple, int] = {}
+    for data_set in blocks.values():
+        counts[tuple(data_set.labels)] = counts.get(tuple(data_set.labels), 0) + 1
+    if not counts:
+        return ErrorAssignment(
+            entry, [], [], "independent", rule="missing", resolved=False,
+            reason=f"entry {entry} contains no data sets",
+        )
+    labels = max(counts, key=counts.get)
+    assignment = resolve(entry, labels)
+    return assignment
 
 
 def resolve_subentry(entry: str, subentry: str, pointer: str = "") -> ErrorAssignment:
