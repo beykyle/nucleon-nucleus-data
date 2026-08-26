@@ -47,6 +47,16 @@ DEFAULT_SYSTEMATIC_NORM_ERR = 0.05
 # ratio is dominated by the angular resolution rather than the measurement.
 MIN_RATIO_ANGLE_DEG = 1.0
 
+# The analyzing power is bounded by one, but a measured central value can sit just
+# outside that bound through ordinary statistical fluctuation. Excursions within this
+# tolerance are kept; anything beyond is a tabulation error.
+AY_TOLERANCE = 1.1
+
+# If this fraction of a data set's points lies beyond the tolerance, the data set is not
+# an analyzing power at all -- typically a polarization cross section, or a column that
+# has lost its normalisation -- and the whole measurement is dropped.
+AY_MAX_UNPHYSICAL_FRACTION = 0.2
+
 
 def note(measurement, text: str) -> None:
     """Record an edit on a measurement, for provenance."""
@@ -135,6 +145,60 @@ def _select(measurement, keep: np.ndarray) -> None:
     measurement.rows = int(keep.sum())
 
 
+def is_too_sparse(measurement, min_points: int) -> bool:
+    """Whether an angular distribution has too few angles to constrain a potential.
+
+    ``exfor_tools``'s ``min_num_pts`` filter counts the rows of a whole subentry, before
+    it is unrolled into one measurement per incident energy. A subentry that scans many
+    energies at a handful of angles -- a thin-film excitation function, say -- therefore
+    passes that filter and becomes hundreds of one- or two-point angular distributions.
+    The supplement excludes such data sets explicitly, repeatedly noting data "included
+    over 100 scattering energies but only a few angles for each energy". This is the
+    same criterion, applied after unrolling.
+    """
+    return measurement.rows < min_points
+
+
+def check_analyzing_power(measurement) -> str | None:
+    """Drop unphysical analyzing power points, or the whole data set if it is not one.
+
+    The CHUQ notes describe an instance of the tabulation error this catches: in the
+    64Ni data set of Sakaguchi et al., "the first datum possessed an unphysical error of
+    3.0034 (the analyzing power can only assume a value between -1 and 1)".
+
+    Returns a reason if the measurement should be dropped entirely, otherwise None.
+    """
+    unphysical = np.abs(measurement.y) > AY_TOLERANCE
+    if not np.any(unphysical):
+        return None
+
+    fraction = unphysical.sum() / measurement.rows
+    if fraction > AY_MAX_UNPHYSICAL_FRACTION:
+        return (f"{unphysical.sum()} of {measurement.rows} values exceed "
+                f"|Ay| = {AY_TOLERANCE}; this is not an analyzing power")
+
+    dropped = int(unphysical.sum())
+    _select(measurement, ~unphysical)
+    note(measurement,
+         f"dropped {dropped} point(s) with |Ay| above {AY_TOLERANCE}, which the "
+         "analyzing power cannot physically exceed")
+    return None
+
+
+def is_polarization_cross_section(measurement) -> bool:
+    """Whether a data set matched as an analyzing power is really a cross section.
+
+    EXFOR's "POL/DA" is used for two different observables. With dimensionless units it
+    is the analyzing power (or, for elastic scattering, the equal outgoing-particle
+    polarization). With cross section units it is the polarization differential cross
+    section, the analyzing power multiplied by the elastic cross section -- the
+    "analyzing cross section" the CH89 analysis fitted. The two are not interchangeable,
+    and only the dimensionless form belongs in an analyzing power sector.
+    """
+    return (measurement.quantity == "Ay"
+            and measurement.y_units not in DIMENSIONLESS_UNITS)
+
+
 def homogenize_units(measurement) -> None:
     """Normalise unit spellings and assert the quantity carries the expected units."""
     quantity, units = measurement.quantity, measurement.y_units
@@ -193,15 +257,16 @@ def downsample_energy(measurement, max_per_mev: float = 1.0) -> None:
     so the retained points sample the range evenly and the endpoints are preserved.
     """
     span = float(measurement.x[-1] - measurement.x[0])
-    target = max(int(np.ceil(span * max_per_mev)), 1)
+    # a uniform grid spanning the data, inclusive of both endpoints, whose spacing is
+    # 1 / max_per_mev; keeping the datum nearest each grid point retains at most this
+    # many points and preserves the range
+    target = max(int(span * max_per_mev) + 1, 2)
     if measurement.rows <= target:
         return
 
-    edges = np.linspace(measurement.x[0], measurement.x[-1], target + 1)
-    centres = 0.5 * (edges[:-1] + edges[1:])
+    grid = np.linspace(measurement.x[0], measurement.x[-1], target)
     keep = np.zeros(measurement.rows, dtype=bool)
-    keep[np.unique(np.abs(measurement.x[:, None] - centres[None, :]).argmin(axis=0))] = True
-    keep[0] = keep[-1] = True
+    keep[np.unique(np.abs(measurement.x[:, None] - grid[None, :]).argmin(axis=0))] = True
 
     before = measurement.rows
     _select(measurement, keep)

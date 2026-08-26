@@ -76,6 +76,59 @@ def query_elastic(projectile: tuple[int, int], quantities: tuple[str, ...],
     }
 
 
+def query_pn(targets, einc_range, ias_window: float, vocal: bool = False) -> dict:
+    """Query EXFOR for (p,n) scattering to the isobaric analog state.
+
+    The analog state is selected by a window on the residual excitation energy rather
+    than by ``elastic_only``. Entries that report the excitation energy some other way
+    -- via a Q value, a level number, an analog-state number -- fall outside the window
+    and are re-added by hand in the notebook.
+    """
+    data = {}
+    for (A, Z) in targets:
+        ex = spec.ELM_EX_IAS[(A, Z)]
+        settings = {
+            "Einc_range": list(einc_range),
+            "Ex_range": [ex - ias_window, ex + ias_window],
+            # analog-state angular distributions are sparse, so no minimum point count
+            "filter_kwargs": {"min_num_pts": 1, "allow_cos": True,
+                              "filter_lab_angle": False},
+        }
+        data[(A, Z)] = exfor_curate.MultiQuantityReactionData(
+            Reaction(target=(A, Z), projectile=(1, 1), product=(1, 0), residual=(A, Z + 1)),
+            quantities=["dXS/dA"], settings=settings, vocal=vocal,
+        )
+    return data
+
+
+def readd_entry(data: dict, target: tuple[int, int], entry_id: str, result: ElmSectorResult,
+                *, einc_range, ex_range=None, parsing_kwargs=None, reason: str = "") -> None:
+    """Re-add an entry the excitation-energy window rejected, on explicit grounds.
+
+    Some entries report the analog state differently from modern compilations, or do not
+    report an excitation energy at all, and so fall outside the window even though the
+    data are the analog-state transition.
+    """
+    from exfor_tools import ExforEntry
+
+    A, Z = target
+    reaction = Reaction(target=target, projectile=(1, 1), product=(1, 0), residual=(A, Z + 1))
+    kwargs = {"Einc_range": list(einc_range)}
+    if ex_range is not None:
+        kwargs["Ex_range"] = list(ex_range)
+    entry = ExforEntry(
+        entry=entry_id, reaction=reaction, quantity="dXS/dA",
+        parsing_kwargs=parsing_kwargs or {},
+        filter_kwargs={"min_num_pts": 1, "allow_cos": True, "filter_lab_angle": False},
+        **kwargs,
+    )
+    if not entry.measurements:
+        result.dropped.append(f"{entry_id}: re-add produced no measurements")
+        return
+    data[target].data["dXS/dA"].entries[entry_id] = entry
+    result.repaired.append(f"{entry_id} re-added for {A}/{Z}: {reason}")
+
+
 def repair_failed_parses(data: dict, quantities: tuple[str, ...], result: ElmSectorResult) -> None:
     """Re-parse entries that failed, naming the uncertainty columns explicitly.
 
@@ -161,7 +214,8 @@ def apply_uncertainty_transplant(data: dict, result: ElmSectorResult) -> None:
 
 
 def finalize(data: dict, sector: str, projectile: str, result: ElmSectorResult,
-             default_norm_err: float = munge.DEFAULT_SYSTEMATIC_NORM_ERR) -> None:
+             default_norm_err: float = munge.DEFAULT_SYSTEMATIC_NORM_ERR,
+             min_points: int = spec.ELM_MIN_NUM_PTS) -> None:
     """Munge and serialize every measurement of one ELM sector."""
     for target, multi in data.items():
         for quantity, entries in multi.data.items():
@@ -169,7 +223,7 @@ def finalize(data: dict, sector: str, projectile: str, result: ElmSectorResult,
                 citation = entry.meta.citation() if entry.meta is not None else ""
                 for measurement in list(entry.measurements):
                     why = _munge_one(measurement, sector, target, projectile, quantity,
-                                     default_norm_err)
+                                     default_norm_err, min_points)
                     if why is not None:
                         result.dropped.append(f"{measurement.subentry}: {why}")
                         entry.measurements.remove(measurement)
@@ -181,7 +235,11 @@ def finalize(data: dict, sector: str, projectile: str, result: ElmSectorResult,
 
 
 def _munge_one(measurement, sector, target, projectile_name, quantity,
-               default_norm_err) -> str | None:
+               default_norm_err, min_points) -> str | None:
+    if munge.is_too_sparse(measurement, min_points):
+        return (f"only {measurement.rows} scattering angle(s); too sparse to constrain "
+                "an optical potential")
+
     projectile = spec.PROJECTILES[projectile_name]
     munge.to_cm_degrees(measurement, target, projectile)
 
@@ -193,7 +251,16 @@ def _munge_one(measurement, sector, target, projectile_name, quantity,
         if measurement.rows == 0:
             return "no points remain above the minimum ratio angle"
 
+    if munge.is_polarization_cross_section(measurement):
+        return ("reported as a polarization cross section in "
+                f"{measurement.y_units}, not a dimensionless analyzing power")
+
     munge.homogenize_units(measurement)
+
+    if measurement.quantity == "Ay":
+        why = munge.check_analyzing_power(measurement)
+        if why is not None:
+            return why
 
     floor = elm.MIN_STAT_ERR.get(measurement.quantity, 0.0)
     if measurement.rows == 0 or np.any(measurement.statistical_err < floor):

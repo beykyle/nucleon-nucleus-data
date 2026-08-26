@@ -1,0 +1,70 @@
+[
+    {
+        "type": "ECS",
+        "energy": 35.0,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "E2092016",
+        "source": "G.C.Jon, H.Orihara, et al., Physical Review, Part C, Nuclear Physics 62, (4), 044609 (2000);  Data taken from the EXFOR database, file EXFOR E2092001 dated 200010, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                0.0,
+                10.14,
+                15.21,
+                20.27,
+                20.27,
+                20.27,
+                25.34,
+                30.4,
+                35.46,
+                40.51,
+                45.56,
+                50.61,
+                55.65
+            ],
+            "y": [
+                0.003389,
+                0.002193,
+                0.00139,
+                0.001025,
+                0.001001,
+                0.001052,
+                0.00065,
+                0.000588,
+                0.000585,
+                0.000658,
+                0.0007,
+                0.000745,
+                0.000516
+            ],
+            "y_err": [
+                7.9e-05,
+                7.8e-05,
+                6.4e-05,
+                0.000111,
+                6.3e-05,
+                5.5e-05,
+                5.8e-05,
+                5.4e-05,
+                5.2e-05,
+                5.1e-05,
+                5.1e-05,
+                5.4e-05,
+                5.6e-05
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "ex_energy": 8.94,
+        "ex_energy_err": 0.0,
+        "ex_energy_units": "MeV",
+        "corpus": "elm",
+        "sector": "charge_exchange",
+        "projectile": "proton",
+        "target": "Zr-92",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

@@ -23,10 +23,6 @@ INTEGRAL_SECTORS = {"neutron_total", "proton_reaction"}
 #: The supplement downsamples neutron total cross sections to one datum per MeV.
 NEUTRON_TOTAL_POINTS_PER_MEV = 1.0
 
-#: Analyzing powers are bounded by construction; anything outside is a tabulation error.
-AY_BOUND = 1.0
-
-
 @dataclass
 class SectorResult:
     """A curated corpus-sector."""
@@ -67,6 +63,7 @@ def curate(
     *,
     vocal: bool = False,
     min_num_pts: int = 1,
+    min_points_per_distribution: int = 3,
     default_norm_err: float = munge.DEFAULT_SYSTEMATIC_NORM_ERR,
 ) -> SectorResult:
     """Retrieve and clean one corpus-sector. Does not write anything to disk."""
@@ -80,7 +77,8 @@ def curate(
         citation = exfor_entry.meta.citation() if exfor_entry.meta is not None else ""
         keep = []
         for measurement in measurements:
-            why = _munge_one(measurement, sector, default_norm_err)
+            why = _munge_one(measurement, sector, default_norm_err,
+                             min_points_per_distribution)
             if why is not None:
                 result.dropped.append((measurement.subentry, why))
                 continue
@@ -97,7 +95,8 @@ def curate(
     return result
 
 
-def _munge_one(measurement, sector: str, default_norm_err: float) -> str | None:
+def _munge_one(measurement, sector: str, default_norm_err: float,
+               min_points: int = 3) -> str | None:
     """Clean one measurement in place. Returns a reason if it must be dropped."""
     row = measurement.spec_row
 
@@ -113,11 +112,18 @@ def _munge_one(measurement, sector: str, default_norm_err: float) -> str | None:
         if sector == "neutron_total":
             munge.downsample_energy(measurement, NEUTRON_TOTAL_POINTS_PER_MEV)
     else:
+        if munge.is_too_sparse(measurement, min_points):
+            return (f"only {measurement.rows} scattering angle(s); too sparse to "
+                    "constrain an optical potential")
         munge.to_cm_degrees(measurement, row.target, row.projectile_AZ)
         if sector in RATIO_SECTORS:
             munge.to_ratio_to_rutherford(measurement, row.target, row.projectile_AZ)
             if measurement.rows == 0:
                 return "no points remain above the minimum ratio angle"
+
+    if munge.is_polarization_cross_section(measurement):
+        return ("reported as a polarization cross section in "
+                f"{measurement.y_units}, not a dimensionless analyzing power")
 
     munge.homogenize_units(measurement)
 
@@ -126,8 +132,10 @@ def _munge_one(measurement, sector: str, default_norm_err: float) -> str | None:
         # the cross section error among them.
         return "one or more data points carry no uncertainty"
 
-    if sector.endswith("_ay") and np.any(np.abs(measurement.y) > AY_BOUND):
-        return "analyzing power outside [-1, 1]"
+    if sector.endswith("_ay"):
+        why = munge.check_analyzing_power(measurement)
+        if why is not None:
+            return why
 
     munge.apply_default_norm_err(measurement, default_norm_err)
     return None
