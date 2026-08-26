@@ -7,3 +7,6 @@ __pycache__/
 build/
 dist/
 .env
+
+# notebook execution artifacts
+notebooks/**/*.png
