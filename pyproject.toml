@@ -21,6 +21,10 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "pytest>=8.0",
+    # jitr is NOT a curation dependency. It is installed for tests only, to check
+    # that src/nn_corpora/kinematics.py reproduces the Rutherford cross section and
+    # kinematics that rxmc uses downstream. See tests/test_kinematics.py.
+    "jitr>=2.5",
     "nbmake>=1.5",
     "jupyter>=1.0",
     "ipykernel>=6.29",
