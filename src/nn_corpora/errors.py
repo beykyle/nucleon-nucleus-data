@@ -92,6 +92,17 @@ def candidate_labels(labels) -> list[str]:
     ]
 
 
+class EntryUnavailable(LookupError):
+    """An entry the corpus asks for cannot be read from the x4i3 database.
+
+    Usually because x4i3's index build rejected it: nine of the entries these corpora
+    cite (O0162, 10791, O0741, O0150, O0475, O0732, O0436, O1948 and O0479) are present
+    in EXFOR as .x4 files but raise BrokenNumberError when parsed, on malformed numeric
+    fields, and so never reach the index. This affects the 2024 and 2025 databases
+    alike, so it is a parser limitation rather than a change in EXFOR.
+    """
+
+
 @functools.lru_cache(maxsize=512)
 def entry_data_sets(entry: str) -> dict:
     """All data sets of one EXFOR entry, cached.
@@ -99,7 +110,14 @@ def entry_data_sets(entry: str) -> dict:
     Retrieval parses the entry from disk and is by far the dominant cost of curation;
     one entry commonly supplies dozens of the subentries a corpus asks for.
     """
-    return dict(__EXFOR_DB__.retrieve(ENTRY=entry)[entry].getDataSets())
+    try:
+        entry_data = __EXFOR_DB__.retrieve(ENTRY=entry)[entry]
+    except KeyError as exc:
+        raise EntryUnavailable(
+            f"entry {entry} is not in the x4i3 index; it is most likely one of the "
+            "entries x4i3 fails to parse"
+        ) from exc
+    return dict(entry_data.getDataSets())
 
 
 def data_sets_for(entry: str, subentry: str, pointer: str = ""):
@@ -162,7 +180,13 @@ def resolve(subentry: str, labels) -> ErrorAssignment:
 
 def resolve_subentry(entry: str, subentry: str, pointer: str = "") -> ErrorAssignment:
     """Resolve the overall uncertainty for a subentry, reading its labels from EXFOR."""
-    blocks = data_sets_for(entry, subentry, pointer)
+    try:
+        blocks = data_sets_for(entry, subentry, pointer)
+    except EntryUnavailable as exc:
+        return ErrorAssignment(
+            subentry, [], [], "independent", rule="entry-unavailable",
+            resolved=False, reason=str(exc),
+        )
     if not blocks:
         return ErrorAssignment(
             subentry, [], [], "independent", rule="missing",

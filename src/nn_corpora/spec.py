@@ -19,16 +19,21 @@ DATA_DIR = REPO_ROOT / "data"
 
 TABULATED_CORPORA = ("kduq", "chuq", "test")
 
-# Sector -> (exfor_tools quantity, reaction process). "el" is elastic scattering,
-# "tot" the neutron total cross section, "non" the proton reaction (nonelastic)
-# cross section.
-SECTORS: dict[str, tuple[str, str]] = {
-    "neutron_elastic": ("dXS/dA", "el"),
-    "neutron_ay": ("Ay", "el"),
-    "neutron_total": ("XS", "tot"),
-    "proton_elastic": ("dXS/dRuth", "el"),
-    "proton_ay": ("Ay", "el"),
-    "proton_reaction": ("XS", "non"),
+# Sector -> (exfor_tools quantities, reaction process). "el" is elastic scattering,
+# "tot" the neutron total cross section, "non" the proton reaction (nonelastic) cross
+# section.
+#
+# Proton elastic scattering lists two quantities because EXFOR reports some data sets
+# as a ratio to Rutherford and others as an absolute cross section. Both are retrieved;
+# the ratio is preferred where it exists, and absolute data are divided by the
+# Rutherford cross section during munging so the sector is uniformly a ratio.
+SECTORS: dict[str, tuple[tuple[str, ...], str]] = {
+    "neutron_elastic": (("dXS/dA",), "el"),
+    "neutron_ay": (("Ay",), "el"),
+    "neutron_total": (("XS",), "tot"),
+    "proton_elastic": (("dXS/dRuth", "dXS/dA"), "el"),
+    "proton_ay": (("Ay",), "el"),
+    "proton_reaction": (("XS",), "non"),
 }
 
 PROJECTILES = {"neutron": (1, 0), "proton": (1, 1)}
