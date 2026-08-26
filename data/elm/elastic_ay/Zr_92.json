@@ -151,7 +151,6 @@
                 23.1,
                 25.4,
                 27.7,
-                30.8,
                 33.9,
                 38.2,
                 38.3,
@@ -183,7 +182,6 @@
                 0.48,
                 0.26,
                 0.1,
-                -9.0,
                 -0.253,
                 -0.35,
                 -0.44,
@@ -215,7 +213,6 @@
                 0.04,
                 0.04,
                 0.04,
-                0.22,
                 0.029,
                 0.03,
                 0.06,
@@ -244,6 +241,7 @@
         "projectile": "proton",
         "target": "Zr-92",
         "notes": [
+            "dropped 1 point(s) with |Ay| above 1.1, which the analyzing power cannot physically exceed",
             "assigned a default normalisation uncertainty of 5%, none reported"
         ]
     },

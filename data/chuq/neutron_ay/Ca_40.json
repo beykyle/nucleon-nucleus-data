@@ -1,0 +1,197 @@
+[
+    {
+        "type": "APower",
+        "energy": 10.935,
+        "energy_err": 0.13,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "12996004",
+        "source": "G.M.Honore, W.Tornow, et al., Physical Review, Part C, Nuclear Physics 33, 1129 (1986);  Data taken from the EXFOR database, file EXFOR 12996001 dated 8604, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                29.8,
+                39.4,
+                61.0,
+                80.7,
+                101.4,
+                120.7,
+                140.2,
+                154.1
+            ],
+            "y": [
+                0.047,
+                0.143,
+                -0.631,
+                -0.479,
+                -0.332,
+                -0.23,
+                -0.775,
+                0.002
+            ],
+            "y_err": [
+                0.012,
+                0.011,
+                0.022,
+                0.033,
+                0.018,
+                0.023,
+                0.026,
+                0.028
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "chuq",
+        "sector": "neutron_ay",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "APower",
+        "energy": 13.904,
+        "energy_err": 0.0985,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "12996004",
+        "source": "G.M.Honore, W.Tornow, et al., Physical Review, Part C, Nuclear Physics 33, 1129 (1986);  Data taken from the EXFOR database, file EXFOR 12996001 dated 8604, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                20.7,
+                24.7,
+                28.6,
+                40.3,
+                51.5,
+                60.7,
+                70.2,
+                86.7,
+                100.9,
+                125.6,
+                140.6,
+                150.6,
+                154.2,
+                159.4
+            ],
+            "y": [
+                -0.039,
+                -0.023,
+                0.04,
+                0.271,
+                -0.339,
+                -0.599,
+                -0.7,
+                0.076,
+                -0.276,
+                0.358,
+                -0.415,
+                -0.472,
+                0.322,
+                0.394
+            ],
+            "y_err": [
+                0.011,
+                0.014,
+                0.025,
+                0.017,
+                0.015,
+                0.015,
+                0.02,
+                0.027,
+                0.022,
+                0.045,
+                0.045,
+                0.124,
+                0.124,
+                0.06
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "chuq",
+        "sector": "neutron_ay",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "APower",
+        "energy": 16.923,
+        "energy_err": 0.0795,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "12996004",
+        "source": "G.M.Honore, W.Tornow, et al., Physical Review, Part C, Nuclear Physics 33, 1129 (1986);  Data taken from the EXFOR database, file EXFOR 12996001 dated 8604, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                19.7,
+                28.3,
+                36.3,
+                42.5,
+                47.1,
+                51.5,
+                60.5,
+                70.2,
+                81.4,
+                91.3,
+                100.8,
+                110.4,
+                120.2,
+                130.7,
+                140.8,
+                149.9,
+                157.9
+            ],
+            "y": [
+                0.022,
+                -0.021,
+                0.373,
+                -0.136,
+                -0.311,
+                -0.354,
+                -0.575,
+                -0.461,
+                0.049,
+                0.029,
+                -0.137,
+                -0.185,
+                0.166,
+                0.606,
+                -0.026,
+                -0.2,
+                0.233
+            ],
+            "y_err": [
+                0.013,
+                0.04,
+                0.1,
+                0.035,
+                0.032,
+                0.028,
+                0.024,
+                0.03,
+                0.051,
+                0.034,
+                0.049,
+                0.04,
+                0.072,
+                0.11,
+                0.096,
+                0.09,
+                0.072
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "chuq",
+        "sector": "neutron_ay",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

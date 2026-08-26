@@ -64,6 +64,10 @@ def query_elastic(projectile: tuple[int, int], quantities: tuple[str, ...],
     """Query EXFOR for elastic scattering on every ELM target."""
     settings = {
         "Einc_range": list(einc_range),
+        # EXFOR writes some level-resolved data as scattering with an E-LVL column, so
+        # the elastic channel must be selected by excitation energy, not by the reaction
+        # code alone.
+        "elastic_only": True,
         "filter_kwargs": {"min_num_pts": min_num_pts, "allow_cos": True,
                           "filter_lab_angle": False},
     }
