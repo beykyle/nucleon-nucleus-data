@@ -149,17 +149,41 @@ POINT_FIXES: tuple[PointFix, ...] = (
              "8th point increased by a factor of 10", scale_uncertainty=False),
 )
 
-#: Uncertainties absent from EXFOR, supplied from the original publication.
-#: 10817: "this one looks like it is just missing a data point".
-#: C0134: read off Fig. 5 of Phys. Rev. C 31 (1985) 1147, where "the markers used are
+@dataclass(frozen=True)
+class UncertaintyPatch:
+    """An uncertainty absent from EXFOR, supplied from the original publication.
+
+    Scoped to a single subentry. The original notebooks index into a per-entry list of
+    measurements that spans several targets, so a patch written for one isotope would
+    otherwise be applied to every isotope the entry measured -- overwriting perfectly
+    good uncertainties elsewhere. `measurement_index` counts within this subentry.
+    `point_index` of None patches every point whose uncertainty is missing.
+    """
+
+    subentry: str
+    quantity: str
+    measurement_index: int
+    point_index: int | None
+    value: float
+    note: str
+
+    @property
+    def entry(self) -> str:
+        return self.subentry[:5]
+
+
+#: 10817007: 118Sn, "this one looks like it is just missing a data point" -- the
+#: original flags (entry 1, measurement 1) of entry 10817, which is subentry 10817007.
+#: C0134004: read off Fig. 5 of Phys. Rev. C 31 (1985) 1147, where "the markers used are
 #: larger than the error bars for the points with missing error"; set conservatively to
 #: about the size of the first reported one.
-UNCERTAINTY_PATCHES: tuple[tuple[str, str, int, int | None, float, str], ...] = (
-    ("10817", "dXS/dA", 1, 7, 3.0e-4,
-     "single missing uncertainty supplied by interpolation from its neighbours"),
-    ("C0134", "dXS/dA", 1, None, 3.0e-5,
-     "missing uncertainties set to the size of the first reported one, read from "
-     "Fig. 5 of Phys. Rev. C 31 (1985) 1147"),
+UNCERTAINTY_PATCHES: tuple[UncertaintyPatch, ...] = (
+    UncertaintyPatch("10817007", "dXS/dA", 1, 7, 3.0e-4,
+                     "single missing uncertainty supplied by interpolation from its "
+                     "neighbours"),
+    UncertaintyPatch("C0134004", "dXS/dA", 0, None, 3.0e-5,
+                     "missing uncertainties set to the size of the first reported one, "
+                     "read from Fig. 5 of Phys. Rev. C 31 (1985) 1147"),
 )
 
 #: 144Sm: the two 65 MeV data sets, published by the same author in consecutive years,

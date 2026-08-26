@@ -159,13 +159,20 @@ print("\\n".join(flags) if flags else "every measurement carries uncertainties")
     md("""
 ## Inspect
 
-Outliers here are found by eye. A mistranscribed point shows up as a single datum an
-order of magnitude away from its neighbours; a badly normalised data set shows up as a
-whole curve offset from others at the same energy.
+Every parsed data set is plotted, one figure per target, grouped by incident energy and
+offset for legibility. Outliers here are found by eye: a mistranscribed point shows up
+as a single datum an order of magnitude away from its neighbours; a badly normalised
+data set shows up as a whole curve offset from others at the same energy. Nothing is
+sampled or truncated -- the count of plotted data sets is checked against the number
+written below, because a data set that is never drawn is one whose outliers are never
+found.
 """)
 
     code("""
-plotting.plot_sector(result, max_targets=8)
+n_plotted = plotting.plot_sector(result)
+assert n_plotted == len(result.records), (
+    f"{len(result.records) - n_plotted} of {len(result.records)} data sets were not plotted")
+print(f"plotted all {n_plotted} data sets")
 plt.show()
 """)
 

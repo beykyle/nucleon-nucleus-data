@@ -221,3 +221,39 @@ def test_manifests_record_provenance():
         assert manifest["provenance"]["exfor_database"].startswith("X4-")
         assert manifest["provenance"]["exfor_tools_version"]
         assert manifest["sectors"]
+
+
+class TestElmCorrections:
+    """The ELM point-level corrections must reach the data they were written for.
+
+    Each is a human judgement recorded in the original notebooks, and each is applied by
+    lookup rather than by position, so a silent miss looks exactly like a clean run.
+    """
+
+    @staticmethod
+    def _find(sector: str, filename: str, subentry: str, energy: float) -> dict:
+        path = DATA_DIR / "elm" / sector / filename
+        assert path.exists(), path
+        for record in load(path):
+            if (record["EXFORAccessionNumber"] == subentry
+                    and record["energy"] == pytest.approx(energy)):
+                return record
+        raise AssertionError(f"{subentry} at {energy} MeV is missing from {path}")
+
+    def test_neutron_point_fix_is_applied(self):
+        """12701 is a neutron entry; merging the neutron and proton target maps once
+        let the proton entries shadow it, so this correction silently never ran."""
+        record = self._find("elastic_diff_xs", "Pb_208.json", "12701005", 40.0)
+        assert any("factor of 10" in note for note in record["notes"]), record["notes"]
+
+    def test_the_patched_uncertainty_reaches_only_118sn(self):
+        """Entry 10817 measures five Sn isotopes; the patch belongs to 118Sn alone."""
+        patched = self._find("elastic_diff_xs", "Sn_118.json", "10817007", 24.0)
+        assert any("interpolation" in note for note in patched["notes"])
+
+        for filename, subentry in (("Sn_116.json", "10817006"),
+                                   ("Sn_124.json", "10817010")):
+            for record in load(DATA_DIR / "elm" / "elastic_diff_xs" / filename):
+                if record["EXFORAccessionNumber"] == subentry:
+                    assert not any("interpolation" in note for note in record["notes"]), (
+                        f"{filename} {subentry} was patched from another isotope's entry")

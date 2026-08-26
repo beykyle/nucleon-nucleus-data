@@ -91,30 +91,68 @@ def plot_energy(measurements, *, title: str = "", n_per_plot: int = 12, y_size: 
     return list(axes[:, 0])
 
 
-def plot_sector(result, *, by_target: bool = True, max_targets: int | None = None, **kwargs):
-    """Plot a curated sector, one figure per target by default."""
+def plot_sector(result, *, by_target: bool = True, **kwargs) -> int:
+    """Plot a curated sector, one figure per target by default.
+
+    Every measurement that survived curation is plotted -- nothing is sampled or
+    truncated -- so that the returned count can be checked against the number of
+    records written. An outlier that is never drawn is an outlier that is never found.
+    """
     measurements = [
         m for entry_id, ms in result.data.measurements.items() for m in ms
     ]
     if not measurements:
         print("nothing to plot")
-        return
+        return 0
 
     integral = result.sector in ("neutron_total", "proton_reaction")
     plot = plot_energy if integral else plot_angular
 
     if not by_target:
         plot(measurements, title=f"{result.corpus} {result.sector}", **kwargs)
-        return
+        return len(measurements)
 
+    # grouped by the target the record is written under -- which is the target EXFOR
+    # assigns, not necessarily the one the spec row asked for -- so that every
+    # <Target>.json in the sector has exactly one figure to be inspected against
     by = {}
     for m in measurements:
-        by.setdefault(m.spec_row.target_label, []).append(m)
-    for i, (label, group) in enumerate(sorted(by.items())):
-        if max_targets is not None and i >= max_targets:
-            print(f"... {len(by) - max_targets} further targets not plotted")
-            break
-        plot(group, title=_latex(label), **kwargs)
+        by.setdefault(getattr(m, "target", m.spec_row.target), []).append(m)
+    for target, group in sorted(by.items(), key=lambda kv: (kv[0][1], kv[0][0])):
+        plot(group, title=target_latex(target), **kwargs)
+    return len(measurements)
+
+
+def plot_multi(data: dict, *, label: str = "", quantities=None, **kwargs) -> int:
+    """Plot every measurement in an ELM target -> `MultiQuantityReactionData` mapping.
+
+    The ELM corpora are keyed by `(A, Z)` rather than by a spec row, so they cannot go
+    through `plot_sector`. As there, everything is plotted and the count is returned so
+    the notebook can assert that no data set went uninspected.
+    """
+    plotted = 0
+    for target, multi in sorted(data.items(), key=lambda kv: (kv[0][1], kv[0][0])):
+        measurements = [
+            m
+            for quantity, reaction_data in multi.data.items()
+            if quantities is None or quantity in quantities
+            for entry in reaction_data.entries.values()
+            for m in entry.measurements
+        ]
+        if not measurements:
+            continue
+        title = target_latex(target) + (f" {label}" if label else "")
+        plot_angular(measurements, title=title, **kwargs)
+        plotted += len(measurements)
+    return plotted
+
+
+def target_latex(target: tuple[int, int]) -> str:
+    """Render an `(A, Z)` target as a LaTeX label, with `A = 0` meaning natural."""
+    from periodictable import elements
+
+    symbol = elements[target[1]].symbol
+    return rf"$^{{\rm nat}}${symbol}" if not target[0] else rf"$^{{{target[0]}}}${symbol}"
 
 
 def _symbol(quantity: str) -> str:
@@ -124,13 +162,6 @@ def _symbol(quantity: str) -> str:
         "Ay": r"$A_y$",
         "XS": r"$\sigma$",
     }.get(quantity, quantity)
-
-
-def _latex(target_label: str) -> str:
-    if target_label.startswith("nat"):
-        return rf"$^{{\rm nat}}${target_label[3:]}"
-    mass = "".join(c for c in target_label if c.isdigit())
-    return rf"$^{{{mass}}}${target_label[len(mass):]}"
 
 
 def check_uncertainties(result, floor: float = 0.0) -> list[str]:

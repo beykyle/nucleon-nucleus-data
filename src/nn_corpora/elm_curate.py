@@ -184,23 +184,28 @@ def apply_point_fixes(data: dict, result: ElmSectorResult) -> None:
 
 def apply_uncertainty_patches(data: dict, result: ElmSectorResult) -> None:
     """Supply uncertainties EXFOR omits, from the original publications."""
-    for entry_id, quantity, index, point, value, note in elm.UNCERTAINTY_PATCHES:
+    for patch in elm.UNCERTAINTY_PATCHES:
         for multi in data.values():
-            if quantity not in multi.data:
+            if patch.quantity not in multi.data:
                 continue
-            entry = multi.data[quantity].entries.get(entry_id)
-            if entry is None or len(entry.measurements) <= index:
+            entry = multi.data[patch.quantity].entries.get(patch.entry)
+            if entry is None:
                 continue
-            measurement = entry.measurements[index]
-            if point is None:
+            # index within the patched subentry, not within the entry: one entry can
+            # carry several targets, and the patch belongs to exactly one of them
+            matching = [m for m in entry.measurements if m.subentry == patch.subentry]
+            if len(matching) <= patch.measurement_index:
+                continue
+            measurement = matching[patch.measurement_index]
+            if patch.point_index is None:
                 mask = measurement.statistical_err <= 0
                 if not np.any(mask):
                     continue
-                measurement.statistical_err[mask] = value
+                measurement.statistical_err[mask] = patch.value
             else:
-                measurement.statistical_err[point] = value
-            munge.note(measurement, note)
-            result.repaired.append(f"{entry_id}: {note}")
+                measurement.statistical_err[patch.point_index] = patch.value
+            munge.note(measurement, patch.note)
+            result.repaired.append(f"{patch.subentry}: {patch.note}")
 
 
 def apply_uncertainty_transplant(data: dict, result: ElmSectorResult) -> None:

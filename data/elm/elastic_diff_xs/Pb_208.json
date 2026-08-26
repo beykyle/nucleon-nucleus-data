@@ -4861,7 +4861,7 @@
             ],
             "y": [
                 0.4686,
-                0.02562,
+                0.2562,
                 0.2837,
                 0.3767,
                 0.2158,
@@ -4937,7 +4937,9 @@
         "sector": "elastic_diff_xs",
         "projectile": "neutron",
         "target": "Pb-208",
-        "notes": []
+        "notes": [
+            "2nd point increased by a factor of 10"
+        ]
     },
     {
         "type": "ECS_Rutherford",
