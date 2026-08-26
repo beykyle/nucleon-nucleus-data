@@ -92,3 +92,59 @@ class TestAgainstDatabase:
         for measurement in data.all_measurements():
             assert measurement.spec_row.subentry
             assert measurement.target
+
+
+@pytest.mark.slow
+class TestScatteringCode:
+    """EXFOR's SCT is "Total scattering (elastic + inelastic)" per its dictionary.
+
+    Summed, that is a different observable from elastic scattering. It may satisfy an
+    elastic query only when the data set resolves the residual's levels, so that the
+    excitation-energy filter can select the ground state.
+    """
+
+    def test_level_resolved_scattering_matches_elastic(self):
+        from exfor_tools.db import __EXFOR_DB__
+        from exfor_tools.reaction import Reaction, is_match, is_level_resolved
+
+        entry = __EXFOR_DB__.retrieve(ENTRY="13965")["13965"]
+        data_set = next(ds for k, ds in entry.getDataSets().items() if k[1] == "13965002")
+        assert data_set.reaction[0].products == ["SCT"]
+        assert is_level_resolved(data_set)
+        assert is_match(Reaction(target=(181, 73), projectile=(1, 0), process="el"),
+                        data_set)
+
+    def test_summed_scattering_does_not(self):
+        """A scattering data set with no level column is elastic plus inelastic."""
+        from exfor_tools.reaction import Reaction, is_match
+
+        class FakeReaction:
+            targ = type("t", (), {"getA": lambda s: 181, "getZ": lambda s: 73})()
+            proj = type("p", (), {"getA": lambda s: 1, "getZ": lambda s: 0})()
+            products = ["SCT"]
+            residual = type("r", (), {"getA": lambda s: 181, "getZ": lambda s: 73})()
+
+        summed = type("ds", (), {"reaction": [FakeReaction()],
+                                 "labels": ["EN", "ANG-CM", "DATA", "DATA-ERR"]})()
+        assert not is_match(
+            Reaction(target=(181, 73), projectile=(1, 0), process="el"), summed)
+
+    def test_every_admitted_scattering_set_is_level_resolved(self):
+        """No summed elastic-plus-inelastic data reaches an elastic sector."""
+        from exfor_tools.reaction import is_level_resolved
+
+        from nn_corpora import errors
+
+        elastic_sectors = {"neutron_elastic", "proton_elastic", "neutron_ay", "proton_ay"}
+        for row in spec.load_all():
+            if not row.in_exfor or row.sector not in elastic_sectors:
+                continue
+            try:
+                blocks = errors.data_sets_for(row.entry, row.subentry, row.pointer)
+            except Exception:
+                continue
+            for data_set in blocks.values():
+                reaction = data_set.reaction[0]
+                if getattr(reaction, "products", None) == ["SCT"]:
+                    assert is_level_resolved(data_set), (
+                        f"{row.subentry} is summed scattering, not elastic")
