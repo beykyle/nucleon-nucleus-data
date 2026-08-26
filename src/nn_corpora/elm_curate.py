@@ -39,6 +39,8 @@ class ElmSectorResult:
     excluded: list[str] = field(default_factory=list)
     repaired: list[str] = field(default_factory=list)
     dropped: list[str] = field(default_factory=list)
+    #: EXFOR entry -> BibTeX entry, for the sector's bibliography
+    bibtex: dict = field(default_factory=dict)
 
     @property
     def n_points(self) -> int:
@@ -225,6 +227,11 @@ def finalize(data: dict, sector: str, projectile: str, result: ElmSectorResult,
         for quantity, entries in multi.data.items():
             for entry_id, entry in entries.entries.items():
                 citation = entry.meta.citation() if entry.meta is not None else ""
+                if entry_id not in result.bibtex:
+                    try:
+                        result.bibtex[entry_id] = entry.bibtex()
+                    except Exception:  # noqa: BLE001 - a missing citation is not fatal
+                        result.bibtex[entry_id] = None
                 for measurement in list(entry.measurements):
                     why = _munge_one(measurement, sector, target, projectile, quantity,
                                      default_norm_err, min_points)

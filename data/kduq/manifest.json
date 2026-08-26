@@ -47,7 +47,7 @@
             ]
         },
         "neutron_elastic": {
-            "coverage": 0.962,
+            "coverage": 0.9521,
             "data_points": 14888,
             "entries": [
                 "10037",
@@ -176,7 +176,7 @@
             ],
             "measurements": 579,
             "spec_rows": 608,
-            "spec_rows_allowlisted": 23,
+            "spec_rows_allowlisted": 29,
             "spec_rows_in_exfor": 606,
             "targets": [
                 "Ag-0",
@@ -341,7 +341,7 @@
             ]
         },
         "proton_ay": {
-            "coverage": 1.0,
+            "coverage": 0.8852,
             "data_points": 1606,
             "entries": [
                 "C0076",
@@ -373,7 +373,7 @@
             ],
             "measurements": 54,
             "spec_rows": 61,
-            "spec_rows_allowlisted": 0,
+            "spec_rows_allowlisted": 7,
             "spec_rows_in_exfor": 61,
             "targets": [
                 "Ca-0",
@@ -397,7 +397,7 @@
             ]
         },
         "proton_elastic": {
-            "coverage": 0.9147,
+            "coverage": 0.8682,
             "data_points": 4457,
             "entries": [
                 "C0076",
@@ -450,7 +450,7 @@
             ],
             "measurements": 115,
             "spec_rows": 132,
-            "spec_rows_allowlisted": 11,
+            "spec_rows_allowlisted": 17,
             "spec_rows_in_exfor": 129,
             "targets": [
                 "Al-27",

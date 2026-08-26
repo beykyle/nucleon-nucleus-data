@@ -34,7 +34,7 @@
             ]
         },
         "neutron_elastic": {
-            "coverage": 1.0,
+            "coverage": 0.8636,
             "data_points": 1540,
             "entries": [
                 "10633",
@@ -52,7 +52,7 @@
             ],
             "measurements": 57,
             "spec_rows": 66,
-            "spec_rows_allowlisted": 0,
+            "spec_rows_allowlisted": 9,
             "spec_rows_in_exfor": 66,
             "targets": [
                 "Bi-209",
@@ -88,7 +88,7 @@
             ]
         },
         "proton_ay": {
-            "coverage": 0.9634,
+            "coverage": 0.7805,
             "data_points": 1950,
             "entries": [
                 "C0893",
@@ -101,7 +101,7 @@
             ],
             "measurements": 64,
             "spec_rows": 82,
-            "spec_rows_allowlisted": 3,
+            "spec_rows_allowlisted": 18,
             "spec_rows_in_exfor": 82,
             "targets": [
                 "Ba-134",

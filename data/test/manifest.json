@@ -31,7 +31,7 @@
             ]
         },
         "neutron_elastic": {
-            "coverage": 0.9949,
+            "coverage": 0.9796,
             "data_points": 4335,
             "entries": [
                 "13878",
@@ -56,7 +56,7 @@
             ],
             "measurements": 192,
             "spec_rows": 196,
-            "spec_rows_allowlisted": 1,
+            "spec_rows_allowlisted": 4,
             "spec_rows_in_exfor": 196,
             "targets": [
                 "Al-27",
