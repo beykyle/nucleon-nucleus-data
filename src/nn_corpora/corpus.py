@@ -87,7 +87,7 @@ def curate(
                 measurement,
                 corpus=corpus, sector=sector,
                 projectile=measurement.spec_row.projectile,
-                target=measurement.spec_row.target,
+                target=getattr(measurement, "target", measurement.spec_row.target),
                 citation=citation,
             ))
         data.measurements[entry_id] = keep
@@ -99,6 +99,7 @@ def _munge_one(measurement, sector: str, default_norm_err: float,
                min_points: int = 3) -> str | None:
     """Clean one measurement in place. Returns a reason if it must be dropped."""
     row = measurement.spec_row
+    target = getattr(measurement, "target", row.target)
 
     if sector in INTEGRAL_SECTORS:
         lo = row.energy_mev
@@ -115,9 +116,9 @@ def _munge_one(measurement, sector: str, default_norm_err: float,
         if munge.is_too_sparse(measurement, min_points):
             return (f"only {measurement.rows} scattering angle(s); too sparse to "
                     "constrain an optical potential")
-        munge.to_cm_degrees(measurement, row.target, row.projectile_AZ)
+        munge.to_cm_degrees(measurement, target, row.projectile_AZ)
         if sector in RATIO_SECTORS:
-            munge.to_ratio_to_rutherford(measurement, row.target, row.projectile_AZ)
+            munge.to_ratio_to_rutherford(measurement, target, row.projectile_AZ)
             if measurement.rows == 0:
                 return "no points remain above the minimum ratio angle"
 

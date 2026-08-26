@@ -138,6 +138,28 @@ def data_sets_for(entry: str, subentry: str, pointer: str = ""):
     return blocks
 
 
+def subentry_target(entry: str, subentry: str, pointer: str = "") -> tuple[int, int] | None:
+    """The target EXFOR currently assigns to a subentry, as ``(A, Z)``.
+
+    EXFOR revises target assignments between releases -- a data set the supplement
+    tabulates under 40Ca may now be listed under natCa, and vice versa. Since both the
+    mass and the asymmetry (N-Z)/A enter an optical potential, the target must be taken
+    from EXFOR rather than assumed, which is also what the supplement's authors did when
+    they found such discrepancies. ``A = 0`` denotes a natural-abundance target.
+    """
+    try:
+        blocks = data_sets_for(entry, subentry, pointer)
+    except EntryUnavailable:
+        return None
+    for data_set in blocks.values():
+        reaction = data_set.reaction[0]
+        if not hasattr(reaction, "targ"):
+            continue
+        A, Z = reaction.targ.getA(), reaction.targ.getZ()
+        return (0, Z) if A == -3000 else (A, Z)
+    return None
+
+
 def resolve(subentry: str, labels) -> ErrorAssignment:
     """Choose the overall uncertainty column(s) for one subentry."""
     candidates = candidate_labels(labels)

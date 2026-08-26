@@ -57,6 +57,8 @@ class SectorData:
     measurements: dict[str, list] = field(default_factory=lambda: defaultdict(list))
     entries: dict[str, ExforEntry] = field(default_factory=dict)
     outcomes: list[RowOutcome] = field(default_factory=list)
+    #: rows whose target EXFOR now assigns differently from the supplement's table
+    reassigned_targets: dict = field(default_factory=dict)
 
     @property
     def n_measurements(self) -> int:
@@ -104,12 +106,20 @@ def build_sector(
     data = SectorData(corpus=corpus, sector=sector, quantities=quantities, process=process)
 
     by_group: dict[tuple[tuple[int, int], str], list[SpecRow]] = defaultdict(list)
+    reassigned: dict[tuple, tuple[int, int]] = {}
     for row in rows:
-        if row.in_exfor:
-            by_group[(row.target, row.entry)].append(row)
-        else:
+        if not row.in_exfor:
             data.outcomes.append(RowOutcome(
                 row, False, "the supplement marks this row as absent from EXFOR"))
+            continue
+        # Group by the target EXFOR currently assigns, not the one tabulated: the two
+        # disagree for a few dozen data sets, and the target is what the reaction match
+        # is made against.
+        target = errors.subentry_target(row.entry, row.subentry, row.pointer) or row.target
+        if target != row.target:
+            reassigned[row.key] = target
+        by_group[(target, row.entry)].append(row)
+    data.reassigned_targets = reassigned
 
     for (target, entry), group in sorted(by_group.items(), key=lambda kv: kv[0][1]):
         _retrieve_group(data, target, entry, group, vocal=vocal, min_num_pts=min_num_pts,
@@ -192,11 +202,12 @@ def _retrieve_group(
                     row, False, "retrieval failed: " + "; ".join(failures)))
             continue
 
-        _match_rows(data, retrieved, plan_rows, allow_substitution=allow_substitution)
+        _match_rows(data, retrieved, plan_rows, target,
+                    allow_substitution=allow_substitution)
 
 
 def _match_rows(data: SectorData, retrieved: list[ExforEntry], rows: list[SpecRow],
-                *, allow_substitution: bool = True) -> None:
+                target: tuple[int, int], *, allow_substitution: bool = True) -> None:
     """Assign each row the measurement it asked for, preferring earlier quantities."""
     # (preference rank, ExforEntry, measurement) for every measurement of the entry.
     # Deliberately not restricted to the tabulated subentries: substitution below needs
@@ -219,7 +230,7 @@ def _match_rows(data: SectorData, retrieved: list[ExforEntry], rows: list[SpecRo
             candidates = _substitution_candidates(available, row, claimed)
             if candidates:
                 data.outcomes.append(_record(
-                    data, retrieved, row, candidates, claimed, integral,
+                    data, retrieved, row, candidates, claimed, integral, target,
                     substituted=True))
                 continue
 
@@ -228,7 +239,7 @@ def _match_rows(data: SectorData, retrieved: list[ExforEntry], rows: list[SpecRo
             continue
 
         data.outcomes.append(
-            _record(data, retrieved, row, candidates, claimed, integral))
+            _record(data, retrieved, row, candidates, claimed, integral, target))
 
 
 def _substitution_candidates(available, row, claimed):
@@ -251,7 +262,8 @@ def _substitution_candidates(available, row, claimed):
     return matches
 
 
-def _record(data, retrieved, row, candidates, claimed, integral, substituted=False):
+def _record(data, retrieved, row, candidates, claimed, integral, target,
+            substituted=False):
     """Claim the best candidate for a row and record the outcome."""
     # Prefer the earlier quantity, then the closest energy when a subentry reports
     # several within tolerance.
@@ -263,6 +275,12 @@ def _record(data, retrieved, row, candidates, claimed, integral, substituted=Fal
     data.entries.setdefault(exfor_entry.entry, exfor_entry)
     data.measurements[exfor_entry.entry].append(measurement)
     measurement.spec_row = row
+    measurement.target = target
+    if target != row.target:
+        from .munge import note
+        note(measurement,
+             f"the supplement tabulates this data set under {row.target_label}; EXFOR "
+             f"now assigns it to A={target[0] or 'nat'}, Z={target[1]}, which is used here")
     if substituted:
         from .munge import note
         note(measurement,
