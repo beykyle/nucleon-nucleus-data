@@ -1,0 +1,31 @@
+[
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "31807006",
+        "source": "S.V.Artemov, F.Kh.Ergashev, et al., Bull.Russian Academy of Sciences - Physics 84, 894 (2020); Izv. Rossiiskoi Akademii Nauk, Ser.Fiz. 84, 1085 (2020);  Data taken from the EXFOR database, file EXFOR 31807001 dated 2020, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                14.1
+            ],
+            "y": [
+                4.42
+            ],
+            "y_err": [
+                0.26
+            ],
+            "x_err": [
+                null
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_total",
+        "projectile": "neutron",
+        "target": "Te-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

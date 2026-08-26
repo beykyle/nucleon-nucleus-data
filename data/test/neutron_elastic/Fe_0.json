@@ -1,0 +1,64 @@
+[
+    {
+        "type": "ECS",
+        "energy": 1.75,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "14451003",
+        "source": "J.R.Vanhoy, S.H.Liu, et al., Nuclear Physics, Section A 972, 107 (2018); J,EPJ/CS93, 02002 (2015);  Data taken from the EXFOR database, file EXFOR 14451001 dated 2018, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.0,
+                40.0,
+                50.0,
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0,
+                110.0,
+                120.0,
+                130.0,
+                140.0
+            ],
+            "y": [
+                0.4979,
+                0.3516,
+                0.2191,
+                0.1278,
+                0.0778,
+                0.0623,
+                0.0668,
+                0.0816,
+                0.1002,
+                0.1169,
+                0.1319,
+                0.1398
+            ],
+            "y_err": [
+                0.0255,
+                0.017,
+                0.0098,
+                0.0053,
+                0.0031,
+                0.0025,
+                0.0027,
+                0.0034,
+                0.0042,
+                0.005,
+                0.0057,
+                0.0061
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Fe-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

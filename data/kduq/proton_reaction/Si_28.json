@@ -1,0 +1,32 @@
+[
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "O0579005",
+        "source": "A.Ingemarsson, J.Nyberg, et al., Nuclear Physics, Section A 653, 341 (1999);  Data taken from the EXFOR database, file EXFOR O0579001 dated 1999, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                65.5
+            ],
+            "y": [
+                0.5547
+            ],
+            "y_err": [
+                0.0152
+            ],
+            "x_err": [
+                0.15
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Si-28",
+        "notes": [
+            "the supplement tabulates this data set under natSi; EXFOR now assigns it to A=28, Z=14, which is used here",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

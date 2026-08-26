@@ -1,0 +1,74 @@
+[
+    {
+        "type": "ECS",
+        "energy": 7.55,
+        "energy_err": 0.065,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "11202016",
+        "source": "J.C.Hopkins, D.M.Drake, Nuclear Science and Engineering 36, 275 (1969);  Data taken from the EXFOR database, file EXFOR 11202001 dated 1969, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                25.8419327632,
+                36.8698976458,
+                45.5729959992,
+                55.9442022574,
+                66.4218215218,
+                78.4630409672,
+                90.5729673449,
+                96.8921025793,
+                102.7090329944,
+                127.5895029649,
+                135.2349153287
+            ],
+            "y": [
+                1.64,
+                0.465,
+                0.098,
+                0.027,
+                0.08,
+                0.084,
+                0.045,
+                0.03,
+                0.021,
+                0.016,
+                0.016
+            ],
+            "y_err": [
+                0.13,
+                0.037,
+                0.008,
+                0.002,
+                0.006,
+                0.007,
+                0.004,
+                0.002,
+                0.002,
+                0.001,
+                0.001
+            ],
+            "x_err": [
+                0.8,
+                0.8,
+                0.8,
+                0.8,
+                0.8,
+                0.8,
+                0.8,
+                0.8,
+                0.8,
+                0.8,
+                0.8
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ge-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

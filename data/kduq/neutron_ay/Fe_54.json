@@ -1,0 +1,179 @@
+[
+    {
+        "type": "APower",
+        "energy": 9.941,
+        "energy_err": 0.1385,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "12997004",
+        "source": "R.S.Pedroni, C.R.Howell, et al., Physical Review, Part C, Nuclear Physics 38, 2052 (1988);  Data taken from the EXFOR database, file EXFOR 12997001 dated 8811, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                29.8,
+                36.9,
+                44.3,
+                110.0,
+                126.8,
+                150.4
+            ],
+            "y": [
+                0.024,
+                0.05,
+                0.078,
+                -0.898,
+                0.062,
+                -0.085
+            ],
+            "y_err": [
+                0.006,
+                0.008,
+                0.021,
+                0.052,
+                0.102,
+                0.033
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_ay",
+        "projectile": "neutron",
+        "target": "Fe-54",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "APower",
+        "energy": 13.937,
+        "energy_err": 0.093,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "12997004",
+        "source": "R.S.Pedroni, C.R.Howell, et al., Physical Review, Part C, Nuclear Physics 38, 2052 (1988);  Data taken from the EXFOR database, file EXFOR 12997001 dated 8811, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                29.4,
+                45.4,
+                55.0,
+                71.0,
+                80.9,
+                90.4,
+                110.1,
+                132.5,
+                151.9
+            ],
+            "y": [
+                0.081,
+                -0.197,
+                -0.689,
+                -0.096,
+                0.029,
+                -0.164,
+                -0.711,
+                0.36,
+                -0.477
+            ],
+            "y_err": [
+                0.016,
+                0.019,
+                0.035,
+                0.055,
+                0.026,
+                0.027,
+                0.065,
+                0.055,
+                0.045
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_ay",
+        "projectile": "neutron",
+        "target": "Fe-54",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "APower",
+        "energy": 16.93,
+        "energy_err": 0.075,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "12997004",
+        "source": "R.S.Pedroni, C.R.Howell, et al., Physical Review, Part C, Nuclear Physics 38, 2052 (1988);  Data taken from the EXFOR database, file EXFOR 12997001 dated 8811, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                24.4,
+                29.1,
+                35.2,
+                41.2,
+                50.5,
+                59.8,
+                71.2,
+                80.8,
+                90.4,
+                100.3,
+                110.9,
+                115.7,
+                118.8,
+                126.4,
+                135.1,
+                143.4,
+                150.3,
+                158.7
+            ],
+            "y": [
+                0.042,
+                0.106,
+                0.363,
+                -0.131,
+                -0.514,
+                -0.779,
+                -0.003,
+                -0.009,
+                -0.226,
+                -0.46,
+                0.052,
+                0.286,
+                0.447,
+                0.397,
+                0.194,
+                -0.435,
+                -0.389,
+                0.464
+            ],
+            "y_err": [
+                0.027,
+                0.028,
+                0.057,
+                0.016,
+                0.038,
+                0.069,
+                0.026,
+                0.02,
+                0.049,
+                0.083,
+                0.078,
+                0.039,
+                0.057,
+                0.055,
+                0.046,
+                0.072,
+                0.061,
+                0.039
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_ay",
+        "projectile": "neutron",
+        "target": "Fe-54",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

@@ -1,0 +1,79 @@
+[
+    {
+        "type": "ECS",
+        "energy": 6.0,
+        "energy_err": 0.2,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "14371004",
+        "source": "S.Macmullin, M.Kidd, et al., Physical Review, Part C, Nuclear Physics 87, 054613 (2013);  Data taken from the EXFOR database, file EXFOR 14371001 dated 2013, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                0.0,
+                23.0,
+                33.0,
+                38.0,
+                43.0,
+                48.0,
+                53.0,
+                61.0,
+                71.0,
+                81.0,
+                91.0,
+                101.0,
+                111.0,
+                122.0,
+                133.0,
+                144.0,
+                155.0
+            ],
+            "y": [
+                1.65,
+                1.354,
+                0.893,
+                0.567,
+                0.38,
+                0.218,
+                0.148,
+                0.056,
+                0.013,
+                0.006,
+                0.009,
+                0.02,
+                0.028,
+                0.025,
+                0.028,
+                0.03,
+                0.039
+            ],
+            "y_err": [
+                0.165,
+                0.075,
+                0.07,
+                0.033,
+                0.023,
+                0.014,
+                0.01,
+                0.004,
+                0.001,
+                0.001,
+                0.001,
+                0.001,
+                0.001,
+                0.002,
+                0.002,
+                0.002,
+                0.003
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ar-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

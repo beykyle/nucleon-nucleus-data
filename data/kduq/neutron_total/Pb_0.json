@@ -1,0 +1,78 @@
+[
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "10047089",
+        "source": "D.G.Foster Jr, D.W.Glasgow, Physical Review, Part C, Nuclear Physics 3, 576 (1971);  Data taken from the EXFOR database, file EXFOR 10047001 dated 197102, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                2.491,
+                3.554,
+                4.613,
+                5.677,
+                6.728,
+                7.804,
+                8.819,
+                9.954,
+                10.952,
+                11.972,
+                13.137,
+                14.137
+            ],
+            "y": [
+                6.3892,
+                7.4987,
+                7.6784,
+                6.6524,
+                6.0604,
+                5.3969,
+                5.0929,
+                5.1866,
+                5.0831,
+                5.1699,
+                5.224,
+                5.4171
+            ],
+            "y_err": [
+                0.5278,
+                0.1027,
+                0.0848,
+                0.0922,
+                0.0993,
+                0.0836,
+                0.082,
+                0.0666,
+                0.0516,
+                0.0319,
+                0.0301,
+                0.0476
+            ],
+            "x_err": [
+                0.0285,
+                0.046,
+                0.0645,
+                0.084,
+                0.105,
+                0.129,
+                0.152,
+                0.18,
+                0.206,
+                0.231,
+                0.2635,
+                0.294
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_total",
+        "projectile": "neutron",
+        "target": "Pb-0",
+        "notes": [
+            "the supplement tabulates this data set under 208Pb; EXFOR now assigns it to A=nat, Z=82, which is used here",
+            "restricted to the tabulated energy range 2.491-14.137 MeV, dropping 5 point(s)",
+            "downsampled from 226 to 12 points, at most 1 per MeV",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

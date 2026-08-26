@@ -1,0 +1,73 @@
+[
+    {
+        "type": "APower",
+        "energy": 15.425,
+        "energy_err": 0.172,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "13903003",
+        "source": "M.M.Nagadi, C.R.Howell, et al., Physical Review, Part C, Nuclear Physics 68, 044610 (2003);  Data taken from the EXFOR database, file EXFOR 13903001 dated 2003, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                25.38,
+                30.21,
+                35.06,
+                38.33,
+                42.33,
+                47.33,
+                52.27,
+                61.86,
+                71.61,
+                81.55,
+                91.88,
+                103.94,
+                116.71,
+                129.43,
+                141.02
+            ],
+            "y": [
+                -0.227,
+                -0.331,
+                -0.479,
+                -0.757,
+                -0.623,
+                -0.146,
+                -0.04,
+                -0.14,
+                -0.342,
+                -0.568,
+                -0.404,
+                0.306,
+                0.429,
+                0.101,
+                0.0
+            ],
+            "y_err": [
+                0.027,
+                0.043,
+                0.051,
+                0.065,
+                0.064,
+                0.066,
+                0.038,
+                0.045,
+                0.039,
+                0.058,
+                0.077,
+                0.061,
+                0.079,
+                0.069,
+                0.097
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_ay",
+        "projectile": "neutron",
+        "target": "Al-27",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

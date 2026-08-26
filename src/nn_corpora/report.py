@@ -87,6 +87,8 @@ def categorize(reason: str) -> str:
         return "energy-not-found"
     if reason.startswith("excluded by override"):
         return "excluded"
+    if "no uncertainty" in reason or "too sparse" in reason or "analyzing power" in reason:
+        return "dropped-in-cleaning"
     return "other"
 
 

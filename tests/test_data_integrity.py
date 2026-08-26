@@ -179,27 +179,39 @@ class TestCoverage:
 
     @pytest.mark.parametrize("corpus,sector", spec.available_sectors())
     def test_every_spec_row_resolved_or_allowlisted(self, corpus, sector, known_missing):
+        """A row must produce data, be substituted, or be on the allowlist.
+
+        A substituted row is satisfied by a different subentry of the same entry, after
+        EXFOR renumbered the tabulated one, so it appears under neither its own subentry
+        nor the allowlist -- but the record that satisfied it names it in its notes.
+        """
         rows = spec.load_sector(corpus, sector)
-        produced = set()
+
+        produced, substituted = set(), set()
         directory = DATA_DIR / corpus / sector
         if directory.exists():
             for path in directory.glob("*.json"):
                 for record in load(path):
                     produced.add(record["EXFORAccessionNumber"])
+                    for note in record["notes"]:
+                        if "no longer in EXFOR" in note:
+                            substituted.update(
+                                w for w in note.replace(",", " ").split() if len(w) == 8
+                            )
 
         allowed = {k for k in known_missing if k[0] == corpus and k[1] == sector}
         unaccounted = [
             r for r in rows
             if r.subentry not in produced
+            and r.subentry not in substituted
             and (corpus, sector, r.target_label, round(r.energy_mev, 6), r.subentry)
             not in allowed
         ]
-        # Substituted rows are satisfied by a different subentry than tabulated, so they
-        # are neither in `produced` under their own number nor on the allowlist.
-        assert len(unaccounted) <= len(rows) * 0.15, (
+        assert not unaccounted, (
             f"{corpus}/{sector}: {len(unaccounted)} of {len(rows)} rows are neither "
-            f"produced nor allowlisted, e.g. "
-            f"{[(r.target_label, r.energy_mev, r.subentry) for r in unaccounted[:5]]}"
+            f"produced, substituted, nor allowlisted: "
+            f"{[(r.target_label, r.energy_mev, r.subentry) for r in unaccounted[:8]]}\n"
+            "Either fix the retrieval, or add them to spec/known_missing.csv with a reason."
         )
 
 

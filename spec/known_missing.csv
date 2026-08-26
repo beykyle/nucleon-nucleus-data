@@ -1,11 +1,31 @@
 corpus,sector,target_label,energy_mev,subentry,category,reason
-chuq,neutron_elastic,165Hg,11.01,10633018,subentry-withdrawn,subentry not present in entry 10633 for this quantity
-chuq,neutron_elastic,51V,11.01,10633006,subentry-withdrawn,subentry not present in entry 10633 for this quantity
-chuq,neutron_elastic,55Mn,11.01,10633007,subentry-withdrawn,subentry not present in entry 10633 for this quantity
-chuq,neutron_elastic,93Nb,11.01,10633011,subentry-withdrawn,subentry not present in entry 10633 for this quantity
+chuq,neutron_elastic,116Sn,11.0,10817006,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,neutron_elastic,116Sn,24.0,10817006,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,neutron_elastic,118Sn,11.0,10817007,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,neutron_elastic,118Sn,24.0,10817007,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,neutron_elastic,120Sn,11.0,10817008,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,neutron_elastic,122Sn,11.0,10817009,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,neutron_elastic,124Sn,11.0,10817010,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,neutron_elastic,124Sn,24.0,10817010,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,neutron_elastic,96Mo,11.0,10867003,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,proton_ay,112Cd,20.4,O0169013,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,proton_ay,114Cd,20.4,O0169015,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,proton_ay,54Fe,17.2,O0091003,dropped-in-cleaning,one or more data points carry no uncertainty
 chuq,proton_ay,54Fe,40.0,O0162024,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0162 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
+chuq,proton_ay,56Fe,17.2,O0091009,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,proton_ay,58Ni,20.4,O0091015,dropped-in-cleaning,one or more data points carry no uncertainty
 chuq,proton_ay,58Ni,40.0,O0162026,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0162 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
+chuq,proton_ay,60Ni,20.4,O0091019,dropped-in-cleaning,one or more data points carry no uncertainty
 chuq,proton_ay,60Ni,40.0,O0162028,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0162 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
+chuq,proton_ay,62Ni,20.4,O0091023,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,proton_ay,64Zn,20.4,O1109003,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,proton_ay,68Zn,20.4,O1109007,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,proton_ay,70Zn,20.4,O1109009,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,proton_ay,72Ge,22.3,O1103005,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,proton_ay,74Ge,22.3,O1103007,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,proton_ay,78Se,22.3,O1103013,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,proton_ay,80Se,22.3,O1103015,dropped-in-cleaning,one or more data points carry no uncertainty
+chuq,proton_ay,86Sr,24.6,O0169007,dropped-in-cleaning,one or more data points carry no uncertainty
 chuq,proton_elastic,208Pb,40.0,O0328008,subentry-withdrawn,subentry not present in entry O0328 for this quantity
 chuq,proton_elastic,40Ca,40.0,O0328003,subentry-withdrawn,subentry not present in entry O0328 for this quantity
 chuq,proton_elastic,54Fe,40.0,O0162023,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0162 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
@@ -13,110 +33,61 @@ chuq,proton_elastic,58Ni,40.0,O0162025,x4i3-parse-failure,uncertainty unresolved
 chuq,proton_elastic,60Ni,40.0,O0162027,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0162 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
 chuq,proton_elastic,90Zr,40.0,O0328006,subentry-withdrawn,subentry not present in entry O0328 for this quantity
 kduq,neutron_ay,27Al,7.62,22532004,uncertainty-unresolved,uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
-kduq,neutron_elastic,103Rh,1.5,12796003,subentry-withdrawn,subentry not present in entry 12796 for this quantity
-kduq,neutron_elastic,103Rh,1.8,12796003,subentry-withdrawn,subentry not present in entry 12796 for this quantity
-kduq,neutron_elastic,103Rh,2.3,12796003,subentry-withdrawn,subentry not present in entry 12796 for this quantity
-kduq,neutron_elastic,103Rh,2.8,12796003,subentry-withdrawn,subentry not present in entry 12796 for this quantity
-kduq,neutron_elastic,103Rh,3.25,12796004,subentry-withdrawn,subentry not present in entry 12796 for this quantity
-kduq,neutron_elastic,103Rh,3.75,12796004,subentry-withdrawn,subentry not present in entry 12796 for this quantity
-kduq,neutron_elastic,103Rh,4.505,13589002,subentry-withdrawn,subentry not present in entry 13589 for this quantity
-kduq,neutron_elastic,103Rh,5.005,13589002,subentry-withdrawn,subentry not present in entry 13589 for this quantity
-kduq,neutron_elastic,103Rh,5.505,13589002,subentry-withdrawn,subentry not present in entry 13589 for this quantity
-kduq,neutron_elastic,103Rh,5.905,13589002,subentry-withdrawn,subentry not present in entry 13589 for this quantity
-kduq,neutron_elastic,103Rh,6.505,13589002,subentry-withdrawn,subentry not present in entry 13589 for this quantity
-kduq,neutron_elastic,103Rh,7.14,13589002,subentry-withdrawn,subentry not present in entry 13589 for this quantity
-kduq,neutron_elastic,103Rh,7.505,13589002,subentry-withdrawn,subentry not present in entry 13589 for this quantity
-kduq,neutron_elastic,103Rh,8.03,13589002,subentry-withdrawn,subentry not present in entry 13589 for this quantity
-kduq,neutron_elastic,103Rh,8.405,13589002,subentry-withdrawn,subentry not present in entry 13589 for this quantity
-kduq,neutron_elastic,103Rh,9.06,13589002,subentry-withdrawn,subentry not present in entry 13589 for this quantity
-kduq,neutron_elastic,103Rh,9.505,13589002,subentry-withdrawn,subentry not present in entry 13589 for this quantity
-kduq,neutron_elastic,103Rh,9.995,13589002,subentry-withdrawn,subentry not present in entry 13589 for this quantity
-kduq,neutron_elastic,123Sb,1.55,12805003,subentry-withdrawn,subentry not present in entry 12805 for this quantity
-kduq,neutron_elastic,123Sb,2.05,12805003,subentry-withdrawn,subentry not present in entry 12805 for this quantity
-kduq,neutron_elastic,123Sb,2.55,12805003,subentry-withdrawn,subentry not present in entry 12805 for this quantity
-kduq,neutron_elastic,123Sb,3.0,12805004,subentry-withdrawn,subentry not present in entry 12805 for this quantity
-kduq,neutron_elastic,123Sb,3.4,12805004,subentry-withdrawn,subentry not present in entry 12805 for this quantity
-kduq,neutron_elastic,123Sb,4.0,12805004,subentry-withdrawn,subentry not present in entry 12805 for this quantity
+kduq,neutron_elastic,118Sn,24.0,10817007,dropped-in-cleaning,one or more data points carry no uncertainty
 kduq,neutron_elastic,127I,16.1,21664012,x4i3-parse-failure,parse failed: Error while parsing 21664012: Attempted to extract error column POL-BM-ERR with incompatible unitsno-dim for data column DATA with units barns/ster
-kduq,neutron_elastic,141Pr,8.0,12054005,subentry-withdrawn,subentry not present in entry 12054 for this quantity
+kduq,neutron_elastic,141Pr,5.0,11877007,dropped-in-cleaning,one or more data points carry no uncertainty
+kduq,neutron_elastic,197Au,4.1,11215049,dropped-in-cleaning,one or more data points carry no uncertainty
+kduq,neutron_elastic,197Au,5.0,11877009,dropped-in-cleaning,one or more data points carry no uncertainty
 kduq,neutron_elastic,197Au,7.0,20346018,uncertainty-unresolved,uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
 kduq,neutron_elastic,206Pb,7.0,20346025,uncertainty-unresolved,uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
 kduq,neutron_elastic,208Pb,23.0,12962006,x4i3-parse-failure,parse failed: Error while parsing 12962006: Attempted to extract error column POL-BM-ERR with incompatible unitsno-dim for data column DATA-CM with units barns/ster
 kduq,neutron_elastic,208Pb,96.0,21123008,x4i3-parse-failure,parse failed: list index out of range
 kduq,neutron_elastic,27Al,7.62,22532002,uncertainty-unresolved,uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
 kduq,neutron_elastic,27Al,96.0,21123003,x4i3-parse-failure,parse failed: list index out of range
-kduq,neutron_elastic,45Sc,2.62,13547002,subentry-withdrawn,subentry not present in entry 13547 for this quantity
-kduq,neutron_elastic,45Sc,2.86,13547002,subentry-withdrawn,subentry not present in entry 13547 for this quantity
-kduq,neutron_elastic,45Sc,3.83,13547002,subentry-withdrawn,subentry not present in entry 13547 for this quantity
-kduq,neutron_elastic,45Sc,5.0,13547003,subentry-withdrawn,subentry not present in entry 13547 for this quantity
-kduq,neutron_elastic,45Sc,5.9,13547003,subentry-withdrawn,subentry not present in entry 13547 for this quantity
-kduq,neutron_elastic,45Sc,6.5,13547003,subentry-withdrawn,subentry not present in entry 13547 for this quantity
-kduq,neutron_elastic,45Sc,7.14,13547003,subentry-withdrawn,subentry not present in entry 13547 for this quantity
-kduq,neutron_elastic,45Sc,8.03,13547003,subentry-withdrawn,subentry not present in entry 13547 for this quantity
-kduq,neutron_elastic,45Sc,9.06,13547003,subentry-withdrawn,subentry not present in entry 13547 for this quantity
-kduq,neutron_elastic,45Sc,10.0,13547003,subentry-withdrawn,subentry not present in entry 13547 for this quantity
-kduq,neutron_elastic,55Mn,11.01,10633007,subentry-withdrawn,subentry not present in entry 10633 for this quantity
 kduq,neutron_elastic,59Co,23.0,12962004,x4i3-parse-failure,parse failed: Error while parsing 12962004: Attempted to extract error column POL-BM-ERR with incompatible unitsno-dim for data column DATA-CM with units barns/ster
-kduq,neutron_elastic,93Nb,2.55,12797003,subentry-withdrawn,subentry not present in entry 12797 for this quantity
-kduq,neutron_elastic,93Nb,2.85,12797003,subentry-withdrawn,subentry not present in entry 12797 for this quantity
-kduq,neutron_elastic,93Nb,4.5,12937002,subentry-withdrawn,subentry not present in entry 12937 for this quantity
-kduq,neutron_elastic,93Nb,5.0,12937002,subentry-withdrawn,subentry not present in entry 12937 for this quantity
-kduq,neutron_elastic,93Nb,5.5,12937002,subentry-withdrawn,subentry not present in entry 12937 for this quantity
-kduq,neutron_elastic,93Nb,5.9,12937002,subentry-withdrawn,subentry not present in entry 12937 for this quantity
-kduq,neutron_elastic,93Nb,6.5,12937002,subentry-withdrawn,subentry not present in entry 12937 for this quantity
-kduq,neutron_elastic,93Nb,7.14,12937002,subentry-withdrawn,subentry not present in entry 12937 for this quantity
-kduq,neutron_elastic,93Nb,7.5,12937002,subentry-withdrawn,subentry not present in entry 12937 for this quantity
-kduq,neutron_elastic,93Nb,8.03,12937002,subentry-withdrawn,subentry not present in entry 12937 for this quantity
-kduq,neutron_elastic,93Nb,8.4,12937002,subentry-withdrawn,subentry not present in entry 12937 for this quantity
-kduq,neutron_elastic,93Nb,9.06,12937002,subentry-withdrawn,subentry not present in entry 12937 for this quantity
-kduq,neutron_elastic,93Nb,9.941,12995002,subentry-withdrawn,subentry not present in entry 12995 for this quantity
-kduq,neutron_elastic,93Nb,11.01,10633011,subentry-withdrawn,subentry not present in entry 10633 for this quantity
-kduq,neutron_elastic,93Nb,11.928,12995002,subentry-withdrawn,subentry not present in entry 12995 for this quantity
-kduq,neutron_elastic,93Nb,13.915,12995002,subentry-withdrawn,subentry not present in entry 12995 for this quantity
-kduq,neutron_elastic,93Nb,16.91,12995002,subentry-withdrawn,subentry not present in entry 12995 for this quantity
 kduq,neutron_elastic,93Nb,20.0,13532002,x4i3-parse-failure,retrieval failed: dXS/dA: AttributeError: 'NoneType' object has no attribute 'total_len'
-kduq,neutron_elastic,natAg,4.51,13638002,subentry-withdrawn,subentry not present in entry 13638 for this quantity
-kduq,neutron_elastic,natAg,5.01,13638002,subentry-withdrawn,subentry not present in entry 13638 for this quantity
-kduq,neutron_elastic,natAg,5.51,13638002,subentry-withdrawn,subentry not present in entry 13638 for this quantity
-kduq,neutron_elastic,natAg,5.91,13638002,subentry-withdrawn,subentry not present in entry 13638 for this quantity
-kduq,neutron_elastic,natAg,6.51,13638002,subentry-withdrawn,subentry not present in entry 13638 for this quantity
-kduq,neutron_elastic,natAg,7.14,13638002,subentry-withdrawn,subentry not present in entry 13638 for this quantity
-kduq,neutron_elastic,natAg,7.51,13638002,subentry-withdrawn,subentry not present in entry 13638 for this quantity
-kduq,neutron_elastic,natAg,8.03,13638002,subentry-withdrawn,subentry not present in entry 13638 for this quantity
-kduq,neutron_elastic,natAg,8.41,13638002,subentry-withdrawn,subentry not present in entry 13638 for this quantity
-kduq,neutron_elastic,natAg,9.06,13638002,subentry-withdrawn,subentry not present in entry 13638 for this quantity
-kduq,neutron_elastic,natAg,9.51,13638002,subentry-withdrawn,subentry not present in entry 13638 for this quantity
-kduq,neutron_elastic,natAg,9.99,13638002,subentry-withdrawn,subentry not present in entry 13638 for this quantity
+kduq,neutron_elastic,96Mo,11.0,10867003,dropped-in-cleaning,one or more data points carry no uncertainty
 kduq,neutron_elastic,natCd,4.5,13585002,subentry-withdrawn,subentry not present in entry 13585 for this quantity
 kduq,neutron_elastic,natCd,8.41,13585002,subentry-withdrawn,subentry not present in entry 13585 for this quantity
 kduq,neutron_elastic,natCd,9.06,13585002,subentry-withdrawn,subentry not present in entry 13585 for this quantity
 kduq,neutron_elastic,natCd,9.5,13585002,subentry-withdrawn,subentry not present in entry 13585 for this quantity
 kduq,neutron_elastic,natCd,9.99,13585002,subentry-withdrawn,subentry not present in entry 13585 for this quantity
 kduq,neutron_elastic,natCd,96.0,21123007,x4i3-parse-failure,parse failed: list index out of range
-kduq,neutron_elastic,natCe,0.98,21110007,subentry-withdrawn,subentry not present in entry 21110 for this quantity
+kduq,neutron_elastic,natCe,5.0,11877006,dropped-in-cleaning,one or more data points carry no uncertainty
 kduq,neutron_elastic,natCu,96.0,21123006,x4i3-parse-failure,parse failed: list index out of range
 kduq,neutron_elastic,natCu,155.0,,absent-from-exfor,the supplement marks this row as absent from EXFOR
 kduq,neutron_elastic,natHg,16.1,21664014,x4i3-parse-failure,parse failed: Error while parsing 21664014: Attempted to extract error column POL-BM-ERR with incompatible unitsno-dim for data column DATA with units barns/ster
-kduq,neutron_elastic,natIn,11.01,10633016,subentry-withdrawn,subentry not present in entry 10633 for this quantity
 kduq,neutron_elastic,natMg,1.969,11493004,x4i3-parse-failure,parse failed: 'NoneType' object is not subscriptable
 kduq,neutron_elastic,natMg,2.958,11493004,x4i3-parse-failure,parse failed: 'NoneType' object is not subscriptable
 kduq,neutron_elastic,natMg,3.948,11493004,x4i3-parse-failure,parse failed: 'NoneType' object is not subscriptable
 kduq,neutron_elastic,natMg,4.958,11493004,x4i3-parse-failure,parse failed: 'NoneType' object is not subscriptable
-kduq,neutron_elastic,natNd,0.98,21110009,subentry-withdrawn,subentry not present in entry 21110 for this quantity
 kduq,neutron_elastic,natPb,155.0,,absent-from-exfor,the supplement marks this row as absent from EXFOR
 kduq,neutron_total,209Bi,0.011,10449003,x4i3-parse-failure,retrieval failed: XS: AttributeError: 'NoneType' object has no attribute 'total_len'
 kduq,neutron_total,natCr,0.185,10342004,x4i3-parse-failure,retrieval failed: XS: AttributeError: 'NoneType' object has no attribute 'total_len'
 kduq,neutron_total,natMg,0.008,10791002,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry 10791 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
+kduq,proton_ay,120Sn,9.7,O0393008,dropped-in-cleaning,one or more data points carry no uncertainty
+kduq,proton_ay,54Fe,9.69,O0393002,dropped-in-cleaning,one or more data points carry no uncertainty
+kduq,proton_ay,54Fe,17.2,O0091003,dropped-in-cleaning,one or more data points carry no uncertainty
+kduq,proton_ay,56Fe,17.2,O0091009,dropped-in-cleaning,one or more data points carry no uncertainty
+kduq,proton_ay,58Ni,20.4,O0091015,dropped-in-cleaning,one or more data points carry no uncertainty
+kduq,proton_ay,60Ni,20.4,O0091019,dropped-in-cleaning,one or more data points carry no uncertainty
+kduq,proton_ay,90Zr,9.7,O0393007,dropped-in-cleaning,one or more data points carry no uncertainty
 kduq,proton_elastic,120Sn,160.0,O0479004,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0479 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
 kduq,proton_elastic,209Bi,65.0,E0773008,uncertainty-unresolved,uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
 kduq,proton_elastic,27Al,17.0,O0262004,x4i3-parse-failure,parse failed: 'NoneType' object is not subscriptable
+kduq,proton_elastic,27Al,61.4,O0211003,dropped-in-cleaning,one or more data points carry no uncertainty
 kduq,proton_elastic,28Si,40.0,O0162021,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0162 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
+kduq,proton_elastic,54Fe,9.69,O0393002,dropped-in-cleaning,one or more data points carry no uncertainty
+kduq,proton_elastic,54Fe,30.4,O1243003,dropped-in-cleaning,one or more data points carry no uncertainty
 kduq,proton_elastic,56Fe,10.93,,absent-from-exfor,the supplement marks this row as absent from EXFOR
 kduq,proton_elastic,56Fe,11.7,,absent-from-exfor,the supplement marks this row as absent from EXFOR
 kduq,proton_elastic,58Ni,11.7,,absent-from-exfor,the supplement marks this row as absent from EXFOR
 kduq,proton_elastic,58Ni,17.0,O0262007,x4i3-parse-failure,parse failed: 'NoneType' object is not subscriptable
+kduq,proton_elastic,58Ni,35.2,O1198021,dropped-in-cleaning,one or more data points carry no uncertainty
 kduq,proton_elastic,58Ni,39.6,O0436003,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0436 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
+kduq,proton_elastic,58Ni,100.4,O0300003,dropped-in-cleaning,one or more data points carry no uncertainty
 kduq,proton_elastic,60Ni,39.6,O0436002,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0436 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
+kduq,proton_elastic,90Zr,9.7,O0393007,dropped-in-cleaning,one or more data points carry no uncertainty
 kduq,proton_elastic,90Zr,12.7,O0389002,uncertainty-unresolved,"uncertainty unresolved (unrecognised): no preferred uncertainty column among ['ERR-1', 'ERR-2']"
 kduq,proton_reaction,120Sn,28.5,O0150007,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0150 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
 kduq,proton_reaction,208Pb,28.5,O0150008,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0150 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
@@ -145,53 +116,8 @@ kduq,proton_reaction,natSn,9.99,O0741015,x4i3-parse-failure,uncertainty unresolv
 kduq,proton_reaction,natSn,34.0,O0732005,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0732 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
 kduq,proton_reaction,natSn,61.0,O0475005,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0475 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
 kduq,proton_reaction,natZr,10.03,O0741016,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0741 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
-test,neutron_elastic,181Ta,0.323,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,0.37,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,0.414,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,0.469,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,0.522,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,0.568,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,0.615,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,0.666,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,0.719,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,0.767,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,0.815,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,0.867,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,0.911,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,0.967,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,1.015,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,1.068,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,1.11,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,1.163,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,1.213,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,1.261,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,1.309,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,1.359,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,1.415,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,1.465,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,4.51,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,5.01,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,5.51,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,5.91,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,6.51,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,7.14,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,7.51,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,8.03,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,8.41,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,9.06,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,9.51,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,181Ta,9.99,13965002,subentry-withdrawn,subentry not present in entry 13965 for this quantity
-test,neutron_elastic,197Au,4.51,14033002,subentry-withdrawn,subentry not present in entry 14033 for this quantity
-test,neutron_elastic,197Au,5.01,14033002,subentry-withdrawn,subentry not present in entry 14033 for this quantity
-test,neutron_elastic,197Au,5.51,14033002,subentry-withdrawn,subentry not present in entry 14033 for this quantity
-test,neutron_elastic,197Au,5.91,14033002,subentry-withdrawn,subentry not present in entry 14033 for this quantity
-test,neutron_elastic,197Au,6.51,14033002,subentry-withdrawn,subentry not present in entry 14033 for this quantity
-test,neutron_elastic,197Au,7.14,14033002,subentry-withdrawn,subentry not present in entry 14033 for this quantity
-test,neutron_elastic,197Au,7.51,14033002,subentry-withdrawn,subentry not present in entry 14033 for this quantity
-test,neutron_elastic,197Au,8.03,14033002,subentry-withdrawn,subentry not present in entry 14033 for this quantity
-test,neutron_elastic,197Au,8.41,14033002,subentry-withdrawn,subentry not present in entry 14033 for this quantity
-test,neutron_elastic,197Au,9.06,14033002,subentry-withdrawn,subentry not present in entry 14033 for this quantity
-test,neutron_elastic,197Au,9.51,14033002,subentry-withdrawn,subentry not present in entry 14033 for this quantity
-test,neutron_elastic,197Au,9.99,14033002,subentry-withdrawn,subentry not present in entry 14033 for this quantity
+test,neutron_elastic,208Pb,96.0,22987007,dropped-in-cleaning,only 1 scattering angle(s); too sparse to constrain an optical potential
+test,neutron_elastic,56Fe,96.0,22987005,dropped-in-cleaning,only 1 scattering angle(s); too sparse to constrain an optical potential
 test,neutron_elastic,natFe,8.17,32673002,x4i3-parse-failure,parse failed: list index out of range
+test,neutron_elastic,natPb,2.9,31687002,dropped-in-cleaning,only 2 scattering angle(s); too sparse to constrain an optical potential
 test,proton_elastic,64Zn,24.0,O2165003,x4i3-parse-failure,"parse failed: Error while parsing O2165003: Expected only one DATA column, found 0"

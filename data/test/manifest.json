@@ -1,0 +1,225 @@
+{
+    "corpus": "test",
+    "provenance": {
+        "exfor_database": "X4-2025-12-31",
+        "exfor_tools_version": "1.2.dev5+g951bcec08",
+        "x4i3_version": "1.2.4"
+    },
+    "sectors": {
+        "neutron_ay": {
+            "coverage": 1.0,
+            "data_points": 145,
+            "entries": [
+                "13903",
+                "14345"
+            ],
+            "measurements": 8,
+            "spec_rows": 8,
+            "spec_rows_allowlisted": 0,
+            "spec_rows_in_exfor": 8,
+            "targets": [
+                "Al-27",
+                "Co-59",
+                "S-32",
+                "Si-28"
+            ],
+            "types": [
+                "APower"
+            ],
+            "units": [
+                "no-dim"
+            ]
+        },
+        "neutron_elastic": {
+            "coverage": 0.9949,
+            "data_points": 4335,
+            "entries": [
+                "13878",
+                "13894",
+                "13903",
+                "13946",
+                "13965",
+                "14033",
+                "14303",
+                "14317",
+                "14345",
+                "14371",
+                "14451",
+                "14462",
+                "14662",
+                "22962",
+                "22974",
+                "22987",
+                "23059",
+                "23156",
+                "31687"
+            ],
+            "measurements": 192,
+            "spec_rows": 196,
+            "spec_rows_allowlisted": 1,
+            "spec_rows_in_exfor": 196,
+            "targets": [
+                "Al-27",
+                "Ar-0",
+                "Au-197",
+                "Bi-209",
+                "Ca-40",
+                "Ca-48",
+                "Co-59",
+                "Cu-0",
+                "Fe-0",
+                "Fe-54",
+                "Fe-56",
+                "Gd-0",
+                "Pb-0",
+                "Pb-208",
+                "Re-0",
+                "S-32",
+                "Si-28",
+                "Sn-112",
+                "Sn-124",
+                "Ta-181",
+                "W-0",
+                "Y-89"
+            ],
+            "types": [
+                "ECS"
+            ],
+            "units": [
+                "b/sr"
+            ]
+        },
+        "neutron_total": {
+            "coverage": 1.0,
+            "data_points": 1393,
+            "entries": [
+                "13887",
+                "13907",
+                "14269",
+                "14576",
+                "14661",
+                "23199",
+                "30831",
+                "31807"
+            ],
+            "measurements": 28,
+            "spec_rows": 28,
+            "spec_rows_allowlisted": 0,
+            "spec_rows_in_exfor": 28,
+            "targets": [
+                "Au-197",
+                "Bi-209",
+                "Ca-40",
+                "Ca-48",
+                "In-0",
+                "Ni-0",
+                "Ni-58",
+                "Ni-64",
+                "Pb-0",
+                "Pb-204",
+                "Rh-103",
+                "S-0",
+                "Sn-0",
+                "Sn-112",
+                "Sn-124",
+                "Ta-0",
+                "Ta-181",
+                "Te-0",
+                "Ti-0",
+                "W-182",
+                "W-184",
+                "W-186",
+                "Zr-0"
+            ],
+            "types": [
+                "CS"
+            ],
+            "units": [
+                "b"
+            ]
+        },
+        "proton_ay": {
+            "coverage": 1.0,
+            "data_points": 390,
+            "entries": [
+                "D0350",
+                "E2042",
+                "E2098",
+                "E2291"
+            ],
+            "measurements": 14,
+            "spec_rows": 14,
+            "spec_rows_allowlisted": 0,
+            "spec_rows_in_exfor": 14,
+            "targets": [
+                "Ni-58",
+                "Pb-204",
+                "Pb-206",
+                "Pb-208",
+                "Sn-116",
+                "Sn-118",
+                "Sn-120",
+                "Sn-122",
+                "Sn-124"
+            ],
+            "types": [
+                "APower"
+            ],
+            "units": [
+                "no-dim"
+            ]
+        },
+        "proton_elastic": {
+            "coverage": 0.9167,
+            "data_points": 314,
+            "entries": [
+                "D0350",
+                "E2042",
+                "E2098",
+                "F1277"
+            ],
+            "measurements": 11,
+            "spec_rows": 12,
+            "spec_rows_allowlisted": 1,
+            "spec_rows_in_exfor": 12,
+            "targets": [
+                "Mg-24",
+                "Ni-58",
+                "Sn-116",
+                "Sn-118",
+                "Sn-120",
+                "Sn-122",
+                "Sn-124"
+            ],
+            "types": [
+                "ECS_Rutherford"
+            ],
+            "units": [
+                "no-dim"
+            ]
+        },
+        "proton_reaction": {
+            "coverage": 1.0,
+            "data_points": 19,
+            "entries": [
+                "D0356"
+            ],
+            "measurements": 4,
+            "spec_rows": 4,
+            "spec_rows_allowlisted": 0,
+            "spec_rows_in_exfor": 4,
+            "targets": [
+                "Ca-40",
+                "Ni-58",
+                "Pb-208",
+                "Zr-90"
+            ],
+            "types": [
+                "CS"
+            ],
+            "units": [
+                "b"
+            ]
+        }
+    }
+}

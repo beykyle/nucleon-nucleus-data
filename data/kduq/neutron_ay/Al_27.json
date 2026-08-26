@@ -1,0 +1,135 @@
+[
+    {
+        "type": "APower",
+        "energy": 14.0,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "13684002",
+        "source": "Ph.Martin, R.L.Walter, Physical Review, Part C, Nuclear Physics 34, 384 (1986);  Data taken from the EXFOR database, file EXFOR 13684001 dated 8610, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                19.16,
+                27.73,
+                31.57,
+                36.98,
+                47.57,
+                54.31,
+                58.25,
+                66.29,
+                80.1,
+                96.1,
+                111.6,
+                126.12,
+                140.3,
+                155.1
+            ],
+            "y": [
+                -0.1468,
+                -0.2348,
+                -0.341,
+                -0.4927,
+                0.1073,
+                -0.0185,
+                -0.0714,
+                -0.2395,
+                -0.5966,
+                -0.2389,
+                0.3695,
+                -0.0246,
+                -0.2759,
+                0.4993
+            ],
+            "y_err": [
+                0.0119,
+                0.0258,
+                0.0324,
+                0.0455,
+                0.0398,
+                0.0331,
+                0.0308,
+                0.0313,
+                0.0401,
+                0.0496,
+                0.0554,
+                0.0605,
+                0.056,
+                0.0669
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_ay",
+        "projectile": "neutron",
+        "target": "Al-27",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "APower",
+        "energy": 17.0,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "13684002",
+        "source": "Ph.Martin, R.L.Walter, Physical Review, Part C, Nuclear Physics 34, 384 (1986);  Data taken from the EXFOR database, file EXFOR 13684001 dated 8610, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                19.05,
+                27.63,
+                39.19,
+                48.36,
+                53.43,
+                61.44,
+                74.88,
+                91.18,
+                106.38,
+                120.75,
+                135.83,
+                145.1,
+                154.81
+            ],
+            "y": [
+                -0.1533,
+                -0.3376,
+                -0.7288,
+                -0.0657,
+                0.014,
+                -0.1216,
+                -0.3479,
+                -0.1235,
+                0.461,
+                0.1767,
+                -0.0191,
+                0.0512,
+                0.6094
+            ],
+            "y_err": [
+                0.0129,
+                0.0225,
+                0.0473,
+                0.0419,
+                0.0586,
+                0.0352,
+                0.0415,
+                0.0793,
+                0.0571,
+                0.0677,
+                0.0721,
+                0.0886,
+                0.1277
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_ay",
+        "projectile": "neutron",
+        "target": "Al-27",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

@@ -18,6 +18,39 @@ subentry and scattering energy of every data set. Those tables are transcribed t
 This repository does curation only: EXFOR in, cleaned JSON out. Nothing here fits an
 optical potential or evaluates a model.
 
+## What is in it
+
+| corpus | sector | measurements | data points | EXFOR entries | coverage |
+|---|---|---:|---:|---:|---:|
+| elm | charge exchange | 30 | 622 | 7 | — |
+| elm | elastic ay | 96 | 2757 | 36 | — |
+| elm | elastic diff xs | 233 | 8061 | 74 | — |
+| kduq | neutron ay | 30 | 637 | 12 | 96.8% |
+| kduq | neutron elastic | 579 | 14888 | 123 | 96.2% |
+| kduq | neutron total | 65 | 4497 | 35 | 95.6% |
+| kduq | proton ay | 54 | 1606 | 26 | 100.0% |
+| kduq | proton elastic | 115 | 4457 | 47 | 91.5% |
+| kduq | proton reaction | 62 | 204 | 23 | 67.9% |
+| chuq | neutron ay | 11 | 232 | 4 | 100.0% |
+| chuq | neutron elastic | 57 | 1540 | 12 | 100.0% |
+| chuq | proton ay | 64 | 1950 | 7 | 96.3% |
+| chuq | proton elastic | 79 | 2497 | 8 | 92.9% |
+| test | neutron ay | 8 | 145 | 2 | 100.0% |
+| test | neutron elastic | 192 | 4335 | 19 | 99.5% |
+| test | neutron total | 28 | 1393 | 8 | 100.0% |
+| test | proton ay | 14 | 390 | 4 | 100.0% |
+| test | proton elastic | 11 | 314 | 4 | 91.7% |
+| test | proton reaction | 4 | 19 | 1 | 100.0% |
+
+Coverage is the fraction of a sector's specification rows that produced data. It is not
+defined for ELM, which is a query rather than a list of subentries.
+
+Across the three tabulated corpora, 1419 of 1495 specification rows retrieve
+successfully. Of the 76 that do not, 49 are entries x4i3 cannot parse and 10 are rows
+the supplement itself marks as absent from EXFOR, leaving 17 genuine gaps. A further 46
+rows retrieve but are dropped in cleaning, for want of usable uncertainties or of enough
+scattering angles. All 122 are listed with reasons in `spec/known_missing.csv`.
+
 ## Getting started
 
 ```bash
@@ -136,6 +169,8 @@ rather than disappearing quietly. The categories are:
   index. Affects the 2024 and 2025 databases alike
 - `subentry-withdrawn` — EXFOR has renumbered or removed the subentry since the
   supplement was written
+- `dropped-in-cleaning` — the data set retrieved, but did not survive cleaning: no
+  usable uncertainties, too few scattering angles, or the wrong observable
 - `energy-not-found`, `uncertainty-unresolved`
 
 Where a subentry has been renumbered but the data survive elsewhere in the same entry —

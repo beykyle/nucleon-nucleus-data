@@ -1,0 +1,38 @@
+[
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "10639005",
+        "source": "R.F.Carlton, S.Raman, et al., Physical Review, Part C, Nuclear Physics 14, 1439 (1976);  Data taken from the EXFOR database, file EXFOR 10639001 dated 197610, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                3.5957e-05,
+                0.051998
+            ],
+            "y": [
+                5.3257,
+                5.5887
+            ],
+            "y_err": [
+                0.10394,
+                0.27635
+            ],
+            "x_err": [
+                1.8e-08,
+                2.5999e-05
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_total",
+        "projectile": "neutron",
+        "target": "Sn-120",
+        "notes": [
+            "the supplement tabulates this data set under natSn; EXFOR now assigns it to A=120, Z=50, which is used here",
+            "restricted to the tabulated energy range -0.048-0.052000000000000005 MeV, dropping 4544 point(s)",
+            "downsampled from 9067 to 2 points, at most 1 per MeV",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

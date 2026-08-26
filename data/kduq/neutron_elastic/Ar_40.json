@@ -1,0 +1,77 @@
+[
+    {
+        "type": "ECS",
+        "energy": 7.75,
+        "energy_err": 0.075,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "22121004",
+        "source": "G.Schreder, W.Grum, et al., Physical Review, Part C, Nuclear Physics 39, 1774 (1989); Physical Review, Part C, Nuclear Physics 39, 1768 (1989); Thesis or dissertation: Grum  (1989); Conf.on Nucl.Data For Sci.and Technol.,Mito 1988 , 691 (1988); Int.Conf.on Fast Neutr.Phys.,Dubrovnik,26-31 May 1986 , 224 (1986); Conf.on Nucl.Data for Sci.and Technol.,Antwerp 1982 , 783 (1982);  Data taken from the EXFOR database, file EXFOR 22121001 dated 1989, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                21.52,
+                28.68,
+                35.83,
+                42.97,
+                50.09,
+                57.2,
+                64.29,
+                70.35,
+                76.4,
+                83.43,
+                90.45,
+                97.44,
+                104.41,
+                111.36,
+                118.29,
+                125.2
+            ],
+            "y": [
+                0.9683,
+                0.7203,
+                0.4319,
+                0.2281,
+                0.1147,
+                0.04707,
+                0.01936,
+                0.01267,
+                0.008985,
+                0.006556,
+                0.008395,
+                0.01106,
+                0.01943,
+                0.02148,
+                0.02508,
+                0.02418
+            ],
+            "y_err": [
+                0.01985,
+                0.01474,
+                0.01075,
+                0.006553,
+                0.004936,
+                0.002431,
+                0.0009777,
+                0.0009824,
+                0.001086,
+                0.0007947,
+                0.001099,
+                0.001106,
+                0.00172,
+                0.001934,
+                0.002252,
+                0.003087
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ar-40",
+        "notes": [
+            "the supplement tabulates this data set under natAr; EXFOR now assigns it to A=40, Z=18, which is used here",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "C1217014",
+        "source": "J.F.Dicello, G.J.Igo, et al., Physical Review 157, 1001 (1967); Physics Letters 23, 685 (1966);  Data taken from the EXFOR database, file EXFOR C1217001 dated 1967, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                14.5
+            ],
+            "y": [
+                0.902
+            ],
+            "y_err": [
+                0.034
+            ],
+            "x_err": [
+                null
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Zr-90",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "O0081004",
+        "source": "J.J.H.Menet, E.E.Gross, et al., Physical Review, Part C, Nuclear Physics 4, 1114 (1971);  Data taken from the EXFOR database, file EXFOR O0081001 dated 1971, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                30.0,
+                40.0,
+                49.5,
+                60.8
+            ],
+            "y": [
+                1.249,
+                1.316,
+                1.214,
+                1.114
+            ],
+            "y_err": [
+                0.045,
+                0.065,
+                0.059,
+                0.042
+            ],
+            "x_err": [
+                null,
+                null,
+                null,
+                null
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Zr-90",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

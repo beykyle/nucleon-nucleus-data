@@ -45,6 +45,17 @@ def main() -> None:
                 reason=outcome.reason,
             ))
 
+        # Rows that retrieved but did not survive cleaning -- no usable uncertainties,
+        # too few scattering angles, the wrong observable -- are equally absent from the
+        # corpus and equally need a recorded reason.
+        for row, subentry, reason in result.dropped:
+            counts["dropped-in-cleaning"] += 1
+            rows.append(report.KnownMissing(
+                corpus=row.corpus, sector=row.sector, target_label=row.target_label,
+                energy_mev=row.energy_mev, subentry=row.subentry,
+                category="dropped-in-cleaning", reason=reason,
+            ))
+
     print(f"\n{len(rows)} unresolved rows:")
     for category, n in counts.most_common():
         print(f"  {n:5d}  {category}")

@@ -1,0 +1,482 @@
+[
+    {
+        "type": "ECS",
+        "energy": 3.5,
+        "energy_err": 0.125,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20341010",
+        "source": "K.Tsukada, S.Tanaka, et al., Reactor Physics Sem., Vienna 1961 1, 75(18/12) (1961); Private communication: Tsukada  (1962);  Data taken from the EXFOR database, file EXFOR 20341001 dated 1961, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.9362048678,
+                51.4136283871,
+                71.7553028186,
+                91.8666713041,
+                111.7528464344,
+                126.5580761964,
+                141.1958861356
+            ],
+            "y": [
+                0.394,
+                0.188,
+                0.0705,
+                0.0427,
+                0.0339,
+                0.0427,
+                0.0458
+            ],
+            "y_err": [
+                0.033,
+                0.016,
+                0.0064,
+                0.005,
+                0.0036,
+                0.0046,
+                0.0048
+            ],
+            "x_err": [
+                2.1002037652,
+                3.4988878792,
+                4.9000859734,
+                6.3,
+                7.6999140266,
+                8.7520742137,
+                9.7997227064
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "P-31",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 3.85,
+        "energy_err": 0.11,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20341010",
+        "source": "K.Tsukada, S.Tanaka, et al., Reactor Physics Sem., Vienna 1961 1, 75(18/12) (1961); Private communication: Tsukada  (1962);  Data taken from the EXFOR database, file EXFOR 20341001 dated 1961, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.9362048678,
+                51.4136283871,
+                71.7553028186,
+                91.8666713041,
+                111.7528464344,
+                126.5580761964,
+                141.1958861356
+            ],
+            "y": [
+                0.63,
+                0.29,
+                0.1154,
+                0.053,
+                0.0551,
+                0.0665,
+                0.0672
+            ],
+            "y_err": [
+                0.045,
+                0.025,
+                0.008,
+                0.006,
+                0.0066,
+                0.008,
+                0.0081
+            ],
+            "x_err": [
+                2.1002037652,
+                3.4988878792,
+                4.9000859734,
+                6.3,
+                7.6999140266,
+                8.7520742137,
+                9.7997227064
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "P-31",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 4.2,
+        "energy_err": 0.1,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20341010",
+        "source": "K.Tsukada, S.Tanaka, et al., Reactor Physics Sem., Vienna 1961 1, 75(18/12) (1961); Private communication: Tsukada  (1962);  Data taken from the EXFOR database, file EXFOR 20341001 dated 1961, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.9362048678,
+                51.4136283871,
+                71.7553028186,
+                91.8666713041,
+                111.7528464344,
+                126.5580761964,
+                141.1958861356
+            ],
+            "y": [
+                0.659,
+                0.29,
+                0.1,
+                0.053,
+                0.0395,
+                0.0508,
+                0.0696
+            ],
+            "y_err": [
+                0.051,
+                0.024,
+                0.013,
+                0.01,
+                0.005,
+                0.0067,
+                0.0084
+            ],
+            "x_err": [
+                2.1002037652,
+                3.4988878792,
+                4.9000859734,
+                6.3,
+                7.6999140266,
+                8.7520742137,
+                9.7997227064
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "P-31",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 4.5,
+        "energy_err": 0.085,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20341010",
+        "source": "K.Tsukada, S.Tanaka, et al., Reactor Physics Sem., Vienna 1961 1, 75(18/12) (1961); Private communication: Tsukada  (1962);  Data taken from the EXFOR database, file EXFOR 20341001 dated 1961, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.9362048678,
+                51.4136283871,
+                71.7553028186,
+                91.8666713041,
+                111.7528464344,
+                126.5580761964,
+                141.1958861356
+            ],
+            "y": [
+                0.683,
+                0.271,
+                0.086,
+                0.039,
+                0.0305,
+                0.0306,
+                0.0341
+            ],
+            "y_err": [
+                0.057,
+                0.023,
+                0.011,
+                0.01,
+                0.0029,
+                0.0029,
+                0.0033
+            ],
+            "x_err": [
+                2.1002037652,
+                3.4988878792,
+                4.9000859734,
+                6.3,
+                7.6999140266,
+                8.7520742137,
+                9.7997227064
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "P-31",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 4.8,
+        "energy_err": 0.075,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20341010",
+        "source": "K.Tsukada, S.Tanaka, et al., Reactor Physics Sem., Vienna 1961 1, 75(18/12) (1961); Private communication: Tsukada  (1962);  Data taken from the EXFOR database, file EXFOR 20341001 dated 1961, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.9362048678,
+                51.4136283871,
+                71.7553028186,
+                91.8666713041,
+                111.7528464344,
+                126.5580761964,
+                141.1958861356
+            ],
+            "y": [
+                0.761,
+                0.269,
+                0.069,
+                0.026,
+                0.0266,
+                0.0331,
+                0.0425
+            ],
+            "y_err": [
+                0.058,
+                0.028,
+                0.009,
+                0.008,
+                0.0033,
+                0.0053,
+                0.0065
+            ],
+            "x_err": [
+                2.1002037652,
+                3.4988878792,
+                4.9000859734,
+                6.3,
+                7.6999140266,
+                8.7520742137,
+                9.7997227064
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "P-31",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 5.95,
+        "energy_err": 0.05,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "21046008",
+        "source": "J.Martin, D.T.Stewart, et al., Nuclear Physics, Section A 113, (3), 564 (1968);  Data taken from the EXFOR database, file EXFOR 21046001 dated 196806, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                27.8468806135,
+                36.0707612242,
+                42.2244855839,
+                53.4709678257,
+                64.6631882585,
+                72.7648262639,
+                81.8381959396,
+                91.8666713041,
+                102.8324217613,
+                111.7540522958,
+                121.6165132527,
+                132.4087595652
+            ],
+            "y": [
+                0.5423,
+                0.35,
+                0.2434,
+                0.1015,
+                0.047,
+                0.0328,
+                0.0242,
+                0.0192,
+                0.0113,
+                0.014,
+                0.0168,
+                0.026
+            ],
+            "y_err": [
+                0.037961,
+                0.0245,
+                0.017038,
+                0.007105,
+                0.00329,
+                0.002296,
+                0.001694,
+                0.001344,
+                0.000791,
+                0.00098,
+                0.001176,
+                0.00182
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "P-31",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 7.79,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "10263006",
+        "source": "J.D.Brandenberger, A.Mittler, et al., Nuclear Physics, Section A 196, 65 (1972);  Data taken from the EXFOR database, file EXFOR 10263001 dated 197211, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.9332118103,
+                36.0705515665,
+                51.4298486367,
+                61.6165132527,
+                71.7540609373,
+                81.8383025624,
+                91.8666713041,
+                101.8383025624,
+                111.7540609373,
+                121.6165132527,
+                131.4298486367,
+                146.0705515665
+            ],
+            "y": [
+                0.2614,
+                0.1782,
+                0.0472,
+                0.0287,
+                0.0224,
+                0.0184,
+                0.0166,
+                0.0077,
+                0.0038,
+                0.0085,
+                0.0119,
+                0.0129
+            ],
+            "y_err": [
+                0.0048,
+                0.0038,
+                0.0015,
+                0.0006,
+                0.0004,
+                0.0004,
+                0.0004,
+                0.00021,
+                0.00026,
+                0.00024,
+                0.0004,
+                0.0011
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "P-31",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 9.05,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "10263006",
+        "source": "J.D.Brandenberger, A.Mittler, et al., Nuclear Physics, Section A 196, 65 (1972);  Data taken from the EXFOR database, file EXFOR 10263001 dated 197211, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.9332118103,
+                36.0705515665,
+                41.1997486065,
+                56.5289985983,
+                61.6165132527,
+                71.7540609373,
+                81.8383025624,
+                91.8666713041,
+                101.8383025624,
+                111.7540609373,
+                121.6165132527,
+                131.4298486367,
+                141.1997486065,
+                150.9332118103
+            ],
+            "y": [
+                0.246,
+                0.1634,
+                0.0922,
+                0.0215,
+                0.0217,
+                0.0235,
+                0.0185,
+                0.0128,
+                0.0069,
+                0.0066,
+                0.0107,
+                0.0115,
+                0.0161,
+                0.0165
+            ],
+            "y_err": [
+                0.0039,
+                0.0027,
+                0.0028,
+                0.0014,
+                0.0008,
+                0.0006,
+                0.0005,
+                0.0005,
+                0.00043,
+                0.00058,
+                0.0004,
+                0.0003,
+                0.0004,
+                0.0006
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "P-31",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

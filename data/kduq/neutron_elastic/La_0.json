@@ -1,0 +1,194 @@
+[
+    {
+        "type": "ECS",
+        "energy": 2.545,
+        "energy_err": 0.02,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20337002",
+        "source": "S.Tanaka, Y.Tomita, et al., Nuclear Physics, Section A 179, 513 (1972); Private communication: Tanaka  (1971); Progress report: EANDC(J)-22 3 (1971);  Data taken from the EXFOR database, file EXFOR 20337001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.2312862551,
+                40.2706101443,
+                50.2827076278,
+                60.3302496626,
+                70.3666411024,
+                80.3865617106,
+                90.4010737321,
+                100.4280123873,
+                110.3650348766,
+                120.3313523633,
+                130.3157947493,
+                150.2270518686
+            ],
+            "y": [
+                1.722,
+                0.9823,
+                0.5374,
+                0.2591,
+                0.1108,
+                0.0444,
+                0.0266,
+                0.0398,
+                0.0678,
+                0.0887,
+                0.1013,
+                0.1006
+            ],
+            "y_err": [
+                0.0378,
+                0.02,
+                0.0102,
+                0.0057,
+                0.003,
+                0.0018,
+                0.0015,
+                0.0018,
+                0.002,
+                0.0027,
+                0.0032,
+                0.003
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "La-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 3.07,
+        "energy_err": 0.02,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20337002",
+        "source": "S.Tanaka, Y.Tomita, et al., Nuclear Physics, Section A 179, 513 (1972); Private communication: Tanaka  (1971); Progress report: EANDC(J)-22 3 (1971);  Data taken from the EXFOR database, file EXFOR 20337001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.2312862551,
+                40.2706101443,
+                50.2827076278,
+                60.3302496626,
+                70.3666411024,
+                80.3865617106,
+                90.4010737321,
+                100.4280123873,
+                110.3650348766,
+                120.3313523633,
+                130.3157947493,
+                140.2641744603,
+                150.2270518686
+            ],
+            "y": [
+                1.569,
+                0.8433,
+                0.3454,
+                0.1671,
+                0.0893,
+                0.0284,
+                0.0142,
+                0.0246,
+                0.0673,
+                0.0989,
+                0.0896,
+                0.0737,
+                0.0537
+            ],
+            "y_err": [
+                0.04,
+                0.025,
+                0.0098,
+                0.0054,
+                0.0032,
+                0.0022,
+                0.0018,
+                0.0019,
+                0.0024,
+                0.003,
+                0.0028,
+                0.0025,
+                0.0023
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "La-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 3.578,
+        "energy_err": 0.02,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20337002",
+        "source": "S.Tanaka, Y.Tomita, et al., Nuclear Physics, Section A 179, 513 (1972); Private communication: Tanaka  (1971); Progress report: EANDC(J)-22 3 (1971);  Data taken from the EXFOR database, file EXFOR 20337001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.2312862551,
+                40.2706101443,
+                50.2827076278,
+                60.3302496626,
+                70.3666411024,
+                80.3865617106,
+                90.4010737321,
+                100.4280123873,
+                110.3650348766,
+                120.3313523633,
+                130.3157947493,
+                140.2641744603,
+                150.2270518686
+            ],
+            "y": [
+                1.388,
+                0.6297,
+                0.2733,
+                0.157,
+                0.0917,
+                0.0342,
+                0.0125,
+                0.0309,
+                0.0774,
+                0.1138,
+                0.1121,
+                0.0743,
+                0.042
+            ],
+            "y_err": [
+                0.05,
+                0.0256,
+                0.012,
+                0.0077,
+                0.0045,
+                0.0024,
+                0.0018,
+                0.002,
+                0.0034,
+                0.0045,
+                0.0045,
+                0.0035,
+                0.0024
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "La-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

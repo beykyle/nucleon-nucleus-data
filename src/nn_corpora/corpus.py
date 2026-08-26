@@ -28,7 +28,8 @@ class SectorResult:
 
     data: retrieve.SectorData
     records: list[serialize.Record] = field(default_factory=list)
-    dropped: list[tuple[str, str]] = field(default_factory=list)
+    #: (spec row, subentry, reason) for measurements retrieved but dropped in cleaning
+    dropped: list[tuple] = field(default_factory=list)
     applied_overrides: list[str] = field(default_factory=list)
 
     @property
@@ -51,8 +52,8 @@ class SectorResult:
             lines.append("  overrides applied")
             lines.extend(f"    {a}" for a in self.applied_overrides)
         if self.dropped:
-            lines.append("  dropped during munging")
-            lines.extend(f"    {sub}: {why}" for sub, why in self.dropped)
+            lines.append("  dropped during cleaning")
+            lines.extend(f"    {sub}: {why}" for _, sub, why in self.dropped)
         return "\n".join(lines)
 
 
@@ -79,7 +80,7 @@ def curate(
             why = _munge_one(measurement, sector, default_norm_err,
                              min_points_per_distribution)
             if why is not None:
-                result.dropped.append((measurement.subentry, why))
+                result.dropped.append((measurement.spec_row, measurement.subentry, why))
                 continue
             keep.append(measurement)
             result.records.append(serialize.to_record(

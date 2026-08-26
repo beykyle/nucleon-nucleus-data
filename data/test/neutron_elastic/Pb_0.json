@@ -1,0 +1,439 @@
+[
+    {
+        "type": "ECS",
+        "energy": 2.24,
+        "energy_err": 0.02,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "23156002",
+        "source": "E.Poenitz, R.Nolte, et al., Journal of the Korean Physical Society 59, (2), 1876 (2011); Conf.on Nucl.Data for Sci. and Technology, Nice 2007 , 513 (2007); Thesis or dissertation: Poenitz  (2010); Private communication: Nolte  (2012);  Data taken from the EXFOR database, file EXFOR 23156001 dated 201108, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                13.8765935261,
+                25.8812457783,
+                38.1416427827,
+                50.4945858951,
+                54.9176590791,
+                63.2686185822,
+                67.8879869824,
+                80.534960397,
+                92.9186856851,
+                105.2495008261,
+                110.1723065602,
+                122.4360722132,
+                134.7787102745,
+                147.7096499033,
+                159.8863772669
+            ],
+            "y": [
+                3.0792,
+                2.002,
+                0.9612,
+                0.3223,
+                0.2074,
+                0.1088,
+                0.1071,
+                0.1825,
+                0.3121,
+                0.3918,
+                0.3942,
+                0.3053,
+                0.1487,
+                0.1663,
+                0.4537
+            ],
+            "y_err": [
+                0.127,
+                0.0839,
+                0.0424,
+                0.016,
+                0.0113,
+                0.0069,
+                0.0065,
+                0.0092,
+                0.0139,
+                0.0167,
+                0.0184,
+                0.0138,
+                0.0083,
+                0.0088,
+                0.0201
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Pb-0",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 2.71,
+        "energy_err": 0.02,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "23156003",
+        "source": "E.Poenitz, R.Nolte, et al., Journal of the Korean Physical Society 59, (2), 1876 (2011); Conf.on Nucl.Data for Sci. and Technology, Nice 2007 , 513 (2007); Thesis or dissertation: Poenitz  (2010); Private communication: Nolte  (2012);  Data taken from the EXFOR database, file EXFOR 23156001 dated 201108, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                13.665600121,
+                25.630148313,
+                37.8304503368,
+                50.1635555222,
+                60.7728850487,
+                63.398905118,
+                73.3469051444,
+                85.6480713883,
+                98.0664071828,
+                110.5017550167,
+                110.5017550167,
+                122.904844791,
+                135.3766488053,
+                147.9586211482,
+                160.1750509241
+            ],
+            "y": [
+                4.3975,
+                2.6065,
+                1.0455,
+                0.2576,
+                0.1304,
+                0.1396,
+                0.2255,
+                0.2871,
+                0.2645,
+                0.2179,
+                0.2316,
+                0.1891,
+                0.1519,
+                0.2096,
+                0.405
+            ],
+            "y_err": [
+                0.1561,
+                0.0957,
+                0.0428,
+                0.0135,
+                0.0077,
+                0.0074,
+                0.0094,
+                0.0111,
+                0.0104,
+                0.0087,
+                0.0098,
+                0.0079,
+                0.0068,
+                0.0089,
+                0.0154
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Pb-0",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 2.94,
+        "energy_err": 0.03,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "23156004",
+        "source": "E.Poenitz, R.Nolte, et al., Journal of the Korean Physical Society 59, (2), 1876 (2011); Conf.on Nucl.Data for Sci. and Technology, Nice 2007 , 513 (2007); Thesis or dissertation: Poenitz  (2010); Private communication: Nolte  (2012);  Data taken from the EXFOR database, file EXFOR 23156001 dated 201108, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                25.2283876194,
+                37.3987880457,
+                49.7221706778,
+                62.9879970831,
+                75.3595887267,
+                80.2747433899,
+                92.6387451545,
+                105.1096762248,
+                117.5479078137,
+                129.9445547761
+            ],
+            "y": [
+                3.0649,
+                1.1948,
+                0.2769,
+                0.1539,
+                0.2537,
+                0.2807,
+                0.2591,
+                0.2029,
+                0.1733,
+                0.1321
+            ],
+            "y_err": [
+                0.0834,
+                0.0389,
+                0.0134,
+                0.0077,
+                0.0082,
+                0.0092,
+                0.0081,
+                0.0068,
+                0.0061,
+                0.0054
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Pb-0",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 3.0,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "31687002",
+        "source": "E.Chavez, P.Rodriguez, et al., European Physical Journal A: Hadrons and Nuclei 42, 179 (2009);  Data taken from the EXFOR database, file EXFOR 31687001 dated 2009, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                11.053232031,
+                24.1134717396,
+                59.2391338111
+            ],
+            "y": [
+                4.72,
+                2.16,
+                0.24
+            ],
+            "y_err": [
+                0.52392,
+                0.22032,
+                0.02856
+            ],
+            "x_err": [
+                0.1,
+                0.1,
+                0.1
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Pb-0",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 3.1,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "31687002",
+        "source": "E.Chavez, P.Rodriguez, et al., European Physical Journal A: Hadrons and Nuclei 42, 179 (2009);  Data taken from the EXFOR database, file EXFOR 31687001 dated 2009, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                11.053232031,
+                24.1134717396,
+                59.2391338111
+            ],
+            "y": [
+                5.02,
+                3.82,
+                0.54
+            ],
+            "y_err": [
+                0.5522,
+                0.39728,
+                0.06426
+            ],
+            "x_err": [
+                0.1,
+                0.1,
+                0.1
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Pb-0",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 3.2,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "31687002",
+        "source": "E.Chavez, P.Rodriguez, et al., European Physical Journal A: Hadrons and Nuclei 42, 179 (2009);  Data taken from the EXFOR database, file EXFOR 31687001 dated 2009, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                11.053232031,
+                24.1134717396,
+                59.2391338111
+            ],
+            "y": [
+                5.94,
+                4.53,
+                0.61
+            ],
+            "y_err": [
+                0.61776,
+                0.45753,
+                0.0671
+            ],
+            "x_err": [
+                0.1,
+                0.1,
+                0.1
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Pb-0",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 3.4,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "31687002",
+        "source": "E.Chavez, P.Rodriguez, et al., European Physical Journal A: Hadrons and Nuclei 42, 179 (2009);  Data taken from the EXFOR database, file EXFOR 31687001 dated 2009, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                11.053232031,
+                24.1134717396,
+                59.2391338111
+            ],
+            "y": [
+                6.83,
+                4.5,
+                0.73
+            ],
+            "y_err": [
+                0.74447,
+                0.459,
+                0.08541
+            ],
+            "x_err": [
+                0.1,
+                0.1,
+                0.1
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Pb-0",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 4.02,
+        "energy_err": 0.025,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "23156005",
+        "source": "E.Poenitz, R.Nolte, et al., Journal of the Korean Physical Society 59, (2), 1876 (2011); Conf.on Nucl.Data for Sci. and Technology, Nice 2007 , 513 (2007); Thesis or dissertation: Poenitz  (2010); Private communication: Nolte  (2012);  Data taken from the EXFOR database, file EXFOR 23156001 dated 201108, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                13.2335632709,
+                25.127946541,
+                37.2482059354,
+                49.5817274176,
+                60.6125008258,
+                63.1383307666,
+                72.9363173012,
+                85.1978859434,
+                97.4667880094,
+                110.0325379206,
+                110.0325379206,
+                122.7352905807,
+                134.9580941116,
+                147.5303888439,
+                159.916240173
+            ],
+            "y": [
+                6.0617,
+                3.0667,
+                0.8971,
+                0.1216,
+                0.077,
+                0.0964,
+                0.1716,
+                0.2004,
+                0.1351,
+                0.0675,
+                0.0706,
+                0.0827,
+                0.0976,
+                0.1004,
+                0.2425
+            ],
+            "y_err": [
+                0.1875,
+                0.1029,
+                0.0376,
+                0.0087,
+                0.0053,
+                0.0051,
+                0.0062,
+                0.0068,
+                0.0051,
+                0.003,
+                0.0039,
+                0.0033,
+                0.0039,
+                0.0042,
+                0.0088
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Pb-0",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

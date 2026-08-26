@@ -1,0 +1,173 @@
+[
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "O0330003",
+        "source": "R.F.Carlson, A.J.Cox, et al., Physical Review, Part C, Nuclear Physics 12, 1167 (1975);  Data taken from the EXFOR database, file EXFOR O0330001 dated 1975, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                24.9,
+                30.0,
+                35.0,
+                40.0,
+                45.0,
+                48.0
+            ],
+            "y": [
+                0.8764,
+                0.8798,
+                0.8537,
+                0.8073,
+                0.7781,
+                0.7689
+            ],
+            "y_err": [
+                0.033,
+                0.026,
+                0.025,
+                0.024,
+                0.023,
+                0.022
+            ],
+            "x_err": [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "O0341003",
+        "source": "J.F.Dicello, G.Igo, Physical Review, Part C, Nuclear Physics 2, 488 (1970);  Data taken from the EXFOR database, file EXFOR O0341001 dated 70, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                10.34,
+                11.38,
+                12.42,
+                12.42,
+                13.45,
+                13.46,
+                13.97,
+                14.48,
+                14.48,
+                14.97,
+                15.51,
+                16.49,
+                17.51,
+                18.54,
+                19.55,
+                20.57,
+                21.59
+            ],
+            "y": [
+                0.505,
+                0.736,
+                0.717,
+                0.742,
+                0.931,
+                0.953,
+                0.883,
+                0.846,
+                0.92,
+                0.822,
+                0.766,
+                0.765,
+                0.85,
+                0.821,
+                0.806,
+                0.851,
+                0.871
+            ],
+            "y_err": [
+                0.059,
+                0.054,
+                0.063,
+                0.067,
+                0.046,
+                0.05,
+                0.044,
+                0.042,
+                0.047,
+                0.035,
+                0.039,
+                0.035,
+                0.034,
+                0.035,
+                0.033,
+                0.034,
+                0.032
+            ],
+            "x_err": [
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "O0579006",
+        "source": "A.Ingemarsson, J.Nyberg, et al., Nuclear Physics, Section A 653, 341 (1999);  Data taken from the EXFOR database, file EXFOR O0579001 dated 1999, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                65.5
+            ],
+            "y": [
+                0.6875
+            ],
+            "y_err": [
+                0.0167
+            ],
+            "x_err": [
+                0.15
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

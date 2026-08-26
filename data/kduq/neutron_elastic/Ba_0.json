@@ -1,0 +1,212 @@
+[
+    {
+        "type": "ECS",
+        "energy": 1.0,
+        "energy_err": 0.08,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "11637055",
+        "source": "M.Walt, H.H.Barschall, Physical Review 93, 1062 (1954);  Data taken from the EXFOR database, file EXFOR 11637001 dated 5403, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.683417109,
+                45.5729959992,
+                60.0,
+                74.9299378551,
+                90.0,
+                105.0700621449,
+                120.0,
+                134.4270040008,
+                149.316582891
+            ],
+            "y": [
+                1.5,
+                1.11,
+                0.71,
+                0.37,
+                0.2,
+                0.13,
+                0.17,
+                0.28,
+                0.41
+            ],
+            "y_err": [
+                0.225,
+                0.1665,
+                0.1065,
+                0.0555,
+                0.03,
+                0.0195,
+                0.0255,
+                0.042,
+                0.0615
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ba-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 4.1,
+        "energy_err": 0.05,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "11621023",
+        "source": "L.D.Vincent, I.L.Morgan, et al., Report other than progress report: WADD-TR-60-217  (1960);  Data taken from the EXFOR database, file EXFOR 11621001 dated 60, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                20.1157080545,
+                30.2312862551,
+                40.3591678764,
+                45.3318072777,
+                50.3571543108,
+                60.4620456716,
+                70.4882600624,
+                75.4633050848,
+                80.5027655315,
+                90.481290208,
+                100.4862758709,
+                105.4858270618,
+                110.4873151147,
+                120.4642070456,
+                130.3909796203
+            ],
+            "y": [
+                1.36,
+                0.62,
+                0.38,
+                0.27,
+                0.164,
+                0.149,
+                0.115,
+                0.114,
+                0.052,
+                0.037,
+                0.052,
+                0.073,
+                0.107,
+                0.107,
+                0.096
+            ],
+            "y_err": [
+                0.26,
+                0.08,
+                0.04,
+                0.03,
+                0.017,
+                0.014,
+                0.017,
+                0.015,
+                0.008,
+                0.01,
+                0.008,
+                0.01,
+                0.02,
+                0.02,
+                0.022
+            ],
+            "x_err": [
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ba-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 5.0,
+        "energy_err": 0.05,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "11321009",
+        "source": "R.W.Hill, Physical Review 109, 2105 (1958);  Data taken from the EXFOR database, file EXFOR 11321001 dated 1958, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.2133953782,
+                40.2745538073,
+                50.3064910058,
+                60.364539318,
+                70.3967800871,
+                90.4209346934,
+                110.3943237029,
+                130.3382658844,
+                140.2666311336,
+                150.2075735158
+            ],
+            "y": [
+                0.82,
+                0.33,
+                0.158,
+                0.11,
+                0.1,
+                0.027,
+                0.051,
+                0.052,
+                0.044,
+                0.071
+            ],
+            "y_err": [
+                0.1,
+                0.08,
+                0.04,
+                0.02,
+                0.015,
+                0.006,
+                0.01,
+                0.01,
+                0.015,
+                0.013
+            ],
+            "x_err": [
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ba-0",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

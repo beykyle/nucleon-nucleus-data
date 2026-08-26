@@ -1,0 +1,32 @@
+[
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "13907002",
+        "source": "R.F.Carlton, J.A.Harvey, et al., Physical Review, Part C, Nuclear Physics 67, 024601 (2003);  Data taken from the EXFOR database, file EXFOR 13907001 dated 2003, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                26.993
+            ],
+            "y": [
+                4.534
+            ],
+            "y_err": [
+                0.41698
+            ],
+            "x_err": [
+                null
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_total",
+        "projectile": "neutron",
+        "target": "Pb-204",
+        "notes": [
+            "restricted to the tabulated energy range 26.942999999999998-27.043 MeV, dropping 25530 point(s)",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

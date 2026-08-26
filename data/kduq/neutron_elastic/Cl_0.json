@@ -1,0 +1,62 @@
+[
+    {
+        "type": "ECS",
+        "energy": 14.1,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "41003002",
+        "source": "B.E.Leshchenko, G.U.Nurabaeva, et al., Vestnik Kiev State Univ. , (28), 74 (1987);  Data taken from the EXFOR database, file EXFOR 41003001 dated 87, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.8153653892,
+                41.048236635,
+                51.2492690703,
+                61.4123496406,
+                71.5325166848,
+                81.6061124452,
+                91.6308959615,
+                101.6061124452,
+                111.5325166848,
+                121.4123496406,
+                131.2492690703
+            ],
+            "y": [
+                0.1152,
+                0.0238,
+                0.0753,
+                0.0669,
+                0.034,
+                0.0143,
+                0.015,
+                0.0251,
+                0.0196,
+                0.0178,
+                0.00887
+            ],
+            "y_err": [
+                0.0112,
+                0.004,
+                0.0043,
+                0.0034,
+                0.0028,
+                0.0015,
+                0.0014,
+                0.0016,
+                0.0016,
+                0.0018,
+                0.00115
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Cl-0",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "type": "ECS",
+        "energy": 3.99,
+        "energy_err": 0.02,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "23156006",
+        "source": "E.Poenitz, R.Nolte, et al., Journal of the Korean Physical Society 59, (2), 1876 (2011); Conf.on Nucl.Data for Sci. and Technology, Nice 2007 , 513 (2007); Thesis or dissertation: Poenitz  (2010); Private communication: Nolte  (2012);  Data taken from the EXFOR database, file EXFOR 23156001 dated 201108, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                13.3334917671,
+                25.2474665326,
+                37.367234851,
+                49.7103319047,
+                60.8008871947,
+                63.3065882151,
+                73.0642348791,
+                85.3355777269,
+                97.5843570116,
+                110.0802196812,
+                110.0802196812,
+                122.8928702678,
+                135.0660323129,
+                147.5291077261,
+                160.0448310177
+            ],
+            "y": [
+                5.9414,
+                3.0174,
+                0.8573,
+                0.1093,
+                0.0822,
+                0.0978,
+                0.1791,
+                0.2117,
+                0.1349,
+                0.058,
+                0.0623,
+                0.0659,
+                0.0866,
+                0.0707,
+                0.156
+            ],
+            "y_err": [
+                0.1585,
+                0.0892,
+                0.0332,
+                0.0073,
+                0.0073,
+                0.0047,
+                0.0056,
+                0.006,
+                0.0045,
+                0.0025,
+                0.0044,
+                0.0026,
+                0.0031,
+                0.0028,
+                0.0054
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Bi-209",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

@@ -1,0 +1,564 @@
+[
+    {
+        "type": "ECS",
+        "energy": 11.9,
+        "energy_err": 0.207,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "14303002",
+        "source": "J.M.Mueller, R.J.Charity, et al., Physical Review, Part C, Nuclear Physics 83, 064605 (2011);  Data taken from the EXFOR database, file EXFOR 14303001 dated 2011, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                46.0,
+                51.1,
+                56.2,
+                61.2,
+                66.3,
+                86.4,
+                91.4,
+                101.4,
+                111.4,
+                116.3,
+                131.1,
+                140.9
+            ],
+            "y": [
+                0.03828,
+                0.04398,
+                0.04065,
+                0.04798,
+                0.03238,
+                0.01391,
+                0.01922,
+                0.02703,
+                0.02102,
+                0.01705,
+                0.01272,
+                0.0108
+            ],
+            "y_err": [
+                0.00176088,
+                0.0017592,
+                0.0018699,
+                0.00570962,
+                0.00139234,
+                0.00079287,
+                0.00088412,
+                0.00097308,
+                0.0008408,
+                0.0008525,
+                0.00092856,
+                0.00054
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 16.9,
+        "energy_err": 0.141,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "14303003",
+        "source": "J.M.Mueller, R.J.Charity, et al., Physical Review, Part C, Nuclear Physics 83, 064605 (2011);  Data taken from the EXFOR database, file EXFOR 14303001 dated 2011, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                40.9,
+                61.2,
+                101.4,
+                111.4,
+                116.3,
+                121.2,
+                131.1,
+                136.0
+            ],
+            "y": [
+                0.04438,
+                0.05305,
+                0.01935,
+                0.01139,
+                0.00795,
+                0.00524,
+                0.00386,
+                0.00418
+            ],
+            "y_err": [
+                0.003470516,
+                0.00343764,
+                0.000868815,
+                0.00046699,
+                0.00060897,
+                0.000441208,
+                0.000261708,
+                0.000369094
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 65.0,
+        "energy_err": 5.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "13946003",
+        "source": "J.H.Osborne, F.P.Brady, et al., Physical Review, Part C, Nuclear Physics 70, 054613 (2004);  Data taken from the EXFOR database, file EXFOR 13946001 dated 200411, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                7.2,
+                9.2,
+                11.3,
+                13.3,
+                15.4,
+                17.5,
+                19.5,
+                21.6
+            ],
+            "y": [
+                4.66,
+                4.78,
+                3.94,
+                2.6,
+                1.89,
+                1.21,
+                0.768,
+                0.537
+            ],
+            "y_err": [
+                0.41,
+                0.34,
+                0.31,
+                0.26,
+                0.21,
+                0.17,
+                0.142,
+                0.127
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 75.0,
+        "energy_err": 5.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "13946003",
+        "source": "J.H.Osborne, F.P.Brady, et al., Physical Review, Part C, Nuclear Physics 70, 054613 (2004);  Data taken from the EXFOR database, file EXFOR 13946001 dated 200411, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                7.2,
+                9.2,
+                11.3,
+                13.4,
+                15.4,
+                17.5,
+                19.5,
+                21.6
+            ],
+            "y": [
+                4.38,
+                4.97,
+                2.78,
+                2.62,
+                2.2,
+                1.13,
+                0.632,
+                0.307
+            ],
+            "y_err": [
+                0.44,
+                0.38,
+                0.28,
+                0.26,
+                0.24,
+                0.17,
+                0.131,
+                0.102
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 85.0,
+        "energy_err": 5.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "13946003",
+        "source": "J.H.Osborne, F.P.Brady, et al., Physical Review, Part C, Nuclear Physics 70, 054613 (2004);  Data taken from the EXFOR database, file EXFOR 13946001 dated 200411, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                7.2,
+                9.2,
+                11.3,
+                13.4,
+                15.4,
+                17.5,
+                19.5,
+                21.6
+            ],
+            "y": [
+                4.94,
+                3.77,
+                3.14,
+                2.02,
+                1.45,
+                0.7,
+                0.313,
+                0.201
+            ],
+            "y_err": [
+                0.3,
+                0.22,
+                0.2,
+                0.16,
+                0.13,
+                0.092,
+                0.062,
+                0.056
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 95.0,
+        "energy_err": 5.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "13946003",
+        "source": "J.H.Osborne, F.P.Brady, et al., Physical Review, Part C, Nuclear Physics 70, 054613 (2004);  Data taken from the EXFOR database, file EXFOR 13946001 dated 200411, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                7.2,
+                9.2,
+                11.3,
+                13.4,
+                15.4,
+                17.5,
+                19.5,
+                21.6
+            ],
+            "y": [
+                3.78,
+                3.36,
+                2.65,
+                1.6,
+                0.909,
+                0.407,
+                0.245,
+                0.082
+            ],
+            "y_err": [
+                0.27,
+                0.21,
+                0.18,
+                0.15,
+                0.11,
+                0.068,
+                0.049,
+                0.044
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 107.5,
+        "energy_err": 7.5,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "13946003",
+        "source": "J.H.Osborne, F.P.Brady, et al., Physical Review, Part C, Nuclear Physics 70, 054613 (2004);  Data taken from the EXFOR database, file EXFOR 13946001 dated 200411, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                7.2,
+                9.3,
+                11.3,
+                13.4,
+                15.4,
+                17.5,
+                19.5,
+                21.6
+            ],
+            "y": [
+                3.9,
+                3.28,
+                1.88,
+                1.43,
+                0.829,
+                0.338,
+                0.26,
+                0.105
+            ],
+            "y_err": [
+                0.25,
+                0.19,
+                0.14,
+                0.12,
+                0.089,
+                0.062,
+                0.052,
+                0.035
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 127.5,
+        "energy_err": 12.5,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "13946003",
+        "source": "J.H.Osborne, F.P.Brady, et al., Physical Review, Part C, Nuclear Physics 70, 054613 (2004);  Data taken from the EXFOR database, file EXFOR 13946001 dated 200411, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                7.2,
+                9.3,
+                11.3,
+                13.4,
+                15.4,
+                17.5,
+                19.5,
+                21.6
+            ],
+            "y": [
+                2.84,
+                2.13,
+                1.4,
+                0.712,
+                0.484,
+                0.149,
+                0.11,
+                0.025
+            ],
+            "y_err": [
+                0.18,
+                0.13,
+                0.1,
+                0.074,
+                0.058,
+                0.036,
+                0.028,
+                0.018
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 155.0,
+        "energy_err": 15.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "13946003",
+        "source": "J.H.Osborne, F.P.Brady, et al., Physical Review, Part C, Nuclear Physics 70, 054613 (2004);  Data taken from the EXFOR database, file EXFOR 13946001 dated 200411, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                7.2,
+                9.3,
+                11.3,
+                13.4,
+                15.4,
+                17.5,
+                19.5,
+                21.6
+            ],
+            "y": [
+                1.92,
+                1.41,
+                0.877,
+                0.471,
+                0.198,
+                0.067,
+                0.055,
+                0.04
+            ],
+            "y_err": [
+                0.14,
+                0.11,
+                0.081,
+                0.057,
+                0.041,
+                0.026,
+                0.025,
+                0.016
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 185.0,
+        "energy_err": 15.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "13946003",
+        "source": "J.H.Osborne, F.P.Brady, et al., Physical Review, Part C, Nuclear Physics 70, 054613 (2004);  Data taken from the EXFOR database, file EXFOR 13946001 dated 200411, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                7.2,
+                9.3,
+                11.3,
+                13.4,
+                15.4,
+                17.5,
+                19.6,
+                21.6
+            ],
+            "y": [
+                1.52,
+                1.04,
+                0.469,
+                0.236,
+                0.11,
+                0.056,
+                0.059,
+                0.016
+            ],
+            "y_err": [
+                0.14,
+                0.095,
+                0.065,
+                0.05,
+                0.034,
+                0.023,
+                0.024,
+                0.017
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 225.0,
+        "energy_err": 25.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "13946003",
+        "source": "J.H.Osborne, F.P.Brady, et al., Physical Review, Part C, Nuclear Physics 70, 054613 (2004);  Data taken from the EXFOR database, file EXFOR 13946001 dated 200411, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                7.2,
+                9.3,
+                11.3,
+                13.4,
+                15.5,
+                17.5,
+                19.6,
+                21.6
+            ],
+            "y": [
+                0.942,
+                0.796,
+                0.27,
+                0.121,
+                0.091,
+                0.026,
+                0.018,
+                0.018
+            ],
+            "y_err": [
+                0.105,
+                0.075,
+                0.047,
+                0.031,
+                0.024,
+                0.014,
+                0.011,
+                0.014
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "test",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

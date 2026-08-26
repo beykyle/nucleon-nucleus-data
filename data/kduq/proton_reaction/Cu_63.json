@@ -1,0 +1,126 @@
+[
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "C1217010",
+        "source": "J.F.Dicello, G.J.Igo, et al., Physical Review 157, 1001 (1967); Physics Letters 23, 685 (1966);  Data taken from the EXFOR database, file EXFOR C1217001 dated 1967, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                14.5
+            ],
+            "y": [
+                0.985
+            ],
+            "y_err": [
+                0.018
+            ],
+            "x_err": [
+                null
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Cu-63",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "D0314010",
+        "source": "K.Bearpark, W.R.Graham, et al., Nuclear Physics 73, 206 (1965); Nuclear Instrum.and Methods in Physics Res. 35, 235 (1965);  Data taken from the EXFOR database, file EXFOR D0314001 dated 1965, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                9.11,
+                10.14,
+                11.18
+            ],
+            "y": [
+                0.725,
+                0.808,
+                0.855
+            ],
+            "y_err": [
+                0.035,
+                0.03,
+                0.026
+            ],
+            "x_err": [
+                0.39,
+                0.36,
+                0.32
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Cu-63",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "D0534004",
+        "source": "P.J.Bulman, J.A.R.Griffith, Nuclear Physics, Section A 111, 315 (1968);  Data taken from the EXFOR database, file EXFOR D0534001 dated 1968, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                9.1
+            ],
+            "y": [
+                0.751
+            ],
+            "y_err": [
+                0.029
+            ],
+            "x_err": [
+                null
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Cu-63",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "D0535009",
+        "source": "P.J.Bulman, G.W.Greenlees, et al., Nuclear Physics 69, 536 (1965);  Data taken from the EXFOR database, file EXFOR D0535001 dated 1965, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                8.7
+            ],
+            "y": [
+                0.746
+            ],
+            "y_err": [
+                0.05
+            ],
+            "x_err": [
+                null
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Cu-63",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]

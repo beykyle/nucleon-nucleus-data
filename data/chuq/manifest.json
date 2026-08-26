@@ -1,0 +1,233 @@
+{
+    "corpus": "chuq",
+    "provenance": {
+        "exfor_database": "X4-2025-12-31",
+        "exfor_tools_version": "1.2.dev5+g951bcec08",
+        "x4i3_version": "1.2.4"
+    },
+    "sectors": {
+        "neutron_ay": {
+            "coverage": 1.0,
+            "data_points": 232,
+            "entries": [
+                "12844",
+                "12930",
+                "12996",
+                "13158"
+            ],
+            "measurements": 11,
+            "spec_rows": 11,
+            "spec_rows_allowlisted": 0,
+            "spec_rows_in_exfor": 11,
+            "targets": [
+                "Ca-40",
+                "Ni-58",
+                "Pb-208",
+                "Sn-116",
+                "Sn-120"
+            ],
+            "types": [
+                "APower"
+            ],
+            "units": [
+                "no-dim"
+            ]
+        },
+        "neutron_elastic": {
+            "coverage": 1.0,
+            "data_points": 1540,
+            "entries": [
+                "10633",
+                "10729",
+                "10867",
+                "10871",
+                "10958",
+                "12774",
+                "12790",
+                "12862",
+                "12930",
+                "12996",
+                "13158",
+                "13685"
+            ],
+            "measurements": 57,
+            "spec_rows": 66,
+            "spec_rows_allowlisted": 0,
+            "spec_rows_in_exfor": 66,
+            "targets": [
+                "Bi-209",
+                "Ca-0",
+                "Ca-40",
+                "Co-59",
+                "Cu-65",
+                "Fe-54",
+                "Fe-56",
+                "Ho-165",
+                "Mn-55",
+                "Mo-100",
+                "Mo-92",
+                "Mo-96",
+                "Mo-98",
+                "Nb-93",
+                "Ni-58",
+                "Ni-60",
+                "Pb-206",
+                "Pb-208",
+                "Sn-116",
+                "Sn-120",
+                "Sr-88",
+                "V-51",
+                "Y-89",
+                "Zr-90"
+            ],
+            "types": [
+                "ECS"
+            ],
+            "units": [
+                "b/sr"
+            ]
+        },
+        "proton_ay": {
+            "coverage": 0.9634,
+            "data_points": 1950,
+            "entries": [
+                "C0893",
+                "O0032",
+                "O0091",
+                "O0169",
+                "O0328",
+                "O1104",
+                "O1109"
+            ],
+            "measurements": 64,
+            "spec_rows": 82,
+            "spec_rows_allowlisted": 3,
+            "spec_rows_in_exfor": 82,
+            "targets": [
+                "Ba-134",
+                "Ba-136",
+                "Ba-138",
+                "Bi-209",
+                "Ca-40",
+                "Ca-44",
+                "Ca-48",
+                "Cd-106",
+                "Cd-108",
+                "Cd-110",
+                "Cd-112",
+                "Cd-114",
+                "Cd-116",
+                "Co-59",
+                "Cu-63",
+                "Cu-65",
+                "Fe-54",
+                "Fe-56",
+                "Mo-100",
+                "Mo-98",
+                "Ni-58",
+                "Ni-60",
+                "Ni-62",
+                "Ni-64",
+                "Pb-208",
+                "Se-76",
+                "Se-78",
+                "Se-80",
+                "Se-82",
+                "Sm-144",
+                "Sn-116",
+                "Sn-118",
+                "Sn-120",
+                "Sn-122",
+                "Sn-124",
+                "Sr-88",
+                "Ti-46",
+                "Ti-48",
+                "Ti-50",
+                "Y-89",
+                "Zn-66",
+                "Zn-68",
+                "Zr-90"
+            ],
+            "types": [
+                "APower"
+            ],
+            "units": [
+                "no-dim"
+            ]
+        },
+        "proton_elastic": {
+            "coverage": 0.9294,
+            "data_points": 2497,
+            "entries": [
+                "C0893",
+                "O0032",
+                "O0091",
+                "O0169",
+                "O0328",
+                "O1103",
+                "O1104",
+                "O1109"
+            ],
+            "measurements": 79,
+            "spec_rows": 85,
+            "spec_rows_allowlisted": 6,
+            "spec_rows_in_exfor": 85,
+            "targets": [
+                "Ba-134",
+                "Ba-136",
+                "Ba-138",
+                "Bi-209",
+                "Ca-40",
+                "Ca-44",
+                "Ca-48",
+                "Cd-106",
+                "Cd-108",
+                "Cd-110",
+                "Cd-112",
+                "Cd-114",
+                "Cd-116",
+                "Co-59",
+                "Cu-63",
+                "Cu-65",
+                "Fe-54",
+                "Fe-56",
+                "Ge-72",
+                "Ge-74",
+                "Mo-100",
+                "Mo-98",
+                "Ni-58",
+                "Ni-60",
+                "Ni-62",
+                "Ni-64",
+                "Pb-208",
+                "Se-76",
+                "Se-78",
+                "Se-80",
+                "Se-82",
+                "Sm-144",
+                "Sn-116",
+                "Sn-118",
+                "Sn-120",
+                "Sn-122",
+                "Sn-124",
+                "Sr-86",
+                "Sr-88",
+                "Ti-46",
+                "Ti-48",
+                "Ti-50",
+                "Y-89",
+                "Zn-64",
+                "Zn-66",
+                "Zn-68",
+                "Zn-70",
+                "Zr-90"
+            ],
+            "types": [
+                "ECS_Rutherford"
+            ],
+            "units": [
+                "no-dim"
+            ]
+        }
+    }
+}

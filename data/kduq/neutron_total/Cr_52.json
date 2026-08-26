@@ -1,0 +1,37 @@
+[
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "20435003",
+        "source": "R.R.Spencer, H.Beer, et al., Report other than progress report: KFK-1517  (1972); Report other than progress report: EANDC(E)-146  (1972);  Data taken from the EXFOR database, file EXFOR 20435001 dated 7211, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                0.021,
+                0.071
+            ],
+            "y": [
+                1.1086,
+                1.0338
+            ],
+            "y_err": [
+                0.15331,
+                0.1432
+            ],
+            "x_err": [
+                null,
+                null
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "kduq",
+        "sector": "neutron_total",
+        "projectile": "neutron",
+        "target": "Cr-52",
+        "notes": [
+            "restricted to the tabulated energy range -0.029-0.07100000000000001 MeV, dropping 4280 point(s)",
+            "downsampled from 1001 to 2 points, at most 1 per MeV",
+            "assigned a default normalisation uncertainty of 5%, none reported"
+        ]
+    }
+]
