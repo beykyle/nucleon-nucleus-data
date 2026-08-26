@@ -166,6 +166,7 @@ Faithful reproduction was the goal, but three departures are deliberate:
 python scripts/extract_corpus_tables.py     # PDF -> spec/*.csv
 uv run pytest --nbmake notebooks/           # execute every notebook, rewriting data/
 python scripts/refresh_known_missing.py     # regenerate the allowlist after review
+uv run python scripts/build_manifests.py    # provenance manifests for each corpus
 ```
 
 The EXFOR database version is recorded in each corpus's `manifest.json`, alongside the

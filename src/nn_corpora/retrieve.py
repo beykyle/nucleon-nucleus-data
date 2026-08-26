@@ -12,13 +12,12 @@ from __future__ import annotations
 from collections import defaultdict
 from dataclasses import dataclass, field
 
-import numpy as np
 
 from exfor_tools import ExforEntry
 from exfor_tools.reaction import Reaction
 
 from . import errors, munge
-from .overrides import OVERRIDES, Override
+from .overrides import OVERRIDES
 from .spec import SECTORS, SpecRow
 
 # The supplement quotes scattering energies inconsistently -- some to three decimals,

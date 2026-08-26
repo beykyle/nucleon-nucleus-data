@@ -9,7 +9,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-import numpy as np
 
 from . import munge, report, retrieve, serialize
 from .spec import SECTORS, load_sector
