@@ -23,6 +23,12 @@ jobs:
       - name: Install
         run: uv sync --extra dev
 
+      # tests/test_spec.py cross-checks the parsed tables against a pdftotext
+      # extraction, so poppler has to be here before the tests run, not just before
+      # the corpus-table check further down.
+      - name: Install poppler for PDF text extraction
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
       # Restored after the sync so uv cannot clobber it, and before the warm-up import
       # so a hit makes that import a no-op.
       - name: Cache the x4i3 EXFOR snapshot
@@ -43,9 +49,6 @@ jobs:
       # excluded here.
       - name: Test
         run: uv run pytest tests/ -q -m "not slow"
-
-      - name: Install poppler for PDF text extraction
-        run: sudo apt-get update && sudo apt-get install -y poppler-utils
 
       - name: Check the corpus tables still parse from the supplement
         run: |

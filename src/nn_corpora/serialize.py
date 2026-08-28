@@ -145,14 +145,27 @@ def write_manifest(
     return path
 
 
+def exfor_database_tag() -> str:
+    """Which EXFOR release the database in use is, as ``X4-YYYY-MM-DD``.
+
+    x4i3 names the release in a marker file beside the database. Taking it from the
+    directory name instead only works when ``X43I_DATAPATH`` points at a release
+    directory built by ``x4i3_tools``; on the snapshot x4i3 downloads for itself the
+    database sits in the package's own ``data/`` directory, whose name says nothing.
+    """
+    import x4i3
+
+    # the downloaded snapshot's marker is the tarball's name, e.g. x4i3_X4-2023-04-29
+    return x4i3.dbTagFile.stem.removeprefix("x4i3_")
+
+
 def provenance() -> dict:
     """Versions and database identity, for reproducibility."""
     import exfor_tools
     import x4i3
-    from exfor_tools.db import __EXFOR_DB__
 
     return {
-        "exfor_database": Path(str(__EXFOR_DB__.DATAPATH)).parent.name,
+        "exfor_database": exfor_database_tag(),
         "exfor_tools_version": exfor_tools.__version__,
         "x4i3_version": x4i3.__version__,
     }
