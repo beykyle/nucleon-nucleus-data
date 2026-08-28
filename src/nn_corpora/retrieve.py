@@ -27,6 +27,68 @@ ENERGY_ABS_TOL_MEV = 0.05
 ENERGY_REL_TOL = 0.01
 
 
+#: Columns by which EXFOR resolves the residual excitation to a single level.
+EXCITATION_LEVEL_LABELS = ("E-LVL", "E-EXC", "LVL-NUMB")
+
+#: Columns by which it instead states only an upper bound on the excitation summed
+#: over. EXFOR spells the bound several ways; all of them mean the same thing.
+EXCITATION_BOUND_LABELS = ("E-LVL-MAX", "E-LVL-MX-A", "E-EXC-MAX", "E-EXC-MX-A")
+
+#: EXFOR energy units, to MeV.
+_TO_MEV = {"EV": 1e-6, "KEV": 1e-3, "MEV": 1.0}
+
+
+def summed_excitation_bound(data_set) -> float | None:
+    """The excitation in MeV a data set sums up to, when it only bounds it.
+
+    ``None`` when the data set resolves the residual's level, which is the case the
+    excitation filter can act on. Otherwise EXFOR states only an upper bound, and the
+    measurement is the ground state summed together with every level below that bound
+    -- the low-lying states the experiment could not separate.
+    """
+    labels, units = list(data_set.labels), list(data_set.units)
+    if any(label in EXCITATION_LEVEL_LABELS for label in labels):
+        return None
+
+    bounds = []
+    for index, label in enumerate(labels):
+        if label not in EXCITATION_BOUND_LABELS:
+            continue
+        scale = _TO_MEV.get(units[index].upper())
+        if scale is None:
+            continue
+        values = [row[index] for row in data_set.data if row[index] is not None]
+        if values:
+            bounds.append(max(values) * scale)
+
+    return max(bounds) if bounds else None
+
+
+def summed_scattering_bound(entry: str, subentry: str, pointer: str = "") -> float | None:
+    """The excitation bound of a subentry that is summed scattering, else ``None``.
+
+    EXFOR's SCT is "Total scattering (elastic + inelastic)". A data set written that
+    way satisfies an elastic query only because it says which excitation it covers; when
+    all it says is an upper bound, what reaches the corpus is quasi-elastic rather than
+    elastic. The published corpora count these as elastic -- twelve of their twenty-two
+    SCT subentries are of this kind, with bounds from 30 keV up to 800 keV -- so they
+    are kept, and flagged with the bound so a consumer can judge for itself.
+    """
+    try:
+        blocks = errors.data_sets_for(entry, subentry, pointer)
+    except errors.EntryUnavailable:
+        return None
+
+    bounds = [
+        bound
+        for data_set in blocks.values()
+        if getattr(data_set.reaction[0], "products", None) == ["SCT"]
+        for bound in [summed_excitation_bound(data_set)]
+        if bound is not None
+    ]
+    return max(bounds) if bounds else None
+
+
 def energy_matches(spec_energy: float, measured: float) -> bool:
     tol = max(ENERGY_ABS_TOL_MEV, ENERGY_REL_TOL * spec_energy)
     return abs(spec_energy - measured) <= tol
@@ -275,6 +337,14 @@ def _record(data, retrieved, row, candidates, claimed, integral, target,
     data.measurements[exfor_entry.entry].append(measurement)
     measurement.spec_row = row
     measurement.target = target
+    bound = summed_scattering_bound(exfor_entry.entry, measurement.subentry, row.pointer)
+    if bound is not None:
+        from .munge import note
+        measurement.summed_excitation_max_mev = bound
+        note(measurement,
+             f"EXFOR records this as scattering (SCT) summed over excitations up to "
+             f"{bound * 1e3:.0f} keV rather than as resolved elastic scattering; the "
+             f"supplement counts it as elastic, and it is kept on that basis")
     if target != row.target:
         from .munge import note
         note(measurement,

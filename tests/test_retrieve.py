@@ -94,23 +94,29 @@ class TestAgainstDatabase:
             assert measurement.target
 
 
+#: The sectors whose records are meant to be elastic scattering alone.
+ELASTIC_SECTORS = {"neutron_elastic", "proton_elastic", "neutron_ay", "proton_ay"}
+
+
 @pytest.mark.slow
 class TestScatteringCode:
     """EXFOR's SCT is "Total scattering (elastic + inelastic)" per its dictionary.
 
-    Summed, that is a different observable from elastic scattering. It may satisfy an
-    elastic query only when the data set resolves the residual's levels, so that the
-    excitation-energy filter can select the ground state.
+    Summed over everything, that is a different observable from elastic scattering. It
+    may satisfy an elastic query only when the data set says which excitation it covers:
+    either resolved to a level, so the excitation filter can select the ground state, or
+    bounded above, which is quasi-elastic and is flagged in the record rather than
+    silently counted as elastic.
     """
 
     def test_level_resolved_scattering_matches_elastic(self):
         from exfor_tools.db import __EXFOR_DB__
-        from exfor_tools.reaction import Reaction, is_match, is_level_resolved
+        from exfor_tools.reaction import Reaction, is_match, specifies_excitation
 
         entry = __EXFOR_DB__.retrieve(ENTRY="13965")["13965"]
         data_set = next(ds for k, ds in entry.getDataSets().items() if k[1] == "13965002")
         assert data_set.reaction[0].products == ["SCT"]
-        assert is_level_resolved(data_set)
+        assert specifies_excitation(data_set)
         assert is_match(Reaction(target=(181, 73), projectile=(1, 0), process="el"),
                         data_set)
 
@@ -129,15 +135,18 @@ class TestScatteringCode:
         assert not is_match(
             Reaction(target=(181, 73), projectile=(1, 0), process="el"), summed)
 
-    def test_every_admitted_scattering_set_is_level_resolved(self):
-        """No summed elastic-plus-inelastic data reaches an elastic sector."""
-        from exfor_tools.reaction import is_level_resolved
+    def test_every_admitted_scattering_set_states_its_excitation(self):
+        """No scattering data of unstated excitation reaches an elastic sector.
+
+        A bounded data set passes this, since it does state its excitation. What keeps
+        it honest is the bound recorded alongside it, checked below.
+        """
+        from exfor_tools.reaction import specifies_excitation
 
         from nn_corpora import errors
 
-        elastic_sectors = {"neutron_elastic", "proton_elastic", "neutron_ay", "proton_ay"}
         for row in spec.load_all():
-            if not row.in_exfor or row.sector not in elastic_sectors:
+            if not row.in_exfor or row.sector not in ELASTIC_SECTORS:
                 continue
             try:
                 blocks = errors.data_sets_for(row.entry, row.subentry, row.pointer)
@@ -146,5 +155,23 @@ class TestScatteringCode:
             for data_set in blocks.values():
                 reaction = data_set.reaction[0]
                 if getattr(reaction, "products", None) == ["SCT"]:
-                    assert is_level_resolved(data_set), (
+                    assert specifies_excitation(data_set), (
                         f"{row.subentry} is summed scattering, not elastic")
+
+    def test_bounded_scattering_is_flagged_with_its_bound(self):
+        """The quasi-elastic subentries are found, and none is mistaken for resolved."""
+        bounds = {}
+        for row in spec.load_all():
+            if not row.in_exfor or row.sector not in ELASTIC_SECTORS:
+                continue
+            bound = retrieve.summed_scattering_bound(row.entry, row.subentry, row.pointer)
+            if bound is not None:
+                bounds[row.subentry] = bound
+
+        # 93Nb summed below the 30.8 keV isomer it could not separate, and the widest
+        # bound the published corpora admit as elastic.
+        assert bounds["12797003"] == pytest.approx(0.030)
+        assert max(bounds.values()) == pytest.approx(0.800)
+
+        # A resolved ground state is not a bound, and must not be flagged as one.
+        assert retrieve.summed_scattering_bound("13965", "13965002") is None

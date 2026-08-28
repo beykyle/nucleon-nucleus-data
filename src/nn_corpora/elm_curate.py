@@ -20,7 +20,7 @@ import numpy as np
 from exfor_tools import curate as exfor_curate
 from exfor_tools.reaction import Reaction
 
-from . import elm, munge, serialize, spec
+from . import elm, munge, retrieve, serialize, spec
 from .kinematics import lab_to_cm_angle_elastic
 
 #: ELM sector -> (quantities, process, output directory name).
@@ -66,9 +66,11 @@ def query_elastic(projectile: tuple[int, int], quantities: tuple[str, ...],
     """Query EXFOR for elastic scattering on every ELM target."""
     settings = {
         "Einc_range": list(einc_range),
-        # EXFOR writes some level-resolved data as scattering with an E-LVL column, so
-        # the elastic channel must be selected by excitation energy, not by the reaction
-        # code alone.
+        # EXFOR writes some elastic data as scattering (SCT) against an excitation
+        # column, so the elastic channel must be selected by excitation energy, not by
+        # the reaction code alone. Where that column only bounds the excitation there is
+        # nothing for the filter to select on; those data sets are kept, and flagged
+        # with their bound by _flag_summed_scattering.
         "elastic_only": True,
         "filter_kwargs": {"min_num_pts": min_num_pts, "allow_cos": True,
                           "filter_lab_angle": False},
@@ -244,10 +246,25 @@ def finalize(data: dict, sector: str, projectile: str, result: ElmSectorResult,
                         result.dropped.append(f"{measurement.subentry}: {why}")
                         entry.measurements.remove(measurement)
                         continue
+                    # ELM queries EXFOR directly rather than row by row, so the
+                    # quasi-elastic flag is applied here rather than in retrieve.
+                    _flag_summed_scattering(measurement, entry_id)
                     result.records.append(serialize.to_record(
                         measurement, corpus="elm", sector=sector,
                         projectile=projectile, target=target, citation=citation,
                     ))
+
+
+def _flag_summed_scattering(measurement, entry_id: str) -> None:
+    """Record the excitation bound of a measurement that is summed scattering."""
+    bound = retrieve.summed_scattering_bound(entry_id, measurement.subentry)
+    if bound is None:
+        return
+    measurement.summed_excitation_max_mev = bound
+    munge.note(measurement,
+               f"EXFOR records this as scattering (SCT) summed over excitations up to "
+               f"{bound * 1e3:.0f} keV rather than as resolved elastic scattering; the "
+               f"corpus counts it as elastic, and it is kept on that basis")
 
 
 def _munge_one(measurement, sector, target, projectile_name, quantity,

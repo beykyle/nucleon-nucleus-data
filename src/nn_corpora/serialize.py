@@ -3,7 +3,7 @@
 The record schema extends the one ``exfor_tools`` produces via
 ``Distribution.to_dataframe``, so files remain readable by
 ``AngularDistribution.from_dataframe`` and ``EnergyDistribution.from_dataframe``.
-Three fields are added, because the ELM corpus format cannot express them:
+Five fields are added, because the ELM corpus format cannot express them:
 
 ``corpus``, ``sector``
     which corpus and sector a record belongs to, so files can be recombined.
@@ -12,6 +12,11 @@ Three fields are added, because the ELM corpus format cannot express them:
     (n,n) and (p,p) data for one nucleus are indistinguishable within a file.
 ``notes``
     every transformation applied during munging, in order.
+``summed_excitation_max_MeV``
+    present only on the quasi-elastic records: EXFOR writes these as scattering (SCT)
+    summed below an upper bound on the residual's excitation rather than as resolved
+    elastic scattering, and this is that bound. The supplement counts them as elastic;
+    the field is here so a consumer can decide whether to.
 """
 
 from __future__ import annotations
@@ -86,6 +91,9 @@ def to_record(
     payload["target"] = get_exfor_particle_symbol(*target)
     notes = getattr(measurement, "notes", None) or []
     payload["notes"] = list(notes) if isinstance(notes, list) else [notes]
+    bound = getattr(measurement, "summed_excitation_max_mev", None)
+    if bound is not None:
+        payload["summed_excitation_max_MeV"] = bound
 
     return Record(target=target, payload=payload)
 
