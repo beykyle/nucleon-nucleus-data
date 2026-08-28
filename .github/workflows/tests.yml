@@ -9,9 +9,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      # Not recursive: exfor_tools' own x4i3_tools submodule is only used by
+      # update_database.sh to rebuild the EXFOR database from IAEA masterfiles, which
+      # this job never does.
       - uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: true
 
       - uses: astral-sh/setup-uv@v5
         with:
@@ -20,14 +23,32 @@ jobs:
       - name: Install
         run: uv sync --extra dev
 
-      # The full EXFOR database is several GB and is not available here, so the
-      # database-backed tests are skipped. x4i3 ships a 2023 snapshot, which is enough
-      # for the library to import and for the offline tests to run.
-      - name: Test
-        run: uv run pytest tests/ -q -m "not slow"
-
+      # tests/test_spec.py cross-checks the parsed tables against a pdftotext
+      # extraction, so poppler has to be here before the tests run, not just before
+      # the corpus-table check further down.
       - name: Install poppler for PDF text extraction
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      # Restored after the sync so uv cannot clobber it, and before the warm-up import
+      # so a hit makes that import a no-op.
+      - name: Cache the x4i3 EXFOR snapshot
+        uses: actions/cache@v4
+        with:
+          path: .venv/lib/python*/site-packages/x4i3/data
+          key: x4i3-db-${{ runner.os }}-${{ hashFiles('uv.lock') }}
+
+      # x4i3 fetches its 247 MB EXFOR snapshot the first time it is imported, and skips
+      # the fetch entirely when pytest is loaded. Import it once here, under a plain
+      # interpreter, so every later step in this job finds the database already unpacked
+      # in the same .venv rather than each one paying for its own download.
+      - name: Warm the EXFOR database
+        run: uv run python -c "import exfor_tools.db as d; print(d.__EXFOR_DB__.DATAPATH)"
+
+      # x4i3's snapshot is the 2023-04-29 release, not the full 2025 database the corpora
+      # are curated from, so the tests that query it in earnest are marked slow and
+      # excluded here.
+      - name: Test
+        run: uv run pytest tests/ -q -m "not slow"
 
       - name: Check the corpus tables still parse from the supplement
         run: |

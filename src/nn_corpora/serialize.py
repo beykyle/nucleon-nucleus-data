@@ -3,7 +3,7 @@
 The record schema extends the one ``exfor_tools`` produces via
 ``Distribution.to_dataframe``, so files remain readable by
 ``AngularDistribution.from_dataframe`` and ``EnergyDistribution.from_dataframe``.
-Three fields are added, because the ELM corpus format cannot express them:
+Five fields are added, because the ELM corpus format cannot express them:
 
 ``corpus``, ``sector``
     which corpus and sector a record belongs to, so files can be recombined.
@@ -12,6 +12,11 @@ Three fields are added, because the ELM corpus format cannot express them:
     (n,n) and (p,p) data for one nucleus are indistinguishable within a file.
 ``notes``
     every transformation applied during munging, in order.
+``summed_excitation_max_MeV``
+    present only on the quasi-elastic records: EXFOR writes these as scattering (SCT)
+    summed below an upper bound on the residual's excitation rather than as resolved
+    elastic scattering, and this is that bound. The supplement counts them as elastic;
+    the field is here so a consumer can decide whether to.
 """
 
 from __future__ import annotations
@@ -86,6 +91,9 @@ def to_record(
     payload["target"] = get_exfor_particle_symbol(*target)
     notes = getattr(measurement, "notes", None) or []
     payload["notes"] = list(notes) if isinstance(notes, list) else [notes]
+    bound = getattr(measurement, "summed_excitation_max_mev", None)
+    if bound is not None:
+        payload["summed_excitation_max_MeV"] = bound
 
     return Record(target=target, payload=payload)
 
@@ -137,14 +145,27 @@ def write_manifest(
     return path
 
 
+def exfor_database_tag() -> str:
+    """Which EXFOR release the database in use is, as ``X4-YYYY-MM-DD``.
+
+    x4i3 names the release in a marker file beside the database. Taking it from the
+    directory name instead only works when ``X43I_DATAPATH`` points at a release
+    directory built by ``x4i3_tools``; on the snapshot x4i3 downloads for itself the
+    database sits in the package's own ``data/`` directory, whose name says nothing.
+    """
+    import x4i3
+
+    # the downloaded snapshot's marker is the tarball's name, e.g. x4i3_X4-2023-04-29
+    return x4i3.dbTagFile.stem.removeprefix("x4i3_")
+
+
 def provenance() -> dict:
     """Versions and database identity, for reproducibility."""
     import exfor_tools
     import x4i3
-    from exfor_tools.db import __EXFOR_DB__
 
     return {
-        "exfor_database": Path(str(__EXFOR_DB__.DATAPATH)).parent.name,
+        "exfor_database": exfor_database_tag(),
         "exfor_tools_version": exfor_tools.__version__,
         "x4i3_version": x4i3.__version__,
     }

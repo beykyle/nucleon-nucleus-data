@@ -2,7 +2,7 @@
     "corpus": "elm",
     "provenance": {
         "exfor_database": "X4-2025-12-31",
-        "exfor_tools_version": "1.2.dev5+g951bcec08",
+        "exfor_tools_version": "1.3.dev11+gc623ddd6d",
         "x4i3_version": "1.2.4"
     },
     "sectors": {
@@ -106,7 +106,7 @@
             ]
         },
         "elastic_diff_xs": {
-            "data_points": 8061,
+            "data_points": 8086,
             "entries": [
                 "10633",
                 "10729",
@@ -183,7 +183,7 @@
                 "T0108",
                 "T0152"
             ],
-            "measurements": 233,
+            "measurements": 234,
             "targets": [
                 "Ba-138",
                 "Ca-40",

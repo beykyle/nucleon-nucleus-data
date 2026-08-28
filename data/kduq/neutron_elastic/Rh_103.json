@@ -64,9 +64,11 @@
         "projectile": "neutron",
         "target": "Rh-103",
         "notes": [
+            "EXFOR records this as scattering (SCT) summed over excitations up to 93 keV rather than as resolved elastic scattering; the supplement counts it as elastic, and it is kept on that basis",
             "converted scattering angles from the lab to the CM frame",
             "assigned a default normalisation uncertainty of 5%, none reported"
-        ]
+        ],
+        "summed_excitation_max_MeV": 0.093
     },
     {
         "type": "ECS",
@@ -133,9 +135,11 @@
         "projectile": "neutron",
         "target": "Rh-103",
         "notes": [
+            "EXFOR records this as scattering (SCT) summed over excitations up to 93 keV rather than as resolved elastic scattering; the supplement counts it as elastic, and it is kept on that basis",
             "converted scattering angles from the lab to the CM frame",
             "assigned a default normalisation uncertainty of 5%, none reported"
-        ]
+        ],
+        "summed_excitation_max_MeV": 0.093
     },
     {
         "type": "ECS",
@@ -202,9 +206,11 @@
         "projectile": "neutron",
         "target": "Rh-103",
         "notes": [
+            "EXFOR records this as scattering (SCT) summed over excitations up to 93 keV rather than as resolved elastic scattering; the supplement counts it as elastic, and it is kept on that basis",
             "converted scattering angles from the lab to the CM frame",
             "assigned a default normalisation uncertainty of 5%, none reported"
-        ]
+        ],
+        "summed_excitation_max_MeV": 0.093
     },
     {
         "type": "ECS",
@@ -271,9 +277,11 @@
         "projectile": "neutron",
         "target": "Rh-103",
         "notes": [
+            "EXFOR records this as scattering (SCT) summed over excitations up to 93 keV rather than as resolved elastic scattering; the supplement counts it as elastic, and it is kept on that basis",
             "converted scattering angles from the lab to the CM frame",
             "assigned a default normalisation uncertainty of 5%, none reported"
-        ]
+        ],
+        "summed_excitation_max_MeV": 0.093
     },
     {
         "type": "ECS",
@@ -380,9 +388,11 @@
         "projectile": "neutron",
         "target": "Rh-103",
         "notes": [
+            "EXFOR records this as scattering (SCT) summed over excitations up to 93 keV rather than as resolved elastic scattering; the supplement counts it as elastic, and it is kept on that basis",
             "converted scattering angles from the lab to the CM frame",
             "assigned a default normalisation uncertainty of 5%, none reported"
-        ]
+        ],
+        "summed_excitation_max_MeV": 0.093
     },
     {
         "type": "ECS",
@@ -489,9 +499,11 @@
         "projectile": "neutron",
         "target": "Rh-103",
         "notes": [
+            "EXFOR records this as scattering (SCT) summed over excitations up to 93 keV rather than as resolved elastic scattering; the supplement counts it as elastic, and it is kept on that basis",
             "converted scattering angles from the lab to the CM frame",
             "assigned a default normalisation uncertainty of 5%, none reported"
-        ]
+        ],
+        "summed_excitation_max_MeV": 0.093
     },
     {
         "type": "ECS",

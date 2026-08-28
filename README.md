@@ -73,12 +73,17 @@ named `<Target>.json` and live in `data/<corpus>/<sector>/`.
 
 Records extend the schema `exfor_tools` writes via `Distribution.to_dataframe`, so files
 stay readable by `AngularDistribution.from_dataframe` and
-`EnergyDistribution.from_dataframe`. Four fields are added:
+`EnergyDistribution.from_dataframe`. Five fields are added:
 
 - `corpus`, `sector` — so files can be recombined after being split by target
 - `projectile` — `"neutron"` or `"proton"`. The ELM corpus format keys only on the
   target, so $(n,n)$ and $(p,p)$ data for one nucleus are otherwise indistinguishable
 - `notes` — every transformation applied to the record, in order
+- `summed_excitation_max_MeV` — present only on the quasi-elastic records. EXFOR writes
+  these as scattering, `SCT`, summed below an upper bound on the residual's excitation
+  rather than as resolved elastic scattering, and this is that bound. The published
+  corpora count them as elastic; the field is there so a consumer can decide whether to.
+  See [Quasi-elastic data sets](#quasi-elastic-data-sets).
 
 ```json
 {
@@ -119,6 +124,25 @@ Energies are in MeV and angles in CM degrees throughout.
 
 **Charged-projectile elastic data are stored as a ratio to Rutherford whether or not
 EXFOR reports them that way.** 
+
+### Quasi-elastic data sets
+
+Not every record in an elastic sector is elastic scattering in the strict sense. EXFOR
+compiles some measurements under the scattering code `SCT`, which its dictionary defines
+as "Total scattering (elastic + inelastic)", and states separately which residual
+excitation the data cover. Twenty-two of the subentries the published corpora place in
+elastic sectors are written this way. Ten resolve the excitation to a level and carry
+the ground state, so they are elastic outright. The other twelve give only an upper
+bound — an `E-LVL-MAX`, `E-EXC-MAX` or `E-EXC-MX-A` column — and are summed over the
+ground state together with every level below that bound, which the experiment could not
+separate. The bounds run from 30 keV on $^{93}$Nb, just under its 30.8 keV isomer, up to
+800 keV.
+
+The supplements count all twenty-two as elastic, and so does this repository: dropping
+them would depart from the corpora being reproduced. But the twelve are quasi-elastic
+rather than elastic, so each of their records carries `summed_excitation_max_MeV` with
+its bound and a note saying so. A consumer fitting an optical potential can filter on
+that field if the distinction matters for its purpose.
 
 ## Reproducing the curation
 Clone the repository and its submodules:

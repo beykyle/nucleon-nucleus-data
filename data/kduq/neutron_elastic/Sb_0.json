@@ -64,10 +64,12 @@
         "projectile": "neutron",
         "target": "Sb-0",
         "notes": [
+            "EXFOR records this as scattering (SCT) summed over excitations up to 160 keV rather than as resolved elastic scattering; the supplement counts it as elastic, and it is kept on that basis",
             "the supplement tabulates this data set under 123Sb; EXFOR now assigns it to A=nat, Z=51, which is used here",
             "converted scattering angles from the lab to the CM frame",
             "assigned a default normalisation uncertainty of 5%, none reported"
-        ]
+        ],
+        "summed_excitation_max_MeV": 0.16
     },
     {
         "type": "ECS",
@@ -134,10 +136,12 @@
         "projectile": "neutron",
         "target": "Sb-0",
         "notes": [
+            "EXFOR records this as scattering (SCT) summed over excitations up to 160 keV rather than as resolved elastic scattering; the supplement counts it as elastic, and it is kept on that basis",
             "the supplement tabulates this data set under 123Sb; EXFOR now assigns it to A=nat, Z=51, which is used here",
             "converted scattering angles from the lab to the CM frame",
             "assigned a default normalisation uncertainty of 5%, none reported"
-        ]
+        ],
+        "summed_excitation_max_MeV": 0.16
     },
     {
         "type": "ECS",
@@ -204,10 +208,12 @@
         "projectile": "neutron",
         "target": "Sb-0",
         "notes": [
+            "EXFOR records this as scattering (SCT) summed over excitations up to 160 keV rather than as resolved elastic scattering; the supplement counts it as elastic, and it is kept on that basis",
             "the supplement tabulates this data set under 123Sb; EXFOR now assigns it to A=nat, Z=51, which is used here",
             "converted scattering angles from the lab to the CM frame",
             "assigned a default normalisation uncertainty of 5%, none reported"
-        ]
+        ],
+        "summed_excitation_max_MeV": 0.16
     },
     {
         "type": "ECS",
@@ -314,10 +320,12 @@
         "projectile": "neutron",
         "target": "Sb-0",
         "notes": [
+            "EXFOR records this as scattering (SCT) summed over excitations up to 160 keV rather than as resolved elastic scattering; the supplement counts it as elastic, and it is kept on that basis",
             "the supplement tabulates this data set under 123Sb; EXFOR now assigns it to A=nat, Z=51, which is used here",
             "converted scattering angles from the lab to the CM frame",
             "assigned a default normalisation uncertainty of 5%, none reported"
-        ]
+        ],
+        "summed_excitation_max_MeV": 0.16
     },
     {
         "type": "ECS",
@@ -424,10 +432,12 @@
         "projectile": "neutron",
         "target": "Sb-0",
         "notes": [
+            "EXFOR records this as scattering (SCT) summed over excitations up to 160 keV rather than as resolved elastic scattering; the supplement counts it as elastic, and it is kept on that basis",
             "the supplement tabulates this data set under 123Sb; EXFOR now assigns it to A=nat, Z=51, which is used here",
             "converted scattering angles from the lab to the CM frame",
             "assigned a default normalisation uncertainty of 5%, none reported"
-        ]
+        ],
+        "summed_excitation_max_MeV": 0.16
     },
     {
         "type": "ECS",
@@ -534,10 +544,12 @@
         "projectile": "neutron",
         "target": "Sb-0",
         "notes": [
+            "EXFOR records this as scattering (SCT) summed over excitations up to 160 keV rather than as resolved elastic scattering; the supplement counts it as elastic, and it is kept on that basis",
             "the supplement tabulates this data set under 123Sb; EXFOR now assigns it to A=nat, Z=51, which is used here",
             "converted scattering angles from the lab to the CM frame",
             "assigned a default normalisation uncertainty of 5%, none reported"
-        ]
+        ],
+        "summed_excitation_max_MeV": 0.16
     },
     {
         "type": "ECS",

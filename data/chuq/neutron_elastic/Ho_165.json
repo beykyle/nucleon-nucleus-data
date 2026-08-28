@@ -128,8 +128,10 @@
         "projectile": "neutron",
         "target": "Ho-165",
         "notes": [
+            "EXFOR records this as scattering (SCT) summed over excitations up to 360 keV rather than as resolved elastic scattering; the supplement counts it as elastic, and it is kept on that basis",
             "the supplement tabulates this data set under 165Hg; EXFOR now assigns it to A=165, Z=67, which is used here",
             "assigned a default normalisation uncertainty of 5%, none reported"
-        ]
+        ],
+        "summed_excitation_max_MeV": 0.36
     }
 ]
