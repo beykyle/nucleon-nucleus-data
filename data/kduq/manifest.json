@@ -2,7 +2,7 @@
     "corpus": "kduq",
     "provenance": {
         "exfor_database": "X4-2025-12-31",
-        "exfor_tools_version": "1.3.dev9+g039e8463e",
+        "exfor_tools_version": "1.3.dev11+gc623ddd6d",
         "x4i3_version": "1.2.4"
     },
     "sectors": {
