@@ -1,4 +1,4 @@
 [submodule "external/exfor_tools"]
 	path = external/exfor_tools
-	url = /mnt/home/beyerkyl/exfor_tools
-	branch = nn-corpora
+	url = https://github.com/beykyle/exfor_tools.git
+	branch = main
