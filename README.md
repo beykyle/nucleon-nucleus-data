@@ -42,9 +42,18 @@ subentry and scattering energy of every data set. Those tables are transcribed t
 | test | proton ay | 14 | 390 | 4 | 100.0% |
 | test | proton elastic | 11 | 314 | 4 | 91.7% |
 | test | proton reaction | 4 | 19 | 1 | 100.0% |
+| sm3 | charge exchange | 12 | 385 | 1 | — |
+| sm3 | elastic diff xs | 34 | 1451 | 18 | — |
 
 Coverage is the fraction of a sector's specification rows that produced data. It is not
 defined for ELM, which is a query rather than a list of subentries.
+
+`sm3` holds the data sets of Danielewicz, Singh & Lee, Nucl. Phys. A 958 (2017) 147
+("Symmetry energy III"): Doering's (p,n) to the isobaric analog state at 25, 35 and 45 MeV and
+the paper's elastic (p,p) and (n,n) on 48Ca, 90Zr, 120Sn and 208Pb. It is a table
+(`src/nn_corpora/sm3.py`) built by `scripts/curate_sm3.py`, mostly from records of `elm` and
+`kduq`, with 208Pb(n,n) at 9.97 MeV (Delaroche et al.) and 90Zr(p,p) at 25.05 MeV (Van der Bijl
+et al.) curated from EXFOR. 120Sn(p,p) at 39.6 MeV (Boyd & Greenlees) is not in EXFOR.
 
 Across the three tabulated corpora, 1419 of 1495 specification rows retrieve
 successfully. Of the 76 that do not, 49 are entries x4i3 cannot parse and 10 are rows

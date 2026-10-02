@@ -1,0 +1,67 @@
+{
+    "corpus": "sm3",
+    "provenance": {
+        "exfor_database": "X4-2025-12-31",
+        "exfor_tools_version": "1.3.dev11+gc623ddd6d",
+        "x4i3_version": "1.2.4"
+    },
+    "sectors": {
+        "charge_exchange": {
+            "data_points": 385,
+            "entries": [
+                "O0178"
+            ],
+            "measurements": 12,
+            "targets": [
+                "Ca-48",
+                "Pb-208",
+                "Sn-120",
+                "Zr-90"
+            ],
+            "types": [
+                "ECS"
+            ],
+            "units": [
+                "b/sr"
+            ]
+        },
+        "elastic_diff_xs": {
+            "data_points": 1451,
+            "entries": [
+                "10729",
+                "10817",
+                "10871",
+                "12701",
+                "12865",
+                "13158",
+                "13160",
+                "13531",
+                "13635",
+                "14303",
+                "C0624",
+                "D0295",
+                "F0733",
+                "O0142",
+                "O0208",
+                "O0287",
+                "O0328",
+                "O0788"
+            ],
+            "measurements": 34,
+            "targets": [
+                "Ca-48",
+                "Pb-208",
+                "Sn-120",
+                "Zr-90"
+            ],
+            "types": [
+                "ECS",
+                "ECS_Rutherford"
+            ],
+            "units": [
+                "b/sr",
+                "no-dim"
+            ]
+        }
+    }
+}
