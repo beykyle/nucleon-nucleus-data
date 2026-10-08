@@ -10,3 +10,8 @@ dist/
 
 # notebook execution artifacts
 notebooks/**/*.png
+
+# copyrighted publications: never commit (public repo); see papers/INDEX.md
+papers/**/*.pdf
+papers/*.pdf
+*.pdf.part
