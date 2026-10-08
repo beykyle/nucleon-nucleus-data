@@ -15,3 +15,7 @@ notebooks/**/*.png
 papers/**/*.pdf
 papers/*.pdf
 *.pdf.part
+papers/*.tar.gz
+papers/*.tgz
+papers/*.zip
+papers/extracted/

@@ -132,7 +132,11 @@ a public repo).
 - [x] Step 1: `papers/INDEX.md` (37 entries: 35 DOIs verified through Crossref, 2 without DOI), `.gitignore` for
       PDFs.
 - [x] EXFOR cross-check: `scripts/exfor_crosscheck.py` → `papers/exfor_crosscheck_generated.md`, summary in `papers/notes_from_exfor.md`. DOIs agree; the corpus reproduces EXFOR; O0328's 2023 relabel (ERR-T → ERR-1) is why Fricke falls back to 0.4 %.
-- [ ] Waiting: Kyle's PDF compilation (git-ignored, in this repo).
+- [x] Kyle's PDF compilation received (33 PDFs, renamed by entry; Doering thesis downloaded). O0157's file is the wrong paper (Moonen 1993); F1173, O0083, O0372 and O0446 are not in it.
+- [x] Extraction of author uncertainties from the papers: `docs/ERROR_EXTRACTION.md` (summary, questions Q1–Q6) and `docs/extraction/extract_G*.md` (page/table/figure quotes).
+- [x] Kyle reviewed ERROR_EXTRACTION.md (Q1–Q6, 2026-10-08; see the decision log).
+- [ ] Doering Table 5 transcription (two independent transcriptions, reconciled).
+- [ ] Kyle: case-by-case decisions on docs/FLAGGED_DATASETS.md.
 - [ ] Step 2: fill rule (partial records). Needs no papers; start on Kyle's go.
 - [ ] Step 3: whole-set records from the papers (Doering 25 MeV ×3 from the thesis Table 5).
 - [ ] Step 4: enforcement test, rebuild, diff report, commit.
@@ -146,4 +150,9 @@ a public repo).
 | 2026-10-08 | Doering normalisation stays 10 % (ERR-1 is the authors' total absolute-scale estimate) | Kyle |
 | 2026-10-08 | Doering treated like any partial record; no re-digitisation (whole-set 25 MeV records take their errors from the thesis) | Kyle (whole-set note: Claude) |
 | 2026-10-08 | Public repo: PDFs git-ignored, only `papers/INDEX.md` committed | Kyle |
+| 2026-10-08 | Doering O0178: replace the EXFOR digitised values AND errors with the thesis Table 5 tabulation (all 12 sets); the EXFOR points absent from Table 5 (e.g. 208Pb 45 MeV 161.9°/164.0°) are dropped (supersedes "no re-digitisation") | Kyle |
+| 2026-10-08 | Drop ELM's CURVE duplicates of Fulmer 61.4 MeV (O0211004/007/008/009); keep the tables (012/015/016/017) | Kyle |
+| 2026-10-08 | "Not stated" entries: per-paper proposals (ERROR_EXTRACTION.md), not a uniform default | Kyle |
+| 2026-10-08 | Apply the author-stated normalisation errors where they differ from the corpus default | Kyle |
+| 2026-10-08 | Records without a good author source of errors are flagged (docs/FLAGGED_DATASETS.md); Kyle decides case by case (drop, or uniform fallback) | Kyle |
 | 2026-10-08 | Error-column meaning is taken from each subentry's ERR-ANALYS text, not the label: EXFOR relabelled columns between releases (e.g. O0328 ERR-T → ERR-1) | Claude (from the EXFOR cross-check) |
