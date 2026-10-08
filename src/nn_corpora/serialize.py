@@ -106,7 +106,13 @@ def write_sector(
     bibtex: dict[str, str] | None = None,
     data_dir: Path = DATA_DIR,
 ) -> Path:
-    """Write one corpus-sector: ``<Target>.json`` per target, plus a ``.bib``."""
+    """Write one corpus-sector: ``<Target>.json`` per target, plus a ``.bib``.
+
+    Records first pass through ``author_errors.apply`` (drops, author uncertainties, normalisations).
+    """
+    from . import author_errors
+
+    records = author_errors.apply(records, corpus, sector)
     out = data_dir / corpus / sector
     out.mkdir(parents=True, exist_ok=True)
 

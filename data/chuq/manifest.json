@@ -89,17 +89,16 @@
         },
         "proton_ay": {
             "coverage": 0.7805,
-            "data_points": 1950,
+            "data_points": 1919,
             "entries": [
                 "C0893",
                 "O0032",
                 "O0091",
                 "O0169",
                 "O0328",
-                "O1104",
-                "O1109"
+                "O1104"
             ],
-            "measurements": 64,
+            "measurements": 63,
             "spec_rows": 82,
             "spec_rows_allowlisted": 18,
             "spec_rows_in_exfor": 82,
@@ -144,7 +143,6 @@
                 "Ti-48",
                 "Ti-50",
                 "Y-89",
-                "Zn-66",
                 "Zn-68",
                 "Zr-90"
             ],
@@ -157,18 +155,16 @@
         },
         "proton_elastic": {
             "coverage": 0.9294,
-            "data_points": 2497,
+            "data_points": 2264,
             "entries": [
                 "C0893",
                 "O0032",
                 "O0091",
                 "O0169",
                 "O0328",
-                "O1103",
-                "O1104",
-                "O1109"
+                "O1104"
             ],
-            "measurements": 79,
+            "measurements": 71,
             "spec_rows": 85,
             "spec_rows_allowlisted": 6,
             "spec_rows_in_exfor": 85,
@@ -191,8 +187,6 @@
                 "Cu-65",
                 "Fe-54",
                 "Fe-56",
-                "Ge-72",
-                "Ge-74",
                 "Mo-100",
                 "Mo-98",
                 "Ni-58",
@@ -216,10 +210,7 @@
                 "Ti-48",
                 "Ti-50",
                 "Y-89",
-                "Zn-64",
-                "Zn-66",
                 "Zn-68",
-                "Zn-70",
                 "Zr-90"
             ],
             "types": [

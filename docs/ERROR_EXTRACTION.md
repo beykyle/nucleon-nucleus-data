@@ -1,8 +1,8 @@
 # Author uncertainties extracted from the papers: summary for review
 
 Consolidated from the five extraction reports in `docs/extraction/extract_G{1..5}.md` (each with PDF page, table/figure
-and verbatim quotes), 2026-10-08. PDFs are in `papers/` (git-ignored). Nothing here is applied yet: each row needs
-Kyle's OK, then it goes into `nn_corpora/author_errors.py` (DATA_CLEANING.md step 3).
+and verbatim quotes), 2026-10-08. PDFs are in `papers/` (git-ignored). Applied 2026-10-08 in `nn_corpora/author_errors.py` per Kyle's
+answers (see DATA_CLEANING.md decision log); flagged entries other than O0157 and O0328 were dropped.
 
 **Confidence levels:**
 - **high:** tabulated or explicitly stated;

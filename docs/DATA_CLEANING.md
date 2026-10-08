@@ -135,12 +135,17 @@ a public repo).
 - [x] Kyle's PDF compilation received (33 PDFs, renamed by entry; Doering thesis downloaded). O0157's file is the wrong paper (Moonen 1993); F1173, O0083, O0372 and O0446 are not in it.
 - [x] Extraction of author uncertainties from the papers: `docs/ERROR_EXTRACTION.md` (summary, questions Q1–Q6) and `docs/extraction/extract_G*.md` (page/table/figure quotes).
 - [x] Kyle reviewed ERROR_EXTRACTION.md (Q1–Q6, 2026-10-08; see the decision log).
-- [ ] Doering Table 5 transcription (two independent transcriptions, reconciled).
-- [ ] Kyle: case-by-case decisions on docs/FLAGGED_DATASETS.md.
-- [ ] Step 2: fill rule (partial records). Needs no papers; start on Kyle's go.
-- [ ] Step 3: whole-set records from the papers (Doering 25 MeV ×3 from the thesis Table 5).
-- [ ] Step 4: enforcement test, rebuild, diff report, commit.
-- [ ] Step 5: downstream (sm3 rebuild, 208Pb lane/locw rerun, CAMPAIGN.md, HIGHLIGHTS).
+- [x] Doering Table 5 transcription: `external/doering_1974_table5.csv` (377 rows, 12 sets). Two independent transcriptions agree on 376/377 rows; the remaining one was resolved at 600 dpi. All uncertain readings are confirmed by the EXFOR digitisation (≤ 6 %); median table/EXFOR 0.98. Integrals reproduce the thesis Table 6 totals. Where EXFOR and the table disagree (e.g. 208Pb 35 MeV 40.3°: 0.363 printed vs EXFOR 0.57), the printed value was confirmed. The 208Pb 45 MeV EXFOR points at 161.9°/164.0° have no table counterpart (dropped with the switch to the table).
+- [x] Kyle: decisions on docs/FLAGGED_DATASETS.md (2026-10-08): Devins found and kept; Fricke kept as a partial record; the other 19 flagged entries dropped for now.
+- [x] Steps 2–3: `src/nn_corpora/author_errors.py`, applied to every record in `serialize.write_sector` (elm, kduq, chuq, sm3; not test):
+  drops (flagged + Fulmer CURVE duplicates), Doering → thesis Table 5, Fricke ERR-1 fill, per-paper author errors
+  (`PER_PAPER`, from ERROR_EXTRACTION.md), author normalisations (`NORM`). Error columns are classified from ERR-ANALYS.
+- [x] Step 4: `scripts/apply_author_errors.py` applied it to `data/` (45 records dropped, 143 corrected, 1288 unchanged;
+  per-record diff in `docs/AUTHOR_ERRORS_DIFF.md`); sm3 and manifests rebuilt; `spec/known_missing.csv` allowlists the
+  24 dropped KDUQ/CHUQ spec rows; `scripts/audit_reader_errors.py` moved into the repo; `tests/test_reader_errors.py`
+  (drops gone, Doering = table, idempotence, and, marked slow, every record with reader-only EXFOR points corrected;
+  allowlist: F0733003). Full suite: 250 passed.
+- [ ] Step 5: downstream (sm3 calibration rebuild, 208Pb lane/locw rerun, loo_screen, CAMPAIGN.md Gate A, HIGHLIGHTS).
 
 ## Decision log
 
@@ -156,3 +161,7 @@ a public repo).
 | 2026-10-08 | Apply the author-stated normalisation errors where they differ from the corpus default | Kyle |
 | 2026-10-08 | Records without a good author source of errors are flagged (docs/FLAGGED_DATASETS.md); Kyle decides case by case (drop, or uniform fallback) | Kyle |
 | 2026-10-08 | Error-column meaning is taken from each subentry's ERR-ANALYS text, not the label: EXFOR relabelled columns between releases (e.g. O0328 ERR-T → ERR-1) | Claude (from the EXFOR cross-check) |
+| 2026-10-08 | O0157 Devins (paper found): per-point 3.5 % → 10 % ramp in angle (the paper's "absolute errors"), plus the default 5 % normalisation (conservative, slight double count) | Kyle |
+| 2026-10-08 | O0328 Fricke kept as a partial record: ERR-1 ⊕ ERR-DIG, ERR-1 blanks filled; flat extrapolation at both ends (6 % forward, 14.8 % backward for 120Sn), overriding the ≥ 100 % / reader-bound end rules for this entry; ERR-2 ⊕ ERR-3 as normalisation | Kyle |
+| 2026-10-08 | All other flagged entries dropped from the corpora for now | Kyle |
+| 2026-10-08 | Corrections applied to the existing data files by script (not by re-running every notebook); the same code runs in `write_sector`, so notebook rebuilds agree | Kyle |

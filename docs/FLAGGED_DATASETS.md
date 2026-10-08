@@ -7,31 +7,34 @@ per-point errors. For each, decide: **drop** from the corpora, a **uniform fallb
 Sources: `docs/ERROR_EXTRACTION.md`, `docs/extraction/extract_G*.md`, `papers/exfor_crosscheck_generated.md`.
 Only records with reader-only points are listed (the corpora they appear in are shown per row).
 
-## Decision column (fill in)
+## Decisions (Kyle, 2026-10-08: "For the rest of the flagged data sets, drop them from corpora for now")
+
+Applied by `nn_corpora.author_errors` (`DROP_FLAGGED`); dropped spec rows are allowlisted in `spec/known_missing.csv`
+(category `dropped-in-cleaning`). To restore a set, remove it from `DROP_FLAGGED` and give it an author rule.
 
 | entry | decision (drop / fallback / proposal) | note |
 |---|---|---|
-| O0157 | | |
-| F1173 | | |
-| O0083 | | |
-| O0372 | | |
-| O0446 | | |
-| O0328 | | |
-| O0382 | | |
-| O0580 | | |
-| O0225 | | |
-| O0254 | | |
-| O0259 | | |
-| O0272 | | |
-| O0370 | | |
-| O0384 | | |
-| O0387 | | |
-| O0458 | | |
-| O1199 | | |
-| O0079 | | |
-| O0553 | | |
-| O1103 | | |
-| O1109 | | |
+| O0157 | keep: Devins found (papers/devins.pdf) | p.619: absolute errors ~3.5 % forward → ~10 % extreme backward; ramp in angle, default 5 % normalisation |
+| F1173 | drop (for now) |  |
+| O0083 | drop (for now) |  |
+| O0372 | drop (for now) |  |
+| O0446 | drop (for now) |  |
+| O0328 | keep: partial record | EXFOR ERR-1 (authors' errors) ⊕ ERR-DIG; ERR-1 blanks filled by interpolation, flat beyond the ends; ERR-2 ⊕ ERR-3 = 5.4 % normalisation |
+| O0382 | drop (for now) |  |
+| O0580 | drop (for now) |  |
+| O0225 | drop (for now) |  |
+| O0254 | drop (for now) |  |
+| O0259 | drop (for now) |  |
+| O0272 | drop (for now) |  |
+| O0370 | drop (for now) |  |
+| O0384 | drop (for now) |  |
+| O0387 | drop (for now) |  |
+| O0458 | drop (for now) |  |
+| O1199 | drop (for now) |  |
+| O0079 | drop (for now) |  |
+| O0553 | drop (for now) |  |
+| O1103 | drop (for now) |  |
+| O1109 | drop (for now) |  |
 
 ## Flagged: no usable author source
 

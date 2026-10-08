@@ -74,22 +74,22 @@
                 0.69
             ],
             "y_err": [
+                0.022360679774997897,
+                0.022360679774997897,
+                0.022360679774997897,
+                0.022360679774997897,
+                0.022360679774997897,
+                0.022360679774997897,
+                0.022360679774997897,
+                0.022360679774997897,
+                0.022360679774997897,
                 0.01,
                 0.01,
                 0.01,
-                0.01,
-                0.01,
-                0.01,
-                0.01,
-                0.01,
-                0.01,
-                0.01,
-                0.01,
-                0.01,
-                0.01,
-                0.01,
-                0.01,
-                0.01,
+                0.022360679774997897,
+                0.022360679774997897,
+                0.022360679774997897,
+                0.022360679774997897,
                 0.01,
                 0.01,
                 0.01,
@@ -113,7 +113,9 @@
         "target": "Ni-60",
         "notes": [
             "the supplement tabulates subentry O0091021 for this data set, which is no longer in EXFOR; taken from O0091019 in the same entry at the same scattering energy",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 13 of 30 points without one in EXFOR (added in quadrature to the reader error): Van Hall et al., NPA 291 (1977) 63: 3 % (Fe), 2 % (Ni) assigned; Ay 0.02 (figures)",
+            "author-errors v1 (docs/DATA_CLEANING.md)"
         ]
     },
     {
