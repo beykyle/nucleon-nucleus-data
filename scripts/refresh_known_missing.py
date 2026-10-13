@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Regenerate ``spec/known_missing.csv`` from a full curation run.
 
-Every row of the supplement's corpus tables must be accounted for. Rows that do not
+Every row of a tabulated corpus's spec tables must be accounted for. Rows that do not
 resolve are listed in the allowlist with a reason, and any row that stops resolving
 later -- because EXFOR was revised, or because a change here silently dropped it --
 fails its notebook instead of passing unnoticed.
@@ -11,7 +11,10 @@ current state, it does not judge it.
 
 Usage::
 
-    python scripts/refresh_known_missing.py [--dry-run]
+    python scripts/refresh_known_missing.py [--corpus NAME ...] [--dry-run]
+
+With ``--corpus``, only those corpora are curated, and only their rows in the allowlist are
+replaced; the other corpora's rows are kept as they are.
 """
 
 from __future__ import annotations
@@ -26,12 +29,19 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--dry-run", action="store_true",
                     help="report what would be written without writing it")
+    ap.add_argument("--corpus", nargs="+",
+                    help="refresh only these corpora (default: every tabulated corpus)")
     args = ap.parse_args()
+    unknown = set(args.corpus or ()) - set(spec.TABULATED)
+    if unknown:
+        ap.error(f"not registered in nn_corpora.spec.TABULATED: {', '.join(sorted(unknown))}")
 
     rows: list[report.KnownMissing] = []
     counts: collections.Counter = collections.Counter()
 
     for corpus_name, sector in spec.available_sectors():
+        if args.corpus and corpus_name not in args.corpus:
+            continue
         result = corpus.curate(corpus_name, sector)
         print(f"{corpus_name}/{sector}: coverage {result.data.coverage:.1%}, "
               f"{len(result.records)} measurements, {result.n_points} points", flush=True)
@@ -64,6 +74,8 @@ def main() -> None:
         print("\n(dry run; nothing written)")
         return
 
+    if args.corpus:  # keep the other corpora's rows
+        rows += [r for r in report.load_known_missing().values() if r.corpus not in args.corpus]
     report.write_known_missing(rows)
     print(f"\nwrote {report.KNOWN_MISSING_PATH}")
 
