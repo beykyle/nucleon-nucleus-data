@@ -19,7 +19,6 @@ chuq,proton_ay,60Ni,20.4,O0091019,dropped-in-cleaning,one or more data points ca
 chuq,proton_ay,60Ni,40.0,O0162028,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0162 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
 chuq,proton_ay,62Ni,20.4,O0091023,dropped-in-cleaning,one or more data points carry no uncertainty
 chuq,proton_ay,64Zn,20.4,O1109003,dropped-in-cleaning,one or more data points carry no uncertainty
-chuq,proton_ay,66Zn,20.4,O1109005,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
 chuq,proton_ay,68Zn,20.4,O1109007,dropped-in-cleaning,one or more data points carry no uncertainty
 chuq,proton_ay,70Zn,20.4,O1109009,dropped-in-cleaning,one or more data points carry no uncertainty
 chuq,proton_ay,72Ge,22.3,O1103005,dropped-in-cleaning,one or more data points carry no uncertainty
@@ -32,14 +31,6 @@ chuq,proton_elastic,40Ca,40.0,O0328003,subentry-withdrawn,subentry not present i
 chuq,proton_elastic,54Fe,40.0,O0162023,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0162 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
 chuq,proton_elastic,58Ni,40.0,O0162025,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0162 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
 chuq,proton_elastic,60Ni,40.0,O0162027,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0162 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
-chuq,proton_elastic,64Zn,20.4,O1109002,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
-chuq,proton_elastic,66Zn,20.4,O1109004,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
-chuq,proton_elastic,68Zn,20.4,O1109006,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
-chuq,proton_elastic,70Zn,20.4,O1109008,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
-chuq,proton_elastic,72Ge,22.3,O1103004,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
-chuq,proton_elastic,74Ge,22.3,O1103006,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
-chuq,proton_elastic,78Se,22.3,O1103012,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
-chuq,proton_elastic,80Se,22.3,O1103014,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
 chuq,proton_elastic,90Zr,40.0,O0328006,subentry-withdrawn,subentry not present in entry O0328 for this quantity
 kduq,neutron_ay,27Al,7.62,22532004,uncertainty-unresolved,uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
 kduq,neutron_elastic,118Sn,24.0,10817007,dropped-in-cleaning,one or more data points carry no uncertainty
@@ -83,36 +74,21 @@ kduq,proton_ay,60Ni,20.4,O0091019,dropped-in-cleaning,one or more data points ca
 kduq,proton_ay,90Zr,9.7,O0393007,dropped-in-cleaning,one or more data points carry no uncertainty
 kduq,proton_elastic,120Sn,160.0,O0479004,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0479 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
 kduq,proton_elastic,209Bi,65.0,E0773008,uncertainty-unresolved,uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
-kduq,proton_elastic,209Bi,78.0,O0553014,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
-kduq,proton_elastic,209Bi,153.0,O0553006,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
 kduq,proton_elastic,27Al,17.0,O0262004,x4i3-parse-failure,parse failed: 'NoneType' object is not subscriptable
-kduq,proton_elastic,27Al,35.2,O0083019,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
 kduq,proton_elastic,27Al,61.4,O0211003,dropped-in-cleaning,one or more data points carry no uncertainty
-kduq,proton_elastic,28Si,17.8,O0254009,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
 kduq,proton_elastic,28Si,40.0,O0162021,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0162 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
-kduq,proton_elastic,40Ca,75.0,O0553010,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
-kduq,proton_elastic,40Ca,152.0,O0553004,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
 kduq,proton_elastic,54Fe,9.69,O0393002,dropped-in-cleaning,one or more data points carry no uncertainty
-kduq,proton_elastic,54Fe,19.6,O0079006,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
 kduq,proton_elastic,54Fe,30.4,O1243003,dropped-in-cleaning,one or more data points carry no uncertainty
 kduq,proton_elastic,56Fe,10.93,,absent-from-exfor,the supplement marks this row as absent from EXFOR
 kduq,proton_elastic,56Fe,11.7,,absent-from-exfor,the supplement marks this row as absent from EXFOR
-kduq,proton_elastic,56Fe,35.2,O0083016,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
-kduq,proton_elastic,58Ni,10.7,O0446002,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
 kduq,proton_elastic,58Ni,11.7,,absent-from-exfor,the supplement marks this row as absent from EXFOR
-kduq,proton_elastic,58Ni,14.4,O0446002,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
-kduq,proton_elastic,58Ni,15.4,O0446002,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
 kduq,proton_elastic,58Ni,17.0,O0262007,x4i3-parse-failure,parse failed: 'NoneType' object is not subscriptable
 kduq,proton_elastic,58Ni,35.2,O1198021,dropped-in-cleaning,one or more data points carry no uncertainty
 kduq,proton_elastic,58Ni,39.6,O0436003,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0436 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
 kduq,proton_elastic,58Ni,100.4,O0300003,dropped-in-cleaning,one or more data points carry no uncertainty
-kduq,proton_elastic,60Ni,14.4,O0446003,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
-kduq,proton_elastic,60Ni,15.4,O0446003,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
 kduq,proton_elastic,60Ni,39.6,O0436002,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0436 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
 kduq,proton_elastic,90Zr,9.7,O0393007,dropped-in-cleaning,one or more data points carry no uncertainty
 kduq,proton_elastic,90Zr,12.7,O0389002,uncertainty-unresolved,"uncertainty unresolved (unrecognised): no preferred uncertainty column among ['ERR-1', 'ERR-2']"
-kduq,proton_elastic,90Zr,14.71,O0372013,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
-kduq,proton_elastic,90Zr,18.8,O0370002,dropped-in-cleaning,"dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/FLAGGED_DATASETS.md, 2026-10-08)"
 kduq,proton_reaction,120Sn,28.5,O0150007,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0150 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
 kduq,proton_reaction,208Pb,28.5,O0150008,x4i3-parse-failure,uncertainty unresolved (entry-unavailable): entry O0150 is not in the x4i3 index; it is most likely one of the entries x4i3 fails to parse
 kduq,proton_reaction,27Al,9.89,C1042003,subentry-withdrawn,subentry not present in entry C1042 for this quantity

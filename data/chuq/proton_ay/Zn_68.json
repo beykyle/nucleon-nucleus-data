@@ -62,42 +62,39 @@
                 1.1
             ],
             "y_err": [
-                0.013110682667199294,
-                0.013110682667199294,
-                0.013110682667199294,
-                0.024865323982097908,
-                0.045656660247985724,
-                0.05994196864127702,
-                0.07920038981879432,
-                0.0950437761652761,
-                0.10001444895613834,
-                0.0734850130397806,
-                0.060024078501881226,
-                0.042706262994200786,
-                0.030048128061494945,
-                0.050516417543249516,
-                0.07002063981427191,
-                0.0694898240724509,
-                0.057812610571633664,
-                0.050028891652724033,
-                0.08845383771352157,
-                0.14001032104812847,
-                0.16495925502098013,
-                0.18000802759877127,
-                0.20000722486950318,
-                0.10001444895613834
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017,
+                0.0017
             ],
-            "systematic_normalization_error": 0.05385164807134504
+            "systematic_normalization_error": 0.05
         },
         "corpus": "chuq",
         "sector": "proton_ay",
         "projectile": "proton",
         "target": "Zn-68",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported",
-            "author errors from EXFOR ERR-1 (relabelled from ERR-T in 2023; absolute in data units) added in quadrature to the reader error; 14 of 24 points filled by interpolation in angle, flat beyond the ends",
-            "normalisation uncertainty 5.4 % from the authors: Fricke: ERR-2 current integration 2 % (+) ERR-3 target thickness 5 %",
-            "author-errors v1 (docs/DATA_CLEANING.md)"
+            "assigned a default normalisation uncertainty of 5%, none reported"
         ]
     }
 ]

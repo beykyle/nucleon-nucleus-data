@@ -221,7 +221,7 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 27 of 27 points without one in EXFOR (added in quadrature to the reader error): Wassenaar et al., JPG 15 (1989) 181, p.5: minimal errors 2 % (sigma), 0.01 (Ay); Ay 0.02",
-            "author-errors v1 (docs/DATA_CLEANING.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
         ]
     }
 ]

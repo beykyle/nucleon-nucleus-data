@@ -19,6 +19,7 @@ from __future__ import annotations
 import argparse
 import itertools
 import json
+import os
 import re
 import time
 import urllib.parse
@@ -26,48 +27,16 @@ import urllib.request
 from collections import defaultdict
 from pathlib import Path
 
+from nn_corpora import author_errors, serialize
+from nn_corpora.x4text import bib_fields, subentries
+
 ROOT = Path(__file__).resolve().parent.parent
-X4 = Path("/mnt/research/reactiontheoryinitiative/beyerkyl_local/x4db/unpack_exfor-2025/X4-2025-12-31/db")
-READER = re.compile(r"reader|reading|digiti[sz]", re.I)
 JOURNAL = {"PR/C": "Physical Review C", "PR/D": "Physical Review D", "PR": "Physical Review", "NP/A": "Nuclear Physics A", "NP": "Nuclear Physics",
            "PL/B": "Physics Letters B", "PL": "Physics Letters", "JPJ": "Journal of the Physical Society of Japan", "JPJ/S": "Journal of the Physical Society of Japan",
            "JP/G": "Journal of Physics G", "JPG": "Journal of Physics G", "IZV": "Izvestiya Akademii Nauk SSSR Seriya Fizicheskaya"}
 
 
 # -- X4 text ------------------------------------------------------------------------------------------------------
-
-
-def subentries(entry: str) -> dict[str, list[str]]:
-    lines = (X4 / entry[:3] / f"{entry}.x4").read_text(errors="replace").splitlines()
-    out, cur = {}, None
-    for line in lines:
-        if line.startswith("SUBENT"):
-            cur = line[14:22].strip()
-            out[cur] = []
-        if cur:
-            out[cur].append(line[:66].rstrip())
-        if line.startswith("ENDSUBENT"):
-            cur = None
-    return out
-
-
-def bib_fields(lines: list[str]) -> dict[str, str]:
-    fields, key = defaultdict(str), None
-    in_bib = False
-    for line in lines:
-        if line.startswith("BIB"):
-            in_bib = True
-            continue
-        if line.startswith("ENDBIB"):
-            break
-        if not in_bib:
-            continue
-        k, body = line[:11].strip(), line[11:66].strip()
-        if k:
-            key = k
-        if key:
-            fields[key] += (" " if fields[key] else "") + body
-    return dict(fields)
 
 
 def common_block(lines: list[str]) -> dict[str, str]:
@@ -78,13 +47,6 @@ def common_block(lines: list[str]) -> dict[str, str]:
             vals = [lines[i + 3][j:j + 11].strip() for j in range(0, 66, 11)]
             return {l: f"{v} {u}" for l, v, u in zip(labels, vals, units) if l}
     return {}
-
-
-def err_analys(text: str) -> dict[str, str]:
-    out = {}
-    for m in re.finditer(r"\(([A-Z0-9+\-]+)(?:,[^)]*)?\)\.?\s*([^()]*)", text or ""):
-        out.setdefault(m.group(1), m.group(2).strip())
-    return out
 
 
 # -- DOIs ---------------------------------------------------------------------------------------------------------
@@ -105,7 +67,10 @@ APS = {"PR": "PhysRev", "PR/C": "PhysRevC", "PR/D": "PhysRevD", "PRL": "PhysRevL
 
 
 def _get(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "nn-corpora-crosscheck (mailto:kylebeyer1@gmail.com)"})
+    # Crossref asks for a contact address ("polite pool"); taken from the environment, never stored in the repo
+    mailto = os.environ.get("CROSSREF_MAILTO")
+    agent = "nn-corpora-crosscheck" + (f" (mailto:{mailto})" if mailto else "")
+    req = urllib.request.Request(url, headers={"User-Agent": agent})
     return json.load(urllib.request.urlopen(req, timeout=30))["message"]
 
 
@@ -167,15 +132,16 @@ def corpus_records(entry: str) -> list[tuple[str, str, dict]]:
     return out
 
 
-def exfor_rows(entry: str, sub: str):
-    from nn_corpora.errors import entry_data_sets
+def infer_columns(rec: dict, sub: str) -> dict:
+    """Which EXFOR error column(s) reproduce the corpus per-point uncertainty (relative, within 2 %).
 
-    blocks = [ds for k, ds in entry_data_sets(entry).items() if k[1] == sub]
-    return blocks
-
-
-def infer_columns(rec: dict, ds) -> dict:
-    """Which EXFOR error column(s) reproduce the corpus per-point uncertainty (relative, within 2 %)."""
+    The data set, the reader/author split and the reader-only points are those of ``nn_corpora.author_errors``, so
+    this report and ``scripts/audit_reader_errors.py`` agree.
+    """
+    found = author_errors.best_data_set(sub, rec.get("energy"), rec["data"]["x"])
+    if found is None:
+        return dict(note="EXFOR subentry not readable, or not an angular distribution")
+    ds = found[0]
     labels, units = list(ds.labels), list(ds.units)
     ang = next((l for l in labels if l.startswith("ANG") and "ERR" not in l), None)
     dat = next((l for l in labels if l.startswith("DATA") and "ERR" not in l), None)
@@ -217,22 +183,19 @@ def infer_columns(rec: dict, ds) -> dict:
                      if abs(sum(absolute(r, l) ** 2 for l in combo) ** 0.5 - c) <= max(0.02 * c, 2e-4))
             if best is None or ok > best[1]:
                 best = (combo, ok)
-    reader = [l for l in errs if l == "ERR-DIG" or READER.search(ERR_DESC.get(l, ""))]
-    author = [l for l in errs if l not in reader and not re.match(r"ERR-\d", l)]
-    ro = [r[labels.index(ang)] for c, r in matched
-          if reader and not any((r[labels.index(l)] or 0) > 0 for l in author)]
+    reader, author, _ = author_errors.classify(sub, ds)
+    audit = author_errors.audit_record(rec)
+    ro = audit["reader_only_angles"] if audit and "error" not in audit else []
     return dict(columns=best[0], frac=best[1] / len(matched), n=len(matched), errs=errs, reader=reader,
                 author=author, reader_only=ro, status_cols=dict(zip(labels, units)))
 
 
-ERR_DESC: dict[str, str] = {}
 
 
 # -- report -------------------------------------------------------------------------------------------------------
 
 
 def entry_section(entry: str, index_doi: str | None):
-    global ERR_DESC
     subs = subentries(entry)
     b001 = bib_fields(subs.get(f"{entry}001", []))
     refs = reference_codes(b001.get("REFERENCE", ""))
@@ -265,7 +228,6 @@ def entry_section(entry: str, index_doi: str | None):
     for sub, items in sorted(by_sub.items()):
         bs = bib_fields(subs.get(sub, []))
         cs = common_block(subs.get(sub, []))
-        ERR_DESC = {**err_analys(b001.get("ERR-ANALYS", "")), **err_analys(bs.get("ERR-ANALYS", ""))}
         st = bs.get("STATUS", b001.get("STATUS", ""))
         L += ["", f"### {sub}: {bs.get('REACTION', '')[:90]}",
               f"- STATUS: {st or '—'}" + ("  ← digitised from a figure" if "CURVE" in st else ""),
@@ -274,15 +236,8 @@ def entry_section(entry: str, index_doi: str | None):
             L.append(f"- HISTORY: {bs['HISTORY']}")
             if re.search(r"->|re-?digiti", bs["HISTORY"], re.I):
                 flags.append(f"{sub}: EXFOR relabelled columns / re-digitised ({bs['HISTORY'][:120]})")
-        try:
-            blocks = exfor_rows(entry, sub)
-        except Exception as exc:  # noqa: BLE001
-            L.append(f"- (EXFOR data not parseable: {exc})")
-            continue
         for corpus, path, r in items:
-            if not blocks:
-                continue
-            inf = infer_columns(r, blocks[0])
+            inf = infer_columns(r, sub)
             norm = r["data"].get("systematic_normalization_error")
             line = f"- **{corpus}** `{path}` E = {r.get('energy')} MeV, norm err {norm}: "
             if "columns" in inf:
@@ -322,9 +277,10 @@ def main():
         summary.append((s, flags))
         print(e, len(flags), "flags", flush=True)
     head = ["# Notes from EXFOR: cross-check of the corpus records against their EXFOR entries", "",
-            "Generated by `scripts/exfor_crosscheck.py` from the local X4 database (release X4-2025-12-31; the same entries "
-            "the IAEA EXFOR website shows, which cannot be scripted from here). Hand notes are added under each entry. "
-            "DOIs come from each entry's REFERENCE codes through Crossref (volume and first page must match).", "",
+            "Generated by `scripts/exfor_crosscheck.py`: the corpus records in `data/` compared with their entries in the "
+            f"local X4 database (release {serialize.exfor_database_tag()}; the same entries the IAEA EXFOR website shows, which cannot be "
+            "scripted). DOIs come from each entry's REFERENCE codes through Crossref (volume and first page must match). "
+            "Summary: `papers/notes_from_exfor.md`.", "",
             "| entry | REFERENCE codes | DOI(s) from EXFOR | INDEX DOI agrees | flags |", "|---|---|---|---|---|"]
     for s, flags in summary:
         agree = "yes" if (idx.get(s["entry"]) or "").lower() in s["dois"] else ("— (no DOI)" if not s["dois"] else "**no**")

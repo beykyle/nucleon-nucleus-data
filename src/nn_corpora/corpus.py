@@ -157,19 +157,9 @@ def write(result: SectorResult, *, check: bool = True) -> None:
     )
 
 
-def write_manifest(results: list[SectorResult]) -> None:
-    """Write one corpus's manifest from its curated sectors."""
-    corpus = results[0].corpus
-    serialize.write_manifest(
-        corpus,
-        {r.sector: serialize.sector_summary(r.data, r.records) for r in results},
-        provenance=serialize.provenance(),
-    )
-
-
 def all_sectors(corpus: str) -> list[str]:
     from .spec import available_sectors
     return [s for c, s in available_sectors() if c == corpus]
 
 
-__all__ = ["SectorResult", "curate", "write", "write_manifest", "all_sectors", "SECTORS"]
+__all__ = ["SectorResult", "curate", "write", "all_sectors", "SECTORS"]

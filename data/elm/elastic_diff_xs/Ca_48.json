@@ -245,7 +245,7 @@
                 2.485
             ],
             "y_err": [
-                0.025346400138875735,
+                0.02534640013887574,
                 0.027221087413988442,
                 0.0273149116784221,
                 0.02737757476475957,
@@ -268,10 +268,10 @@
                 0.019235384061671346,
                 0.02132825356188359,
                 0.027034059998453805,
-                0.034952705188583046,
+                0.03495270518858304,
                 0.04135565257615941,
-                0.04801051968058668,
-                0.05252704065526632
+                0.04801051968058667,
+                0.05252704065526631
             ],
             "x_err": [
                 0.4,
@@ -312,7 +312,7 @@
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 27 of 27 points without one in EXFOR (added in quadrature to the reader error): Lombardi et al., NPA 188 (1972) 103: 2 % assigned (1 % statistical); Ay typical 0.02",
             "normalisation uncertainty 10.0 % from the authors: Lombardi: 10 % (Rutherford normalisation at 4 MeV)",
-            "author-errors v1 (docs/DATA_CLEANING.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
         ]
     },
     {
@@ -455,7 +455,7 @@
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 28 of 28 points without one in EXFOR (added in quadrature to the reader error): Lombardi et al., NPA 188 (1972) 103: 2 % assigned (1 % statistical); Ay typical 0.02",
             "normalisation uncertainty 10.0 % from the authors: Lombardi: 10 % (Rutherford normalisation at 4 MeV)",
-            "author-errors v1 (docs/DATA_CLEANING.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
         ]
     },
     {
@@ -527,30 +527,30 @@
                 2.564
             ],
             "y_err": [
-                0.02353524166011473,
-                0.02353524166011473,
+                0.023535241660114732,
+                0.023535241660114732,
                 0.025270409573253855,
                 0.0271059845790556,
                 0.02901103238424996,
                 0.026944802838395385,
-                0.023098822480810573,
+                0.023098822480810577,
                 0.01855693940282179,
-                0.017888543819998316,
-                0.01654206758540177,
-                0.017888543819998316,
-                0.02353524166011473,
+                0.01788854381999832,
+                0.016542067585401773,
+                0.01788854381999832,
+                0.023535241660114732,
                 0.03216224494652076,
-                0.04130479875268731,
+                0.04130479875268732,
                 0.04691279143261463,
                 0.045037872951550456,
-                0.03689034562050076,
+                0.03689034562050077,
                 0.021904373992424436,
                 0.017897497031708093,
                 0.017988007115853608,
                 0.021904373992424436,
-                0.028248157462036353,
+                0.02824815746203635,
                 0.0370886990874579,
-                0.04561796137487953,
+                0.04561796137487952,
                 0.04997074744287902,
                 0.05217389768840354,
                 0.05371813846365118
@@ -594,7 +594,7 @@
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 27 of 27 points without one in EXFOR (added in quadrature to the reader error): Lombardi et al., NPA 188 (1972) 103: 2 % assigned (1 % statistical); Ay typical 0.02",
             "normalisation uncertainty 10.0 % from the authors: Lombardi: 10 % (Rutherford normalisation at 4 MeV)",
-            "author-errors v1 (docs/DATA_CLEANING.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
         ]
     },
     {

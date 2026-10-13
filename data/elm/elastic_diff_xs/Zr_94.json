@@ -352,13 +352,13 @@
                 0.01429962642868687,
                 0.013870208217615192,
                 0.010606629813470441,
-                0.007600702335968696,
-                0.005453611280610308,
+                0.0076007023359686956,
+                0.005453611280610307,
                 0.004444478484591865,
                 0.004143885736841691,
                 0.007686585978183032,
                 0.010348978886827434,
-                0.011916355357239058,
+                0.01191635535723906,
                 0.0103919207079346,
                 0.007257167767111355,
                 0.003950647541859436,
@@ -387,7 +387,7 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 29 of 29 points without one in EXFOR (added in quadrature to the reader error): Stautberg & Kraushaar, PR 151 (1966) 969, p.4: statistical < 1 % below 90 deg, < 3 % above",
-            "author-errors v1 (docs/DATA_CLEANING.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
         ]
     },
     {

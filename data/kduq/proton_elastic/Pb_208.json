@@ -2166,7 +2166,7 @@
                 0.0056161496,
                 0.0055553785
             ],
-            "systematic_normalization_error": 0.1118033988749895
+            "systematic_normalization_error": 0.05
         },
         "corpus": "kduq",
         "sector": "proton_elastic",
@@ -2174,9 +2174,7 @@
         "target": "Pb-208",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported",
-            "normalisation uncertainty 11.2 % from the authors: Fulmer: thickness 5 % (+) charge collection 10 %",
-            "author-errors v1 (docs/DATA_CLEANING.md)"
+            "assigned a default normalisation uncertainty of 5%, none reported"
         ]
     },
     {

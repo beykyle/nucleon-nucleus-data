@@ -20,7 +20,7 @@ import numpy as np
 from exfor_tools import curate as exfor_curate
 from exfor_tools.reaction import Reaction
 
-from . import elm, munge, retrieve, serialize, spec
+from . import author_errors, elm, munge, retrieve, serialize, spec
 from .kinematics import lab_to_cm_angle_elastic
 
 #: ELM sector -> (quantities, process, output directory name).
@@ -234,14 +234,10 @@ def finalize(data: dict, sector: str, projectile: str, result: ElmSectorResult,
         for quantity, entries in multi.data.items():
             for entry_id, entry in entries.entries.items():
                 citation = entry.meta.citation() if entry.meta is not None else ""
-                if entry_id not in result.bibtex:
-                    try:
-                        result.bibtex[entry_id] = entry.bibtex()
-                    except Exception:  # noqa: BLE001 - a missing citation is not fatal
-                        result.bibtex[entry_id] = None
                 for measurement in list(entry.measurements):
-                    why = _munge_one(measurement, sector, target, projectile, quantity,
-                                     default_norm_err, min_points)
+                    why = (author_errors.drop_reason(str(measurement.subentry), "elm")
+                           or _munge_one(measurement, sector, target, projectile, quantity,
+                                         default_norm_err, min_points))
                     if why is not None:
                         result.dropped.append(f"{measurement.subentry}: {why}")
                         entry.measurements.remove(measurement)
@@ -253,6 +249,12 @@ def finalize(data: dict, sector: str, projectile: str, result: ElmSectorResult,
                         measurement, corpus="elm", sector=sector,
                         projectile=projectile, target=target, citation=citation,
                     ))
+                # cite only entries that still contribute data
+                if entry.measurements and entry_id not in result.bibtex:
+                    try:
+                        result.bibtex[entry_id] = entry.bibtex()
+                    except Exception:  # noqa: BLE001 - a missing citation is not fatal
+                        result.bibtex[entry_id] = None
 
 
 def _flag_summed_scattering(measurement, entry_id: str) -> None:

@@ -1458,7 +1458,7 @@
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
             "normalisation uncertainty 11.2 % from the authors: Fulmer: thickness 5 % (+) charge collection 10 %",
-            "author-errors v1 (docs/DATA_CLEANING.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
         ]
     },
     {

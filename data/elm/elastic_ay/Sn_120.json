@@ -435,7 +435,7 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 30 of 30 points without one in EXFOR (added in quadrature to the reader error): Wassenaar et al., JPG 15 (1989) 181, p.5: minimal errors 2 % (sigma), 0.01 (Ay); Ay 0.02",
-            "author-errors v1 (docs/DATA_CLEANING.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
         ]
     },
     {
@@ -523,7 +523,7 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 20 of 20 points without one in EXFOR (added in quadrature to the reader error): Wassenaar et al., JPG 15 (1989) 181, p.5: minimal errors 2 % (sigma), 0.01 (Ay); Ay 0.02",
-            "author-errors v1 (docs/DATA_CLEANING.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
         ]
     },
     {
@@ -882,48 +882,49 @@
             "y_err": [
                 0.025057733337235436,
                 0.025057733337235436,
-                0.035396186208883136,
-                0.02119606080919661,
-                0.025794766926557376,
+                0.025057733337235436,
+                0.021196060809196608,
+                0.01827922317824256,
                 0.01879409801786907,
                 0.019415652949936746,
                 0.020001831687050293,
-                0.02904117763649899,
+                0.02057036703610317,
                 0.035768590426503946,
-                0.07398290345237767,
+                0.05232762176900456,
                 0.04956552554259916,
                 0.04645838624933674,
                 0.043783016113557095,
-                0.05786631142361762,
+                0.040935314827175814,
                 0.04036081794265324,
                 0.03982012825970526,
                 0.03921186842016075,
-                0.054615107801407596,
-                0.04804490026736406,
-                0.05927623425854412,
+                0.03863741709793759,
+                0.048044900267364056,
+                0.059276234258544114,
                 0.06868770713243462,
-                0.11258423513310406,
-                0.08215790004394606,
-                0.0850479998548475,
+                0.07961815119682195,
+                0.08215790004394605,
+                0.08504799985484748,
                 0.08785055845443422,
-                0.12856325291473214,
+                0.0909158951999044,
                 0.10319657910981286,
                 0.11745851498133608,
                 0.13211699833424978,
-                0.2025225172477771,
+                0.14321009042661764,
                 0.14712158684190055,
                 0.15069782432422626,
-                0.21864402574558303
+                0.15460934641864313
             ],
-            "systematic_normalization_error": 0.0538516481
+            "systematic_normalization_error": 0.018
         },
         "corpus": "elm",
         "sector": "elastic_ay",
         "projectile": "proton",
         "target": "Sn-120",
         "notes": [
-            "author errors from EXFOR ERR-1 (relabelled from ERR-T in 2023; absolute in data units) added in quadrature to the reader error; 24 of 34 points filled by interpolation in angle, flat beyond the ends",
-            "author-errors v1 (docs/DATA_CLEANING.md)"
+            "per-point error = EXFOR ERR-DIG (reader) (+) ERR-1 (the authors' errors; relabelled from ERR-T in 2023, absolute in data units); 24 of 34 points without ERR-1 filled by linear interpolation in angle, flat beyond the ends",
+            "normalisation uncertainty 1.8 % from the authors: Fricke: beam polarisation (27.4 +- 0.5) %, including the uncertainty in P_C",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
         ]
     },
     {

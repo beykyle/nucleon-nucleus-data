@@ -387,7 +387,7 @@
                 0.4,
                 0.4
             ],
-            "systematic_normalization_error": 0.1
+            "systematic_normalization_error": 0.05
         },
         "corpus": "elm",
         "sector": "elastic_ay",
@@ -396,8 +396,7 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 26 of 26 points without one in EXFOR (added in quadrature to the reader error): Lombardi et al., NPA 188 (1972) 103: 2 % assigned (1 % statistical); Ay typical 0.02",
-            "normalisation uncertainty 10.0 % from the authors: Lombardi: 10 % (Rutherford normalisation at 4 MeV)",
-            "author-errors v1 (docs/DATA_CLEANING.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
         ]
     },
     {
@@ -614,7 +613,7 @@
                 0.4,
                 0.4
             ],
-            "systematic_normalization_error": 0.1
+            "systematic_normalization_error": 0.05
         },
         "corpus": "elm",
         "sector": "elastic_ay",
@@ -623,8 +622,7 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 28 of 28 points without one in EXFOR (added in quadrature to the reader error): Lombardi et al., NPA 188 (1972) 103: 2 % assigned (1 % statistical); Ay typical 0.02",
-            "normalisation uncertainty 10.0 % from the authors: Lombardi: 10 % (Rutherford normalisation at 4 MeV)",
-            "author-errors v1 (docs/DATA_CLEANING.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
         ]
     },
     {
@@ -869,7 +867,7 @@
                 0.4,
                 0.4
             ],
-            "systematic_normalization_error": 0.1
+            "systematic_normalization_error": 0.05
         },
         "corpus": "elm",
         "sector": "elastic_ay",
@@ -878,8 +876,7 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 27 of 27 points without one in EXFOR (added in quadrature to the reader error): Lombardi et al., NPA 188 (1972) 103: 2 % assigned (1 % statistical); Ay typical 0.02",
-            "normalisation uncertainty 10.0 % from the authors: Lombardi: 10 % (Rutherford normalisation at 4 MeV)",
-            "author-errors v1 (docs/DATA_CLEANING.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
         ]
     },
     {

@@ -146,7 +146,7 @@
                 1.5,
                 1.5
             ],
-            "systematic_normalization_error": 0.1
+            "systematic_normalization_error": 0.1118033988749895
         },
         "corpus": "sm3",
         "sector": "charge_exchange",
@@ -154,7 +154,8 @@
         "target": "Zr-90",
         "notes": [
             "values and errors replaced by Doering thesis (MSU 1974) Table 5, 32 rows (EXFOR 33 digitised points); external/doering_1974_table5.csv",
-            "author-errors v1 (docs/DATA_CLEANING.md)",
+            "normalisation uncertainty 11.2 % from the authors: Doering: neutron-detection efficiency about 10 % (+) target thickness, beam integration and neutron attenuation, less than 5 %",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
             "copied from the elm corpus (charge_exchange) for sm3 (Doering et al.)"
         ]
     },
@@ -303,7 +304,7 @@
                 1.5,
                 1.5
             ],
-            "systematic_normalization_error": 0.1
+            "systematic_normalization_error": 0.1118033988749895
         },
         "corpus": "sm3",
         "sector": "charge_exchange",
@@ -311,7 +312,8 @@
         "target": "Zr-90",
         "notes": [
             "values and errors replaced by Doering thesis (MSU 1974) Table 5, 32 rows (EXFOR 31 digitised points); external/doering_1974_table5.csv",
-            "author-errors v1 (docs/DATA_CLEANING.md)",
+            "normalisation uncertainty 11.2 % from the authors: Doering: neutron-detection efficiency about 10 % (+) target thickness, beam integration and neutron attenuation, less than 5 %",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
             "copied from the elm corpus (charge_exchange) for sm3 (Doering et al.)"
         ]
     },
@@ -461,7 +463,7 @@
                 1.5,
                 1.5
             ],
-            "systematic_normalization_error": 0.1
+            "systematic_normalization_error": 0.1118033988749895
         },
         "corpus": "sm3",
         "sector": "charge_exchange",
@@ -469,7 +471,8 @@
         "target": "Zr-90",
         "notes": [
             "values and errors replaced by Doering thesis (MSU 1974) Table 5, 32 rows (EXFOR 32 digitised points); external/doering_1974_table5.csv",
-            "author-errors v1 (docs/DATA_CLEANING.md)",
+            "normalisation uncertainty 11.2 % from the authors: Doering: neutron-detection efficiency about 10 % (+) target thickness, beam integration and neutron attenuation, less than 5 %",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
             "copied from the elm corpus (charge_exchange) for sm3 (Doering et al.)"
         ]
     }
