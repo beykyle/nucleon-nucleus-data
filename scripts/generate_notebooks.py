@@ -1,45 +1,30 @@
 #!/usr/bin/env python3
 """Scaffold the corpus-sector curation notebooks.
 
-The KDUQ, CHUQ and Test notebooks all do the same thing -- load a sector's spec table,
-retrieve it, report coverage, plot it for inspection, write JSON -- because the
-sector-specific judgement lives in ``spec/known_missing.csv`` and
-``src/nn_corpora/overrides.py`` rather than in the notebooks. They are generated here
-so that structure stays uniform and reviewable.
+The notebooks of the tabulated corpora (``nn_corpora.spec.TABULATED``) all do the same thing --
+load a sector's spec table, retrieve it, report coverage, plot it for inspection, write JSON --
+because the sector-specific judgement lives in ``spec/known_missing.csv`` and
+``src/nn_corpora/overrides.py`` rather than in the notebooks. They are generated here so that
+structure stays uniform and reviewable. ``scripts/curate_corpus.py`` does the same without the plots.
 
-Regenerating overwrites hand edits, so run this only when the shared structure changes.
+Regenerating overwrites hand edits, so run this only when the shared structure changes, or for a
+new corpus.
 
 Usage::
 
-    python scripts/generate_notebooks.py [--outdir notebooks] [--force]
+    python scripts/generate_notebooks.py [--corpus NAME ...] [--outdir notebooks] [--force]
 """
 
 from __future__ import annotations
 
 import argparse
+import sys
 from pathlib import Path
 
 import nbformat as nbf
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-
-CORPUS_BLURB = {
-    "kduq": (
-        "The KDUQ corpus is a reconstruction of the experimental data used in the "
-        "Koning-Delaroche global optical potential analysis, assembled from EXFOR by "
-        "the supplement's authors and tabulated in Supplemental Material B."
-    ),
-    "chuq": (
-        "The CHUQ corpus is a reconstruction of the experimental data used in the "
-        "CH89 global optical potential analysis, assembled from EXFOR by the "
-        "supplement's authors and tabulated in Supplemental Material B."
-    ),
-    "test": (
-        "The Test corpus comprises directly-measured elastic scattering, analyzing "
-        "power and integral cross section data that post-date the KD and CH89 "
-        "publications, drawn entirely from EXFOR."
-    ),
-}
+sys.path.insert(0, str(REPO_ROOT / "src"))
 
 SECTOR_BLURB = {
     "neutron_elastic": (
@@ -74,8 +59,13 @@ SECTOR_BLURB = {
 
 
 def notebook_for(corpus: str, sector: str) -> nbf.NotebookNode:
+    from nn_corpora.spec import TABULATED
+
+    info = TABULATED[corpus]
     nb = nbf.v4.new_notebook()
     title = f"{corpus.upper()} corpus: {sector.replace('_', ' ')}"
+    source = ("transcribed from the supplement's\ntables" if info.from_supplement
+              else f"listed in\n{info.reference},")
 
     def md(text):
         nb.cells.append(nbf.v4.new_markdown_cell(text.strip()))
@@ -86,12 +76,11 @@ def notebook_for(corpus: str, sector: str) -> nbf.NotebookNode:
     md(f"""
 # {title}
 
-{CORPUS_BLURB[corpus]}
+{info.description}
 
 {SECTOR_BLURB[sector]}
 
-The subentries and scattering energies below are transcribed from the supplement's
-tables into `spec/{corpus}_{sector}.csv`. Every row must be accounted for: it either
+The subentries and scattering energies below are {source} into `spec/{corpus}_{sector}.csv`. Every row must be accounted for: it either
 produces data, or it is listed in `spec/known_missing.csv` with a reason. Uncertainties
 are assigned by the supplement's preference rule (`nn_corpora.errors`), and the
 corrections its Comments describe are applied from `nn_corpora.overrides`.
@@ -199,14 +188,18 @@ def main() -> None:
     ap.add_argument("--outdir", type=Path, default=REPO_ROOT / "notebooks")
     ap.add_argument("--force", action="store_true",
                     help="overwrite notebooks that already exist")
+    ap.add_argument("--corpus", nargs="+", help="only these corpora (default: every tabulated corpus)")
     args = ap.parse_args()
 
-    import sys
-    sys.path.insert(0, str(REPO_ROOT / "src"))
-    from nn_corpora.spec import available_sectors
+    from nn_corpora.spec import TABULATED, available_sectors
 
+    unknown = set(args.corpus or ()) - set(TABULATED)
+    if unknown:
+        raise SystemExit(f"not registered in nn_corpora.spec.TABULATED: {', '.join(sorted(unknown))}")
     written, skipped = 0, 0
     for corpus, sector in available_sectors():
+        if args.corpus and corpus not in args.corpus:
+            continue
         path = args.outdir / corpus / f"{sector}.ipynb"
         path.parent.mkdir(parents=True, exist_ok=True)
         if path.exists() and not args.force:
@@ -214,7 +207,7 @@ def main() -> None:
             continue
         nbf.write(notebook_for(corpus, sector), path)
         written += 1
-        print(f"wrote {path.relative_to(REPO_ROOT)}")
+        print(f"wrote {path}")
 
     print(f"\n{written} written, {skipped} left alone (use --force to overwrite)")
 

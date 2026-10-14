@@ -11,8 +11,8 @@ importable.
 
 Masses come from ``periodictable``, whose isotope masses are the experimental atomic
 masses; the electron rest masses are subtracted to give nuclear masses. Natural
-abundance targets, which EXFOR denotes ``A = 0`` and which the KDUQ and CHUQ corpora
-use heavily, take the abundance-weighted atomic mass.
+abundance targets, which EXFOR denotes ``A = 0`` and which KDUQ, CHUQ and Test use
+heavily, take the abundance-weighted atomic mass.
 """
 
 from __future__ import annotations

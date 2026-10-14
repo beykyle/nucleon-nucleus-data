@@ -1,7 +1,8 @@
-"""Tests for the corpus specification tables extracted from the supplement PDF.
+"""Tests for the corpus specification tables.
 
-These guard the transcription: if ``scripts/extract_corpus_tables.py`` is re-run and
-silently drops or invents rows, the counts and spot checks here fail.
+Every table must be well formed (``spec.validate_sector``). The tables transcribed from the
+supplement PDF are also checked against it: if ``scripts/extract_corpus_tables.py`` is re-run
+and silently drops or invents rows, the counts and spot checks here fail.
 """
 
 from __future__ import annotations
@@ -50,13 +51,27 @@ EXPECTED_NOT_IN_EXFOR = {
 }
 
 
+SUPPLEMENT = {name for name, c in spec.TABULATED.items() if c.from_supplement}
+
+
 @pytest.fixture(scope="module")
 def all_rows():
     return spec.load_all()
 
 
-def test_every_sector_present():
-    assert set(spec.available_sectors()) == set(EXPECTED)
+@pytest.fixture(scope="module")
+def supplement_rows(all_rows):
+    return [r for r in all_rows if r.corpus in SUPPLEMENT]
+
+
+@pytest.mark.parametrize("corpus,sector", spec.available_sectors())
+def test_table_is_well_formed(corpus, sector):
+    problems = spec.validate_sector(corpus, sector)
+    assert not problems, "\n".join(problems)
+
+
+def test_every_supplement_sector_present():
+    assert {cs for cs in spec.available_sectors() if cs[0] in SUPPLEMENT} == set(EXPECTED)
 
 
 @pytest.mark.parametrize("corpus,sector", sorted(EXPECTED))
@@ -66,42 +81,12 @@ def test_sector_counts(corpus, sector):
     assert (len(rows), len(subentries)) == EXPECTED[(corpus, sector)]
 
 
-def test_not_in_exfor_rows(all_rows):
+def test_not_in_exfor_rows(supplement_rows):
     found = {
         (r.corpus, r.sector, r.target_label, r.energy_mev)
-        for r in all_rows if not r.in_exfor
+        for r in supplement_rows if not r.in_exfor
     }
     assert found == EXPECTED_NOT_IN_EXFOR
-
-
-def test_subentry_and_pointer_format(all_rows):
-    for row in all_rows:
-        if row.in_exfor:
-            assert re.fullmatch(r"[A-Z0-9]\d{7}", row.subentry), row
-            assert row.pointer in {"", "S", "A", "1", "2"}, row
-
-
-def test_energies_are_physical(all_rows):
-    for row in all_rows:
-        assert 0.0 < row.energy_mev < 2000.0, row
-        if row.is_range:
-            # 204Pb in the Test corpus is tabulated as "26.993-26.993": a total
-            # cross section data set with a single energy point.
-            assert row.energy_hi_mev >= row.energy_mev, row
-
-
-def test_targets_are_physical(all_rows):
-    for row in all_rows:
-        assert 1 <= row.target_Z <= 92, row
-        # A == 0 denotes a natural-abundance target, EXFOR's convention
-        assert row.target_A == 0 or row.target_Z <= row.target_A <= 3 * row.target_Z, row
-
-
-def test_ranges_only_in_integral_sectors(all_rows):
-    """Only angle-integrated sectors are tabulated over an energy range."""
-    for row in all_rows:
-        if row.is_range:
-            assert row.sector in ("neutron_total", "proton_reaction"), row
 
 
 @pytest.mark.parametrize(
@@ -140,7 +125,7 @@ def test_no_accession_invented_or_dropped():
         capture_output=True, text=True, check=True,
     ).stdout
     in_text = set(re.findall(r"\b([A-Z0-9]\d{7})[A-Z0-9]?\b", text))
-    in_spec = {r.subentry for r in spec.load_all() if r.in_exfor}
+    in_spec = {r.subentry for r in spec.load_all() if r.in_exfor and r.corpus in SUPPLEMENT}
 
     assert not in_spec - in_text, "spec contains subentries absent from the PDF"
     # These two appear only in the Test corpus Comments, which direct them to be

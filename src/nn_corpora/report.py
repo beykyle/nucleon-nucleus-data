@@ -32,8 +32,7 @@ class KnownMissing:
 
     @property
     def key(self) -> tuple:
-        return (self.corpus, self.sector, self.target_label,
-                round(self.energy_mev, 6), self.subentry)
+        return row_key(self)
 
 
 def load_known_missing(path: Path = KNOWN_MISSING_PATH) -> dict[tuple, KnownMissing]:
@@ -64,9 +63,13 @@ def write_known_missing(rows: list[KnownMissing], path: Path = KNOWN_MISSING_PAT
             })
 
 
-def outcome_key(outcome) -> tuple:
-    row = outcome.row
+def row_key(row) -> tuple:
+    """The known-missing key of a spec row (``KnownMissing.key``)."""
     return (row.corpus, row.sector, row.target_label, round(row.energy_mev, 6), row.subentry)
+
+
+def outcome_key(outcome) -> tuple:
+    return row_key(outcome.row)
 
 
 def categorize(reason: str) -> str:

@@ -1,6 +1,6 @@
 # nucleon_nucleus_data
 
-Curation of four corpora of nucleon-nucleus scattering data from
+Curation of corpora of nucleon-nucleus scattering data from
 [EXFOR](https://nds.iaea.org/exfor/), as JSON.
 
 | corpus | what it is |
@@ -9,6 +9,8 @@ Curation of four corpora of nucleon-nucleus scattering data from
 | **KDUQ** | A reconstruction of the experimental data used in the Koning-Delaroche global optical potential analysis. |
 | **CHUQ** | A reconstruction of the experimental data used in the CH89 global optical potential analysis. |
 | **Test** | Directly-measured data post-dating the KD and CH89 publications, drawn entirely from EXFOR. |
+| **sm3** | The data sets of Danielewicz, Singh & Lee, "Symmetry energy III" (2017): (p,n) to the isobaric analog state and elastic (p,p) and (n,n) on 48Ca, 90Zr, 120Sn and 208Pb. |
+| **kduq_evaluated**, **chuq_evaluated**, **test_evaluated** | KDUQ, CHUQ and Test with evaluated uncertainties (below). |
 
 KDUQ, CHUQ and Test are specified by the tables of
 `supplement_experimentalCorpora.pdf`, part of the supplemental material of 
@@ -17,15 +19,30 @@ The ELM corpus is that used in [Beyer et al., arxiv:2603.28599](https://arxiv.or
 
 `supplement_experimentalCorpora.pdf` lists, per corpus and sector, the EXFOR
 subentry and scattering energy of every data set. Those tables are transcribed to
-`spec/*.csv` and are the ground truth for what belongs in each corpus.
+`spec/*.csv` and are the ground truth for what belongs in each of the three.
+
+**Static and evaluated corpora.** The *static* corpora, KDUQ, CHUQ and Test, reproduce the
+published corpora exactly as the supplement's rules curate them, so use them to reproduce
+published fits. The *evaluated* corpora, ELM, sm3 and the *evaluated copies*
+`kduq_evaluated`, `chuq_evaluated` and `test_evaluated`, carry our best evaluation of each
+record's experimental uncertainty, from the EXFOR entry and the publication, with the
+publication taking precedence. Each evaluated copy is its static corpus with that evaluation
+applied, so a user can choose either. See
+[docs/AUTHOR_UNCERTAINTIES.md](docs/AUTHOR_UNCERTAINTIES.md).
+
+**Adding a corpus.** A new corpus is a table of EXFOR subentries and energies, curated by the
+same pipeline as KDUQ, CHUQ and Test, with an optional evaluated copy:
+[docs/ADDING_A_CORPUS.md](docs/ADDING_A_CORPUS.md).
 
 ## What is in it
 
 | corpus | sector | measurements | data points | EXFOR entries | coverage |
 |---|---|---:|---:|---:|---:|
-| elm | charge exchange | 30 | 622 | 7 | — |
-| elm | elastic ay | 96 | 2757 | 36 | — |
-| elm | elastic diff xs | 233 | 8061 | 74 | — |
+| elm | charge exchange | 30 | 614 | 7 | — |
+| elm | elastic ay | 93 | 2665 | 35 | — |
+| elm | elastic diff xs | 216 | 7484 | 62 | — |
+| sm3 | charge exchange | 12 | 377 | 1 | — |
+| sm3 | elastic diff xs | 34 | 1451 | 18 | — |
 | kduq | neutron ay | 30 | 637 | 12 | 96.8% |
 | kduq | neutron elastic | 579 | 14888 | 123 | 96.2% |
 | kduq | neutron total | 65 | 4497 | 35 | 95.6% |
@@ -42,14 +59,29 @@ subentry and scattering energy of every data set. Those tables are transcribed t
 | test | proton ay | 14 | 390 | 4 | 100.0% |
 | test | proton elastic | 11 | 314 | 4 | 91.7% |
 | test | proton reaction | 4 | 19 | 1 | 100.0% |
-| sm3 | charge exchange | 12 | 385 | 1 | — |
-| sm3 | elastic diff xs | 34 | 1451 | 18 | — |
+| kduq_evaluated | neutron ay | 30 | 637 | 12 | — |
+| kduq_evaluated | neutron elastic | 579 | 14888 | 123 | — |
+| kduq_evaluated | neutron total | 65 | 4497 | 35 | — |
+| kduq_evaluated | proton ay | 54 | 1606 | 26 | — |
+| kduq_evaluated | proton elastic | 100 | 4155 | 40 | — |
+| kduq_evaluated | proton reaction | 62 | 204 | 23 | — |
+| chuq_evaluated | neutron ay | 11 | 232 | 4 | — |
+| chuq_evaluated | neutron elastic | 57 | 1540 | 12 | — |
+| chuq_evaluated | proton ay | 63 | 1919 | 6 | — |
+| chuq_evaluated | proton elastic | 71 | 2264 | 6 | — |
+| test_evaluated | neutron ay | 8 | 145 | 2 | — |
+| test_evaluated | neutron elastic | 192 | 4335 | 19 | — |
+| test_evaluated | neutron total | 28 | 1393 | 8 | — |
+| test_evaluated | proton ay | 14 | 390 | 4 | — |
+| test_evaluated | proton elastic | 11 | 314 | 4 | — |
+| test_evaluated | proton reaction | 4 | 19 | 1 | — |
 
-Coverage is the fraction of a sector's specification rows that produced data. It is not
-defined for ELM, which is a query rather than a list of subentries.
+Coverage is the fraction of a sector's specification rows that produced data, and is given
+for the static corpora. ELM is a query rather than a list of subentries, sm3 a short list of
+its own (below), and each evaluated copy holds its static corpus's records less those removed
+for want of an author uncertainty.
 
-`sm3` holds the data sets of Danielewicz, Singh & Lee, Nucl. Phys. A 958 (2017) 147
-("Symmetry energy III"): Doering's (p,n) to the isobaric analog state at 25, 35 and 45 MeV and
+`sm3` holds the data sets of Danielewicz, Singh & Lee, Nucl. Phys. A 958 (2017) 147: Doering's (p,n) to the isobaric analog state at 25, 35 and 45 MeV and
 the paper's elastic (p,p) and (n,n) on 48Ca, 90Zr, 120Sn and 208Pb. It is a table
 (`src/nn_corpora/sm3.py`) built by `scripts/curate_sm3.py`, mostly from records of `elm` and
 `kduq`, with 208Pb(n,n) at 9.97 MeV (Delaroche et al.) and 90Zr(p,p) at 25.05 MeV (Van der Bijl
@@ -64,9 +96,10 @@ scattering angles. All 122 are listed with reasons in `spec/known_missing.csv`.
 ## Layout
 
 ```
-spec/                    the corpus tables, transcribed from the supplement, plus the
-                         known-missing allowlist
-scripts/                 PDF table extraction, EXFOR database setup, notebook scaffolding
+spec/                    the tables of the tabulated corpora (KDUQ, CHUQ and Test transcribed
+                         from the supplement), plus the known-missing allowlist
+scripts/                 PDF table extraction, EXFOR database setup, notebook scaffolding,
+                         building and adding tabulated corpora, author-uncertainty corrections
 src/nn_corpora/          the curation library
 notebooks/<corpus>/      one notebook per corpus-sector
 data/<corpus>/<sector>/  <Target>.json, <sector>.bib, and a per-corpus manifest.json
@@ -193,6 +226,18 @@ and thinned to at most one datum per MeV, following the supplement: the cross se
 varies slowly enough over this range that the full complement of energy bins — nearly
 50,000 for one data set — carries nothing an optical model analysis can use.
 
+**Author uncertainties for digitised data.** Many angular distributions in EXFOR were
+read off published figures, and their only per-point uncertainty is the compilers' estimate
+of that reading (the "data-point reader" or digitisation uncertainty), not a measurement
+error. In the evaluated corpora (ELM, sm3, `*_evaluated`) no point rests on that alone: it is
+combined in quadrature with the uncertainty the authors state, the Doering (p,n) data are
+taken from the thesis tabulation, and 45 records with no author statement are removed. Where
+EXFOR does give the authors' error, a record carries it, with the error columns read from
+EXFOR's description of them (ERR-ANALYS) rather than from their labels. The static corpora
+keep EXFOR's uncertainties as the supplement's rules select them.
+`nn_corpora.author_errors` holds the rules. [docs/AUTHOR_UNCERTAINTIES.md](docs/AUTHOR_UNCERTAINTIES.md)
+describes exactly what changed relative to EXFOR, what was removed, and why.
+
 **Sparse data sets.** Angular distributions with too few angles to constrain a potential
 are dropped after unrolling. This is the criterion the supplement applies repeatedly when
 it excludes data that "included over 100 scattering energies but only a few angles for
@@ -225,7 +270,10 @@ record's `notes`.
 ```bash
 python scripts/extract_corpus_tables.py     # PDF -> spec/*.csv
 uv run pytest --nbmake notebooks/           # execute every notebook, rewriting data/
+#   or, without the plots, per tabulated corpus: uv run python scripts/curate_corpus.py kduq
 python scripts/refresh_known_missing.py     # regenerate the allowlist after review
+uv run python scripts/apply_author_errors.py  # the *_evaluated corpora (ELM is corrected as it is written)
+uv run python scripts/curate_sm3.py         # sm3, from ELM and KDUQ records
 uv run python scripts/build_manifests.py    # provenance manifests for each corpus
 ```
 

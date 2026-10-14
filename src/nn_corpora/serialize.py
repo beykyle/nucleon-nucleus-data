@@ -106,7 +106,14 @@ def write_sector(
     bibtex: dict[str, str] | None = None,
     data_dir: Path = DATA_DIR,
 ) -> Path:
-    """Write one corpus-sector: ``<Target>.json`` per target, plus a ``.bib``."""
+    """Write one corpus-sector: ``<Target>.json`` per target, plus a ``.bib``.
+
+    Records of the evaluated corpora (``author_errors.SCOPE``: ELM, sm3, ``*_evaluated``) first pass through
+    ``author_errors.apply`` (drops, author uncertainties, normalisations); the static corpora are written as given.
+    """
+    from . import author_errors
+
+    records = author_errors.apply(records, corpus, sector)
     out = data_dir / corpus / sector
     out.mkdir(parents=True, exist_ok=True)
 
@@ -168,17 +175,4 @@ def provenance() -> dict:
         "exfor_database": exfor_database_tag(),
         "exfor_tools_version": exfor_tools.__version__,
         "x4i3_version": x4i3.__version__,
-    }
-
-
-def sector_summary(data, records: list[Record]) -> dict:
-    """A sector's counts and coverage, for the manifest."""
-    return {
-        "spec_rows": len(data.outcomes),
-        "rows_in_exfor": sum(o.row.in_exfor for o in data.outcomes),
-        "rows_resolved": sum(o.resolved for o in data.outcomes),
-        "coverage": round(data.coverage, 4),
-        "measurements": len(records),
-        "data_points": sum(len(r.payload["data"]["x"]) for r in records),
-        "entries": sorted({r.payload["EXFORAccessionNumber"][:5] for r in records}),
     }

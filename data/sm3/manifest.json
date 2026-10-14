@@ -7,7 +7,7 @@
     },
     "sectors": {
         "charge_exchange": {
-            "data_points": 385,
+            "data_points": 377,
             "entries": [
                 "O0178"
             ],

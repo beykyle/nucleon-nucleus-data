@@ -1,15 +1,17 @@
 """The corpus specifications: which EXFOR subentries belong to which corpus.
 
-For KDUQ, CHUQ and Test these come from the tables of
-``supplement_experimentalCorpora.pdf``, transcribed to ``spec/*.csv`` by
-``scripts/extract_corpus_tables.py``. The ELM corpus has no such table -- it is
-defined by a query over a set of targets and an energy window -- so it is described
-here in code instead, mirroring the notebooks in ``~/elm/elm_data``.
+A *tabulated* corpus is a list of EXFOR subentries and scattering energies, one CSV per sector
+(``spec/<corpus>_<sector>.csv``), registered in ``TABULATED``. KDUQ, CHUQ and Test are tabulated: their tables
+come from ``supplement_experimentalCorpora.pdf``, transcribed by ``scripts/extract_corpus_tables.py``. A new one
+is added as described in ``docs/ADDING_A_CORPUS.md``. The ELM corpus has no such table -- it is defined by a
+query over a set of targets and an energy window -- so it is described here in code instead, mirroring the
+notebooks in ``~/elm/elm_data``.
 """
 
 from __future__ import annotations
 
 import csv
+import re
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -17,7 +19,50 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 SPEC_DIR = REPO_ROOT / "spec"
 DATA_DIR = REPO_ROOT / "data"
 
-TABULATED_CORPORA = ("kduq", "chuq", "test")
+
+
+@dataclass(frozen=True)
+class TabulatedCorpus:
+    """A corpus defined by a table of EXFOR subentries and energies (``spec/<name>_<sector>.csv``).
+
+    Tabulated corpora are static: they are written as their tables and the curation rules give them, and the
+    author-uncertainty corrections never touch them. With ``evaluated_copy`` a corrected copy,
+    ``<name>_evaluated``, is built alongside (``scripts/apply_author_errors.py``).
+    """
+
+    name: str
+    title: str
+    description: str
+    reference: str
+    from_supplement: bool = False
+    evaluated_copy: bool = True
+
+
+SUPPLEMENT = ("Pruitt et al., Phys. Rev. C 107, 014602 (2023), Supplemental Material B "
+              "(supplement_experimentalCorpora.pdf)")
+
+#: every tabulated corpus, by name
+TABULATED: dict[str, TabulatedCorpus] = {c.name: c for c in (
+    TabulatedCorpus(
+        "kduq", "KDUQ",
+        "The KDUQ corpus is a reconstruction of the experimental data used in the "
+        "Koning-Delaroche global optical potential analysis, assembled from EXFOR by "
+        "the supplement's authors and tabulated in Supplemental Material B.",
+        SUPPLEMENT, from_supplement=True),
+    TabulatedCorpus(
+        "chuq", "CHUQ",
+        "The CHUQ corpus is a reconstruction of the experimental data used in the "
+        "CH89 global optical potential analysis, assembled from EXFOR by the "
+        "supplement's authors and tabulated in Supplemental Material B.",
+        SUPPLEMENT, from_supplement=True),
+    TabulatedCorpus(
+        "test", "Test",
+        "The Test corpus comprises directly-measured elastic scattering, analyzing "
+        "power and integral cross section data that post-date the KD and CH89 "
+        "publications, drawn entirely from EXFOR.",
+        SUPPLEMENT, from_supplement=True),
+)}
+TABULATED_CORPORA = tuple(TABULATED)
 
 # Sector -> (exfor_tools quantities, reaction process). "el" is elastic scattering,
 # "tot" the neutron total cross section, "non" the proton reaction (nonelastic) cross
@@ -53,7 +98,7 @@ class SpecRow:
     energy_hi_mev: float | None
     subentry: str
     pointer: str
-    pdf_page: int
+    pdf_page: int | None
 
     @property
     def entry(self) -> str:
@@ -100,7 +145,7 @@ def load_sector(corpus: str, sector: str, spec_dir: Path = SPEC_DIR) -> list[Spe
                 energy_mev=float(r["energy_mev"]),
                 energy_hi_mev=float(r["energy_hi_mev"]) if r["energy_hi_mev"] else None,
                 subentry=r["subentry"], pointer=r["pointer"],
-                pdf_page=int(r["pdf_page"]),
+                pdf_page=int(r["pdf_page"]) if r["pdf_page"] else None,
             )
             for r in csv.DictReader(f)
         ]
@@ -114,6 +159,69 @@ def available_sectors(spec_dir: Path = SPEC_DIR) -> list[tuple[str, str]]:
             if sector_path(corpus, sector, spec_dir).exists():
                 found.append((corpus, sector))
     return found
+
+
+#: the columns of a spec CSV, in order
+COLUMNS = ("corpus", "sector", "projectile", "target_A", "target_Z", "target_label", "energy_mev",
+           "energy_hi_mev", "subentry", "pointer", "pdf_page")
+#: sectors tabulated over an energy range (``energy_hi_mev``) rather than at single energies
+RANGE_SECTORS = ("neutron_total", "proton_reaction")
+
+
+def validate_sector(corpus: str, sector: str, spec_dir: Path = SPEC_DIR) -> list[str]:
+    """The problems with one spec CSV, as messages; empty if it is well formed."""
+    from periodictable import elements
+
+    path = sector_path(corpus, sector, spec_dir)
+    if sector not in SECTORS:
+        return [f"{path.name}: unknown sector {sector!r} (one of {', '.join(SECTORS)})"]
+    with path.open(newline="") as f:
+        reader = csv.DictReader(f)
+        if tuple(reader.fieldnames or ()) != COLUMNS:
+            return [f"{path.name}: header must be {','.join(COLUMNS)}"]
+        raw = list(reader)
+    problems, seen = [], set()
+    projectile = sector.split("_")[0]
+    for n, r in enumerate(raw, start=2):  # line numbers, after the header
+        where = f"{path.name}:{n}"
+
+        def bad(msg):
+            problems.append(f"{where}: {msg}")
+
+        if (r["corpus"], r["sector"]) != (corpus, sector):
+            bad(f"corpus,sector is {r['corpus']},{r['sector']}, the file name says {corpus},{sector}")
+        if r["projectile"] != projectile:
+            bad(f"projectile {r['projectile']!r} in a {projectile} sector")
+        try:
+            A, Z = int(r["target_A"]), int(r["target_Z"])
+            lo, hi = float(r["energy_mev"]), float(r["energy_hi_mev"]) if r["energy_hi_mev"] else None
+        except ValueError as e:
+            bad(f"not a number: {e}")
+            continue
+        if not (1 <= Z <= 92 and (A == 0 or Z <= A <= 3 * Z)):
+            bad(f"unphysical target A={A}, Z={Z} (A = 0 is a natural-abundance target)")
+        else:
+            label = f"{'nat' if A == 0 else A}{elements[Z].symbol}"
+            if r["target_label"] != label:
+                bad(f"target_label {r['target_label']!r}, expected {label!r} from A, Z")
+        if not 0.0 < lo < 2000.0:
+            bad(f"energy {lo} MeV out of range")
+        if hi is not None:
+            if sector not in RANGE_SECTORS:
+                bad(f"an energy range is allowed only in {', '.join(RANGE_SECTORS)}")
+            elif hi < lo:
+                bad(f"energy range {lo}-{hi} MeV is reversed")
+        if r["subentry"] and not re.fullmatch(r"[A-Z0-9]\d{7}", r["subentry"]):
+            bad(f"subentry {r['subentry']!r} is not an 8-character EXFOR subentry (blank: not in EXFOR)")
+        if r["pointer"] not in {"", "S", "A", "1", "2"}:
+            bad(f"pointer {r['pointer']!r} is not blank or an EXFOR pointer (S, A, 1, 2)")
+        if r["pdf_page"] and not r["pdf_page"].isdigit():
+            bad(f"pdf_page {r['pdf_page']!r} is not a page number (leave blank if there is none)")
+        key = (r["target_label"], r["energy_mev"], r["subentry"], r["pointer"])
+        if key in seen:
+            bad("duplicate row")
+        seen.add(key)
+    return problems
 
 
 def load_all(spec_dir: Path = SPEC_DIR) -> list[SpecRow]:
