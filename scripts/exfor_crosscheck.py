@@ -1,6 +1,10 @@
 """Cross-check corpus records against their EXFOR entries -> papers/exfor_crosscheck_generated.md (hand summary: papers/notes_from_exfor.md).
 
-    uv run python scripts/exfor_crosscheck.py [--entries O0178 O0328 ...]   (default: the entries in papers/INDEX.md)
+    uv run python scripts/exfor_crosscheck.py [--entries O0178 O0328 ...] [--data-rev REV]
+
+The entries default to those in papers/INDEX.md. The corpus records are those at git revision ``--data-rev``
+(default ``DATA_REV``, the records as curated before the author-uncertainty corrections, which the report and its
+summary describe); ``--data-rev ""`` uses data/ as it is.
 
 For each entry, from the local X4 database (the same entries the IAEA EXFOR website shows; the website itself sits
 behind a browser challenge and cannot be scripted):
@@ -21,16 +25,24 @@ import itertools
 import json
 import os
 import re
+import subprocess
+import tempfile
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from collections import defaultdict
+from functools import lru_cache
 from pathlib import Path
+
+import numpy as np
 
 from nn_corpora import author_errors, serialize
 from nn_corpora.x4text import bib_fields, subentries
 
 ROOT = Path(__file__).resolve().parent.parent
+#: the corpus records before the author-uncertainty corrections (scripts/apply_author_errors.py BASELINE)
+DATA_REV = "8d2e300"
 JOURNAL = {"PR/C": "Physical Review C", "PR/D": "Physical Review D", "PR": "Physical Review", "NP/A": "Nuclear Physics A", "NP": "Nuclear Physics",
            "PL/B": "Physics Letters B", "PL": "Physics Letters", "JPJ": "Journal of the Physical Society of Japan", "JPJ/S": "Journal of the Physical Society of Japan",
            "JP/G": "Journal of Physics G", "JPG": "Journal of Physics G", "IZV": "Izvestiya Akademii Nauk SSSR Seriya Fizicheskaya"}
@@ -71,7 +83,16 @@ def _get(url):
     mailto = os.environ.get("CROSSREF_MAILTO")
     agent = "nn-corpora-crosscheck" + (f" (mailto:{mailto})" if mailto else "")
     req = urllib.request.Request(url, headers={"User-Agent": agent})
-    return json.load(urllib.request.urlopen(req, timeout=30))["message"]
+    for attempt in range(4):  # Crossref drops or throttles requests now and then
+        try:
+            return json.load(urllib.request.urlopen(req, timeout=30))["message"]
+        except urllib.error.HTTPError as e:
+            if e.code == 404 or attempt == 3:
+                raise
+        except (urllib.error.URLError, TimeoutError):
+            if attempt == 3:
+                raise
+        time.sleep(2 ** attempt)
 
 
 def _journal_ok(journal: str, container: str) -> bool:
@@ -117,9 +138,11 @@ def crossref_doi(journal: str, vol: str, page: str, year: int) -> str | None:
 # -- corpus records vs EXFOR columns -------------------------------------------------------------------------------
 
 
-def corpus_records(entry: str) -> list[tuple[str, str, dict]]:
-    out = []
-    for f in sorted((ROOT / "data").glob("*/*/*.json")):
+@lru_cache(maxsize=None)
+def _corpus_index(data_dir: Path) -> dict[str, list[tuple[str, str, dict]]]:
+    """EXFOR entry -> (corpus, sector/file, record) for every record under ``data_dir`` (read once)."""
+    out = defaultdict(list)
+    for f in sorted(data_dir.glob("*/*/*.json")):
         if f.name == "manifest.json" or f.parts[-3] == "test":
             continue
         try:
@@ -127,75 +150,68 @@ def corpus_records(entry: str) -> list[tuple[str, str, dict]]:
         except Exception:  # noqa: BLE001
             continue
         for r in recs if isinstance(recs, list) else []:
-            if isinstance(r, dict) and str(r.get("EXFORAccessionNumber", "")).startswith(entry):
-                out.append((f.parts[-3], f"{f.parts[-2]}/{f.name}", r))
+            if isinstance(r, dict) and r.get("EXFORAccessionNumber"):
+                out[str(r["EXFORAccessionNumber"])[:5]].append((f.parts[-3], f"{f.parts[-2]}/{f.name}", r))
     return out
 
 
-def infer_columns(rec: dict, sub: str) -> dict:
-    """Which EXFOR error column(s) reproduce the corpus per-point uncertainty (relative, within 2 %).
+def corpus_records(entry: str, data_dir: Path = ROOT / "data") -> list[tuple[str, str, dict]]:
+    return _corpus_index(data_dir).get(entry, [])
 
-    The data set, the reader/author split and the reader-only points are those of ``nn_corpora.author_errors``, so
-    this report and ``scripts/audit_reader_errors.py`` agree.
+
+def data_at(rev: str, dest: Path) -> Path:
+    """Extract data/ as it was at git revision ``rev`` into ``dest``; returns ``dest / "data"``."""
+    archive = subprocess.run(["git", "archive", rev, "data"], cwd=ROOT, capture_output=True, check=True).stdout
+    subprocess.run(["tar", "-x", "-C", str(dest)], input=archive, check=True)
+    return dest / "data"
+
+
+def infer_columns(rec: dict, sub: str) -> dict:
+    """Which EXFOR error column(s) reproduce the corpus per-point uncertainty (within 2 %).
+
+    The data set, the angle matching, the units and the reader/author split are those of
+    ``nn_corpora.author_errors``, so this report and ``scripts/audit_reader_errors.py`` agree.
     """
-    found = author_errors.best_data_set(sub, rec.get("energy"), rec["data"]["x"])
+    is_ay = rec.get("type") == "APower"
+    x = np.asarray(rec["data"]["x"], dtype=float)
+    found = author_errors.best_data_set(sub, rec.get("energy"), x, is_ay)
     if found is None:
         return dict(note="EXFOR subentry not readable, or not an angular distribution")
-    ds = found[0]
-    labels, units = list(ds.labels), list(ds.units)
-    ang = next((l for l in labels if l.startswith("ANG") and "ERR" not in l), None)
-    dat = next((l for l in labels if l.startswith("DATA") and "ERR" not in l), None)
-    en = "EN" if "EN" in labels else None
-    errs = [l for l in labels if "ERR" in l and not l.startswith(("ANG", "EN", "E-"))]
-    if ang is None or dat is None:
-        return dict(note="no angle/data column")
-    E = rec.get("energy")
-    rows = [r for r in ds.data if not (en and E is not None and r[labels.index(en)] is not None
-                                       and abs(r[labels.index(en)] - E) > 1e-3 * max(1, E))]
-    x, y, ye = rec["data"]["x"], rec["data"]["y"], rec["data"]["y_err"]
-
-    def absolute(row, l):
-        """The column's uncertainty in the data's units (per-cent columns converted)."""
-        v = row[labels.index(l)]
-        if v is None:
-            return 0.0
-        u = units[labels.index(l)].upper()
-        d = row[labels.index(dat)] or 0.0
-        return abs(d) * v / 100 if "PER-CENT" in u else v
-
-    ymax = max(map(abs, y)) if y else 1.0
-    matched = []  # (corpus error in EXFOR units, EXFOR row): absolute comparison, so Ay near zero works
-    for i, xi in enumerate(x):
-        r = min(rows, key=lambda r: abs((r[labels.index(ang)] or 1e9) - xi), default=None)
-        if r is None or abs((r[labels.index(ang)] or 1e9) - xi) >= 0.06:
-            continue
-        d = r[labels.index(dat)] or 0.0
-        # cross sections may be rescaled in the corpus (b/sr vs mb/sr, ratio to Rutherford): carry the corpus error
-        # as relative to its own value, applied to the EXFOR value; dimensionless Ay is compared as is
-        is_xs = any("B/SR" in u.upper() or "NO-DIM" not in u.upper() for l, u in zip(labels, units) if l == dat)
-        matched.append(((ye[i] / y[i]) * abs(d) if is_xs and y[i] else ye[i], r))
-    if not matched:
-        return dict(note="corpus points not matched to EXFOR angles (frame conversion?)")
-    best = None
+    ds, p = found
+    labels = list(ds.labels)
+    errs = [lab for lab in labels if "ERR" in lab and not lab.startswith(("ANG", "EN", "E-"))]
+    idx = author_errors.match(x, p.angles)
+    hit = idx >= 0
+    if not hit.any():
+        return dict(note="corpus points not matched to EXFOR angles")
+    idx = idx[hit]
+    y = np.asarray(rec["data"]["y"], dtype=float)[hit]
+    ye = np.asarray(rec["data"]["y_err"], dtype=float)[hit]
+    rows = author_errors.rows_at(ds, rec.get("energy"))
+    # each column as an absolute error in the record's units (per-cent converted; b/sr vs mb/sr, ratio to Rutherford):
+    # scaled by the point's own ratio of values, so a value the curation rescaled is compared with its error rescaled
+    with np.errstate(divide="ignore", invalid="ignore"):
+        own = np.abs(y / p.data[idx])
+    factor = np.where(np.isfinite(own) & (own > 0) & (not is_ay), own, author_errors.unit_factor(p, idx, y, is_ay)[0])
+    cols = {lab: author_errors._absolute(ds, lab, rows, p.data)[idx] * factor for lab in errs}
+    tol = np.maximum(0.02 * ye, 2e-4 if is_ay else 0.0)
+    best = ((), 0)
     for k in (1, 2):
         for combo in itertools.combinations(errs, k):
-            ok = sum(1 for c, r in matched
-                     if abs(sum(absolute(r, l) ** 2 for l in combo) ** 0.5 - c) <= max(0.02 * c, 2e-4))
-            if best is None or ok > best[1]:
+            ok = int(np.sum(np.abs(np.sqrt(sum(cols[lab] ** 2 for lab in combo)) - ye) <= tol))
+            if ok > best[1]:
                 best = (combo, ok)
     reader, author, _ = author_errors.classify(sub, ds)
     audit = author_errors.audit_record(rec)
     ro = audit["reader_only_angles"] if audit and "error" not in audit else []
-    return dict(columns=best[0], frac=best[1] / len(matched), n=len(matched), errs=errs, reader=reader,
-                author=author, reader_only=ro, status_cols=dict(zip(labels, units)))
-
-
+    return dict(columns=best[0], frac=best[1] / len(idx), n=len(idx), errs=errs, reader=reader,
+                author=author, reader_only=ro, status_cols=dict(zip(labels, ds.units)))
 
 
 # -- report -------------------------------------------------------------------------------------------------------
 
 
-def entry_section(entry: str, index_doi: str | None):
+def entry_section(entry: str, index_doi: str | None, data_dir: Path = ROOT / "data"):
     subs = subentries(entry)
     b001 = bib_fields(subs.get(f"{entry}001", []))
     refs = reference_codes(b001.get("REFERENCE", ""))
@@ -221,7 +237,7 @@ def entry_section(entry: str, index_doi: str | None):
         L.append(f"- **COMMON (001):** {c001}")
     if b001.get("HISTORY"):
         L.append(f"- **HISTORY (001):** {b001['HISTORY']}")
-    recs = corpus_records(entry)
+    recs = corpus_records(entry, data_dir)
     by_sub = defaultdict(list)
     for corpus, path, r in recs:
         by_sub[str(r["EXFORAccessionNumber"])[:8]].append((corpus, path, r))
@@ -262,7 +278,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--entries", nargs="*")
     ap.add_argument("--out", type=Path, default=ROOT / "papers" / "exfor_crosscheck_generated.md")
+    ap.add_argument("--data-rev", default=DATA_REV,
+                    help='git revision of the corpus records (default %(default)s); "" for data/ as it is')
     a = ap.parse_args()
+    with tempfile.TemporaryDirectory() as tmp:
+        data_dir = data_at(a.data_rev, Path(tmp)) if a.data_rev else ROOT / "data"
+        report(a, data_dir)
+
+
+def report(a, data_dir: Path):
     index = (ROOT / "papers" / "INDEX.md").read_text()
     idx = {}
     for line in index.splitlines():
@@ -272,14 +296,19 @@ def main():
     entries = a.entries or list(idx)
     body, summary = [], []
     for e in entries:
-        L, flags, s = entry_section(e, idx.get(e))
+        L, flags, s = entry_section(e, idx.get(e), data_dir)
         body += L[:1] + [""] + ([f"> **Flags:** " + "; ".join(flags)] if flags else ["> No flags."]) + [""] + L[1:] + [""]
         summary.append((s, flags))
         print(e, len(flags), "flags", flush=True)
     head = ["# Notes from EXFOR: cross-check of the corpus records against their EXFOR entries", "",
-            "Generated by `scripts/exfor_crosscheck.py`: the corpus records in `data/` compared with their entries in the "
-            f"local X4 database (release {serialize.exfor_database_tag()}; the same entries the IAEA EXFOR website shows, which cannot be "
-            "scripted). DOIs come from each entry's REFERENCE codes through Crossref (volume and first page must match). "
+            "Generated by `scripts/exfor_crosscheck.py` from "
+            + (f"the corpus records **as curated before the author-uncertainty corrections** (git revision {a.data_rev}; "
+               "see `docs/AUTHOR_UNCERTAINTIES.md`)" if a.data_rev == DATA_REV else
+               f"the corpus records at git revision {a.data_rev}" if a.data_rev else "the corpus records in `data/`")
+            + f", compared with their entries in the local X4 database (release {serialize.exfor_database_tag()}; the same "
+            "entries the IAEA EXFOR website shows, which cannot be scripted)."
+            + (" The flags describe those uncorrected records." if a.data_rev == DATA_REV else "")
+            + " DOIs come from each entry's REFERENCE codes through Crossref (volume and first page must match). "
             "Summary: `papers/notes_from_exfor.md`.", "",
             "| entry | REFERENCE codes | DOI(s) from EXFOR | INDEX DOI agrees | flags |", "|---|---|---|---|---|"]
     for s, flags in summary:

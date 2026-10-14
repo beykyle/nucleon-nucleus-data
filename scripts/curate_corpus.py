@@ -71,8 +71,7 @@ def main() -> None:
         # rows dropped in cleaning must be allowlisted too (tests/test_data_integrity.py)
         known = report.load_known_missing()
         unaccounted += len(report.unexpected(result.data, known)) + sum(
-            1 for row, _, _ in result.dropped
-            if (row.corpus, row.sector, row.target_label, round(row.energy_mev, 6), row.subentry) not in known)
+            1 for row, _, _ in result.dropped if report.row_key(row) not in known)
         print(f"wrote {len(result.records)} measurements to data/{a.name}/{sector}/\n")
 
     steps = []

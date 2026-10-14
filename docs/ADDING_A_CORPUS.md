@@ -157,7 +157,8 @@ uv run python scripts/apply_author_errors.py
 uv run python scripts/audit_reader_errors.py NAME_evaluated
 ```
 
-`apply_author_errors.py` rebuilds every evaluated copy, including `data/NAME_evaluated`, from its static corpus. The
+`apply_author_errors.py` rebuilds every evaluated copy, including `data/NAME_evaluated`, from its static corpus; it
+does not touch ELM (`--elm` is for the maintainers' re-correction of ELM, §7 of AUTHOR_UNCERTAINTIES.md). The
 existing corrections apply wherever the new corpus shares their EXFOR entries. The audit then lists any record that
 still rests on EXFOR's data-point reader (digitisation) uncertainty alone, or whose error is below the authors' error
 in EXFOR. The slow tests require the audit to come back clean:
@@ -179,10 +180,10 @@ what that statement gives:
 
 Document each rule in [AUTHOR_UNCERTAINTIES.md](AUTHOR_UNCERTAINTIES.md), and quote its source in
 [AUTHOR_UNCERTAINTY_SOURCES.md](AUTHOR_UNCERTAINTY_SOURCES.md). The rules apply to every evaluated corpus holding
-the subentry, so check the diff report as well:
+the subentry, so check the per-record changes it prints as well, and regenerate the committed report:
 
 ```bash
-uv run python scripts/apply_author_errors.py --report docs/AUTHOR_ERRORS_DIFF.md
+uv run python scripts/apply_author_errors.py --elm --report docs/AUTHOR_ERRORS_DIFF.md
 ```
 
 ## 7. Manifests, README and tests

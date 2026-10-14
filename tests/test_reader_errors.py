@@ -86,11 +86,28 @@ def test_doering_is_the_thesis_table():
     assert seen == 24, "12 Doering sets in each of elm and sm3"
 
 
-def test_correction_is_idempotent():
+def assert_idempotent(corpus, rec):
+    before = json.dumps(rec, sort_keys=True)
+    assert json.dumps(ae.correct(json.loads(before), corpus), sort_keys=True) == before, rec["EXFORAccessionNumber"]
+
+
+def test_corrected_records_are_not_corrected_again():
+    """Records carrying MARK are returned as they are, without reading EXFOR."""
+    seen = 0
     for corpus in CORRECTED:
         for _, rec in records(corpus):
-            before = json.dumps(rec, sort_keys=True)
-            assert json.dumps(ae.correct(json.loads(before), corpus), sort_keys=True) == before
+            if ae.MARK in rec["notes"]:
+                assert_idempotent(corpus, rec)
+                seen += 1
+    assert seen
+
+
+@pytest.mark.slow
+def test_correction_is_idempotent():
+    """Every record, including those the rules leave unchanged (which correct() checks against EXFOR again)."""
+    for corpus in CORRECTED:
+        for _, rec in records(corpus):
+            assert_idempotent(corpus, rec)
 
 
 def test_fill_interpolates_and_extrapolates_flat():
@@ -207,3 +224,88 @@ def test_unit_factor_keeps_exfor_error_of_a_rescaled_point():
     y = 1e-3 * ex * np.array([1, 1, 10, 1, 1])  # mb -> b, with the third value fixed
     factor, ok = ae.unit_factor(p, idx, y, False)
     assert np.allclose(factor, 1e-3) and list(ok) == [True, True, False, True, True]
+
+
+# -- data-set selection, the audit, and the scripts --------------------------------------------------------------
+
+
+class FakeDataSet:
+    """The parts of an x4i3 data set that author_errors reads."""
+
+    def __init__(self, labels, units, data, quantity=("DA",)):
+        self.labels, self.units, self.data = labels, units, data
+        self.reaction = [type("R", (), {"quantity": list(quantity)})()]
+
+
+def test_rows_at_converts_the_energy_unit():
+    rows = [[3.0e6, 10.0, 1.0], [5.0e6, 10.0, 2.0], [None, 20.0, 3.0]]
+    ds = FakeDataSet(["EN", "ANG-CM", "DATA"], ["EV", "ADEG", "MB/SR"], rows)
+    assert ae.rows_at(ds, 3.0) == [rows[0], rows[2]]
+    ds = FakeDataSet(["EN", "ANG-CM", "DATA"], ["KEV", "ADEG", "MB/SR"], [[3000.0, 10.0, 1.0]])
+    assert len(ae.rows_at(ds, 3.0)) == 1 and len(ae.rows_at(ds, 3.1)) == 0
+    assert len(ae.rows_at(FakeDataSet(["ANG-CM", "DATA"], ["ADEG", "MB/SR"], rows), 3.0)) == 3
+
+
+def test_ratio_to_rutherford_is_not_a_polarisation():
+    """A ratio to Rutherford is dimensionless like an analysing power; the REACTION quantity tells them apart."""
+    assert not ae.is_polarisation(FakeDataSet([], [], [], ("DA", "RTH")))
+    assert ae.is_polarisation(FakeDataSet([], [], [], ("POL/DA", "ANA")))
+
+
+@pytest.mark.slow
+def test_cross_section_and_ay_take_their_own_data_set():
+    """O0032002 holds a cross section (MB/SR) and an analysing power at the same angles."""
+    xs, ay = ae.best_data_set("O0032002", None, None, False), ae.best_data_set("O0032002", None, None, True)
+    assert not ae.is_polarisation(xs[0]) and ae.is_polarisation(ay[0])
+
+
+@pytest.mark.slow
+def test_audit_counts_the_records_own_points():
+    """A record holding part of EXFOR's rows is audited over its own points."""
+    for _, rec in records("chuq"):
+        if rec["EXFORAccessionNumber"] == "O0091002" and rec["type"] != "APower":
+            break
+    full = ae.audit_record(rec)
+    assert full["n_points"] == len(rec["data"]["x"]) and full["n_reader_only"] == full["n_points"]
+    part = json.loads(json.dumps(rec))
+    for k in ("x", "y", "y_err"):
+        part["data"][k] = part["data"][k][::3]
+    found = ae.audit_record(part)
+    assert found["n_points"] == found["n_reader_only"] == len(part["data"]["x"])
+    assert found["reader_only_angles"] == part["data"]["x"]
+
+
+def load_script(name):
+    import importlib.util
+
+    from nn_corpora.spec import REPO_ROOT
+
+    s = importlib.util.spec_from_file_location(name, REPO_ROOT / "scripts" / f"{name}.py")
+    mod = importlib.util.module_from_spec(s)
+    s.loader.exec_module(mod)
+    return mod
+
+
+def test_apply_skips_a_corpus_not_built_yet(tmp_path, monkeypatch, capsys):
+    from nn_corpora import spec
+
+    apply = load_script("apply_author_errors")
+    monkeypatch.setattr(spec, "DATA_DIR", tmp_path)
+    monkeypatch.setitem(ae.EVALUATED, "scratch", "scratch_evaluated")
+    pending, replaced = {}, []
+    apply.evaluate_static("scratch", apply.Report(), pending, replaced)
+    assert not pending and not replaced and "not built yet" in capsys.readouterr().out
+
+
+def test_crosscheck_without_error_columns_and_at_zero_degrees(monkeypatch):
+    """A data set without error columns reports no match instead of failing; a 0 deg point matches."""
+    xc = load_script("exfor_crosscheck")
+    rows = [[0.0, 10.0], [10.0, 5.0]]
+    ds = FakeDataSet(["ANG-CM", "DATA"], ["ADEG", "MB/SR"], rows)
+    p = ae.ExforPoints(np.array([0.0, 10.0]), np.array([10.0, 5.0]), np.zeros(2), {}, [])
+    monkeypatch.setattr(ae, "best_data_set", lambda *a, **k: (ds, p))
+    monkeypatch.setattr(ae, "classify", lambda *a: ([], [], []))
+    monkeypatch.setattr(ae, "audit_record", lambda rec: None)
+    rec = dict(type="Absolute", energy=None, data=dict(x=[0.0, 10.0], y=[10.0, 5.0], y_err=[1.0, 0.5]))
+    inf = xc.infer_columns(rec, "Z9999002")
+    assert inf["columns"] == () and inf["frac"] == 0 and inf["n"] == 2

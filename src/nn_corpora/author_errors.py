@@ -41,6 +41,7 @@ import numpy as np
 
 from . import spec, x4text
 from .errors import candidate_labels, entry_data_sets
+from .retrieve import _TO_MEV
 
 MARK = "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
 ROOT = Path(__file__).resolve().parents[2]
@@ -249,10 +250,40 @@ def _blocks(subentry: str) -> list:
         return []
 
 
+def energy_column(ds) -> tuple[int | None, float]:
+    """(index of the EN column or None, factor converting it to MeV)."""
+    labels = list(ds.labels)
+    if "EN" not in labels:
+        return None, 1.0
+    i = labels.index("EN")
+    unit = str(ds.units[i]).upper()
+    if unit not in _TO_MEV:
+        raise ValueError(f"EN in unknown unit {ds.units[i]!r}")
+    return i, _TO_MEV[unit]
+
+
+def rows_at(ds, energy: float | None) -> list:
+    """The data set's rows at ``energy`` in MeV (within 0.1 %), or all rows if None or the set has no EN column."""
+    en, to_mev = energy_column(ds)
+    if energy is None or en is None:
+        return list(ds.data)
+    return [r for r in ds.data if r[en] is None or abs(r[en] * to_mev - energy) <= 1e-3 * max(1.0, energy)]
+
+
+def is_polarisation(ds) -> bool:
+    """A polarisation data set (REACTION quantity POL/DA, e.g. ``POL/DA,,ANA``), not a cross section (DA, or DA,RTH:
+    a ratio to Rutherford, dimensionless like an analysing power)."""
+    try:
+        return str(ds.reaction[0].quantity[0]).startswith("POL")
+    except (AttributeError, IndexError, TypeError):
+        return False
+
+
 def best_data_set(subentry: str, energy: float | None, x=None, is_ay: bool | None = None):
     """(x4i3 data set, its ``ExforPoints``) of an EXFOR subentry at ``energy`` (all rows if None), or None if it
     cannot be read or has no angle and data columns (e.g. given in cos(theta)). When the subentry holds several data
-    sets, the one whose angles match ``x`` best; ``is_ay`` excludes cross-section (per-steradian) data sets."""
+    sets, the one whose angles match ``x`` best; ``is_ay`` True keeps only polarisation (analysing-power) data
+    sets, False only the others (``is_polarisation``)."""
     blocks = _blocks(subentry)
     best = None
     for ds in blocks:
@@ -260,21 +291,20 @@ def best_data_set(subentry: str, energy: float | None, x=None, is_ay: bool | Non
         ang = next((i for i, l in enumerate(labels) if l.startswith("ANG") and "ERR" not in l and "RSL" not in l
                     and l != "ANG-NRM"), None)
         dat = next((i for i, l in enumerate(labels) if l.startswith("DATA") and "ERR" not in l), None)
-        if ang is None or dat is None or (is_ay and "/SR" in ds.units[dat].upper()):
+        if ang is None or dat is None:
             continue
-        en = labels.index("EN") if "EN" in labels else None
-        rows = [r for r in ds.data if not (energy is not None and en is not None and r[en] is not None
-                                            and abs(r[en] - energy) > 1e-3 * max(1.0, energy))]
+        if is_ay is not None and is_polarisation(ds) != is_ay:
+            continue
+        rows = rows_at(ds, energy)
         angles = np.array([r[ang] for r in rows], dtype=float)
         data = np.array([r[dat] if r[dat] is not None else 0.0 for r in rows], dtype=float)
-        reader_cols, author_cols, _ = classify(subentry, ds)
+        reader_cols, author_cols, sys_cols = classify(subentry, ds)
         forced = COLUMN_AUTHOR.get(subentry[:5])
         # several reader columns are alternatives (e.g. O0124: one per figure the points were read from), not parts
         reader = np.max([_absolute(ds, lab, rows, data) for lab in reader_cols] or [np.zeros(len(rows))], axis=0)
         author = {lab: _absolute(ds, lab, rows, data, as_absolute=(lab == forced)) for lab in author_cols}
         for lab in [lab for lab in author if lab.startswith("+") and "-" + lab[1:] in author]:
             author[lab[1:]] = (author.pop(lab) + author.pop("-" + lab[1:])) / 2  # asymmetric: the average
-        _, _, sys_cols = classify(subentry, ds)
         systematic = {lab: _absolute(ds, lab, rows, data) for lab in sys_cols}
         pts = ExforPoints(angles, data, reader, author, reader_cols, systematic)
         score = 0 if x is None else int((match(x, angles) >= 0).sum())
@@ -347,25 +377,33 @@ def to_record(vals, p: ExforPoints, idx, y, is_ay) -> np.ndarray:
 
 def audit_record(rec: dict) -> dict | None:
     """A corpus record's points that rest on a reader error: None if there are none, ``{"error": ...}`` if its
-    subentry cannot be read. Only angular distributions are audited.
+    subentry cannot be read. Only angular distributions are audited; counts and angles are the record's.
 
-    - reader-only: EXFOR has no author error at the point;
+    - reader-only: EXFOR has a reader error and no author error at the point;
     - author unused: EXFOR has one, but the record's error is less than 95 % of it (the curation took another
-      column). Points whose value is not EXFOR's, or whose angle the record repeats, cannot be checked.
+      column). Points whose value is not EXFOR's, or whose angle the record repeats, cannot be checked;
+    - unmatched: record points at no EXFOR angle (e.g. the Doering table's own angles). They cannot be cleared, so
+      when EXFOR has reader-only rows they count as reader-only.
     """
     if "deg" not in str(rec.get("x_units", "")).lower():
         return None
+    sub = str(rec["EXFORAccessionNumber"])
     is_ay = rec.get("type") == "APower"
-    p = exfor_points(str(rec["EXFORAccessionNumber"]), rec.get("energy"), rec["data"]["x"], is_ay)
+    x = np.asarray(rec["data"]["x"], dtype=float)
+    p = exfor_points(sub, rec.get("energy"), x, is_ay)
     if p is None:
-        if _blocks(str(rec["EXFORAccessionNumber"])):  # readable, but not in angle (e.g. cos theta)
+        if _blocks(sub):  # readable, but not in angle (e.g. cos theta)
             return None
-        return dict(subentry=rec["EXFORAccessionNumber"], error="EXFOR subentry not readable")
-    mask = ~p.has_author if p.reader_cols else np.zeros(len(p.angles), bool)
+        return dict(subentry=sub, error="EXFOR subentry not readable")
+    idx = match(x, p.angles)
+    hit = idx >= 0
+    reader_rows = ~p.has_author if p.reader_cols else np.zeros(len(p.angles), bool)
+    mask = np.zeros(len(x), bool)
+    mask[hit] = reader_rows[idx[hit]]
+    if reader_rows.any():
+        mask |= ~hit
     unused = []
-    idx = match(rec["data"]["x"], p.angles)
-    if p.author and (idx >= 0).all() and str(rec["EXFORAccessionNumber"])[:8] not in doering_table():
-        x = np.asarray(rec["data"]["x"], dtype=float)
+    if p.author and hit.all() and sub[:8] not in doering_table():
         y = np.asarray(rec["data"]["y"], dtype=float)
         factor, ok = unit_factor(p, idx, y, is_ay)
         ok &= np.array([np.sum(x == v) == 1 for v in x])
@@ -374,8 +412,8 @@ def audit_record(rec: dict) -> dict | None:
         unused = [float(x[k]) for k in np.flatnonzero(ok & (ye < 0.95 * author))]
     if not mask.any() and not unused:
         return None
-    return dict(subentry=rec["EXFORAccessionNumber"], energy=rec.get("energy"), n_points=len(mask),
-                n_reader_only=int(mask.sum()), reader_only_angles=[float(a) for a in p.angles[mask]],
+    return dict(subentry=sub, energy=rec.get("energy"), n_points=len(x), n_reader_only=int(mask.sum()),
+                reader_only_angles=[float(a) for a in x[mask]], unmatched_angles=[float(a) for a in x[~hit]],
                 author_unused_angles=unused, reader_cols=p.reader_cols, author_cols=list(p.author),
                 corrected=MARK in (rec.get("notes") or []))
 

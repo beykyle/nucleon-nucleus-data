@@ -263,16 +263,18 @@ lists the corpora they apply to, and `author_errors.EVALUATED` names the evaluat
   in `serialize.write_sector`, so rebuilding ELM from its notebooks applies them all. sm3 is corrected the same way
   when `scripts/curate_sm3.py` writes it.
 - **`scripts/apply_author_errors.py`:**
-  - corrects ELM in `data/` directly, starting from the uncorrected records at a fixed git revision;
-  - builds `kduq_evaluated`, `chuq_evaluated` and `test_evaluated` from the static corpora;
-  - writes [AUTHOR_ERRORS_DIFF.md](AUTHOR_ERRORS_DIFF.md).
+  - builds the evaluated copy of each static corpus registered with one (`kduq_evaluated`, `chuq_evaluated`,
+    `test_evaluated`, and any newly added tabulated corpus, [ADDING_A_CORPUS.md](ADDING_A_CORPUS.md));
+  - with `--elm`, also re-corrects ELM in `data/` directly, starting from the uncorrected records at a fixed git
+    revision, so a rule change reaches ELM without rerunning its notebooks. Do not pass it after rebuilding ELM
+    from the notebooks: it would replace the rebuild with that revision's data;
+  - writes [AUTHOR_ERRORS_DIFF.md](AUTHOR_ERRORS_DIFF.md) (`--report`; ELM rows only with `--elm`).
 
-  It never writes to the static corpora. A newly added tabulated corpus registered with an evaluated copy
-  ([ADDING_A_CORPUS.md](ADDING_A_CORPUS.md)) is built the same way.
+  It never writes to the static corpora.
 
 ```bash
 source scripts/setup_exfor_db.sh 2025
-uv run python scripts/apply_author_errors.py --report docs/AUTHOR_ERRORS_DIFF.md
+uv run python scripts/apply_author_errors.py --elm --report docs/AUTHOR_ERRORS_DIFF.md
 uv run python scripts/curate_sm3.py && uv run python scripts/build_manifests.py
 ```
 

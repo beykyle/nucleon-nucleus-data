@@ -29,10 +29,9 @@ entry's REFERENCE codes through Crossref instead.
 ## 2. What the uncorrected corpus used
 
 - **The corpus reproduced EXFOR exactly.** For every record of these entries, the per-point uncertainty equals one
-  EXFOR column, or two in quadrature, at 100 % of points. The exceptions:
-  - F0733003 (90Zr(p,p) 25.05 MeV, sm3) is intentionally the authors' 3 % from ERR-ANALYS;
-  - one ELM 208Pb set matches at 98 %.
-  The reader-only uncertainties therefore came from EXFOR's columns, not from a curation error.
+  EXFOR column, or two in quadrature, at 100 % of points. The one exception, F0733003 (90Zr(p,p) 25.05 MeV, sm3), is
+  intentionally the authors' 3 % from ERR-ANALYS. The reader-only uncertainties therefore came from EXFOR's columns,
+  not from a curation error.
 - **Digitised curves dominate.** 135 of the 142 subentries are STATUS (CURVE), i.e. read off published figures by
   the EXFOR compilers; 7 are TABLE. Their only per-point uncertainty is often the compilers' data-point reader
   error (0.4–7 %), sometimes alongside author errors where the bars were legible.

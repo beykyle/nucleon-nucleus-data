@@ -204,8 +204,7 @@ class TestCoverage:
             r for r in rows
             if r.subentry not in produced
             and r.subentry not in substituted
-            and (corpus, sector, r.target_label, round(r.energy_mev, 6), r.subentry)
-            not in allowed
+            and report.row_key(r) not in allowed
         ]
         assert not unaccounted, (
             f"{corpus}/{sector}: {len(unaccounted)} of {len(rows)} rows are neither "

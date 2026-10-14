@@ -272,7 +272,7 @@ python scripts/extract_corpus_tables.py     # PDF -> spec/*.csv
 uv run pytest --nbmake notebooks/           # execute every notebook, rewriting data/
 #   or, without the plots, per tabulated corpus: uv run python scripts/curate_corpus.py kduq
 python scripts/refresh_known_missing.py     # regenerate the allowlist after review
-uv run python scripts/apply_author_errors.py  # ELM corrections and the *_evaluated corpora
+uv run python scripts/apply_author_errors.py  # the *_evaluated corpora (ELM is corrected as it is written)
 uv run python scripts/curate_sm3.py         # sm3, from ELM and KDUQ records
 uv run python scripts/build_manifests.py    # provenance manifests for each corpus
 ```
