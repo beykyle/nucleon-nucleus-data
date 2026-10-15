@@ -79,7 +79,8 @@
         "projectile": "proton",
         "target": "Sn-120",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -161,7 +162,7 @@
                 0.000302
             ],
             "y_err": [
-                0.00012635,
+                0.000133,
                 0.00010368000000000001,
                 0.00010229999999999999,
                 8.225e-05,
@@ -229,7 +230,41 @@
                 1.5,
                 1.5
             ],
-            "systematic_normalization_error": 0.1118033988749895
+            "systematic_normalization_error": 0.1118033988749895,
+            "y_err_before_floor": [
+                0.00012635,
+                0.00010368000000000001,
+                0.00010229999999999999,
+                8.225e-05,
+                8.785e-05,
+                8.382000000000001e-05,
+                8.184e-05,
+                7.560000000000002e-05,
+                6.615e-05,
+                5.4016000000000006e-05,
+                4.608e-05,
+                4.41e-05,
+                4.132800000000001e-05,
+                4.4444000000000003e-05,
+                4.0051999999999995e-05,
+                4.256e-05,
+                3.5035e-05,
+                2.3192e-05,
+                1.4616e-05,
+                1.5904e-05,
+                1.7688000000000004e-05,
+                1.6037999999999998e-05,
+                1.4089e-05,
+                1.6072e-05,
+                1.8055999999999998e-05,
+                1.2727999999999999e-05,
+                1.6405e-05,
+                1.4136000000000002e-05,
+                1.5568e-05,
+                1.1663000000000002e-05,
+                1.6117e-05,
+                1.7516e-05
+            ]
         },
         "corpus": "elm",
         "sector": "charge_exchange",
@@ -238,7 +273,9 @@
         "notes": [
             "values and errors replaced by Doering thesis (MSU 1974) Table 5, 32 rows (EXFOR 33 digitised points); external/doering_1974_table5.csv",
             "normalisation uncertainty 11.2 % from the authors: Doering: neutron-detection efficiency about 10 % (+) target thickness, beam integration and neutron attenuation, less than 5 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "relative error floor 2 % applied at 1 of 32 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -279,7 +316,8 @@
         "projectile": "proton",
         "target": "Sn-120",
         "notes": [
-            "converted scattering angles from the lab to the CM frame"
+            "converted scattering angles from the lab to the CM frame",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -307,13 +345,20 @@
                 0.000861
             ],
             "y_err": [
+                0.0002616,
+                0.0002412,
+                0.00013756,
+                6.28e-05,
+                4.49e-05
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
                 0.000168,
                 0.000154,
                 8.48e-05,
                 6.28e-05,
                 4.49e-05
-            ],
-            "systematic_normalization_error": 0.05
+            ]
         },
         "ex_energy": 10.24,
         "ex_energy_err": 0.0,
@@ -323,7 +368,9 @@
         "projectile": "proton",
         "target": "Sn-120",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 3 of 5 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -406,7 +453,7 @@
             ],
             "y_err": [
                 0.00026880000000000003,
-                0.00010080000000000001,
+                0.00013440000000000001,
                 8.100000000000002e-05,
                 6.9e-05,
                 6.0564e-05,
@@ -472,7 +519,41 @@
                 1.5,
                 1.5
             ],
-            "systematic_normalization_error": 0.1118033988749895
+            "systematic_normalization_error": 0.1118033988749895,
+            "y_err_before_floor": [
+                0.00026880000000000003,
+                0.00010080000000000001,
+                8.100000000000002e-05,
+                6.9e-05,
+                6.0564e-05,
+                5.5119999999999994e-05,
+                4.5780000000000006e-05,
+                4.736000000000001e-05,
+                4.0560000000000005e-05,
+                3.9833e-05,
+                3.8808000000000005e-05,
+                3.017e-05,
+                3.2422e-05,
+                3.276e-05,
+                2.0832000000000003e-05,
+                1.71e-05,
+                1.8875e-05,
+                1.7672000000000003e-05,
+                1.5015e-05,
+                1.5347e-05,
+                1.3014299999999998e-05,
+                1.11315e-05,
+                1.2167200000000001e-05,
+                9.588e-06,
+                1.8710999999999998e-05,
+                8.236e-06,
+                1.2489e-05,
+                1.5337e-05,
+                5.2923e-06,
+                5.823299999999999e-06,
+                5.6695e-06,
+                8.5215e-06
+            ]
         },
         "corpus": "elm",
         "sector": "charge_exchange",
@@ -481,7 +562,9 @@
         "notes": [
             "values and errors replaced by Doering thesis (MSU 1974) Table 5, 32 rows (EXFOR 32 digitised points); external/doering_1974_table5.csv",
             "normalisation uncertainty 11.2 % from the authors: Doering: neutron-detection efficiency about 10 % (+) target thickness, beam integration and neutron attenuation, less than 5 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "relative error floor 2 % applied at 1 of 32 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -639,7 +722,8 @@
         "notes": [
             "values and errors replaced by Doering thesis (MSU 1974) Table 5, 32 rows (EXFOR 32 digitised points); external/doering_1974_table5.csv",
             "normalisation uncertainty 11.2 % from the authors: Doering: neutron-detection efficiency about 10 % (+) target thickness, beam integration and neutron attenuation, less than 5 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -686,7 +770,8 @@
         "projectile": "proton",
         "target": "Sn-120",
         "notes": [
-            "converted scattering angles from the lab to the CM frame"
+            "converted scattering angles from the lab to the CM frame",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     }
 ]

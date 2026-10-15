@@ -79,7 +79,7 @@
             ],
             "y_err": [
                 8.033e-05,
-                4.408e-05,
+                4.64e-05,
                 6.664e-05,
                 5.4250000000000004e-05,
                 6.649999999999999e-05,
@@ -149,7 +149,41 @@
                 1.4,
                 1.4
             ],
-            "systematic_normalization_error": 0.1118033988749895
+            "systematic_normalization_error": 0.1118033988749895,
+            "y_err_before_floor": [
+                8.033e-05,
+                4.408e-05,
+                6.664e-05,
+                5.4250000000000004e-05,
+                6.649999999999999e-05,
+                3.888e-05,
+                5.863e-05,
+                3.556e-05,
+                4.248e-05,
+                3.683e-05,
+                3.828e-05,
+                3.375000000000001e-05,
+                3.6580000000000006e-05,
+                3.052e-05,
+                3.57e-05,
+                2.9898e-05,
+                3.2636e-05,
+                2.5784e-05,
+                2.2879999999999998e-05,
+                2.4976e-05,
+                2.4076e-05,
+                2.4338e-05,
+                2.9952e-05,
+                2.3712e-05,
+                2.1063e-05,
+                1.722e-05,
+                1.3130000000000001e-05,
+                1.6755999999999997e-05,
+                1.748e-05,
+                1.9645999999999998e-05,
+                2.0988e-05,
+                2.144e-05
+            ]
         },
         "corpus": "elm",
         "sector": "charge_exchange",
@@ -158,7 +192,9 @@
         "notes": [
             "values and errors replaced by Doering thesis (MSU 1974) Table 5, 32 rows (EXFOR 36 digitised points); external/doering_1974_table5.csv",
             "normalisation uncertainty 11.2 % from the authors: Doering: neutron-detection efficiency about 10 % (+) target thickness, beam integration and neutron attenuation, less than 5 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "relative error floor 2 % applied at 1 of 32 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -235,7 +271,8 @@
         "projectile": "proton",
         "target": "Ca-48",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -394,7 +431,8 @@
         "notes": [
             "values and errors replaced by Doering thesis (MSU 1974) Table 5, 32 rows (EXFOR 33 digitised points); external/doering_1974_table5.csv",
             "normalisation uncertainty 11.2 % from the authors: Doering: neutron-detection efficiency about 10 % (+) target thickness, beam integration and neutron attenuation, less than 5 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -524,7 +562,8 @@
         "notes": [
             "values and errors replaced by Doering thesis (MSU 1974) Table 5, 25 rows (EXFOR 25 digitised points); external/doering_1974_table5.csv",
             "normalisation uncertainty 11.2 % from the authors: Doering: neutron-detection efficiency about 10 % (+) target thickness, beam integration and neutron attenuation, less than 5 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -556,6 +595,16 @@
                 7.238e-05
             ],
             "y_err": [
+                0.0001,
+                7.164e-05,
+                3.588e-05,
+                3e-05,
+                3e-05,
+                4.363e-05,
+                3.11e-05
+            ],
+            "systematic_normalization_error": 0.12,
+            "y_err_before_floor": [
                 3e-05,
                 3e-05,
                 3e-05,
@@ -563,8 +612,7 @@
                 3e-05,
                 4.363e-05,
                 3.11e-05
-            ],
-            "systematic_normalization_error": 0.12
+            ]
         },
         "ex_energy": 6.67,
         "ex_energy_err": 0.0,
@@ -574,7 +622,9 @@
         "projectile": "proton",
         "target": "Ca-48",
         "notes": [
-            "missing uncertainties set to the size of the first reported one, read from Fig. 5 of Phys. Rev. C 31 (1985) 1147"
+            "missing uncertainties set to the size of the first reported one, read from Fig. 5 of Phys. Rev. C 31 (1985) 1147",
+            "relative error floor 2 % applied at 3 of 7 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     }
 ]

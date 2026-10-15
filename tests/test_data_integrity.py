@@ -129,7 +129,9 @@ def test_analyzing_powers_are_bounded(records):
 def test_cross_sections_are_positive(records):
     for path, record in records:
         if record["type"] in ("ECS", "ECS_Rutherford", "CS"):
-            y = np.asarray(record["data"]["y"])
+            # a compound-elastic-corrected record may go negative where TALYS's CE exceeds the measurement (low
+            # energy, resonances); it carries its ce_fraction for calibrations to cut on, and the measurement stays
+            y = np.asarray(record["data"].get("y_measured", record["data"]["y"]))
             assert np.all(y > 0), \
                 f"{path.name} {record['EXFORAccessionNumber']}: non-positive cross section"
 
@@ -160,9 +162,9 @@ def test_records_round_trip_through_exfor_tools(records):
 
 
 def test_neutron_total_is_downsampled(records):
-    """At most one datum per MeV, per the supplement."""
+    """At most one datum per MeV, per the supplement (ELM keeps every point: scripts/curate_elm_integral.py)."""
     for path, record in records:
-        if record["sector"] != "neutron_total":
+        if record["sector"] != "neutron_total" or record["corpus"] == "elm":
             continue
         x = np.asarray(record["data"]["x"])
         span = float(x[-1] - x[0])

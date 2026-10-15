@@ -1,6 +1,1145 @@
 [
     {
         "type": "ECS",
+        "energy": 1.175,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20512002",
+        "source": "D.Abramson, A.Arnaud, et al., Progress report: EANDC(E)-149  (1971);  Data taken from the EXFOR database, file EXFOR 20512001 dated 7102, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                24.6008408195,
+                30.7002549295,
+                33.8004603111,
+                55.2002489352,
+                61.2002402244,
+                64.2999417927,
+                85.4005129786,
+                91.3998751638,
+                94.3994811976,
+                115.2995016628,
+                121.1995304848,
+                124.1997660005,
+                144.799513122,
+                150.7000851821,
+                153.6991684668
+            ],
+            "y": [
+                0.442,
+                0.383,
+                0.359,
+                0.262,
+                0.229,
+                0.19,
+                0.109,
+                0.095,
+                0.073,
+                0.019,
+                0.067,
+                0.021,
+                0.129,
+                0.141,
+                0.169
+            ],
+            "y_err": [
+                0.034,
+                0.033,
+                0.027,
+                0.025,
+                0.019,
+                0.019,
+                0.012,
+                0.012,
+                0.012,
+                0.015,
+                0.02,
+                0.015,
+                0.013,
+                0.013,
+                0.018
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 1.276,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20512002",
+        "source": "D.Abramson, A.Arnaud, et al., Progress report: EANDC(E)-149  (1971);  Data taken from the EXFOR database, file EXFOR 20512001 dated 7102, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                24.6008408195,
+                30.7002549295,
+                33.8004603111,
+                55.2002489352,
+                61.2002402244,
+                64.2999417927,
+                85.4005129786,
+                91.3998751638,
+                94.3994811976,
+                115.2995016628,
+                121.1995304848,
+                124.1997660005,
+                144.799513122,
+                150.7000851821,
+                153.6991684668
+            ],
+            "y": [
+                0.626,
+                0.521,
+                0.504,
+                0.33,
+                0.285,
+                0.249,
+                0.139,
+                0.103,
+                0.085,
+                0.038,
+                0.052,
+                0.071,
+                0.155,
+                0.197,
+                0.211
+            ],
+            "y_err": [
+                0.046,
+                0.03,
+                0.035,
+                0.026,
+                0.018,
+                0.02,
+                0.013,
+                0.014,
+                0.011,
+                0.009,
+                0.01,
+                0.01,
+                0.013,
+                0.014,
+                0.016
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 1.377,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20512002",
+        "source": "D.Abramson, A.Arnaud, et al., Progress report: EANDC(E)-149  (1971);  Data taken from the EXFOR database, file EXFOR 20512001 dated 7102, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                24.6008408195,
+                30.7002549295,
+                33.8004603111,
+                55.2002489352,
+                61.2002402244,
+                64.2999417927,
+                85.4005129786,
+                91.3998751638,
+                94.3994811976,
+                115.2995016628,
+                121.1995304848,
+                124.1997660005,
+                144.799513122,
+                150.7000851821,
+                153.6991684668
+            ],
+            "y": [
+                0.504,
+                0.446,
+                0.371,
+                0.248,
+                0.229,
+                0.192,
+                0.09,
+                0.072,
+                0.058,
+                0.023,
+                0.038,
+                0.121,
+                0.135,
+                0.143,
+                0.155
+            ],
+            "y_err": [
+                0.04,
+                0.033,
+                0.027,
+                0.025,
+                0.019,
+                0.019,
+                0.011,
+                0.01,
+                0.009,
+                0.009,
+                0.011,
+                0.011,
+                0.012,
+                0.013,
+                0.015
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 1.579,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20512002",
+        "source": "D.Abramson, A.Arnaud, et al., Progress report: EANDC(E)-149  (1971);  Data taken from the EXFOR database, file EXFOR 20512001 dated 7102, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                24.6008408195,
+                30.7002549295,
+                33.8004603111,
+                55.2002489352,
+                61.2002402244,
+                64.2999417927,
+                85.4005129786,
+                91.3998751638,
+                94.3994811976,
+                115.2995016628,
+                121.1995304848,
+                124.1997660005,
+                144.799513122,
+                150.7000851821,
+                153.6991684668
+            ],
+            "y": [
+                0.449,
+                0.402,
+                0.39,
+                0.241,
+                0.194,
+                0.169,
+                0.105,
+                0.092,
+                0.089,
+                0.175,
+                0.195,
+                0.204,
+                0.303,
+                0.345,
+                0.375
+            ],
+            "y_err": [
+                0.033,
+                0.033,
+                0.032,
+                0.025,
+                0.019,
+                0.018,
+                0.012,
+                0.012,
+                0.012,
+                0.015,
+                0.012,
+                0.014,
+                0.02,
+                0.025,
+                0.031
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 1.78,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20512002",
+        "source": "D.Abramson, A.Arnaud, et al., Progress report: EANDC(E)-149  (1971);  Data taken from the EXFOR database, file EXFOR 20512001 dated 7102, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                24.6008408195,
+                30.7002549295,
+                33.8004603111,
+                55.2002489352,
+                61.2002402244,
+                64.2999417927,
+                85.4005129786,
+                91.3998751638,
+                94.3994811976,
+                115.2995016628,
+                121.1995304848,
+                124.1997660005,
+                144.799513122,
+                150.7000851821,
+                153.6991684668
+            ],
+            "y": [
+                0.722,
+                0.656,
+                0.537,
+                0.327,
+                0.26,
+                0.227,
+                0.115,
+                0.096,
+                0.085,
+                0.101,
+                0.103,
+                0.117,
+                0.254,
+                0.293,
+                0.299
+            ],
+            "y_err": [
+                0.053,
+                0.047,
+                0.04,
+                0.026,
+                0.025,
+                0.02,
+                0.012,
+                0.012,
+                0.011,
+                0.012,
+                0.012,
+                0.013,
+                0.02,
+                0.035,
+                0.025
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 1.88,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20512002",
+        "source": "D.Abramson, A.Arnaud, et al., Progress report: EANDC(E)-149  (1971);  Data taken from the EXFOR database, file EXFOR 20512001 dated 7102, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                24.6008408195,
+                30.7002549295,
+                33.8004603111,
+                55.2002489352,
+                61.2002402244,
+                64.2999417927,
+                85.4005129786,
+                91.3998751638,
+                94.3994811976,
+                115.2995016628,
+                121.1995304848,
+                124.1997660005,
+                144.799513122,
+                150.7000851821,
+                153.6991684668
+            ],
+            "y": [
+                0.736,
+                0.675,
+                0.571,
+                0.34,
+                0.293,
+                0.244,
+                0.141,
+                0.118,
+                0.104,
+                0.072,
+                0.072,
+                0.083,
+                0.225,
+                0.264,
+                0.314
+            ],
+            "y_err": [
+                0.053,
+                0.047,
+                0.04,
+                0.026,
+                0.025,
+                0.02,
+                0.015,
+                0.012,
+                0.012,
+                0.01,
+                0.01,
+                0.011,
+                0.016,
+                0.02,
+                0.025
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 2.08,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20512002",
+        "source": "D.Abramson, A.Arnaud, et al., Progress report: EANDC(E)-149  (1971);  Data taken from the EXFOR database, file EXFOR 20512001 dated 7102, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                24.6008408195,
+                30.7002549295,
+                55.2002489352,
+                61.2002402244,
+                85.4005129786,
+                91.3998751638,
+                115.2995016628,
+                121.1995304848,
+                144.799513122,
+                150.7000851821
+            ],
+            "y": [
+                0.793,
+                0.671,
+                0.293,
+                0.244,
+                0.139,
+                0.09,
+                0.131,
+                0.139,
+                0.25,
+                0.347
+            ],
+            "y_err": [
+                0.055,
+                0.04,
+                0.03,
+                0.03,
+                0.018,
+                0.012,
+                0.012,
+                0.018,
+                0.02,
+                0.025
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 2.18,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20512002",
+        "source": "D.Abramson, A.Arnaud, et al., Progress report: EANDC(E)-149  (1971);  Data taken from the EXFOR database, file EXFOR 20512001 dated 7102, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                24.6008408195,
+                30.7002549295,
+                33.8004603111,
+                55.2002489352,
+                61.2002402244,
+                64.2999417927,
+                85.4005129786,
+                91.3998751638,
+                94.3994811976,
+                115.2995016628,
+                121.1995304848,
+                124.1997660005,
+                144.799513122,
+                150.7000851821,
+                153.6991684668
+            ],
+            "y": [
+                0.765,
+                0.646,
+                0.537,
+                0.276,
+                0.203,
+                0.174,
+                0.118,
+                0.117,
+                0.112,
+                0.109,
+                0.116,
+                0.126,
+                0.248,
+                0.286,
+                0.326
+            ],
+            "y_err": [
+                0.055,
+                0.042,
+                0.035,
+                0.03,
+                0.024,
+                0.02,
+                0.014,
+                0.012,
+                0.012,
+                0.012,
+                0.01,
+                0.01,
+                0.02,
+                0.018,
+                0.021
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 2.38,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20512002",
+        "source": "D.Abramson, A.Arnaud, et al., Progress report: EANDC(E)-149  (1971);  Data taken from the EXFOR database, file EXFOR 20512001 dated 7102, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                24.6008408195,
+                30.7002549295,
+                33.8004603111,
+                55.2002489352,
+                61.2002402244,
+                64.2999417927,
+                85.4005129786,
+                91.3998751638,
+                94.3994811976,
+                115.2995016628,
+                121.1995304848,
+                124.1997660005,
+                144.799513122,
+                150.7000851821,
+                153.6991684668
+            ],
+            "y": [
+                0.578,
+                0.489,
+                0.44,
+                0.28,
+                0.242,
+                0.217,
+                0.108,
+                0.098,
+                0.081,
+                0.056,
+                0.058,
+                0.075,
+                0.172,
+                0.204,
+                0.243
+            ],
+            "y_err": [
+                0.045,
+                0.034,
+                0.033,
+                0.021,
+                0.02,
+                0.019,
+                0.012,
+                0.012,
+                0.012,
+                0.01,
+                0.009,
+                0.011,
+                0.014,
+                0.017,
+                0.018
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 2.45,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20512002",
+        "source": "D.Abramson, A.Arnaud, et al., Progress report: EANDC(E)-149  (1971);  Data taken from the EXFOR database, file EXFOR 20512001 dated 7102, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                24.5001755891,
+                30.3006303388,
+                34.000775888,
+                45.900223126,
+                55.1004103177,
+                60.799977627,
+                64.500069625,
+                76.3004804026,
+                85.3004891533,
+                90.9998621003,
+                94.5994870214,
+                106.29959951,
+                115.2000448598,
+                120.7998089028,
+                124.3995136844,
+                135.899481496,
+                144.6992474348,
+                150.299824868,
+                153.7989138586
+            ],
+            "y": [
+                0.868,
+                0.722,
+                0.643,
+                0.439,
+                0.311,
+                0.236,
+                0.201,
+                0.144,
+                0.126,
+                0.119,
+                0.109,
+                0.1,
+                0.103,
+                0.116,
+                0.124,
+                0.207,
+                0.299,
+                0.36,
+                0.409
+            ],
+            "y_err": [
+                0.083,
+                0.065,
+                0.058,
+                0.057,
+                0.025,
+                0.014,
+                0.012,
+                0.015,
+                0.009,
+                0.01,
+                0.007,
+                0.014,
+                0.007,
+                0.01,
+                0.01,
+                0.022,
+                0.024,
+                0.025,
+                0.025
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 2.56,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20512002",
+        "source": "D.Abramson, A.Arnaud, et al., Progress report: EANDC(E)-149  (1971);  Data taken from the EXFOR database, file EXFOR 20512001 dated 7102, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                24.5001755891,
+                30.3006303388,
+                34.000775888,
+                55.1004103177,
+                60.799977627,
+                64.500069625,
+                85.3004891533,
+                90.9998621003,
+                94.5994870214,
+                115.2000448598,
+                120.7998089028,
+                124.3995136844,
+                144.6992474348,
+                150.299824868,
+                153.7989138586
+            ],
+            "y": [
+                0.784,
+                0.589,
+                0.498,
+                0.226,
+                0.141,
+                0.112,
+                0.111,
+                0.113,
+                0.105,
+                0.116,
+                0.133,
+                0.155,
+                0.307,
+                0.41,
+                0.447
+            ],
+            "y_err": [
+                0.06,
+                0.045,
+                0.05,
+                0.02,
+                0.023,
+                0.03,
+                0.009,
+                0.011,
+                0.011,
+                0.011,
+                0.013,
+                0.018,
+                0.028,
+                0.034,
+                0.034
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 2.71,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20512002",
+        "source": "D.Abramson, A.Arnaud, et al., Progress report: EANDC(E)-149  (1971);  Data taken from the EXFOR database, file EXFOR 20512001 dated 7102, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                24.5001755891,
+                30.3006303388,
+                34.000775888,
+                45.900223126,
+                55.1004103177,
+                60.799977627,
+                64.500069625,
+                76.3004804026,
+                85.3004891533,
+                90.9998621003,
+                94.5994870214,
+                106.29959951,
+                115.2000448598,
+                120.7998089028,
+                124.3995136844,
+                135.899481496,
+                144.6992474348,
+                150.299824868,
+                153.7989138586
+            ],
+            "y": [
+                1.128,
+                0.987,
+                0.849,
+                0.613,
+                0.34,
+                0.238,
+                0.206,
+                0.11,
+                0.081,
+                0.085,
+                0.086,
+                0.084,
+                0.09,
+                0.107,
+                0.116,
+                0.218,
+                0.3,
+                0.364,
+                0.404
+            ],
+            "y_err": [
+                0.07,
+                0.01974,
+                0.065,
+                0.1,
+                0.029,
+                0.027,
+                0.017,
+                0.018,
+                0.009,
+                0.011,
+                0.017,
+                0.016,
+                0.008,
+                0.008,
+                0.008,
+                0.039,
+                0.025,
+                0.031,
+                0.032
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
+                0.07,
+                0.015,
+                0.065,
+                0.1,
+                0.029,
+                0.027,
+                0.017,
+                0.018,
+                0.009,
+                0.011,
+                0.017,
+                0.016,
+                0.008,
+                0.008,
+                0.008,
+                0.039,
+                0.025,
+                0.031,
+                0.032
+            ]
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 1 of 19 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 2.76,
+        "energy_err": 0.05,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "30201002",
+        "source": "D.Winterhalter, Zeitschrift fuer Physik 200, 487 (1967);  Data taken from the EXFOR database, file EXFOR 30201001 dated 196703, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                35.8297393353,
+                56.1850336453,
+                76.3974041621,
+                96.4412032134,
+                116.3111392358,
+                136.0229237722
+            ],
+            "y": [
+                0.682,
+                0.195,
+                0.065,
+                0.041,
+                0.09,
+                0.163
+            ],
+            "y_err": [
+                0.093,
+                0.034,
+                0.011,
+                0.007,
+                0.011,
+                0.021
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 2.83,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20512002",
+        "source": "D.Abramson, A.Arnaud, et al., Progress report: EANDC(E)-149  (1971);  Data taken from the EXFOR database, file EXFOR 20512001 dated 7102, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                24.5001755891,
+                30.3006303388,
+                34.000775888,
+                45.900223126,
+                55.1004103177,
+                60.799977627,
+                64.500069625,
+                76.3004804026,
+                85.3004891533,
+                90.9998621003,
+                94.5994870214,
+                106.29959951,
+                115.2000448598,
+                120.7998089028,
+                124.3995136844,
+                135.899481496,
+                144.6992474348,
+                150.299824868,
+                153.7989138586
+            ],
+            "y": [
+                0.994,
+                0.905,
+                0.748,
+                0.457,
+                0.311,
+                0.252,
+                0.21,
+                0.124,
+                0.108,
+                0.101,
+                0.09,
+                0.075,
+                0.075,
+                0.081,
+                0.083,
+                0.144,
+                0.193,
+                0.238,
+                0.255
+            ],
+            "y_err": [
+                0.064,
+                0.068,
+                0.063,
+                0.056,
+                0.023,
+                0.02,
+                0.022,
+                0.014,
+                0.008,
+                0.01,
+                0.008,
+                0.018,
+                0.005,
+                0.008,
+                0.01,
+                0.036,
+                0.015,
+                0.021,
+                0.019
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 9.91,
+        "energy_err": 0.1,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "12785002",
+        "source": "W.Tornow, E.Woye, et al., Nuclear Physics, Section A 385, 373 (1982);  Data taken from the EXFOR database, file EXFOR 12785001 dated 8209, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                26.173,
+                28.95,
+                33.628,
+                38.467,
+                43.72,
+                49.557,
+                55.436,
+                60.815,
+                65.866,
+                70.821,
+                75.788,
+                80.907,
+                86.338,
+                91.924,
+                102.109,
+                111.433,
+                120.916,
+                128.235,
+                135.463,
+                145.135,
+                156.259
+            ],
+            "y": [
+                0.783731,
+                0.531299,
+                0.289046,
+                0.154356,
+                0.070117,
+                0.030698,
+                0.022406,
+                0.018285,
+                0.018392,
+                0.016114,
+                0.014214,
+                0.011209,
+                0.009441,
+                0.011985,
+                0.018703,
+                0.02399,
+                0.0261,
+                0.022374,
+                0.020653,
+                0.01556,
+                0.016595
+            ],
+            "y_err": [
+                0.01567462,
+                0.01062598,
+                0.0073244256,
+                0.00308712,
+                0.003295499,
+                0.0012070454,
+                0.0011483075,
+                0.001440858,
+                0.0011005773,
+                0.0007649316,
+                0.0007203655,
+                0.000965207,
+                0.0005563581,
+                0.0008424256,
+                0.000835089,
+                0.0009562414,
+                0.001145529,
+                0.0009117405,
+                0.0007951405,
+                0.000663634,
+                0.00248925
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
+                0.0120459455,
+                0.0070237728,
+                0.0073244256,
+                0.0024974801,
+                0.003295499,
+                0.0012070454,
+                0.0011483075,
+                0.001440858,
+                0.0011005773,
+                0.0007649316,
+                0.0007203655,
+                0.000965207,
+                0.0005563581,
+                0.0008424256,
+                0.000835089,
+                0.0009562414,
+                0.001145529,
+                0.0009117405,
+                0.0007951405,
+                0.000663634,
+                0.00248925
+            ]
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 3 of 21 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
         "energy": 11.9,
         "energy_err": 0.207,
         "energy_units": "MeV",
@@ -58,7 +1197,8 @@
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -128,6 +1268,35 @@
                 0.013364
             ],
             "y_err": [
+                0.00755096,
+                0.004008360000000001,
+                0.00187938,
+                0.00124302,
+                0.0013479694,
+                0.00091154,
+                0.0015284178,
+                0.0008817,
+                0.0011320021,
+                0.000909904,
+                0.0008118995,
+                0.0004460519,
+                0.0006869644,
+                0.0010689437,
+                0.0011120446,
+                0.0010009433,
+                0.0007059581,
+                0.0004938225,
+                0.0007463221,
+                0.0005968804,
+                0.0005824885,
+                0.0006034556,
+                0.0006433344,
+                0.0005922024,
+                0.0005694513,
+                0.0020046
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
                 0.0069355568,
                 0.0027597559,
                 0.0009960714,
@@ -154,15 +1323,16 @@
                 0.0005922024,
                 0.0005694513,
                 0.0020046
-            ],
-            "systematic_normalization_error": 0.05
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 6 of 26 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -234,6 +1404,36 @@
                 0.012262
             ],
             "y_err": [
+                0.00498172,
+                0.002532,
+                0.0008671600000000001,
+                0.00073718,
+                0.00138591,
+                0.0011051345,
+                0.0017184154,
+                0.00101278,
+                0.0010651626,
+                0.0013003078,
+                0.0005392107,
+                0.0009180184,
+                0.0005558373,
+                0.000769617,
+                0.0006569561,
+                0.000797406,
+                0.000522523,
+                0.000439956,
+                0.0004042793,
+                0.0005794141,
+                0.0003148157,
+                0.0003664282,
+                0.0003120805,
+                0.0002637775,
+                0.0003148572,
+                0.0015315,
+                0.0018393
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
                 0.0025581132,
                 0.00134196,
                 0.0008055916,
@@ -261,15 +1461,16 @@
                 0.0003148572,
                 0.0015315,
                 0.0018393
-            ],
-            "systematic_normalization_error": 0.05
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 5 of 27 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -317,6 +1518,23 @@
             "y_err": [
                 0.00802,
                 0.00278,
+                0.0009228,
+                0.0010778,
+                0.00138,
+                0.00098,
+                0.00082,
+                0.00085,
+                0.00047,
+                0.00062,
+                0.00039,
+                0.00028,
+                0.00163,
+                0.00208
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
+                0.00802,
+                0.00278,
                 0.00086,
                 0.00095,
                 0.00138,
@@ -329,15 +1547,16 @@
                 0.00028,
                 0.00163,
                 0.00208
-            ],
-            "systematic_normalization_error": 0.05
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 2 of 14 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -466,7 +1685,8 @@
         "target": "Ca-40",
         "notes": [
             "author uncertainty at 34 of 34 points without one in EXFOR (added in quadrature to the reader error): Dicello et al., PRC 4 (1971) 1130: relative error about 2 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -605,7 +1825,8 @@
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 27 of 27 points without one in EXFOR (added in quadrature to the reader error): Lombardi et al., NPA 188 (1972) 103: 2 % assigned (1 % statistical); Ay typical 0.02",
             "normalisation uncertainty 10.0 % from the authors: Lombardi: 10 % (Rutherford normalisation at 4 MeV)",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -689,7 +1910,8 @@
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -847,7 +2069,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -982,7 +2205,8 @@
         "target": "Ca-40",
         "notes": [
             "author uncertainty at 36 of 36 points without one in EXFOR (added in quadrature to the reader error): Dicello et al., PRC 4 (1971) 1130: relative error about 2 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1143,7 +2367,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1278,7 +2503,8 @@
         "target": "Ca-40",
         "notes": [
             "author uncertainty at 36 of 36 points without one in EXFOR (added in quadrature to the reader error): Dicello et al., PRC 4 (1971) 1130: relative error about 2 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1417,7 +2643,8 @@
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 27 of 27 points without one in EXFOR (added in quadrature to the reader error): Lombardi et al., NPA 188 (1972) 103: 2 % assigned (1 % statistical); Ay typical 0.02",
             "normalisation uncertainty 10.0 % from the authors: Lombardi: 10 % (Rutherford normalisation at 4 MeV)",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1546,7 +2773,8 @@
         "target": "Ca-40",
         "notes": [
             "author uncertainty at 34 of 34 points without one in EXFOR (added in quadrature to the reader error): Dicello et al., PRC 4 (1971) 1130: relative error about 2 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1624,6 +2852,39 @@
                 6.2192116905
             ],
             "y_err": [
+                0.012507376478000001,
+                0.011143651377999999,
+                0.008662105308,
+                0.008955403864,
+                0.014104312891999999,
+                0.02435504297,
+                0.036107132071999996,
+                0.045509821296,
+                0.044742489052,
+                0.040110105076,
+                0.028431820339999997,
+                0.019072256518,
+                0.013948486076,
+                0.017259059698000002,
+                0.029583742882,
+                0.05028687372000001,
+                0.073040652424,
+                0.093293137676,
+                0.103615192434,
+                0.10405209765800001,
+                0.091738553834,
+                0.073574789268,
+                0.057727671082,
+                0.049818137644000005,
+                0.054380951954,
+                0.06928145035,
+                0.08892463377000001,
+                0.108320538678,
+                0.12079792733,
+                0.12438423381
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
                 0.0092947891,
                 0.0083044033,
                 0.0063522106,
@@ -1654,8 +2915,7 @@
                 0.0806735091,
                 0.0899273459,
                 0.0924908405
-            ],
-            "systematic_normalization_error": 0.05
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
@@ -1663,7 +2923,9 @@
         "target": "Ca-40",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 30 of 30 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1802,7 +3064,8 @@
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 27 of 27 points without one in EXFOR (added in quadrature to the reader error): Lombardi et al., NPA 188 (1972) 103: 2 % assigned (1 % statistical); Ay typical 0.02",
             "normalisation uncertainty 10.0 % from the authors: Lombardi: 10 % (Rutherford normalisation at 4 MeV)",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1907,7 +3170,8 @@
         "target": "Ca-40",
         "notes": [
             "author uncertainty at 26 of 26 points without one in EXFOR (added in quadrature to the reader error): Dicello et al., PRC 4 (1971) 1130: relative error about 2 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1957,7 +3221,8 @@
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -2029,6 +3294,36 @@
                 0.0048
             ],
             "y_err": [
+                0.0140886,
+                0.0070472,
+                0.00325,
+                0.00058,
+                0.00099,
+                0.0014268,
+                0.0016858,
+                0.0016404,
+                0.0012740000000000002,
+                0.0005422,
+                0.00051,
+                0.00044,
+                0.0004242,
+                0.00047180000000000003,
+                0.00051,
+                0.00044,
+                0.00033,
+                0.00032,
+                0.00022,
+                0.00021,
+                0.00027,
+                0.00031,
+                0.00022,
+                0.00025,
+                0.0002,
+                0.00019,
+                0.00025
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
                 0.00858,
                 0.00385,
                 0.00325,
@@ -2056,15 +3351,16 @@
                 0.0002,
                 0.00019,
                 0.00025
-            ],
-            "systematic_normalization_error": 0.05
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 9 of 27 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -2199,7 +3495,8 @@
         "target": "Ca-40",
         "notes": [
             "author uncertainty at 36 of 36 points without one in EXFOR (added in quadrature to the reader error): Dicello et al., PRC 4 (1971) 1130: relative error about 2 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -2342,7 +3639,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -2477,7 +3775,8 @@
         "target": "Ca-40",
         "notes": [
             "author uncertainty at 36 of 36 points without one in EXFOR (added in quadrature to the reader error): Dicello et al., PRC 4 (1971) 1130: relative error about 2 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -2612,7 +3911,8 @@
         "target": "Ca-40",
         "notes": [
             "author uncertainty at 36 of 36 points without one in EXFOR (added in quadrature to the reader error): Dicello et al., PRC 4 (1971) 1130: relative error about 2 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -2770,7 +4070,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -2908,7 +4209,8 @@
         "target": "Ca-40",
         "notes": [
             "author uncertainty at 37 of 37 points without one in EXFOR (added in quadrature to the reader error): Dicello et al., PRC 4 (1971) 1130: relative error about 2 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -3063,6 +4365,68 @@
                 0.0704964517,
                 0.0646521732,
                 0.0682163639,
+                0.06578800758,
+                0.065339334718,
+                0.071650167712,
+                0.072506916674,
+                0.072876780974,
+                0.057098730128,
+                0.0495684547,
+                0.0578893651,
+                0.0334689049,
+                0.0230810531,
+                0.019839068808,
+                0.022408857222,
+                0.03027267691,
+                0.039636101272,
+                0.049520582588,
+                0.06052303608,
+                0.1686951082,
+                0.07848852197400001,
+                0.081948526832,
+                0.085639205998,
+                0.07890084354600001,
+                0.072625814704,
+                0.065726870354,
+                0.055113518442,
+                0.0475545223,
+                0.0569047355,
+                0.039331833,
+                0.0242326792,
+                0.0179779215,
+                0.015904161,
+                0.017106571068000002,
+                0.019356482016,
+                0.027634029727999998,
+                0.037308450012,
+                0.039853588528,
+                0.038189432484,
+                0.041675454062,
+                0.047819864892000005,
+                0.053908336788,
+                0.075827512198
+            ],
+            "systematic_normalization_error": 0.03,
+            "y_err_before_floor": [
+                0.0227619761,
+                0.0175583401,
+                0.0206858759,
+                0.0270861693,
+                0.0211438562,
+                0.0251955714,
+                0.0253482526,
+                0.0202698502,
+                0.0171007761,
+                0.0156687729,
+                0.0122215963,
+                0.0114721177,
+                0.0045828575,
+                0.0154621663,
+                0.0202965145,
+                0.0239843853,
+                0.0704964517,
+                0.0646521732,
+                0.0682163639,
                 0.0493410057,
                 0.0457375343,
                 0.046572609,
@@ -3103,15 +4467,16 @@
                 0.0286919189,
                 0.0431266694,
                 0.0644533854
-            ],
-            "systematic_normalization_error": 0.03
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "relative error floor 2 % applied at 29 of 59 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -3246,7 +4611,8 @@
         "target": "Ca-40",
         "notes": [
             "author uncertainty at 36 of 36 points without one in EXFOR (added in quadrature to the reader error): Dicello et al., PRC 4 (1971) 1130: relative error about 2 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -3400,6 +4766,71 @@
                 0.0221767389,
                 0.1190943975,
                 0.0660375479,
+                0.041811567778,
+                0.070092475364,
+                0.07821437025,
+                0.08145271229800001,
+                0.08071207295800001,
+                0.082147348,
+                0.064325075226,
+                0.0583603479,
+                0.0483589874,
+                0.0784744445,
+                0.031939808556,
+                0.027364809968000003,
+                0.031612477337999996,
+                0.036218300503999996,
+                0.046102559824,
+                0.053567328812,
+                0.055552325949999995,
+                0.065649344532,
+                0.067040445106,
+                0.070389216476,
+                0.067558987916,
+                0.06921652904600001,
+                0.063332943418,
+                0.05721390199,
+                0.0504644436,
+                0.0836854232,
+                0.0369038337,
+                0.0262572917,
+                0.023617118316,
+                0.0258268005,
+                0.0198084072,
+                0.0186420393,
+                0.017847413,
+                0.0192287958,
+                0.0229505501,
+                0.0476237039,
+                0.0285515558,
+                0.0310379645,
+                0.0344628478,
+                0.0366627487,
+                0.036524712812,
+                0.0394459472,
+                0.0381513591,
+                0.034356066296,
+                0.032585121434,
+                0.034749377858,
+                0.0409399924,
+                0.036973832404000005,
+                0.039545063092,
+                0.043161471686
+            ],
+            "systematic_normalization_error": 0.03,
+            "y_err_before_floor": [
+                0.0245063321,
+                0.0269485895,
+                0.0273298856,
+                0.0291537054,
+                0.0214897417,
+                0.0177409361,
+                0.0088908866,
+                0.0084557344,
+                0.0180037204,
+                0.0221767389,
+                0.1190943975,
+                0.0660375479,
                 0.037630411,
                 0.0560739803,
                 0.0508393407,
@@ -3450,15 +4881,16 @@
                 0.0332764492,
                 0.0355905568,
                 0.0388453245
-            ],
-            "systematic_normalization_error": 0.03
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "relative error floor 2 % applied at 28 of 62 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -3625,7 +5057,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -3774,6 +5207,69 @@
                 0.0061064783,
                 0.0194189393,
                 0.0291107752,
+                0.040093390986,
+                0.06017266689200001,
+                0.07620492298,
+                0.086737218028,
+                0.092098976618,
+                0.090192311412,
+                0.083414552322,
+                0.085545133,
+                0.0643804354,
+                0.0524024409,
+                0.0371429885,
+                0.034179008845999996,
+                0.035297330736,
+                0.039172204982,
+                0.046983380876,
+                0.054223061169999996,
+                0.061034746461999995,
+                0.06602330881,
+                0.068477658576,
+                0.0795571505,
+                0.066724050876,
+                0.06228859766000001,
+                0.056330840904,
+                0.0890099467,
+                0.040332089782,
+                0.03675618885,
+                0.035311323203999996,
+                0.0559583647,
+                0.031799687964,
+                0.032007707254,
+                0.029122586120000002,
+                0.0273933707,
+                0.0597955188,
+                0.0244598213,
+                0.0312302246,
+                0.0218269151,
+                0.0224261598,
+                0.023676089,
+                0.0314775783,
+                0.0259190632,
+                0.030688415112,
+                0.035055739068000004,
+                0.0581192538,
+                0.0627480923,
+                0.0541185584,
+                0.047910333084,
+                0.048188098258,
+                0.048129575904,
+                0.047325653198
+            ],
+            "systematic_normalization_error": 0.03,
+            "y_err_before_floor": [
+                0.0265353934,
+                0.0298586243,
+                0.0317850132,
+                0.0328024299,
+                0.0361180177,
+                0.0292154444,
+                0.0200809373,
+                0.0074022301,
+                0.0061064783,
+                0.0194189393,
+                0.0291107752,
                 0.0340793823,
                 0.0391122335,
                 0.0457229538,
@@ -3823,15 +5319,16 @@
                 0.0409598835,
                 0.0409101395,
                 0.0402268052
-            ],
-            "systematic_normalization_error": 0.03
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "relative error floor 2 % applied at 30 of 60 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -3998,7 +5495,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -4165,7 +5663,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -4351,6 +5850,89 @@
                 0.0265655251,
                 0.0311877207,
                 0.0355601963,
+                0.032120779156,
+                0.030994488624,
+                0.02702753934,
+                0.0205522774,
+                0.0150714233,
+                0.0081908755,
+                0.0050531704,
+                0.0063514049,
+                0.0116662046,
+                0.020982796216,
+                0.035184432234,
+                0.052208422312,
+                0.070018051554,
+                0.08386462765,
+                0.09453826866000001,
+                0.10129889262800001,
+                0.10097574650600001,
+                0.097038414632,
+                0.08961497078800001,
+                0.077468097128,
+                0.06781059553400001,
+                0.0638116228,
+                0.0637813184,
+                0.0579414776,
+                0.0579886326,
+                0.0466809434,
+                0.0663185546,
+                0.0783195357,
+                0.0861461958,
+                0.100297687,
+                0.0788021199,
+                0.1082961235,
+                0.1273788966,
+                0.1263721983,
+                0.1275803093,
+                0.0783702575,
+                0.0771107536,
+                0.0693159385,
+                0.0665704484,
+                0.0657181781,
+                0.0416882053,
+                0.0548098738,
+                0.0514666225,
+                0.0413194882,
+                0.0407418114,
+                0.0414830924,
+                0.0518791838,
+                0.0518591353,
+                0.0536396838,
+                0.0602157274,
+                0.0584008542,
+                0.0613676853,
+                0.0550589669,
+                0.0556642973,
+                0.0500618974,
+                0.0479049144,
+                0.040632961,
+                0.0253083794,
+                0.0237571606,
+                0.0222328759,
+                0.0269694789,
+                0.0305072149,
+                0.0324624042,
+                0.0389950568,
+                0.0445271057,
+                0.0477033397,
+                0.0530839967,
+                0.0587604934,
+                0.0578686455,
+                0.0630659435,
+                0.0632479195,
+                0.0637330505
+            ],
+            "systematic_normalization_error": 0.03,
+            "y_err_before_floor": [
+                0.064962228,
+                0.0601174538,
+                0.0425083811,
+                0.0259282082,
+                0.0227672553,
+                0.0265655251,
+                0.0311877207,
+                0.0355601963,
                 0.0240905844,
                 0.0263453153,
                 0.0229734084,
@@ -4423,15 +6005,16 @@
                 0.0630659435,
                 0.0632479195,
                 0.0637330505
-            ],
-            "systematic_normalization_error": 0.03
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "relative error floor 2 % applied at 15 of 80 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -4598,7 +6181,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -4766,7 +6350,8 @@
         "target": "Ca-40",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -4933,7 +6518,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -5079,17 +6665,17 @@
                 0.2390840612
             ],
             "y_err": [
-                0.0188087435,
+                0.018808743506,
                 0.0318843545,
                 0.0466032859,
-                0.0499843189,
-                0.0521338564,
-                0.0479767761,
+                0.049984318916000005,
+                0.052133856412,
+                0.047976776128000005,
                 0.0340491594,
                 0.0173019063,
-                0.0141054351,
-                0.0208973624,
-                0.0384583448,
+                0.014105435127999999,
+                0.020897362410000002,
+                0.038458344848,
                 0.059571626,
                 0.0818230575,
                 0.1470367605,
@@ -5210,14 +6796,82 @@
                 0.4,
                 0.4
             ],
-            "systematic_normalization_error": 0.05
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
+                0.0188087435,
+                0.0318843545,
+                0.0466032859,
+                0.0499843189,
+                0.0521338564,
+                0.0479767761,
+                0.0340491594,
+                0.0173019063,
+                0.0141054351,
+                0.0208973624,
+                0.0384583448,
+                0.059571626,
+                0.0818230575,
+                0.1470367605,
+                0.1581657391,
+                0.1381796667,
+                0.118135136,
+                0.1027476327,
+                0.0759462804,
+                0.0549353949,
+                0.0484646784,
+                0.0506282203,
+                0.0569282096,
+                0.0701874254,
+                0.0739053062,
+                0.1003801688,
+                0.0850327253,
+                0.0759329679,
+                0.0811076906,
+                0.0683839074,
+                0.0551400499,
+                0.0497501341,
+                0.0488202686,
+                0.0458757471,
+                0.0476078848,
+                0.0555942009,
+                0.0630609724,
+                0.0783705457,
+                0.0707980457,
+                0.0556965964,
+                0.057751053,
+                0.0496236802,
+                0.0400147638,
+                0.0192932605,
+                0.0180934791,
+                0.0163324653,
+                0.0156429209,
+                0.0146355156,
+                0.0159456762,
+                0.0158971974,
+                0.0170872665,
+                0.0185663304,
+                0.0200785662,
+                0.0206335528,
+                0.0233356176,
+                0.0271468276,
+                0.0297000586,
+                0.0301256657,
+                0.032699549,
+                0.0304979694,
+                0.0324833642,
+                0.0248438403,
+                0.0229701869,
+                0.0167358843
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "relative error floor 2 % applied at 7 of 64 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -5384,7 +7038,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -5552,7 +7207,8 @@
         "target": "Ca-40",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -5666,6 +7322,57 @@
                 0.0636555141
             ],
             "y_err": [
+                0.028739542328000002,
+                0.0534870379,
+                0.078598028,
+                0.0690493,
+                0.076800479,
+                0.0846028305,
+                0.095124821,
+                0.0671797008,
+                0.0438477379,
+                0.0479725994,
+                0.0473700526,
+                0.0270254114,
+                0.016511118364,
+                0.016266271624,
+                0.0283867624,
+                0.0501569079,
+                0.090991874854,
+                0.087645448,
+                0.048797116811999997,
+                0.056133999874,
+                0.029025309782000002,
+                0.031833410426,
+                0.031711731734,
+                0.037765238220000004,
+                0.039571974402,
+                0.028251883888000002,
+                0.018409621214,
+                0.014603227306,
+                0.015087068216,
+                0.015407238702,
+                0.012898987514,
+                0.0103155592,
+                0.0077104207,
+                0.008168368,
+                0.004358023,
+                0.0051061646,
+                0.005251171,
+                0.0059024497,
+                0.005098187400000001,
+                0.0063755661259999995,
+                0.0065779052,
+                0.0059614541,
+                0.0044173201,
+                0.0039975354,
+                0.0047696718,
+                0.005322295,
+                0.0059843228,
+                0.0034373978
+            ],
+            "systematic_normalization_error": 0.03,
+            "y_err_before_floor": [
                 0.0287395423,
                 0.0534870379,
                 0.078598028,
@@ -5714,15 +7421,16 @@
                 0.005322295,
                 0.0059843228,
                 0.0034373978
-            ],
-            "systematic_normalization_error": 0.03
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "relative error floor 2 % applied at 20 of 48 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -5856,7 +7564,8 @@
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
             "normalisation uncertainty 11.2 % from the authors: Fulmer: thickness 5 % (+) charge collection 10 %",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -5906,7 +7615,8 @@
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -5984,6 +7694,39 @@
                 0.4701098416
             ],
             "y_err": [
+                0.061969949,
+                0.065729611948,
+                0.064716616858,
+                0.06262885236599999,
+                0.058351094125999994,
+                0.050198801792,
+                0.044444981134,
+                0.036028544812000005,
+                0.028236093379999997,
+                0.016393335678000002,
+                0.013401263032,
+                0.014129841786,
+                0.014962599686,
+                0.019285725428,
+                0.025382610155999998,
+                0.041751790338,
+                0.1440009692,
+                0.062033747686,
+                0.1409637587,
+                0.043399188458,
+                0.0780299107,
+                0.0501111191,
+                0.020161935212,
+                0.0610802628,
+                0.02349120982,
+                0.0610076549,
+                0.039873928,
+                0.0266929165,
+                0.0290676598,
+                0.0240670567
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
                 0.0052977088,
                 0.0063052737,
                 0.0069399239,
@@ -6014,8 +7757,7 @@
                 0.0266929165,
                 0.0290676598,
                 0.0240670567
-            ],
-            "systematic_normalization_error": 0.05
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
@@ -6023,7 +7765,9 @@
         "target": "Ca-40",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 20 of 30 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -6073,7 +7817,8 @@
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -6219,7 +7964,7 @@
                 0.0094810604,
                 0.0078899502,
                 0.006102923,
-                0.0032060472,
+                0.00349852141,
                 0.0031317814,
                 0.0021473388,
                 0.001712428,
@@ -6227,14 +7972,63 @@
                 0.002531579,
                 0.0028935598
             ],
-            "systematic_normalization_error": 0.1
+            "systematic_normalization_error": 0.1,
+            "y_err_before_floor": [
+                0.0142856294,
+                0.0175962145,
+                0.0445553523,
+                0.0774387914,
+                0.0977211951,
+                0.1094242929,
+                0.1043585881,
+                0.0802820448,
+                0.0491850244,
+                0.0239950284,
+                0.0175650009,
+                0.0269962933,
+                0.0457630394,
+                0.0605221265,
+                0.071513151,
+                0.0726925158,
+                0.0640375449,
+                0.0497103745,
+                0.036420417,
+                0.0261590043,
+                0.0206902046,
+                0.0225200911,
+                0.0245039775,
+                0.0271813799,
+                0.0265540827,
+                0.0233354685,
+                0.0197634332,
+                0.0160881399,
+                0.0126019028,
+                0.0105915313,
+                0.0095575599,
+                0.0100722809,
+                0.0106631722,
+                0.0102882486,
+                0.0104235682,
+                0.0094810604,
+                0.0078899502,
+                0.006102923,
+                0.0032060472,
+                0.0031317814,
+                0.0021473388,
+                0.001712428,
+                0.0015585879,
+                0.002531579,
+                0.0028935598
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "relative error floor 2 % applied at 1 of 45 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -6284,7 +8078,8 @@
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -6334,7 +8129,8 @@
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -6384,7 +8180,8 @@
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -6434,7 +8231,8 @@
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -6538,6 +8336,52 @@
                 0.0045244838
             ],
             "y_err": [
+                0.036418869206,
+                0.055245629126000007,
+                0.058970015163999995,
+                0.0497407391,
+                0.0306794086,
+                0.1255553108,
+                0.010804725646,
+                0.021303964798,
+                0.031261674528,
+                0.036200285534,
+                0.032745272096,
+                0.025052557814,
+                0.018383961724,
+                0.014190038996000002,
+                0.012108564438,
+                0.01217613856,
+                0.011310460686,
+                0.009943375308,
+                0.007936510674,
+                0.006102704947999999,
+                0.005411622512000001,
+                0.005011518804000001,
+                0.004780082512,
+                0.004321627186,
+                0.003536007246,
+                0.002538687588,
+                0.001631284928,
+                0.0009878865,
+                0.0007899369,
+                0.0006455834,
+                0.0007540246,
+                0.0008002353,
+                0.00080795,
+                0.0009687274,
+                0.000859307,
+                0.0005893033,
+                0.000381668,
+                0.0002118694,
+                0.000197555,
+                0.0001693713,
+                0.0002733752,
+                0.0002391729,
+                0.0003361856
+            ],
+            "systematic_normalization_error": 0.1,
+            "y_err_before_floor": [
                 0.0319308296,
                 0.048764548,
                 0.0549362649,
@@ -6581,15 +8425,16 @@
                 0.0002733752,
                 0.0002391729,
                 0.0003361856
-            ],
-            "systematic_normalization_error": 0.1
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "relative error floor 2 % applied at 24 of 43 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -6639,7 +8484,8 @@
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -6769,7 +8615,9 @@
         "sector": "elastic_diff_xs",
         "projectile": "proton",
         "target": "Ca-40",
-        "notes": []
+        "notes": [
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
     },
     {
         "type": "ECS_Rutherford",
@@ -6872,6 +8720,52 @@
                 0.0030614368
             ],
             "y_err": [
+                0.038060792596,
+                0.058212457342,
+                0.065968378466,
+                0.06134324331800001,
+                0.0465617469,
+                0.030482478,
+                0.0162092881,
+                0.011317051808,
+                0.015094454368,
+                0.022528838046,
+                0.030394692902,
+                0.03389200004,
+                0.0307864777,
+                0.0239196323,
+                0.01675916314,
+                0.01254757844,
+                0.010823689249999999,
+                0.009742247672,
+                0.008113189818,
+                0.0067631800519999995,
+                0.0057049959,
+                0.0052519112,
+                0.0048069287,
+                0.00419068965,
+                0.0033448246120000003,
+                0.0023001327,
+                0.0015086876,
+                0.0008643822,
+                0.0006047727,
+                0.0007173321,
+                0.0007497545,
+                0.0007570833,
+                0.0006845937,
+                0.0005901093,
+                0.000397109,
+                0.0002887657,
+                0.0001694721,
+                0.0001637232,
+                0.0001955541,
+                0.0002239092,
+                0.0003276213,
+                0.0003178501,
+                0.0003518494
+            ],
+            "systematic_normalization_error": 0.1,
+            "y_err_before_floor": [
                 0.036409963,
                 0.0529882625,
                 0.059903104,
@@ -6915,15 +8809,16 @@
                 0.0003276213,
                 0.0003178501,
                 0.0003518494
-            ],
-            "systematic_normalization_error": 0.1
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "relative error floor 2 % applied at 17 of 43 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -6981,7 +8876,8 @@
         "notes": [
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -7045,19 +8941,19 @@
             "y_err": [
                 0.0288816667,
                 0.0596423571,
-                0.0557299776,
-                0.0419015438,
+                0.059965455874,
+                0.04904226528,
                 0.0535719208,
                 0.0286176979,
-                0.0131846215,
-                0.0125907307,
+                0.013931750004000001,
+                0.012597187456000001,
                 0.0169687151,
                 0.0544309207,
-                0.0331407539,
-                0.0319576445,
+                0.034618279174000004,
+                0.035896208206,
                 0.056376402,
-                0.0246986172,
-                0.0206496723,
+                0.030782276600000002,
+                0.022226556350000003,
                 0.0254774625,
                 0.0121350252,
                 0.0085336198,
@@ -7090,7 +8986,31 @@
                 0.31,
                 0.31
             ],
-            "systematic_normalization_error": 0.05
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
+                0.0288816667,
+                0.0596423571,
+                0.0557299776,
+                0.0419015438,
+                0.0535719208,
+                0.0286176979,
+                0.0131846215,
+                0.0125907307,
+                0.0169687151,
+                0.0544309207,
+                0.0331407539,
+                0.0319576445,
+                0.056376402,
+                0.0246986172,
+                0.0206496723,
+                0.0254774625,
+                0.0121350252,
+                0.0085336198,
+                0.0104954127,
+                0.0126410034,
+                0.0129072395,
+                0.0090862943
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
@@ -7099,7 +9019,9 @@
         "notes": [
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 8 of 22 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -7225,7 +9147,8 @@
         "target": "Ca-40",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -7275,7 +9198,8 @@
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -7348,7 +9272,8 @@
         "target": "Ca-40",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     }
 ]

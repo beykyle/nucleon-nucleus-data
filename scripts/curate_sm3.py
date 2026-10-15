@@ -22,7 +22,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 
-from nn_corpora import elm_curate, munge, serialize, sm3, spec  # noqa: E402
+from nn_corpora import elm_curate, elm_evaluation, munge, serialize, sm3, spec  # noqa: E402
 
 DATA = ROOT / "data"
 PROJECTILE_TUPLE = {"proton": (1, 1), "neutron": (1, 0)}
@@ -37,7 +37,8 @@ def copied(pick: sm3.Pick, target) -> tuple[dict, str | None]:
             and abs(float(r["energy"]) - pick.energy) < 1e-6]
     if len(recs) != 1:
         raise LookupError(f"{pick}: {len(recs)} records in {path}")
-    rec = dict(recs[0])
+    # an ELM record carries the ELM calibration evaluation (error floor): sm3 keeps the published errors
+    rec = elm_evaluation.revert(recs[0]) if pick.source == "elm" else dict(recs[0])
     rec["notes"] = list(rec.get("notes") or []) + [
         f"copied from the {pick.source} corpus ({src_sector}) for sm3 ({pick.reference})"]
     rec["corpus"], rec["sector"] = "sm3", pick.sector

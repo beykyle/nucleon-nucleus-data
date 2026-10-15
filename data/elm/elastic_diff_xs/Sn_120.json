@@ -1,6 +1,1239 @@
 [
     {
         "type": "ECS",
+        "energy": 0.4,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "41005034",
+        "source": "R.M.Musaelyan, V.D.Ovdienko, et al., Yadernaya Fizika 50, 1531 (1989); Soviet Journal of Nuclear Physics 50, 949 (1989); 1.Int.Conf.on Neutron Physics, Kiev,14-18 Sep 1987 3, 370 (1987); Kratkie Soobshcheniya po Fizike , (4), 19 (1986); Soviet Physics - Lebedev Inst.Report , (4), 30 (1986);  Data taken from the EXFOR database, file EXFOR 41005001 dated 1989, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.2410532933,
+                60.4175190149,
+                90.4821108535,
+                120.4175190149,
+                150.2410532933
+            ],
+            "y": [
+                1.322,
+                0.907,
+                0.342,
+                0.203,
+                0.227
+            ],
+            "y_err": [
+                0.093,
+                0.063,
+                0.024,
+                0.014,
+                0.016
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Sn-120",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 0.6,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "41005039",
+        "source": "R.M.Musaelyan, V.D.Ovdienko, et al., Yadernaya Fizika 50, 1531 (1989); Soviet Journal of Nuclear Physics 50, 949 (1989); 1.Int.Conf.on Neutron Physics, Kiev,14-18 Sep 1987 3, 370 (1987); Kratkie Soobshcheniya po Fizike , (4), 19 (1986); Soviet Physics - Lebedev Inst.Report , (4), 30 (1986);  Data taken from the EXFOR database, file EXFOR 41005001 dated 1989, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.2410532933,
+                60.4175190149,
+                90.4821108535,
+                120.4175190149,
+                150.2410532933
+            ],
+            "y": [
+                1.437,
+                0.806,
+                0.324,
+                0.189,
+                0.314
+            ],
+            "y_err": [
+                0.101,
+                0.056,
+                0.023,
+                0.013,
+                0.022
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Sn-120",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 0.8,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "41005044",
+        "source": "R.M.Musaelyan, V.D.Ovdienko, et al., Yadernaya Fizika 50, 1531 (1989); Soviet Journal of Nuclear Physics 50, 949 (1989); 1.Int.Conf.on Neutron Physics, Kiev,14-18 Sep 1987 3, 370 (1987); Kratkie Soobshcheniya po Fizike , (4), 19 (1986); Soviet Physics - Lebedev Inst.Report , (4), 30 (1986);  Data taken from the EXFOR database, file EXFOR 41005001 dated 1989, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.2410532933,
+                60.4175190149,
+                90.4821108535,
+                120.4175190149,
+                150.2410532933
+            ],
+            "y": [
+                1.511,
+                0.747,
+                0.23,
+                0.151,
+                0.315
+            ],
+            "y_err": [
+                0.106,
+                0.052,
+                0.016,
+                0.011,
+                0.022
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Sn-120",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 0.93,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "41005049",
+        "source": "R.M.Musaelyan, V.D.Ovdienko, et al., Yadernaya Fizika 50, 1531 (1989); Soviet Journal of Nuclear Physics 50, 949 (1989); 1.Int.Conf.on Neutron Physics, Kiev,14-18 Sep 1987 3, 370 (1987); Kratkie Soobshcheniya po Fizike , (4), 19 (1986); Soviet Physics - Lebedev Inst.Report , (4), 30 (1986);  Data taken from the EXFOR database, file EXFOR 41005001 dated 1989, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.2410532933,
+                60.4175190149,
+                80.4747863374,
+                100.4747863374,
+                120.4175190149,
+                151.7300413206
+            ],
+            "y": [
+                1.452,
+                0.687,
+                0.389,
+                0.213,
+                0.168,
+                0.341
+            ],
+            "y_err": [
+                0.101,
+                0.048,
+                0.031,
+                0.019,
+                0.015,
+                0.027
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Sn-120",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 1.06,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "41005054",
+        "source": "R.M.Musaelyan, V.D.Ovdienko, et al., Yadernaya Fizika 50, 1531 (1989); Soviet Journal of Nuclear Physics 50, 949 (1989); 1.Int.Conf.on Neutron Physics, Kiev,14-18 Sep 1987 3, 370 (1987); Kratkie Soobshcheniya po Fizike , (4), 19 (1986); Soviet Physics - Lebedev Inst.Report , (4), 30 (1986);  Data taken from the EXFOR database, file EXFOR 41005001 dated 1989, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.2410532933,
+                60.4175190149,
+                90.4821108535,
+                120.4175190149,
+                150.2410532933
+            ],
+            "y": [
+                1.631,
+                0.683,
+                0.236,
+                0.116,
+                0.358
+            ],
+            "y_err": [
+                0.115,
+                0.055,
+                0.017,
+                0.008,
+                0.025
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Sn-120",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 1.45,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "41005059",
+        "source": "R.M.Musaelyan, V.D.Ovdienko, et al., Yadernaya Fizika 50, 1531 (1989); Soviet Journal of Nuclear Physics 50, 949 (1989); 1.Int.Conf.on Neutron Physics, Kiev,14-18 Sep 1987 3, 370 (1987); Kratkie Soobshcheniya po Fizike , (4), 19 (1986); Soviet Physics - Lebedev Inst.Report , (4), 30 (1986);  Data taken from the EXFOR database, file EXFOR 41005001 dated 1989, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.2410532933,
+                45.3409018424,
+                60.4175190149,
+                90.4821108535,
+                105.4656829564,
+                125.3949205581,
+                151.7300413206
+            ],
+            "y": [
+                1.314,
+                0.891,
+                0.535,
+                0.173,
+                0.162,
+                0.134,
+                0.3
+            ],
+            "y_err": [
+                0.091,
+                0.062,
+                0.043,
+                0.016,
+                0.014,
+                0.012,
+                0.021
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Sn-120",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 1.52,
+        "energy_err": 0.03,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20326002",
+        "source": "S.Tanaka, Y.Tomita, et al., Nucl.Structure Conf.,Budapest 1972 , 148 (1972); Private communication: Tanaka  (1971); Progress report: EANDC(J)-22 10 (1971);  Data taken from the EXFOR database, file EXFOR 20326001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                25.1767169406,
+                35.3136400483,
+                45.3318072777,
+                55.3891229016,
+                65.417692956,
+                75.4633050848,
+                85.4689119708,
+                95.4513198124,
+                105.4858270618,
+                115.4041143589,
+                125.3802386634,
+                135.3163364272,
+                145.2855054757
+            ],
+            "y": [
+                1.828,
+                1.505,
+                1.065,
+                0.7876,
+                0.5324,
+                0.3354,
+                0.1975,
+                0.1398,
+                0.0885,
+                0.081,
+                0.1048,
+                0.156,
+                0.2361
+            ],
+            "y_err": [
+                0.05,
+                0.038,
+                0.027,
+                0.0198,
+                0.0133,
+                0.009,
+                0.007,
+                0.0058,
+                0.0046,
+                0.0044,
+                0.004,
+                0.005,
+                0.0067
+            ],
+            "x_err": [
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Sn-120",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 1.96,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "41005064",
+        "source": "R.M.Musaelyan, V.D.Ovdienko, et al., Yadernaya Fizika 50, 1531 (1989); Soviet Journal of Nuclear Physics 50, 949 (1989); 1.Int.Conf.on Neutron Physics, Kiev,14-18 Sep 1987 3, 370 (1987); Kratkie Soobshcheniya po Fizike , (4), 19 (1986); Soviet Physics - Lebedev Inst.Report , (4), 30 (1986);  Data taken from the EXFOR database, file EXFOR 41005001 dated 1989, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.2410532933,
+                45.3409018424,
+                60.4175190149,
+                90.4821108535,
+                105.4656829564,
+                120.4175190149,
+                135.3409018424,
+                151.7300413206
+            ],
+            "y": [
+                1.263,
+                0.8,
+                0.387,
+                0.128,
+                0.085,
+                0.101,
+                0.164,
+                0.277
+            ],
+            "y_err": [
+                0.088,
+                0.056,
+                0.031,
+                0.011,
+                0.008,
+                0.009,
+                0.013,
+                0.022
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Sn-120",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 2.05,
+        "energy_err": 0.02,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20326002",
+        "source": "S.Tanaka, Y.Tomita, et al., Nucl.Structure Conf.,Budapest 1972 , 148 (1972); Private communication: Tanaka  (1971); Progress report: EANDC(J)-22 10 (1971);  Data taken from the EXFOR database, file EXFOR 20326001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                25.1767169406,
+                35.3136400483,
+                45.3318072777,
+                55.3891229016,
+                65.417692956,
+                75.4633050848,
+                85.4689119708,
+                95.4513198124,
+                105.4858270618,
+                115.4041143589,
+                125.3802386634,
+                135.3163364272,
+                145.2855054757
+            ],
+            "y": [
+                1.527,
+                1.164,
+                0.8,
+                0.5601,
+                0.3545,
+                0.2144,
+                0.129,
+                0.089,
+                0.0572,
+                0.0564,
+                0.0838,
+                0.123,
+                0.2013
+            ],
+            "y_err": [
+                0.030539999999999998,
+                0.024,
+                0.018,
+                0.015,
+                0.0075,
+                0.0053,
+                0.0045,
+                0.0034,
+                0.0035,
+                0.0036,
+                0.0038,
+                0.004,
+                0.0052
+            ],
+            "x_err": [
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
+                0.026,
+                0.024,
+                0.018,
+                0.015,
+                0.0075,
+                0.0053,
+                0.0045,
+                0.0034,
+                0.0035,
+                0.0036,
+                0.0038,
+                0.004,
+                0.0052
+            ]
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Sn-120",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 1 of 13 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 2.57,
+        "energy_err": 0.02,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20326002",
+        "source": "S.Tanaka, Y.Tomita, et al., Nucl.Structure Conf.,Budapest 1972 , 148 (1972); Private communication: Tanaka  (1971); Progress report: EANDC(J)-22 10 (1971);  Data taken from the EXFOR database, file EXFOR 20326001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                25.1767169406,
+                35.3136400483,
+                45.3318072777,
+                55.3891229016,
+                65.417692956,
+                75.4633050848,
+                85.4689119708,
+                95.4513198124,
+                105.4858270618,
+                115.4041143589,
+                125.3802386634,
+                135.3163364272,
+                145.2855054757
+            ],
+            "y": [
+                1.367,
+                0.9556,
+                0.6108,
+                0.3256,
+                0.215,
+                0.1285,
+                0.08,
+                0.0421,
+                0.0316,
+                0.037,
+                0.0569,
+                0.0847,
+                0.1385
+            ],
+            "y_err": [
+                0.02734,
+                0.019112,
+                0.012216000000000001,
+                0.0068,
+                0.0051,
+                0.0037,
+                0.0032,
+                0.0025,
+                0.002,
+                0.0024,
+                0.0027,
+                0.0028,
+                0.0036
+            ],
+            "x_err": [
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
+                0.023,
+                0.0172,
+                0.0116,
+                0.0068,
+                0.0051,
+                0.0037,
+                0.0032,
+                0.0025,
+                0.002,
+                0.0024,
+                0.0027,
+                0.0028,
+                0.0036
+            ]
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Sn-120",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 3 of 13 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 3.08,
+        "energy_err": 0.02,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20326002",
+        "source": "S.Tanaka, Y.Tomita, et al., Nucl.Structure Conf.,Budapest 1972 , 148 (1972); Private communication: Tanaka  (1971); Progress report: EANDC(J)-22 10 (1971);  Data taken from the EXFOR database, file EXFOR 20326001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                25.1767169406,
+                35.3136400483,
+                45.3318072777,
+                55.3891229016,
+                65.417692956,
+                75.4633050848,
+                85.4689119708,
+                95.4513198124,
+                105.4858270618,
+                115.4041143589,
+                125.3802386634,
+                135.3163364272,
+                145.2855054757
+            ],
+            "y": [
+                1.078,
+                0.7119,
+                0.3529,
+                0.2375,
+                0.1492,
+                0.1067,
+                0.0608,
+                0.0291,
+                0.0234,
+                0.0363,
+                0.0625,
+                0.073,
+                0.0875
+            ],
+            "y_err": [
+                0.025,
+                0.015,
+                0.012,
+                0.01,
+                0.0051,
+                0.0039,
+                0.0022,
+                0.0018,
+                0.002,
+                0.0035,
+                0.0034,
+                0.0039,
+                0.0028
+            ],
+            "x_err": [
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Sn-120",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 3.6,
+        "energy_err": 0.02,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20326002",
+        "source": "S.Tanaka, Y.Tomita, et al., Nucl.Structure Conf.,Budapest 1972 , 148 (1972); Private communication: Tanaka  (1971); Progress report: EANDC(J)-22 10 (1971);  Data taken from the EXFOR database, file EXFOR 20326001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                25.1767169406,
+                35.3136400483,
+                45.3318072777,
+                55.3891229016,
+                65.417692956,
+                75.4633050848,
+                85.4689119708,
+                95.4513198124,
+                105.4858270618,
+                115.4041143589,
+                125.3802386634,
+                135.3163364272,
+                145.2855054757
+            ],
+            "y": [
+                1.03,
+                0.5514,
+                0.2539,
+                0.1487,
+                0.1293,
+                0.111,
+                0.0507,
+                0.0249,
+                0.0142,
+                0.0461,
+                0.0689,
+                0.076,
+                0.0686
+            ],
+            "y_err": [
+                0.023,
+                0.0134,
+                0.0076,
+                0.0049,
+                0.006,
+                0.0054,
+                0.0024,
+                0.002,
+                0.0018,
+                0.0023,
+                0.0028,
+                0.0028,
+                0.003
+            ],
+            "x_err": [
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Sn-120",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS_Rutherford",
+        "energy": 6.5,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "F1127006",
+        "source": "B.Ya.Guzhovskii, S.N.Abramovich, et al., Izv. Rossiiskoi Akademii Nauk, Ser.Fiz. 37, 1880 (1973); Bull.Russian Academy of Sciences - Physics 37, (9), 72 (1974);  Data taken from the EXFOR database, file EXFOR F1127001 dated 1973, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                30.2407213447,
+                50.3688079587,
+                70.4524115127,
+                75.4650416654,
+                90.4814469386,
+                95.4796148448,
+                100.4741325096,
+                105.4650416654,
+                115.4363381924,
+                120.4169440527,
+                125.3943767171,
+                135.3404323919,
+                140.3094659897,
+                145.2761444388,
+                155.2034663016,
+                160.1646628399,
+                165.1246062688
+            ],
+            "y": [
+                1013.0,
+                988.0,
+                961.0,
+                973.0,
+                976.0,
+                951.0,
+                934.0,
+                916.0,
+                873.0,
+                872.0,
+                868.0,
+                855.0,
+                852.0,
+                875.0,
+                864.0,
+                875.0,
+                873.0
+            ],
+            "y_err": [
+                20.26,
+                19.76,
+                19.22,
+                19.46,
+                19.52,
+                19.02,
+                18.68,
+                18.32,
+                17.46,
+                17.44,
+                17.36,
+                17.1,
+                17.04,
+                17.5,
+                17.28,
+                17.5,
+                17.46
+            ],
+            "systematic_normalization_error": 0.01,
+            "y_err_before_floor": [
+                6.078,
+                5.928,
+                5.766,
+                5.838,
+                5.856,
+                5.706,
+                5.604,
+                5.496,
+                5.238,
+                5.232,
+                5.208,
+                5.13,
+                5.112,
+                5.25,
+                5.184,
+                5.25,
+                5.238
+            ]
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "proton",
+        "target": "Sn-120",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "relative error floor 2 % applied at 17 of 17 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS_Rutherford",
+        "energy": 7.0,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "F1127006",
+        "source": "B.Ya.Guzhovskii, S.N.Abramovich, et al., Izv. Rossiiskoi Akademii Nauk, Ser.Fiz. 37, 1880 (1973); Bull.Russian Academy of Sciences - Physics 37, (9), 72 (1974);  Data taken from the EXFOR database, file EXFOR F1127001 dated 1973, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                30.2407213447,
+                50.3688079587,
+                70.4524115127,
+                75.4650416654,
+                80.4741325096,
+                90.4814469386,
+                95.4796148448,
+                100.4741325096,
+                105.4650416654,
+                115.4363381924,
+                120.4169440527,
+                125.3943767171,
+                135.3404323919,
+                140.3094659897,
+                145.2761444388,
+                155.2034663016,
+                160.1646628399,
+                165.1246062688
+            ],
+            "y": [
+                1033.0,
+                970.0,
+                952.0,
+                969.0,
+                978.0,
+                951.0,
+                929.0,
+                909.0,
+                865.0,
+                830.0,
+                825.0,
+                821.0,
+                825.0,
+                825.0,
+                829.0,
+                841.0,
+                843.0,
+                846.0
+            ],
+            "y_err": [
+                20.66,
+                19.400000000000002,
+                19.04,
+                19.38,
+                19.56,
+                19.02,
+                18.580000000000002,
+                18.18,
+                17.3,
+                16.6,
+                16.5,
+                16.42,
+                16.5,
+                16.5,
+                16.580000000000002,
+                16.82,
+                16.86,
+                16.92
+            ],
+            "systematic_normalization_error": 0.01,
+            "y_err_before_floor": [
+                6.198,
+                5.82,
+                5.712,
+                5.814,
+                5.868,
+                5.706,
+                5.574,
+                5.454,
+                5.19,
+                4.98,
+                4.95,
+                4.926,
+                4.95,
+                4.95,
+                4.974,
+                5.046,
+                5.058,
+                5.076
+            ]
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "proton",
+        "target": "Sn-120",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "relative error floor 2 % applied at 18 of 18 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS_Rutherford",
+        "energy": 9.7,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O0393008",
+        "source": "G.W.Greenlees, C.H.Poppe, et al., Physical Review, Part C, Nuclear Physics 3, 1231 (1971);  Data taken from the EXFOR database, file EXFOR O0393001 dated 71, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                17.7,
+                20.2,
+                22.7,
+                25.2,
+                30.2,
+                35.3,
+                40.3,
+                45.3,
+                50.4,
+                55.4,
+                60.4,
+                65.4,
+                68.0,
+                70.5,
+                75.5,
+                80.5,
+                85.5,
+                90.5,
+                95.5,
+                98.0,
+                100.4,
+                105.5,
+                110.5,
+                115.4,
+                120.4,
+                125.4,
+                130.4,
+                135.3,
+                140.3,
+                145.3,
+                150.2,
+                155.2,
+                160.2
+            ],
+            "y": [
+                1.0073023279,
+                1.0213757074,
+                1.0347599904,
+                1.0370876131,
+                1.0246347803,
+                0.9604734019,
+                0.8797860232,
+                0.7958682303,
+                0.7655943791,
+                0.7616067997,
+                0.7927720352,
+                0.8308075927,
+                0.8458657028,
+                0.8531838199,
+                0.8260741906,
+                0.7735643986,
+                0.6962426383,
+                0.6098403224,
+                0.5313082794,
+                0.5108672134,
+                0.494450909,
+                0.4755586096,
+                0.4947725229,
+                0.5195183868,
+                0.5594589644,
+                0.586997893,
+                0.6124091674,
+                0.6288472887,
+                0.632836112,
+                0.6195020248,
+                0.5991345207,
+                0.5736324239,
+                0.5564387841
+            ],
+            "y_err": [
+                0.020146046558,
+                0.020427514148000002,
+                0.020695199808,
+                0.020741752262,
+                0.020492695606000002,
+                0.019209468038,
+                0.017595720464,
+                0.015917364606,
+                0.015311887582000002,
+                0.015232135994000001,
+                0.015855440704,
+                0.016616151854000002,
+                0.016917314056,
+                0.017063676398,
+                0.016521483812,
+                0.015471287972000002,
+                0.013924852766000001,
+                0.012196806448,
+                0.010626165588000001,
+                0.010217344267999999,
+                0.00988901818,
+                0.009511172192000001,
+                0.009895450458,
+                0.010390367736,
+                0.011189179288,
+                0.01173995786,
+                0.012248183348,
+                0.012576945773999999,
+                0.012656722240000001,
+                0.012390040496000001,
+                0.011982690414,
+                0.011472648478000001,
+                0.011128775682
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
+                0.0126704695,
+                0.013368792,
+                0.0127224589,
+                0.0128035508,
+                0.0130195017,
+                0.0119461866,
+                0.0119427967,
+                0.0099483529,
+                0.0111494327,
+                0.0105595397,
+                0.0108598909,
+                0.0120406897,
+                0.011057068,
+                0.0075280925,
+                0.0119145316,
+                0.0098543235,
+                0.0096033467,
+                0.0086298159,
+                0.0076386174,
+                0.0073374106,
+                0.0073872148,
+                0.0068099085,
+                0.0077308207,
+                0.0079370865,
+                0.0080151714,
+                0.0088137822,
+                0.0095988898,
+                0.010342883,
+                0.0099572116,
+                0.0093863943,
+                0.0098622966,
+                0.0090031995,
+                0.0079871596
+            ]
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "proton",
+        "target": "Sn-120",
+        "notes": [
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 33 of 33 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 9.943,
+        "energy_err": 0.0355,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "13158007",
+        "source": "P.P.Guss, R.C.Byrd, et al., Physical Review, Part C, Nuclear Physics 39, 405 (1989);  Data taken from the EXFOR database, file EXFOR 13158001 dated 8902, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                23.6,
+                27.2,
+                29.0,
+                30.8,
+                34.0,
+                41.4,
+                46.3,
+                50.7,
+                55.3,
+                60.0,
+                64.7,
+                69.4,
+                74.2,
+                79.9,
+                85.9,
+                90.9,
+                95.6,
+                100.4,
+                105.1,
+                109.8,
+                114.6,
+                119.7,
+                125.1,
+                130.3,
+                135.1,
+                139.8,
+                144.8,
+                150.0,
+                155.0
+            ],
+            "y": [
+                1.19656,
+                0.63052,
+                0.40528,
+                0.26184,
+                0.09746,
+                0.06843,
+                0.14471,
+                0.17913,
+                0.19638,
+                0.1528,
+                0.11074,
+                0.05532,
+                0.02305,
+                0.0098,
+                0.01101,
+                0.01954,
+                0.0261,
+                0.02952,
+                0.02864,
+                0.02228,
+                0.01658,
+                0.00916,
+                0.00748,
+                0.00852,
+                0.01002,
+                0.01036,
+                0.00941,
+                0.01092,
+                0.01432
+            ],
+            "y_err": [
+                0.0571,
+                0.04385,
+                0.02818,
+                0.01801,
+                0.0038,
+                0.00512,
+                0.00388,
+                0.00579,
+                0.00511,
+                0.00398,
+                0.00479,
+                0.00262,
+                0.00136,
+                0.00056,
+                0.00067,
+                0.00082,
+                0.00092,
+                0.00111,
+                0.00083,
+                0.00079,
+                0.00072,
+                0.00035,
+                0.00038,
+                0.00048,
+                0.00042,
+                0.00053,
+                0.00044,
+                0.00068,
+                0.00059
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Sn-120",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
         "energy": 11.0,
         "energy_err": 0.0,
         "energy_units": "MeV",
@@ -70,34 +1303,34 @@
                 0.01113
             ],
             "y_err": [
-                0.112,
-                0.0631,
-                0.00283,
-                0.00911,
-                0.00214,
-                0.0021,
-                0.00407,
-                0.00516,
-                0.00469,
-                0.00354,
-                0.00203,
-                0.00093,
-                0.00042,
-                0.00021,
-                0.00027,
-                0.0005,
-                0.00067,
-                0.00076,
-                0.00071,
-                0.00052,
-                0.00032,
-                0.00016,
-                0.00028,
-                0.00036,
-                0.00043,
-                0.00042,
-                0.00038,
-                0.00037
+                0.18725000000000003,
+                0.11308878608438196,
+                0.050802986676535905,
+                0.01856719096965211,
+                0.0046297705403404886,
+                0.004807072538860103,
+                0.00981841228719467,
+                0.013101765358993338,
+                0.012469407846039969,
+                0.0098649777942265,
+                0.00591169096965211,
+                0.002813455958549223,
+                0.0013287479644707625,
+                0.0006927964470762399,
+                0.0009353234641006662,
+                0.0017659774241302738,
+                0.0024421058475203555,
+                0.0028574818652849737,
+                0.0027802005921539604,
+                0.002069677646188009,
+                0.001318200222057735,
+                0.000617961139896373,
+                0.000781960769800148,
+                0.0012397527757216876,
+                0.0018524851961509994,
+                0.0019731550703182828,
+                0.0016598704663212437,
+                0.0016694999999999998
             ],
             "systematic_normalization_error": 0.05
         },
@@ -106,7 +1339,10 @@
         "projectile": "neutron",
         "target": "Sn-120",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "per-point error = max(EXFOR DATA-ERR, the authors' total) at 28 of 28 points: Rapaport et al., NPA 341 (1980) 56, EXFOR ERR-ANALYS: total uncertainty (ERR-T) 5-15 %, not filed as a column; read as rising from 5 % forward to 15 % at the most backward angle",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -245,7 +1481,9 @@
         "sector": "elastic_diff_xs",
         "projectile": "neutron",
         "target": "Sn-120",
-        "notes": []
+        "notes": [
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
     },
     {
         "type": "ECS",
@@ -354,7 +1592,8 @@
         "projectile": "neutron",
         "target": "Sn-120",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -432,6 +1671,39 @@
                 0.247685658
             ],
             "y_err": [
+                0.017574615582,
+                0.01585095571,
+                0.011876917184,
+                0.007870502298,
+                0.006605207401999999,
+                0.00794640524,
+                0.010675280576,
+                0.0122509917,
+                0.012172665216,
+                0.009813408878,
+                0.006767599234,
+                0.004235324118,
+                0.0033551803600000004,
+                0.00410949046,
+                0.005836494316000001,
+                0.007711543318000001,
+                0.008584212209999999,
+                0.00833798682,
+                0.007007517286,
+                0.005185935372,
+                0.003567967206,
+                0.002674595588,
+                0.0025430492719999997,
+                0.0029894010440000003,
+                0.00372847379,
+                0.004376043774,
+                0.004786658006,
+                0.0049786818420000005,
+                0.005015786494,
+                0.0049537131600000004
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
                 0.0077464323,
                 0.007001308,
                 0.005249352,
@@ -462,8 +1734,7 @@
                 0.0026627816,
                 0.0031025483,
                 0.0030866602
-            ],
-            "systematic_normalization_error": 0.05
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
@@ -471,7 +1742,9 @@
         "target": "Sn-120",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 30 of 30 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -587,7 +1860,8 @@
         "projectile": "neutron",
         "target": "Sn-120",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -672,7 +1946,8 @@
         "notes": [
             "8th point increased by a factor of 10",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -759,7 +2034,8 @@
         "target": "Sn-120",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -946,6 +2222,89 @@
                 0.0202059696,
                 0.0196524903,
                 0.0125722072,
+                0.010361090168000001,
+                0.009700197372000001,
+                0.009529055562,
+                0.010010125318000001,
+                0.010856942232,
+                0.01137181029,
+                0.011162521472,
+                0.010339116696,
+                0.008259758282,
+                0.0069071629,
+                0.0047386597,
+                0.0047929785,
+                0.003983102,
+                0.0042938186,
+                0.0064749075,
+                0.008649652538,
+                0.01164796924,
+                0.013870939098,
+                0.014709072102,
+                0.013794943368,
+                0.0135374832,
+                0.008161610748,
+                0.0081382512,
+                0.0061277149,
+                0.0083954903,
+                0.0066748352,
+                0.0064322053,
+                0.0091878798,
+                0.0094906345,
+                0.0129529542,
+                0.0148732226,
+                0.0132675921,
+                0.0148866358,
+                0.0125223359,
+                0.0155645854,
+                0.011863158,
+                0.0089646183,
+                0.0066654435,
+                0.0050836867,
+                0.0074868015,
+                0.0063832714,
+                0.0062054,
+                0.0088780456,
+                0.0072244538,
+                0.0110364809,
+                0.0117228745,
+                0.0097746983,
+                0.011497512,
+                0.0113963042,
+                0.0105546509,
+                0.0082033154,
+                0.0061600399,
+                0.006630443,
+                0.0062501584,
+                0.0066389195,
+                0.0080213856,
+                0.0073300625,
+                0.009820048,
+                0.0107108091,
+                0.0097930304,
+                0.0097918523,
+                0.007795885,
+                0.0088639196,
+                0.0089744179,
+                0.0077701936,
+                0.0085035639,
+                0.0075707645,
+                0.0112702105,
+                0.0113145703,
+                0.0127491919,
+                0.0134056293
+            ],
+            "systematic_normalization_error": 0.012,
+            "y_err_before_floor": [
+                0.0748133395,
+                0.0831299684,
+                0.0598315908,
+                0.0402472221,
+                0.0308159769,
+                0.0247083879,
+                0.0202059696,
+                0.0196524903,
+                0.0125722072,
                 0.0098430357,
                 0.0092151875,
                 0.00857615,
@@ -1017,15 +2376,16 @@
                 0.0113145703,
                 0.0127491919,
                 0.0134056293
-            ],
-            "systematic_normalization_error": 0.012
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
         "projectile": "proton",
         "target": "Sn-120",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "relative error floor 2 % applied at 15 of 80 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1224,7 +2584,8 @@
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 42 of 42 points without one in EXFOR (added in quadrature to the reader error): Put et al., PLB 35 (1971) 311: fitted with 5 %, actual errors always smaller",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1293,7 +2654,8 @@
         "target": "Sn-120",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1389,7 +2751,8 @@
         "target": "Sn-120",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1608,7 +2971,8 @@
         "target": "Sn-120",
         "notes": [
             "per-point error = EXFOR ERR-DIG (reader) (+) ERR-1 (the authors' errors; relabelled from ERR-T in 2023, absolute in data units); 54 of 64 points without ERR-1 filled by linear interpolation in angle, flat beyond the ends",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1730,7 +3094,8 @@
         "projectile": "proton",
         "target": "Sn-120",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1808,7 +3173,8 @@
         "target": "Sn-120",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1876,9 +3242,28 @@
                 0.0386783294,
                 0.0143656337,
                 0.0210507824,
-                0.0011887035
+                0.00475481407
             ],
-            "systematic_normalization_error": 0.05
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
+                0.0873227452,
+                0.1023000084,
+                0.0632487577,
+                0.0081205769,
+                0.007403479,
+                0.0370997707,
+                0.0761714958,
+                0.0897869801,
+                0.0659674748,
+                0.0132463635,
+                0.0228024735,
+                0.0407686029,
+                0.0479035945,
+                0.0386783294,
+                0.0143656337,
+                0.0210507824,
+                0.0011887035
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
@@ -1886,7 +3271,9 @@
         "target": "Sn-120",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 1 of 17 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1995,7 +3382,9 @@
         "sector": "elastic_diff_xs",
         "projectile": "proton",
         "target": "Sn-120",
-        "notes": []
+        "notes": [
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
     },
     {
         "type": "ECS_Rutherford",
@@ -2068,6 +3457,37 @@
                 0.0068232241
             ],
             "y_err": [
+                0.013669372716,
+                0.008722427752,
+                0.0024887218540000002,
+                0.0011122942800000002,
+                0.005348321808,
+                0.010334721134,
+                0.00653845506,
+                0.003023771784,
+                0.001857401942,
+                0.002878089228,
+                0.004180985724,
+                0.004567984420000001,
+                0.003623438166,
+                0.00169118802,
+                0.001336414272,
+                0.0012331274280000001,
+                0.001200205212,
+                0.001203475092,
+                0.00102104276,
+                0.00081708911,
+                0.000588763706,
+                0.000242405386,
+                0.00021688129000000002,
+                0.000247285268,
+                0.0002846449,
+                0.0002491237,
+                0.0003020232,
+                0.0003052495
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
                 0.0067441224,
                 0.0035911185,
                 0.0009594717,
@@ -2096,8 +3516,7 @@
                 0.0002491237,
                 0.0003020232,
                 0.0003052495
-            ],
-            "systematic_normalization_error": 0.05
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
@@ -2105,7 +3524,9 @@
         "target": "Sn-120",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 24 of 28 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     }
 ]

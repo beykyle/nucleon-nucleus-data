@@ -112,7 +112,8 @@
         "projectile": "proton",
         "target": "Sn-124",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -221,7 +222,8 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 27 of 27 points without one in EXFOR (added in quadrature to the reader error): Wassenaar et al., JPG 15 (1989) 181, p.5: minimal errors 2 % (sigma), 0.01 (Ay); Ay 0.02",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     }
 ]

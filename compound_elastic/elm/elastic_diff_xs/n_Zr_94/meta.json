@@ -1,0 +1,21 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "neutron",
+ "target": "Zr_94",
+ "energies": [
+  1.5,
+  8.0,
+  10.0,
+  24.0
+ ],
+ "settings": [
+  "projectile n",
+  "element zr",
+  "mass 94",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": []
+}

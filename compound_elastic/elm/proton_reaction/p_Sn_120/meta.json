@@ -1,0 +1,27 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "proton",
+ "target": "Sn_120",
+ "energies": [
+  14.5,
+  22.8,
+  25.1,
+  30.0,
+  30.2,
+  34.9,
+  39.8,
+  40.0,
+  45.2,
+  47.9,
+  49.5,
+  65.5
+ ],
+ "settings": [
+  "projectile p",
+  "element sn",
+  "mass 120",
+  "energy energies",
+  "filetotal y"
+ ],
+ "missing_angular": []
+}

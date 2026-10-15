@@ -918,7 +918,7 @@
                 null,
                 null
             ],
-            "systematic_normalization_error": 0.05
+            "systematic_normalization_error": 0.03
         },
         "corpus": "kduq_evaluated",
         "sector": "neutron_total",
@@ -928,7 +928,9 @@
             "restricted to the tabulated energy range 5.293-297.772 MeV, dropping 71 point(s)",
             "downsampled from 403 to 205 points, at most 1 per MeV",
             "assigned a default normalisation uncertainty of 5%, none reported",
-            "derived from the kduq corpus"
+            "derived from the kduq corpus",
+            "normalisation uncertainty 3.0 % from the authors: Finlay et al., PRC 47, 237 (1993), ERR-ANALYS: normalization uncertainty is < 3 % (90Zr)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
         ]
     },
     {

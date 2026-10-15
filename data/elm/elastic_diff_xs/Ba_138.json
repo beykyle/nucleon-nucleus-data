@@ -74,6 +74,39 @@
                 0.0873920931
             ],
             "y_err": [
+                0.018937466118,
+                0.015981322102,
+                0.011472237724,
+                0.008428540180000001,
+                0.008510355622,
+                0.010798664558,
+                0.012923327214,
+                0.01307087781,
+                0.010723444220000001,
+                0.007179961214,
+                0.004451755936,
+                0.003753334986,
+                0.004891425734,
+                0.0068933551959999995,
+                0.00862017812,
+                0.00890820925,
+                0.007866590116,
+                0.006029007102000001,
+                0.004272677868,
+                0.003299826594,
+                0.003426758698,
+                0.0043179893980000005,
+                0.0053347362200000005,
+                0.006320013606,
+                0.006488569994,
+                0.0059560338739999994,
+                0.004844060822,
+                0.00366023991,
+                0.002537694204,
+                0.001747841862
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
                 0.0082819962,
                 0.0069194289,
                 0.0047715935,
@@ -104,8 +137,7 @@
                 0.001838739,
                 0.0015934359,
                 0.0011427734
-            ],
-            "systematic_normalization_error": 0.05
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
@@ -113,7 +145,9 @@
         "target": "Ba-138",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 30 of 30 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -175,6 +209,31 @@
                 0.137512
             ],
             "y_err": [
+                0.01584166,
+                0.016120060000000002,
+                0.01459702,
+                0.009999000000000001,
+                0.00675624,
+                0.00525046,
+                0.00727166,
+                0.00902774,
+                0.01036624,
+                0.00865832,
+                0.008501,
+                0.00522844,
+                0.00276972,
+                0.00234152,
+                0.00409918,
+                0.0058451,
+                0.006140520000000001,
+                0.00457522,
+                0.00245822,
+                0.0013383400000000001,
+                0.001693934,
+                0.00275024
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
                 0.00154572,
                 0.00150636,
                 0.00100931,
@@ -197,15 +256,16 @@
                 0.000573556,
                 0.000678644,
                 0.000845364
-            ],
-            "systematic_normalization_error": 0.05
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
         "projectile": "proton",
         "target": "Ba-138",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 22 of 22 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     }
 ]

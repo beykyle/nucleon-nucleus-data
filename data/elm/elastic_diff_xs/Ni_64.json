@@ -1,5 +1,559 @@
 [
     {
+        "type": "ECS",
+        "energy": 1.5,
+        "energy_err": 0.05,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "40531043",
+        "source": "I.A.Korzh, V.A.Mishchenko, et al., 3.All Union Conf.on Neutron Phys.,Kiev,9-13 Jun 1975 4, 220 (1975); Report other than progress report: INDC(CCP)-099 (4), 220 (1975); Yadernaya Fizika 26, 234 (1977); Soviet Journal of Nuclear Physics 26, 122 (1977); Report other than progress report: YFI-26 32 (1978); Report other than progress report: INDC(CCP)-133 31 (1979); Report other than progress report: YFI-25 57 (1977); 4.All Union Conf.on Neutron Phys.,Kiev,18-22 Apr 1977 1, 273 (1977); Report other than progress report: INDC(CCP)-118 (1), 273 (1977); 3.All Union Conf.on Neutron Phys.,Kiev,9-13 Jun 1975 4, 203 (1975); Report other than progress report: INDC(CCP)-099 (4), 203 (1975); Report other than progress report: YFI-25 63 (1977); Report other than progress report: YFI-23 25 (1977); Ukrainskii Fizichnii Zhurnal 22, 112 (1977); Ukrainskii Fizichnii Zhurnal 22, 866 (1977);  Data taken from the EXFOR database, file EXFOR 40531001 dated 1975, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                20.3092693286,
+                30.4521240086,
+                40.581243359,
+                55.7407295585,
+                75.8734612808,
+                90.9042761735,
+                105.8734612808,
+                125.7407295585,
+                150.4521240086
+            ],
+            "y": [
+                0.716,
+                0.557,
+                0.388,
+                0.206,
+                0.116,
+                0.126,
+                0.141,
+                0.159,
+                0.199
+            ],
+            "y_err": [
+                0.036,
+                0.034,
+                0.025,
+                0.021,
+                0.018,
+                0.018,
+                0.018,
+                0.023,
+                0.026
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ni-64",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 2.0,
+        "energy_err": 0.05,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "40531043",
+        "source": "I.A.Korzh, V.A.Mishchenko, et al., 3.All Union Conf.on Neutron Phys.,Kiev,9-13 Jun 1975 4, 220 (1975); Report other than progress report: INDC(CCP)-099 (4), 220 (1975); Yadernaya Fizika 26, 234 (1977); Soviet Journal of Nuclear Physics 26, 122 (1977); Report other than progress report: YFI-26 32 (1978); Report other than progress report: INDC(CCP)-133 31 (1979); Report other than progress report: YFI-25 57 (1977); 4.All Union Conf.on Neutron Phys.,Kiev,18-22 Apr 1977 1, 273 (1977); Report other than progress report: INDC(CCP)-118 (1), 273 (1977); 3.All Union Conf.on Neutron Phys.,Kiev,9-13 Jun 1975 4, 203 (1975); Report other than progress report: INDC(CCP)-099 (4), 203 (1975); Report other than progress report: YFI-25 63 (1977); Report other than progress report: YFI-23 25 (1977); Ukrainskii Fizichnii Zhurnal 22, 112 (1977); Ukrainskii Fizichnii Zhurnal 22, 866 (1977);  Data taken from the EXFOR database, file EXFOR 40531001 dated 1975, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                20.3092693286,
+                30.4521240086,
+                40.581243359,
+                55.7407295585,
+                75.8734612808,
+                90.9042761735,
+                105.8734612808,
+                125.7407295585,
+                150.4521240086
+            ],
+            "y": [
+                0.862,
+                0.665,
+                0.435,
+                0.232,
+                0.121,
+                0.128,
+                0.155,
+                0.145,
+                0.136
+            ],
+            "y_err": [
+                0.034,
+                0.028,
+                0.022,
+                0.016,
+                0.013,
+                0.012,
+                0.014,
+                0.013,
+                0.015
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ni-64",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 2.5,
+        "energy_err": 0.05,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "40531043",
+        "source": "I.A.Korzh, V.A.Mishchenko, et al., 3.All Union Conf.on Neutron Phys.,Kiev,9-13 Jun 1975 4, 220 (1975); Report other than progress report: INDC(CCP)-099 (4), 220 (1975); Yadernaya Fizika 26, 234 (1977); Soviet Journal of Nuclear Physics 26, 122 (1977); Report other than progress report: YFI-26 32 (1978); Report other than progress report: INDC(CCP)-133 31 (1979); Report other than progress report: YFI-25 57 (1977); 4.All Union Conf.on Neutron Phys.,Kiev,18-22 Apr 1977 1, 273 (1977); Report other than progress report: INDC(CCP)-118 (1), 273 (1977); 3.All Union Conf.on Neutron Phys.,Kiev,9-13 Jun 1975 4, 203 (1975); Report other than progress report: INDC(CCP)-099 (4), 203 (1975); Report other than progress report: YFI-25 63 (1977); Report other than progress report: YFI-23 25 (1977); Ukrainskii Fizichnii Zhurnal 22, 112 (1977); Ukrainskii Fizichnii Zhurnal 22, 866 (1977);  Data taken from the EXFOR database, file EXFOR 40531001 dated 1975, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                20.3092693286,
+                30.4521240086,
+                40.581243359,
+                55.7407295585,
+                75.8734612808,
+                90.9042761735,
+                105.8734612808,
+                125.7407295585,
+                150.4521240086
+            ],
+            "y": [
+                0.738,
+                0.491,
+                0.295,
+                0.093,
+                0.04,
+                0.088,
+                0.117,
+                0.102,
+                0.085
+            ],
+            "y_err": [
+                0.062,
+                0.035,
+                0.032,
+                0.023,
+                0.017,
+                0.017,
+                0.011,
+                0.011,
+                0.008
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ni-64",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 3.0,
+        "energy_err": 0.05,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "40531043",
+        "source": "I.A.Korzh, V.A.Mishchenko, et al., 3.All Union Conf.on Neutron Phys.,Kiev,9-13 Jun 1975 4, 220 (1975); Report other than progress report: INDC(CCP)-099 (4), 220 (1975); Yadernaya Fizika 26, 234 (1977); Soviet Journal of Nuclear Physics 26, 122 (1977); Report other than progress report: YFI-26 32 (1978); Report other than progress report: INDC(CCP)-133 31 (1979); Report other than progress report: YFI-25 57 (1977); 4.All Union Conf.on Neutron Phys.,Kiev,18-22 Apr 1977 1, 273 (1977); Report other than progress report: INDC(CCP)-118 (1), 273 (1977); 3.All Union Conf.on Neutron Phys.,Kiev,9-13 Jun 1975 4, 203 (1975); Report other than progress report: INDC(CCP)-099 (4), 203 (1975); Report other than progress report: YFI-25 63 (1977); Report other than progress report: YFI-23 25 (1977); Ukrainskii Fizichnii Zhurnal 22, 112 (1977); Ukrainskii Fizichnii Zhurnal 22, 866 (1977);  Data taken from the EXFOR database, file EXFOR 40531001 dated 1975, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                20.3092693286,
+                30.4521240086,
+                40.581243359,
+                55.7407295585,
+                75.8734612808,
+                90.9042761735,
+                105.8734612808,
+                125.7407295585,
+                150.4521240086
+            ],
+            "y": [
+                0.928,
+                0.621,
+                0.311,
+                0.117,
+                0.069,
+                0.12,
+                0.153,
+                0.099,
+                0.094
+            ],
+            "y_err": [
+                0.043,
+                0.033,
+                0.017,
+                0.013,
+                0.009,
+                0.009,
+                0.009,
+                0.008,
+                0.009
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ni-64",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 5.0,
+        "energy_err": 0.17,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "40572004",
+        "source": "I.A.Korzh, V.P.Lunev, et al., 5.All Union Conf.on Neutron Phys.,Kiev,15-19 Sep 1980 1, 314 (1980); Report other than progress report: INDC(CCP)-169 314 (1980); Yadernaya Fizika 31, 13 (1980); Soviet Journal of Nuclear Physics 31, 5 (1980);  Data taken from the EXFOR database, file EXFOR 40572001 dated 1980, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                20.3092693286,
+                30.4521240086,
+                40.581243359,
+                55.7407295585,
+                65.8195464604,
+                75.8734612808,
+                90.9042761735,
+                105.8734612808,
+                125.7407295585,
+                135.639406541,
+                150.4521240086
+            ],
+            "y": [
+                1.105,
+                0.689,
+                0.319,
+                0.049,
+                0.022,
+                0.027,
+                0.059,
+                0.056,
+                0.041,
+                0.027,
+                0.033
+            ],
+            "y_err": [
+                0.085,
+                0.072,
+                0.031,
+                0.008,
+                0.007,
+                0.006,
+                0.009,
+                0.013,
+                0.012,
+                0.006,
+                0.007
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ni-64",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 6.0,
+        "energy_err": 0.14,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "40572004",
+        "source": "I.A.Korzh, V.P.Lunev, et al., 5.All Union Conf.on Neutron Phys.,Kiev,15-19 Sep 1980 1, 314 (1980); Report other than progress report: INDC(CCP)-169 314 (1980); Yadernaya Fizika 31, 13 (1980); Soviet Journal of Nuclear Physics 31, 5 (1980);  Data taken from the EXFOR database, file EXFOR 40572001 dated 1980, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                20.3092693286,
+                30.4521240086,
+                40.581243359,
+                55.7407295585,
+                65.8195464604,
+                75.8734612808,
+                90.9042761735,
+                105.8734612808,
+                125.7407295585,
+                135.639406541,
+                150.4521240086
+            ],
+            "y": [
+                1.5848,
+                0.756,
+                0.2669,
+                0.0309,
+                0.025,
+                0.0454,
+                0.0479,
+                0.0324,
+                0.0123,
+                0.0077,
+                0.025
+            ],
+            "y_err": [
+                0.0529,
+                0.0251,
+                0.0143,
+                0.0016,
+                0.0011,
+                0.0016,
+                0.0018,
+                0.0012,
+                0.001,
+                0.0006,
+                0.001
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ni-64",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS_Rutherford",
+        "energy": 6.06,
+        "energy_err": 0.01,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "F1134025",
+        "source": "A.E.Antropov, V.P.Bochin, et al., Izv. Rossiiskoi Akademii Nauk, Ser.Fiz. 32, 1741 (1969); Bull.Russian Academy of Sciences - Physics 32, 1605 (1969);  Data taken from the EXFOR database, file EXFOR F1134001 dated 1969, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                68.174,
+                78.119,
+                88.087,
+                98.018,
+                108.07,
+                117.1,
+                128.58,
+                138.97,
+                148.15
+            ],
+            "y": [
+                0.7243,
+                0.6072,
+                0.6908,
+                0.7638,
+                0.872,
+                0.8852,
+                0.8103,
+                0.6263,
+                0.4881
+            ],
+            "y_err": [
+                0.0457280002,
+                0.0352363449,
+                0.0422303209,
+                0.0386331464,
+                0.0387330608,
+                0.0388329757,
+                0.0315406087,
+                0.0211605766,
+                0.0210608642
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "proton",
+        "target": "Ni-64",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 7.0,
+        "energy_err": 0.12,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "40572004",
+        "source": "I.A.Korzh, V.P.Lunev, et al., 5.All Union Conf.on Neutron Phys.,Kiev,15-19 Sep 1980 1, 314 (1980); Report other than progress report: INDC(CCP)-169 314 (1980); Yadernaya Fizika 31, 13 (1980); Soviet Journal of Nuclear Physics 31, 5 (1980);  Data taken from the EXFOR database, file EXFOR 40572001 dated 1980, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                20.3092693286,
+                30.4521240086,
+                40.581243359,
+                55.7407295585,
+                65.8195464604,
+                75.8734612808,
+                90.9042761735,
+                105.8734612808,
+                125.7407295585,
+                135.639406541,
+                150.4521240086
+            ],
+            "y": [
+                1.6377,
+                0.8825,
+                0.3291,
+                0.0284,
+                0.0213,
+                0.038,
+                0.0412,
+                0.0227,
+                0.0073,
+                0.004,
+                0.0172
+            ],
+            "y_err": [
+                0.0607,
+                0.0378,
+                0.0177,
+                0.0028,
+                0.0012,
+                0.0014,
+                0.0016,
+                0.001,
+                0.0006,
+                0.0004,
+                0.0007
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Ni-64",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS_Rutherford",
+        "energy": 9.6,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O0432003",
+        "source": "J.Benveniste, A.C.Mitchell, et al., Physical Review 129, 2173 (1963);  Data taken from the EXFOR database, file EXFOR O0432001 dated 1963, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                20.3,
+                25.4,
+                30.5,
+                35.5,
+                40.6,
+                50.7,
+                60.8,
+                65.8,
+                70.9,
+                75.8,
+                80.9,
+                90.9,
+                95.9,
+                100.9,
+                110.9,
+                120.8,
+                125.8,
+                130.7,
+                135.6,
+                140.6,
+                150.5,
+                160.3,
+                170.2
+            ],
+            "y": [
+                0.8394533739,
+                0.8580388487,
+                0.9457440783,
+                1.0676606469,
+                1.0151032458,
+                0.6726926713,
+                0.3555696142,
+                0.2917001653,
+                0.3102544597,
+                0.4102294311,
+                0.5628758229,
+                0.8642840799,
+                0.9473910656,
+                0.9660991479,
+                0.7890723497,
+                0.5024677604,
+                0.3624161048,
+                0.2755804629,
+                0.2571258927,
+                0.2960966252,
+                0.5709108517,
+                0.9350290087,
+                1.3295044957
+            ],
+            "y_err": [
+                0.0503672024,
+                0.0386117482,
+                0.0331010427,
+                0.0320298194,
+                0.0304530974,
+                0.0235442435,
+                0.0106670884,
+                0.008751005,
+                0.0093076338,
+                0.0123068829,
+                0.0168862747,
+                0.0259285224,
+                0.028421732,
+                0.0289829744,
+                0.0236721705,
+                0.0150740328,
+                0.0144966442,
+                0.0082674139,
+                0.0102850357,
+                0.011843865,
+                0.0171273256,
+                0.0280508703,
+                0.0398851349
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "proton",
+        "target": "Ni-64",
+        "notes": [
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
         "type": "ECS_Rutherford",
         "energy": 11.0,
         "energy_err": 0.01,
@@ -113,7 +667,8 @@
         "target": "Ni-64",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -194,7 +749,8 @@
         "target": "Ni-64",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -309,7 +865,8 @@
         "notes": [
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -447,7 +1004,8 @@
         "notes": [
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -533,6 +1091,43 @@
                 0.6525597887
             ],
             "y_err": [
+                0.044501130406,
+                0.045331233908,
+                0.039856415560000004,
+                0.026536443867999998,
+                0.019109350602,
+                0.012754922034,
+                0.007750063662,
+                0.00541363929,
+                0.005338464056,
+                0.008139804442000001,
+                0.013408295502000001,
+                0.019874428796,
+                0.035643902744,
+                0.047940328424,
+                0.049087146963999996,
+                0.052852159776,
+                0.044970793482,
+                0.030739196988,
+                0.025224423157999998,
+                0.018245781388,
+                0.014212577132,
+                0.01592856904,
+                0.017834720632000003,
+                0.020471144394,
+                0.024674483500000004,
+                0.028412392095999998,
+                0.027573975032,
+                0.021618374482,
+                0.015633969718,
+                0.011112332190000001,
+                0.010148452628,
+                0.011042985776,
+                0.012329832556,
+                0.013051195774
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
                 0.0081321169,
                 0.0087083783,
                 0.0091556164,
@@ -567,8 +1162,7 @@
                 0.0059406379,
                 0.0082902297,
                 0.0089801806
-            ],
-            "systematic_normalization_error": 0.05
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
@@ -576,7 +1170,9 @@
         "target": "Ni-64",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 34 of 34 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     }
 ]

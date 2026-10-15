@@ -2,3 +2,8 @@
 	path = external/exfor_tools
 	url = https://github.com/beykyle/exfor_tools.git
 	branch = main
+[submodule "external/talys"]
+	path = external/talys
+	url = https://github.com/arjankoning1/talys
+	shallow = true
+	update = none

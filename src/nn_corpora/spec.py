@@ -254,6 +254,7 @@ BETA2_BY_TARGET: dict[tuple[int, int], float] = {
     (86, 38): 0.1444, (88, 38): 0.1153,
     (90, 40): 0.091911, (92, 40): 0.1014, (94, 40): 0.08810, (96, 40): 0.0604,
     (92, 42): 0.1093, (94, 42): 0.1511,
+    (112, 50): 0.123,  # B(E2)up 0.242(8) e2b2, Kumar et al. PRC 81, 024306 (2010); Raman convention R0 = 1.2 A^1/3
     (116, 50): 0.111715, (118, 50): 0.110122, (120, 50): 0.107110,
     (122, 50): 0.102811, (124, 50): 0.0095216,
     (138, 56): 0.0938,
@@ -262,7 +263,7 @@ BETA2_BY_TARGET: dict[tuple[int, int], float] = {
 }
 MAX_BETA2 = 0.16
 
-ELM_ELASTIC_EINC_RANGE = (10.0, 200.0)
+ELM_ELASTIC_EINC_RANGE = (0.0, 200.0)  # from 0 MeV since 2026-10-14: compound elastic is subtracted (TALYS)
 ELM_PN_EINC_RANGE = (5.0, 200.0)
 ELM_MIN_NUM_PTS = 5
 

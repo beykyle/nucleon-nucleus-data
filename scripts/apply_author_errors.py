@@ -30,7 +30,8 @@ from pathlib import Path
 
 import numpy as np
 
-from nn_corpora import author_errors, spec
+from nn_corpora import author_errors, elm_evaluation, spec
+from periodictable import elements
 
 #: the last commit whose ELM data predates the author-error corrections
 BASELINE = "8d2e300"
@@ -114,6 +115,9 @@ def correct_elm(baseline: str, report: Report, pending: dict) -> None:
             for rec in json.loads(text):
                 before = copy.deepcopy(rec)
                 new = author_errors.correct(rec, "elm")
+                if new is not None:  # then the ELM calibration evaluation (excluded targets, error floor)
+                    sym, A = path.stem.split("_")
+                    new = elm_evaluation.evaluate(new, sector_dir.name, (int(A), elements.symbol(sym).number))
                 report.add("elm", sector_dir.name, before, new)
                 if new is not None:
                     out.append(new)

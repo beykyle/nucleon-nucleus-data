@@ -132,7 +132,7 @@
                 0.05,
                 0.05
             ],
-            "systematic_normalization_error": 0.05
+            "systematic_normalization_error": 0.044721359549995794
         },
         "corpus": "kduq_evaluated",
         "sector": "proton_reaction",
@@ -140,7 +140,9 @@
         "target": "Ca-40",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
-            "derived from the kduq corpus"
+            "derived from the kduq corpus",
+            "normalisation uncertainty 4.5 % from the authors: Dicello & Igo, PRC 2, 488 (1970): ERR-1 elastic corrections 4 % (absolute) (+) ERR-2 average areal density 2 %",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
         ]
     },
     {

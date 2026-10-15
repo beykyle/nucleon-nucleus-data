@@ -1,0 +1,43 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "proton",
+ "target": "Ca_40",
+ "energies": [
+  10.34,
+  11.38,
+  12.42,
+  13.45,
+  13.46,
+  13.97,
+  14.48,
+  14.97,
+  15.51,
+  16.49,
+  17.51,
+  18.54,
+  19.55,
+  20.57,
+  21.59,
+  24.9,
+  30.0,
+  35.0,
+  40.0,
+  45.0,
+  48.0,
+  65.5,
+  81.0,
+  100.0,
+  119.0,
+  141.0,
+  158.0,
+  180.0
+ ],
+ "settings": [
+  "projectile p",
+  "element ca",
+  "mass 40",
+  "energy energies",
+  "filetotal y"
+ ],
+ "missing_angular": []
+}

@@ -12,17 +12,21 @@ Columns:
 - *median error*: relative (%) for cross sections, absolute for analysing powers (Ay).
 - *norm*: the fractional normalisation uncertainty (`systematic_normalization_error`), where it changed.
 
-Totals: 194 records changed, 45 dropped, 1494 unchanged.
+Totals: 278 records changed, 57 dropped, 1393 unchanged.
 
 | corpus | sector | target | subentry | E (MeV) | change | points | median error before → after | norm |
 |---|---|---|---|---|---|---|---|---|
 | elm | charge_exchange | Ca-48 | O0178008 | 25 | table | 36 → 32 | 7.0 % → 3.8 % | 10.0 → 11.2 % |
 | elm | charge_exchange | Ca-48 | O0178007 | 35 | table | 33 → 32 | 7.0 % → 10.1 % | 10.0 → 11.2 % |
 | elm | charge_exchange | Ca-48 | O0178006 | 45 | table | 25 → 25 | 21.2 % → 19.8 % | 10.0 → 11.2 % |
+| elm | charge_exchange | Ca-48 | C0134004 | 160 | errors | 7 → 7 | 3.7 % → 3.7 % |  |
 | elm | charge_exchange | Pb-208 | O0178017 | 25 | table | 31 → 32 | 7.0 % → 9.7 % | 10.0 → 11.2 % |
 | elm | charge_exchange | Pb-208 | O0178016 | 35 | table | 32 → 32 | 7.0 % → 13.0 % | 10.0 → 11.2 % |
 | elm | charge_exchange | Pb-208 | O0178015 | 45 | table | 35 → 32 | 18.4 % → 15.3 % | 10.0 → 11.2 % |
+| elm | charge_exchange | Sn-116 | E2092018 | 35 | errors | 11 → 11 | 3.2 % → 3.2 % |  |
+| elm | charge_exchange | Sn-116 | O0138003 | 35.3 | errors | 20 → 20 | 6.8 % → 6.8 % |  |
 | elm | charge_exchange | Sn-120 | O0178014 | 25 | table | 33 → 32 | 7.0 % → 7.2 % | 10.0 → 11.2 % |
+| elm | charge_exchange | Sn-120 | E2092019 | 35 | errors | 5 → 5 | 1.3 % → 2.0 % |  |
 | elm | charge_exchange | Sn-120 | O0178013 | 35 | table | 32 → 32 | 7.0 % → 9.4 % | 10.0 → 11.2 % |
 | elm | charge_exchange | Sn-120 | O0178012 | 45 | table | 32 → 32 | 20.2 % → 15.4 % | 10.0 → 11.2 % |
 | elm | charge_exchange | Zr-90 | O0178011 | 25 | table | 33 → 32 | 7.0 % → 5.1 % | 10.0 → 11.2 % |
@@ -47,6 +51,11 @@ Totals: 194 records changed, 45 dropped, 1494 unchanged.
 | elm | elastic_ay | Sn-124 | O0169025 | 20.4 | errors | 27 → 27 | 0.008 → 0.022 |  |
 | elm | elastic_ay | Sr-86 | O0169007 | 24.6 | errors | 29 → 29 | 0.007 → 0.021 |  |
 | elm | elastic_ay | Sr-88 | O0169009 | 24.6 | errors | 29 → 29 | 0.007 → 0.021 |  |
+| elm | elastic_diff_xs | Ba-138 | C0893040 | 16 | errors | 30 → 30 | 1.0 % → 2.0 % |  |
+| elm | elastic_diff_xs | Ba-138 | O2532003 | 23 | errors | 22 → 22 | 0.3 % → 2.0 % |  |
+| elm | elastic_diff_xs | Ca-40 | 12785002 | 11.91 | errors | 26 → 26 | 3.4 % → 3.4 % |  |
+| elm | elastic_diff_xs | Ca-40 | 12785002 | 13.9 | errors | 27 → 27 | 3.1 % → 3.1 % |  |
+| elm | elastic_diff_xs | Ca-40 | 12996002 | 13.905 | errors | 14 → 14 | 3.4 % → 3.4 % |  |
 | elm | elastic_diff_xs | Ca-40 | O0253017 | 13.98 | errors | 34 → 34 | 3.6 % → 3.6 % |  |
 | elm | elastic_diff_xs | Ca-40 | O0239006 | 14.08 | errors | 27 → 27 | 3.1 % → 3.7 % | 5.0 → 10.0 % |
 | elm | elastic_diff_xs | Ca-40 | O0253017 | 14.51 | errors | 36 → 36 | 3.6 % → 3.6 % |  |
@@ -54,60 +63,126 @@ Totals: 194 records changed, 45 dropped, 1494 unchanged.
 | elm | elastic_diff_xs | Ca-40 | O0253017 | 15.57 | errors | 36 → 36 | 3.6 % → 3.6 % |  |
 | elm | elastic_diff_xs | Ca-40 | O0239004 | 15.65 | errors | 27 → 27 | 1.5 % → 2.5 % | 5.0 → 10.0 % |
 | elm | elastic_diff_xs | Ca-40 | O0253017 | 15.97 | errors | 34 → 34 | 3.6 % → 3.6 % |  |
+| elm | elastic_diff_xs | Ca-40 | C0893002 | 16 | errors | 30 → 30 | 1.5 % → 2.0 % |  |
 | elm | elastic_diff_xs | Ca-40 | O0239002 | 16.25 | errors | 27 → 27 | 1.4 % → 2.4 % | 5.0 → 10.0 % |
 | elm | elastic_diff_xs | Ca-40 | O0253017 | 16.57 | errors | 26 → 26 | 3.6 % → 3.6 % |  |
+| elm | elastic_diff_xs | Ca-40 | 12996002 | 16.916 | errors | 27 → 27 | 2.4 % → 2.4 % |  |
 | elm | elastic_diff_xs | Ca-40 | O0384003 | 17.3 | **dropped** | 23 |  |  |
 | elm | elastic_diff_xs | Ca-40 | O0253017 | 17.57 | errors | 36 → 36 | 3.6 % → 3.6 % |  |
 | elm | elastic_diff_xs | Ca-40 | O0254010 | 17.8 | **dropped** | 23 |  |  |
 | elm | elastic_diff_xs | Ca-40 | O0253017 | 18.57 | errors | 36 → 36 | 3.6 % → 3.6 % |  |
 | elm | elastic_diff_xs | Ca-40 | O0253017 | 19.57 | errors | 36 → 36 | 3.6 % → 3.6 % |  |
 | elm | elastic_diff_xs | Ca-40 | O0253017 | 20.57 | errors | 37 → 37 | 3.6 % → 3.6 % |  |
+| elm | elastic_diff_xs | Ca-40 | C0624002 | 21 | errors | 59 → 59 | 2.0 % → 2.0 % |  |
 | elm | elastic_diff_xs | Ca-40 | O0253017 | 21.68 | errors | 36 → 36 | 3.6 % → 3.6 % |  |
+| elm | elastic_diff_xs | Ca-40 | C0624002 | 23.5 | errors | 62 → 62 | 2.1 % → 2.1 % |  |
+| elm | elastic_diff_xs | Ca-40 | C0624002 | 26.3 | errors | 60 → 60 | 2.0 % → 2.0 % |  |
+| elm | elastic_diff_xs | Ca-40 | O0142004 | 30.3 | errors | 80 → 80 | 3.3 % → 3.3 % |  |
+| elm | elastic_diff_xs | Ca-40 | O0208006 | 40 | errors | 64 → 64 | 5.0 % → 5.0 % |  |
+| elm | elastic_diff_xs | Ca-40 | C0624002 | 48 | errors | 48 → 48 | 2.3 % → 2.3 % |  |
 | elm | elastic_diff_xs | Ca-40 | O0382002 | 55 | **dropped** | 18 |  |  |
 | elm | elastic_diff_xs | Ca-40 | O0211004 | 61.4 | **dropped** | 36 |  |  |
 | elm | elastic_diff_xs | Ca-40 | O0211012 | 61.4 | errors | 35 → 35 | 5.0 % → 5.0 % | 5.0 → 11.2 % |
+| elm | elastic_diff_xs | Ca-40 | E0166012 | 65 | errors | 30 → 30 | 1.1 % → 2.0 % |  |
+| elm | elastic_diff_xs | Ca-40 | T0101002 | 80 | errors | 45 → 45 | 2.5 % → 2.5 % |  |
+| elm | elastic_diff_xs | Ca-40 | T0101002 | 135 | errors | 43 → 43 | 1.8 % → 2.0 % |  |
+| elm | elastic_diff_xs | Ca-40 | T0101002 | 160 | errors | 43 → 43 | 2.0 % → 2.0 % |  |
+| elm | elastic_diff_xs | Ca-40 | O0365010 | 181.5 | errors | 22 → 22 | 2.6 % → 2.6 % |  |
 | elm | elastic_diff_xs | Ca-48 | O0387002 | 12 | **dropped** | 22 |  |  |
 | elm | elastic_diff_xs | Ca-48 | O0239018 | 14.03 | errors | 27 → 27 | 1.6 % → 2.6 % | 5.0 → 10.0 % |
 | elm | elastic_diff_xs | Ca-48 | O0239016 | 15.05 | errors | 28 → 28 | 1.8 % → 2.7 % | 5.0 → 10.0 % |
 | elm | elastic_diff_xs | Ca-48 | O0239014 | 15.63 | errors | 27 → 27 | 1.5 % → 2.5 % | 5.0 → 10.0 % |
+| elm | elastic_diff_xs | Ca-48 | C0624005 | 21 | errors | 48 → 48 | 1.0 % → 2.0 % |  |
+| elm | elastic_diff_xs | Ca-48 | C0624005 | 25 | errors | 49 → 49 | 1.1 % → 2.0 % |  |
+| elm | elastic_diff_xs | Ca-48 | C0624005 | 30 | errors | 49 → 49 | 1.1 % → 2.0 % |  |
+| elm | elastic_diff_xs | Ca-48 | C0624005 | 35 | errors | 49 → 49 | 0.9 % → 2.0 % |  |
+| elm | elastic_diff_xs | Ca-48 | C0624005 | 40 | errors | 48 → 48 | 1.1 % → 2.0 % |  |
+| elm | elastic_diff_xs | Ca-48 | C0624005 | 45 | errors | 49 → 49 | 1.1 % → 2.0 % |  |
+| elm | elastic_diff_xs | Ca-48 | C0624005 | 48.4 | errors | 48 → 48 | 1.1 % → 2.0 % |  |
+| elm | elastic_diff_xs | Ca-48 | E0166016 | 65 | errors | 23 → 23 | 1.7 % → 2.0 % |  |
 | elm | elastic_diff_xs | Mo-92 | O0471007 | 12.52 | errors | 7 → 7 | 2.8 % → 6.6 % |  |
 | elm | elastic_diff_xs | Mo-92 | O0549003 | 19.85 | errors | 37 → 37 | 2.0 % → 4.5 % |  |
+| elm | elastic_diff_xs | Mo-92 | C0622002 | 24.886 | **dropped** | 19 |  |  |
+| elm | elastic_diff_xs | Mo-92 | C0622002 | 29.841 | **dropped** | 34 |  |  |
 | elm | elastic_diff_xs | Mo-92 | O0549003 | 30.3 | errors | 30 → 30 | 2.0 % → 4.5 % |  |
+| elm | elastic_diff_xs | Mo-92 | C0622002 | 34.901 | **dropped** | 31 |  |  |
+| elm | elastic_diff_xs | Mo-92 | C0622002 | 45.296 | **dropped** | 27 |  |  |
 | elm | elastic_diff_xs | Mo-92 | O0549003 | 49.45 | errors | 51 → 51 | 2.0 % → 4.5 % |  |
 | elm | elastic_diff_xs | Mo-94 | O0471008 | 12.52 | errors | 8 → 8 | 2.8 % → 6.6 % |  |
 | elm | elastic_diff_xs | Mo-94 | O0580002 | 25.6 | **dropped** | 42 |  |  |
 | elm | elastic_diff_xs | Mo-94 | O0549005 | 49.45 | errors | 37 → 37 | 2.3 % → 4.6 % |  |
 | elm | elastic_diff_xs | Ni-64 | O0458004 | 12 | **dropped** | 23 |  |  |
-| elm | elastic_diff_xs | Pb-208 | O0552008 | 12.98 | errors | 13 → 13 | 0.8 % → 1.7 % |  |
-| elm | elastic_diff_xs | Pb-208 | O0287004 | 21 | errors | 55 → 55 | 6.0 % → 6.7 % |  |
-| elm | elastic_diff_xs | Pb-208 | O0287005 | 24.1 | errors | 66 → 66 | 6.0 % → 6.7 % |  |
-| elm | elastic_diff_xs | Pb-208 | O0287006 | 26.3 | errors | 91 → 91 | 6.0 % → 6.7 % |  |
+| elm | elastic_diff_xs | Ni-64 | E1201012 | 65 | errors | 34 → 34 | 1.0 % → 2.0 % |  |
+| elm | elastic_diff_xs | Pb-206 | 22048024 | 21.6 | errors | 49 → 49 | 5.2 % → 5.2 % |  |
+| elm | elastic_diff_xs | Pb-206 | C0672002 | 35 | errors | 27 → 27 | 0.3 % → 2.0 % |  |
+| elm | elastic_diff_xs | Pb-208 | O0552008 | 12.98 | errors | 13 → 13 | 0.8 % → 2.0 % |  |
+| elm | elastic_diff_xs | Pb-208 | C0893042 | 16 | errors | 30 → 30 | 1.5 % → 2.0 % |  |
+| elm | elastic_diff_xs | Pb-208 | 13685002 | 16.9 | errors | 29 → 29 | 3.3 % → 3.3 % |  |
+| elm | elastic_diff_xs | Pb-208 | O0287004 | 21 | **dropped** | 55 |  |  |
+| elm | elastic_diff_xs | Pb-208 | O0287011 | 21 | errors | 59 → 59 | 2.3 % → 2.3 % |  |
+| elm | elastic_diff_xs | Pb-208 | O0287005 | 24.1 | **dropped** | 66 |  |  |
+| elm | elastic_diff_xs | Pb-208 | O0287012 | 24.1 | errors | 59 → 59 | 2.2 % → 2.2 % |  |
+| elm | elastic_diff_xs | Pb-208 | 10871002 | 26 | errors | 29 → 29 | 5.5 % → 5.5 % |  |
+| elm | elastic_diff_xs | Pb-208 | O0287006 | 26.3 | **dropped** | 91 |  |  |
+| elm | elastic_diff_xs | Pb-208 | O0287013 | 26.3 | errors | 60 → 60 | 2.1 % → 2.1 % |  |
+| elm | elastic_diff_xs | Pb-208 | 12701005 | 30.3 | errors | 34 → 34 | 3.3 % → 3.3 % |  |
 | elm | elastic_diff_xs | Pb-208 | O0142011 | 30.3 | errors | 72 → 72 | 4.2 % → 4.2 % |  |
-| elm | elastic_diff_xs | Pb-208 | O0287007 | 30.3 | errors | 91 → 91 | 6.0 % → 6.7 % |  |
+| elm | elastic_diff_xs | Pb-208 | O0287007 | 30.3 | **dropped** | 91 |  |  |
+| elm | elastic_diff_xs | Pb-208 | O0287014 | 30.3 | errors | 61 → 61 | 1.8 % → 2.0 % |  |
 | elm | elastic_diff_xs | Pb-208 | O0157004 | 30.8 | errors | 67 → 67 | 4.0 % → 7.6 % |  |
 | elm | elastic_diff_xs | Pb-208 | O0225146 | 35 | **dropped** | 23 |  |  |
-| elm | elastic_diff_xs | Pb-208 | O0287008 | 35 | errors | 108 → 108 | 6.0 % → 6.7 % |  |
-| elm | elastic_diff_xs | Pb-208 | O0287009 | 45 | errors | 51 → 51 | 6.0 % → 6.7 % |  |
-| elm | elastic_diff_xs | Pb-208 | O0287010 | 47.3 | errors | 58 → 58 | 6.0 % → 6.7 % |  |
+| elm | elastic_diff_xs | Pb-208 | O0287008 | 35 | **dropped** | 108 |  |  |
+| elm | elastic_diff_xs | Pb-208 | O0287015 | 35 | errors | 57 → 57 | 1.8 % → 2.0 % |  |
+| elm | elastic_diff_xs | Pb-208 | 12701005 | 40 | errors | 34 → 34 | 4.2 % → 4.2 % |  |
+| elm | elastic_diff_xs | Pb-208 | O0208009 | 40 | errors | 65 → 65 | 3.0 % → 3.0 % |  |
+| elm | elastic_diff_xs | Pb-208 | O0287009 | 45 | **dropped** | 51 |  |  |
+| elm | elastic_diff_xs | Pb-208 | O0287016 | 45 | errors | 61 → 61 | 1.9 % → 2.0 % |  |
+| elm | elastic_diff_xs | Pb-208 | O0287010 | 47.3 | **dropped** | 58 |  |  |
+| elm | elastic_diff_xs | Pb-208 | O0287017 | 47.3 | errors | 62 → 62 | 2.0 % → 2.0 % |  |
 | elm | elastic_diff_xs | Pb-208 | O0211009 | 61.4 | **dropped** | 47 |  |  |
 | elm | elastic_diff_xs | Pb-208 | O0211017 | 61.4 | errors | 47 → 47 | 8.0 % → 8.0 % | 5.0 → 11.2 % |
+| elm | elastic_diff_xs | Pb-208 | E1201014 | 65 | errors | 51 → 51 | 0.9 % → 2.0 % |  |
+| elm | elastic_diff_xs | Pb-208 | T0101004 | 80 | errors | 59 → 59 | 1.9 % → 2.0 % |  |
 | elm | elastic_diff_xs | Pb-208 | 22987004 | 96 | errors | 30 → 30 | 5.9 % → 8.0 % |  |
+| elm | elastic_diff_xs | Pb-208 | T0101004 | 121 | errors | 73 → 73 | 3.0 % → 3.0 % |  |
+| elm | elastic_diff_xs | Pb-208 | T0101004 | 160 | errors | 70 → 70 | 2.7 % → 2.7 % |  |
 | elm | elastic_diff_xs | Pb-208 | O0259002 | 200 | **dropped** | 65 |  |  |
 | elm | elastic_diff_xs | Pb-208 | O0272002 | 200 | **dropped** | 75 |  |  |
-| elm | elastic_diff_xs | Sm-148 | F1100002 | 12 | errors | 34 → 34 | 0.0 % → 3.0 % |  |
-| elm | elastic_diff_xs | Sm-148 | O0246017 | 16 | errors | 24 → 24 | 2.4 % → 10.3 % |  |
-| elm | elastic_diff_xs | Sm-148 | F1173002 | 24.5 | **dropped** | 24 |  |  |
+| elm | elastic_diff_xs | Sn-116 | 10817006 | 11 | errors | 28 → 28 | 3.5 % → 10.0 % |  |
+| elm | elastic_diff_xs | Sn-116 | C0893030 | 16 | errors | 30 → 30 | 1.6 % → 2.0 % |  |
+| elm | elastic_diff_xs | Sn-116 | 10817006 | 24 | errors | 33 → 33 | 5.0 % → 9.3 % |  |
 | elm | elastic_diff_xs | Sn-116 | O0211008 | 61.4 | **dropped** | 47 |  |  |
 | elm | elastic_diff_xs | Sn-116 | O0211016 | 61.4 | errors | 47 → 47 | 10.0 % → 10.0 % | 5.0 → 11.2 % |
+| elm | elastic_diff_xs | Sn-118 | 10817007 | 11 | errors | 28 → 28 | 3.0 % → 10.0 % |  |
+| elm | elastic_diff_xs | Sn-118 | 10817007 | 24 | errors | 25 → 25 | 2.2 % → 9.8 % |  |
+| elm | elastic_diff_xs | Sn-120 | 10817008 | 11 | errors | 28 → 28 | 3.0 % → 10.0 % |  |
+| elm | elastic_diff_xs | Sn-120 | C0893032 | 16 | errors | 30 → 30 | 1.0 % → 2.0 % |  |
+| elm | elastic_diff_xs | Sn-120 | O0142010 | 30.3 | errors | 80 → 80 | 4.1 % → 4.1 % |  |
 | elm | elastic_diff_xs | Sn-120 | O0124004 | 30.4 | errors | 42 → 42 | 1.9 % → 5.3 % |  |
 | elm | elastic_diff_xs | Sn-120 | O0328007 | 40 | errors | 64 → 64 | 0.4 % → 6.4 % |  |
+| elm | elastic_diff_xs | Sn-120 | T0108009 | 134.7 | errors | 17 → 17 | 5.0 % → 5.0 % |  |
+| elm | elastic_diff_xs | Sn-120 | E2042007 | 200 | errors | 28 → 28 | 1.0 % → 2.0 % |  |
+| elm | elastic_diff_xs | Sn-122 | 10817009 | 11 | errors | 28 → 28 | 3.0 % → 10.0 % |  |
+| elm | elastic_diff_xs | Sn-124 | 10817010 | 11 | errors | 28 → 28 | 3.5 % → 10.0 % |  |
+| elm | elastic_diff_xs | Sn-124 | 14662004 | 11 | **dropped** | 16 |  |  |
+| elm | elastic_diff_xs | Sn-124 | C0893034 | 16 | errors | 30 → 30 | 1.3 % → 2.0 % |  |
+| elm | elastic_diff_xs | Sn-124 | 10817010 | 24 | errors | 25 → 25 | 8.7 % → 10.6 % |  |
 | elm | elastic_diff_xs | Zr-90 | O0372013 | 14.71 | **dropped** | 13 |  |  |
+| elm | elastic_diff_xs | Zr-90 | C0893028 | 16 | errors | 30 → 30 | 0.9 % → 2.0 % |  |
 | elm | elastic_diff_xs | Zr-90 | O0370002 | 18.8 | **dropped** | 36 |  |  |
+| elm | elastic_diff_xs | Zr-90 | O0208008 | 40 | errors | 65 → 65 | 4.0 % → 4.0 % |  |
 | elm | elastic_diff_xs | Zr-90 | O0211007 | 61.4 | **dropped** | 47 |  |  |
 | elm | elastic_diff_xs | Zr-90 | O0211015 | 61.4 | errors | 47 → 47 | 10.0 % → 10.0 % | 5.0 → 11.2 % |
+| elm | elastic_diff_xs | Zr-90 | E0166028 | 65 | errors | 26 → 26 | 0.8 % → 2.0 % |  |
+| elm | elastic_diff_xs | Zr-90 | T0101003 | 80 | errors | 60 → 60 | 1.8 % → 2.0 % |  |
+| elm | elastic_diff_xs | Zr-90 | T0101003 | 135 | errors | 89 → 89 | 4.1 % → 4.1 % |  |
+| elm | elastic_diff_xs | Zr-90 | T0101003 | 160 | errors | 52 → 52 | 2.3 % → 2.3 % |  |
 | elm | elastic_diff_xs | Zr-92 | O0372014 | 14.25 | **dropped** | 13 |  |  |
 | elm | elastic_diff_xs | Zr-92 | O0545002 | 19.4 | errors | 29 → 29 | 1.9 % → 3.6 % |  |
+| elm | elastic_diff_xs | Zr-92 | O0788015 | 49.35 | errors | 37 → 37 | 6.2 % → 6.2 % |  |
 | elm | elastic_diff_xs | Zr-94 | O0545006 | 19.4 | errors | 29 → 29 | 1.9 % → 3.6 % |  |
+| elm | elastic_diff_xs | Zr-94 | O0788019 | 49.35 | errors | 35 → 35 | 6.7 % → 6.7 % |  |
+| elm | elastic_diff_xs | Zr-96 | O0788018 | 49.35 | errors | 37 → 37 | 4.9 % → 4.9 % |  |
 | kduq_evaluated | neutron_elastic | Ca-0 | 10633005 | 11.01 | errors | 29 → 29 | 6.1 % → 4.9 % | 5.0 → 3.5 % |
 | kduq_evaluated | neutron_elastic | Co-59 | 10633009 | 11.01 | errors | 27 → 27 | 5.3 % → 4.0 % | 5.0 → 3.5 % |
 | kduq_evaluated | neutron_elastic | In-0 | 10633016 | 11.01 | errors | 26 → 26 | 5.3 % → 4.0 % | 5.0 → 3.5 % |
@@ -119,6 +194,14 @@ Totals: 194 records changed, 45 dropped, 1494 unchanged.
 | kduq_evaluated | neutron_elastic | Pb-208 | 12701005 | 30.3 | errors | 34 → 34 | 4.2 % → 3.3 % | 5.0 → 2.6 % |
 | kduq_evaluated | neutron_elastic | Pb-208 | 12701005 | 40 | errors | 34 → 34 | 5.0 % → 4.2 % | 5.0 → 2.6 % |
 | kduq_evaluated | neutron_elastic | S-0 | 10633004 | 11.01 | errors | 29 → 29 | 5.4 % → 4.1 % | 5.0 → 3.5 % |
+| kduq_evaluated | neutron_elastic | Sn-116 | 10817006 | 11 | errors | 28 → 28 | 3.5 % → 10.0 % |  |
+| kduq_evaluated | neutron_elastic | Sn-116 | 10817006 | 24 | errors | 33 → 33 | 5.0 % → 9.3 % |  |
+| kduq_evaluated | neutron_elastic | Sn-118 | 10817007 | 11 | errors | 28 → 28 | 3.0 % → 10.0 % |  |
+| kduq_evaluated | neutron_elastic | Sn-124 | 10817010 | 11 | errors | 28 → 28 | 3.5 % → 10.0 % |  |
+| kduq_evaluated | neutron_elastic | Sn-124 | 10817010 | 24 | errors | 25 → 25 | 8.7 % → 10.6 % |  |
+| kduq_evaluated | neutron_total | Ca-40 | 13569010 | nan | errors | 205 → 205 | 1.2 % → 1.2 % | 5.0 → 3.0 % |
+| kduq_evaluated | neutron_total | Pb-208 | 13569018 | nan | errors | 205 → 205 | 0.0 % → 0.0 % | 5.0 → 0.5 % |
+| kduq_evaluated | neutron_total | Zr-90 | 13569012 | nan | errors | 205 → 205 | 0.2 % → 0.2 % | 5.0 → 3.0 % |
 | kduq_evaluated | proton_ay | Fe-54 | O0091003 | 20.4 | errors | 29 → 29 | 0.010 → 0.022 |  |
 | kduq_evaluated | proton_ay | Fe-54 | O0091003 | 24.6 | errors | 30 → 30 | 0.010 → 0.022 |  |
 | kduq_evaluated | proton_ay | Fe-56 | O0091009 | 20.4 | errors | 30 → 30 | 0.010 → 0.026 |  |
@@ -175,6 +258,7 @@ Totals: 194 records changed, 45 dropped, 1494 unchanged.
 | kduq_evaluated | proton_elastic | Zr-90 | O0300004 | 100.4 | errors | 35 → 35 | 6.0 % → 7.2 % | 5.0 → 8.0 % |
 | kduq_evaluated | proton_elastic | Zr-90 | T0101003 | 135 | errors | 89 → 89 | 4.1 % → 4.1 % | 5.0 → 10.0 % |
 | kduq_evaluated | proton_elastic | Zr-90 | T0101003 | 160 | errors | 52 → 52 | 2.3 % → 2.3 % | 5.0 → 10.0 % |
+| kduq_evaluated | proton_reaction | Ca-40 | O0341003 | nan | errors | 17 → 17 | 5.0 % → 5.0 % | 5.0 → 4.5 % |
 | chuq_evaluated | neutron_elastic | Bi-209 | 10633022 | 11.01 | errors | 29 → 29 | 4.6 % → 3.0 % | 5.0 → 3.5 % |
 | chuq_evaluated | neutron_elastic | Ca-0 | 10633005 | 11.01 | errors | 29 → 29 | 6.1 % → 4.9 % | 5.0 → 3.5 % |
 | chuq_evaluated | neutron_elastic | Co-59 | 10633009 | 11.01 | errors | 27 → 27 | 5.3 % → 4.0 % | 5.0 → 3.5 % |
@@ -255,3 +339,15 @@ Totals: 194 records changed, 45 dropped, 1494 unchanged.
 | chuq_evaluated | proton_elastic | Zn-68 | O1109006 | 20.4 | **dropped** | 31 |  |  |
 | chuq_evaluated | proton_elastic | Zn-68 | O0328005 | 40 | errors | 64 → 64 | 0.4 % → 6.7 % | 5.0 → 5.4 % |
 | chuq_evaluated | proton_elastic | Zn-70 | O1109008 | 20.4 | **dropped** | 30 |  |  |
+| test_evaluated | neutron_elastic | Sn-124 | 14662004 | 11 | **dropped** | 16 |  |  |
+| test_evaluated | neutron_total | Ni-0 | 14661008 | nan | errors | 113 → 113 | 0.8 % → 0.8 % |  |
+| test_evaluated | neutron_total | Ni-58 | 14661007 | nan | errors | 113 → 113 | 0.8 % → 0.8 % |  |
+| test_evaluated | neutron_total | Ni-64 | 14661006 | nan | errors | 113 → 113 | 0.7 % → 0.9 % |  |
+| test_evaluated | neutron_total | Pb-0 | 14661015 | nan | errors | 113 → 113 | 0.8 % → 0.8 % |  |
+| test_evaluated | neutron_total | Rh-103 | 14661005 | nan | errors | 113 → 113 | 4.6 % → 4.6 % |  |
+| test_evaluated | neutron_total | Sn-0 | 14661002 | nan | errors | 120 → 120 | 1.4 % → 1.4 % |  |
+| test_evaluated | neutron_total | Sn-112 | 14661004 | nan | errors | 120 → 120 | 1.5 % → 1.5 % |  |
+| test_evaluated | neutron_total | Sn-124 | 14661003 | nan | errors | 120 → 120 | 1.4 % → 1.4 % |  |
+| test_evaluated | proton_reaction | Ca-40 | D0356003 | nan | errors | 6 → 6 | 1.8 % → 1.8 % | 5.0 → 2.0 % |
+| test_evaluated | proton_reaction | Pb-208 | D0356006 | nan | errors | 6 → 6 | 2.8 % → 2.8 % | 5.0 → 4.0 % |
+| test_evaluated | proton_reaction | Zr-90 | D0356005 | nan | errors | 6 → 6 | 4.0 % → 4.0 % | 5.0 → 2.0 % |
