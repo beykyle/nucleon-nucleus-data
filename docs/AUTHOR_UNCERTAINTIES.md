@@ -190,6 +190,11 @@ Also:
   as rising linearly with angle from 5 % (most forward point) to 15 % (most backward), as for Devins (O0157)
   (`author_errors.TOTAL`). Found comparing 124Sn(n,n) 11 MeV with Pruitt (14662004, removed, §6), 2026-10-14.
 
+- **Angle-integrated data (neutron total, proton reaction), 2026-10-14:** the authors' normalisations where stated,
+  Finlay et al. (13569: < 3 % for 40Ca and 90Zr, < 0.5 % for 208Pb), Auce et al. (D0356 ERR-SYS, 2–4 %), Dicello &
+  Igo (O0341, 4 % ⊕ 2 %) and Menet et al. (O0081, 5 %); and Pruitt et al.'s per-point ERR-SYS (14661) added in
+  quadrature (`SYS_COLUMN`).
+
 **Already author-based, not changed:**
 - Fulmer et al. (O0211), whose tables carry per-point errors: only the normalisation changes (§5).
 - Van der Bijl et al. (F0733003, sm3, 90Zr 25.05 MeV), where sm3 curation already uses the authors' 3 % from

@@ -12,7 +12,7 @@ Columns:
 - *median error*: relative (%) for cross sections, absolute for analysing powers (Ay).
 - *norm*: the fractional normalisation uncertainty (`systematic_normalization_error`), where it changed.
 
-Totals: 263 records changed, 57 dropped, 1408 unchanged.
+Totals: 278 records changed, 57 dropped, 1393 unchanged.
 
 | corpus | sector | target | subentry | E (MeV) | change | points | median error before → after | norm |
 |---|---|---|---|---|---|---|---|---|
@@ -199,6 +199,9 @@ Totals: 263 records changed, 57 dropped, 1408 unchanged.
 | kduq_evaluated | neutron_elastic | Sn-118 | 10817007 | 11 | errors | 28 → 28 | 3.0 % → 10.0 % |  |
 | kduq_evaluated | neutron_elastic | Sn-124 | 10817010 | 11 | errors | 28 → 28 | 3.5 % → 10.0 % |  |
 | kduq_evaluated | neutron_elastic | Sn-124 | 10817010 | 24 | errors | 25 → 25 | 8.7 % → 10.6 % |  |
+| kduq_evaluated | neutron_total | Ca-40 | 13569010 | nan | errors | 205 → 205 | 1.2 % → 1.2 % | 5.0 → 3.0 % |
+| kduq_evaluated | neutron_total | Pb-208 | 13569018 | nan | errors | 205 → 205 | 0.0 % → 0.0 % | 5.0 → 0.5 % |
+| kduq_evaluated | neutron_total | Zr-90 | 13569012 | nan | errors | 205 → 205 | 0.2 % → 0.2 % | 5.0 → 3.0 % |
 | kduq_evaluated | proton_ay | Fe-54 | O0091003 | 20.4 | errors | 29 → 29 | 0.010 → 0.022 |  |
 | kduq_evaluated | proton_ay | Fe-54 | O0091003 | 24.6 | errors | 30 → 30 | 0.010 → 0.022 |  |
 | kduq_evaluated | proton_ay | Fe-56 | O0091009 | 20.4 | errors | 30 → 30 | 0.010 → 0.026 |  |
@@ -255,6 +258,7 @@ Totals: 263 records changed, 57 dropped, 1408 unchanged.
 | kduq_evaluated | proton_elastic | Zr-90 | O0300004 | 100.4 | errors | 35 → 35 | 6.0 % → 7.2 % | 5.0 → 8.0 % |
 | kduq_evaluated | proton_elastic | Zr-90 | T0101003 | 135 | errors | 89 → 89 | 4.1 % → 4.1 % | 5.0 → 10.0 % |
 | kduq_evaluated | proton_elastic | Zr-90 | T0101003 | 160 | errors | 52 → 52 | 2.3 % → 2.3 % | 5.0 → 10.0 % |
+| kduq_evaluated | proton_reaction | Ca-40 | O0341003 | nan | errors | 17 → 17 | 5.0 % → 5.0 % | 5.0 → 4.5 % |
 | chuq_evaluated | neutron_elastic | Bi-209 | 10633022 | 11.01 | errors | 29 → 29 | 4.6 % → 3.0 % | 5.0 → 3.5 % |
 | chuq_evaluated | neutron_elastic | Ca-0 | 10633005 | 11.01 | errors | 29 → 29 | 6.1 % → 4.9 % | 5.0 → 3.5 % |
 | chuq_evaluated | neutron_elastic | Co-59 | 10633009 | 11.01 | errors | 27 → 27 | 5.3 % → 4.0 % | 5.0 → 3.5 % |
@@ -336,3 +340,14 @@ Totals: 263 records changed, 57 dropped, 1408 unchanged.
 | chuq_evaluated | proton_elastic | Zn-68 | O0328005 | 40 | errors | 64 → 64 | 0.4 % → 6.7 % | 5.0 → 5.4 % |
 | chuq_evaluated | proton_elastic | Zn-70 | O1109008 | 20.4 | **dropped** | 30 |  |  |
 | test_evaluated | neutron_elastic | Sn-124 | 14662004 | 11 | **dropped** | 16 |  |  |
+| test_evaluated | neutron_total | Ni-0 | 14661008 | nan | errors | 113 → 113 | 0.8 % → 0.8 % |  |
+| test_evaluated | neutron_total | Ni-58 | 14661007 | nan | errors | 113 → 113 | 0.8 % → 0.8 % |  |
+| test_evaluated | neutron_total | Ni-64 | 14661006 | nan | errors | 113 → 113 | 0.7 % → 0.9 % |  |
+| test_evaluated | neutron_total | Pb-0 | 14661015 | nan | errors | 113 → 113 | 0.8 % → 0.8 % |  |
+| test_evaluated | neutron_total | Rh-103 | 14661005 | nan | errors | 113 → 113 | 4.6 % → 4.6 % |  |
+| test_evaluated | neutron_total | Sn-0 | 14661002 | nan | errors | 120 → 120 | 1.4 % → 1.4 % |  |
+| test_evaluated | neutron_total | Sn-112 | 14661004 | nan | errors | 120 → 120 | 1.5 % → 1.5 % |  |
+| test_evaluated | neutron_total | Sn-124 | 14661003 | nan | errors | 120 → 120 | 1.4 % → 1.4 % |  |
+| test_evaluated | proton_reaction | Ca-40 | D0356003 | nan | errors | 6 → 6 | 1.8 % → 1.8 % | 5.0 → 2.0 % |
+| test_evaluated | proton_reaction | Pb-208 | D0356006 | nan | errors | 6 → 6 | 2.8 % → 2.8 % | 5.0 → 4.0 % |
+| test_evaluated | proton_reaction | Zr-90 | D0356005 | nan | errors | 6 → 6 | 4.0 % → 4.0 % | 5.0 → 2.0 % |

@@ -89,3 +89,22 @@ def test_elm_data_carry_the_evaluation():
             y, e = np.abs(rec["data"]["y"]), np.asarray(rec["data"]["y_err"])
             assert np.all(e >= elm_evaluation.REL_ERR_FLOOR * y * (1 - 1e-9)), (path, rec["EXFORAccessionNumber"])
     assert n > 0
+
+
+def test_integral_normalisations_and_systematics():
+    """Angle-integrated data carry the authors' normalisations and Pruitt's per-point ERR-SYS."""
+    seen = set()
+    for path, rec in _elm_records():
+        if path.parent.name not in ("neutron_total", "proton_reaction"):
+            continue
+        sub, d = rec["EXFORAccessionNumber"], rec["data"]
+        for key in (sub, sub[:5]):
+            if key in author_errors.NORM:
+                assert d["systematic_normalization_error"] == pytest.approx(author_errors.NORM[key][0]), sub
+                seen.add(key)
+                break
+        if sub[:5] in author_errors.SYS_COLUMN:
+            e = np.asarray(d.get("y_err_before_floor", d["y_err"])) / np.abs(d["y"])
+            assert np.all(e > 0.004), sub  # ERR-S (+) ERR-SYS, ERR-SYS alone ~0.5 %
+            seen.add(sub[:5])
+    assert {"13569010", "13569018", "D0356006", "O0341", "O0081", "14661"} <= seen

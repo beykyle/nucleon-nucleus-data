@@ -215,6 +215,26 @@ NORM = {
     "O0211016": (float(np.hypot(0.05, 0.10)), "Fulmer: thickness 5 % (+) charge collection 10 %"),
     "O0211017": (float(np.hypot(0.05, 0.10)), "Fulmer: thickness 5 % (+) charge collection 10 %"),
 }
+# angle-integrated (energy-distribution) records: neutron total and proton reaction cross sections
+_FINLAY = "Finlay et al., PRC 47, 237 (1993), ERR-ANALYS: normalization uncertainty is "
+_AUCE = "Auce et al., PRC 71, 064606 (2005): ERR-SYS (thickness and uniformity of the targets, 1-4 %) "
+NORM.update({
+    "13569010": (0.03, _FINLAY + "< 3 % (40Ca)"),
+    "13569012": (0.03, _FINLAY + "< 3 % (90Zr)"),
+    "13569018": (0.005, _FINLAY + "< 0.5 % (208Pb)"),
+    "D0356003": (0.02, _AUCE + "2 % (40Ca)"),
+    "D0356005": (0.02, _AUCE + "2 % (90Zr)"),
+    "D0356006": (0.04, _AUCE + "4 % (208Pb)"),
+    "O0341": (float(np.hypot(0.04, 0.02)), "Dicello & Igo, PRC 2, 488 (1970): ERR-1 elastic corrections 4 % "
+              "(absolute) (+) ERR-2 average areal density 2 %"),
+    "O0081": (0.05, "Menet et al., PRC 4, 1114 (1971), ERR-ANALYS: ERR-1 2 % for the thick targets, 5 % for the thin "
+              "(which is which not given): 5 %"),
+})
+#: entry -> (EXFOR column, citation): a per-point systematic column of an energy distribution, added in quadrature
+SYS_COLUMN = {
+    "14661": ("ERR-SYS", "Pruitt et al., PRC 102, 034601 (2020): ERR-SYS systematic uncertainty per point"),
+}
+
 #: entry -> the authors' normalisation uncertainty of the analysing powers (fraction): a beam-polarisation scale.
 #: Analysing powers of other entries keep their curated normalisation: the cross-section figures above (target
 #: thickness, beam integration, efficiency) cancel in a ratio of counts.
@@ -497,6 +517,48 @@ def drop_reason(subentry: str, corpus: str) -> str | None:
     return None
 
 
+def _sys_column(subentry: str, label: str) -> tuple[np.ndarray, np.ndarray] | None:
+    """(energy MeV, relative value) of an EXFOR column of an energy distribution, sorted by energy."""
+    for ds in _blocks(subentry):
+        labels = list(ds.labels)
+        en, to_mev = energy_column(ds)
+        if en is None or label not in labels or "DATA" not in labels:
+            continue
+        i, j = labels.index(label), labels.index("DATA")
+        rows = [r for r in ds.data if r[en] is not None and r[j] and r[i] is not None]
+        e = np.array([r[en] * to_mev for r in rows])
+        rel = np.array([r[i] / 100 if "PER-CENT" in ds.units[i].upper() else r[i] / r[j] for r in rows])
+        order = np.argsort(e)
+        return e[order], rel[order]
+    return None
+
+
+def _correct_integral(payload: dict, sub: str, entry: str) -> dict:
+    """3e. an energy distribution's per-point systematic column; 4. its normalisation."""
+    data, changed = payload["data"], False
+    if entry in SYS_COLUMN:
+        label, cite = SYS_COLUMN[entry]
+        col = _sys_column(sub, label)
+        if col is None:
+            raise LookupError(f"{sub}: no {label} column in EXFOR")
+        x, y = np.asarray(data["x"], float), np.asarray(data["y"], float)
+        rel = np.interp(x, *col)  # matched energies, or interpolated where the record was rebinned
+        data["y_err"] = [float(v) for v in np.hypot(np.asarray(data["y_err"], float), rel * np.abs(y))]
+        _note(payload, f"per-point error = curated error (+) EXFOR {label} at all {len(x)} points: {cite}")
+        changed = True
+    for key in (sub, entry):
+        if key in NORM:
+            val, why = NORM[key]
+            if abs(float(data.get("systematic_normalization_error") or 0.0) - val) > 1e-9:
+                data["systematic_normalization_error"] = val
+                _note(payload, f"normalisation uncertainty {100 * val:.1f} % from the authors: {why}")
+                changed = True
+            break
+    if changed:
+        _note(payload, MARK)
+    return payload
+
+
 def correct(payload: dict, corpus: str) -> dict | None:
     """The corrected payload, or None if the record is dropped. Never applied twice (``MARK``)."""
     notes = payload.get("notes") or []
@@ -507,8 +569,8 @@ def correct(payload: dict, corpus: str) -> dict | None:
     entry = sub[:5]
     if drop_reason(sub, corpus):
         return None
-    if "deg" not in str(payload.get("x_units", "")).lower():  # energy distributions: none of this applies
-        return payload
+    if "deg" not in str(payload.get("x_units", "")).lower():  # energy distributions: sections 3e and 4 only
+        return _correct_integral(payload, sub, entry)
     data = payload["data"]
     x = np.asarray(data["x"], dtype=float)
     y = np.asarray(data["y"], dtype=float)

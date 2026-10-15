@@ -4,7 +4,8 @@ Applied to the ELM corpus only, after ``author_errors`` (``serialize.write_secto
 calibration reading ``data/elm`` uses exactly this data:
 
 1. Excluded targets (``EXCLUDED_TARGETS``): deformed nuclei, for which a spherical optical model is not adequate;
-   and excluded measurements (``EXCLUDED_RECORDS``): outliers in the isolated-resonance region.
+   and excluded subentries and measurements (``EXCLUDED_SUBENTRIES``, ``EXCLUDED_RECORDS``): Fowler 208Pb(n,n),
+   outliers in the isolated-resonance region, and Shane's natural-Ca sigma_tot labelled 40Ca.
 2. A per-point relative error floor on cross sections (``REL_ERR_FLOOR``, 2 %): y_err = max(y_err, floor * |y|).
    Unrecognised systematic uncertainties of this size are typical; without a floor a few sets with sub-percent errors
    dominate any calibration that does not first learn a model error. Analysing powers (sector elastic_ay) are exempt:
@@ -29,6 +30,14 @@ EXCLUDED_TARGETS: dict[tuple[int, int], str] = {
 _RES = ("in the isolated-resonance region and {r} the TALYS (KD03 + compound) elastic; removed (2026-10-14). "
         "Resonance structure in sigma_tot exceeds 20 % (beyond statistics) up to ~3 MeV in 208Pb (13735002) and "
         "40Ca (10721002), which an energy-averaged optical model does not describe (docs/ELM_CALIBRATION_DATA.md)")
+#: subentry -> reason: every measurement of the subentry removed from the ELM calibrations
+EXCLUDED_SUBENTRIES: dict[str, str] = {
+    "12217002": ("Fowler, PR 147, 870 (1966), 208Pb(n,n) 0.7-1.8 MeV: all in the isolated-resonance region, 1.33x the "
+                 "TALYS (KD03 + compound) elastic (median over its energies, up to 2.7x); removed (2026-10-14)"),
+    "14269004": ("Shane et al., NIM A 614, 468 (2010), sigma_tot labelled 40Ca is a natural-Ca sample (~97 % 40Ca); the "
+                 "isotopic calibrations use Finlay et al. (13569010, enriched 40Ca) over the same energies; removed "
+                 "(2026-10-14)"),
+}
 #: (subentry, energy MeV) -> reason: single measurements removed from the ELM calibrations
 EXCLUDED_RECORDS: dict[tuple[str, float], str] = {
     **{("12217002", e): _RES.format(r=f"{q} x") for e, q in (
@@ -66,6 +75,8 @@ def evaluate(payload: dict, sector: str, target: tuple[int, int]) -> dict | None
 
 def excluded_record(payload: dict) -> str | None:
     sub, energy = str(payload.get("EXFORAccessionNumber", ""))[:8], payload.get("energy")
+    if sub in EXCLUDED_SUBENTRIES:
+        return EXCLUDED_SUBENTRIES[sub]
     for (s, e), why in EXCLUDED_RECORDS.items():
         if s == sub and energy is not None and abs(float(energy) - e) < 1e-3:
             return why

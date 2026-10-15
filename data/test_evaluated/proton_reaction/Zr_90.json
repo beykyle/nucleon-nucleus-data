@@ -38,7 +38,7 @@
                 0.15,
                 0.15
             ],
-            "systematic_normalization_error": 0.05
+            "systematic_normalization_error": 0.02
         },
         "corpus": "test_evaluated",
         "sector": "proton_reaction",
@@ -46,7 +46,9 @@
         "target": "Zr-90",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
-            "derived from the test corpus"
+            "derived from the test corpus",
+            "normalisation uncertainty 2.0 % from the authors: Auce et al., PRC 71, 064606 (2005): ERR-SYS (thickness and uniformity of the targets, 1-4 %) 2 % (90Zr)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
         ]
     }
 ]

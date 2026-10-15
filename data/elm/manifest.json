@@ -108,7 +108,7 @@
             ]
         },
         "elastic_diff_xs": {
-            "data_points": 12160,
+            "data_points": 11941,
             "entries": [
                 "10277",
                 "10391",
@@ -125,7 +125,6 @@
                 "11611",
                 "11637",
                 "12191",
-                "12217",
                 "12645",
                 "12701",
                 "12782",
@@ -204,7 +203,7 @@
                 "T0108",
                 "T0152"
             ],
-            "measurements": 609,
+            "measurements": 588,
             "targets": [
                 "Ba-138",
                 "Ca-40",
@@ -236,7 +235,7 @@
             ]
         },
         "elastic_diff_xs_direct": {
-            "data_points": 12160,
+            "data_points": 11941,
             "entries": [
                 "10277",
                 "10391",
@@ -253,7 +252,6 @@
                 "11611",
                 "11637",
                 "12191",
-                "12217",
                 "12645",
                 "12701",
                 "12782",
@@ -332,7 +330,7 @@
                 "T0108",
                 "T0152"
             ],
-            "measurements": 609,
+            "measurements": 588,
             "targets": [
                 "Ba-138",
                 "Ca-40",
@@ -364,7 +362,7 @@
             ]
         },
         "neutron_total": {
-            "data_points": 25860,
+            "data_points": 25799,
             "entries": [
                 "10338",
                 "10468",
@@ -376,7 +374,7 @@
                 "14269",
                 "14661"
             ],
-            "measurements": 14,
+            "measurements": 13,
             "targets": [
                 "Ca-40",
                 "Ca-48",

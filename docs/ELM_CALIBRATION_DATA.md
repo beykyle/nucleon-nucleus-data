@@ -39,7 +39,7 @@ total uncertainty for entry 10817 (§4.2).
 
 ## 2. Data from 0 MeV
 
-- **Elastic window:** `spec.ELM_ELASTIC_EINC_RANGE` is now (0, 200) MeV. The neutron elastic sector gained 391 sets
+- **Elastic window:** `spec.ELM_ELASTIC_EINC_RANGE` is now (0, 200) MeV. The neutron elastic sector gained 370 sets
   below 10 MeV, among them 92/94Mo (229), 208Pb and 206Pb (54), 40/48Ca (23), 90/92/94Zr (44) and Sn (43). Proton
   elastic gained 15 sets below 10 MeV. Three newly entering
   subentries rest on reader errors alone and are removed (F1407013, O1823002, F0930002; AUTHOR_UNCERTAINTIES.md §6).
@@ -50,7 +50,11 @@ total uncertainty for entry 10817 (§4.2).
     reaches zero at 13 keV.
   - There is no thinning to one point per MeV. How to energy-average the resonance region (Lorentz smoothing) is
     the calibration's choice.
-  - Only isotopic measurements are kept. A row listed under 208Pb resolved to natural Pb (10047089) and was
+  - Only isotopic measurements are kept. Shane et al.'s σ_tot labelled 40Ca (14269004) is a natural-Ca sample and
+    is removed from ELM (`EXCLUDED_SUBENTRIES`). Finlay et al.'s enriched 40Ca (13569010) covers the same energies.
+  - Errors: the authors' normalisations where stated (Finlay 3 % and 0.5 %, Auce 2–4 %, Dicello & Igo 4.5 %,
+    Menet 5 %), and Pruitt's per-point ERR-SYS in quadrature (`author_errors.NORM`, `SYS_COLUMN`). The rest keep
+    the default 5 %. A row listed under 208Pb resolved to natural Pb (10047089) and was
     dropped.
   - Three σ_R subentries do not parse with x4i3.
 - **112Sn:** added to `spec.BETA2_BY_TARGET` with β2 0.123, from B(E2)↑ 0.242(8) e²b² (Kumar et al., PRC 81, 024306
@@ -76,8 +80,9 @@ That region is where σ_tot shows resonance structure above 20 % beyond statisti
 | 4–5 | 5 % | 9 % | — |
 | 6–8 | 1 % | 4 % | — |
 
-Bostrom 206Pb at 4.2 MeV and Hicks 48Ca at 8.0 MeV lie above the region and are kept. The other 21 Fowler 208Pb
-energies (0.7–1.8 MeV) are kept too, with a median ratio of 1.33. A calibration should keep the region's
+Bostrom 206Pb at 4.2 MeV and Hicks 48Ca at 8.0 MeV lie above the region and are kept. The rest of Fowler's 208Pb
+set is removed too (`EXCLUDED_SUBENTRIES`): all 29 of its energies, 0.715–1.761 MeV, lie in the region, with a median
+ratio of 1.33. A calibration should keep the region's
 fluctuations out of the fit: energy-average there, or start above it.
 
 ## 3. Compound elastic from TALYS
