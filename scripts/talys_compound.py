@@ -20,8 +20,9 @@ Usage::
 angular.csv (E, angle_cm, xs, direct, compound, ratio_rutherford) and integral.csv (E, compound_elastic,
 shape_elastic, reaction, total, nonelastic), plus talys.inp and meta.json (TALYS commit, settings). Raw TALYS output
 stays in a scratch directory. ``apply`` reads those and writes data/<corpus>/<sector>_direct/ (same file layout and
-records, with data.y the direct-only value, data.y_measured, data.compound_elastic, data.ce_fraction, and
-y_err = sqrt(y_err^2 + (CE_UNCERTAINTY * CE)^2)).
+records, with data.y the direct-only value, data.y_measured, data.compound_elastic, data.ce_fraction (CE / measured),
+data.talys_model (TALYS's elastic or sigma_R at the data points), data.ce_fraction_model (CE / talys_model),
+data.y_err_before_compound, data.compound_uncertainty and y_err = sqrt(y_err^2 + (CE_UNCERTAINTY * CE)^2)).
 
 TALYS settings: defaults, plus ``outangle y`` and ``fileelastic y`` (elastic angular distributions with the compound
 part angle-dependent from Hauser-Feshbach Legendre coefficients, up to 50 MeV; isotropic above) and, for protons,
@@ -238,17 +239,22 @@ def load_angular(path: Path) -> dict[float, tuple[np.ndarray, np.ndarray, np.nda
     return {e: tuple(np.array(v).T) for e, v in out.items()}
 
 
-def ce_at(table, E: float, theta_deg: np.ndarray, ratio: bool) -> np.ndarray:
-    """CE at the record angles, interpolated in cos(theta): mb/sr, or as a ratio to Rutherford."""
+def talys_at(table, E: float, theta_deg: np.ndarray, ratio: bool) -> tuple[np.ndarray, np.ndarray]:
+    """(CE, TALYS elastic) at the record angles, interpolated in cos(theta): mb/sr, or as ratios to Rutherford."""
     ang, ce, xs, rr = table[round(E, 3)]
     keep = (ang > 0) & np.isfinite(ce) & (xs < 1e30)
     c = np.cos(np.radians(ang[keep]))[::-1]
-    val = ce[keep][::-1]
-    out = np.interp(np.cos(np.radians(theta_deg)), c, val)
+    at = np.cos(np.radians(theta_deg))
+    out_ce, out_xs = np.interp(at, c, ce[keep][::-1]), np.interp(at, c, xs[keep][::-1])
     if ratio:  # the Rutherford cross section implied by TALYS: xs / (xs/Rutherford)
-        ruth = (xs[keep] / rr[keep])[::-1]
-        out = out / np.interp(np.cos(np.radians(theta_deg)), c, ruth)
-    return out
+        ruth = np.interp(at, c, (xs[keep] / rr[keep])[::-1])
+        out_ce, out_xs = out_ce / ruth, out_xs / ruth
+    return out_ce, out_xs
+
+
+def ce_at(table, E: float, theta_deg: np.ndarray, ratio: bool) -> np.ndarray:
+    """CE at the record angles, interpolated in cos(theta): mb/sr, or as a ratio to Rutherford."""
+    return talys_at(table, E, theta_deg, ratio)[0]
 
 
 def apply(args) -> None:
@@ -269,19 +275,26 @@ def apply(args) -> None:
             if args.sector == "proton_reaction":
                 t = np.loadtxt(base / "integral.csv", delimiter=",", skiprows=1, ndmin=2)
                 ce = np.interp(np.asarray(d["x"], float), t[:, 0], t[:, 1]) / 1000.0  # mb -> b
+                model = np.interp(np.asarray(d["x"], float), t[:, 0], t[:, 3]) / 1000.0  # TALYS sigma_R (OM)
                 d["y"] = (y + ce).tolist()
                 note = "reaction (OM) = measured nonelastic + TALYS compound elastic"
             else:
                 table = load_angular(base / "angular.csv")
                 ratio = str(rec.get("y_units", "")).lower() in ("no-dim", "", "arb-units") and rec["projectile"] == "proton"
-                ce = ce_at(table, float(rec["energy"]), np.asarray(d["x"], float), ratio)
+                ce, model = talys_at(table, float(rec["energy"]), np.asarray(d["x"], float), ratio)
                 if not ratio:
-                    ce = ce / 1000.0  # mb/sr -> b/sr
+                    ce, model = ce / 1000.0, model / 1000.0  # mb/sr -> b/sr
                 d["y"] = (y - ce).tolist()
                 note = "direct (shape) elastic = measured - TALYS compound elastic"
             d["y_measured"] = y.tolist()
             d["compound_elastic"] = ce.tolist()
             d["ce_fraction"] = (np.abs(ce) / np.abs(y)).tolist()
+            # TALYS's own elastic (measured-like: shape + compound) or sigma_R, and CE as a fraction of it: a model
+            # quantity, so a cut on it does not select on the measured values (ce_fraction does)
+            d["talys_model"] = model.tolist()
+            d["ce_fraction_model"] = (np.abs(ce) / np.abs(model)).tolist()
+            d["y_err_before_compound"] = e.tolist()
+            d["compound_uncertainty"] = CE_UNCERTAINTY
             d["y_err"] = np.sqrt(e ** 2 + (CE_UNCERTAINTY * ce) ** 2).tolist()
             rec.setdefault("notes", []).append(
                 f"{note} (TALYS {json.loads((base / 'meta.json').read_text())['talys_commit'][:7]}, default settings + "

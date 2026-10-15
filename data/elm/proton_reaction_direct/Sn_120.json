@@ -78,7 +78,35 @@
                 5.991611743559017e-11,
                 6.472491909385112e-11,
                 6.309148264984227e-11
-            ]
+            ],
+            "talys_model": [
+                1.43227,
+                1.47758,
+                1.54754,
+                1.5757,
+                1.5833599999999999,
+                1.57579,
+                1.56751
+            ],
+            "ce_fraction_model": [
+                7.404749104568273e-11,
+                6.82643240975108e-11,
+                6.462902412861704e-11,
+                6.34638573332487e-11,
+                6.31568310428456e-11,
+                6.346023264521287e-11,
+                6.379544628104446e-11
+            ],
+            "y_err_before_compound": [
+                0.038,
+                0.052,
+                0.03322,
+                0.04,
+                0.045,
+                0.038,
+                0.0317
+            ],
+            "compound_uncertainty": 0.3
         },
         "corpus": "elm",
         "sector": "proton_reaction_direct",
@@ -119,7 +147,17 @@
             ],
             "ce_fraction": [
                 1.6629253472222222e-08
-            ]
+            ],
+            "talys_model": [
+                1.09204
+            ],
+            "ce_fraction_model": [
+                1.7542306142632137e-08
+            ],
+            "y_err_before_compound": [
+                0.034
+            ],
+            "compound_uncertainty": 0.3
         },
         "corpus": "elm",
         "sector": "proton_reaction_direct",
@@ -173,7 +211,23 @@
                 6.294398993077408e-11,
                 6.180469715698393e-11,
                 6.872852233676975e-11
-            ]
+            ],
+            "talys_model": [
+                1.54555,
+                1.58337,
+                1.56174
+            ],
+            "ce_fraction_model": [
+                6.471353239946945e-11,
+                6.315643216683403e-11,
+                6.403114474880582e-11
+            ],
+            "y_err_before_compound": [
+                0.05,
+                0.073,
+                0.072
+            ],
+            "compound_uncertainty": 0.3
         },
         "corpus": "elm",
         "sector": "proton_reaction_direct",
@@ -213,7 +267,17 @@
             ],
             "ce_fraction": [
                 6.608511763150938e-11
-            ]
+            ],
+            "talys_model": [
+                1.48649
+            ],
+            "ce_fraction_model": [
+                6.727256826483864e-11
+            ],
+            "y_err_before_compound": [
+                0.0445
+            ],
+            "compound_uncertainty": 0.3
         },
         "corpus": "elm",
         "sector": "proton_reaction_direct",
