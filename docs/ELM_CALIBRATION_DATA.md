@@ -43,6 +43,8 @@ total uncertainty for entry 10817 (§4.2).
   below 10 MeV, among them 92/94Mo (229), 208Pb and 206Pb (54), 40/48Ca (23), 90/92/94Zr (44) and Sn (43). Proton
   elastic gained 15 sets below 10 MeV. Three newly entering
   subentries rest on reader errors alone and are removed (F1407013, O1823002, F0930002; AUTHOR_UNCERTAINTIES.md §6).
+  Guzhovskii et al.'s Sn(p,p) at 6.5–7.5 MeV (F1127) is removed too: EXFOR tabulates its σ/σ_Ruth per mille as
+  NO-DIM (§6, `DROP_MISCOMPILED`).
 - **Angle-integrated sectors:** [scripts/curate_elm_integral.py](../scripts/curate_elm_integral.py) curates the
   test and kduq spec subentries for ELM targets: σ_tot 14269, 14661, 10721, 13569, 10338, 10468, 13736, 12215 and
   13735; σ_R D0356, O0341, O0330, O0150, O0579, C1217, O0081 and C0424.

@@ -249,6 +249,12 @@ with independent data on the same target at the same energy:
   (0.003 mb) and 2+ inelastic (2–5 mb/sr, against an excess of 12–110 mb/sr) do not account for it, and 10 % errors
   on both sets still leave χ² = 46 for 16 points.
 
+**Miscompiled in EXFOR** (`DROP_MISCOMPILED`, 2026-10-15).
+- **F1127, Guzhovskii et al., Izv. AN SSSR 37, 1880 (1973), 118–124Sn(p,p) 6.5–7.5 MeV (10 records, elm):** EXFOR
+  tabulates σ/σ_Ruth as NO-DIM 1014, 985, 970, … Below the Coulomb barrier the ratio is about 1, so the values are
+  per mille, and every point sits 1000× above KD03 (found by the elm_lane data audit). The set is removed rather than
+  rescaled, because sub-barrier elastic scattering barely constrains the optical potential.
+
 **No author uncertainty.** In the table below, "Not stated" means the paper gives no per-point error and shows no
 legible bars. The last column is what the paper does offer: a set could be restored with that value.
 
@@ -285,7 +291,7 @@ legible bars. The last column is what the paper does offer: a set could be resto
 ## 7. How the corrections are applied and checked
 
 **Where.** [src/nn_corpora/author_errors.py](../src/nn_corpora/author_errors.py) holds every rule: `DROP_FLAGGED`,
-`DROP_DUPLICATES`, `DROP_INCONSISTENT`, the Doering table, `COLUMN_AUTHOR`, `COLUMNS`, `COMMON`, `PER_PAPER`, `TOTAL`, `NORM` and `NORM_AY`. `author_errors.SCOPE`
+`DROP_DUPLICATES`, `DROP_INCONSISTENT`, `DROP_MISCOMPILED`, the Doering table, `COLUMN_AUTHOR`, `COLUMNS`, `COMMON`, `PER_PAPER`, `TOTAL`, `NORM` and `NORM_AY`. `author_errors.SCOPE`
 lists the corpora they apply to, and `author_errors.EVALUATED` names the evaluated copy of each static corpus.
 
 - **ELM:** removals take effect in `elm_curate.finalize`, and every record passes through `author_errors.correct`

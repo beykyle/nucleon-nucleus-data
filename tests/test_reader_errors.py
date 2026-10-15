@@ -163,6 +163,8 @@ def test_drop_reasons_only_in_scope():
         for corpus in STATIC:
             assert ae.drop_reason(sub, corpus) is None
     assert ae.drop_reason("O0211012", "elm") is None, "Fulmer's tables are kept"
+    for sub in ("F1127005", "F1127008"):  # entry-level keys of DROP_MISCOMPILED / DROP_INCONSISTENT
+        assert ae.drop_reason(sub, "elm") and ae.drop_reason(sub, STATIC[0]) is None
 
 
 @pytest.mark.slow
