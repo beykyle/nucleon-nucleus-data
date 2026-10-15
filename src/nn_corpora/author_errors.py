@@ -12,7 +12,8 @@ publication behind it, is documented in ``docs/AUTHOR_UNCERTAINTIES.md``; the qu
 ``docs/AUTHOR_UNCERTAINTY_SOURCES.md``. In order, per record:
 
 1. DROP: records with no usable author source of uncertainty (``DROP_FLAGGED``), and ELM's figure digitisations of
-   Fulmer et al. that duplicate the authors' tables (``DROP_DUPLICATES``).
+   Fulmer et al. that duplicate the authors' tables (``DROP_DUPLICATES``); sets inconsistent with independent data
+   (``DROP_INCONSISTENT``) or with units misstated in EXFOR (``DROP_MISCOMPILED``).
 2. TABLE: Doering (p,n) to the IAS (EXFOR O0178, digitised from a figure) is replaced by the thesis Table 5
    tabulation, values and errors (``external/doering_1974_table5.csv``). EXFOR points with no table row go with it.
 3. AUTHOR: Fricke (O0328) has the authors' errors in a column EXFOR relabelled ERR-T -> ERR-1 in 2023
@@ -84,6 +85,14 @@ DROP_INCONSISTENT = {
     "C0622": ("dropped as inconsistent (elm_lane data audit, 2026-10-14): Moyer, Finlay et al., NPA 352, 221 (1981) "
               "92Mo(p,p) 25-45 MeV quotes 0.1-0.7 % errors with no normalisation, departs 1.4-2.5x from both KD03 and "
               "the ELM-Lane prior centre away from forward angles, and is ~2x off D0295010 at 30 MeV"),
+}
+
+#: EXFOR entries (5 characters) or subentries (8) removed from every evaluated corpus because EXFOR misstates the
+#: data's units -> reason
+DROP_MISCOMPILED = {
+    "F1127": ("dropped as miscompiled in EXFOR (elm_lane data audit, 2026-10-15): Guzhovskii et al., Izv. AN SSSR "
+              "37, 1880 (1973), 118-124Sn(p,p) 6.5-7.5 MeV, sigma/sigma_Ruth tabulated as NO-DIM 1014, 985, ... "
+              "below the Coulomb barrier, i.e. per mille: 1000x KD03 at every point (log offset -6.9)"),
 }
 
 # -- 3. per-paper author uncertainties --------------------------------------------------------------------------------
@@ -514,6 +523,8 @@ def drop_reason(subentry: str, corpus: str) -> str | None:
     for key in (subentry[:8], subentry[:5]):
         if key in DROP_INCONSISTENT:
             return DROP_INCONSISTENT[key]
+        if key in DROP_MISCOMPILED:
+            return DROP_MISCOMPILED[key]
     return None
 
 

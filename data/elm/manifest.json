@@ -108,7 +108,7 @@
             ]
         },
         "elastic_diff_xs": {
-            "data_points": 11941,
+            "data_points": 11765,
             "entries": [
                 "10277",
                 "10391",
@@ -175,7 +175,6 @@
                 "E1201",
                 "E1677",
                 "E2042",
-                "F1127",
                 "F1134",
                 "O0124",
                 "O0142",
@@ -203,7 +202,7 @@
                 "T0108",
                 "T0152"
             ],
-            "measurements": 588,
+            "measurements": 578,
             "targets": [
                 "Ba-138",
                 "Ca-40",
@@ -235,7 +234,7 @@
             ]
         },
         "elastic_diff_xs_direct": {
-            "data_points": 11941,
+            "data_points": 11765,
             "entries": [
                 "10277",
                 "10391",
@@ -302,7 +301,6 @@
                 "E1201",
                 "E1677",
                 "E2042",
-                "F1127",
                 "F1134",
                 "O0124",
                 "O0142",
@@ -330,7 +328,7 @@
                 "T0108",
                 "T0152"
             ],
-            "measurements": 588,
+            "measurements": 578,
             "targets": [
                 "Ba-138",
                 "Ca-40",
