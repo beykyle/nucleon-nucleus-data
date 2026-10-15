@@ -69,6 +69,11 @@ def test_no_dropped_record_remains(corpus):
     assert not left, f"{corpus}: dropped subentries still present: {left}"
 
 
+def author_y_err(data):
+    """The author-error evaluation's y_err: an ELM record may have had it raised by the ELM error floor since."""
+    return data.get("y_err_before_floor", data["y_err"])
+
+
 def test_doering_is_the_thesis_table():
     table = ae.doering_table()
     seen = 0
@@ -80,7 +85,7 @@ def test_doering_is_the_thesis_table():
                 rows = table[sub]
                 assert rec["data"]["x"] == [a for a, _, _ in rows]
                 assert np.allclose(rec["data"]["y"], [1e-3 * v for _, v, _ in rows])
-                assert np.allclose(np.asarray(rec["data"]["y_err"]) / np.asarray(rec["data"]["y"]),
+                assert np.allclose(np.asarray(author_y_err(rec["data"])) / np.asarray(rec["data"]["y"]),
                                    [e / 100 for _, _, e in rows])
                 assert rec["data"]["systematic_normalization_error"] == pytest.approx(np.hypot(0.10, 0.05))
     assert seen == 24, "12 Doering sets in each of elm and sm3"
@@ -127,10 +132,10 @@ def test_same_record_same_corrections_in_every_corpus():
             d = rec["data"]
             if key in seen:
                 other, (y_err, norm) = seen[key]
-                assert np.allclose(d["y_err"], y_err), f"{key[:2]}: y_err {corpus} vs {other}"
+                assert np.allclose(author_y_err(d), y_err), f"{key[:2]}: y_err {corpus} vs {other}"
                 assert d["systematic_normalization_error"] == pytest.approx(norm), f"{key[:2]}: norm {corpus} vs {other}"
             else:
-                seen[key] = (corpus, (d["y_err"], d["systematic_normalization_error"]))
+                seen[key] = (corpus, (author_y_err(d), d["systematic_normalization_error"]))
 
 
 def test_analysing_powers_take_only_their_own_normalisation():

@@ -57,6 +57,10 @@ EXPECTED_UNITS = {
     "elastic_ay": {"no-dim"},
     "charge_exchange": {"b/sr"},
 }
+#: compound-elastic-corrected copies (scripts/talys_compound.py apply): the types and units of their source sector
+for _s in ("elastic_diff_xs", "proton_reaction"):
+    EXPECTED_TYPES[f"{_s}_direct"] = EXPECTED_TYPES[_s]
+    EXPECTED_UNITS[f"{_s}_direct"] = EXPECTED_UNITS[_s]
 
 
 def target_filename(target: tuple[int, int]) -> str:
@@ -111,9 +115,10 @@ def write_sector(
     Records of the evaluated corpora (``author_errors.SCOPE``: ELM, sm3, ``*_evaluated``) first pass through
     ``author_errors.apply`` (drops, author uncertainties, normalisations); the static corpora are written as given.
     """
-    from . import author_errors
+    from . import author_errors, elm_evaluation
 
     records = author_errors.apply(records, corpus, sector)
+    records = elm_evaluation.apply(records, corpus, sector)  # ELM only: excluded targets, relative error floor
     out = data_dir / corpus / sector
     out.mkdir(parents=True, exist_ok=True)
 

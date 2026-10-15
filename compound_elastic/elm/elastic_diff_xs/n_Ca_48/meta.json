@@ -1,0 +1,27 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "neutron",
+ "target": "Ca_48",
+ "energies": [
+  2.35,
+  2.43,
+  2.71,
+  3.15,
+  3.55,
+  4.7,
+  6.0,
+  7.97,
+  11.9,
+  16.8
+ ],
+ "settings": [
+  "projectile n",
+  "element ca",
+  "mass 48",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": []
+}

@@ -1,6 +1,81 @@
 [
     {
         "type": "APower",
+        "energy": 9.91,
+        "energy_err": 0.2,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "12785003",
+        "source": "W.Tornow, E.Woye, et al., Nuclear Physics, Section A 385, 373 (1982);  Data taken from the EXFOR database, file EXFOR 12785001 dated 8209, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                20.745,
+                24.745,
+                28.95,
+                38.467,
+                49.557,
+                60.815,
+                70.821,
+                80.907,
+                91.924,
+                102.109,
+                111.433,
+                120.916,
+                130.403,
+                140.254,
+                150.865,
+                156.259
+            ],
+            "y": [
+                -0.0315,
+                -0.0096,
+                0.0378,
+                0.0213,
+                -0.3498,
+                -0.7447,
+                -0.8281,
+                -0.4941,
+                -0.2386,
+                -0.4402,
+                -0.2803,
+                -0.2472,
+                -0.5196,
+                -0.8157,
+                -0.4063,
+                -0.0762
+            ],
+            "y_err": [
+                0.01,
+                0.0118,
+                0.0203,
+                0.0258,
+                0.0587,
+                0.0537,
+                0.0579,
+                0.0777,
+                0.0962,
+                0.0352,
+                0.058,
+                0.0398,
+                0.0508,
+                0.0602,
+                0.0649,
+                0.0808
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_ay",
+        "projectile": "neutron",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "APower",
         "energy": 10.935,
         "energy_err": 0.13,
         "energy_units": "MeV",
@@ -46,7 +121,8 @@
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -120,7 +196,8 @@
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -194,7 +271,8 @@
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -262,7 +340,8 @@
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -396,7 +475,8 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 26 of 26 points without one in EXFOR (added in quadrature to the reader error): Lombardi et al., NPA 188 (1972) 103: 2 % assigned (1 % statistical); Ay typical 0.02",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -480,7 +560,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -622,7 +703,8 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 28 of 28 points without one in EXFOR (added in quadrature to the reader error): Lombardi et al., NPA 188 (1972) 103: 2 % assigned (1 % statistical); Ay typical 0.02",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -738,7 +820,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -876,7 +959,8 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 27 of 27 points without one in EXFOR (added in quadrature to the reader error): Lombardi et al., NPA 188 (1972) 103: 2 % assigned (1 % statistical); Ay typical 0.02",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -953,7 +1037,8 @@
         "projectile": "neutron",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1049,7 +1134,8 @@
         "target": "Ca-40",
         "notes": [
             "converted scattering angles from the lab to the CM frame",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1138,7 +1224,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1357,7 +1444,9 @@
         "sector": "elastic_ay",
         "projectile": "proton",
         "target": "Ca-40",
-        "notes": []
+        "notes": [
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
     },
     {
         "type": "APower",
@@ -1442,7 +1531,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1558,7 +1648,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1706,7 +1797,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1822,7 +1914,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1875,7 +1968,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -1967,7 +2061,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -2047,7 +2142,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -2146,7 +2242,8 @@
         "target": "Ca-40",
         "notes": [
             "converted scattering angles from the lab to the CM frame",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -2251,7 +2348,8 @@
         "target": "Ca-40",
         "notes": [
             "converted scattering angles from the lab to the CM frame",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -2370,7 +2468,8 @@
         "projectile": "proton",
         "target": "Ca-40",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     }
 ]

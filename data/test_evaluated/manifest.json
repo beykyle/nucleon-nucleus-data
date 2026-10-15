@@ -27,7 +27,7 @@
             ]
         },
         "neutron_elastic": {
-            "data_points": 4335,
+            "data_points": 4319,
             "entries": [
                 "13878",
                 "13894",
@@ -49,7 +49,7 @@
                 "23156",
                 "31687"
             ],
-            "measurements": 192,
+            "measurements": 191,
             "targets": [
                 "Al-27",
                 "Ar-0",

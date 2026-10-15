@@ -1,6 +1,210 @@
 [
     {
         "type": "ECS",
+        "energy": 1.5,
+        "energy_err": 0.042,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "10391010",
+        "source": "F.D.Mcdaniel, J.D.Brandenberger, et al., Physical Review, Part C, Nuclear Physics 10, 1087 (1974);  Data taken from the EXFOR database, file EXFOR 10391001 dated 197409, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.31,
+                40.4,
+                50.47,
+                60.53,
+                70.58,
+                80.61,
+                90.62,
+                100.61,
+                110.58,
+                120.53,
+                130.47,
+                140.4,
+                150.31,
+                155.26
+            ],
+            "y": [
+                1.07067,
+                0.75891,
+                0.59989,
+                0.41682,
+                0.29702,
+                0.21035,
+                0.15623,
+                0.12911,
+                0.10425,
+                0.08759,
+                0.0969,
+                0.12675,
+                0.17326,
+                0.1986
+            ],
+            "y_err": [
+                0.03152,
+                0.02375,
+                0.01491,
+                0.01408,
+                0.0073,
+                0.00593,
+                0.00476,
+                0.00505,
+                0.00412,
+                0.00342,
+                0.00397,
+                0.00438,
+                0.0049,
+                0.00559
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Zr-94",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
+        "energy": 8.0,
+        "energy_err": 0.0675,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "13160017",
+        "source": "Y.Wang, J.Rapaport, Nuclear Physics, Section A 517, 301 (1990);  Data taken from the EXFOR database, file EXFOR 13160001 dated 90, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                15.4,
+                18.3,
+                21.1,
+                24.1,
+                27.2,
+                30.2,
+                33.2,
+                36.3,
+                39.4,
+                42.4,
+                45.5,
+                48.5,
+                51.5,
+                54.5,
+                57.5,
+                60.5,
+                65.5,
+                70.6,
+                75.6,
+                80.6,
+                85.6,
+                90.6,
+                95.6,
+                100.6,
+                105.6,
+                110.7,
+                115.6,
+                120.6,
+                125.6,
+                130.6,
+                135.4,
+                140.3,
+                145.3,
+                150.3,
+                153.3,
+                157.3
+            ],
+            "y": [
+                3.01245,
+                2.33417,
+                1.7722,
+                1.27519,
+                0.87711,
+                0.56268,
+                0.30508,
+                0.15956,
+                0.07193,
+                0.03108,
+                0.03364,
+                0.04875,
+                0.07853,
+                0.0897,
+                0.11366,
+                0.12172,
+                0.12102,
+                0.096,
+                0.0716,
+                0.04669,
+                0.03042,
+                0.01482,
+                0.01058,
+                0.0085,
+                0.00847,
+                0.01652,
+                0.02241,
+                0.03147,
+                0.03162,
+                0.03128,
+                0.03091,
+                0.02203,
+                0.02,
+                0.02027,
+                0.01562,
+                0.02
+            ],
+            "y_err": [
+                0.09037,
+                0.07003,
+                0.05317,
+                0.03826,
+                0.02631,
+                0.01688,
+                0.00915,
+                0.00479,
+                0.00241,
+                0.00155,
+                0.00138,
+                0.00176,
+                0.00236,
+                0.00269,
+                0.00341,
+                0.00365,
+                0.00363,
+                0.00288,
+                0.00226,
+                0.00186,
+                0.00202,
+                0.00136,
+                0.00087,
+                0.00062,
+                0.00073,
+                0.00128,
+                0.00189,
+                0.00166,
+                0.00164,
+                0.00158,
+                0.00176,
+                0.00332,
+                0.0028,
+                0.00334,
+                0.0024,
+                0.00314
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "Zr-94",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS",
         "energy": 10.0,
         "energy_err": 0.094,
         "energy_units": "MeV",
@@ -124,7 +328,8 @@
         "projectile": "neutron",
         "target": "Zr-94",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -272,7 +477,8 @@
         "projectile": "proton",
         "target": "Zr-94",
         "notes": [
-            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford"
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -387,7 +593,8 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "author uncertainty at 29 of 29 points without one in EXFOR (added in quadrature to the reader error): Stautberg & Kraushaar, PR 151 (1966) 969, p.4: statistical < 1 % below 90 deg, < 3 % above",
-            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)"
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -549,7 +756,8 @@
         "target": "Zr-94",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -677,7 +885,8 @@
         "projectile": "neutron",
         "target": "Zr-94",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -768,6 +977,44 @@
                 0.025,
                 0.015,
                 0.021,
+                0.02242,
+                0.031000000000000003,
+                0.0298,
+                0.02328,
+                0.03,
+                0.04,
+                0.028,
+                0.04,
+                0.04,
+                0.03,
+                0.028,
+                0.025,
+                0.025,
+                0.021,
+                0.021,
+                0.028,
+                0.018,
+                0.021,
+                0.015,
+                0.018,
+                0.018,
+                0.025,
+                0.013,
+                0.018,
+                0.013,
+                0.015,
+                0.012,
+                0.012,
+                0.013,
+                0.012,
+                0.012,
+                0.012
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
+                0.025,
+                0.015,
+                0.021,
                 0.018,
                 0.03,
                 0.028,
@@ -800,15 +1047,16 @@
                 0.012,
                 0.012,
                 0.012
-            ],
-            "systematic_normalization_error": 0.05
+            ]
         },
         "corpus": "elm",
         "sector": "elastic_diff_xs",
         "projectile": "proton",
         "target": "Zr-94",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 4 of 35 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     }
 ]

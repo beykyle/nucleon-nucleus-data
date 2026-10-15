@@ -36,6 +36,20 @@
                 0.000499
             ],
             "y_err": [
+                0.0002008,
+                0.00018904000000000002,
+                0.00010362,
+                5.0400000000000005e-05,
+                3e-05,
+                2.5e-05,
+                2.5e-05,
+                2.7e-05,
+                2.8e-05,
+                2.4e-05,
+                2.1e-05
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
                 9.5e-05,
                 8.5e-05,
                 5.5e-05,
@@ -47,8 +61,7 @@
                 2.8e-05,
                 2.4e-05,
                 2.1e-05
-            ],
-            "systematic_normalization_error": 0.05
+            ]
         },
         "ex_energy": 8.61,
         "ex_energy_err": 0.0,
@@ -58,7 +71,9 @@
         "projectile": "proton",
         "target": "Sn-116",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 4 of 11 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
     {
@@ -116,12 +131,12 @@
                 0.000148
             ],
             "y_err": [
-                0.00010494,
+                0.0001166,
                 0.00016864,
                 3.2967e-05,
                 2.5477e-05,
                 4.697e-05,
-                1.521e-05,
+                1.69e-05,
                 4.3056e-05,
                 2.074e-05,
                 6.6096e-05,
@@ -159,14 +174,38 @@
                 0.27,
                 0.27
             ],
-            "systematic_normalization_error": 0.05
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
+                0.00010494,
+                0.00016864,
+                3.2967e-05,
+                2.5477e-05,
+                4.697e-05,
+                1.521e-05,
+                4.3056e-05,
+                2.074e-05,
+                6.6096e-05,
+                4.928e-05,
+                2.7456e-05,
+                2.958e-05,
+                3.6176e-05,
+                2.79e-05,
+                1.9899e-05,
+                2.211e-05,
+                1.0971e-05,
+                1.2474e-05,
+                2.08e-05,
+                1.924e-05
+            ]
         },
         "corpus": "elm",
         "sector": "charge_exchange",
         "projectile": "proton",
         "target": "Sn-116",
         "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported"
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 2 of 20 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     }
 ]

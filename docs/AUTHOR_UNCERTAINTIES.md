@@ -158,7 +158,7 @@ within 5 % is left as it is.
 |---|---|---|---|---|---|
 | O0302 | Roos & Wall, PR 140, B1237 (1965) | 160 MeV 40Ca, 120Sn, 208Pb, 58Ni (elm, kduq_evaluated) | `ERR-DIG` ⊕ `DATA-ERR1` ("5 % for the relative cross sections") | `DATA-ERR2`, 7 % ("for the absolute cross sections") | `kduq` took `ERR-DIG` alone: 0.4 % |
 | O0434 | Baron, Leonard, Lind, PR 180, 978 (1969) | 21.3 MeV 58Ni σ (008, kduq_evaluated) | `DATA-ERR` ⊕ `ERR-S` (overall "less than 5 %") | default 5 % | `kduq` took `DATA-ERR`, the reader error: 3 % |
-| O0287 | van Oers et al., PRC 10, 307 (1974) | 21–47.3 MeV 208Pb (004–010, elm) | `DATA-ERR` ⊕ `ERR-T` (the authors' "less than 3 %") | default 5 % | `elm` took `DATA-ERR`, the reader error |
+| O0287 | van Oers et al., PRC 10, 307 (1974) | 21–47.3 MeV 208Pb (004–010, elm) | `DATA-ERR` ⊕ `ERR-T` (the authors' "less than 3 %") | default 5 % | `elm` took `DATA-ERR`, the reader error. Since 2026-10-14 these digitisations are removed as duplicates of the tables 011–017 (§6); the rule is kept for reference |
 | O0287 | van Oers et al. | 185 MeV 208Pb (002, elm, kduq_evaluated) | `DATA-ERR` | `ERR-1`, 8.3 % (calibration, target thickness) | `kduq` defaulted to 5 % |
 | O0142 | Ridley & Turner, NP 58, 497 (1964) | 30.3 MeV Ca, Fe, Ni, Sn, Pb (elm, kduq_evaluated; 120Sn also sm3) | `ERR-T` | `ERR-1` (target thickness), 1–5 % | `kduq` defaulted to 5 % |
 | T0101 | Nadasen et al., PRC 23, 1023 (1981) | 80–182 MeV 40Ca, 90Zr, 208Pb (elm, kduq_evaluated) | `DATA-ERR` (total relative) | `DATA-ERR1`, 10 % ("8–10 %") | `kduq` defaulted to 5 % |
@@ -182,6 +182,13 @@ Also:
   column, and `ERR-DIG` is about 0.001 %. ERR-ANALYS quotes the authors: "5 % at 20°, 2–3 % beyond 30°". The record
   now carries 5 % below 30° and 3 % from there on, ⊕ `ERR-DIG`, with `ERR-SYS` (4 %) as its normalisation. This is
   from EXFOR's quotation; the publication was not checked.
+
+- **10817 (Rapaport et al., NPA 341, 56 (1980)), Sn(n,n) 11 and 24 MeV (006–010), elm, sm3:** ERR-ANALYS gives
+  the total uncertainty as ERR-T 5–15 % (statistics, monitor, multiple scattering, inelastic and compound
+  contributions, angle, detector efficiency), but EXFOR files no ERR-T column: the data carry only `DATA-ERR`, the
+  "absolute" part (geometry, yields, monitor), 3–6 %. Each point now carries max(`DATA-ERR`, total), the total read
+  as rising linearly with angle from 5 % (most forward point) to 15 % (most backward), as for Devins (O0157)
+  (`author_errors.TOTAL`). Found comparing 124Sn(n,n) 11 MeV with Pruitt (14662004, removed, §6), 2026-10-14.
 
 **Already author-based, not changed:**
 - Fulmer et al. (O0211), whose tables carry per-point errors: only the normalisation changes (§5).
@@ -212,8 +219,9 @@ treated as free in a fit.
 
 ## 6. Records removed
 
-**45 records** are removed from the evaluated corpora: 41 because no author statement of their per-point
-uncertainty could be found, and 4 because they duplicate tabulated data. ELM removes them during curation
+Records are removed from the evaluated corpora for three reasons: no author statement of their per-point uncertainty
+could be found (47 records), they duplicate tabulated data (11), or they are inconsistent with independent data (C0622,
+14662004). [AUTHOR_ERRORS_DIFF.md](AUTHOR_ERRORS_DIFF.md) lists each removed record. ELM removes them during curation
 (`elm_curate.finalize`), so `sm3`, which takes its records from ELM, never holds them; the evaluated copies drop
 them when they are built. The static corpora keep them, so [spec/known_missing.csv](../spec/known_missing.csv), which
 accounts for the static corpora, doesn't list them.
@@ -221,7 +229,20 @@ accounts for the static corpora, doesn't list them.
 **Duplicates.** ELM held both EXFOR's figure digitisations (STATUS CURVE, reader errors only) and the authors' own
 tables (STATUS TABLE, with errors) of Fulmer et al. 61.4 MeV elastic scattering, PR 181, 1565 (1969). The
 digitisations O0211004 (40Ca), O0211007 (90Zr), O0211008 (116Sn) and O0211009 (208Pb) are removed; the tables
-O0211012/015/016/017 stay, as in `kduq`.
+O0211012/015/016/017 stay, as in `kduq`. Likewise van Oers et al. 208Pb(p,p) 21–47.3 MeV, PRC 10, 307 (1974): ELM
+held both the digitisations O0287004–010 (flat 6 % reader error) and the tables with the authors' per-point errors
+O0287011–017 (B. Clark's collection; the version sm3 uses) at all seven energies. The digitisations are removed
+(found by the elm_lane data audit, 2026-10-14).
+
+**Inconsistent with independent data** (`DROP_INCONSISTENT`, 2026-10-14). A set is removed only when it disagrees
+with independent data on the same target at the same energy:
+- **C0622, Moyer, Finlay et al., NPA 352, 221 (1981), 92Mo(p,p) 25–45 MeV (4 records, elm):** 0.1–0.7 % errors with
+  no normalisation; 1.4–2.5× off KD03 away from forward angles and about 2× off D0295010 at 30 MeV.
+- **14662004, Pruitt, thesis, Washington University (2019), 124Sn(n,n) 11 MeV (elm, test_evaluated):** 1.4–2.5×
+  Rapaport et al. (10817010) at the same energy, and 1.57× KD03 (median), while Pruitt's own 17 MeV set (14662005)
+  agrees with KD03 (0.95). The excess follows the elastic maxima, a scale error: TALYS's compound elastic
+  (0.003 mb) and 2+ inelastic (2–5 mb/sr, against an excess of 12–110 mb/sr) do not account for it, and 10 % errors
+  on both sets still leave χ² = 46 for 16 points.
 
 **No author uncertainty.** In the table below, "Not stated" means the paper gives no per-point error and shows no
 legible bars. The last column is what the paper does offer: a set could be restored with that value.
@@ -246,6 +267,9 @@ legible bars. The last column is what the paper does offer: a set could be resto
 | O0580 | Fretwurst et al., NPA 468, 247 (1987) | O0580002 (`elm`, σ, 94Mo, 25.6) | statistical bars inside the symbols; "point-to-point fluctuations … may occur, exceeding these statistical errors" | — |
 | O1103 | Moonen et al., J. Phys. G 19, 635 (1993) | O1103004, O1103006 (`chuq_evaluated`, σ, 72Ge, 74Ge, 22.3), O1103012, O1103014 (`chuq_evaluated`, σ, 78Se, 80Se, 22.3) | not stated | the same group states 2 % in O1104 |
 | O1109 | Moonen et al., J. Phys. G 19, 1191 (1993) | O1109002, O1109004, O1109006, O1109008 (`chuq_evaluated`, σ, 64–70Zn, 20.4), O1109005 (`chuq_evaluated`, Ay, 66Zn, 20.4) | not stated | the same group states 2 % in O1104 |
+| F1407 | Gubin et al., Izv. AN SSSR 38, 133 (1974) | F1407013 (`elm`, σ, 64Ni, 5.9–6.2) | EXFOR: "no source of uncertainties is given" for 64Ni; publication not checked | 5–7 % absolute error at small angles (EXFOR ERR-ANALYS) |
+| O1823 | Blankert, Blok & Blok, NPA 356, 74 (1981) | O1823002 (`elm`, σ, 112Sn, 27.45) | EXFOR gives the error only for the (p,d) data (statistics ⊕ 3 % relative normalisation); publication not checked | — |
+| F0930 | Arking et al., NPA 155, 480 (1970) | F0930002 (`elm`, σ, 120Sn, 9.85) | only the absolute uncertainty is stated (EXFOR); publication not checked | normalisation 5 % |
 | O1199 | Fabrici et al., PRC 21, 830 (1980) | O1199008 (`elm`, Ay, 40Ca, 35), O1199009 (`elm`, Ay, 40Ca, 26.3, 40) | nothing stated for Ay; no bars | the companion paper PRC 21, 844 may |
 
 **To restore a removed set:**
@@ -256,7 +280,7 @@ legible bars. The last column is what the paper does offer: a set could be resto
 ## 7. How the corrections are applied and checked
 
 **Where.** [src/nn_corpora/author_errors.py](../src/nn_corpora/author_errors.py) holds every rule: `DROP_FLAGGED`,
-`DROP_DUPLICATES`, the Doering table, `COLUMN_AUTHOR`, `COLUMNS`, `COMMON`, `PER_PAPER`, `NORM` and `NORM_AY`. `author_errors.SCOPE`
+`DROP_DUPLICATES`, `DROP_INCONSISTENT`, the Doering table, `COLUMN_AUTHOR`, `COLUMNS`, `COMMON`, `PER_PAPER`, `TOTAL`, `NORM` and `NORM_AY`. `author_errors.SCOPE`
 lists the corpora they apply to, and `author_errors.EVALUATED` names the evaluated copy of each static corpus.
 
 - **ELM:** removals take effect in `elm_curate.finalize`, and every record passes through `author_errors.correct`
@@ -271,10 +295,18 @@ lists the corpora they apply to, and `author_errors.EVALUATED` names the evaluat
   - writes [AUTHOR_ERRORS_DIFF.md](AUTHOR_ERRORS_DIFF.md) (`--report`; ELM rows only with `--elm`).
 
   It never writes to the static corpora.
+- **ELM calibration evaluation:** after these corrections, ELM records also pass through
+  [src/nn_corpora/elm_evaluation.py](../src/nn_corpora/elm_evaluation.py) (excluded targets, a 2 % error floor;
+  [ELM_CALIBRATION_DATA.md](ELM_CALIBRATION_DATA.md)). sm3 undoes it for the records it copies.
+
+Since the ELM rebuild from 0 MeV (2026-10-14), ELM is rebuilt from its notebooks, so `--elm` writes only the report
+(`--dry-run`); ELM's rows in it compare the 10–200 MeV records of the baseline:
 
 ```bash
 source scripts/setup_exfor_db.sh 2025
-uv run python scripts/apply_author_errors.py --elm --report docs/AUTHOR_ERRORS_DIFF.md
+uv run pytest --nbmake notebooks/elm/ && uv run python scripts/curate_elm_integral.py
+uv run python scripts/apply_author_errors.py
+uv run python scripts/apply_author_errors.py --elm --dry-run --report docs/AUTHOR_ERRORS_DIFF.md
 uv run python scripts/curate_sm3.py && uv run python scripts/build_manifests.py
 ```
 

@@ -65,10 +65,26 @@ DROP_FLAGGED = {
     "O0446002", "O0446003", "O0458004", "O0553004", "O0553006", "O0553010", "O0553014", "O0580002",
     "O1103004", "O1103006", "O1103012", "O1103014", "O1109002", "O1109004", "O1109005", "O1109006", "O1109008",
     "O1199008", "O1199009",
+    # entering ELM with its 0 MeV window and 112Sn (2026-10-14); EXFOR only, the publications not checked
+    "F1407013", "O1823002", "F0930002",
 }
 #: Fulmer et al. 61.4 MeV elastic is in EXFOR twice: figure digitisations (STATUS CURVE, reader errors only) and the
 #: authors' tables (O0211012/015/016/017). ELM carried both; the digitisations are removed, and only the tables kept.
-DROP_DUPLICATES = {"O0211004", "O0211007", "O0211008", "O0211009"}
+#: Van Oers et al. 208Pb(p,p) 21-47.3 MeV is in EXFOR twice: figure digitisations with a flat 6 % reader error
+#: (O0287004-010) and the tabulated data with per-point author errors from B. Clark's collection (O0287011-017, the
+#: version sm3 uses). ELM carried both at all seven energies (found by the elm_lane data audit, 2026-10-14).
+DROP_DUPLICATES = {"O0211004", "O0211007", "O0211008", "O0211009",
+                   "O0287004", "O0287005", "O0287006", "O0287007", "O0287008", "O0287009", "O0287010"}
+#: EXFOR entries (5 characters) or subentries (8) removed from every evaluated corpus as inconsistent -> reason
+DROP_INCONSISTENT = {
+    "14662004": ("dropped as inconsistent (2026-10-14): Pruitt, thesis (2019), 124Sn(n,n) 11 MeV lies 1.4-2.5x above "
+                 "Rapaport et al. (10817010) at the same energy and 1.57x KD03 (median), while Pruitt's own 17 MeV set "
+                 "(14662005) agrees with KD03 (0.95); neither TALYS compound elastic (0.003 mb) nor the 2+ inelastic "
+                 "(2-5 mb/sr vs a 12-110 mb/sr excess) accounts for it; 10 % errors on both sets leave chi2 46/16"),
+    "C0622": ("dropped as inconsistent (elm_lane data audit, 2026-10-14): Moyer, Finlay et al., NPA 352, 221 (1981) "
+              "92Mo(p,p) 25-45 MeV quotes 0.1-0.7 % errors with no normalisation, departs 1.4-2.5x from both KD03 and "
+              "the ELM-Lane prior centre away from forward angles, and is ~2x off D0295010 at 30 MeV"),
+}
 
 # -- 3. per-paper author uncertainties --------------------------------------------------------------------------------
 # A rule maps (angles in deg, y, is_ay, target) -> the author uncertainty per point, absolute in the record's units.
@@ -172,6 +188,17 @@ def is_common(label: str, subentry: str) -> bool:
     if label == "ERR-SYS" or any(f in label for f in ("MONIT", "POL", "MISC")):
         return True
     return label in (columns_rule(subentry) or ((), (), ""))[1] or label in COMMON.get(subentry[:5], ((),))[0]
+
+#: subentry -> (rule, citation): the authors' stated *total* per-point uncertainty where EXFOR carries only part of it
+#: in its error column; y_err = max(EXFOR's error, the total). Rapaport et al., NPA 341 (1980) 56, Sn(n,n) 11 and
+#: 24 MeV: ERR-ANALYS gives ERR-T 5-15 % (statistics, multiple scattering, inelastic and compound contributions,
+#: angle, efficiency) but the data carry only DATA-ERR, the "absolute" part (geometry, yields, monitor), 3-6 %. The
+#: range is read as rising with angle, as for Devins (O0157). Found comparing 124Sn(n,n) 11 MeV with Pruitt (14662004,
+#: dropped as inconsistent), 2026-10-14.
+TOTAL = {f"10817{k:03d}": (_ramp(0.05, 0.15), "Rapaport et al., NPA 341 (1980) 56, EXFOR ERR-ANALYS: total "
+                                             "uncertainty (ERR-T) 5-15 %, not filed as a column; read as rising "
+                                             "from 5 % forward to 15 % at the most backward angle")
+         for k in range(6, 11)}
 
 # -- 4. normalisation -----------------------------------------------------------------------------------------------
 
@@ -464,12 +491,17 @@ def drop_reason(subentry: str, corpus: str) -> str | None:
     if subentry[:8] in DROP_DUPLICATES:
         return ("dropped in reader-error cleaning: figure digitisation duplicating the authors' table "
                 "(docs/AUTHOR_UNCERTAINTIES.md, section 6)")
+    for key in (subentry[:8], subentry[:5]):
+        if key in DROP_INCONSISTENT:
+            return DROP_INCONSISTENT[key]
     return None
 
 
 def correct(payload: dict, corpus: str) -> dict | None:
     """The corrected payload, or None if the record is dropped. Never applied twice (``MARK``)."""
-    if corpus not in SCOPE or MARK in (payload.get("notes") or []):
+    notes = payload.get("notes") or []
+    # an ELM record already through the ELM calibration evaluation, which runs after this step, was corrected then
+    if corpus not in SCOPE or MARK in notes or "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)" in notes:
         return payload
     sub = str(payload.get("EXFORAccessionNumber", ""))[:8]
     entry = sub[:5]
@@ -558,6 +590,16 @@ def correct(payload: dict, corpus: str) -> dict | None:
                            f"points: reader (+) author")
         if blank.any() or low.any():
             data["y_err"] = [float(v) for v in new]
+            changed = True
+
+    if sub in TOTAL and not is_ay:  # 3d. the authors' total where EXFOR files only a part of it
+        rule, cite = TOTAL[sub]
+        total = rule(x, y, is_ay, payload.get("target", ""))
+        cur = np.asarray(data["y_err"], dtype=float)
+        if np.any(total > cur):
+            data["y_err"] = [float(v) for v in np.maximum(cur, total)]
+            _note(payload, f"per-point error = max(EXFOR DATA-ERR, the authors' total) at {int((total > cur).sum())} "
+                           f"of {len(x)} points: {cite}")
             changed = True
 
     # 4. normalisation: cross-section figures (target thickness, beam integration, efficiency) cancel in an analysing
