@@ -75,3 +75,7 @@ def test_apply_subtracts_and_inflates_errors(tmp_path, monkeypatch):
     assert out["compound_elastic"] == pytest.approx([0.010, 0.012])
     assert out["y_err"] == pytest.approx(np.hypot([0.001, 0.001], 0.3 * np.array([0.010, 0.012])))
     assert out["y_measured"] == pytest.approx([0.020, 0.030])
+    assert out["y_err_before_compound"] == pytest.approx([0.001, 0.001]) and out["compound_uncertainty"] == 0.3
+    # the model fraction uses TALYS's elastic (20, 30 mb/sr), not the measured values
+    assert out["talys_model"] == pytest.approx([0.020, 0.030])
+    assert out["ce_fraction_model"] == pytest.approx([0.5, 0.4])

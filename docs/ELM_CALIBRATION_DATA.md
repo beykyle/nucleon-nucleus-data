@@ -93,7 +93,12 @@ The optical model describes shape (direct) elastic scattering. Compound-nucleus 
 its absorption. So:
 - **Elastic angular data:** direct = measured − CE(θ). The record keeps `y_measured`, `compound_elastic` and
   `ce_fraction` = |CE|/|measured|, and y_err = √(y_err² + (0.3 CE)²).
-- **Proton reaction:** σ_R(OM) = σ_nonel + σ_CE.
+  - It also keeps `talys_model` (TALYS's own elastic, shape + compound, at the data angles) and
+    `ce_fraction_model` = |CE|/talys_model. **Cut on `ce_fraction_model`, not `ce_fraction`:** the latter divides
+    by the measured value, so a cut on it masks points that fluctuate low and keeps those that fluctuate high.
+  - `y_err_before_compound` and `compound_uncertainty` (0.3) let a calibration treat the CE uncertainty as one
+    correlated scale per data set, as TALYS's CE is, instead of the independent per-point term folded into y_err.
+- **Proton reaction:** σ_R(OM) = σ_nonel + σ_CE (`talys_model` is TALYS's σ_R).
 - **Neutron total:** no correction.
 
 **TALYS** is the git submodule `external/talys` (github.com/arjankoning1/talys, MIT, commit 49ef834, TALYS-2.24
@@ -132,7 +137,8 @@ uv run python scripts/talys_compound.py apply --sector proton_reaction
   this.
 - **Negative direct values:** below about 2 MeV, where TALYS's energy-averaged CE exceeds a measurement in the
   resonance region, `elastic_diff_xs_direct` can go negative. Those points carry ce_fraction > 1. Calibrations
-  should keep data sets whose median ce_fraction is below a threshold (0.5 in ELM-Lane) and mask points above it.
+  should keep data sets whose median `ce_fraction_model` is below a threshold (0.5 in ELM-Lane) and mask points above
+  it.
 
 **Tests:**
 - [tests/test_talys_compound.py](../tests/test_talys_compound.py): TALYS output parsing, interpolation, and the
