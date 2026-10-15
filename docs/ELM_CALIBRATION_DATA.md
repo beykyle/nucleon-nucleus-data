@@ -39,7 +39,7 @@ total uncertainty for entry 10817 (§4.2).
 
 ## 2. Data from 0 MeV
 
-- **Elastic window:** `spec.ELM_ELASTIC_EINC_RANGE` is now (0, 200) MeV. The neutron elastic sector gained 400 sets
+- **Elastic window:** `spec.ELM_ELASTIC_EINC_RANGE` is now (0, 200) MeV. The neutron elastic sector gained 391 sets
   below 10 MeV, among them 92/94Mo (229), 208Pb and 206Pb (54), 40/48Ca (23), 90/92/94Zr (44) and Sn (43). Proton
   elastic gained 15 sets below 10 MeV. Three newly entering
   subentries rest on reader errors alone and are removed (F1407013, O1823002, F0930002; AUTHOR_UNCERTAINTIES.md §6).
@@ -62,7 +62,23 @@ compound). The median ratio over the 400 sets is 0.99, with 5–95 % between 0.8
 - Bostrom et al. (11130029), 206Pb, 4.2 MeV: 1.8×.
 - Hicks et al., 48Ca: 13507002 at 8.0 MeV, 1.7×; 13508002 at 2.35 MeV, 0.64×.
 
-None has independent data on the same target at the same energy, so all are kept.
+None has independent data on the same target at the same energy. The ones in the isolated-resonance region are
+removed (`elm_evaluation.EXCLUDED_RECORDS`, 2026-10-14): the 8 Fowler 208Pb energies and Hicks 48Ca at 2.35 MeV.
+That region is where σ_tot shows resonance structure above 20 % beyond statistics:
+
+| E (MeV) | 208Pb (13735002) | 40Ca (10721002) | 90Zr (13736003) |
+|---|---:|---:|---:|
+| 0.1–0.3 | 16 % | 140 % | 64 % |
+| 0.5–0.75 | 51 % | 71 % | 28 % |
+| 1–1.5 | 28 % | 39 % | 16 % |
+| 2–2.5 | 21 % | 30 % | 7 % |
+| 3–4 | 10 % | 15 % | — |
+| 4–5 | 5 % | 9 % | — |
+| 6–8 | 1 % | 4 % | — |
+
+Bostrom 206Pb at 4.2 MeV and Hicks 48Ca at 8.0 MeV lie above the region and are kept. The other 21 Fowler 208Pb
+energies (0.7–1.8 MeV) are kept too, with a median ratio of 1.33. A calibration should keep the region's
+fluctuations out of the fit: energy-average there, or start above it.
 
 ## 3. Compound elastic from TALYS
 

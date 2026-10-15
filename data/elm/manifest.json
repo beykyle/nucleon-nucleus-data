@@ -108,7 +108,7 @@
             ]
         },
         "elastic_diff_xs": {
-            "data_points": 12260,
+            "data_points": 12160,
             "entries": [
                 "10277",
                 "10391",
@@ -204,7 +204,7 @@
                 "T0108",
                 "T0152"
             ],
-            "measurements": 618,
+            "measurements": 609,
             "targets": [
                 "Ba-138",
                 "Ca-40",
@@ -236,7 +236,7 @@
             ]
         },
         "elastic_diff_xs_direct": {
-            "data_points": 12260,
+            "data_points": 12160,
             "entries": [
                 "10277",
                 "10391",
@@ -332,7 +332,7 @@
                 "T0108",
                 "T0152"
             ],
-            "measurements": 618,
+            "measurements": 609,
             "targets": [
                 "Ba-138",
                 "Ca-40",

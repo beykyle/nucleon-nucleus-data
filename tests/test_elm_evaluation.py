@@ -84,6 +84,7 @@ def test_elm_data_carry_the_evaluation():
         assert elm_evaluation.MARK in rec.get("notes", []), path
         assert not path.stem.startswith("Sm_148"), path
         assert not str(rec["EXFORAccessionNumber"]).startswith("C0622"), path
+        assert elm_evaluation.excluded_record(rec) is None, (path, rec["EXFORAccessionNumber"], rec.get("energy"))
         if path.parent.name in elm_evaluation.FLOOR_SECTORS:
             y, e = np.abs(rec["data"]["y"]), np.asarray(rec["data"]["y_err"])
             assert np.all(e >= elm_evaluation.REL_ERR_FLOOR * y * (1 - 1e-9)), (path, rec["EXFORAccessionNumber"])

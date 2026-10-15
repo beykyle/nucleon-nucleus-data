@@ -3,7 +3,8 @@
 Applied to the ELM corpus only, after ``author_errors`` (``serialize.write_sector`` for corpus "elm"), so every
 calibration reading ``data/elm`` uses exactly this data:
 
-1. Excluded targets (``EXCLUDED_TARGETS``): deformed nuclei, for which a spherical optical model is not adequate.
+1. Excluded targets (``EXCLUDED_TARGETS``): deformed nuclei, for which a spherical optical model is not adequate;
+   and excluded measurements (``EXCLUDED_RECORDS``): outliers in the isolated-resonance region.
 2. A per-point relative error floor on cross sections (``REL_ERR_FLOOR``, 2 %): y_err = max(y_err, floor * |y|).
    Unrecognised systematic uncertainties of this size are typical; without a floor a few sets with sub-percent errors
    dominate any calibration that does not first learn a model error. Analysing powers (sector elastic_ay) are exempt:
@@ -25,6 +26,16 @@ MARK = "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
 EXCLUDED_TARGETS: dict[tuple[int, int], str] = {
     (148, 62): "148Sm is deformed (beta2 0.142): excluded from the spherical-model ELM calibrations (2026-10-14)",
 }
+_RES = ("in the isolated-resonance region and {r} the TALYS (KD03 + compound) elastic; removed (2026-10-14). "
+        "Resonance structure in sigma_tot exceeds 20 % (beyond statistics) up to ~3 MeV in 208Pb (13735002) and "
+        "40Ca (10721002), which an energy-averaged optical model does not describe (docs/ELM_CALIBRATION_DATA.md)")
+#: (subentry, energy MeV) -> reason: single measurements removed from the ELM calibrations
+EXCLUDED_RECORDS: dict[tuple[str, float], str] = {
+    **{("12217002", e): _RES.format(r=f"{q} x") for e, q in (
+        (0.723, 2.18), (0.821, 2.74), (0.953, 1.61), (1.154, 1.54), (1.239, 1.76), (1.477, 1.75), (1.701, 1.77),
+        (1.749, 1.69))},
+    ("13508002", 2.35): _RES.format(r="0.64 x"),
+}
 REL_ERR_FLOOR = 0.02
 #: sectors the relative error floor applies to (cross sections, not analysing powers)
 FLOOR_SECTORS = {"elastic_diff_xs", "charge_exchange", "neutron_total", "proton_reaction"}
@@ -33,10 +44,10 @@ FLOOR_NOTE = "relative error floor"
 
 def evaluate(payload: dict, sector: str, target: tuple[int, int]) -> dict | None:
     """The evaluated payload, or None if the record is excluded."""
+    if tuple(target) in EXCLUDED_TARGETS or excluded_record(payload):
+        return None
     if MARK in (payload.get("notes") or []):
         return payload
-    if tuple(target) in EXCLUDED_TARGETS:
-        return None
     if sector in FLOOR_SECTORS:
         data = payload["data"]
         y = np.asarray(data["y"], dtype=float)
@@ -51,6 +62,14 @@ def evaluate(payload: dict, sector: str, target: tuple[int, int]) -> dict | None
                 "(ELM calibration evaluation; errors before the floor in data.y_err_before_floor)")
     payload.setdefault("notes", []).append(MARK)
     return payload
+
+
+def excluded_record(payload: dict) -> str | None:
+    sub, energy = str(payload.get("EXFORAccessionNumber", ""))[:8], payload.get("energy")
+    for (s, e), why in EXCLUDED_RECORDS.items():
+        if s == sub and energy is not None and abs(float(energy) - e) < 1e-3:
+            return why
+    return None
 
 
 def apply(records, corpus: str, sector: str):
