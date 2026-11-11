@@ -72,6 +72,8 @@ MANUAL_DROPS: dict[str, str] = {
     # (n,n) energy-resolution review against the low-lying inelastic states (papers checked 2026-11-11; Kyle: drop)
     "13510002": "Hjort et al., PRC 50, 275 (1994), 12C 65 MeV: resolution 2.7 MeV does not resolve the 4.44 MeV "
                 "state; subtracted with (p,p') strengths and DWUCK4 (up to 10 % at some points)",
+    "13510003": "Hjort et al., PRC 50, 275 (1994), natural Si 65 MeV: resolution 2.7 MeV does not resolve the 1.78 MeV "
+                "2+ state; low-lying states subtracted with (p,p') strengths and DWUCK4 (as 13510002)",
     "20240003": "Deconninck & Meulders, PRC 1, 1326 (1970), 12C 17-20 MeV: 3.5 ns over 2 m (about 3-4 MeV at 20 MeV); "
                 "elastic and the 4.44 MeV state separated only by a two-Gaussian fit",
     "20240004": "Deconninck & Meulders, PRC 1, 1326 (1970), 12C: as 20240003",

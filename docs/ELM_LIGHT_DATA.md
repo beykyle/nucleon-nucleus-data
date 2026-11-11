@@ -257,7 +257,8 @@ elastic peak from the first excited state. Clean (resolved, or peak-fitted with 
 resolution): Virdis 24Mg 9.8 / 14.8 MeV (226 / 441 keV; natural Mg, dropped under item 5 anyway), Tailor 26Mg 24 MeV
 (700 keV), Alarcon 34S 21.7 / 25.5 MeV (450 keV), Beach 16O and 40Ar 14 MeV (the Ar flight path chosen to resolve the
 1.46 MeV state), Nakada 12C 14 MeV, Winfield 12C 40 MeV, Islam 16O 18-26 MeV. Dropped (Kyle, `MANUAL_DROPS`):
-- Hjort 12C 65 MeV (13510002): 2.7 MeV resolution; the 4.44 MeV state subtracted with (p,p') strengths and DWUCK4.
+- Hjort 12C and natural Si 65 MeV (13510002/003): 2.7 MeV resolution; the low-lying states (12C 4.44, 28Si 1.78 MeV)
+  subtracted with (p,p') strengths and DWUCK4.
 - Deconninck 12C 14.7-19.9 MeV (20240003/004): about 3-4 MeV resolution; a two-Gaussian fit separates the 4.44 MeV
   state.
 - 22121004 / 022 (40Ar n σ and Ay 7.8 MeV): a private communication (the cited PRC 39, 1774 has no argon); 800 keV,

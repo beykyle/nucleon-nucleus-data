@@ -13,7 +13,7 @@ EXFOR X4-2025-12-31
 | Ne_20 | 2/37 | 22/455 | — | 3/53 | — | 1/99 | 1/5 |
 | Mg_24 | 2/21 | 120/1937 | 1/10 | 114/1613 | — | 1/1600 | 1/7 |
 | Mg_26 | 1/23 | 101/613 | — | 1/25 | 1/19 | — | — |
-| Si_28 | 2590/21607 | 284/2960 | 5/85 | 69/1393 | — | 33/40395 | 3/60 |
+| Si_28 | 2589/21580 | 284/2960 | 5/85 | 69/1393 | — | 33/40395 | 3/60 |
 | Si_30 | — | 1/28 | — | 1/28 | 1/13 | — | — |
 | S_32 | 53/912 | 16/204 | 4/75 | 3/55 | — | 30/5242 | — |
 | S_34 | 2/76 | 11/108 | — | — | 1/17 | — | — |
@@ -21,8 +21,8 @@ EXFOR X4-2025-12-31
 
 elm_light/elastic_diff_xs
   targets                12
-  measurements           4670
-  data points            48968
+  measurements           4669
+  data points            48941
   excluded
     dXS/dA O0553: ratio to Rutherford does not go to 1 at low angle
     dXS/dRuth E0120: no uncertainties
@@ -541,6 +541,7 @@ elm_light/elastic_diff_xs
     20240003 (C_12 18.25): Deconninck & Meulders, PRC 1, 1326 (1970), 12C 17-20 MeV: 3.5 ns over 2 m (about 3-4 MeV at 20 MeV); elastic and the 4.44 MeV state separated only by a two-Gaussian fit
     20240003 (C_12 19.88): Deconninck & Meulders, PRC 1, 1326 (1970), 12C 17-20 MeV: 3.5 ns over 2 m (about 3-4 MeV at 20 MeV); elastic and the 4.44 MeV state separated only by a two-Gaussian fit
     20240004 (C_12 14.7): Deconninck & Meulders, PRC 1, 1326 (1970), 12C: as 20240003
+    13510003 (Si_28 65.0): Hjort et al., PRC 50, 275 (1994), natural Si 65 MeV: resolution 2.7 MeV does not resolve the 1.78 MeV 2+ state; low-lying states subtracted with (p,p') strengths and DWUCK4 (as 13510002)
     12927008 (S_32 7.956): same data as 14345004 (natural S, (n,n) 8-17 MeV)
     12927008 (S_32 9.947): same data as 14345004 (natural S, (n,n) 8-17 MeV)
     12927008 (S_32 11.933): same data as 14345004 (natural S, (n,n) 8-17 MeV)
@@ -1329,7 +1330,7 @@ elm_light/proton_reaction
 
 ## same target/projectile/sector/energy, different EXFOR entries
 
-  (8474 further pairs judged distinct: elm_light.near_duplicates)
+  (8473 further pairs judged distinct: elm_light.near_duplicates)
 
 ## (p,n) records whose final state is not tabulated within 50 keV of the IAS
 
@@ -1342,4 +1343,4 @@ elm_light/proton_reaction
 
   none
 
-5458 records; 0 likely-duplicate pairs to review
+5457 records; 0 likely-duplicate pairs to review
