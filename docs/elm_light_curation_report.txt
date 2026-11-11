@@ -6,14 +6,14 @@ EXFOR X4-2025-12-31
 
 | target | nn | pp | nAy | pAy | pn | σtot | σR |
 |---|---|---|---|---|---|---|---|
-| C_12 | 762/8506 | 297/5717 | 151/1211 | 89/2329 | — | 120/41660 | 16/60 |
+| C_12 | 758/8411 | 297/5717 | 151/1211 | 89/2329 | — | 120/41660 | 16/60 |
 | C_14 | — | 1/21 | — | 15/210 | 8/85 | — | — |
 | O_16 | 115/2050 | 223/2515 | 14/161 | 29/763 | — | 51/11277 | 4/103 |
 | O_18 | 43/484 | 14/236 | — | — | — | 4/528 | — |
 | Ne_20 | 2/37 | 22/455 | — | 3/53 | — | 1/99 | 1/5 |
 | Mg_24 | 2/21 | 120/1937 | 1/10 | 114/1613 | — | 1/1600 | 1/7 |
 | Mg_26 | 1/23 | 101/613 | — | 1/25 | 1/19 | — | — |
-| Si_28 | 2589/21580 | 284/2960 | 5/85 | 69/1393 | — | 33/40395 | 3/60 |
+| Si_28 | 2586/21505 | 284/2960 | 5/85 | 69/1393 | — | 33/40395 | 3/60 |
 | Si_30 | — | 1/28 | — | 1/28 | 1/13 | — | — |
 | S_32 | 53/912 | 16/204 | 4/75 | 3/55 | — | 30/5242 | — |
 | S_34 | 2/76 | 11/108 | — | — | 1/17 | — | — |
@@ -21,8 +21,8 @@ EXFOR X4-2025-12-31
 
 elm_light/elastic_diff_xs
   targets                12
-  measurements           4669
-  data points            48941
+  measurements           4662
+  data points            48771
   excluded
     dXS/dA O0553: ratio to Rutherford does not go to 1 at low angle
     dXS/dRuth E0120: no uncertainties
@@ -435,6 +435,7 @@ elm_light/elastic_diff_xs
     20492005 (C_12 2.24): C_12 n elastic_diff_xs 2.24 MeV: within 3 % of 20502002 at 2.26 MeV, which is kept
     22160005 (C_12 28.2): same data as 22160002 (12C, 28.2 MeV), which has more angles
     22189002 (C_12 14.13): same data as 22284003 (12C, 14.1 MeV), which has more angles
+    22480007 (C_12 75.0): Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (12C 75 MeV)
     22544002 (C_12 8.0): same data as 20559003 (12C, 10-11 MeV), at every energy
     22544002 (C_12 8.5): same data as 20559003 (12C, 10-11 MeV), at every energy
     22544002 (C_12 9.0): same data as 20559003 (12C, 10-11 MeV), at every energy
@@ -519,6 +520,9 @@ elm_light/elastic_diff_xs
     22121004 (Ar_40 7.75): 40Ar(n,n) 7.8 MeV, private communication (Hammer 1989; the cited PRC 39, 1774 has no argon): resolution about 800 keV, the 1.46 MeV 2+ separation not stated
     13510002 (C_12 65.0): Hjort et al., PRC 50, 275 (1994), 12C 65 MeV: resolution 2.7 MeV does not resolve the 4.44 MeV state; subtracted with (p,p') strengths and DWUCK4 (up to 10 % at some points)
     14784003 (C_12 4.0): C_12 n elastic_diff_xs 4.0 MeV: within 3 % of 40221005 at 4.0 MeV, which is kept
+    22480002 (C_12 55.0): Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (12C)
+    22480002 (C_12 65.0): Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (12C)
+    22480002 (C_12 75.0): Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (12C)
     23365002 (C_12 2.23485): C_12 n elastic_diff_xs 2.23485 MeV: within 3 % of 23664002 at 2.1369 MeV, which is kept
     23365002 (C_12 2.2518): C_12 n elastic_diff_xs 2.2518 MeV: within 3 % of 23664002 at 2.1688 MeV, which is kept
     23365002 (C_12 2.26895): C_12 n elastic_diff_xs 2.26895 MeV: within 3 % of 23664002 at 2.18505 MeV, which is kept
@@ -542,6 +546,9 @@ elm_light/elastic_diff_xs
     20240003 (C_12 19.88): Deconninck & Meulders, PRC 1, 1326 (1970), 12C 17-20 MeV: 3.5 ns over 2 m (about 3-4 MeV at 20 MeV); elastic and the 4.44 MeV state separated only by a two-Gaussian fit
     20240004 (C_12 14.7): Deconninck & Meulders, PRC 1, 1326 (1970), 12C: as 20240003
     13510003 (Si_28 65.0): Hjort et al., PRC 50, 275 (1994), natural Si 65 MeV: resolution 2.7 MeV does not resolve the 1.78 MeV 2+ state; low-lying states subtracted with (p,p') strengths and DWUCK4 (as 13510002)
+    22480003 (Si_28 55.0): Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (natural Si)
+    22480003 (Si_28 65.0): Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (natural Si)
+    22480003 (Si_28 75.0): Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (natural Si)
     12927008 (S_32 7.956): same data as 14345004 (natural S, (n,n) 8-17 MeV)
     12927008 (S_32 9.947): same data as 14345004 (natural S, (n,n) 8-17 MeV)
     12927008 (S_32 11.933): same data as 14345004 (natural S, (n,n) 8-17 MeV)
@@ -1330,7 +1337,7 @@ elm_light/proton_reaction
 
 ## same target/projectile/sector/energy, different EXFOR entries
 
-  (8473 further pairs judged distinct: elm_light.near_duplicates)
+  (8470 further pairs judged distinct: elm_light.near_duplicates)
 
 ## (p,n) records whose final state is not tabulated within 50 keV of the IAS
 
@@ -1343,4 +1350,4 @@ elm_light/proton_reaction
 
   none
 
-5457 records; 0 likely-duplicate pairs to review
+5450 records; 0 likely-duplicate pairs to review

@@ -256,9 +256,13 @@ Kyle supplied the papers of the (n,n) sets a calibration might train on; each wa
 elastic peak from the first excited state. Clean (resolved, or peak-fitted with the state well inside the
 resolution): Virdis 24Mg 9.8 / 14.8 MeV (226 / 441 keV; natural Mg, dropped under item 5 anyway), Tailor 26Mg 24 MeV
 (700 keV), Alarcon 34S 21.7 / 25.5 MeV (450 keV), Beach 16O and 40Ar 14 MeV (the Ar flight path chosen to resolve the
-1.46 MeV state), Nakada 12C 14 MeV, Winfield 12C 40 MeV, Islam 16O 18-26 MeV. Dropped (Kyle, `MANUAL_DROPS`):
+1.46 MeV state), Nakada 12C 14 MeV, Winfield 12C 40 MeV, Islam 16O 18-26 MeV; and, for the natural-Si / 12C sets the >= 90 % rule brought in: DeVito 28Si 30-40 MeV (0.63-0.86
+MeV), Rapaport 28Si 11-26 MeV (750 keV at 20 MeV), Seeliger 28Si 6.8-14.8 MeV (peak-fitted; resolves doublets 0.36 MeV
+apart), Meigooni 12C 20.8-26 MeV (13 m flight path). Dropped (Kyle, `MANUAL_DROPS`):
 - Hjort 12C and natural Si 65 MeV (13510002/003): 2.7 MeV resolution; the low-lying states (12C 4.44, 28Si 1.78 MeV)
   subtracted with (p,p') strengths and DWUCK4.
+- Baba / Ibaraki 12C and natural Si 55-75 MeV (22480002/003/007): resolution not enough to separate elastic from
+  inelastic; corrected with factors from the LA150 evaluation (as Hjort).
 - Deconninck 12C 14.7-19.9 MeV (20240003/004): about 3-4 MeV resolution; a two-Gaussian fit separates the 4.44 MeV
   state.
 - 22121004 / 022 (40Ar n σ and Ay 7.8 MeV): a private communication (the cited PRC 39, 1774 has no argon); 800 keV,

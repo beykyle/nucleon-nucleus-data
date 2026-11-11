@@ -74,6 +74,9 @@ MANUAL_DROPS: dict[str, str] = {
                 "state; subtracted with (p,p') strengths and DWUCK4 (up to 10 % at some points)",
     "13510003": "Hjort et al., PRC 50, 275 (1994), natural Si 65 MeV: resolution 2.7 MeV does not resolve the 1.78 MeV "
                 "2+ state; low-lying states subtracted with (p,p') strengths and DWUCK4 (as 13510002)",
+    "22480002": "Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (12C)",
+    "22480003": "Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (natural Si)",
+    "22480007": "Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (12C 75 MeV)",
     "20240003": "Deconninck & Meulders, PRC 1, 1326 (1970), 12C 17-20 MeV: 3.5 ns over 2 m (about 3-4 MeV at 20 MeV); "
                 "elastic and the 4.44 MeV state separated only by a two-Gaussian fit",
     "20240004": "Deconninck & Meulders, PRC 1, 1326 (1970), 12C: as 20240003",
