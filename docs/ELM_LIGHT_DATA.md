@@ -263,6 +263,8 @@ apart), Meigooni 12C 20.8-26 MeV (13 m flight path). Dropped (Kyle, `MANUAL_DROP
   subtracted with (p,p') strengths and DWUCK4.
 - Baba / Ibaraki 12C and natural Si 55-75 MeV (22480002/003/007): resolution not enough to separate elastic from
   inelastic; corrected with factors from the LA150 evaluation (as Hjort).
+- Osborne 12C 65-185 MeV (13946002): 2.5-4.5 MeV resolution; the 4.44 MeV state's share estimated with DWUCK4 (< 1 %);
+  dropped so that no training set rests on model-corrected inelastic.
 - Deconninck 12C 14.7-19.9 MeV (20240003/004): about 3-4 MeV resolution; a two-Gaussian fit separates the 4.44 MeV
   state.
 - 22121004 / 022 (40Ar n σ and Ay 7.8 MeV): a private communication (the cited PRC 39, 1774 has no argon); 800 keV,

@@ -6,7 +6,7 @@ EXFOR X4-2025-12-31
 
 | target | nn | pp | nAy | pAy | pn | σtot | σR |
 |---|---|---|---|---|---|---|---|
-| C_12 | 758/8411 | 297/5717 | 151/1211 | 89/2329 | — | 120/41660 | 16/60 |
+| C_12 | 750/8355 | 297/5717 | 151/1211 | 89/2329 | — | 120/41660 | 16/60 |
 | C_14 | — | 1/21 | — | 15/210 | 8/85 | — | — |
 | O_16 | 115/2050 | 223/2515 | 14/161 | 29/763 | — | 51/11277 | 4/103 |
 | O_18 | 43/484 | 14/236 | — | — | — | 4/528 | — |
@@ -21,8 +21,8 @@ EXFOR X4-2025-12-31
 
 elm_light/elastic_diff_xs
   targets                12
-  measurements           4662
-  data points            48771
+  measurements           4654
+  data points            48715
   excluded
     dXS/dA O0553: ratio to Rutherford does not go to 1 at low angle
     dXS/dRuth E0120: no uncertainties
@@ -432,6 +432,14 @@ elm_light/elastic_diff_xs
     21773010 (Mg_24 14.83): natural sample (EXFOR SAMPLE), 79.0% Mg_24: below the 90% natural-target threshold
     10037030 (C_12 5.59): C_12 n elastic_diff_xs 5.59 MeV: within 3 % of 10174002 at 5.57 MeV, which is kept
     11276002 (C_12 2.33): C_12 n elastic_diff_xs 2.33 MeV: within 3 % of 20502002 at 2.36 MeV, which is kept
+    13946002 (C_12 65.0): Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)
+    13946002 (C_12 75.0): Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)
+    13946002 (C_12 85.0): Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)
+    13946002 (C_12 95.0): Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)
+    13946002 (C_12 107.5): Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)
+    13946002 (C_12 127.5): Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)
+    13946002 (C_12 155.0): Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)
+    13946002 (C_12 185.0): Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)
     20492005 (C_12 2.24): C_12 n elastic_diff_xs 2.24 MeV: within 3 % of 20502002 at 2.26 MeV, which is kept
     22160005 (C_12 28.2): same data as 22160002 (12C, 28.2 MeV), which has more angles
     22189002 (C_12 14.13): same data as 22284003 (12C, 14.1 MeV), which has more angles
@@ -1350,4 +1358,4 @@ elm_light/proton_reaction
 
   none
 
-5450 records; 0 likely-duplicate pairs to review
+5442 records; 0 likely-duplicate pairs to review

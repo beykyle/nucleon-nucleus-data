@@ -97,3 +97,4 @@ What they say: [AUTHOR_UNCERTAINTY_SOURCES.md](../docs/AUTHOR_UNCERTAINTY_SOURCE
 | 30563 | D. Seeliger, D. Schmidt, T. Streil, NPA 460, 265 (1986); detector: NIM 169, 533 (1980) (30563_NIM169_533.pdf) | 10.1016/0375-9474(86)90127-2 | (n,n) resolution: clean |
 | 12944 | A. S. Meigooni et al., NPA 445, 304 (1985) | 10.1016/0375-9474(85)90072-7 | (n,n) resolution: clean |
 | 22480 | M. Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000) (22480_NIM_A446_536.pdf), 1999 ND symposium (22480_Ibaraki_NDsymp1999.pdf) | 10.1080/00223131.2002.10875075 | removed: inelastic corrected with LA150 |
+| 13946 | J. H. Osborne, F. P. Brady, J. L. Romero, PRC 70, 054613 (2004) | 10.1103/PhysRevC.70.054613 | removed: 4.44 MeV state estimated with DWUCK4 |
