@@ -19,7 +19,7 @@ from collections import defaultdict
 
 import numpy as np
 
-from . import elm, errors, serialize, spec
+from . import elm, errors, serialize, spec, x4text
 
 CORPUS = "elm_light"
 
@@ -65,6 +65,22 @@ PN_NOT_IAS_RECORDS: dict[tuple, str] = {
 #: subentry -> reason: records dropped after reviewing the near-duplicate report (same target, projectile and
 #: energy, different EXFOR entries). The first 17 are curate_light.py's (10-100 MeV review, 2026-09-24).
 MANUAL_DROPS: dict[str, str] = {
+    # natural sulphur (Kyle 2026-11-11, >= 90 % natural targets): 12927 (natS) and 14345 (coded 32S, natural sample)
+    # are the same Ohio data, ratio 1.000 at every angle; 14345 kept
+    "12927004": "same data as 14345005 (natural S, n Ay 10 and 14 MeV)",
+    "12927008": "same data as 14345004 (natural S, (n,n) 8-17 MeV)",
+    # (n,n) energy-resolution review against the low-lying inelastic states (papers checked 2026-11-11; Kyle: drop)
+    "13510002": "Hjort et al., PRC 50, 275 (1994), 12C 65 MeV: resolution 2.7 MeV does not resolve the 4.44 MeV "
+                "state; subtracted with (p,p') strengths and DWUCK4 (up to 10 % at some points)",
+    "20240003": "Deconninck & Meulders, PRC 1, 1326 (1970), 12C 17-20 MeV: 3.5 ns over 2 m (about 3-4 MeV at 20 MeV); "
+                "elastic and the 4.44 MeV state separated only by a two-Gaussian fit",
+    "20240004": "Deconninck & Meulders, PRC 1, 1326 (1970), 12C: as 20240003",
+    "22121004": "40Ar(n,n) 7.8 MeV, private communication (Hammer 1989; the cited PRC 39, 1774 has no argon): "
+                "resolution about 800 keV, the 1.46 MeV 2+ separation not stated",
+    "22121022": "40Ar n Ay 7.8 MeV: same source and resolution as 22121004",
+    "22113015": "Boerker et al., Mito 1988, 28Si(n,n) 10.2 MeV: paper not available to check the 1.78 MeV 2+ separation",
+    "21629002": "Yamanouti & Tanaka, NEANDC(J)-51/U (1977), 28Si(n,n) 21 MeV: paper not available to check the 1.78 MeV "
+                "2+ separation",
     # Sakaguchi et al., 65 MeV (p,p): O0032 and E0166 are the same data (ELM excludes O0032 on the same grounds);
     # ratio to E0166 is 1.000 at every angle
     "O0032052": "same data as E0166002 (16O, 65 MeV)",
@@ -138,7 +154,9 @@ MANUAL_RECORD_DROPS: dict[tuple[str, float], str] = {
 
 #: (subentry, energy MeV) -> reason: records whose uncertainties rest, at some or all points, only on the EXFOR
 #: compilers' data-point reader (digitisation) error. ELM resolved such records paper by paper (docs/AUTHOR_UNCERTAINTIES.md);
-#: the light-target papers are not available yet, so these are dropped for now (Kyle, 2026-11-10). Restore a record by
+#: the light-target papers were not available, so these were dropped (Kyle, 2026-11-10). 2026-11-11: twelve papers
+#: (Kyle) restored O1242, O1367 and F0996 (author_errors.PER_PAPER) and confirmed the drops of O0486, F0471, O0480011/012
+#: and O0551 (no author error, or a duplicate; reasons below; Kyle: drop those without one). Restore a record by
 #: supplying its author uncertainty in author_errors.py and removing it here (docs/ELM_LIGHT_DATA.md section 4 lists the
 #: papers). Generated from author_errors.audit_record over the curated sectors, 2026-11-10.
 #: Not here: D0498002 (Daehnick, 16O(p,p)), whose DATA-ERR is the authors' random uncertainty; the reader detector
@@ -234,14 +252,14 @@ READER_ONLY_DROPS: dict[tuple[str, float], str] = {
     ("F0256003", 35.0): "C_12 p elastic_diff_xs: 34 of 34 points carry only the EXFOR reader (digitisation) error",
     ("F0256004", 35.0): "Mg_24 p elastic_diff_xs: 30 of 30 points carry only the EXFOR reader (digitisation) error",
     ("F0256005", 35.0): "Si_28 p elastic_diff_xs: 25 of 25 points carry only the EXFOR reader (digitisation) error",
-    ("F0471003", 19.9): "C_12 p elastic_diff_xs: 16 of 19 points carry only the EXFOR reader (digitisation) error",
-    ("F0471003", 21.2): "C_12 p elastic_diff_xs: 23 of 25 points carry only the EXFOR reader (digitisation) error",
-    ("F0471003", 22.65): "C_12 p elastic_diff_xs: 21 of 23 points carry only the EXFOR reader (digitisation) error",
-    ("F0471003", 24.1): "C_12 p elastic_diff_xs: 24 of 24 points carry only the EXFOR reader (digitisation) error",
-    ("F0471003", 24.4): "C_12 p elastic_diff_xs: 22 of 25 points carry only the EXFOR reader (digitisation) error",
-    ("F0471003", 26.1): "C_12 p elastic_diff_xs: 29 of 29 points carry only the EXFOR reader (digitisation) error",
-    ("F0471003", 27.0): "C_12 p elastic_diff_xs: 24 of 25 points carry only the EXFOR reader (digitisation) error",
-    ("F0471003", 28.85): "C_12 p elastic_diff_xs: 31 of 34 points carry only the EXFOR reader (digitisation) error",
+    ("F0471003", 19.9): "no author error in the paper (checked 2026-11-11): Girod et al., J. Phys. 31 (1970) 125: no error stated; normalised to Dickens et al.",
+    ("F0471003", 21.2): "no author error in the paper (checked 2026-11-11): Girod et al., J. Phys. 31 (1970) 125: no error stated; normalised to Dickens et al.",
+    ("F0471003", 22.65): "no author error in the paper (checked 2026-11-11): Girod et al., J. Phys. 31 (1970) 125: no error stated; normalised to Dickens et al.",
+    ("F0471003", 24.1): "duplicate (paper checked 2026-11-11): Girod et al., J. Phys. 31 (1970) 125: 24.1 MeV is not among their measured energies (p.129): Dickens et al.'s data replotted",
+    ("F0471003", 24.4): "no author error in the paper (checked 2026-11-11): Girod et al., J. Phys. 31 (1970) 125: no error stated; normalised to Dickens et al.",
+    ("F0471003", 26.1): "duplicate (paper checked 2026-11-11): Girod et al., J. Phys. 31 (1970) 125: 26.1 MeV is not among their measured energies (p.129): Dickens et al.'s data replotted",
+    ("F0471003", 27.0): "no author error in the paper (checked 2026-11-11): Girod et al., J. Phys. 31 (1970) 125: no error stated; normalised to Dickens et al.",
+    ("F0471003", 28.85): "no author error in the paper (checked 2026-11-11): Girod et al., J. Phys. 31 (1970) 125: no error stated; normalised to Dickens et al.",
     ("F0866004", 6.05): "Mg_24 p elastic_diff_xs: 15 of 15 points carry only the EXFOR reader (digitisation) error",
     ("F0866004", 6.1): "Mg_24 p elastic_diff_xs: 15 of 15 points carry only the EXFOR reader (digitisation) error",
     ("F0866004", 6.15): "Mg_24 p elastic_diff_xs: 15 of 15 points carry only the EXFOR reader (digitisation) error",
@@ -271,16 +289,6 @@ READER_ONLY_DROPS: dict[tuple[str, float], str] = {
     ("F0904002", 5.0): "C_12 p elastic_diff_xs: 9 of 9 points carry only the EXFOR reader (digitisation) error",
     ("F0904002", 5.122): "C_12 p elastic_diff_xs: 9 of 9 points carry only the EXFOR reader (digitisation) error",
     ("F0904002", 5.222): "C_12 p elastic_diff_xs: 9 of 9 points carry only the EXFOR reader (digitisation) error",
-    ("F0996002", 5.2): "Ne_20 p elastic_diff_xs: 14 of 14 points carry only the EXFOR reader (digitisation) error",
-    ("F0996002", 5.35): "Ne_20 p elastic_diff_xs: 13 of 13 points carry only the EXFOR reader (digitisation) error",
-    ("F0996002", 5.5): "Ne_20 p elastic_diff_xs: 14 of 14 points carry only the EXFOR reader (digitisation) error",
-    ("F0996002", 5.64): "Ne_20 p elastic_diff_xs: 14 of 14 points carry only the EXFOR reader (digitisation) error",
-    ("F0996002", 5.68): "Ne_20 p elastic_diff_xs: 16 of 16 points carry only the EXFOR reader (digitisation) error",
-    ("F0996002", 5.78): "Ne_20 p elastic_diff_xs: 14 of 14 points carry only the EXFOR reader (digitisation) error",
-    ("F0996002", 5.82): "Ne_20 p elastic_diff_xs: 13 of 13 points carry only the EXFOR reader (digitisation) error",
-    ("F0996002", 5.96): "Ne_20 p elastic_diff_xs: 13 of 13 points carry only the EXFOR reader (digitisation) error",
-    ("F0996002", 6.1): "Ne_20 p elastic_diff_xs: 14 of 14 points carry only the EXFOR reader (digitisation) error",
-    ("F0996002", 6.23): "Ne_20 p elastic_diff_xs: 14 of 14 points carry only the EXFOR reader (digitisation) error",
     ("F1013003", 4.134): "O_16 p elastic_diff_xs: 22 of 22 points carry only the EXFOR reader (digitisation) error",
     ("F1013003", 4.268): "O_16 p elastic_diff_xs: 20 of 20 points carry only the EXFOR reader (digitisation) error",
     ("F1013003", 4.402): "O_16 p elastic_diff_xs: 23 of 23 points carry only the EXFOR reader (digitisation) error",
@@ -302,16 +310,16 @@ READER_ONLY_DROPS: dict[tuple[str, float], str] = {
     ("O0254008", 17.8): "C_12 p elastic_diff_xs: 21 of 21 points carry only the EXFOR reader (digitisation) error",
     ("O0384022", 14.1): "Ar_40 p elastic_diff_xs: 27 of 27 points carry only the EXFOR reader (digitisation) error",
     ("O0384023", 16.9): "Ar_40 p elastic_diff_xs: 25 of 25 points carry only the EXFOR reader (digitisation) error",
-    ("O0480011", 49.4): "C_12 p elastic_diff_xs: 66 of 66 points carry only the EXFOR reader (digitisation) error",
-    ("O0480012", 49.4): "O_16 p elastic_diff_xs: 63 of 63 points carry only the EXFOR reader (digitisation) error",
-    ("O0486002", 19.8): "O_16 p elastic_diff_xs: 21 of 21 points carry only the EXFOR reader (digitisation) error",
-    ("O0486002", 20.4): "O_16 p elastic_diff_xs: 22 of 22 points carry only the EXFOR reader (digitisation) error",
-    ("O0486002", 20.8): "O_16 p elastic_diff_xs: 21 of 21 points carry only the EXFOR reader (digitisation) error",
-    ("O0486002", 21.4): "O_16 p elastic_diff_xs: 23 of 23 points carry only the EXFOR reader (digitisation) error",
-    ("O0486002", 22.1): "O_16 p elastic_diff_xs: 22 of 22 points carry only the EXFOR reader (digitisation) error",
-    ("O0486002", 24.3): "O_16 p elastic_diff_xs: 30 of 30 points carry only the EXFOR reader (digitisation) error",
-    ("O0486002", 26.2): "O_16 p elastic_diff_xs: 28 of 28 points carry only the EXFOR reader (digitisation) error",
-    ("O0486002", 30.5): "O_16 p elastic_diff_xs: 28 of 28 points carry only the EXFOR reader (digitisation) error",
+    ("O0480011", 49.4): "duplicate (paper checked 2026-11-11): Clarke et al., NPA 157 (1970) 145: a reading of the optical-model fit figure (Fig. 8); the data are Fannon et al. (forward) and O0480002 (backward, with the authors' errors)",
+    ("O0480012", 49.4): "duplicate (paper checked 2026-11-11): Clarke et al., NPA 157 (1970) 145: a reading of the optical-model fit figure (Fig. 9); the data are Fannon et al. (forward) and O0480005 (backward, with the authors' errors)",
+    ("O0486002", 19.8): "no author error in the paper (checked 2026-11-11): Karban et al., NPA 132 (1969) 548: no error stated beyond 'statistical errors smaller than the points' (Fig. 1)",
+    ("O0486002", 20.4): "no author error in the paper (checked 2026-11-11): Karban et al., NPA 132 (1969) 548: no error stated beyond 'statistical errors smaller than the points' (Fig. 1)",
+    ("O0486002", 20.8): "no author error in the paper (checked 2026-11-11): Karban et al., NPA 132 (1969) 548: no error stated beyond 'statistical errors smaller than the points' (Fig. 1)",
+    ("O0486002", 21.4): "no author error in the paper (checked 2026-11-11): Karban et al., NPA 132 (1969) 548: no error stated beyond 'statistical errors smaller than the points' (Fig. 1)",
+    ("O0486002", 22.1): "no author error in the paper (checked 2026-11-11): Karban et al., NPA 132 (1969) 548: no error stated beyond 'statistical errors smaller than the points' (Fig. 1)",
+    ("O0486002", 24.3): "no author error in the paper (checked 2026-11-11): Karban et al., NPA 132 (1969) 548: no error stated beyond 'statistical errors smaller than the points' (Fig. 1)",
+    ("O0486002", 26.2): "no author error in the paper (checked 2026-11-11): Karban et al., NPA 132 (1969) 548: no error stated beyond 'statistical errors smaller than the points' (Fig. 1)",
+    ("O0486002", 30.5): "no author error in the paper (checked 2026-11-11): Karban et al., NPA 132 (1969) 548: no error stated beyond 'statistical errors smaller than the points' (Fig. 1)",
     ("O0492002", 2.5): "O_16 p elastic_diff_xs: 23 of 23 points carry only the EXFOR reader (digitisation) error",
     ("O0492002", 3.0): "O_16 p elastic_diff_xs: 26 of 26 points carry only the EXFOR reader (digitisation) error",
     ("O0492002", 3.4): "O_16 p elastic_diff_xs: 26 of 26 points carry only the EXFOR reader (digitisation) error",
@@ -324,9 +332,9 @@ READER_ONLY_DROPS: dict[tuple[str, float], str] = {
     ("O0492003", 8.5): "O_16 p elastic_ay: 3 of 14 points carry only the EXFOR reader (digitisation) error",
     ("O0492003", 9.5): "O_16 p elastic_ay: 4 of 11 points carry only the EXFOR reader (digitisation) error",
     ("O0492003", 10.74): "O_16 p elastic_ay: 1 of 11 points carry only the EXFOR reader (digitisation) error",
-    ("O0551002", 30.0): "Ar_40 p elastic_diff_xs: 52 of 52 points carry only the EXFOR reader (digitisation) error",
-    ("O0551002", 50.0): "Ar_40 p elastic_diff_xs: 45 of 45 points carry only the EXFOR reader (digitisation) error",
-    ("O0551005", 50.0): "C_12 p elastic_diff_xs: 56 of 56 points carry only the EXFOR reader (digitisation) error",
+    ("O0551002", 30.0): "no author error in the paper (checked 2026-11-11): Rush, Burge & Smith, NPA 166 (1971) 378: no error stated for the elastic cross sections (figures only)",
+    ("O0551002", 50.0): "no author error in the paper (checked 2026-11-11): Rush, Burge & Smith, NPA 166 (1971) 378: no error stated for the elastic cross sections (figures only)",
+    ("O0551005", 50.0): "duplicate (paper checked 2026-11-11): Rush, Burge & Smith, NPA 166 (1971) 378, p.385: Fannon et al.'s 12C 50 MeV data reanalysed, not this experiment's",
     ("O0889003", 1.873): "Ar_40 p elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error",
     ("O0889003", 1.874): "Ar_40 p elastic_diff_xs: 8 of 8 points carry only the EXFOR reader (digitisation) error",
     ("O0889003", 1.877): "Ar_40 p elastic_diff_xs: 7 of 7 points carry only the EXFOR reader (digitisation) error",
@@ -347,19 +355,6 @@ READER_ONLY_DROPS: dict[tuple[str, float], str] = {
     ("O1133003", 40.9): "O_16 p elastic_diff_xs: 43 of 43 points carry only the EXFOR reader (digitisation) error",
     ("O1177002", 150.0): "C_12 p elastic_ay: 14 of 23 points carry only the EXFOR reader (digitisation) error",
     ("O1177003", 150.0): "C_12 p elastic_diff_xs: 19 of 19 points carry only the EXFOR reader (digitisation) error",
-    ("O1242003", 7.0): "C_12 p elastic_diff_xs: 29 of 29 points carry only the EXFOR reader (digitisation) error",
-    ("O1242005", 6.9): "C_12 p elastic_ay: 10 of 10 points carry only the EXFOR reader (digitisation) error",
-    ("O1367002", 10.3): "C_12 p elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error",
-    ("O1367002", 10.5): "C_12 p elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error",
-    ("O1367002", 10.65): "C_12 p elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error",
-    ("O1367002", 10.8): "C_12 p elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error",
-    ("O1367003", 10.15): "C_12 p elastic_ay: 6 of 6 points carry only the EXFOR reader (digitisation) error",
-    ("O1367003", 10.37): "C_12 p elastic_ay: 5 of 5 points carry only the EXFOR reader (digitisation) error",
-    ("O1367003", 10.65): "C_12 p elastic_ay: 5 of 5 points carry only the EXFOR reader (digitisation) error",
-    ("O1367003", 10.69): "C_12 p elastic_ay: 5 of 5 points carry only the EXFOR reader (digitisation) error",
-    ("O1367004", 9.95): "C_12 p elastic_diff_xs: 16 of 16 points carry only the EXFOR reader (digitisation) error",
-    ("O1367004", 10.25): "C_12 p elastic_diff_xs: 16 of 16 points carry only the EXFOR reader (digitisation) error",
-    ("O1367004", 10.7): "C_12 p elastic_diff_xs: 16 of 16 points carry only the EXFOR reader (digitisation) error",
     ("O1542002", 40.75): "Si_30 p elastic_diff_xs: 29 of 29 points carry only the EXFOR reader (digitisation) error",
 }
 
@@ -367,16 +362,10 @@ READER_ONLY_DROPS: dict[tuple[str, float], str] = {
 #: (the parse chose another column). Recoverable from EXFOR alone (an ELM-style PARSE_RECIPE naming the author column);
 #: dropped for now with the reader-only records (2026-11-10).
 BELOW_AUTHOR_DROPS: dict[tuple, str] = {
-    ("20220002", 15.0): "C_12 n elastic_diff_xs: errors below the authors' own EXFOR error at 7 of 12 angles",
     ("22847002", 96.0): "C_12 n elastic_diff_xs: errors below the authors' own EXFOR error at 22 of 22 angles",
-    ("E0243005", 65.0): "C_12 p elastic_ay: errors below the authors' own EXFOR error at 28 of 32 angles",
     ("O0274009", 96.0): "C_12 p elastic_diff_xs: errors below the authors' own EXFOR error at 6 of 46 angles",
     ("O0434004", 20.93): "O_16 p elastic_diff_xs: errors below the authors' own EXFOR error at 40 of 40 angles",
     ("O0434006", 21.13): "Ar_40 p elastic_diff_xs: errors below the authors' own EXFOR error at 39 of 39 angles",
-    ("O0484003", 9.57): "O_16 p elastic_ay: errors below the authors' own EXFOR error at 11 of 12 angles",
-    ("O0484004", 10.6): "O_16 p elastic_ay: errors below the authors' own EXFOR error at 18 of 21 angles",
-    ("O0484005", 12.42): "O_16 p elastic_ay: errors below the authors' own EXFOR error at 15 of 17 angles",
-    ("O2048002", 6.041): "O_18 p elastic_diff_xs: errors below the authors' own EXFOR error at 2 of 6 angles",
 }
 
 #: (subentry, energy MeV, first y) -> reason: one of several records sharing subentry and energy, told apart by value
@@ -498,6 +487,23 @@ def cut_point_energies(records, result) -> None:
         result.repaired.append(f"{sub}: {int((~keep).sum())} of {n} points above {emax:g} MeV removed")
 
 
+def drop_nonpositive_points(records, result) -> None:
+    """Remove sigma_tot / sigma_R points <= 0 (transmission data at deep resonance minima, e.g. Larson natSi 14203002
+    below 3.7 MeV; a cross section is positive, and the likelihoods work in log space)."""
+    for r in records:
+        d = r.payload["data"]
+        keep = np.asarray(d["y"], dtype=float) > 0
+        if keep.all():
+            continue
+        n = len(keep)
+        for k, v in list(d.items()):
+            if isinstance(v, list) and len(v) == n:
+                d[k] = [x for x, ok in zip(v, keep) if ok]
+        x = np.asarray(r.payload["data"]["x"], dtype=float)
+        r.payload.setdefault("notes", []).append(f"{n - int(keep.sum())} of {n} points <= 0 removed")
+        result.repaired.append(f"{r.payload['EXFORAccessionNumber']}: {n - int(keep.sum())} of {n} points <= 0 removed")
+
+
 def drop_pn_not_ias(records, result) -> list:
     keep = []
     for r in records:
@@ -521,7 +527,52 @@ def pn_final_state_report(records) -> list[str]:
     return out
 
 
+#: dominant isotope (A) and natural abundance by Z, for the SAMPLE check (spec.ELM_LIGHT_NATURAL and _EXCLUDED)
+_DOMINANT = {**{z: (a, ab) for (_, z), ((a, _), ab) in spec.ELM_LIGHT_NATURAL.items()},
+             **spec.ELM_LIGHT_NATURAL_EXCLUDED}
+_NATURAL = re.compile(r"NAT=|natur", re.I)
+_ENRICHED = re.compile(r"enrich|ENR=", re.I)
+
+
+def natural_sample(subentry: str) -> bool:
+    """Whether EXFOR's SAMPLE text (the entry's common subentry 001 and the subentry's own) says the sample was of
+    natural isotopic composition, and not enriched: EXFOR often codes such data as the dominant isotope (e.g.
+    Virdis 21773, "SAMPLE (12-MG-24,NAT=0.79)"). Found reviewing the (n,n) papers, 2026-11-11."""
+    entry = subentry[:5]
+    try:
+        subs = x4text.subentries(entry)
+    except FileNotFoundError:
+        return False
+    text = " ".join(x4text.bib_fields(subs.get(k, ())).get("SAMPLE", "") for k in (entry + "001", subentry))
+    return bool(_NATURAL.search(text)) and not _ENRICHED.search(text)
+
+
+def apply_natural_samples(records, result) -> list:
+    """Records EXFOR codes as the dominant isotope but measured on a natural sample: kept and marked natural where
+    the dominant isotope is >= spec.ELM_LIGHT_NATURAL_MIN abundant, dropped otherwise (natMg; Kyle, 2026-11-11)."""
+    keep = []
+    for r in records:
+        A, Z = tuple(r.target)
+        if A == 0 or r.payload.get("natural_target") or _DOMINANT.get(Z, (None,))[0] != A \
+                or not natural_sample(r.payload["EXFORAccessionNumber"][:8]):
+            keep.append(r)
+            continue
+        ab = _DOMINANT[Z][1]
+        if ab < spec.ELM_LIGHT_NATURAL_MIN:
+            result.dropped.append(f"{r.payload['EXFORAccessionNumber']} ({label(r.target)} {r.payload.get('energy')}): "
+                                  f"natural sample (EXFOR SAMPLE), {ab:.1%} {label(r.target)}: below the "
+                                  f"{spec.ELM_LIGHT_NATURAL_MIN:.0%} natural-target threshold")
+            continue
+        r.payload["natural_target"] = True
+        r.payload.setdefault("notes", []).append(
+            f"measured on a natural {r.payload['target'].split('-')[0]} target (EXFOR SAMPLE; coded as the isotope); "
+            f"treated as {r.payload['target']} ({ab:.2%} abundant)")
+        keep.append(r)
+    return keep
+
+
 def apply_manual_drops(records, result) -> list:
+    records = apply_natural_samples(records, result)
     keep = []
     for r in records:
         sub = r.payload["EXFORAccessionNumber"]

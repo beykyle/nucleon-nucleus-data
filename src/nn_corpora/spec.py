@@ -294,11 +294,18 @@ ELM_LIGHT_TARGETS: tuple[tuple[int, int], ...] = (
     (12, 6), (14, 6), (16, 8), (18, 8), (20, 10), (24, 12), (26, 12),
     (28, 14), (30, 14), (32, 16), (34, 16), (40, 18),
 )
-#: natural targets used as their dominant isotope: only where it is ~99 % (Kyle, 2026-09-24 and 2026-11-10);
-#: natSi (92 %), natS (95 %), natNe, natMg are not used. {natural (0, Z): (dominant (A, Z), abundance)}
+#: natural targets used as their dominant isotope where it is >= 90 % (Kyle, 2026-11-11; it was ~99 % on 2026-09-24
+#: and 2026-11-10, until many EXFOR "isotopic" records proved to be natural samples): natNe (90.5 %), natSi (92.2 %),
+#: natS (95.0 %) join natC, natO, natAr; natMg (78.99 % 24Mg) is not used. {natural (0, Z): (dominant (A, Z),
+#: abundance)}; abundances IUPAC (CIAAW) representative values.
 ELM_LIGHT_NATURAL: dict[tuple[int, int], tuple[tuple[int, int], float]] = {
-    (0, 6): ((12, 6), 0.9893), (0, 8): ((16, 8), 0.99757), (0, 18): ((40, 18), 0.996035),
+    (0, 6): ((12, 6), 0.9893), (0, 8): ((16, 8), 0.99757), (0, 10): ((20, 10), 0.9048),
+    (0, 14): ((28, 14), 0.92223), (0, 16): ((32, 16), 0.9499), (0, 18): ((40, 18), 0.996035),
 }
+#: the threshold above, and the natural elements below it (their natural samples are dropped, also when EXFOR codes
+#: them as the dominant isotope: elm_light.natural_sample)
+ELM_LIGHT_NATURAL_MIN = 0.90
+ELM_LIGHT_NATURAL_EXCLUDED: dict[int, tuple[int, float]] = {12: (24, 0.7899)}
 #: IAS excitation energy (MeV) in (A, Z+1) for the N > Z targets: the lowest 0+ level with T = (N-Z)/2, from ENSDF
 #: via the IAEA LiveChart API (2026-11-10). Evaluations: 14N Ajzenberg-Selove 1991; 18F Tilley et al. 1995; 26Al
 #: Basunia & Hurst 2016; 30P Basunia & Chakraborty 2024; 34Cl Nica & Singh 2012 (the 0+ T=1 ground state); 40K Chen

@@ -70,8 +70,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -144,8 +146,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -218,8 +222,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -292,8 +298,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -366,8 +374,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -440,8 +450,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -514,8 +526,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -588,8 +602,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -662,8 +678,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -736,8 +754,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -810,8 +830,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -884,8 +906,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -958,8 +982,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -1032,8 +1058,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -1106,8 +1134,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -1180,8 +1210,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -1254,8 +1286,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -1510,8 +1544,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -1584,8 +1620,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -1658,8 +1696,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -1732,8 +1772,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -1806,8 +1848,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -2037,8 +2081,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -2283,8 +2329,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -2409,8 +2457,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -2603,8 +2653,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -2729,8 +2781,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -2855,8 +2909,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -3031,8 +3087,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -3278,8 +3336,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -4044,8 +4104,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -4814,8 +4876,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -5536,8 +5600,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -6190,8 +6256,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -6848,8 +6916,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -7636,8 +7706,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -8226,8 +8298,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -8820,8 +8894,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -9386,8 +9462,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -9956,8 +10034,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -10491,8 +10571,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -10629,8 +10711,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -10767,8 +10851,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -10905,8 +10991,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -11043,8 +11131,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -11282,8 +11372,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -11479,8 +11571,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -11617,8 +11711,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -11755,8 +11851,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -11829,8 +11927,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -11967,8 +12067,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -12157,8 +12259,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -12413,8 +12517,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -12598,8 +12704,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -12672,8 +12780,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -12857,8 +12967,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -13089,8 +13201,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -13432,8 +13546,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -13617,8 +13733,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -13738,8 +13856,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -13876,8 +13996,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -13997,8 +14119,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -14135,8 +14259,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -14261,8 +14387,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -14517,8 +14645,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -14749,8 +14879,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -14934,8 +15066,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -15008,8 +15142,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -15245,8 +15381,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -15366,8 +15504,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -15683,8 +15823,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -15821,8 +15963,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -15959,8 +16103,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -16033,8 +16179,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -16171,8 +16319,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -16297,8 +16447,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -16435,8 +16587,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -16637,8 +16791,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -17070,8 +17226,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -17324,8 +17482,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -17526,8 +17686,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -17780,8 +17942,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -18293,8 +18457,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -18679,8 +18845,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -19074,8 +19242,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -19276,8 +19446,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -19665,8 +19837,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -20054,8 +20228,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -20309,8 +20485,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -20699,8 +20877,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -21031,8 +21211,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -21361,8 +21543,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -21829,8 +22013,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -22150,8 +22336,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -22352,8 +22540,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -22554,8 +22744,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -22822,8 +23014,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -23326,8 +23520,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -23848,8 +24044,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -24347,8 +24545,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -24605,8 +24805,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -24807,8 +25009,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -25203,8 +25407,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -25491,8 +25697,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -25629,8 +25837,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -25831,8 +26041,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -26115,8 +26327,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -26317,8 +26531,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -26578,8 +26794,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -27042,8 +27260,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -27300,8 +27520,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -27707,8 +27929,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -27909,8 +28133,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -28231,8 +28457,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -28507,8 +28735,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -28858,8 +29088,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -29119,8 +29351,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -29475,8 +29709,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -29762,8 +29998,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -30420,8 +30658,10 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -56379,6 +56619,124 @@
         ]
     },
     {
+        "type": "ECS_Rutherford",
+        "energy": 7.0,
+        "energy_err": 0.1,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1242003",
+        "source": "H.Guratzsch, G.Hofmann, et al., Nuclear Physics, Section A 129, 405 (1969);  Data taken from the EXFOR database, file EXFOR O1242001 dated 1969, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                12.8,
+                18.0,
+                24.1,
+                29.7,
+                35.2,
+                40.8,
+                46.7,
+                51.4,
+                57.4,
+                61.6,
+                68.0,
+                72.4,
+                77.8,
+                83.1,
+                87.5,
+                93.3,
+                97.3,
+                102.7,
+                108.5,
+                112.5,
+                122.4,
+                132.2,
+                136.3,
+                140.7,
+                145.2,
+                150.2,
+                155.1,
+                159.5,
+                164.0
+            ],
+            "y": [
+                0.3536247173,
+                0.66670674,
+                1.2310136828,
+                1.6278668116,
+                2.2337173179,
+                2.6998833025,
+                3.308157088,
+                2.904310676,
+                3.0925908678,
+                2.9781916441,
+                3.420191085,
+                4.4827661248,
+                6.3227994001,
+                9.5876466671,
+                12.5051755227,
+                17.7487157389,
+                21.8779637636,
+                27.8410291694,
+                35.8566479531,
+                39.5465846672,
+                51.3048129526,
+                60.9096947253,
+                67.9956675972,
+                73.2574894465,
+                79.8671798679,
+                85.4793679742,
+                93.6325766494,
+                103.2241866809,
+                109.4477078255
+            ],
+            "y_err": [
+                0.009710202483824456,
+                0.018307140666409826,
+                0.03380247911292274,
+                0.044699693160656015,
+                0.061335778828021104,
+                0.07413625877212314,
+                0.0908388854094931,
+                0.07974964237572853,
+                0.08491963954117072,
+                0.08177834434381907,
+                0.0939152337039458,
+                0.1230925459390593,
+                0.1736181308488382,
+                0.26326776926604195,
+                0.34338037043425407,
+                0.48736305812682246,
+                0.6007483291901956,
+                0.764488502548849,
+                0.9845898631583321,
+                1.0859120583939446,
+                1.4087819594970543,
+                1.6725229885693784,
+                1.8670971459031374,
+                2.011581830063858,
+                2.193077718804973,
+                2.347183131191214,
+                2.571062580946708,
+                2.8344391804753375,
+                3.005331223706471
+            ],
+            "systematic_normalization_error": 0.07
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 29 of 29 points without one in EXFOR (added in quadrature to the reader error): Guratzsch et al., NPA 129 (1969) 405, p.409 Table 1 (12C): mean relative error 1.5 % (statistics, background, dead time), polarisation 3 % (absolute 0.03); EXFOR files both as constant ERR-n columns",
+            "normalisation uncertainty 7.0 % from the authors: Guratzsch: absolute-value error 7 % (thickness, enrichment, geometry, current), Table 1",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
         "type": "ECS",
         "energy": 7.03,
         "energy_err": 0.03,
@@ -62547,6 +62905,84 @@
         ]
     },
     {
+        "type": "ECS_Rutherford",
+        "energy": 9.95,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367004",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                31.8,
+                42.4,
+                48.2,
+                53.0,
+                58.8,
+                64.7,
+                73.4,
+                84.3,
+                94.2,
+                104.6,
+                115.4,
+                125.2,
+                134.5,
+                142.7,
+                152.4,
+                161.6
+            ],
+            "y": [
+                1.7228731956,
+                2.61523888,
+                3.1474899459,
+                3.3250342285,
+                3.5316516247,
+                3.9589854333,
+                4.7684284253,
+                8.0890902227,
+                14.4212800358,
+                23.553182033,
+                30.5860484813,
+                32.3368106761,
+                27.9427780462,
+                20.4691529455,
+                13.9358920049,
+                9.5955617485
+            ],
+            "y_err": [
+                0.10045990724461999,
+                0.15249332102809102,
+                0.18352862464052136,
+                0.19388114635097556,
+                0.2059289073297795,
+                0.23084653613965578,
+                0.27804476761937225,
+                0.47167095961627153,
+                0.8408979015084271,
+                1.3733747140495762,
+                1.7834577734786647,
+                1.8855438748505904,
+                1.6293299459573156,
+                1.193546461534415,
+                0.8125951589233114,
+                0.5595125895952116
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 16 of 16 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
         "type": "ECS",
         "energy": 9.97,
         "energy_err": 0.0,
@@ -63127,6 +63563,84 @@
     },
     {
         "type": "ECS_Rutherford",
+        "energy": 10.25,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367004",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                33.1,
+                42.7,
+                48.4,
+                54.6,
+                59.8,
+                64.6,
+                74.2,
+                84.9,
+                97.1,
+                105.0,
+                114.8,
+                124.2,
+                133.5,
+                141.9,
+                151.7,
+                161.0
+            ],
+            "y": [
+                3.0982569774,
+                4.6669006736,
+                4.5006729468,
+                3.8625188806,
+                3.7493569064,
+                3.7128808645,
+                3.6678373697,
+                5.5130820286,
+                10.8999593679,
+                15.7860979384,
+                24.8509908207,
+                35.8838476705,
+                51.3854073105,
+                63.6202981432,
+                75.4879475359,
+                93.3690619343
+            ],
+            "y_err": [
+                0.180657873930882,
+                0.2721247332578273,
+                0.26243207447222444,
+                0.2252216178571032,
+                0.21862319757824397,
+                0.21649629712191135,
+                0.21386983260836617,
+                0.32146516101102746,
+                0.6355713872999329,
+                0.9204797768612697,
+                1.4490493201474386,
+                2.092369895686421,
+                2.996258381245575,
+                3.7096689800871503,
+                4.4016659072243876,
+                5.444305086057349
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 16 of 16 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS_Rutherford",
         "energy": 10.3,
         "energy_err": 0.00103,
         "energy_units": "MeV",
@@ -63265,6 +63779,52 @@
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ],
         "natural_target": true
+    },
+    {
+        "type": "ECS_Rutherford",
+        "energy": 10.3,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367002",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                53.6877619258,
+                74.5252903119,
+                94.8163785389,
+                114.5252903119,
+                152.4060611884
+            ],
+            "y": [
+                4.485064653,
+                4.0091536008,
+                12.9052762175,
+                27.6918815983,
+                94.0748100105
+            ],
+            "y_err": [
+                0.2255231238523954,
+                0.21482663382723385,
+                0.6669884061098305,
+                1.4141800640854525,
+                4.7314456552986055
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 5 of 5 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
     },
     {
         "type": "ECS_Rutherford",
@@ -64318,6 +64878,52 @@
     },
     {
         "type": "ECS_Rutherford",
+        "energy": 10.5,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367002",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                53.6877619258,
+                94.8163785389,
+                114.5252903119,
+                133.6877619258,
+                152.4060611884
+            ],
+            "y": [
+                2.64040798,
+                13.8999254804,
+                25.024904882,
+                105.7038746166,
+                140.7736727515
+            ],
+            "y_err": [
+                0.13433534650390466,
+                0.7167953699582028,
+                1.286470245919778,
+                5.302398525265266,
+                7.058701263879646
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 5 of 5 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS_Rutherford",
         "energy": 10.55,
         "energy_err": 0.001055,
         "energy_units": "MeV",
@@ -64740,6 +65346,52 @@
         "natural_target": true
     },
     {
+        "type": "ECS_Rutherford",
+        "energy": 10.65,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367002",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                53.6877619258,
+                94.8163785389,
+                114.5252903119,
+                133.6877619258,
+                152.4060611884
+            ],
+            "y": [
+                6.9474921501,
+                6.8571822767,
+                21.1896484609,
+                62.0476734967,
+                75.0428088317
+            ],
+            "y_err": [
+                0.3483123949918608,
+                0.38744722978115304,
+                1.1032158121079425,
+                3.133292198934737,
+                3.7917201495565185
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 5 of 5 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
         "type": "ECS",
         "energy": 10.69,
         "energy_err": 0.0,
@@ -64990,6 +65642,130 @@
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ],
         "natural_target": true
+    },
+    {
+        "type": "ECS_Rutherford",
+        "energy": 10.7,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367004",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                32.5,
+                44.1,
+                49.4,
+                54.2,
+                59.9,
+                65.1,
+                76.1,
+                85.0,
+                94.7,
+                105.6,
+                114.7,
+                124.7,
+                133.4,
+                143.8,
+                153.8,
+                162.8
+            ],
+            "y": [
+                6.4633939408,
+                9.4837607566,
+                10.5241870984,
+                8.5806719526,
+                5.2002728404,
+                2.6656400842,
+                0.9246719946,
+                4.7751213411,
+                10.5006061213,
+                15.3255997271,
+                20.8694239546,
+                27.2570953067,
+                43.9750052052,
+                50.6992102644,
+                53.493538521,
+                40.0433522476
+            ],
+            "y_err": [
+                0.3768773914623939,
+                0.5529935275395628,
+                0.6136602870312196,
+                0.500334853810589,
+                0.30322540772442935,
+                0.15543219099941577,
+                0.05391717919023254,
+                0.2784350283200328,
+                0.612285291600184,
+                0.8936283476837437,
+                1.2168860715240477,
+                1.589348115265813,
+                2.564161399270929,
+                2.956246561583635,
+                3.1191824980100504,
+                2.3349086066410103
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 16 of 16 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "ECS_Rutherford",
+        "energy": 10.8,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367002",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                53.6877619258,
+                74.5252903119,
+                94.8163785389,
+                114.5252903119,
+                133.6877619258
+            ],
+            "y": [
+                5.5765112489,
+                1.5110129179,
+                15.2764710073,
+                28.0487424039,
+                36.413318157
+            ],
+            "y_err": [
+                0.2800597073261922,
+                0.11363949494457014,
+                0.7860362966667439,
+                1.4376457028796197,
+                1.8757906639167983
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 5 of 5 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
     },
     {
         "type": "ECS",
@@ -67954,8 +68730,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -68484,9 +69262,11 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "relative error floor 2 % applied at 6 of 75 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -68542,8 +69322,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -69719,53 +70501,6 @@
     {
         "type": "ECS",
         "energy": 14.7,
-        "energy_err": 0.25,
-        "energy_units": "MeV",
-        "EXFORAccessionNumber": "20240004",
-        "source": "G.Deconninck, J.P.Meulders, Physical Review, Part C, Nuclear Physics 1, 1326 (1970); Thesis or dissertation: Meulders  (1969); Journal de Physique - Colloque 31, C2-129 (1970); Annales de la Societe Scientifique de Bruxelles 80, 193 (1966); Progress report: EANDC(E)-76U 99 (1967); Private communication: Meulders  (1972);  Data taken from the EXFOR database, file EXFOR 20240001 dated 197004, retrieved from the IAEA Nuclear Data Services website.",
-        "x_units": "CM-degrees",
-        "y_units": "b/sr",
-        "data": {
-            "x": [
-                43.0003109781,
-                64.0000731048,
-                74.9999433584,
-                94.999669708,
-                104.9994634727,
-                133.9993332924
-            ],
-            "y": [
-                0.102,
-                0.0206,
-                0.0185,
-                0.0239,
-                0.0315,
-                0.0203
-            ],
-            "y_err": [
-                0.0035,
-                0.0014,
-                0.0014,
-                0.0016,
-                0.0016,
-                0.0024
-            ],
-            "systematic_normalization_error": 0.05
-        },
-        "corpus": "elm_light",
-        "sector": "elastic_diff_xs",
-        "projectile": "neutron",
-        "target": "C-12",
-        "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported",
-            "measured on a natural C target; treated as C-12 (98.93% abundant)",
-            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ],
-        "natural_target": true
-    },
-    {
-        "type": "ECS",
-        "energy": 14.7,
         "energy_err": 0.0,
         "energy_units": "MeV",
         "EXFORAccessionNumber": "30593012",
@@ -70345,6 +71080,71 @@
             "assigned a default normalisation uncertainty of 5%, none reported",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
+    },
+    {
+        "type": "ECS",
+        "energy": 15.0,
+        "energy_err": 0.1,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20220002",
+        "source": "D.Spaargaren, C.C.Jonker, Nuclear Physics, Section A 161, 354 (1971); Thesis or dissertation: Spaargaren  (1969);  Data taken from the EXFOR database, file EXFOR 20220001 dated 1971, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                27.0,
+                32.4,
+                32.4,
+                43.1,
+                48.4,
+                48.4,
+                64.1,
+                79.6,
+                94.8,
+                109.6,
+                124.1,
+                138.4
+            ],
+            "y": [
+                0.377,
+                0.235,
+                0.263,
+                0.12,
+                0.076,
+                0.0782,
+                0.0211,
+                0.0205,
+                0.0277,
+                0.0254,
+                0.016,
+                0.0091
+            ],
+            "y_err": [
+                0.019,
+                0.02,
+                0.013,
+                0.005,
+                0.006,
+                0.0035,
+                0.0011,
+                0.0012,
+                0.0022,
+                0.0024,
+                0.001,
+                0.0014
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs",
+        "projectile": "neutron",
+        "target": "C-12",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target; treated as C-12 (98.93% abundant)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -72719,74 +73519,6 @@
     },
     {
         "type": "ECS",
-        "energy": 17.27,
-        "energy_err": 0.28,
-        "energy_units": "MeV",
-        "EXFORAccessionNumber": "20240003",
-        "source": "G.Deconninck, J.P.Meulders, Physical Review, Part C, Nuclear Physics 1, 1326 (1970); Thesis or dissertation: Meulders  (1969); Journal de Physique - Colloque 31, C2-129 (1970); Annales de la Societe Scientifique de Bruxelles 80, 193 (1966); Progress report: EANDC(E)-76U 99 (1967); Private communication: Meulders  (1972);  Data taken from the EXFOR database, file EXFOR 20240001 dated 197004, retrieved from the IAEA Nuclear Data Services website.",
-        "x_units": "CM-degrees",
-        "y_units": "b/sr",
-        "data": {
-            "x": [
-                10.802216838,
-                32.4008474614,
-                43.1001909052,
-                53.7002259897,
-                64.2000699634,
-                74.5004980263,
-                84.8001484454,
-                94.7995490287,
-                104.7996587741,
-                114.4997958261,
-                124.1997660005,
-                133.6998089204,
-                147.7996595741
-            ],
-            "y": [
-                0.6915,
-                0.2916,
-                0.0918,
-                0.03792,
-                0.01914,
-                0.03211,
-                0.02326,
-                0.01935,
-                0.01342,
-                0.0283,
-                0.02396,
-                0.01723,
-                0.01671
-            ],
-            "y_err": [
-                0.021,
-                0.014,
-                0.005,
-                0.0034,
-                0.0022,
-                0.0035,
-                0.0029,
-                0.0026,
-                0.0019,
-                0.0041,
-                0.0038,
-                0.0038,
-                0.005
-            ],
-            "systematic_normalization_error": 0.05
-        },
-        "corpus": "elm_light",
-        "sector": "elastic_diff_xs",
-        "projectile": "neutron",
-        "target": "C-12",
-        "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported",
-            "measured on a natural C target; treated as C-12 (98.93% abundant)",
-            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ],
-        "natural_target": true
-    },
-    {
-        "type": "ECS",
         "energy": 17.29,
         "energy_err": 0.21,
         "energy_units": "MeV",
@@ -74480,74 +75212,6 @@
         ]
     },
     {
-        "type": "ECS",
-        "energy": 18.25,
-        "energy_err": 0.17,
-        "energy_units": "MeV",
-        "EXFORAccessionNumber": "20240003",
-        "source": "G.Deconninck, J.P.Meulders, Physical Review, Part C, Nuclear Physics 1, 1326 (1970); Thesis or dissertation: Meulders  (1969); Journal de Physique - Colloque 31, C2-129 (1970); Annales de la Societe Scientifique de Bruxelles 80, 193 (1966); Progress report: EANDC(E)-76U 99 (1967); Private communication: Meulders  (1972);  Data taken from the EXFOR database, file EXFOR 20240001 dated 197004, retrieved from the IAEA Nuclear Data Services website.",
-        "x_units": "CM-degrees",
-        "y_units": "b/sr",
-        "data": {
-            "x": [
-                10.802216838,
-                32.4008474614,
-                43.1001909052,
-                53.7002259897,
-                64.2000699634,
-                74.5004980263,
-                84.8001484454,
-                94.7995490287,
-                104.7996587741,
-                114.4997958261,
-                124.1997660005,
-                133.6998089204,
-                147.7996595741
-            ],
-            "y": [
-                0.6919,
-                0.3054,
-                0.10146,
-                0.05329,
-                0.0322,
-                0.0331,
-                0.02371,
-                0.01904,
-                0.01389,
-                0.01152,
-                0.01141,
-                0.00671,
-                0.01116
-            ],
-            "y_err": [
-                0.021,
-                0.014,
-                0.006,
-                0.005,
-                0.003,
-                0.0026,
-                0.0019,
-                0.0017,
-                0.0016,
-                0.0016,
-                0.0013,
-                0.0011,
-                0.002
-            ],
-            "systematic_normalization_error": 0.05
-        },
-        "corpus": "elm_light",
-        "sector": "elastic_diff_xs",
-        "projectile": "neutron",
-        "target": "C-12",
-        "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported",
-            "measured on a natural C target; treated as C-12 (98.93% abundant)",
-            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ],
-        "natural_target": true
-    },
-    {
         "type": "ECS_Rutherford",
         "energy": 18.4,
         "energy_err": 0.0,
@@ -75658,74 +76322,6 @@
             "relative error floor 2 % applied at 17 of 25 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
-    },
-    {
-        "type": "ECS",
-        "energy": 19.88,
-        "energy_err": 0.105,
-        "energy_units": "MeV",
-        "EXFORAccessionNumber": "20240003",
-        "source": "G.Deconninck, J.P.Meulders, Physical Review, Part C, Nuclear Physics 1, 1326 (1970); Thesis or dissertation: Meulders  (1969); Journal de Physique - Colloque 31, C2-129 (1970); Annales de la Societe Scientifique de Bruxelles 80, 193 (1966); Progress report: EANDC(E)-76U 99 (1967); Private communication: Meulders  (1972);  Data taken from the EXFOR database, file EXFOR 20240001 dated 197004, retrieved from the IAEA Nuclear Data Services website.",
-        "x_units": "CM-degrees",
-        "y_units": "b/sr",
-        "data": {
-            "x": [
-                10.802216838,
-                32.4008474614,
-                43.1001909052,
-                53.7002259897,
-                64.2000699634,
-                74.5004980263,
-                84.8001484454,
-                94.7995490287,
-                104.7996587741,
-                114.4997958261,
-                124.1997660005,
-                133.6998089204,
-                147.7996595741
-            ],
-            "y": [
-                0.893,
-                0.3965,
-                0.1273,
-                0.0337,
-                0.02354,
-                0.03686,
-                0.02602,
-                0.01859,
-                0.01104,
-                0.00661,
-                0.00682,
-                0.00339,
-                0.00289
-            ],
-            "y_err": [
-                0.027,
-                0.012,
-                0.006,
-                0.0024,
-                0.0016,
-                0.0023,
-                0.0014,
-                0.0017,
-                0.0015,
-                0.0012,
-                0.0012,
-                0.00085,
-                0.00087
-            ],
-            "systematic_normalization_error": 0.05
-        },
-        "corpus": "elm_light",
-        "sector": "elastic_diff_xs",
-        "projectile": "neutron",
-        "target": "C-12",
-        "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported",
-            "measured on a natural C target; treated as C-12 (98.93% abundant)",
-            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ],
-        "natural_target": true
     },
     {
         "type": "ECS",
@@ -76975,8 +77571,10 @@
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -77591,8 +78189,10 @@
         "target": "C-12",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -78507,9 +79107,11 @@
         "target": "C-12",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "relative error floor 2 % applied at 9 of 63 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -80416,116 +81018,6 @@
     {
         "type": "ECS",
         "energy": 65.0,
-        "energy_err": 1.25,
-        "energy_units": "MeV",
-        "EXFORAccessionNumber": "13510002",
-        "source": "E.L.Hjort, F.P.Brady, et al., Physical Review, Part C, Nuclear Physics 50, 275 (1994);  Data taken from the EXFOR database, file EXFOR 13510001 dated 9407, retrieved from the IAEA Nuclear Data Services website.",
-        "x_units": "CM-degrees",
-        "y_units": "b/sr",
-        "data": {
-            "x": [
-                8.1,
-                9.2,
-                10.3,
-                11.4,
-                12.5,
-                13.6,
-                14.7,
-                15.7,
-                16.8,
-                17.9,
-                19.0,
-                20.1,
-                20.6,
-                21.2,
-                22.8,
-                25.0,
-                27.1,
-                29.3,
-                31.4,
-                33.6,
-                35.7,
-                37.9,
-                40.0,
-                42.2,
-                44.3,
-                46.4,
-                48.6
-            ],
-            "y": [
-                1.26,
-                1.185,
-                1.109,
-                1.025,
-                0.9402,
-                0.8555,
-                0.7726,
-                0.6701,
-                0.6474,
-                0.5299,
-                0.5059,
-                0.4283,
-                0.4293,
-                0.3714,
-                0.3373,
-                0.1729,
-                0.1405,
-                0.0935,
-                0.05955,
-                0.0416,
-                0.02371,
-                0.01627,
-                0.0112,
-                0.01041,
-                0.008424,
-                0.008338,
-                0.005109
-            ],
-            "y_err": [
-                0.156,
-                0.151,
-                0.122,
-                0.113,
-                0.111,
-                0.0982,
-                0.0829,
-                0.153,
-                0.144,
-                0.108,
-                0.104,
-                0.0918,
-                0.119,
-                0.1,
-                0.0649,
-                0.0243,
-                0.0186,
-                0.0121,
-                0.00688,
-                0.00506,
-                0.00312,
-                0.00226,
-                0.00167,
-                0.00157,
-                0.00141,
-                0.00147,
-                0.00104
-            ],
-            "systematic_normalization_error": 0.05
-        },
-        "corpus": "elm_light",
-        "sector": "elastic_diff_xs",
-        "projectile": "neutron",
-        "target": "C-12",
-        "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported",
-            "measured on a natural C target; treated as C-12 (98.93% abundant)",
-            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ],
-        "natural_target": true
-    },
-    {
-        "type": "ECS",
-        "energy": 65.0,
         "energy_err": 5.0,
         "energy_units": "MeV",
         "EXFORAccessionNumber": "13946002",
@@ -82181,9 +82673,11 @@
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "relative error floor 2 % applied at 12 of 14 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -82454,9 +82948,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "relative error floor 2 % applied at 14 of 14 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",

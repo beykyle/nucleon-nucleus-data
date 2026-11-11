@@ -57,81 +57,6 @@
     },
     {
         "type": "APower",
-        "energy": 7.75,
-        "energy_err": 0.075,
-        "energy_units": "MeV",
-        "EXFORAccessionNumber": "22121022",
-        "source": "G.Schreder, W.Grum, et al., Physical Review, Part C, Nuclear Physics 39, 1774 (1989); Physical Review, Part C, Nuclear Physics 39, 1768 (1989); Thesis or dissertation: Grum  (1989); Conf.on Nucl.Data For Sci.and Technol.,Mito 1988 , 691 (1988); Int.Conf.on Fast Neutr.Phys.,Dubrovnik,26-31 May 1986 , 224 (1986); Conf.on Nucl.Data for Sci.and Technol.,Antwerp 1982 , 783 (1982);  Data taken from the EXFOR database, file EXFOR 22121001 dated 1989, retrieved from the IAEA Nuclear Data Services website.",
-        "x_units": "CM-degrees",
-        "y_units": "no-dim",
-        "data": {
-            "x": [
-                21.52,
-                28.68,
-                35.83,
-                42.97,
-                50.09,
-                57.2,
-                64.29,
-                70.35,
-                76.4,
-                83.43,
-                90.45,
-                97.44,
-                104.41,
-                111.36,
-                118.29,
-                125.2
-            ],
-            "y": [
-                -0.076,
-                -0.072,
-                -0.052,
-                -0.025,
-                0.001,
-                -0.025,
-                -0.32,
-                -0.567,
-                -0.62,
-                -0.565,
-                0.523,
-                0.771,
-                0.718,
-                0.477,
-                -0.021,
-                -0.641
-            ],
-            "y_err": [
-                0.017,
-                0.017,
-                0.021,
-                0.019,
-                0.035,
-                0.041,
-                0.051,
-                0.078,
-                0.118,
-                0.136,
-                0.14,
-                0.094,
-                0.075,
-                0.074,
-                0.068,
-                0.099
-            ],
-            "systematic_normalization_error": 0.05
-        },
-        "corpus": "elm_light",
-        "sector": "elastic_ay",
-        "projectile": "neutron",
-        "target": "Ar-40",
-        "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported",
-            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
-    },
-    {
-        "type": "APower",
         "energy": 9.8,
         "energy_err": 0.0,
         "energy_units": "MeV",
@@ -193,8 +118,10 @@
         "target": "Ar-40",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural Ar target (EXFOR SAMPLE; coded as the isotope); treated as Ar-40 (99.60% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",

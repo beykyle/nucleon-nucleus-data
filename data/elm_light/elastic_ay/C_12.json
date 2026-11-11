@@ -2004,8 +2004,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -2800,8 +2802,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -2996,8 +3000,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -3266,8 +3272,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -3525,8 +3533,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -3615,8 +3625,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -3842,8 +3854,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -4507,8 +4521,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -5520,8 +5536,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -6168,8 +6186,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -6783,8 +6803,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -7007,8 +7029,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -7299,8 +7323,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -7506,8 +7532,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -7908,8 +7936,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -8348,8 +8378,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -8799,8 +8831,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -8850,8 +8884,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -9074,8 +9110,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -9125,8 +9163,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -9349,8 +9389,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -9406,8 +9448,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -9803,8 +9847,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -9854,8 +9900,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -10083,6 +10131,65 @@
     },
     {
         "type": "APower",
+        "energy": 6.9,
+        "energy_err": 0.1,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1242005",
+        "source": "H.Guratzsch, G.Hofmann, et al., Nuclear Physics, Section A 129, 405 (1969);  Data taken from the EXFOR database, file EXFOR O1242001 dated 1969, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                27.0,
+                43.3,
+                59.2,
+                74.9,
+                89.6,
+                104.3,
+                120.1,
+                134.3,
+                147.2,
+                157.7
+            ],
+            "y": [
+                -0.389,
+                -0.485,
+                -0.002,
+                0.958,
+                0.128,
+                -0.635,
+                -0.943,
+                -0.828,
+                -0.408,
+                -0.254
+            ],
+            "y_err": [
+                0.030594117081556706,
+                0.030594117081556706,
+                0.030594117081556706,
+                0.030594117081556706,
+                0.030594117081556706,
+                0.030594117081556706,
+                0.030594117081556706,
+                0.030594117081556706,
+                0.030594117081556706,
+                0.030594117081556706
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_ay",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 10 of 10 points without one in EXFOR (added in quadrature to the reader error): Guratzsch et al., NPA 129 (1969) 405, p.409 Table 1 (12C): mean relative error 1.5 % (statistics, background, dead time), polarisation 3 % (absolute 0.03); EXFOR files both as constant ERR-n columns",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "APower",
         "energy": 6.94,
         "energy_err": 0.0,
         "energy_units": "MeV",
@@ -10144,8 +10251,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -10870,8 +10979,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -11020,8 +11131,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -11086,8 +11199,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -11296,8 +11411,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -11350,8 +11467,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -11476,8 +11595,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -11530,8 +11651,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -11584,8 +11707,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -12176,7 +12301,7 @@
                 0.05,
                 0.05
             ],
-            "systematic_normalization_error": 0.05
+            "systematic_normalization_error": 0.029
         },
         "corpus": "elm_light",
         "sector": "elastic_ay",
@@ -12184,6 +12309,57 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "normalisation uncertainty 2.9 % from the authors: Wienhard: beam polarisation 69 % +- 2 %",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "APower",
+        "energy": 10.15,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367003",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                53.6877619258,
+                74.5252903119,
+                94.8163785389,
+                114.5252903119,
+                133.6877619258,
+                152.4060611884
+            ],
+            "y": [
+                0.718,
+                0.345,
+                0.662,
+                0.611,
+                0.194,
+                -0.186
+            ],
+            "y_err": [
+                0.050990195135927854,
+                0.050990195135927854,
+                0.050990195135927854,
+                0.050990195135927854,
+                0.050990195135927854,
+                0.050990195135927854
+            ],
+            "systematic_normalization_error": 0.029
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_ay",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 6 of 6 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "normalisation uncertainty 2.9 % from the authors: Wienhard: beam polarisation 69 % +- 2 %",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
@@ -12296,7 +12472,7 @@
                 0.04,
                 0.04
             ],
-            "systematic_normalization_error": 0.05
+            "systematic_normalization_error": 0.029
         },
         "corpus": "elm_light",
         "sector": "elastic_ay",
@@ -12304,6 +12480,54 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "normalisation uncertainty 2.9 % from the authors: Wienhard: beam polarisation 69 % +- 2 %",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "APower",
+        "energy": 10.37,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367003",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                53.6877619258,
+                74.5252903119,
+                94.8163785389,
+                114.5252903119,
+                152.4060611884
+            ],
+            "y": [
+                0.842,
+                -0.666,
+                -0.29,
+                0.822,
+                -0.371
+            ],
+            "y_err": [
+                0.050990195135927854,
+                0.050990195135927854,
+                0.050990195135927854,
+                0.050990195135927854,
+                0.050990195135927854
+            ],
+            "systematic_normalization_error": 0.029
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_ay",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 5 of 5 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "normalisation uncertainty 2.9 % from the authors: Wienhard: beam polarisation 69 % +- 2 %",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
@@ -12354,6 +12578,52 @@
     },
     {
         "type": "APower",
+        "energy": 10.65,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367003",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                74.5252903119,
+                94.8163785389,
+                114.5252903119,
+                133.6877619258,
+                152.4060611884
+            ],
+            "y": [
+                -0.368,
+                0.384,
+                -0.49,
+                -0.222,
+                0.087
+            ],
+            "y_err": [
+                0.050990195135927854,
+                0.050990195135927854,
+                0.050990195135927854,
+                0.050990195135927854,
+                0.050990195135927854
+            ],
+            "systematic_normalization_error": 0.029
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_ay",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 5 of 5 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "normalisation uncertainty 2.9 % from the authors: Wienhard: beam polarisation 69 % +- 2 %",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "APower",
         "energy": 10.69,
         "energy_err": 0.1,
         "energy_units": "MeV",
@@ -12394,6 +12664,52 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "APower",
+        "energy": 10.69,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367003",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                74.5252903119,
+                94.8163785389,
+                114.5252903119,
+                133.6877619258,
+                152.4060611884
+            ],
+            "y": [
+                0.263,
+                0.294,
+                -0.467,
+                -0.357,
+                0.146
+            ],
+            "y_err": [
+                0.050990195135927854,
+                0.050990195135927854,
+                0.050990195135927854,
+                0.050990195135927854,
+                0.050990195135927854
+            ],
+            "systematic_normalization_error": 0.029
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_ay",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 5 of 5 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "normalisation uncertainty 2.9 % from the authors: Wienhard: beam polarisation 69 % +- 2 %",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
@@ -12461,7 +12777,7 @@
                 0.05,
                 0.05
             ],
-            "systematic_normalization_error": 0.05
+            "systematic_normalization_error": 0.029
         },
         "corpus": "elm_light",
         "sector": "elastic_ay",
@@ -12469,6 +12785,8 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "normalisation uncertainty 2.9 % from the authors: Wienhard: beam polarisation 69 % +- 2 %",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     },
@@ -12613,8 +12931,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -15544,8 +15864,10 @@
         "notes": [
             "converted scattering angles from the lab to the CM frame",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -15633,8 +15955,10 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -16904,6 +17228,132 @@
     },
     {
         "type": "APower",
+        "energy": 65.0,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "E0243005",
+        "source": "S.Kato, K.Okada, et al., Nuclear Instrum.and Methods in Physics Res. 169, (3), 589 (1980);  Data taken from the EXFOR database, file EXFOR E0243001 dated 198003, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                16.5695201105,
+                21.6455853235,
+                27.0335200169,
+                32.4060611884,
+                37.760376566,
+                43.0937667527,
+                44.9550335847,
+                47.0785394394,
+                48.1387848018,
+                48.4036859549,
+                49.198000389,
+                50.7848532871,
+                51.3132698838,
+                52.3692884019,
+                53.4242063773,
+                53.6877619258,
+                55.5306735106,
+                57.6325402919,
+                58.9438149353,
+                59.7296812695,
+                64.1698755632,
+                69.3642010964,
+                71.9489842695,
+                74.5252903119,
+                79.6518964282,
+                84.7430380207,
+                89.7980077197,
+                94.8163785389,
+                99.7980077197,
+                104.7430380207,
+                114.5252903119,
+                119.3642010964
+            ],
+            "y": [
+                0.083,
+                0.086,
+                0.087,
+                0.117,
+                0.305,
+                0.772,
+                0.882,
+                0.962,
+                0.982,
+                0.99,
+                0.987,
+                0.98,
+                0.971,
+                0.95,
+                0.943,
+                0.937,
+                0.906,
+                0.882,
+                0.849,
+                0.85,
+                0.755,
+                0.584,
+                0.409,
+                0.308,
+                0.074,
+                -0.053,
+                -0.102,
+                -0.124,
+                -0.115,
+                -0.026,
+                0.099,
+                0.219
+            ],
+            "y_err": [
+                0.013,
+                0.013,
+                0.013,
+                0.013,
+                0.013,
+                0.019,
+                0.013,
+                0.012,
+                0.012,
+                0.025,
+                0.012,
+                0.012,
+                0.012,
+                0.012,
+                0.012,
+                0.018,
+                0.012,
+                0.013,
+                0.02,
+                0.012,
+                0.013,
+                0.018,
+                0.055,
+                0.014,
+                0.015,
+                0.014,
+                0.015,
+                0.016,
+                0.023,
+                0.046,
+                0.064,
+                0.116
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_ay",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "per-point error = EXFOR ERR-T (ERR-ANALYS: ERR-T is the total Delta P (relative (+) the normalisation at 47.5 deg), DATA-ERR its relative part (Kato et al., NIM 169 (1980) 589, Table 2))",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ]
+    },
+    {
+        "type": "APower",
         "energy": 69.5,
         "energy_err": 0.0,
         "energy_units": "MeV",
@@ -17741,8 +18191,10 @@
         "notes": [
             "converted scattering angles from the lab to the CM frame",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",

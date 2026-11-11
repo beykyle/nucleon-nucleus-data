@@ -89,8 +89,75 @@
         "target": "S-32",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural S target (EXFOR SAMPLE; coded as the isotope); treated as S-32 (94.99% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
+    },
+    {
+        "type": "APower",
+        "energy": 10.4,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O0439013",
+        "source": "L.Rosen, J.E.Brolley, et al., Physical Review 121, 1423 (1961);  Data taken from the EXFOR database, file EXFOR O0439001 dated 1961, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                31.0,
+                41.0,
+                53.5,
+                61.5,
+                71.5,
+                84.0,
+                92.0,
+                102.0,
+                111.5,
+                118.5,
+                123.5,
+                131.5
+            ],
+            "y": [
+                0.0,
+                0.17,
+                0.45,
+                0.3,
+                0.08,
+                -0.49,
+                -0.66,
+                -0.42,
+                0.43,
+                0.29,
+                0.23,
+                0.16
+            ],
+            "y_err": [
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.06,
+                0.05,
+                0.07,
+                0.09,
+                0.11,
+                0.12,
+                0.12,
+                0.11
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_ay",
+        "projectile": "proton",
+        "target": "S-32",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural S target; treated as S-32 (94.99% abundant)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -173,8 +240,10 @@
         "target": "S-32",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural S target (EXFOR SAMPLE; coded as the isotope); treated as S-32 (94.99% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -248,8 +317,10 @@
         "target": "S-32",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural S target (EXFOR SAMPLE; coded as the isotope); treated as S-32 (94.99% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -329,8 +400,100 @@
         "target": "S-32",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural S target (EXFOR SAMPLE; coded as the isotope); treated as S-32 (94.99% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
+    },
+    {
+        "type": "APower",
+        "energy": 17.8,
+        "energy_err": 0.4,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O0459003",
+        "source": "D.J.Baugh, J.A.R.Griffith, et al., Nuclear Physics 83, 481 (1966);  Data taken from the EXFOR database, file EXFOR O0459001 dated 1966, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                25.7630986578,
+                30.9028332963,
+                36.0357013532,
+                41.1606914686,
+                46.2768519408,
+                51.3832979998,
+                56.4792185901,
+                61.5638826064,
+                66.6366445332,
+                71.6969494363,
+                76.7443372671,
+                81.7784464376,
+                86.7990166367,
+                91.8058908601,
+                96.7990166367,
+                101.7784464376,
+                106.7443372671,
+                111.6969494363,
+                116.6366445332,
+                121.5638826064
+            ],
+            "y": [
+                -0.205,
+                -0.248,
+                -0.238,
+                -0.367,
+                0.432,
+                0.121,
+                -0.049,
+                -0.187,
+                -0.316,
+                -0.411,
+                -0.477,
+                -0.523,
+                -0.377,
+                0.091,
+                0.376,
+                0.356,
+                0.344,
+                0.275,
+                0.195,
+                0.088
+            ],
+            "y_err": [
+                0.012,
+                0.012,
+                0.02,
+                0.035,
+                0.031,
+                0.025,
+                0.023,
+                0.023,
+                0.023,
+                0.023,
+                0.021,
+                0.022,
+                0.024,
+                0.032,
+                0.03,
+                0.029,
+                0.026,
+                0.026,
+                0.027,
+                0.029
+            ],
+            "systematic_normalization_error": 0.05
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_ay",
+        "projectile": "proton",
+        "target": "S-32",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural S target; treated as S-32 (94.99% abundant)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
+        ],
+        "natural_target": true
     },
     {
         "type": "APower",
@@ -425,7 +588,9 @@
         "target": "S-32",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural S target (EXFOR SAMPLE; coded as the isotope); treated as S-32 (94.99% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
-        ]
+        ],
+        "natural_target": true
     }
 ]

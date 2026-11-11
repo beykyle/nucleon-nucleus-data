@@ -32,7 +32,7 @@ def test_target_spec():
         assert (A, Z) in spec.ELM_LIGHT_TARGETS and A - Z > Z and 0.0 <= ex < 5.0
     assert set(spec.elm_light_pn_targets()) == set(spec.ELM_LIGHT_EX_IAS)
     for nat, (iso, abundance) in spec.ELM_LIGHT_NATURAL.items():
-        assert nat[0] == 0 and nat[1] == iso[1] and abundance >= 0.98 and iso in spec.ELM_LIGHT_TARGETS
+        assert nat[0] == 0 and nat[1] == iso[1] and abundance >= spec.ELM_LIGHT_NATURAL_MIN and iso in spec.ELM_LIGHT_TARGETS
 
 
 def test_drop_tables_have_reasons():
@@ -66,6 +66,18 @@ def test_natural_targets_only_where_one_isotope_dominates():
         if rec.get("natural_target"):
             assert STEMS[path.stem] in dominant, (path, rec["EXFORAccessionNumber"])
             assert any("measured on a natural" in n for n in rec["notes"])
+
+
+def test_natural_samples_below_threshold_are_absent():
+    """Natural Mg (79 % 24Mg) is not used, also where EXFOR codes the natural sample as 24Mg (Kyle, 2026-11-11);
+    natural samples of the other elements are flagged."""
+    for path, rec in _records():
+        A, Z = STEMS[path.stem]
+        sub = rec["EXFORAccessionNumber"][:8]
+        if Z in spec.ELM_LIGHT_NATURAL_EXCLUDED and A == spec.ELM_LIGHT_NATURAL_EXCLUDED[Z][0]:
+            assert not elm_light.natural_sample(sub), (path, sub)
+        elif any(A == a and Z == z for (a, z), _ in spec.ELM_LIGHT_NATURAL.values()) and elm_light.natural_sample(sub):
+            assert rec.get("natural_target"), (path, sub)
 
 
 def test_dropped_records_are_absent():

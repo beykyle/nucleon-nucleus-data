@@ -5,8 +5,9 @@ in code, author errors, the ELM calibration evaluation (2 % floor), TALYS compou
 the ELM-Lane model forms on light targets.
 
 **Scope (Kyle, 2026-11-10).** Even-even targets 12 ≤ A ≤ 40, deformed or not, except 40Ca (in `data/elm`):
-`spec.ELM_LIGHT_TARGETS`. Natural targets only where one isotope is about 99 % (natC, natO, natAr, as their dominant
-isotope; `spec.ELM_LIGHT_NATURAL`); natNe, natMg, natSi and natS are not used. Which targets a calibration uses is
+`spec.ELM_LIGHT_TARGETS`. Natural targets as their dominant isotope where it is at least 90 % (natC, natO, natNe,
+natSi, natS, natAr; `spec.ELM_LIGHT_NATURAL`; the rule was ~99 % until 2026-11-11, item 5); natMg (79 % 24Mg) is not
+used. Which targets a calibration uses is
 decided in the calibration, not here. Compound elastic as for ELM; the calibration chooses its energy floors from
 the CE report below.
 
@@ -19,6 +20,15 @@ the CE report below.
 3. The ~99 % natural rule stays. natSi and natS are not used, although they hold the only Si and S σ_tot above
    ~19 MeV and ~10 MeV (34 and 33 sets up to 200 MeV).
 4. After curation, 22Ne and 38Ar were dropped too: their only data, (p,n), do not isolate the IAS (section 2).
+5. **2026-11-11: natural targets at >= 90 % (Kyle; supersedes item 3).** Reviewing the (n,n) papers showed that EXFOR
+   codes many natural-sample measurements as the dominant isotope; only the SAMPLE text says so (e.g. Virdis 21773,
+   "SAMPLE (12-MG-24,NAT=0.79)"). Of the records filed as 28Si, 32S, 24Mg and 20Ne, 31, 22, 3 and 2 elastic were natural
+   samples, including 28Si training sets (σ_tot, (p,p) at 10.6, 20.5 and 40 MeV). Applied consistently, the 99 % rule
+   would have left 28Si with almost no data. Natural Ne (90.5 %), Si (92.2 %) and S (95.0 %) are now used as 20Ne, 28Si
+   and 32S, both when EXFOR codes them as natural and when it codes them as the isotope (`elm_light.natural_sample`,
+   records flagged `natural_target`). Natural Mg samples are dropped wherever EXFOR files them (21773002/010, 21490002,
+   D0191002). An admixture of 5-10 % neighbouring isotopes changes elastic and σ_tot by about a percent; for Mg (21 %,
+   with 25Mg states at 0.59 and 0.98 MeV unresolved in time-of-flight) it does not.
 
 `spec.ELM_LIGHT_TARGETS` is therefore 12 targets: 12,14C, 16,18O, 20Ne, 24,26Mg, 28,30Si, 32,34S, 40Ar.
 
@@ -73,7 +83,8 @@ writes `data/elm_light/<sector>/` through the author-error and ELM evaluations (
 
 - Elastic, Ay, (p,n): as ELM (`elm_curate`): ELM's parse recipes, then the supplement's uncertainty-column rule for
   parses those do not cover; ELM's entry exclusions except the heavy-target "duplicate of X" ones; `finalize`.
-  Natural C, O, Ar are munged as 12C, 16O, 40Ar and flagged `natural_target`.
+  Natural C, O, Ne, Si, S, Ar are munged as 12C, 16O, 20Ne, 28Si, 32S, 40Ar and flagged `natural_target`; so are
+  natural samples EXFOR codes as the isotope (item 5 above).
 - σ_tot and σ_R: every EXFOR (n,tot) / (p,non) SIG subentry on the targets becomes a spec row over 0.1–200 MeV and
   goes through the tabulated-corpus machinery (`corpus.curate`, as `curate_elm_integral.py`), no thinning. EXFOR
   codes no light-target σ_R as (p,R). Dropped: subentries without an uncertainty (~60, mostly old natC/natO
@@ -127,7 +138,7 @@ From the independent review (2026-11-11; four reviewers: code, data vs docs, inp
 ## 3. Compound elastic (scripts/talys_compound.py --corpus elm_light, 2026-11-10)
 
 TALYS 49ef834 (as ELM), default settings + outangle/cpang; natural targets run as their dominant isotope (their
-records are filed under it). `elastic_diff_xs_direct` (1831 records) and `proton_reaction_direct` (24). Median over
+records are filed under it). `elastic_diff_xs_direct` (4670 records; 1831 before natural Si, S and Ne joined on 2026-11-11) and `proton_reaction_direct` (26). Systems with more than 500 energies (n+28Si, 2567) run in chunks (TALYS allows 600 incident energies per run). The table below is from 2026-11-10 (before the natural targets). Median over
 sets of each set's median `ce_fraction_model` (CE / TALYS elastic), with the number of sets, by energy (MeV):
 
 | system | 0–2 | 2–5 | 5–10 | 10–15 | 15–20 | 20–30 | 30–50 | 50–200 |
@@ -169,7 +180,25 @@ not cut. After all drops (2026-11-11), sets kept (5 MeV (p,p) floor only → wit
 type): 178 sets at 5–100 MeV. σ_tot in the calibration is further thinned to a shortlist above 10 MeV (Kyle,
 2026-11-11; the plan, Phase C2).
 
-## 4. Reader-only uncertainties: dropped for now (Kyle, 2026-11-10)
+## 4. Reader-only uncertainties (Kyle, 2026-11-10; papers read 2026-11-11)
+
+**2026-11-11 update.** Kyle supplied twelve of the papers below (git-ignored archive, filed by entry). From them:
+- **Restored with the papers' errors** (`author_errors.PER_PAPER`): O1242 (Guratzsch, 1.5 % relative, 7 % absolute,
+  Ay 0.03; EXFOR files both as constant ERR-n columns), O1367 (Wienhard, the 5 % / 0.05 put into their phase-shift
+  fit, as Put O0124; Ay scale 2.9 %), F0996 (Hulubei, < 5 %, up to 15 % below 45 deg, 10 % absolute).
+- **Restored from the right EXFOR column:** E0243005 (ERR-T, Kato's total ΔP; `COLUMNS`), 20220002 (ERR-T; its
+  constant 10 % ERR-S is the n-γ coincidence statistics, `COMMON`), O0484003-005 (Prior's statistical ERR-S, DATA-ERR
+  being the reader error; `COLUMN_AUTHOR`; Ay scale 9 %), O2048002 (its DATA-ERR, the authors' bars read off their
+  figure; an audit false positive across the excitation function's energy rows, allowlisted).
+- **Kept dropped** (Kyle: no author error means no record): O0486 (Karban), F0471 (Girod) and O0551002 (Rush, 40Ar)
+  state no error. O0480011/012 (Clarke's fit-figure readings of Fannon's and their own data), O0551005 (Rush's
+  reanalysis of Fannon's 12C) and F0471003 at 24.1 / 26.1 MeV (Dickens's data replotted) are duplicates.
+- **D0049 (Carlson (p,n)) normalisation:** the error bars are relative only; absolute ±11 % (±25 % for 208Pb), p.36.
+  `author_errors.NORM` now carries it, in `elm_light` (26Mg, 40Ar) and `data/elm` (90,96Zr, 118,120Sn, 208Pb; ELM's
+  charge-exchange notebook rerun, only those five records changed), replacing the 5 % default.
+
+The 2026-11-10 text follows.
+
 
 `elm_light` is in `author_errors.SCOPE`, so the reader-error tests audit it as they do ELM: every record must rest on
 author uncertainties, from EXFOR or supplied per paper (docs/AUTHOR_UNCERTAINTIES.md). The light-target subentries were
@@ -220,6 +249,21 @@ the papers to read, largest first. PDFs go in the git-ignored archive `papers/` 
 The other 13 entries have no record in the trial selection (entry (records)): 21729 (70), D0890 (4), F0059 (4), F0877 (11), F0904 (5), F1013 (4), F1019 (1), F1090 (6), O0062 (1), O0079 (1), O0889 (8), O1030 (6), O1177 (2). 21729 (Hall et al.,
 NP A 299, 99 (1978), 70 records) is 32S (62) and 28Si (8) (n,n) at 0.64–3.5 MeV, below the cut.
 Not in the table: D0498 (Daehnick, restored, its errors are the authors') and D0049 (Carlson, kept; see above).
+
+## 5. (n,n) energy resolution against low-lying inelastic (papers read 2026-11-11)
+
+Kyle supplied the papers of the (n,n) sets a calibration might train on; each was read for the separation of the
+elastic peak from the first excited state. Clean (resolved, or peak-fitted with the state well inside the
+resolution): Virdis 24Mg 9.8 / 14.8 MeV (226 / 441 keV; natural Mg, dropped under item 5 anyway), Tailor 26Mg 24 MeV
+(700 keV), Alarcon 34S 21.7 / 25.5 MeV (450 keV), Beach 16O and 40Ar 14 MeV (the Ar flight path chosen to resolve the
+1.46 MeV state), Nakada 12C 14 MeV, Winfield 12C 40 MeV, Islam 16O 18-26 MeV. Dropped (Kyle, `MANUAL_DROPS`):
+- Hjort 12C 65 MeV (13510002): 2.7 MeV resolution; the 4.44 MeV state subtracted with (p,p') strengths and DWUCK4.
+- Deconninck 12C 14.7-19.9 MeV (20240003/004): about 3-4 MeV resolution; a two-Gaussian fit separates the 4.44 MeV
+  state.
+- 22121004 / 022 (40Ar n σ and Ay 7.8 MeV): a private communication (the cited PRC 39, 1774 has no argon); 800 keV,
+  separation from the 1.46 MeV state not stated.
+- Boerker 28Si 10.2 MeV (22113015) and Yamanouti 28Si 21 MeV (21629002): papers not available to check (Boerker's
+  16O sets, first state at 6 MeV, are kept).
 
 Resolved: O0328014 (28Si (p,p), Fricke) failed `test_fricke_is_reader_plus_authors_column` by ~1e-5 because the test
 compared the `_direct` copy (measured − CE, with the CE uncertainty added) against EXFOR; it now uses `y_measured` and

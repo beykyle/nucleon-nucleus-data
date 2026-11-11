@@ -31,6 +31,12 @@ ALLOWLIST = {
                 "the reader detector matches its words 'angular readings' (elm_light)",
     "D0049008": "26Mg(p,n) to six 26Al levels at the same angles: the audit (exfor_points) matches by angle across "
                 "levels, so the IAS record is compared with ground-state rows; its own DATA-ERR is used (elm_light)",
+    "O2048002": "Orihara 18O(p,p): excitation functions at fixed angles, rows 4-6 keV apart; the audit compares the "
+                "6.041 MeV record with a neighbouring energy's row; its errors equal EXFOR's DATA-ERR at 6.041 MeV "
+                "(the authors' bars read off their figure; checked 2026-11-11) (elm_light)",
+    "10573004": "natural Si(n,n) 0.5-3 MeV excitation functions, rows 1 keV apart: the audit compares records with a "
+                "neighbouring energy's row; each record equals EXFOR's DATA-ERR at its own energy (checked "
+                "2026-11-11) (elm_light)",
 }
 
 

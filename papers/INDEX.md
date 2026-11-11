@@ -61,3 +61,34 @@ evaluated corpora (`elm`, `sm3`, `kduq_evaluated`, `chuq_evaluated`, `test_evalu
 | entry | source | link | use |
 |---|---|---|---|
 | O0178 | R. R. Doering, *Isobaric Analog State Transitions in (p,n) Reactions on 48Ca, 90Zr, 120Sn, and 208Pb at 25, 35, and 45 MeV*, PhD thesis, Michigan State University (1974) | [MSU ETD 18018](https://d.lib.msu.edu/etd/18018), [doi:10.25335/8r9s-9621](https://doi.org/10.25335/8r9s-9621) | Table 5 tabulates all 12 IAS angular distributions with errors (statistical ⊕ peak-fitting systematic); the corpora use it in place of EXFOR's digitisation of O0178, transcribed in [external/doering_1974_table5.csv](../external/doering_1974_table5.csv). |
+
+## ELM-light (2026-11-11)
+
+Publications behind `elm_light` records, supplied by Kyle on 2026-11-11 and filed as `<entry>.pdf` (not distributed).
+What they say: [AUTHOR_UNCERTAINTY_SOURCES.md](../docs/AUTHOR_UNCERTAINTY_SOURCES.md#elm-light-papers-read-2026-11-11)
+(uncertainties) and [ELM_LIGHT_DATA.md](../docs/ELM_LIGHT_DATA.md) section 5 ((n,n) energy resolution).
+
+| entry | citation | DOI | use |
+|---|---|---|---|
+| O1242 | H. Guratzsch et al., NPA 129, 405 (1969) | 10.1016/0375-9474(69)90676-9 | restored (PER_PAPER) |
+| O1367 | K. Wienhard et al., Z. Phys. 256, 457 (1972) | 10.1007/bf01386991 | restored (PER_PAPER) |
+| F0996 | H. Hulubei et al., NP 39, 686 (1962) | 10.1016/0029-5582(62)90425-x | restored (PER_PAPER) |
+| E0243 | S. Kato et al., NIM 169, 589 (1980) | 10.1016/0029-554x(80)90963-5 | restored (COLUMNS) |
+| 20220 | D. Spaargaren, C. C. Jonker, NPA 161, 354 (1971) | 10.1016/0375-9474(71)90374-5 | restored (COMMON) |
+| O0484 | R. M. Prior et al., NPA 167, 143 (1971) | 10.1016/0375-9474(71)90588-4 | restored (COLUMN_AUTHOR) |
+| O2048 | H. Orihara et al., NPA 203, 78 (1973) | 10.1016/0375-9474(73)90424-7 | restored (audit allowlist) |
+| D0049 | J. D. Carlson et al., NPA 249, 29 (1975) | 10.1016/0375-9474(75)90090-1 | normalisation 11 % / 25 % |
+| O0486 | O. Karban et al., NPA 132, 548 (1969) | 10.1016/0375-9474(69)90717-9 | removed: no error stated |
+| F0471 | M. Girod et al., J. Phys. 31, 125 (1970) | 10.1051/jphys:01970003102-3012500 | removed: no error stated; 2 duplicates |
+| O0551 | A. A. Rush et al., NPA 166, 378 (1971) | 10.1016/0375-9474(71)90438-6 | removed: no error stated; 1 duplicate |
+| O0480 | N. M. Clarke et al., NPA 157, 145 (1970) | 10.1016/0375-9474(70)90105-3 | 011/012 removed: duplicates |
+| 21773 | A. Virdis, CEA-R-5144 (1981) | — | (n,n) resolution; natural Mg, removed |
+| 12822 | R. C. Tailor et al., NPA 401, 237 (1983) | — | (n,n) resolution: clean |
+| 13125 | R. Alarcon, J. Rapaport, NPA 458, 502 (1986) | — | (n,n) resolution: clean |
+| 13194 | M. S. Islam et al., NPA 464, 395 (1987) | — | (n,n) resolution: clean |
+| 11418 | P. L. Beach et al., PR 156, 1201 (1967) | — | (n,n) resolution: clean |
+| 11228 | M. P. Nakada et al., PR 110, 1439 (1958) | — | (n,n) resolution: clean |
+| 12871 | J. S. Winfield et al., PRC 33, 1 (1986) | — | (n,n) resolution: clean |
+| 13510 | E. L. Hjort et al., PRC 50, 275 (1994) | — | removed: 4.44 MeV state subtracted by model |
+| 20240 | G. Deconninck, J.-P. Meulders, PRC 1, 1326 (1970) | — | removed: two-Gaussian separation |
+| 22121 | G. Schreder et al., PRC 39, 1774 (1989) | — | cited by EXFOR for 40Ar, but holds no argon; 22121004/022 removed |

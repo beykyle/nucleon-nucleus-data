@@ -828,3 +828,104 @@ were generally negligible. A more detailed discussion of the errors affecting th
 paper II." Paper II is Phys. Rev. C 21, 844 (1980), which was not consulted.
 
 **Applied:** removed.
+
+---
+
+# ELM-light papers (read 2026-11-11)
+
+The publications behind the `elm_light` records that rested on reader errors, supplied by Kyle on 2026-11-11 and read
+for their uncertainty statements (page numbers are PDF pages). Rules: `author_errors.PER_PAPER`, `COLUMNS`,
+`COLUMN_AUTHOR`, `COMMON`, `NORM`, `NORM_AY`; drops: `elm_light.READER_ONLY_DROPS`. Summary in
+[ELM_LIGHT_DATA.md](ELM_LIGHT_DATA.md), section 4.
+
+## O1242
+
+**H. Guratzsch et al., Nucl. Phys. A 129, 405 (1969)**; p on 12C and 13C at 7 MeV. EXFOR STATUS (CURVE), Fig. 4.
+- p.409, Table 1, "Mean experimental errors (%)", 12C elastic: Δr 1.5 (point to point: "statistics, background
+  separation and dead time correction"), Δa 7 (absolute: "target thickness, enrichment, geometry and current
+  measurement"); polarisation Δp 3. EXFOR files these as constant ERR-1 / ERR-2 columns, so the audit read the records
+  as reader-only.
+
+**Applied:** σ 1.5 % ⊕ reader, normalisation 7 %; Ay 0.03 ⊕ reader. Confidence high.
+
+## O1367
+
+**K. Wienhard, G. Clausnitzer, G. Hartmann, Z. Phys. 256, 457 (1972)**; p + 12C near 10 MeV, phase-shift analysis.
+EXFOR STATUS (CURVE), Figs. 1 and 2; no data tables.
+- p.460: "For Δσ a value of 5 percent of σexp was put into the program, ΔA was estimated to 0.05."
+- p.460: "beam polarization PB … was 69 % ± 2 %".
+
+**Applied:** σ 5 % ⊕ reader, Ay 0.05 ⊕ reader (a fit weight, as Put O0124); Ay normalisation 2.9 %. Excitation-function
+records (O1367002) are unrolled to c.m. angles EXFOR does not list, so the rule takes the record's reader error.
+Confidence medium.
+
+## F0996
+
+**H. Hulubei et al., Nucl. Phys. 39, 686 (1962)**; 20Ne(p,p) 5.2–6.2 MeV. EXFOR STATUS (CURVE), Fig. 2.
+- p.688: "The errors in the relative values of the differential cross-sections are less than 5 % excepting small
+  angles, where they may increase to 15 %. The accuracy of the absolute value of cross-sections was estimated to be
+  10 %."
+
+**Applied:** σ 15 % below 45° c.m. (the paper does not define "small angles"; data start at 32°), 5 % above, ⊕ reader;
+normalisation 10 %. Confidence medium.
+
+## E0243
+
+**S. Kato et al., Nucl. Instrum. Methods 169, 589 (1980)**; p-12C polarisation 40–75 MeV. EXFOR from Table 2, exact.
+- p.594, Table 2 caption: "The ΔPs include relative errors and an error which comes from the normalization at
+  θL = 47.5°. The (ΔP)rel's are relative errors". Table 1: normalisation ±1.2 %.
+
+**Applied:** E0243005 Ay error = ERR-T (ΔP); DATA-ERR is (ΔP)rel. No separate Ay normalisation (in ΔP). Confidence high.
+
+## 20220
+
+**D. Spaargaren, C. C. Jonker, Nucl. Phys. A 161, 354 (1971)**; 12C(n,n) at 15 MeV. EXFOR from Table 1, exact.
+- p.362: "The errors represent the overall errors, including the uncertainties in the peak fitting procedure and in
+  the detection efficiency."
+- p.359: "In order to obtain a statistical uncertainty of about 10 %" refers to the n-γ coincidence runs: EXFOR's
+  constant 10 % ERR-S.
+
+**Applied:** ERR-T (the overall errors); ERR-S treated as common (`COMMON`). Confidence high.
+
+## O0484
+
+**R. M. Prior et al., Nucl. Phys. A 167, 143 (1971)**; 16O(p,p) polarisation 9.6–12.4 MeV. EXFOR STATUS (CURVE),
+Fig. 2.
+- p.145: "The error bars represent only statistical uncertainties in the data."
+- p.144–145: "The absolute uncertainty in the beam polarization was estimated to be less than 0.05" (beam
+  polarisation 0.4–0.7).
+- EXFOR: ERR-S holds the bars read off the figure (blank at the 2–3 most forward angles, inside the symbol); DATA-ERR
+  is the data-point reader uncertainty.
+
+**Applied:** reader ⊕ ERR-S, ERR-S interpolated in angle where blank (`COLUMN_AUTHOR`); Ay normalisation 9 %.
+Confidence medium.
+
+## O2048
+
+**H. Orihara, G. Rudolf, Ph. Gorodetzky, Nucl. Phys. A 203, 78 (1973)**; 18O(p,p) 3.4–6.2 MeV. EXFOR STATUS (CURVE),
+Fig. 5; ERR-ANALYS "(DATA-ERR) The error is reported by authors on figure". The paper states no error number.
+
+**Applied:** DATA-ERR as curated (the authors' bars). The audit flagged the 6.041 MeV record by comparing it with a
+neighbouring energy's row; allowlisted. Confidence medium.
+
+## D0049
+
+**J. D. Carlson et al., Nucl. Phys. A 249, 29 (1975)**; quasielastic (p,n) at 22.8 MeV. Data from the Bentley thesis
+(EXFOR STATUS); not tabulated in the paper.
+- p.36: "The error bars represent uncertainties of relative cross sections only. The uncertainty in the absolute
+  cross section is estimated to be ±11% except for 31P and 208Pb … ±25% and 96Ru and 104Ru … ±50%."
+
+**Applied:** normalisation 11 % (D0049), 25 % (D0049035, 208Pb), in `elm_light` and `elm`. Per-point errors as EXFOR.
+Confidence high.
+
+## Kept removed
+
+- **O0486**, O. Karban et al., Nucl. Phys. A 132, 548 (1969), 16O(p,p) 16–30 MeV: p.551, "The statistical errors are
+  smaller than the size of the points"; no other error stated.
+- **F0471**, M. Girod et al., J. Phys. 31, 125 (1970), 12C(p,p): no error stated; normalised to Dickens et al.
+  (p.129). EXFOR's 24.1 and 26.1 MeV sets are not among the authors' energies (p.129): Dickens's data replotted.
+- **O0551**, A. A. Rush, E. J. Burge, D. A. Smith, Nucl. Phys. A 166, 378 (1971): no error numbers for the elastic
+  data ("The experimental error is shown in every case where it is large enough to be visible", p.380). O0551005 (12C)
+  is Fannon et al.'s data reanalysed (p.385).
+- **O0480011/012**, N. M. Clarke et al., Nucl. Phys. A 157, 145 (1970): readings of the optical-model fit figures
+  (Figs. 8, 9); the data are Fannon et al.'s and the paper's own O0480002/005, which EXFOR holds with errors.

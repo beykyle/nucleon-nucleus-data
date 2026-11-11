@@ -173,9 +173,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -351,9 +353,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -529,9 +533,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -707,9 +713,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -885,9 +893,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -1063,9 +1073,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -1241,9 +1253,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -1419,9 +1433,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -1597,9 +1613,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -1775,9 +1793,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -1953,9 +1973,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -2131,9 +2153,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -2309,9 +2333,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -2487,9 +2513,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -2665,9 +2693,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -2843,9 +2873,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -3021,9 +3053,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -3579,9 +3613,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -3757,9 +3793,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -3935,9 +3973,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -4113,9 +4153,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -4291,9 +4333,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -4776,9 +4820,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -5306,9 +5352,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -5580,9 +5628,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -6014,9 +6064,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -6288,9 +6340,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -6562,9 +6616,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -6930,9 +6986,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -7479,9 +7537,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -9013,9 +9073,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -10557,9 +10619,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -12015,9 +12079,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -13337,9 +13403,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -14669,9 +14737,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -16279,9 +16349,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -17475,9 +17547,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -18681,9 +18755,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -19835,9 +19911,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -21023,9 +21101,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -22150,9 +22230,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -22454,9 +22536,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -22758,9 +22842,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -23062,9 +23148,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -23366,9 +23454,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -23871,9 +23961,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -24308,9 +24400,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -24612,9 +24706,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -24916,9 +25012,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -25094,9 +25192,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -25398,9 +25498,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -25798,9 +25900,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -26344,9 +26448,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -26745,9 +26851,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -26923,9 +27031,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -27324,9 +27434,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -27822,9 +27934,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -28549,9 +28663,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -28950,9 +29066,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -29225,9 +29343,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -29529,9 +29649,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -29804,9 +29926,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -30108,9 +30232,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -30382,9 +30508,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -30952,9 +31080,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -31450,9 +31580,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -31851,9 +31983,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -32029,9 +32163,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -32526,9 +32662,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -32801,9 +32939,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -33494,9 +33634,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -33798,9 +33940,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -34102,9 +34246,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -34280,9 +34426,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -34584,9 +34732,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -34858,9 +35008,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -35162,9 +35314,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -35592,9 +35746,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -36525,9 +36681,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -37051,9 +37209,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -37481,9 +37641,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -38007,9 +38169,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -39160,9 +39324,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -39966,9 +40132,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -40799,9 +40967,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -41229,9 +41399,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -42044,9 +42216,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -42859,9 +43033,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -43404,9 +43580,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -44226,9 +44404,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -44958,9 +45138,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -45640,9 +45822,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -46674,9 +46858,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -47395,9 +47581,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -47825,9 +48013,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -48255,9 +48445,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -48843,9 +49035,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -49961,9 +50155,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -51069,9 +51265,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -52218,9 +52416,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -52772,9 +52972,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -53202,9 +53404,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -54042,9 +54246,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -54686,9 +54892,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -54990,9 +55198,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -55420,9 +55630,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -56024,9 +56236,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -56454,9 +56668,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -57017,9 +57233,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -58017,9 +58235,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -58571,9 +58791,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -59488,9 +59710,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -59918,9 +60142,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -60628,9 +60854,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -61236,9 +61464,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -61993,9 +62223,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -62556,9 +62788,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -63324,9 +63558,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -63967,9 +64203,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -65471,9 +65709,11 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -122037,6 +122277,312 @@
         ]
     },
     {
+        "type": "ECS_Rutherford",
+        "energy": 7.0,
+        "energy_err": 0.1,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1242003",
+        "source": "H.Guratzsch, G.Hofmann, et al., Nuclear Physics, Section A 129, 405 (1969);  Data taken from the EXFOR database, file EXFOR O1242001 dated 1969, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                12.8,
+                18.0,
+                24.1,
+                29.7,
+                35.2,
+                40.8,
+                46.7,
+                51.4,
+                57.4,
+                61.6,
+                68.0,
+                72.4,
+                77.8,
+                83.1,
+                87.5,
+                93.3,
+                97.3,
+                102.7,
+                108.5,
+                112.5,
+                122.4,
+                132.2,
+                136.3,
+                140.7,
+                145.2,
+                150.2,
+                155.1,
+                159.5,
+                164.0
+            ],
+            "y": [
+                0.3432294411618745,
+                0.6278728510450895,
+                1.1266071196547744,
+                1.428200956383067,
+                1.909616650784701,
+                2.2261933339519384,
+                2.6750185100967725,
+                2.16966586593549,
+                2.32082520313186,
+                2.2863219594600594,
+                3.0318742639796348,
+                4.333911757991001,
+                6.253106375216804,
+                9.281197597245038,
+                11.765495312489653,
+                16.25267395374733,
+                19.798334794218835,
+                24.953916564763194,
+                32.12036969960007,
+                35.24898269327403,
+                45.69128860279885,
+                53.960928785507306,
+                60.40812206958686,
+                64.89127985615397,
+                70.59002940240747,
+                75.0591539449373,
+                81.9889421778993,
+                90.46862406301896,
+                95.62132725101281
+            ],
+            "y_err": [
+                0.01019870536959373,
+                0.02169971850514022,
+                0.04608333031239601,
+                0.0747398381401286,
+                0.11495994773247024,
+                0.16028281764432176,
+                0.21054572994263732,
+                0.23437848703535355,
+                0.2466117330628479,
+                0.22309017694814712,
+                0.14963678336401562,
+                0.13094258624446498,
+                0.17487251343195015,
+                0.2788582278715571,
+                0.40884164661086037,
+                0.6625371253671596,
+                0.8661037198574167,
+                1.1552620472412856,
+                1.4919105085480264,
+                1.6856599431473975,
+                2.1956128109772224,
+                2.672641853117458,
+                2.9440495909994175,
+                3.216500135381137,
+                3.543372228409512,
+                3.909161814092184,
+                4.337285202598171,
+                4.7620835209701315,
+                5.122226834623309
+            ],
+            "systematic_normalization_error": 0.07,
+            "y_measured": [
+                0.3536247173,
+                0.66670674,
+                1.2310136828,
+                1.6278668116,
+                2.2337173179,
+                2.6998833025,
+                3.308157088,
+                2.904310676,
+                3.0925908678,
+                2.9781916441,
+                3.420191085,
+                4.4827661248,
+                6.3227994001,
+                9.5876466671,
+                12.5051755227,
+                17.7487157389,
+                21.8779637636,
+                27.8410291694,
+                35.8566479531,
+                39.5465846672,
+                51.3048129526,
+                60.9096947253,
+                67.9956675972,
+                73.2574894465,
+                79.8671798679,
+                85.4793679742,
+                93.6325766494,
+                103.2241866809,
+                109.4477078255
+            ],
+            "compound_elastic": [
+                0.010395276138125504,
+                0.03883388895491046,
+                0.10440656314522564,
+                0.1996658552169328,
+                0.32410066711529906,
+                0.47368996854806134,
+                0.6331385779032277,
+                0.7346448100645101,
+                0.7717656646681397,
+                0.6918696846399404,
+                0.3883168210203649,
+                0.14885436680899916,
+                0.0696930248831963,
+                0.3064490698549611,
+                0.739680210210347,
+                1.4960417851526697,
+                2.079628969381165,
+                2.887112604636806,
+                3.7362782534999357,
+                4.2976019739259685,
+                5.6135243498011524,
+                6.948765939792694,
+                7.58754552761314,
+                8.366209590346033,
+                9.277150465492543,
+                10.42021402926271,
+                11.643634471500683,
+                12.75556261788104,
+                13.826380574487182
+            ],
+            "ce_fraction": [
+                0.02939635050823271,
+                0.05824733218522804,
+                0.08481348713179847,
+                0.12265490873954545,
+                0.14509475506059022,
+                0.17544831219536064,
+                0.19138709591508601,
+                0.2529498018704766,
+                0.24955310859375218,
+                0.23231200920551276,
+                0.11353658651512592,
+                0.03320591854781189,
+                0.011022495017332679,
+                0.03196290815623617,
+                0.05914992627393703,
+                0.08429014285657768,
+                0.09505587411389715,
+                0.1036999238451294,
+                0.10420043330282674,
+                0.10867188684160649,
+                0.10941516062026053,
+                0.11408308597065406,
+                0.1115886613917971,
+                0.11420278873269171,
+                0.11615723105331768,
+                0.12190326480195564,
+                0.12435452369424137,
+                0.12357145188571637,
+                0.12632864451150982
+            ],
+            "talys_model": [
+                0.8395453503902293,
+                0.866145,
+                1.0627278404195613,
+                1.3662632101511485,
+                1.6963923985412563,
+                1.9546462434770588,
+                2.019441320685626,
+                1.873140817659352,
+                1.449057080649665,
+                1.0510861987158426,
+                0.452343,
+                0.15628376023965682,
+                0.07087644673111644,
+                0.3269760202846327,
+                0.8444032923604077,
+                1.876903654031469,
+                2.760595145620958,
+                4.059021235058504,
+                5.440932334605966,
+                6.314451182027994,
+                8.086273770679218,
+                9.530891655010864,
+                10.195314838492118,
+                11.027914522445542,
+                12.037998141957884,
+                13.34830978116877,
+                14.787450199327862,
+                16.115990109503315,
+                17.4084
+            ],
+            "ce_fraction_model": [
+                0.012382030504121871,
+                0.04483532082377715,
+                0.09824393337056672,
+                0.14614010955827753,
+                0.19105288811362056,
+                0.2423405105291222,
+                0.3135216514675797,
+                0.3921994561959901,
+                0.532598525602683,
+                0.658242573715864,
+                0.8584565717174023,
+                0.9524621533340067,
+                0.9833030308021834,
+                0.9372218476088771,
+                0.8759797799256297,
+                0.7970796912986278,
+                0.7533263154070284,
+                0.7112829515894842,
+                0.6866981656316662,
+                0.6805978619579288,
+                0.6942040931332005,
+                0.7290782637466435,
+                0.7442188542296487,
+                0.7586393214526611,
+                0.7706555821069174,
+                0.7806392120119288,
+                0.7873997419805291,
+                0.7914848874447565,
+                0.7942361488986456
+            ],
+            "y_err_before_compound": [
+                0.009710202483824456,
+                0.018307140666409826,
+                0.03380247911292274,
+                0.044699693160656015,
+                0.061335778828021104,
+                0.07413625877212314,
+                0.0908388854094931,
+                0.07974964237572853,
+                0.08491963954117072,
+                0.08177834434381907,
+                0.0939152337039458,
+                0.1230925459390593,
+                0.1736181308488382,
+                0.26326776926604195,
+                0.34338037043425407,
+                0.48736305812682246,
+                0.6007483291901956,
+                0.764488502548849,
+                0.9845898631583321,
+                1.0859120583939446,
+                1.4087819594970543,
+                1.6725229885693784,
+                1.8670971459031374,
+                2.011581830063858,
+                2.193077718804973,
+                2.347183131191214,
+                2.571062580946708,
+                2.8344391804753375,
+                3.005331223706471
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs_direct",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 29 of 29 points without one in EXFOR (added in quadrature to the reader error): Guratzsch et al., NPA 129 (1969) 405, p.409 Table 1 (12C): mean relative error 1.5 % (statistics, background, dead time), polarisation 3 % (absolute 0.03); EXFOR files both as constant ERR-n columns",
+            "normalisation uncertainty 7.0 % from the authors: Guratzsch: absolute-value error 7 % (thickness, enrichment, geometry, current), Table 1",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
+            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
+        ]
+    },
+    {
         "type": "ECS",
         "energy": 7.03,
         "energy_err": 0.03,
@@ -136389,6 +136935,194 @@
         ]
     },
     {
+        "type": "ECS_Rutherford",
+        "energy": 9.95,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367004",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                31.8,
+                42.4,
+                48.2,
+                53.0,
+                58.8,
+                64.7,
+                73.4,
+                84.3,
+                94.2,
+                104.6,
+                115.4,
+                125.2,
+                134.5,
+                142.7,
+                152.4,
+                161.6
+            ],
+            "y": [
+                1.383219537602362,
+                1.8922899000624684,
+                2.2068243347954875,
+                2.2667116769852944,
+                2.5337918302943696,
+                3.352937106583045,
+                4.3741135430795,
+                5.957358880308471,
+                10.120530116638687,
+                17.085666100037646,
+                22.472104806460663,
+                23.866278437309695,
+                20.273408913237365,
+                13.616743218841556,
+                6.631984919441237,
+                0.19268385859097137
+            ],
+            "y_err": [
+                0.14309090686973627,
+                0.2651286167910228,
+                0.33662949563987665,
+                0.37201356827995136,
+                0.3633481665156013,
+                0.29384797929568157,
+                0.3021629910680025,
+                0.7946436689469245,
+                1.540061612016292,
+                2.3771299325177253,
+                3.0176098167329966,
+                3.164295842796832,
+                2.8192988726952795,
+                2.377088528309708,
+                2.336995116913368,
+                2.8758171835226496
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                1.7228731956,
+                2.61523888,
+                3.1474899459,
+                3.3250342285,
+                3.5316516247,
+                3.9589854333,
+                4.7684284253,
+                8.0890902227,
+                14.4212800358,
+                23.553182033,
+                30.5860484813,
+                32.3368106761,
+                27.9427780462,
+                20.4691529455,
+                13.9358920049,
+                9.5955617485
+            ],
+            "compound_elastic": [
+                0.3396536579976381,
+                0.7229489799375317,
+                0.9406656111045126,
+                1.0583225515147052,
+                0.9978597944056303,
+                0.6060483267169551,
+                0.3943148822205001,
+                2.1317313423915287,
+                4.300749919161313,
+                6.467515932962352,
+                8.113943674839335,
+                8.470532238790307,
+                7.669369132962636,
+                6.852409726658443,
+                7.303907085458762,
+                9.402877889909028
+            ],
+            "ce_fraction": [
+                0.19714373574623512,
+                0.27643707252376565,
+                0.29886214960903923,
+                0.3182892201359801,
+                0.2825476293943332,
+                0.1530817268533836,
+                0.08269283861499761,
+                0.2635316560581016,
+                0.29822248153318903,
+                0.2745920242921239,
+                0.26528250878174464,
+                0.2619470523433791,
+                0.27446695243695035,
+                0.3347676254558886,
+                0.5241076124076331,
+                0.9799194811475116
+            ],
+            "talys_model": [
+                2.86958984794754,
+                3.849202862004536,
+                3.586790589551673,
+                2.921553321671297,
+                1.8093647012740344,
+                0.7665581552985345,
+                0.43430307782802324,
+                3.1479351039895422,
+                7.940958844188252,
+                12.642429263240286,
+                14.389141562769453,
+                12.705415176687843,
+                9.810536192016029,
+                7.997910958258323,
+                8.179945813157275,
+                10.501305174289403
+            ],
+            "ce_fraction_model": [
+                0.11836313758935747,
+                0.1878178432926354,
+                0.26225830240680154,
+                0.3622465294966048,
+                0.5514973259415329,
+                0.7906097176422717,
+                0.9079255993130267,
+                0.6771840180853393,
+                0.5415907579358508,
+                0.5115722459897483,
+                0.5638935192515862,
+                0.6666867726079675,
+                0.7817482126210483,
+                0.8567749456603938,
+                0.8929040915785258,
+                0.8954008795906931
+            ],
+            "y_err_before_compound": [
+                0.10045990724461999,
+                0.15249332102809102,
+                0.18352862464052136,
+                0.19388114635097556,
+                0.2059289073297795,
+                0.23084653613965578,
+                0.27804476761937225,
+                0.47167095961627153,
+                0.8408979015084271,
+                1.3733747140495762,
+                1.7834577734786647,
+                1.8855438748505904,
+                1.6293299459573156,
+                1.193546461534415,
+                0.8125951589233114,
+                0.5595125895952116
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs_direct",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 16 of 16 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
+            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
+        ]
+    },
+    {
         "type": "ECS",
         "energy": 9.97,
         "energy_err": 0.0,
@@ -137795,6 +138529,194 @@
     },
     {
         "type": "ECS_Rutherford",
+        "energy": 10.25,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367004",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                33.1,
+                42.7,
+                48.4,
+                54.6,
+                59.8,
+                64.6,
+                74.2,
+                84.9,
+                97.1,
+                105.0,
+                114.8,
+                124.2,
+                133.5,
+                141.9,
+                151.7,
+                161.0
+            ],
+            "y": [
+                2.7210959133504904,
+                3.935574135794022,
+                3.5542852609555275,
+                2.7852794476844727,
+                2.782827129241764,
+                3.084770368119656,
+                3.1185460876945204,
+                3.095432138810404,
+                5.812599709836905,
+                9.085180580982097,
+                16.65938780983156,
+                27.31784546205904,
+                43.71085342864688,
+                57.04260218139761,
+                68.7302799493008,
+                84.52358246721487
+            ],
+            "y_err": [
+                0.2131661548050551,
+                0.34955305161245365,
+                0.38662522212657074,
+                0.3939096454451276,
+                0.36314223856686695,
+                0.2870151533929586,
+                0.26999108767472424,
+                0.7933426994734459,
+                1.653257854812209,
+                2.2109928603221625,
+                2.85288561321865,
+                3.3138930618724247,
+                3.778684194647175,
+                4.201855722981558,
+                4.846092154283605,
+                6.056590088515662
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                3.0982569774,
+                4.6669006736,
+                4.5006729468,
+                3.8625188806,
+                3.7493569064,
+                3.7128808645,
+                3.6678373697,
+                5.5130820286,
+                10.8999593679,
+                15.7860979384,
+                24.8509908207,
+                35.8838476705,
+                51.3854073105,
+                63.6202981432,
+                75.4879475359,
+                93.3690619343
+            ],
+            "compound_elastic": [
+                0.37716106404950983,
+                0.7313265378059776,
+                0.9463876858444723,
+                1.0772394329155277,
+                0.9665297771582357,
+                0.6281104963803444,
+                0.5492912820054794,
+                2.4176498897895966,
+                5.087359658063094,
+                6.700917357417901,
+                8.191603010868441,
+                8.566002208440963,
+                7.6745538818531225,
+                6.5776959618023945,
+                6.757667586599208,
+                8.845479467085145
+            ],
+            "ce_fraction": [
+                0.12173330579118599,
+                0.1567049716620259,
+                0.21027692903510317,
+                0.27889557726852854,
+                0.25778548196049533,
+                0.16917065731515998,
+                0.14975889785713348,
+                0.43852964226682073,
+                0.46673198370309443,
+                0.42448218575394653,
+                0.3296288292877692,
+                0.23871470771745157,
+                0.14935278873005875,
+                0.10338989526576818,
+                0.08951982147064531,
+                0.09473672846054025
+            ],
+            "talys_model": [
+                3.228594319456242,
+                4.060007111414226,
+                3.73489687406779,
+                2.7293909879287384,
+                1.6562622678122323,
+                0.805019463513271,
+                0.6276605231730434,
+                3.8025257839259328,
+                10.145067470360726,
+                13.563038435405513,
+                15.01196229164097,
+                13.248197013501407,
+                9.970939703543472,
+                7.683396647281572,
+                7.530139230821458,
+                9.833318095497363
+            ],
+            "ce_fraction_model": [
+                0.11681897034156681,
+                0.18012937360379006,
+                0.253390580183204,
+                0.39468124489302864,
+                0.5835608260489634,
+                0.7802426212642619,
+                0.8751407197454762,
+                0.6358010509776174,
+                0.5014613922407166,
+                0.494057241622611,
+                0.5456717017887613,
+                0.646578715557388,
+                0.7696921363515757,
+                0.8560922029360049,
+                0.8974160210663221,
+                0.8995416787274942
+            ],
+            "y_err_before_compound": [
+                0.180657873930882,
+                0.2721247332578273,
+                0.26243207447222444,
+                0.2252216178571032,
+                0.21862319757824397,
+                0.21649629712191135,
+                0.21386983260836617,
+                0.32146516101102746,
+                0.6355713872999329,
+                0.9204797768612697,
+                1.4490493201474386,
+                2.092369895686421,
+                2.996258381245575,
+                3.7096689800871503,
+                4.4016659072243876,
+                5.444305086057349
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs_direct",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 16 of 16 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
+            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
+        ]
+    },
+    {
+        "type": "ECS_Rutherford",
         "energy": 10.3,
         "energy_err": 0.00103,
         "energy_units": "MeV",
@@ -138109,6 +139031,96 @@
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
         ],
         "natural_target": true
+    },
+    {
+        "type": "ECS_Rutherford",
+        "energy": 10.3,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367002",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                53.6877619258,
+                74.5252903119,
+                94.8163785389,
+                114.5252903119,
+                152.4060611884
+            ],
+            "y": [
+                3.4120309718970487,
+                3.4130699756268172,
+                8.287567307553234,
+                19.508295363989916,
+                87.28420980379818
+            ],
+            "y_err": [
+                0.3930480818709899,
+                0.2795154638647114,
+                1.5375190196596238,
+                2.8332495094064325,
+                5.151376572732511
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                4.485064653,
+                4.0091536008,
+                12.9052762175,
+                27.6918815983,
+                94.0748100105
+            ],
+            "compound_elastic": [
+                1.0730336811029513,
+                0.5960836251731831,
+                4.617708909946767,
+                8.183586234310084,
+                6.79060020670183
+            ],
+            "ce_fraction": [
+                0.23924597840194195,
+                0.14868066542879238,
+                0.35781558117175316,
+                0.29552293892562626,
+                0.07218298082073096
+            ],
+            "talys_model": [
+                2.924870331378779,
+                0.6896299824399853,
+                9.058916609462464,
+                15.122326681251302,
+                7.5515671300023754
+            ],
+            "ce_fraction_model": [
+                0.36686538530996177,
+                0.8643528273874853,
+                0.5097418498281961,
+                0.5411592016760302,
+                0.8992305954247266
+            ],
+            "y_err_before_compound": [
+                0.2255231238523954,
+                0.21482663382723385,
+                0.6669884061098305,
+                1.4141800640854525,
+                4.7314456552986055
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs_direct",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 5 of 5 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
+            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
+        ]
     },
     {
         "type": "ECS_Rutherford",
@@ -140480,6 +141492,96 @@
     },
     {
         "type": "ECS_Rutherford",
+        "energy": 10.5,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367002",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                53.6877619258,
+                94.8163785389,
+                114.5252903119,
+                133.6877619258,
+                152.4060611884
+            ],
+            "y": [
+                1.565599076086001,
+                9.188586812986214,
+                16.768667795456608,
+                98.16529299325065,
+                134.25442343670971
+            ],
+            "y_err": [
+                0.3493068300424101,
+                1.5847711777760425,
+                2.7910385644534186,
+                5.764559764718059,
+                7.324637778023669
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                2.64040798,
+                13.8999254804,
+                25.024904882,
+                105.7038746166,
+                140.7736727515
+            ],
+            "compound_elastic": [
+                1.074808903913999,
+                4.711338667413786,
+                8.256237086543392,
+                7.538581623349352,
+                6.519249314790263
+            ],
+            "ce_fraction": [
+                0.40706167836759793,
+                0.3389470450080576,
+                0.32992081790016975,
+                0.07131793087710972,
+                0.04631014583457188
+            ],
+            "talys_model": [
+                2.994539767089481,
+                9.522708756059458,
+                15.497693916801246,
+                9.76426288141897,
+                7.22374586523245
+            ],
+            "ce_fraction_model": [
+                0.3589229021856173,
+                0.494747743326276,
+                0.5327397179778277,
+                0.7720584456707934,
+                0.9024748982611782
+            ],
+            "y_err_before_compound": [
+                0.13433534650390466,
+                0.7167953699582028,
+                1.286470245919778,
+                5.302398525265266,
+                7.058701263879646
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs_direct",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 5 of 5 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
+            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
+        ]
+    },
+    {
+        "type": "ECS_Rutherford",
         "energy": 10.55,
         "energy_err": 0.001055,
         "energy_units": "MeV",
@@ -141430,6 +142532,96 @@
         "natural_target": true
     },
     {
+        "type": "ECS_Rutherford",
+        "energy": 10.65,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367002",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                53.6877619258,
+                94.8163785389,
+                114.5252903119,
+                133.6877619258,
+                152.4060611884
+            ],
+            "y": [
+                5.871316371435292,
+                2.0800930513828924,
+                12.8848057827426,
+                54.57953175894127,
+                68.7144539709888
+            ],
+            "y_err": [
+                0.4749267439275023,
+                1.4845766022212399,
+                2.724779293794269,
+                3.8518959870793674,
+                4.240456162305035
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                6.9474921501,
+                6.8571822767,
+                21.1896484609,
+                62.0476734967,
+                75.0428088317
+            ],
+            "compound_elastic": [
+                1.0761757786647088,
+                4.777089225317107,
+                8.3048426781574,
+                7.468141737758728,
+                6.328354860711203
+            ],
+            "ce_fraction": [
+                0.15490133064046982,
+                0.6966548405092228,
+                0.39192923344065067,
+                0.12036134986037664,
+                0.08432993059873238
+            ],
+            "talys_model": [
+                3.046202765750202,
+                9.868642837348713,
+                15.760512942132179,
+                9.669367696806642,
+                6.994153670943321
+            ],
+            "ce_fraction_model": [
+                0.3532843547923423,
+                0.4840674958098402,
+                0.5269398723664808,
+                0.7723505788517195,
+                0.904806379505482
+            ],
+            "y_err_before_compound": [
+                0.3483123949918608,
+                0.38744722978115304,
+                1.1032158121079425,
+                3.133292198934737,
+                3.7917201495565185
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs_direct",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 5 of 5 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
+            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
+        ]
+    },
+    {
         "type": "ECS",
         "energy": 10.69,
         "energy_err": 0.0,
@@ -142038,6 +143230,284 @@
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
         ],
         "natural_target": true
+    },
+    {
+        "type": "ECS_Rutherford",
+        "energy": 10.7,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367004",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                32.5,
+                44.1,
+                49.4,
+                54.2,
+                59.9,
+                65.1,
+                76.1,
+                85.0,
+                94.7,
+                105.6,
+                114.7,
+                124.7,
+                133.4,
+                143.8,
+                153.8,
+                162.8
+            ],
+            "y": [
+                6.107797791582854,
+                8.700322775118392,
+                9.548020904160706,
+                7.49866735686294,
+                4.225771603681726,
+                2.0487974782190466,
+                -0.040671331804212674,
+                2.1053737206442342,
+                5.727436421628785,
+                8.326435924082448,
+                12.53373539999716,
+                18.678582479548012,
+                36.48463225384841,
+                44.773024293080255,
+                46.98863213836458,
+                31.12391629577128
+            ],
+            "y_err": [
+                0.3916847509361631,
+                0.600867371285184,
+                0.6799558716336268,
+                0.5964067580144561,
+                0.42120587284905764,
+                0.24166857066793462,
+                0.29457929088246376,
+                0.8479420835877929,
+                1.5573620923463074,
+                2.281998702566761,
+                2.781069046645469,
+                3.024765584438568,
+                3.4094626419777065,
+                3.449661570049313,
+                3.679339898692265,
+                3.5513192751787304
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                6.4633939408,
+                9.4837607566,
+                10.5241870984,
+                8.5806719526,
+                5.2002728404,
+                2.6656400842,
+                0.9246719946,
+                4.7751213411,
+                10.5006061213,
+                15.3255997271,
+                20.8694239546,
+                27.2570953067,
+                43.9750052052,
+                50.6992102644,
+                53.493538521,
+                40.0433522476
+            ],
+            "compound_elastic": [
+                0.35559614921714544,
+                0.7834379814816088,
+                0.9761661942392935,
+                1.0820045957370594,
+                0.9745012367182742,
+                0.6168426059809535,
+                0.9653433264042127,
+                2.669747620455766,
+                4.773169699671215,
+                6.999163803017552,
+                8.335688554602838,
+                8.578512827151984,
+                7.4903729513515875,
+                5.926185971319748,
+                6.50490638263542,
+                8.919435951828719
+            ],
+            "ce_fraction": [
+                0.05501693885196357,
+                0.08260836619443332,
+                0.0927545458012335,
+                0.1260978862394576,
+                0.18739425153763978,
+                0.23140506088468338,
+                1.0439846043156162,
+                0.559095241722331,
+                0.4545613505099537,
+                0.4566975470878995,
+                0.3994211135264949,
+                0.3147258624085055,
+                0.17033250857843807,
+                0.11688911800428971,
+                0.12160172167488573,
+                0.2227444869419819
+            ],
+            "talys_model": [
+                3.4219696936366932,
+                4.35842788589772,
+                3.8471825604821808,
+                2.9540215036079838,
+                1.697602611720785,
+                0.7863162227005945,
+                1.216165632535757,
+                4.519600851991933,
+                9.919741167380648,
+                14.86356556757169,
+                15.82843689567031,
+                13.332126378651521,
+                9.746620133683717,
+                6.7604454260407945,
+                7.175181076786783,
+                9.885887161892512
+            ],
+            "ce_fraction_model": [
+                0.1039156337002027,
+                0.1797524249549999,
+                0.2537353449941162,
+                0.3662818955161702,
+                0.5740455569460188,
+                0.7844714227851161,
+                0.7937597483259174,
+                0.590704291791414,
+                0.4811788552877728,
+                0.47089399721745423,
+                0.5266273991263769,
+                0.6434467078626401,
+                0.7685097858143995,
+                0.8765969692607037,
+                0.9065842817096502,
+                0.9022393039454053
+            ],
+            "y_err_before_compound": [
+                0.3768773914623939,
+                0.5529935275395628,
+                0.6136602870312196,
+                0.500334853810589,
+                0.30322540772442935,
+                0.15543219099941577,
+                0.05391717919023254,
+                0.2784350283200328,
+                0.612285291600184,
+                0.8936283476837437,
+                1.2168860715240477,
+                1.589348115265813,
+                2.564161399270929,
+                2.956246561583635,
+                3.1191824980100504,
+                2.3349086066410103
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs_direct",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 16 of 16 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
+            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
+        ]
+    },
+    {
+        "type": "ECS_Rutherford",
+        "energy": 10.8,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O1367002",
+        "source": "K.Wienhard, G.Clausnitzer, et al., Zeitschrift fuer Physik 256, 457 (1972);  Data taken from the EXFOR database, file EXFOR O1367001 dated 1972, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                53.6877619258,
+                74.5252903119,
+                94.8163785389,
+                114.5252903119,
+                133.6877619258
+            ],
+            "y": [
+                4.499965820353896,
+                0.7308459076193602,
+                10.441252039774708,
+                19.707024881880933,
+                29.02046666723951
+            ],
+            "y_err": [
+                0.4274797598047756,
+                0.26017952564523184,
+                1.6498466236077947,
+                2.886071339477357,
+                2.904732930633429
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                5.5765112489,
+                1.5110129179,
+                15.2764710073,
+                28.0487424039,
+                36.413318157
+            ],
+            "compound_elastic": [
+                1.0765454285461036,
+                0.7801670102806398,
+                4.835218967525291,
+                8.341717522019065,
+                7.392851489760487
+            ],
+            "ce_fraction": [
+                0.19304998779630517,
+                0.5163205430201834,
+                0.31651413243377596,
+                0.29740076763153567,
+                0.20302603179104414
+            ],
+            "talys_model": [
+                3.097333454227213,
+                0.9525055190034923,
+                10.21237766349164,
+                16.00674686677162,
+                9.568475148747872
+            ],
+            "ce_fraction_model": [
+                0.3475716917327206,
+                0.8190682308033739,
+                0.4734665253137648,
+                0.5211375922571514,
+                0.7726258755793407
+            ],
+            "y_err_before_compound": [
+                0.2800597073261922,
+                0.11363949494457014,
+                0.7860362966667439,
+                1.4376457028796197,
+                1.8757906639167983
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs_direct",
+        "projectile": "proton",
+        "target": "C-12",
+        "notes": [
+            "converted scattering angles from the lab to the CM frame",
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "author uncertainty at 5 of 5 points without one in EXFOR (added in quadrature to the reader error): Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: 5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
+            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
+        ]
     },
     {
         "type": "ECS",
@@ -149045,9 +150515,11 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -150187,10 +151659,12 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "relative error floor 2 % applied at 6 of 75 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -150301,9 +151775,11 @@
         "target": "C-12",
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -152939,103 +154415,6 @@
     {
         "type": "ECS",
         "energy": 14.7,
-        "energy_err": 0.25,
-        "energy_units": "MeV",
-        "EXFORAccessionNumber": "20240004",
-        "source": "G.Deconninck, J.P.Meulders, Physical Review, Part C, Nuclear Physics 1, 1326 (1970); Thesis or dissertation: Meulders  (1969); Journal de Physique - Colloque 31, C2-129 (1970); Annales de la Societe Scientifique de Bruxelles 80, 193 (1966); Progress report: EANDC(E)-76U 99 (1967); Private communication: Meulders  (1972);  Data taken from the EXFOR database, file EXFOR 20240001 dated 197004, retrieved from the IAEA Nuclear Data Services website.",
-        "x_units": "CM-degrees",
-        "y_units": "b/sr",
-        "data": {
-            "x": [
-                43.0003109781,
-                64.0000731048,
-                74.9999433584,
-                94.999669708,
-                104.9994634727,
-                133.9993332924
-            ],
-            "y": [
-                0.09705155293054588,
-                0.01687641194451513,
-                0.015052975298162422,
-                0.02062675068756222,
-                0.028052988846843152,
-                0.015679747299879677
-            ],
-            "y_err": [
-                0.003801820821123349,
-                0.0017910498933936664,
-                0.0017405108837801214,
-                0.0018773051151913735,
-                0.001905090478192281,
-                0.0027714988997232562
-            ],
-            "systematic_normalization_error": 0.05,
-            "y_measured": [
-                0.102,
-                0.0206,
-                0.0185,
-                0.0239,
-                0.0315,
-                0.0203
-            ],
-            "compound_elastic": [
-                0.004948447069454118,
-                0.003723588055484871,
-                0.003447024701837577,
-                0.0032732493124377794,
-                0.0034470111531568494,
-                0.004620252700120322
-            ],
-            "ce_fraction": [
-                0.04851418695543253,
-                0.18075670172256655,
-                0.18632565955878796,
-                0.13695603817731294,
-                0.10942892549704283,
-                0.227598655178341
-            ],
-            "talys_model": [
-                0.1076126844378093,
-                0.016590200166755584,
-                0.01976528007986806,
-                0.019112327155934306,
-                0.014570600720644446,
-                0.006244352693703418
-            ],
-            "ce_fraction_model": [
-                0.04598386421922117,
-                0.2244450349035821,
-                0.17439796895914197,
-                0.1712637757679576,
-                0.23657302943405278,
-                0.739908990851721
-            ],
-            "y_err_before_compound": [
-                0.0035,
-                0.0014,
-                0.0014,
-                0.0016,
-                0.0016,
-                0.0024
-            ],
-            "compound_uncertainty": 0.3
-        },
-        "corpus": "elm_light",
-        "sector": "elastic_diff_xs_direct",
-        "projectile": "neutron",
-        "target": "C-12",
-        "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported",
-            "measured on a natural C target; treated as C-12 (98.93% abundant)",
-            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
-            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ],
-        "natural_target": true
-    },
-    {
-        "type": "ECS",
-        "energy": 14.7,
         "energy_err": 0.0,
         "energy_units": "MeV",
         "EXFORAccessionNumber": "30593012",
@@ -154283,6 +155662,157 @@
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
         ]
+    },
+    {
+        "type": "ECS",
+        "energy": 15.0,
+        "energy_err": 0.1,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "20220002",
+        "source": "D.Spaargaren, C.C.Jonker, Nuclear Physics, Section A 161, 354 (1971); Thesis or dissertation: Spaargaren  (1969);  Data taken from the EXFOR database, file EXFOR 20220001 dated 1971, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                27.0,
+                32.4,
+                32.4,
+                43.1,
+                48.4,
+                48.4,
+                64.1,
+                79.6,
+                94.8,
+                109.6,
+                124.1,
+                138.4
+            ],
+            "y": [
+                0.36940058239563933,
+                0.22866299933412254,
+                0.25666299933412257,
+                0.11538933460494288,
+                0.07187455757888965,
+                0.07407455757888966,
+                0.017623336981042265,
+                0.017366827065247333,
+                0.024640605339207554,
+                0.022075381339269125,
+                0.012274605168790115,
+                0.004313424565596604
+            ],
+            "y_err": [
+                0.019136290218150748,
+                0.02009015136751189,
+                0.013138271650774306,
+                0.005187797334579093,
+                0.006126314941732159,
+                0.0037123758922408046,
+                0.0015158650062802254,
+                0.0015243062479423214,
+                0.0023837765440879056,
+                0.0025989955812842766,
+                0.0014996903008142979,
+                0.0020054967950687594
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                0.377,
+                0.235,
+                0.263,
+                0.12,
+                0.076,
+                0.0782,
+                0.0211,
+                0.0205,
+                0.0277,
+                0.0254,
+                0.016,
+                0.0091
+            ],
+            "compound_elastic": [
+                0.007599417604360693,
+                0.00633700066587745,
+                0.00633700066587745,
+                0.004610665395057108,
+                0.004125442421110343,
+                0.004125442421110343,
+                0.0034766630189577347,
+                0.0031331729347526677,
+                0.003059394660792445,
+                0.003324618660730875,
+                0.0037253948312098856,
+                0.0047865754344033964
+            ],
+            "ce_fraction": [
+                0.02015760637761457,
+                0.026965960280329576,
+                0.024095059566073954,
+                0.0384222116254759,
+                0.05428213711987293,
+                0.05275501817276653,
+                0.16477075919230968,
+                0.15283770413427647,
+                0.11044746067842763,
+                0.13089049845397147,
+                0.23283717695061784,
+                0.5259973004838897
+            ],
+            "talys_model": [
+                0.4071048499840429,
+                0.27987974397501614,
+                0.27987974397501614,
+                0.10526277645204506,
+                0.05790784498729983,
+                0.05790784498729983,
+                0.01657803216603664,
+                0.021059807090647087,
+                0.01849815223667483,
+                0.011650949134400906,
+                0.006899245266905982,
+                0.006040500665971947
+            ],
+            "ce_fraction_model": [
+                0.018666978800814003,
+                0.02264186959683346,
+                0.02264186959683346,
+                0.04380147997670957,
+                0.07124151178506336,
+                0.07124151178506336,
+                0.20971506051727679,
+                0.14877500640279595,
+                0.16538920329171172,
+                0.2853517445127725,
+                0.5399713573134887,
+                0.7924136920251813
+            ],
+            "y_err_before_compound": [
+                0.019,
+                0.02,
+                0.013,
+                0.005,
+                0.006,
+                0.0035,
+                0.0011,
+                0.0012,
+                0.0022,
+                0.0024,
+                0.001,
+                0.0014
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs_direct",
+        "projectile": "neutron",
+        "target": "C-12",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target; treated as C-12 (98.93% abundant)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
+            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -159103,166 +160633,6 @@
     },
     {
         "type": "ECS",
-        "energy": 17.27,
-        "energy_err": 0.28,
-        "energy_units": "MeV",
-        "EXFORAccessionNumber": "20240003",
-        "source": "G.Deconninck, J.P.Meulders, Physical Review, Part C, Nuclear Physics 1, 1326 (1970); Thesis or dissertation: Meulders  (1969); Journal de Physique - Colloque 31, C2-129 (1970); Annales de la Societe Scientifique de Bruxelles 80, 193 (1966); Progress report: EANDC(E)-76U 99 (1967); Private communication: Meulders  (1972);  Data taken from the EXFOR database, file EXFOR 20240001 dated 197004, retrieved from the IAEA Nuclear Data Services website.",
-        "x_units": "CM-degrees",
-        "y_units": "b/sr",
-        "data": {
-            "x": [
-                10.802216838,
-                32.4008474614,
-                43.1001909052,
-                53.7002259897,
-                64.2000699634,
-                74.5004980263,
-                84.8001484454,
-                94.7995490287,
-                104.7996587741,
-                114.4997958261,
-                124.1997660005,
-                133.6998089204,
-                147.7996595741
-            ],
-            "y": [
-                0.6843681280145849,
-                0.28784204720424283,
-                0.08907587418865129,
-                0.03564346824427263,
-                0.017054748560897743,
-                0.030168413591574874,
-                0.021421714665962637,
-                0.017513960473610164,
-                0.01148740764943661,
-                0.026233571508315894,
-                0.021732050091547602,
-                0.014689175424624086,
-                0.012927214563652357
-            ],
-            "y_err": [
-                0.021108712036063956,
-                0.014045319463414228,
-                0.005066347553143691,
-                0.003467914894448127,
-                0.002287213287121475,
-                0.00354813728600294,
-                0.0029519716067808507,
-                0.002657704592843592,
-                0.001986489916262112,
-                0.004146602392804493,
-                0.0038583336392167505,
-                0.003875696202884725,
-                0.0051271680203763504
-            ],
-            "systematic_normalization_error": 0.05,
-            "y_measured": [
-                0.6915,
-                0.2916,
-                0.0918,
-                0.03792,
-                0.01914,
-                0.03211,
-                0.02326,
-                0.01935,
-                0.01342,
-                0.0283,
-                0.02396,
-                0.01723,
-                0.01671
-            ],
-            "compound_elastic": [
-                0.007131871985415048,
-                0.0037579527957571825,
-                0.0027241258113487143,
-                0.002276531755727378,
-                0.002085251439102259,
-                0.001941586408425127,
-                0.0018382853340373616,
-                0.0018360395263898345,
-                0.0019325923505633892,
-                0.0020664284916841035,
-                0.002227949908452397,
-                0.002540824575375912,
-                0.003782785436347642
-            ],
-            "ce_fraction": [
-                0.010313625430824364,
-                0.012887355266657003,
-                0.029674573108373792,
-                0.060035120140489916,
-                0.10894730611819535,
-                0.060466720910156556,
-                0.07903204359575931,
-                0.09488576363771756,
-                0.14400837187506627,
-                0.07301867461781285,
-                0.09298622322422359,
-                0.14746515237236868,
-                0.22637854197173202
-            ],
-            "talys_model": [
-                0.9017822304766678,
-                0.2805216346530049,
-                0.09586596683880196,
-                0.026841408391186802,
-                0.016576639958212586,
-                0.019410154145158866,
-                0.018444550650542405,
-                0.013683712653045462,
-                0.00867269100415156,
-                0.005416478055649697,
-                0.0038357724323845395,
-                0.003530805301405608,
-                0.00507946830154205
-            ],
-            "ce_fraction_model": [
-                0.007908641071409506,
-                0.013396302928312941,
-                0.02841598432871715,
-                0.08481416930696013,
-                0.1257945786576103,
-                0.10002941727844973,
-                0.09966549843724724,
-                0.13417700100427082,
-                0.22283652785949248,
-                0.38150777506219197,
-                0.5808347465147649,
-                0.7196161664208485,
-                0.7447207486656123
-            ],
-            "y_err_before_compound": [
-                0.021,
-                0.014,
-                0.005,
-                0.0034,
-                0.0022,
-                0.0035,
-                0.0029,
-                0.0026,
-                0.0019,
-                0.0041,
-                0.0038,
-                0.0038,
-                0.005
-            ],
-            "compound_uncertainty": 0.3
-        },
-        "corpus": "elm_light",
-        "sector": "elastic_diff_xs_direct",
-        "projectile": "neutron",
-        "target": "C-12",
-        "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported",
-            "measured on a natural C target; treated as C-12 (98.93% abundant)",
-            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
-            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ],
-        "natural_target": true
-    },
-    {
-        "type": "ECS",
         "energy": 17.29,
         "energy_err": 0.21,
         "energy_units": "MeV",
@@ -162740,166 +164110,6 @@
         ]
     },
     {
-        "type": "ECS",
-        "energy": 18.25,
-        "energy_err": 0.17,
-        "energy_units": "MeV",
-        "EXFORAccessionNumber": "20240003",
-        "source": "G.Deconninck, J.P.Meulders, Physical Review, Part C, Nuclear Physics 1, 1326 (1970); Thesis or dissertation: Meulders  (1969); Journal de Physique - Colloque 31, C2-129 (1970); Annales de la Societe Scientifique de Bruxelles 80, 193 (1966); Progress report: EANDC(E)-76U 99 (1967); Private communication: Meulders  (1972);  Data taken from the EXFOR database, file EXFOR 20240001 dated 197004, retrieved from the IAEA Nuclear Data Services website.",
-        "x_units": "CM-degrees",
-        "y_units": "b/sr",
-        "data": {
-            "x": [
-                10.802216838,
-                32.4008474614,
-                43.1001909052,
-                53.7002259897,
-                64.2000699634,
-                74.5004980263,
-                84.8001484454,
-                94.7995490287,
-                104.7996587741,
-                114.4997958261,
-                124.1997660005,
-                133.6998089204,
-                147.7996595741
-            ],
-            "y": [
-                0.6860100429188609,
-                0.30235620730060353,
-                0.09925636207468098,
-                0.05143916384611685,
-                0.030500894354011578,
-                0.03151861153896694,
-                0.022213005289980325,
-                0.017544830759298104,
-                0.012315990023449163,
-                0.009836224115603254,
-                0.009597196611866731,
-                0.004651880344354771,
-                0.008095773613022397
-            ],
-            "y_err": [
-                0.02107420801590393,
-                0.014029747704777907,
-                0.00603631028108491,
-                0.0050307358807799565,
-                0.0030429962865012954,
-                0.002642928499188346,
-                0.0019523548305992995,
-                0.0017581802510694682,
-                0.0016682253044973696,
-                0.0016778435894322344,
-                0.0014091710510660057,
-                0.0012614384989074147,
-                0.00220114822344123
-            ],
-            "systematic_normalization_error": 0.05,
-            "y_measured": [
-                0.6919,
-                0.3054,
-                0.10146,
-                0.05329,
-                0.0322,
-                0.0331,
-                0.02371,
-                0.01904,
-                0.01389,
-                0.01152,
-                0.01141,
-                0.00671,
-                0.01116
-            ],
-            "compound_elastic": [
-                0.005889957081139053,
-                0.0030437926993964726,
-                0.002203637925319012,
-                0.0018508361538831426,
-                0.001699105645988421,
-                0.001581388461033055,
-                0.0014969947100196737,
-                0.0014951692407018976,
-                0.0015740099765508364,
-                0.0016837758843967466,
-                0.001812803388133269,
-                0.0020581196556452293,
-                0.0030642263869776025
-            ],
-            "ce_fraction": [
-                0.00851272883529275,
-                0.009966577273727809,
-                0.021719277797348828,
-                0.03473139714548964,
-                0.05276725608659692,
-                0.04777608643604396,
-                0.06313769337915115,
-                0.07852779625535176,
-                0.11331965273944107,
-                0.14616110107610647,
-                0.1588784739818816,
-                0.30672424078170335,
-                0.27457225689763465
-            ],
-            "talys_model": [
-                0.9374117804839781,
-                0.27927226153866747,
-                0.09182102390807954,
-                0.025248743280646593,
-                0.01656867068749869,
-                0.019035145063154416,
-                0.01712179626326388,
-                0.011900929564894906,
-                0.007035540780066095,
-                0.004217700580699573,
-                0.0030557315726865678,
-                0.0029408009565277536,
-                0.004226021537696543
-            ],
-            "ce_fraction_model": [
-                0.006283212141944831,
-                0.010899015471950248,
-                0.02399927414798855,
-                0.07330409016047251,
-                0.10254930392638087,
-                0.08307730021422777,
-                0.08743210624644505,
-                0.1256346600951504,
-                0.22372267118549052,
-                0.39921655228486264,
-                0.5932469344941418,
-                0.699850036119167,
-                0.7250853692165057
-            ],
-            "y_err_before_compound": [
-                0.021,
-                0.014,
-                0.006,
-                0.005,
-                0.003,
-                0.0026,
-                0.0019,
-                0.0017,
-                0.0016,
-                0.0016,
-                0.0013,
-                0.0011,
-                0.002
-            ],
-            "compound_uncertainty": 0.3
-        },
-        "corpus": "elm_light",
-        "sector": "elastic_diff_xs_direct",
-        "projectile": "neutron",
-        "target": "C-12",
-        "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported",
-            "measured on a natural C target; treated as C-12 (98.93% abundant)",
-            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
-            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ],
-        "natural_target": true
-    },
-    {
         "type": "ECS_Rutherford",
         "energy": 18.4,
         "energy_err": 0.0,
@@ -165114,166 +166324,6 @@
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
         ]
-    },
-    {
-        "type": "ECS",
-        "energy": 19.88,
-        "energy_err": 0.105,
-        "energy_units": "MeV",
-        "EXFORAccessionNumber": "20240003",
-        "source": "G.Deconninck, J.P.Meulders, Physical Review, Part C, Nuclear Physics 1, 1326 (1970); Thesis or dissertation: Meulders  (1969); Journal de Physique - Colloque 31, C2-129 (1970); Annales de la Societe Scientifique de Bruxelles 80, 193 (1966); Progress report: EANDC(E)-76U 99 (1967); Private communication: Meulders  (1972);  Data taken from the EXFOR database, file EXFOR 20240001 dated 197004, retrieved from the IAEA Nuclear Data Services website.",
-        "x_units": "CM-degrees",
-        "y_units": "b/sr",
-        "data": {
-            "x": [
-                10.802216838,
-                32.4008474614,
-                43.1001909052,
-                53.7002259897,
-                64.2000699634,
-                74.5004980263,
-                84.8001484454,
-                94.7995490287,
-                104.7996587741,
-                114.4997958261,
-                124.1997660005,
-                133.6998089204,
-                147.7996595741
-            ],
-            "y": [
-                0.8910511527826557,
-                0.39552848872684543,
-                0.12660177900581956,
-                0.03311201807765109,
-                0.022999796258618876,
-                0.03635735501838709,
-                0.025543583769759324,
-                0.018114143019899002,
-                0.010539674921114447,
-                0.006074715287581967,
-                0.006243832411322362,
-                0.0027376270923676962,
-                0.001911725336593564
-            ],
-            "y_err": [
-                0.027006329267282688,
-                0.012003538856264347,
-                0.006003655230782685,
-                0.0024064735707442996,
-                0.0016081864964605922,
-                0.0023049378902648674,
-                0.0014072766317250159,
-                0.001705983466477907,
-                0.0015074910502588614,
-                0.0012106971855511024,
-                0.001212384929847709,
-                0.000872240297713386,
-                0.0009181676963037133
-            ],
-            "systematic_normalization_error": 0.05,
-            "y_measured": [
-                0.893,
-                0.3965,
-                0.1273,
-                0.0337,
-                0.02354,
-                0.03686,
-                0.02602,
-                0.01859,
-                0.01104,
-                0.00661,
-                0.00682,
-                0.00339,
-                0.00289
-            ],
-            "compound_elastic": [
-                0.0019488472173443262,
-                0.0009715112731545913,
-                0.0006982209941804431,
-                0.0005879819223489108,
-                0.0005402037413811215,
-                0.0005026449816129032,
-                0.00047641623024067636,
-                0.000475856980100998,
-                0.000500325078885552,
-                0.0005352847124180327,
-                0.0005761675886776375,
-                0.0006523729076323036,
-                0.0009782746634064362
-            ],
-            "ce_fraction": [
-                0.002182359705872706,
-                0.002450217586770722,
-                0.0054848467728235905,
-                0.017447534787801505,
-                0.022948332259181033,
-                0.013636597439308281,
-                0.018309616842454895,
-                0.025597470688595914,
-                0.04531930062369131,
-                0.08098104575159344,
-                0.0844820511257533,
-                0.19244038573224298,
-                0.3385033437392513
-            ],
-            "talys_model": [
-                0.9892975646241791,
-                0.2740848183856395,
-                0.08422129464828904,
-                0.02222510853789893,
-                0.01576544877232697,
-                0.017447721906678728,
-                0.01427282582809739,
-                0.008712475874701496,
-                0.004297436225231301,
-                0.002140878461136282,
-                0.0014622883206351172,
-                0.0014350806772400052,
-                0.001917125087907623
-            ],
-            "ce_fraction_model": [
-                0.001969930268740394,
-                0.0035445643391589362,
-                0.008290314190683455,
-                0.026455750321590834,
-                0.0342650405441892,
-                0.02880863096634399,
-                0.03337925061082204,
-                0.0546178820974126,
-                0.11642408465494401,
-                0.25003040673963695,
-                0.3940177737502479,
-                0.4545897091214195,
-                0.5102821248216718
-            ],
-            "y_err_before_compound": [
-                0.027,
-                0.012,
-                0.006,
-                0.0024,
-                0.0016,
-                0.0023,
-                0.0014,
-                0.0017,
-                0.0015,
-                0.0012,
-                0.0012,
-                0.00085,
-                0.00087
-            ],
-            "compound_uncertainty": 0.3
-        },
-        "corpus": "elm_light",
-        "sector": "elastic_diff_xs_direct",
-        "projectile": "neutron",
-        "target": "C-12",
-        "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported",
-            "measured on a natural C target; treated as C-12 (98.93% abundant)",
-            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
-            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ],
-        "natural_target": true
     },
     {
         "type": "ECS",
@@ -168264,9 +169314,11 @@
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -169748,9 +170800,11 @@
         "target": "C-12",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",
@@ -171856,10 +172910,12 @@
         "target": "C-12",
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "relative error floor 2 % applied at 9 of 63 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -176274,292 +177330,6 @@
     {
         "type": "ECS",
         "energy": 65.0,
-        "energy_err": 1.25,
-        "energy_units": "MeV",
-        "EXFORAccessionNumber": "13510002",
-        "source": "E.L.Hjort, F.P.Brady, et al., Physical Review, Part C, Nuclear Physics 50, 275 (1994);  Data taken from the EXFOR database, file EXFOR 13510001 dated 9407, retrieved from the IAEA Nuclear Data Services website.",
-        "x_units": "CM-degrees",
-        "y_units": "b/sr",
-        "data": {
-            "x": [
-                8.1,
-                9.2,
-                10.3,
-                11.4,
-                12.5,
-                13.6,
-                14.7,
-                15.7,
-                16.8,
-                17.9,
-                19.0,
-                20.1,
-                20.6,
-                21.2,
-                22.8,
-                25.0,
-                27.1,
-                29.3,
-                31.4,
-                33.6,
-                35.7,
-                37.9,
-                40.0,
-                42.2,
-                44.3,
-                46.4,
-                48.6
-            ],
-            "y": [
-                1.259999999610202,
-                1.184999999610202,
-                1.108999999610202,
-                1.024999999610202,
-                0.9401999996102021,
-                0.8554999996102021,
-                0.772599999610202,
-                0.6700999996102021,
-                0.647399999610202,
-                0.5298999996102021,
-                0.505899999610202,
-                0.428299999610202,
-                0.429299999610202,
-                0.371399999610202,
-                0.33729999961020196,
-                0.172899999610202,
-                0.14049999961020201,
-                0.093499999610202,
-                0.059549999610202,
-                0.041599999610202,
-                0.023709999610202,
-                0.016269999610202,
-                0.011199999610202,
-                0.010409999610202001,
-                0.008423999610202,
-                0.008337999610202,
-                0.0051089996102019995
-            ],
-            "y_err": [
-                0.156,
-                0.151,
-                0.122,
-                0.113,
-                0.111,
-                0.0982,
-                0.0829,
-                0.153,
-                0.144,
-                0.108,
-                0.104,
-                0.0918,
-                0.119,
-                0.1,
-                0.0649,
-                0.0243,
-                0.0186,
-                0.012100000000000001,
-                0.006880000000000001,
-                0.005060000000000002,
-                0.003120000000000002,
-                0.002260000000000003,
-                0.0016700000000000042,
-                0.0015700000000000043,
-                0.0014100000000000048,
-                0.0014700000000000045,
-                0.0010400000000000064
-            ],
-            "systematic_normalization_error": 0.05,
-            "y_measured": [
-                1.26,
-                1.185,
-                1.109,
-                1.025,
-                0.9402,
-                0.8555,
-                0.7726,
-                0.6701,
-                0.6474,
-                0.5299,
-                0.5059,
-                0.4283,
-                0.4293,
-                0.3714,
-                0.3373,
-                0.1729,
-                0.1405,
-                0.0935,
-                0.05955,
-                0.0416,
-                0.02371,
-                0.01627,
-                0.0112,
-                0.01041,
-                0.008424,
-                0.008338,
-                0.005109
-            ],
-            "compound_elastic": [
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10,
-                3.89798e-10
-            ],
-            "ce_fraction": [
-                3.093634920634921e-10,
-                3.289434599156118e-10,
-                3.514860234445447e-10,
-                3.802907317073171e-10,
-                4.1459051265688155e-10,
-                4.556376388077148e-10,
-                5.045275692466995e-10,
-                5.817012386211013e-10,
-                6.020976212542478e-10,
-                7.356067182487262e-10,
-                7.705040521842262e-10,
-                9.101050665421433e-10,
-                9.079850920102493e-10,
-                1.049536887452881e-09,
-                1.1556418618440558e-09,
-                2.2544707923655293e-09,
-                2.7743629893238433e-09,
-                4.16896256684492e-09,
-                6.5457262804366085e-09,
-                9.370144230769231e-09,
-                1.644023618726276e-08,
-                2.39580823601721e-08,
-                3.480339285714286e-08,
-                3.7444572526416906e-08,
-                4.627231718898386e-08,
-                4.674958023506836e-08,
-                7.629633979252301e-08
-            ],
-            "talys_model": [
-                1.254661337356177,
-                1.1801328413213463,
-                1.0990382962903502,
-                1.0168231578983997,
-                0.9323381398216942,
-                0.8476468126723072,
-                0.7656282226775579,
-                0.6908446569636912,
-                0.6149897961552889,
-                0.5387691316098056,
-                0.47312867986195795,
-                0.4067300727040443,
-                0.3819909345023841,
-                0.35153706605898266,
-                0.2770619798754508,
-                0.19379684074312956,
-                0.1330506362306235,
-                0.08640935626580452,
-                0.05530883547002582,
-                0.033494666986065805,
-                0.020439481503486328,
-                0.012267799796237405,
-                0.00804939,
-                0.005903034140173389,
-                0.0049188555405659425,
-                0.00443734430327588,
-                0.004115665849257114
-            ],
-            "ce_fraction_model": [
-                3.106798531158875e-10,
-                3.303001038116685e-10,
-                3.5467189934664567e-10,
-                3.8334886157160906e-10,
-                4.1808651105332586e-10,
-                4.598589815622801e-10,
-                5.091217753661131e-10,
-                5.642339360532778e-10,
-                6.338284024172223e-10,
-                7.234972776471252e-10,
-                8.238731165350813e-10,
-                9.583702464106585e-10,
-                1.0204378292583988e-09,
-                1.1088389749904717e-09,
-                1.4068981972020415e-09,
-                2.011374377958321e-09,
-                2.9296966256090887e-09,
-                4.51106242246429e-09,
-                7.0476623976516e-09,
-                1.1637613837515113e-08,
-                1.9070836015752788e-08,
-                3.177407574906406e-08,
-                4.842578133249849e-08,
-                6.60334991707418e-08,
-                7.924566940121026e-08,
-                8.784488499398856e-08,
-                9.471079875698833e-08
-            ],
-            "y_err_before_compound": [
-                0.156,
-                0.151,
-                0.122,
-                0.113,
-                0.111,
-                0.0982,
-                0.0829,
-                0.153,
-                0.144,
-                0.108,
-                0.104,
-                0.0918,
-                0.119,
-                0.1,
-                0.0649,
-                0.0243,
-                0.0186,
-                0.0121,
-                0.00688,
-                0.00506,
-                0.00312,
-                0.00226,
-                0.00167,
-                0.00157,
-                0.00141,
-                0.00147,
-                0.00104
-            ],
-            "compound_uncertainty": 0.3
-        },
-        "corpus": "elm_light",
-        "sector": "elastic_diff_xs_direct",
-        "projectile": "neutron",
-        "target": "C-12",
-        "notes": [
-            "assigned a default normalisation uncertainty of 5%, none reported",
-            "measured on a natural C target; treated as C-12 (98.93% abundant)",
-            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
-            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ],
-        "natural_target": true
-    },
-    {
-        "type": "ECS",
-        "energy": 65.0,
         "energy_err": 5.0,
         "energy_units": "MeV",
         "EXFORAccessionNumber": "13946002",
@@ -180332,10 +181102,12 @@
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "relative error floor 2 % applied at 12 of 14 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS",
@@ -180943,10 +181715,12 @@
             "converted scattering angles from the lab to the CM frame",
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
+            "measured on a natural C target (EXFOR SAMPLE; coded as the isotope); treated as C-12 (98.93% abundant)",
             "relative error floor 2 % applied at 14 of 14 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
             "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
-        ]
+        ],
+        "natural_target": true
     },
     {
         "type": "ECS_Rutherford",

@@ -9,7 +9,7 @@ Sectors, as the ELM corpus (notebooks/elm, scripts/curate_elm_integral.py):
     neutron_total     sigma_tot (n,tot), 0.1-200 MeV, every point (no thinning)
     proton_reaction   sigma_R (p,non), 0.1-200 MeV
 
-on spec.ELM_LIGHT_TARGETS, plus natural C, O and Ar treated as 12C, 16O and 40Ar (spec.ELM_LIGHT_NATURAL; other
+on spec.ELM_LIGHT_TARGETS, plus natural C, O, Ne, Si, S and Ar as their dominant isotope (>= 90 %; spec.ELM_LIGHT_NATURAL; other
 natural targets are not used). Decisions: nn_corpora.elm_light. Records pass through the author-error and ELM
 evaluations (serialize.write_sector). Writes data/elm_light/<sector>/ and docs/elm_light_curation_report.txt; with
 --plots, build/elm_light_plots.pdf (every angular distribution, for review; not committed).
@@ -106,7 +106,7 @@ def curate_integral(sector: str, vocal: bool = False):
         if t[0] == 0:
             if t not in spec.ELM_LIGHT_NATURAL:
                 out.dropped.append(f"{r.payload['EXFORAccessionNumber']}: natural {r.payload['target']}, not "
-                                   "~99 % one isotope (spec.ELM_LIGHT_NATURAL)")
+                                   ">= 90 % one isotope (spec.ELM_LIGHT_NATURAL)")
                 continue
             iso = spec.ELM_LIGHT_NATURAL[t][0]
             r.target = iso
@@ -119,6 +119,7 @@ def curate_integral(sector: str, vocal: bool = False):
         out.records.append(r)
     elm_light.mark_natural(natural)
     elm_light.cut_point_energies(out.records, out)
+    elm_light.drop_nonpositive_points(out.records, out)
     out.data = {tuple(r.target): None for r in out.records}
     out.bibtex = {e: x.bibtex() for e, x in res.data.entries.items() if res.data.measurements.get(e)}
     out.records = elm_light.apply_manual_drops(out.records, out)

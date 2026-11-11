@@ -2001,6 +2001,111 @@
         ]
     },
     {
+        "type": "ECS_Rutherford",
+        "energy": 6.041,
+        "energy_err": 0.0,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "O2048002",
+        "source": "H.Orihara, G.Rudolf, et al., Nuclear Physics, Section A 203, 78 (1973);  Data taken from the EXFOR database, file EXFOR O2048001 dated 1973, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "no-dim",
+        "data": {
+            "x": [
+                63.0,
+                75.0,
+                90.0,
+                103.0,
+                125.0,
+                141.0
+            ],
+            "y": [
+                1.1985500131050741,
+                1.7739530134456163,
+                4.321453755259887,
+                9.313394725436618,
+                9.727930760252397,
+                9.982290372341831
+            ],
+            "y_err": [
+                0.05011182799675034,
+                0.0926869520590207,
+                0.13818618966304316,
+                0.24453790761255348,
+                0.43443270442779464,
+                0.403707612485458
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_err_before_floor": [
+                0.035077748,
+                0.0737398093,
+                0.1003057185,
+                0.1799343121,
+                0.3593250228,
+                0.3415637474
+            ],
+            "y_measured": [
+                1.317841761,
+                1.9611341974,
+                4.6382815362,
+                9.8007556852,
+                10.5418192502,
+                10.6996469615
+            ],
+            "compound_elastic": [
+                0.11929174789492578,
+                0.18718118395438368,
+                0.31682778094011366,
+                0.4873609597633826,
+                0.8138884899476031,
+                0.7173565891581685
+            ],
+            "ce_fraction": [
+                0.09052054004147299,
+                0.09544537248014014,
+                0.06830714747852085,
+                0.04972687570401743,
+                0.07720569577515399,
+                0.06704488397976088
+            ],
+            "talys_model": [
+                1.122278308901085,
+                1.4599660559883136,
+                2.41455,
+                3.1305738731217856,
+                2.3458005570824647,
+                1.1001813318932971
+            ],
+            "ce_fraction_model": [
+                0.10629426493303086,
+                0.12820927115848096,
+                0.1312160779193281,
+                0.1556778340060028,
+                0.3469555361346909,
+                0.6520348676737431
+            ],
+            "y_err_before_compound": [
+                0.035077748,
+                0.0737398093,
+                0.1003057185,
+                0.19601511370400002,
+                0.3593250228,
+                0.3415637474
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "elm_light",
+        "sector": "elastic_diff_xs_direct",
+        "projectile": "proton",
+        "target": "O-18",
+        "notes": [
+            "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "relative error floor 2 % applied at 1 of 6 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
+            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
+        ]
+    },
+    {
         "type": "ECS",
         "energy": 6.05,
         "energy_err": 0.0,
