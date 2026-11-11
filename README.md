@@ -6,6 +6,7 @@ Curation of corpora of nucleon-nucleus scattering data from
 | corpus | what it is |
 |---|---|
 | **ELM** | Elastic nucleon scattering (0–200 MeV), $(p,n)$ charge exchange to the isobaric analog state, and isotopic neutron total and proton reaction cross sections, on near-spherical targets, with compound-elastic-corrected copies from TALYS. Ported from the ELM curation notebooks; the data the ELM calibrations use ([docs/ELM_CALIBRATION_DATA.md](docs/ELM_CALIBRATION_DATA.md)). |
+| **ELM-light** | The ELM curation on light even-even targets (12C, 14C, 16O, 18O, 20Ne, 24Mg, 26Mg, 28Si, 30Si, 32S, 34S, 40Ar; natural C, O, Ar as their ~99 % isotope), deformed or not: elastic, analysing powers, $(p,n)$ to the IAS, $\sigma_\mathrm{tot}$ and $\sigma_R$ from EXFOR, with TALYS compound-elastic copies. Records resting on reader (digitisation) errors are dropped for now. ([docs/ELM_LIGHT_DATA.md](docs/ELM_LIGHT_DATA.md)) |
 | **KDUQ** | A reconstruction of the experimental data used in the Koning-Delaroche global optical potential analysis. |
 | **CHUQ** | A reconstruction of the experimental data used in the CH89 global optical potential analysis. |
 | **Test** | Directly-measured data post-dating the KD and CH89 publications, drawn entirely from EXFOR. |
@@ -45,6 +46,13 @@ same pipeline as KDUQ, CHUQ and Test, with an optional evaluated copy:
 | elm | neutron total | 13 | 25799 | 9 | — |
 | elm | proton reaction | 15 | 73 | 7 | — |
 | elm | proton reaction direct | 15 | 73 | 7 | — |
+| elm_light | charge exchange | 13 | 163 | 4 | — |
+| elm_light | elastic ay | 438 | 6854 | 69 | — |
+| elm_light | elastic diff xs | 1831 | 24933 | 185 | — |
+| elm_light | elastic diff xs direct | 1831 | 24933 | 185 | — |
+| elm_light | neutron total | 183 | 79661 | 128 | — |
+| elm_light | proton reaction | 24 | 181 | 20 | — |
+| elm_light | proton reaction direct | 24 | 181 | 20 | — |
 | sm3 | charge exchange | 12 | 377 | 1 | — |
 | sm3 | elastic diff xs | 34 | 1451 | 18 | — |
 | kduq | neutron ay | 30 | 637 | 12 | 96.8% |
@@ -278,9 +286,13 @@ uv run pytest --nbmake notebooks/           # execute every notebook, rewriting 
 python scripts/refresh_known_missing.py     # regenerate the allowlist after review
 uv run python scripts/curate_elm_integral.py  # ELM neutron total and proton reaction
 uv run python scripts/talys_compound.py build   # optional: TALYS (submodule, ~9 GB) for the compound elastic
+#   or point NN_TALYS_DIR at an existing TALYS build (e.g. another worktree's external/talys)
 uv run python scripts/talys_compound.py run --sector elastic_diff_xs   # and --sector proton_reaction
 uv run python scripts/talys_compound.py apply --sector elastic_diff_xs # from the cache in compound_elastic/
 uv run python scripts/talys_compound.py apply --sector proton_reaction
+uv run python scripts/curate_elm_light.py   # ELM-light, all sectors (decisions in src/nn_corpora/elm_light.py)
+uv run python scripts/talys_compound.py run --corpus elm_light --sector elastic_diff_xs   # and proton_reaction
+uv run python scripts/talys_compound.py apply --corpus elm_light --sector elastic_diff_xs # and proton_reaction
 uv run python scripts/apply_author_errors.py  # the *_evaluated corpora (ELM is corrected as it is written)
 uv run python scripts/curate_sm3.py         # sm3, from ELM and KDUQ records
 uv run python scripts/build_manifests.py    # provenance manifests for each corpus

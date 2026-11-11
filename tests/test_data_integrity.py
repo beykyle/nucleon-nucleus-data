@@ -164,7 +164,7 @@ def test_records_round_trip_through_exfor_tools(records):
 def test_neutron_total_is_downsampled(records):
     """At most one datum per MeV, per the supplement (ELM keeps every point: scripts/curate_elm_integral.py)."""
     for path, record in records:
-        if record["sector"] != "neutron_total" or record["corpus"] == "elm":
+        if record["sector"] != "neutron_total" or record["corpus"] in spec.ELM_CORPORA:
             continue
         x = np.asarray(record["data"]["x"])
         span = float(x[-1] - x[0])

@@ -1,0 +1,92 @@
+[
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "C0215005",
+        "source": "R.F.Carlson, A.J.Cox, et al., Nuclear Physics, Section A 445, 57 (1985);  Data taken from the EXFOR database, file EXFOR C0215001 dated 198507, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                22.9,
+                28.9,
+                35.9,
+                43.0,
+                47.0
+            ],
+            "y": [
+                0.718253449,
+                0.6860155316000001,
+                0.607000508363,
+                0.5810000231836999,
+                0.52800000344806
+            ],
+            "y_err": [
+                0.027000107060447077,
+                0.026000000417514494,
+                0.020000000000581473,
+                0.017000000000001424,
+                0.02900000000000002
+            ],
+            "x_err": [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                0.718,
+                0.686,
+                0.607,
+                0.581,
+                0.528
+            ],
+            "compound_elastic": [
+                0.000253449,
+                1.55316e-05,
+                5.083629999999999e-07,
+                2.3183699999999998e-08,
+                3.4480599999999998e-09
+            ],
+            "ce_fraction": [
+                0.0003529930362116992,
+                2.2640816326530607e-05,
+                8.375008237232289e-07,
+                3.990309810671256e-08,
+                6.530416666666666e-09
+            ],
+            "talys_model": [
+                0.716182,
+                0.6678930000000001,
+                0.6155069999999999,
+                0.5698150000000001,
+                0.547198
+            ],
+            "ce_fraction_model": [
+                0.00035388909522998343,
+                2.325462312076934e-05,
+                8.259256190425129e-07,
+                4.068636311785403e-08,
+                6.301302270841633e-09
+            ],
+            "y_err_before_compound": [
+                0.027,
+                0.026,
+                0.02,
+                0.017,
+                0.029
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "elm_light",
+        "sector": "proton_reaction_direct",
+        "projectile": "proton",
+        "target": "Ne-20",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
+        ]
+    }
+]

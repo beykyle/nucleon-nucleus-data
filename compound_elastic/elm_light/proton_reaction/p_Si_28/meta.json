@@ -1,0 +1,16 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "proton",
+ "target": "Si_28",
+ "energies": [
+  65.5
+ ],
+ "settings": [
+  "projectile p",
+  "element si",
+  "mass 28",
+  "energy energies",
+  "filetotal y"
+ ],
+ "missing_angular": []
+}

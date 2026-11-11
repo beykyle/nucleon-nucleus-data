@@ -50,7 +50,7 @@ DOERING_CSV = ROOT / "external" / "doering_1974_table5.csv"
 #: static (tabulated) corpus -> its evaluated copy, for those registered with one (``spec.TABULATED``)
 EVALUATED = {name: f"{name}_evaluated" for name, c in spec.TABULATED.items() if c.evaluated_copy}
 #: corpora the corrections cover; the static corpora never are
-SCOPE = {"elm", "sm3", *EVALUATED.values()}
+SCOPE = {*spec.ELM_CORPORA, "sm3", *EVALUATED.values()}
 #: largest angle difference (deg) at which a record point is the same point as an EXFOR row
 ANGLE_TOL = 0.06
 #: largest lab -> centre-of-mass angle shift (deg) accepted when matching records to EXFOR rows by position

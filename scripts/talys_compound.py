@@ -47,7 +47,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 from nn_corpora import serialize, spec  # noqa: E402
 
-TALYS = REPO_ROOT / "external" / "talys"
+#: the TALYS checkout (git submodule); NN_TALYS_DIR points at a built one elsewhere, e.g. another worktree's
+TALYS = Path(os.environ.get("NN_TALYS_DIR", REPO_ROOT / "external" / "talys"))
 CACHE = REPO_ROOT / "compound_elastic"  # parsed TALYS results, outside data/ (not corpus records)
 CE_UNCERTAINTY = 0.30  # fractional uncertainty of the TALYS compound elastic, added in quadrature
 PROJ = {"neutron": ("n", "nn"), "proton": ("p", "pp")}
