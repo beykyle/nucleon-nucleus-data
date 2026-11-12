@@ -27,6 +27,16 @@ STATIC = sorted(ae.EVALUATED)
 #: subentry -> why its reader-only points are acceptable as they are
 ALLOWLIST = {
     "F0733003": "sm3 curates it with the authors' 3 % from ERR-ANALYS (sm3.EXFOR_UNCERTAINTIES)",
+    "D0498002": "Daehnick 16O(p,p): DATA-ERR is the authors' random uncertainty (counting statistics etc., ERR-ANALYS); "
+                "the reader detector matches its words 'angular readings' (elm_light)",
+    "D0049008": "26Mg(p,n) to six 26Al levels at the same angles: the audit (exfor_points) matches by angle across "
+                "levels, so the IAS record is compared with ground-state rows; its own DATA-ERR is used (elm_light)",
+    "O2048002": "Orihara 18O(p,p): excitation functions at fixed angles, rows 4-6 keV apart; the audit compares the "
+                "6.041 MeV record with a neighbouring energy's row; its errors equal EXFOR's DATA-ERR at 6.041 MeV "
+                "(the authors' bars read off their figure; checked 2026-11-11) (elm_light)",
+    "10573004": "natural Si(n,n) 0.5-3 MeV excitation functions, rows 1 keV apart: the audit compares records with a "
+                "neighbouring energy's row; each record equals EXFOR's DATA-ERR at its own energy (checked "
+                "2026-11-11) (elm_light)",
 }
 
 
@@ -180,9 +190,12 @@ def test_fricke_is_reader_plus_authors_column():
             col = p.author["ERR-1"][idx]
             has = col > 0
             ay = rec["type"] == "APower"
-            scale = 1.0 if ay else np.abs(np.asarray(rec["data"]["y"]) / p.data[idx])
+            # _direct copies: y is measured - compound elastic; the EXFOR comparison needs the measured value
+            scale = 1.0 if ay else np.abs(np.asarray(rec["data"].get("y_measured", rec["data"]["y"])) / p.data[idx])
             want = np.hypot(p.reader[idx], col) * scale
-            assert np.allclose(np.asarray(rec["data"]["y_err"])[has], want[has], rtol=1e-6), rec["EXFORAccessionNumber"]
+            # _direct copies add the compound-elastic uncertainty in quadrature: compare the error before it
+            err = rec["data"].get("y_err_before_compound", rec["data"]["y_err"])
+            assert np.allclose(np.asarray(err)[has], want[has], rtol=1e-6), rec["EXFORAccessionNumber"]
             checked += 1
     assert checked >= 11
 

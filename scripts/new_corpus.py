@@ -24,7 +24,7 @@ sys.path.insert(0, str(REPO_ROOT / "src"))
 from nn_corpora import spec  # noqa: E402
 
 #: names that already mean something in data/
-RESERVED = {"elm", "sm3"}
+RESERVED = {*spec.ELM_CORPORA, "sm3"}
 
 
 def scaffold(name: str, sectors: list[str], spec_dir: Path = spec.SPEC_DIR) -> list[Path]:

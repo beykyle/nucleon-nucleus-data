@@ -1,0 +1,1362 @@
+# ELM-light curation report (scripts/curate_elm_light.py)
+
+EXFOR X4-2025-12-31
+
+## records / points per target
+
+| target | nn | pp | nAy | pAy | pn | σtot | σR |
+|---|---|---|---|---|---|---|---|
+| C_12 | 750/8355 | 297/5717 | 151/1211 | 89/2329 | — | 120/41660 | 16/60 |
+| C_14 | — | 1/21 | — | 15/210 | 8/85 | — | — |
+| O_16 | 115/2050 | 223/2515 | 14/161 | 29/763 | — | 51/11277 | 4/103 |
+| O_18 | 43/484 | 14/236 | — | — | — | 4/528 | — |
+| Ne_20 | 2/37 | 22/455 | — | 3/53 | — | 1/99 | 1/5 |
+| Mg_24 | 2/21 | 119/1928 | 1/10 | 114/1613 | — | 1/1600 | 1/7 |
+| Mg_26 | 1/23 | 101/613 | — | 1/25 | 1/19 | — | — |
+| Si_28 | 2586/21505 | 284/2960 | 5/85 | 69/1393 | — | 33/40395 | 3/60 |
+| Si_30 | — | 1/28 | — | 1/28 | 1/13 | — | — |
+| S_32 | 53/912 | 16/204 | 4/75 | 3/55 | — | 30/5242 | — |
+| S_34 | 2/76 | 11/108 | — | — | 1/17 | — | — |
+| Ar_40 | 2/40 | 8/418 | — | 6/110 | 2/29 | 4/12078 | 1/5 |
+
+elm_light/elastic_diff_xs
+  targets                12
+  measurements           4653
+  data points            48706
+  excluded
+    dXS/dA O0553: ratio to Rutherford does not go to 1 at low angle
+    dXS/dRuth E0120: no uncertainties
+    dXS/dRuth E0120: no uncertainties
+    dXS/dRuth C1019: old and in poor agreement with other measurements due to normalization, but no normalization uncertainty given
+    dXS/dRuth E0120: no uncertainties
+  repaired
+    dXS/dA 10633 via ('DATA-ERR1',)
+    dXS/dA 12890 (C_12): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 13720 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 20559 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 20710 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 22077 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 22098 (C_12): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 22544 (C_12): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 22847 (C_12): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 30593 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 32001 (C_12): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 32516 (C_12): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 10276 (O_16): supplement rule preference:+DATA-ERR+-DATA-ERR -> ['+DATA-ERR', '-DATA-ERR']
+    dXS/dA 10859 (O_16): supplement rule quadrature:DATA-ERRn -> ['DATA-ERR1', 'DATA-ERR2']
+    dXS/dA 20907 (O_16): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 20955 (O_16): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 22113 (O_16): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 22121 (O_16): supplement rule preference:ERR-S -> ['ERR-S']
+    dXS/dA 32602 (O_16): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 20907 (O_18): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 20261 (Ne_20): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 21773 (Mg_24): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 30463 (Mg_24): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 14345 (Si_28): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 20955 (Si_28): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 21046 (Si_28): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 21773 (Si_28): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 22113 (Si_28): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 22701 (Si_28): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 30463 (Si_28): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 12704 (S_32): supplement rule preference:ERR-S -> ['ERR-S']
+    dXS/dA 14345 (S_32): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 21046 (S_32): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 21773 (S_32): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 22121 (Ar_40): supplement rule preference:ERR-S -> ['ERR-S']
+    dXS/dA 10027 (C_0): supplement rule preference:+DATA-ERR+-DATA-ERR -> ['+DATA-ERR', '-DATA-ERR']
+    dXS/dA 10174 (C_0): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 11286 (C_0): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 12871 (C_0): supplement rule quadrature:DATA-ERRn -> ['DATA-ERR1', 'DATA-ERR2']
+    dXS/dA 12928 (C_0): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 12935 (C_0): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 20220 (C_0): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 20240 (C_0): supplement rule preference:ERR-S -> ['ERR-S']
+    dXS/dA 20286 (C_0): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 21374 (C_0): supplement rule preference:ERR-S -> ['ERR-S']
+    dXS/dA 22404 (C_0): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 11418 (O_0): supplement rule preference:ERR-S -> ['ERR-S']
+    dXS/dA 21374 (O_0): supplement rule preference:ERR-S -> ['ERR-S']
+    dXS/dA 14371 (Ne_0): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 10107 (Si_0): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 10306 (Si_0): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 10384 (Si_0): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 10573 (Si_0): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 11286 (Si_0): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 13902 (Si_0): supplement rule quadrature:DATA-ERRn -> ['DATA-ERR1', 'DATA-ERR2']
+    dXS/dA 14792 (Si_0): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 20341 (Si_0): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 22666 (Si_0): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 30563 (Si_0): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 10108 (S_0): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 10306 (S_0): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 11286 (S_0): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 11486 (S_0): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 12871 (S_0): supplement rule quadrature:DATA-ERRn -> ['DATA-ERR1', 'DATA-ERR2']
+    dXS/dA 20019 (S_0): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 20341 (S_0): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA 32001 (S_0): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA 11418 (Ar_0): supplement rule preference:ERR-S -> ['ERR-S']
+    dXS/dA 14371 (Ar_0): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA O0142 via ('ERR-T',)
+    dXS/dA O0208 via ('ERR-2',)
+    dXS/dRuth O0211 via ('DATA-ERR', 'ERR-T')
+    dXS/dA O0142 via ('ERR-T',)
+    dXS/dA O0124 via ('DATA-ERR1',)
+    dXS/dRuth O0328 via ('ERR-1', 'ERR-DIG')
+    dXS/dA A0192 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA C1177 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA D0934 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA E1761 (C_12): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA E2076 (C_12): supplement rule preference:ERR-S -> ['ERR-S']
+    dXS/dA F0571 (C_12): supplement rule quadrature:DATA-ERRn -> ['DATA-ERR1', 'DATA-ERR2']
+    dXS/dA F0740 (C_12): supplement rule preference:ERR-DIG -> ['ERR-DIG']
+    dXS/dA F0747 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA F1072 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA O0049 (C_12): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA O0056 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA O0212 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA O0216 (C_12): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA O0274 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA O0331 (C_12): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA O0852 (C_12): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA O1198 (C_12): supplement rule preference:ERR-S -> ['ERR-S']
+    dXS/dA O1242 (C_12): supplement rule preference:ERR-DIG -> ['ERR-DIG']
+    dXS/dA O1409 (C_12): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA O1909 (C_12): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA E1307 (C_14): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA T0090 (C_14): supplement rule preference:ERR-DIG -> ['ERR-DIG']
+    dXS/dA A1294 (O_16): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA C0618 (O_16): supplement rule quadrature:DATA-ERRn -> ['DATA-ERR1', 'DATA-ERR2']
+    dXS/dA C0828 (O_16): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA D0323 (O_16): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA D0498 (O_16): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA E2035 (O_16): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA O0056 (O_16): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA O0445 (O_16): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA O1198 (O_16): supplement rule preference:ERR-S -> ['ERR-S']
+    dXS/dRuth D0323 (O_16): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dRuth O0434 (O_16): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dRuth O0445 (O_16): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA O1198 (O_18): supplement rule preference:ERR-S -> ['ERR-S']
+    dXS/dA O1199 (O_18): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA O1198 (Ne_20): supplement rule preference:ERR-S -> ['ERR-S']
+    dXS/dRuth D0329 (Ne_20): supplement rule preference:ERR-DIG -> ['ERR-DIG']
+    dXS/dA C0075 (Mg_24): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA C0618 (Mg_24): supplement rule quadrature:DATA-ERRn -> ['DATA-ERR1', 'DATA-ERR2']
+    dXS/dA C0828 (Mg_24): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA F1277 (Mg_24): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA O1090 (Mg_24): supplement rule preference:ERR-DIG -> ['ERR-DIG']
+    dXS/dA O1199 (Mg_24): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA C0618 (Mg_26): supplement rule quadrature:DATA-ERRn -> ['DATA-ERR1', 'DATA-ERR2']
+    dXS/dA C0828 (Mg_26): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA O1090 (Mg_26): supplement rule preference:ERR-DIG -> ['ERR-DIG']
+    dXS/dA C0084 (Si_28): supplement rule quadrature:DATA-ERRn -> ['DATA-ERR1', 'DATA-ERR2']
+    dXS/dA C0618 (Si_28): supplement rule quadrature:DATA-ERRn -> ['DATA-ERR1', 'DATA-ERR2']
+    dXS/dA C0828 (Si_28): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA F0571 (Si_28): supplement rule quadrature:DATA-ERRn -> ['DATA-ERR1', 'DATA-ERR2']
+    dXS/dA O1199 (Si_28): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA C0618 (S_32): supplement rule quadrature:DATA-ERRn -> ['DATA-ERR1', 'DATA-ERR2']
+    dXS/dA C0828 (S_32): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dRuth F0869 (S_34): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA A1066 (Ar_40): supplement rule preference:+ERR-T+-ERR-T -> ['+ERR-T', '-ERR-T']
+    dXS/dA O1198 (Ar_40): supplement rule preference:ERR-S -> ['ERR-S']
+    dXS/dA O1199 (Ar_40): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dRuth O0434 (Ar_40): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA F0569 (C_0): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA F0569 (O_0): supplement rule preference:ERR-T -> ['ERR-T']
+    dXS/dA D4396 (Si_0): supplement rule preference:ERR-S -> ['ERR-S']
+    dXS/dRuth A1497 (Ar_0): supplement rule preference:ERR-T -> ['ERR-T']
+  dropped
+    neutron dXS/dA 10415 (C_12): parse failed
+    neutron dXS/dA 10685 (C_12): parse failed
+    neutron dXS/dA 11288 (C_12): parse failed
+    neutron dXS/dA 11300 (C_12): parse failed
+    neutron dXS/dA 14189 (C_12): parse failed
+    neutron dXS/dA 14452 (C_12): parse failed
+    neutron dXS/dA 21123 (C_12): parse failed
+    neutron dXS/dA 21519 (C_12): parse failed
+    neutron dXS/dA 22167 (C_12): parse failed
+    neutron dXS/dA 23030 (C_12): parse failed
+    neutron dXS/dA 30684 (C_12): parse failed
+    neutron dXS/dA 12962 (O_16): parse failed
+    neutron dXS/dA 13979 (O_16): parse failed
+    neutron dXS/dA 14189 (O_16): parse failed
+    neutron dXS/dA 23030 (O_16): parse failed
+    neutron dXS/dA 11075 (O_18): parse failed
+    neutron dXS/dA 14119 (O_18): parse failed
+    neutron dXS/dA 10415 (C_0): parse failed
+    neutron dXS/dA 10509 (C_0): parse failed
+    neutron dXS/dA 11215 (C_0): parse failed
+    neutron dXS/dA 11224 (C_0): parse failed
+    neutron dXS/dA 11313 (C_0): parse failed
+    neutron dXS/dA 20007 (C_0): parse failed
+    neutron dXS/dA 21664 (C_0): parse failed
+    neutron dXS/dA 10415 (O_0): parse failed
+    neutron dXS/dA 20202 (Ne_0): parse failed
+    neutron dXS/dA 10235 (Si_0): parse failed
+    neutron dXS/dA 10415 (Si_0): parse failed
+    neutron dXS/dA 11574 (Si_0): parse failed
+    neutron dXS/dA 12664 (Si_0): parse failed
+    neutron dXS/dA 22588 (Si_0): parse failed
+    neutron dXS/dA 10235 (S_0): parse failed
+    neutron dXS/dA 10415 (S_0): parse failed
+    neutron dXS/dA 11224 (S_0): parse failed
+    neutron dXS/dA 11313 (S_0): parse failed
+    neutron dXS/dA 22588 (S_0): parse failed
+    11269002: one or more uncertainties below the dXS/dA floor 1e-09
+    11321002: one or more uncertainties below the dXS/dA floor 1e-09
+    21043002: one or more uncertainties below the dXS/dA floor 1e-09
+    21043002: one or more uncertainties below the dXS/dA floor 1e-09
+    21043002: one or more uncertainties below the dXS/dA floor 1e-09
+    21043002: one or more uncertainties below the dXS/dA floor 1e-09
+    21043002: one or more uncertainties below the dXS/dA floor 1e-09
+    20710002: one or more uncertainties below the dXS/dA floor 1e-09
+    20710002: one or more uncertainties below the dXS/dA floor 1e-09
+    22098003: one or more uncertainties below the dXS/dA floor 1e-09
+    22098003: one or more uncertainties below the dXS/dA floor 1e-09
+    22098003: one or more uncertainties below the dXS/dA floor 1e-09
+    22098003: one or more uncertainties below the dXS/dA floor 1e-09
+    22098003: one or more uncertainties below the dXS/dA floor 1e-09
+    22098003: one or more uncertainties below the dXS/dA floor 1e-09
+    22098003: one or more uncertainties below the dXS/dA floor 1e-09
+    14205002: one or more uncertainties below the dXS/dA floor 1e-09
+    14205003: one or more uncertainties below the dXS/dA floor 1e-09
+    14205004: one or more uncertainties below the dXS/dA floor 1e-09
+    14205005: one or more uncertainties below the dXS/dA floor 1e-09
+    14205006: one or more uncertainties below the dXS/dA floor 1e-09
+    14205007: one or more uncertainties below the dXS/dA floor 1e-09
+    20163005: one or more uncertainties below the dXS/dA floor 1e-09
+    20907009: one or more uncertainties below the dXS/dA floor 1e-09
+    20907023: one or more uncertainties below the dXS/dA floor 1e-09
+    20261002: one or more uncertainties below the dXS/dA floor 1e-09
+    20261002: one or more uncertainties below the dXS/dA floor 1e-09
+    20261002: one or more uncertainties below the dXS/dA floor 1e-09
+    20261002: one or more uncertainties below the dXS/dA floor 1e-09
+    20261002: one or more uncertainties below the dXS/dA floor 1e-09
+    20599015: one or more uncertainties below the dXS/dA floor 1e-09
+    21773022: one or more uncertainties below the dXS/dA floor 1e-09
+    22701008: one or more uncertainties below the dXS/dA floor 1e-09
+    11319002: one or more uncertainties below the dXS/dA floor 1e-09
+    40711002: one or more uncertainties below the dXS/dA floor 1e-09
+    20286002: one or more uncertainties below the dXS/dA floor 1e-09
+    20286002: one or more uncertainties below the dXS/dA floor 1e-09
+    20286002: one or more uncertainties below the dXS/dA floor 1e-09
+    20286002: one or more uncertainties below the dXS/dA floor 1e-09
+    11207006: one or more uncertainties below the dXS/dA floor 1e-09
+    11357006: one or more uncertainties below the dXS/dA floor 1e-09
+    11357006: one or more uncertainties below the dXS/dA floor 1e-09
+    11357006: one or more uncertainties below the dXS/dA floor 1e-09
+    11357006: one or more uncertainties below the dXS/dA floor 1e-09
+    11357006: one or more uncertainties below the dXS/dA floor 1e-09
+    11357007: one or more uncertainties below the dXS/dA floor 1e-09
+    11357007: one or more uncertainties below the dXS/dA floor 1e-09
+    11357007: one or more uncertainties below the dXS/dA floor 1e-09
+    11357007: one or more uncertainties below the dXS/dA floor 1e-09
+    11357007: one or more uncertainties below the dXS/dA floor 1e-09
+    11357007: one or more uncertainties below the dXS/dA floor 1e-09
+    11357007: one or more uncertainties below the dXS/dA floor 1e-09
+    11357007: one or more uncertainties below the dXS/dA floor 1e-09
+    11357007: one or more uncertainties below the dXS/dA floor 1e-09
+    11357008: one or more uncertainties below the dXS/dA floor 1e-09
+    11371002: one or more uncertainties below the dXS/dA floor 1e-09
+    12737002: one or more uncertainties below the dXS/dA floor 1e-09
+    10107006: one or more uncertainties below the dXS/dA floor 1e-09
+    10107006: one or more uncertainties below the dXS/dA floor 1e-09
+    10107006: one or more uncertainties below the dXS/dA floor 1e-09
+    10107006: one or more uncertainties below the dXS/dA floor 1e-09
+    10107006: one or more uncertainties below the dXS/dA floor 1e-09
+    10306006: one or more uncertainties below the dXS/dA floor 1e-09
+    10384013: one or more uncertainties below the dXS/dA floor 1e-09
+    11572006: one or more uncertainties below the dXS/dA floor 1e-09
+    10108008: one or more uncertainties below the dXS/dA floor 1e-09
+    10108008: one or more uncertainties below the dXS/dA floor 1e-09
+    10108008: one or more uncertainties below the dXS/dA floor 1e-09
+    10108008: one or more uncertainties below the dXS/dA floor 1e-09
+    10306008: one or more uncertainties below the dXS/dA floor 1e-09
+    20341012: one or more uncertainties below the dXS/dA floor 1e-09
+    20341012: one or more uncertainties below the dXS/dA floor 1e-09
+    20341012: one or more uncertainties below the dXS/dA floor 1e-09
+    proton dXS/dA C0579 (C_12): parse failed
+    proton dXS/dA C2362 (C_12): parse failed
+    proton dXS/dA E1406 (C_12): parse failed
+    proton dXS/dA E1414 (C_12): parse failed
+    proton dXS/dA E2237 (C_12): parse failed
+    proton dXS/dA F0565 (C_12): parse failed
+    proton dXS/dA F1449 (C_12): parse failed
+    proton dXS/dA O0226 (C_12): parse failed
+    proton dXS/dA O0262 (C_12): parse failed
+    proton dXS/dA O0473 (C_12): parse failed
+    proton dXS/dRuth C0848 (C_12): parse failed
+    proton dXS/dRuth C1278 (C_12): parse failed
+    proton dXS/dRuth C1941 (C_12): parse failed
+    proton dXS/dRuth D0125 (C_12): parse failed
+    proton dXS/dA C1876 (C_14): parse failed
+    proton dXS/dA C0899 (O_16): parse failed
+    proton dXS/dA D8062 (O_16): parse failed
+    proton dXS/dA E1940 (O_16): parse failed
+    proton dXS/dA O0473 (O_16): parse failed
+    proton dXS/dRuth D0078 (O_16): parse failed
+    proton dXS/dA F0818 (O_18): parse failed
+    proton dXS/dA E2218 (Ne_20): parse failed
+    proton dXS/dRuth C0626 (Ne_20): parse failed
+    proton dXS/dA C1332 (Mg_24): parse failed
+    proton dXS/dA D5125 (Mg_24): parse failed
+    proton dXS/dA E2218 (Mg_24): parse failed
+    proton dXS/dRuth C0855 (Mg_24): parse failed
+    proton dXS/dA C1286 (Mg_26): parse failed
+    proton dXS/dA E2277 (Mg_26): parse failed
+    proton dXS/dA C1426 (Si_28): parse failed
+    proton dXS/dA C2056 (Si_28): parse failed
+    proton dXS/dA D0192 (Si_28): parse failed
+    proton dXS/dRuth D0369 (Si_28): parse failed
+    proton dXS/dA D5100 (Si_30): parse failed
+    proton dXS/dA C1332 (S_32): parse failed
+    proton dXS/dA D0784 (S_32): parse failed
+    proton dXS/dA E2218 (S_32): parse failed
+    proton dXS/dA F0877 (S_32): parse failed
+    proton dXS/dRuth C0857 (S_32): parse failed
+    proton dXS/dA C0859 (Ar_40): parse failed
+    proton dXS/dA E2218 (Ar_40): parse failed
+    proton dXS/dRuth C0859 (Ar_40): parse failed
+    proton dXS/dRuth O0889 (Ar_40): parse failed
+    proton dXS/dA C1089 (C_0): parse failed
+    proton dXS/dA C1978 (C_0): parse failed
+    proton dXS/dA E2234 (C_0): parse failed
+    proton dXS/dA O0881 (C_0): parse failed
+    proton dXS/dRuth D5144 (C_0): parse failed
+    proton dXS/dRuth C0626 (O_0): parse failed
+    proton dXS/dA O0853 (Si_0): parse failed
+    proton dXS/dA O0881 (Si_0): parse failed
+    proton dXS/dRuth D0078 (Si_0): parse failed
+    proton dXS/dA O0878 (S_0): parse failed
+    O0212002: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O0212002: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O0212002: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O0212002: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O0212002: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O0216005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1198010: one or more uncertainties below the dXS/dRuth floor 1e-09
+    E1307018: one or more uncertainties below the dXS/dRuth floor 1e-09
+    E1307019: one or more uncertainties below the dXS/dRuth floor 1e-09
+    C2713004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    C2713004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1198006: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O0445004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O2048002: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O2048002: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O2048002: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O2048002: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1198004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199003: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199003: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199003: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199003: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199003: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199003: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199003: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199003: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199003: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199003: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199003: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199003: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199003: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199003: one or more uncertainties below the dXS/dRuth floor 1e-09
+    E2209004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    E2209006: one or more uncertainties below the dXS/dRuth floor 1e-09
+    E2209008: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1198002: one or more uncertainties below the dXS/dRuth floor 1e-09
+    E0796002: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199004: one or more uncertainties below the dXS/dRuth floor 1e-09
+    C0733003: one or more uncertainties below the dXS/dRuth floor 1e-09
+    C0733003: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O0254009: dropped in reader-error cleaning: no author uncertainty source, data rest on the EXFOR reader error (docs/AUTHOR_UNCERTAINTIES.md, section 6)
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1198015: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199006: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199006: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199006: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199006: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199006: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199006: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199006: one or more uncertainties below the dXS/dRuth floor 1e-09
+    O1199006: one or more uncertainties below the dXS/dRuth floor 1e-09
+    C1978009: one or more uncertainties below the dXS/dRuth floor 1e-09
+    C1978009: one or more uncertainties below the dXS/dRuth floor 1e-09
+    A1497005: one or more uncertainties below the dXS/dRuth floor 1e-09
+    21490002 (Mg_24 6.1): natural sample (EXFOR SAMPLE), 79.0% Mg_24: below the 90% natural-target threshold
+    21773002 (Mg_24 9.76): natural sample (EXFOR SAMPLE), 79.0% Mg_24: below the 90% natural-target threshold
+    21773010 (Mg_24 14.83): natural sample (EXFOR SAMPLE), 79.0% Mg_24: below the 90% natural-target threshold
+    10037030 (C_12 5.59): C_12 n elastic_diff_xs 5.59 MeV: within 3 % of 10174002 at 5.57 MeV, which is kept
+    11276002 (C_12 2.33): C_12 n elastic_diff_xs 2.33 MeV: within 3 % of 20502002 at 2.36 MeV, which is kept
+    13946002 (C_12 65.0): Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)
+    13946002 (C_12 75.0): Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)
+    13946002 (C_12 85.0): Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)
+    13946002 (C_12 95.0): Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)
+    13946002 (C_12 107.5): Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)
+    13946002 (C_12 127.5): Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)
+    13946002 (C_12 155.0): Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)
+    13946002 (C_12 185.0): Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)
+    20492005 (C_12 2.24): C_12 n elastic_diff_xs 2.24 MeV: within 3 % of 20502002 at 2.26 MeV, which is kept
+    22160005 (C_12 28.2): same data as 22160002 (12C, 28.2 MeV), which has more angles
+    22189002 (C_12 14.13): same data as 22284003 (12C, 14.1 MeV), which has more angles
+    22480007 (C_12 75.0): Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (12C 75 MeV)
+    22544002 (C_12 8.0): same data as 20559003 (12C, 10-11 MeV), at every energy
+    22544002 (C_12 8.5): same data as 20559003 (12C, 10-11 MeV), at every energy
+    22544002 (C_12 9.0): same data as 20559003 (12C, 10-11 MeV), at every energy
+    22544002 (C_12 9.5): same data as 20559003 (12C, 10-11 MeV), at every energy
+    22544002 (C_12 10.0): same data as 20559003 (12C, 10-11 MeV), at every energy
+    22544002 (C_12 10.5): same data as 20559003 (12C, 10-11 MeV), at every energy
+    22544002 (C_12 11.0): same data as 20559003 (12C, 10-11 MeV), at every energy
+    22847002 (C_12 96.0): dropped for now: C_12 n elastic_diff_xs: errors below the authors' own EXFOR error at 22 of 22 angles
+    10859002 (O_16 10.207): O_16 n elastic_diff_xs 10.207 MeV: within 3 % of 22113003 at 10.159 MeV, which is kept
+    21629002 (Si_28 21.0): Yamanouti & Tanaka, NEANDC(J)-51/U (1977), 28Si(n,n) 21 MeV: paper not available to check the 1.78 MeV 2+ separation
+    21729003 (Si_28 0.986): dropped for now: Si_28 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729003 (Si_28 1.19): dropped for now: Si_28 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729007 (Si_28 0.8): dropped for now: Si_28 n elastic_diff_xs: 12 of 12 points carry only the EXFOR reader (digitisation) error
+    21729007 (Si_28 1.3): dropped for now: Si_28 n elastic_diff_xs: 12 of 12 points carry only the EXFOR reader (digitisation) error
+    21729007 (Si_28 1.8): dropped for now: Si_28 n elastic_diff_xs: 11 of 11 points carry only the EXFOR reader (digitisation) error
+    21729007 (Si_28 2.3): dropped for now: Si_28 n elastic_diff_xs: 12 of 12 points carry only the EXFOR reader (digitisation) error
+    21729007 (Si_28 2.8): dropped for now: Si_28 n elastic_diff_xs: 12 of 12 points carry only the EXFOR reader (digitisation) error
+    21729007 (Si_28 3.3): dropped for now: Si_28 n elastic_diff_xs: 12 of 12 points carry only the EXFOR reader (digitisation) error
+    22113015 (Si_28 10.163): Boerker et al., Mito 1988, 28Si(n,n) 10.2 MeV: paper not available to check the 1.78 MeV 2+ separation
+    21729002 (S_32 0.641): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 0.653): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 0.673): only 4 distinct angles
+    21729002 (S_32 0.681): dropped for now: S_32 n elastic_diff_xs: 6 of 6 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 0.685): dropped for now: S_32 n elastic_diff_xs: 6 of 6 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 0.697): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 0.701): only 4 distinct angles
+    21729002 (S_32 0.713): dropped for now: S_32 n elastic_diff_xs: 6 of 6 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 0.717): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 0.737): dropped for now: S_32 n elastic_diff_xs: 6 of 6 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 0.753): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 0.769): dropped for now: S_32 n elastic_diff_xs: 6 of 6 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 0.785): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 0.789): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 0.805): dropped for now: S_32 n elastic_diff_xs: 6 of 6 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 0.849): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 0.897): dropped for now: S_32 n elastic_diff_xs: 6 of 6 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 0.905): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 0.973): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 1.0): only 4 distinct angles
+    21729002 (S_32 1.037): only 4 distinct angles
+    21729002 (S_32 1.232): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 1.252): only 4 distinct angles
+    21729002 (S_32 1.261): only 4 distinct angles
+    21729002 (S_32 1.296): dropped for now: S_32 n elastic_diff_xs: 6 of 6 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 1.308): only 4 distinct angles
+    21729002 (S_32 1.58): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 1.632): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 1.64): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 1.652): only 4 distinct angles
+    21729002 (S_32 1.712): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 1.752): dropped for now: S_32 n elastic_diff_xs: 6 of 6 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 1.844): dropped for now: S_32 n elastic_diff_xs: 7 of 7 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 1.904): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 1.928): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 1.94): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 1.944): dropped for now: S_32 n elastic_diff_xs: 6 of 6 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 1.992): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 2.008): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 2.044): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 2.064): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 2.076): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 2.108): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 2.124): dropped for now: S_32 n elastic_diff_xs: 7 of 7 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 2.192): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 2.216): dropped for now: S_32 n elastic_diff_xs: 7 of 7 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 2.348): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 2.372): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 2.607): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 2.999): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 3.031): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 3.079): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 3.187): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 3.199): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 3.227): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 3.287): dropped for now: S_32 n elastic_diff_xs: 6 of 6 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 3.411): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729002 (S_32 3.455): dropped for now: S_32 n elastic_diff_xs: 5 of 5 points carry only the EXFOR reader (digitisation) error
+    21729006 (S_32 1.05): dropped for now: S_32 n elastic_diff_xs: 11 of 11 points carry only the EXFOR reader (digitisation) error
+    21729006 (S_32 1.65): dropped for now: S_32 n elastic_diff_xs: 11 of 11 points carry only the EXFOR reader (digitisation) error
+    21729006 (S_32 2.25): dropped for now: S_32 n elastic_diff_xs: 11 of 11 points carry only the EXFOR reader (digitisation) error
+    21729006 (S_32 2.85): dropped for now: S_32 n elastic_diff_xs: 11 of 11 points carry only the EXFOR reader (digitisation) error
+    22121004 (Ar_40 7.75): 40Ar(n,n) 7.8 MeV, private communication (Hammer 1989; the cited PRC 39, 1774 has no argon): resolution about 800 keV, the 1.46 MeV 2+ separation not stated
+    13510002 (C_12 65.0): Hjort et al., PRC 50, 275 (1994), 12C 65 MeV: resolution 2.7 MeV does not resolve the 4.44 MeV state; subtracted with (p,p') strengths and DWUCK4 (up to 10 % at some points)
+    14784003 (C_12 4.0): C_12 n elastic_diff_xs 4.0 MeV: within 3 % of 40221005 at 4.0 MeV, which is kept
+    22480002 (C_12 55.0): Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (12C)
+    22480002 (C_12 65.0): Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (12C)
+    22480002 (C_12 75.0): Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (12C)
+    23365002 (C_12 2.23485): C_12 n elastic_diff_xs 2.23485 MeV: within 3 % of 23664002 at 2.1369 MeV, which is kept
+    23365002 (C_12 2.2518): C_12 n elastic_diff_xs 2.2518 MeV: within 3 % of 23664002 at 2.1688 MeV, which is kept
+    23365002 (C_12 2.26895): C_12 n elastic_diff_xs 2.26895 MeV: within 3 % of 23664002 at 2.18505 MeV, which is kept
+    23365002 (C_12 2.28635): C_12 n elastic_diff_xs 2.28635 MeV: within 3 % of 23664002 at 2.2518 MeV, which is kept
+    23365002 (C_12 2.3039): C_12 n elastic_diff_xs 2.3039 MeV: within 3 % of 23664002 at 2.2518 MeV, which is kept
+    23365002 (C_12 2.32165): C_12 n elastic_diff_xs 2.32165 MeV: within 3 % of 23664002 at 2.28635 MeV, which is kept
+    23365002 (C_12 2.4137): C_12 n elastic_diff_xs 2.4137 MeV: within 3 % of 23664002 at 2.37625 MeV, which is kept
+    23365002 (C_12 2.4328): C_12 n elastic_diff_xs 2.4328 MeV: within 3 % of 23664002 at 2.35785 MeV, which is kept
+    23365002 (C_12 2.4521): C_12 n elastic_diff_xs 2.4521 MeV: within 3 % of 23664002 at 2.39485 MeV, which is kept
+    23365002 (C_12 2.61505): C_12 n elastic_diff_xs 2.61505 MeV: within 3 % of 23664002 at 2.5728 MeV, which is kept
+    23365002 (C_12 3.21495): C_12 n elastic_diff_xs 3.21495 MeV: within 3 % of 23664002 at 3.21495 MeV, which is kept
+    23365002 (C_12 3.2443): C_12 n elastic_diff_xs 3.2443 MeV: within 3 % of 23664002 at 3.2443 MeV, which is kept
+    23365002 (C_12 3.5613): C_12 n elastic_diff_xs 3.5613 MeV: within 3 % of 23664002 at 3.5613 MeV, which is kept
+    23365002 (C_12 3.77445): C_12 n elastic_diff_xs 3.77445 MeV: within 3 % of 23664002 at 3.7376 MeV, which is kept
+    23365002 (C_12 5.7089): C_12 n elastic_diff_xs 5.7089 MeV: within 3 % of 23664002 at 5.77865 MeV, which is kept
+    23365002 (C_12 5.9958): C_12 n elastic_diff_xs 5.9958 MeV: within 3 % of 23664002 at 6.0709 MeV, which is kept
+    23365002 (C_12 6.0709): C_12 n elastic_diff_xs 6.0709 MeV: within 3 % of 23664002 at 6.0709 MeV, which is kept
+    10027002 (C_12 5.04): C_12 n elastic_diff_xs 5.04 MeV: within 3 % of 10174002 at 5.05 MeV, which is kept
+    20240003 (C_12 17.27): Deconninck & Meulders, PRC 1, 1326 (1970), 12C 17-20 MeV: 3.5 ns over 2 m (about 3-4 MeV at 20 MeV); elastic and the 4.44 MeV state separated only by a two-Gaussian fit
+    20240003 (C_12 18.25): Deconninck & Meulders, PRC 1, 1326 (1970), 12C 17-20 MeV: 3.5 ns over 2 m (about 3-4 MeV at 20 MeV); elastic and the 4.44 MeV state separated only by a two-Gaussian fit
+    20240003 (C_12 19.88): Deconninck & Meulders, PRC 1, 1326 (1970), 12C 17-20 MeV: 3.5 ns over 2 m (about 3-4 MeV at 20 MeV); elastic and the 4.44 MeV state separated only by a two-Gaussian fit
+    20240004 (C_12 14.7): Deconninck & Meulders, PRC 1, 1326 (1970), 12C: as 20240003
+    13510003 (Si_28 65.0): Hjort et al., PRC 50, 275 (1994), natural Si 65 MeV: resolution 2.7 MeV does not resolve the 1.78 MeV 2+ state; low-lying states subtracted with (p,p') strengths and DWUCK4 (as 13510002)
+    22480003 (Si_28 55.0): Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (natural Si)
+    22480003 (Si_28 65.0): Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (natural Si)
+    22480003 (Si_28 75.0): Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (natural Si)
+    12927008 (S_32 7.956): same data as 14345004 (natural S, (n,n) 8-17 MeV)
+    12927008 (S_32 9.947): same data as 14345004 (natural S, (n,n) 8-17 MeV)
+    12927008 (S_32 11.933): same data as 14345004 (natural S, (n,n) 8-17 MeV)
+    12927008 (S_32 13.922): same data as 14345004 (natural S, (n,n) 8-17 MeV)
+    12927008 (S_32 16.917): same data as 14345004 (natural S, (n,n) 8-17 MeV)
+    C0585002 (C_12 121.8): C_12 p elastic_diff_xs 121.8 MeV: within 3 % of C0055002 at 122.0 MeV, which is kept
+    E0926002 (C_12 65.0): the 12C 65 MeV measurement re-reported as E2076030 (26 angles; ratio within 2%)
+    F0471003 (C_12 19.9): dropped for now: no author error in the paper (checked 2026-11-11): Girod et al., J. Phys. 31 (1970) 125: no error stated; normalised to Dickens et al.
+    F0471003 (C_12 21.2): dropped for now: no author error in the paper (checked 2026-11-11): Girod et al., J. Phys. 31 (1970) 125: no error stated; normalised to Dickens et al.
+    F0471003 (C_12 22.65): dropped for now: no author error in the paper (checked 2026-11-11): Girod et al., J. Phys. 31 (1970) 125: no error stated; normalised to Dickens et al.
+    F0471003 (C_12 24.1): dropped for now: duplicate (paper checked 2026-11-11): Girod et al., J. Phys. 31 (1970) 125: 24.1 MeV is not among their measured energies (p.129): Dickens et al.'s data replotted
+    F0471003 (C_12 24.4): dropped for now: no author error in the paper (checked 2026-11-11): Girod et al., J. Phys. 31 (1970) 125: no error stated; normalised to Dickens et al.
+    F0471003 (C_12 26.1): dropped for now: duplicate (paper checked 2026-11-11): Girod et al., J. Phys. 31 (1970) 125: 26.1 MeV is not among their measured energies (p.129): Dickens et al.'s data replotted
+    F0471003 (C_12 27.0): dropped for now: no author error in the paper (checked 2026-11-11): Girod et al., J. Phys. 31 (1970) 125: no error stated; normalised to Dickens et al.
+    F0471003 (C_12 28.85): dropped for now: no author error in the paper (checked 2026-11-11): Girod et al., J. Phys. 31 (1970) 125: no error stated; normalised to Dickens et al.
+    F0566002 (C_12 21.1): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 22.3): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 23.5): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 24.6): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 26.4): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 28.1): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 29.7): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 32.7): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 34.5): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 39.6): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 44.7): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 49.6): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 54.4): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 59.5): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 64.9): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 69.5): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 74.8): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 79.8): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0566002 (C_12 83.4): the Ieiri/Sakaguchi 12C(p,p) 21-84 MeV data (NIM A257, 253, 1987), re-reported by the authors as E2076 (2007, CM angles); same angles, a flat ~10% normalisation difference
+    F0904002 (C_12 4.491): dropped for now: C_12 p elastic_diff_xs: 9 of 9 points carry only the EXFOR reader (digitisation) error
+    F0904002 (C_12 4.615): dropped for now: C_12 p elastic_diff_xs: 9 of 9 points carry only the EXFOR reader (digitisation) error
+    F0904002 (C_12 5.0): dropped for now: C_12 p elastic_diff_xs: 9 of 9 points carry only the EXFOR reader (digitisation) error
+    F0904002 (C_12 5.122): dropped for now: C_12 p elastic_diff_xs: 9 of 9 points carry only the EXFOR reader (digitisation) error
+    F0904002 (C_12 5.222): dropped for now: C_12 p elastic_diff_xs: 9 of 9 points carry only the EXFOR reader (digitisation) error
+    F1090007 (C_12 1.365): dropped for now: C_12 p elastic_diff_xs: 32 of 32 points carry only the EXFOR reader (digitisation) error
+    F1090007 (C_12 1.548): dropped for now: C_12 p elastic_diff_xs: 32 of 32 points carry only the EXFOR reader (digitisation) error
+    F1090007 (C_12 1.734): dropped for now: C_12 p elastic_diff_xs: 32 of 32 points carry only the EXFOR reader (digitisation) error
+    F1090007 (C_12 1.917): dropped for now: C_12 p elastic_diff_xs: 32 of 32 points carry only the EXFOR reader (digitisation) error
+    F1090007 (C_12 2.195): dropped for now: C_12 p elastic_diff_xs: 32 of 32 points carry only the EXFOR reader (digitisation) error
+    F1090007 (C_12 2.378): dropped for now: C_12 p elastic_diff_xs: 32 of 32 points carry only the EXFOR reader (digitisation) error
+    O0079002 (C_12 20.0): dropped for now: C_12 p elastic_diff_xs: 21 of 21 points carry only the EXFOR reader (digitisation) error
+    O0254008 (C_12 17.8): dropped for now: C_12 p elastic_diff_xs: 21 of 21 points carry only the EXFOR reader (digitisation) error
+    O0551005 (C_12 50.0): dropped for now: duplicate (paper checked 2026-11-11): Rush, Burge & Smith, NPA 166 (1971) 378, p.385: Fannon et al.'s 12C 50 MeV data reanalysed, not this experiment's
+    O1177003 (C_12 150.0): dropped for now: C_12 p elastic_diff_xs: 19 of 19 points carry only the EXFOR reader (digitisation) error
+    C1177002 (C_12 14.2349): only 4 distinct angles
+    C1177002 (C_12 14.235): only 4 distinct angles
+    F0571003 (C_12 1.6): C_12 p elastic_diff_xs 1.6 MeV: within 3 % of O0852002 at 1.55 MeV, which is kept
+    F0571003 (C_12 1.65): C_12 p elastic_diff_xs 1.65 MeV: within 3 % of O0852002 at 1.65 MeV, which is kept
+    F0571003 (C_12 1.734): C_12 p elastic_diff_xs 1.734 MeV: within 3 % of O0852002 at 1.725 MeV, which is kept
+    F0571003 (C_12 1.738): C_12 p elastic_diff_xs 1.738 MeV: within 3 % of O0852002 at 1.73 MeV, which is kept
+    F0571003 (C_12 1.742): C_12 p elastic_diff_xs 1.742 MeV: within 3 % of O0852002 at 1.735 MeV, which is kept
+    F0571003 (C_12 1.746): C_12 p elastic_diff_xs 1.746 MeV: within 3 % of O0852002 at 1.74 MeV, which is kept
+    O0274009 (C_12 96.0): dropped for now: C_12 p elastic_diff_xs: errors below the authors' own EXFOR error at 6 of 46 angles
+    O0852002 (C_12 2.25): C_12 p elastic_diff_xs 2.25 MeV: within 3 % of F1090007 at 2.195 MeV, which is kept
+    O0852002 (C_12 2.425): C_12 p elastic_diff_xs 2.425 MeV: within 3 % of F1090007 at 2.378 MeV, which is kept
+    O0852002 (C_12 2.45): C_12 p elastic_diff_xs 2.45 MeV: within 3 % of F1090007 at 2.378 MeV, which is kept
+    F0256003 (C_12 35.0): dropped for now: C_12 p elastic_diff_xs: 34 of 34 points carry only the EXFOR reader (digitisation) error
+    O0480011 (C_12 49.4): dropped for now: duplicate (paper checked 2026-11-11): Clarke et al., NPA 157 (1970) 145: a reading of the optical-model fit figure (Fig. 8); the data are Fannon et al. (forward) and O0480002 (backward, with the authors' errors)
+    O1133002 (C_12 40.9): dropped for now: C_12 p elastic_diff_xs: 48 of 48 points carry only the EXFOR reader (digitisation) error
+    O0211002 (C_12 61.4): dropped for now: C_12 p elastic_diff_xs: 33 of 38 points carry only the EXFOR reader (digitisation) error
+    C0246006 (O_16 14.1): dropped for now: O_16 p elastic_diff_xs: 10 of 12 points carry only the EXFOR reader (digitisation) error
+    C0246006 (O_16 14.7): dropped for now: O_16 p elastic_diff_xs: 9 of 11 points carry only the EXFOR reader (digitisation) error
+    C0246006 (O_16 16.6): dropped for now: O_16 p elastic_diff_xs: 17 of 19 points carry only the EXFOR reader (digitisation) error
+    C0246006 (O_16 17.6): dropped for now: O_16 p elastic_diff_xs: 17 of 19 points carry only the EXFOR reader (digitisation) error
+    F1013003 (O_16 4.134): dropped for now: O_16 p elastic_diff_xs: 22 of 22 points carry only the EXFOR reader (digitisation) error
+    F1013003 (O_16 4.268): dropped for now: O_16 p elastic_diff_xs: 20 of 20 points carry only the EXFOR reader (digitisation) error
+    F1013003 (O_16 4.402): dropped for now: O_16 p elastic_diff_xs: 23 of 23 points carry only the EXFOR reader (digitisation) error
+    F1013003 (O_16 4.54): dropped for now: O_16 p elastic_diff_xs: 23 of 23 points carry only the EXFOR reader (digitisation) error
+    O0032052 (O_16 65.0): same data as E0166002 (16O, 65 MeV)
+    O0480005 (O_16 49.5): subset of O0480012 (16O, 49.5 MeV) from the same entry
+    O0486002 (O_16 19.8): dropped for now: no author error in the paper (checked 2026-11-11): Karban et al., NPA 132 (1969) 548: no error stated beyond 'statistical errors smaller than the points' (Fig. 1)
+    O0486002 (O_16 20.4): dropped for now: no author error in the paper (checked 2026-11-11): Karban et al., NPA 132 (1969) 548: no error stated beyond 'statistical errors smaller than the points' (Fig. 1)
+    O0486002 (O_16 20.8): dropped for now: no author error in the paper (checked 2026-11-11): Karban et al., NPA 132 (1969) 548: no error stated beyond 'statistical errors smaller than the points' (Fig. 1)
+    O0486002 (O_16 21.4): dropped for now: no author error in the paper (checked 2026-11-11): Karban et al., NPA 132 (1969) 548: no error stated beyond 'statistical errors smaller than the points' (Fig. 1)
+    O0486002 (O_16 22.1): dropped for now: no author error in the paper (checked 2026-11-11): Karban et al., NPA 132 (1969) 548: no error stated beyond 'statistical errors smaller than the points' (Fig. 1)
+    O0486002 (O_16 24.3): dropped for now: no author error in the paper (checked 2026-11-11): Karban et al., NPA 132 (1969) 548: no error stated beyond 'statistical errors smaller than the points' (Fig. 1)
+    O0486002 (O_16 26.2): dropped for now: no author error in the paper (checked 2026-11-11): Karban et al., NPA 132 (1969) 548: no error stated beyond 'statistical errors smaller than the points' (Fig. 1)
+    O0486002 (O_16 30.5): dropped for now: no author error in the paper (checked 2026-11-11): Karban et al., NPA 132 (1969) 548: no error stated beyond 'statistical errors smaller than the points' (Fig. 1)
+    O0492002 (O_16 2.5): dropped for now: O_16 p elastic_diff_xs: 23 of 23 points carry only the EXFOR reader (digitisation) error
+    O0492002 (O_16 3.0): dropped for now: O_16 p elastic_diff_xs: 26 of 26 points carry only the EXFOR reader (digitisation) error
+    O0492002 (O_16 3.4): dropped for now: O_16 p elastic_diff_xs: 26 of 26 points carry only the EXFOR reader (digitisation) error
+    O0492002 (O_16 3.8): dropped for now: O_16 p elastic_diff_xs: 26 of 26 points carry only the EXFOR reader (digitisation) error
+    C0828002 (O_16 17.5): same data as C0618002 (16O, 17.5 MeV)
+    O0445002 (O_16 6.87): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 7.13): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 7.53): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 8.04): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 8.44): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 8.66): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 9.42): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 10.2): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 10.5): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 10.8): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 11.1): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 11.4): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 11.9): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 12.9): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 13.9): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 14.3): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 14.5): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 14.7): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 15.2): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    O0445002 (O_16 15.6): same data as E2035009-E2035021 (16O, 10.2-15.6 MeV), at every energy
+    F0059003 (O_16 1.79): dropped for now: O_16 p elastic_diff_xs: 7 of 10 points carry only the EXFOR reader (digitisation) error
+    F0059003 (O_16 1.99): dropped for now: O_16 p elastic_diff_xs: 9 of 10 points carry only the EXFOR reader (digitisation) error
+    F0059003 (O_16 2.191): dropped for now: O_16 p elastic_diff_xs: 6 of 10 points carry only the EXFOR reader (digitisation) error
+    F0059003 (O_16 2.382): dropped for now: O_16 p elastic_diff_xs: 7 of 10 points carry only the EXFOR reader (digitisation) error
+    O0062002 (O_16 135.0): dropped for now: O_16 p elastic_diff_xs: 27 of 33 points carry only the EXFOR reader (digitisation) error
+    O0480012 (O_16 49.4): dropped for now: duplicate (paper checked 2026-11-11): Clarke et al., NPA 157 (1970) 145: a reading of the optical-model fit figure (Fig. 9); the data are Fannon et al. (forward) and O0480005 (backward, with the authors' errors)
+    O1133003 (O_16 40.9): dropped for now: O_16 p elastic_diff_xs: 43 of 43 points carry only the EXFOR reader (digitisation) error
+    O0434004 (O_16 20.93): dropped for now: O_16 p elastic_diff_xs: errors below the authors' own EXFOR error at 40 of 40 angles
+    D0890004 (Ne_20 3.65): dropped for now: Ne_20 p elastic_diff_xs: 12 of 12 points carry only the EXFOR reader (digitisation) error
+    D0890004 (Ne_20 4.0): dropped for now: Ne_20 p elastic_diff_xs: 12 of 12 points carry only the EXFOR reader (digitisation) error
+    D0890004 (Ne_20 4.15): dropped for now: Ne_20 p elastic_diff_xs: 12 of 12 points carry only the EXFOR reader (digitisation) error
+    D0890004 (Ne_20 4.35): dropped for now: Ne_20 p elastic_diff_xs: 11 of 11 points carry only the EXFOR reader (digitisation) error
+    O0032003 (Ne_20 65.0): same data as E0166004 (20Ne, 65 MeV)
+    O0032053 (Mg_24 65.0): same data as E0166006 (24Mg, 65 MeV)
+    O1030004 (Mg_24 2.6): dropped for now: Mg_24 p elastic_diff_xs: 12 of 12 points carry only the EXFOR reader (digitisation) error
+    O1030004 (Mg_24 2.8): dropped for now: Mg_24 p elastic_diff_xs: 14 of 14 points carry only the EXFOR reader (digitisation) error
+    O1030004 (Mg_24 3.0): dropped for now: Mg_24 p elastic_diff_xs: 10 of 10 points carry only the EXFOR reader (digitisation) error
+    O2096002 (Mg_24 9.63): Greenlees & Souch, PPS A 69, 686 (1956), Mg(p,p) 9.63 MeV coded as 24Mg: a 'piece of pure Mg foil', i.e. natural Mg (79 % 24Mg, excluded); digitised from a figure (CAJAD), ~300x below Rutherford at 7 deg
+    C0828008 (Mg_24 17.5): same data as C0618004 (24Mg, 17.5 MeV)
+    O1090002 (Mg_24 9.1): dropped for now: Mg_24 p elastic_diff_xs: 26 of 26 points carry only the EXFOR reader (digitisation) error
+    F0256004 (Mg_24 35.0): dropped for now: Mg_24 p elastic_diff_xs: 30 of 30 points carry only the EXFOR reader (digitisation) error
+    F0866004 (Mg_24 6.05): dropped for now: Mg_24 p elastic_diff_xs: 15 of 15 points carry only the EXFOR reader (digitisation) error
+    F0866004 (Mg_24 6.1): dropped for now: Mg_24 p elastic_diff_xs: 15 of 15 points carry only the EXFOR reader (digitisation) error
+    F0866004 (Mg_24 6.15): dropped for now: Mg_24 p elastic_diff_xs: 15 of 15 points carry only the EXFOR reader (digitisation) error
+    F0866004 (Mg_24 6.2): dropped for now: Mg_24 p elastic_diff_xs: 15 of 15 points carry only the EXFOR reader (digitisation) error
+    F0866004 (Mg_24 6.25): dropped for now: Mg_24 p elastic_diff_xs: 15 of 15 points carry only the EXFOR reader (digitisation) error
+    F0866004 (Mg_24 6.3): dropped for now: Mg_24 p elastic_diff_xs: 15 of 15 points carry only the EXFOR reader (digitisation) error
+    F0866004 (Mg_24 6.35): dropped for now: Mg_24 p elastic_diff_xs: 14 of 14 points carry only the EXFOR reader (digitisation) error
+    F1019002 (Mg_24 6.03): dropped for now: Mg_24 p elastic_diff_xs: 29 of 29 points carry only the EXFOR reader (digitisation) error
+    F1135002 (Mg_24 5.94): dropped for now: Mg_24 p elastic_diff_xs: 19 of 19 points carry only the EXFOR reader (digitisation) error
+    O1030005 (Mg_26 1.5): dropped for now: Mg_26 p elastic_diff_xs: 9 of 9 points carry only the EXFOR reader (digitisation) error
+    O1030005 (Mg_26 2.03): dropped for now: Mg_26 p elastic_diff_xs: 10 of 10 points carry only the EXFOR reader (digitisation) error
+    O1030005 (Mg_26 2.5): dropped for now: Mg_26 p elastic_diff_xs: 11 of 11 points carry only the EXFOR reader (digitisation) error
+    C0828012 (Mg_26 17.5): same data as C0618006 (26Mg, 17.5 MeV)
+    O1090006 (Mg_26 9.1): dropped for now: Mg_26 p elastic_diff_xs: 28 of 28 points carry only the EXFOR reader (digitisation) error
+    F0866005 (Mg_26 6.1): dropped for now: Mg_26 p elastic_diff_xs: 11 of 11 points carry only the EXFOR reader (digitisation) error
+    F0866005 (Mg_26 6.15): dropped for now: Mg_26 p elastic_diff_xs: 12 of 12 points carry only the EXFOR reader (digitisation) error
+    F0866005 (Mg_26 6.2): dropped for now: Mg_26 p elastic_diff_xs: 12 of 12 points carry only the EXFOR reader (digitisation) error
+    F0866005 (Mg_26 6.25): dropped for now: Mg_26 p elastic_diff_xs: 12 of 12 points carry only the EXFOR reader (digitisation) error
+    F0866005 (Mg_26 6.3): dropped for now: Mg_26 p elastic_diff_xs: 12 of 12 points carry only the EXFOR reader (digitisation) error
+    F0866005 (Mg_26 6.35): dropped for now: Mg_26 p elastic_diff_xs: 11 of 11 points carry only the EXFOR reader (digitisation) error
+    F1135004 (Mg_26 5.84): dropped for now: Mg_26 p elastic_diff_xs: 14 of 14 points carry only the EXFOR reader (digitisation) error
+    F1135004 (Mg_26 5.94): dropped for now: Mg_26 p elastic_diff_xs: 18 of 18 points carry only the EXFOR reader (digitisation) error
+    F1135004 (Mg_26 6.03): dropped for now: Mg_26 p elastic_diff_xs: 13 of 13 points carry only the EXFOR reader (digitisation) error
+    C0796002 (Si_28 180.0): 28Si(p,p) 180 MeV, the same data as C0152002 (Chen et al., PRC 41, 2514 (1990), compiled twice)
+    F0877003 (Si_28 5.93): dropped for now: Si_28 p elastic_diff_xs: 11 of 11 points carry only the EXFOR reader (digitisation) error
+    O0032054 (Si_28 65.0): same data as E0166008 (28Si, 65 MeV)
+    C0828016 (Si_28 17.5): same data as C0618008 (28Si, 17.5 MeV)
+    F0256005 (Si_28 35.0): dropped for now: Si_28 p elastic_diff_xs: 25 of 25 points carry only the EXFOR reader (digitisation) error
+    O1542002 (Si_30 40.75): dropped for now: Si_30 p elastic_diff_xs: 29 of 29 points carry only the EXFOR reader (digitisation) error
+    C0857004 (S_32 1.902): only 1 distinct angles
+    C0828020 (S_32 17.5): same data as C0618010 (32S, 17.5 MeV)
+    D0922004 (S_32 5.7): dropped for now: S_32 p elastic_diff_xs: 20 of 20 points carry only the EXFOR reader (digitisation) error
+    D0922004 (S_32 5.85): dropped for now: S_32 p elastic_diff_xs: 22 of 22 points carry only the EXFOR reader (digitisation) error
+    D0922004 (S_32 6.02): dropped for now: S_32 p elastic_diff_xs: 21 of 21 points carry only the EXFOR reader (digitisation) error
+    D0922004 (S_32 6.2): dropped for now: S_32 p elastic_diff_xs: 23 of 23 points carry only the EXFOR reader (digitisation) error
+    D0922004 (S_32 6.34): dropped for now: S_32 p elastic_diff_xs: 15 of 15 points carry only the EXFOR reader (digitisation) error
+    F0877005 (S_32 5.35): dropped for now: S_32 p elastic_diff_xs: 13 of 13 points carry only the EXFOR reader (digitisation) error
+    F0877005 (S_32 5.45): dropped for now: S_32 p elastic_diff_xs: 13 of 13 points carry only the EXFOR reader (digitisation) error
+    F0877005 (S_32 5.5): dropped for now: S_32 p elastic_diff_xs: 13 of 13 points carry only the EXFOR reader (digitisation) error
+    F0877005 (S_32 5.58): dropped for now: S_32 p elastic_diff_xs: 13 of 13 points carry only the EXFOR reader (digitisation) error
+    F0877005 (S_32 5.65): dropped for now: S_32 p elastic_diff_xs: 13 of 13 points carry only the EXFOR reader (digitisation) error
+    F0877005 (S_32 5.72): dropped for now: S_32 p elastic_diff_xs: 13 of 13 points carry only the EXFOR reader (digitisation) error
+    F0877005 (S_32 5.79): dropped for now: S_32 p elastic_diff_xs: 13 of 13 points carry only the EXFOR reader (digitisation) error
+    F0877005 (S_32 5.85): dropped for now: S_32 p elastic_diff_xs: 13 of 13 points carry only the EXFOR reader (digitisation) error
+    F0877005 (S_32 5.9): dropped for now: S_32 p elastic_diff_xs: 13 of 13 points carry only the EXFOR reader (digitisation) error
+    F0877005 (S_32 5.93): dropped for now: S_32 p elastic_diff_xs: 13 of 13 points carry only the EXFOR reader (digitisation) error
+    O0032055 (Ar_40 65.0): same data as E0166010 (40Ar, 65 MeV)
+    O0384022 (Ar_40 14.1): dropped for now: Ar_40 p elastic_diff_xs: 27 of 27 points carry only the EXFOR reader (digitisation) error
+    O0384023 (Ar_40 16.9): dropped for now: Ar_40 p elastic_diff_xs: 25 of 25 points carry only the EXFOR reader (digitisation) error
+    O0551002 (Ar_40 30.0): dropped for now: no author error in the paper (checked 2026-11-11): Rush, Burge & Smith, NPA 166 (1971) 378: no error stated for the elastic cross sections (figures only)
+    O0551002 (Ar_40 50.0): dropped for now: no author error in the paper (checked 2026-11-11): Rush, Burge & Smith, NPA 166 (1971) 378: no error stated for the elastic cross sections (figures only)
+    O0889003 (Ar_40 1.873): only 3 distinct angles
+    O0889003 (Ar_40 1.874): only 3 distinct angles
+    O0889003 (Ar_40 1.877): only 3 distinct angles
+    O0889003 (Ar_40 1.886): only 3 distinct angles
+    O0889003 (Ar_40 1.887): only 3 distinct angles
+    O0889003 (Ar_40 1.891): only 3 distinct angles
+    O0889003 (Ar_40 1.893): only 3 distinct angles
+    O0889003 (Ar_40 1.895): only 3 distinct angles
+    O0434006 (Ar_40 21.13): dropped for now: Ar_40 p elastic_diff_xs: errors below the authors' own EXFOR error at 39 of 39 angles
+  dropped as too sparse to constrain an optical potential (< 5 angles): 63832 measurements of 152 subentries
+    10012002: 254
+    10012003: 254
+    10331002: 6
+    10331004: 6
+    11392003: 2
+    11406003: 56
+    14327002: 10
+    14327003: 16
+    14327004: 10
+    14327005: 22
+    14327006: 9
+    14327007: 22
+    14327008: 8
+    14327009: 22
+    20240005: 9
+    20955004: 2114
+    20955005: 2114
+    20955006: 2114
+    20955007: 2114
+    20955008: 2114
+    20955009: 2114
+    20955010: 2114
+    20955011: 2114
+    20955012: 2114
+    20955013: 2114
+    20955014: 2114
+    20955015: 2114
+    20955016: 2114
+    20955017: 2114
+    20955018: 2114
+    20955019: 2114
+    20955020: 2114
+    20955021: 2114
+    20955022: 2114
+    20955023: 2114
+    21499002: 11
+    21729002: 1037
+    21729003: 1464
+    30939012: 6
+    A1066006: 7
+    C0733003: 1
+    C0848002: 578
+    C0856002: 173
+    C0856003: 730
+    C0857002: 611
+    C0857004: 391
+    C0858002: 142
+    C0858003: 175
+    C0925012: 2
+    C0925019: 2
+    C0997002: 514
+    C1014002: 16
+    C1177002: 25
+    C1358002: 30
+    C1358003: 36
+    C1471002: 36
+    C2056002: 215
+    C2102002: 29
+    C2713002: 35
+    D0078003: 62
+    D0078005: 93
+    D0078006: 146
+    D0107002: 132
+    D0107003: 248
+    D0107004: 231
+    D0124002: 86
+    D0125002: 60
+    D0323003: 171
+    D0329002: 1412
+    D0511002: 2
+    D0655005: 70
+    D0890002: 22
+    D0934002: 7
+    D4396006: 124
+    E1831002: 55
+    E2209002: 10
+    F0059002: 15
+    F0202002: 37
+    F0531003: 49
+    F0533002: 67
+    F0569002: 20
+    F0569003: 31
+    F0569004: 5
+    F0569005: 5
+    F0573002: 74
+    F0578002: 256
+    F0578003: 88
+    F0740002: 51
+    F0762002: 48
+    F0762004: 109
+    F0866002: 110
+    F0866003: 138
+    F0869002: 285
+    F0869003: 220
+    F0877002: 99
+    F0926002: 337
+    F0945002: 596
+    F0950002: 81
+    F0955003: 655
+    F0958002: 250
+    F0960003: 20
+    F1013002: 1036
+    F1059002: 172
+    F1059003: 124
+    F1068002: 578
+    F1068004: 206
+    F1068005: 210
+    F1072002: 59
+    F1072003: 63
+    F1072004: 57
+    F1072005: 60
+    F1072006: 51
+    F1072007: 135
+    F1072008: 1
+    F1072009: 8
+    F1072010: 8
+    F1089008: 62
+    F1089010: 42
+    F1140002: 115
+    O0212007: 14
+    O0212008: 33
+    O0212009: 15
+    O0212010: 34
+    O0252002: 498
+    O0252003: 389
+    O0252004: 420
+    O0252005: 320
+    O0252006: 369
+    O0252007: 305
+    O0267002: 44
+    O0889003: 71
+    O1030002: 121
+    O1030003: 118
+    O1367002: 60
+    O1409003: 163
+    O1909002: 71
+    O2048002: 213
+    O2264002: 114
+    O2264003: 119
+    O2264005: 115
+    O2264006: 114
+    O2264007: 167
+    O2264008: 170
+    O2264010: 171
+    O2264011: 171
+    O2264012: 106
+    O2264013: 104
+    O2264014: 100
+    O2264015: 103
+    O2575002: 36
+    S0240002: 48
+    T0090003: 120
+
+elm_light/elastic_ay
+  targets                12
+  measurements           505
+  data points            8121
+  repaired
+    Ay 10337 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    Ay 13017 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    Ay 20502 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    Ay 20999 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    Ay 21778 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    Ay 12962 (O_16): supplement rule preference:ERR-T -> ['ERR-T']
+    Ay 22121 (O_16): supplement rule preference:ERR-S -> ['ERR-S']
+    Ay 14345 (Si_28): supplement rule preference:ERR-T -> ['ERR-T']
+    Ay 14345 (S_32): supplement rule preference:ERR-T -> ['ERR-T']
+    Ay 22121 (Ar_40): supplement rule preference:ERR-S -> ['ERR-S']
+    Ay 10509 (C_0): supplement rule preference:ERR-S -> ['ERR-S']
+    Ay 21664 (C_0): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    Ay O0208 via ('ERR-2',)
+    Ay O0328 via ('ERR-1', 'ERR-DIG')
+    Ay C1177 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    Ay E0243 (C_12): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    Ay O0216 (C_12): supplement rule preference:ERR-T -> ['ERR-T']
+    Ay O0224 (C_12): supplement rule preference:ERR-T -> ['ERR-T']
+    Ay O0495 (C_12): supplement rule preference:ERR-T -> ['ERR-T']
+    Ay O1242 (C_12): supplement rule preference:ERR-DIG -> ['ERR-DIG']
+    Ay O0434 (O_16): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    Ay O0484 (O_16): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    Ay O0495 (O_16): supplement rule preference:ERR-T -> ['ERR-T']
+    Ay F0819 (O_18): supplement rule preference:ERR-S -> ['ERR-S']
+    Ay C0084 (Si_28): supplement rule quadrature:DATA-ERRn -> ['DATA-ERR1', 'DATA-ERR2']
+    Ay O0434 (Ar_40): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    Ay O0396 (Si_0): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+  dropped
+    neutron Ay 13979 (O_16): parse failed
+    neutron Ay 11574 (Si_0): parse failed
+    20502003: one or more uncertainties below the Ay floor 0.001
+    20502003: one or more uncertainties below the Ay floor 0.001
+    20502003: one or more uncertainties below the Ay floor 0.001
+    20502003: one or more uncertainties below the Ay floor 0.001
+    20502003: one or more uncertainties below the Ay floor 0.001
+    20502003: one or more uncertainties below the Ay floor 0.001
+    20502003: one or more uncertainties below the Ay floor 0.001
+    40043007: one or more uncertainties below the Ay floor 0.001
+    proton Ay E1406 (C_12): parse failed
+    proton Ay O0473 (C_12): parse failed
+    proton Ay O0473 (O_16): parse failed
+    proton Ay C1332 (Mg_24): parse failed
+    proton Ay E0796 (Mg_24): parse failed
+    proton Ay C1332 (S_32): parse failed
+    C1278003: one or more uncertainties below the Ay floor 0.001
+    O0208010: one or more uncertainties below the Ay floor 0.001
+    C1177003: one or more uncertainties below the Ay floor 0.001
+    C1177003: one or more uncertainties below the Ay floor 0.001
+    C1177003: one or more uncertainties below the Ay floor 0.001
+    C1177003: one or more uncertainties below the Ay floor 0.001
+    C1177003: one or more uncertainties below the Ay floor 0.001
+    C1177003: one or more uncertainties below the Ay floor 0.001
+    C1177003: one or more uncertainties below the Ay floor 0.001
+    C1177003: one or more uncertainties below the Ay floor 0.001
+    C1177003: one or more uncertainties below the Ay floor 0.001
+    C1177003: one or more uncertainties below the Ay floor 0.001
+    C1177003: one or more uncertainties below the Ay floor 0.001
+    O0216002: one or more uncertainties below the Ay floor 0.001
+    C2713005: one or more uncertainties below the Ay floor 0.001
+    O0434005: one or more uncertainties below the Ay floor 0.001
+    O0484002: one or more uncertainties below the Ay floor 0.001
+    F0819004: one or more uncertainties below the Ay floor 0.001
+    C1426005: one or more uncertainties below the Ay floor 0.001
+    E1677009: one or more uncertainties below the Ay floor 0.001
+    E1677010: one or more uncertainties below the Ay floor 0.001
+    E1677011: one or more uncertainties below the Ay floor 0.001
+    E1677012: one or more uncertainties below the Ay floor 0.001
+    E1677013: one or more uncertainties below the Ay floor 0.001
+    E1677014: one or more uncertainties below the Ay floor 0.001
+    E1677015: one or more uncertainties below the Ay floor 0.001
+    C1329002: one or more uncertainties below the Ay floor 0.001
+    C1329002: one or more uncertainties below the Ay floor 0.001
+    C1329002: one or more uncertainties below the Ay floor 0.001
+    O0434007: one or more uncertainties below the Ay floor 0.001
+    O0396007: one or more uncertainties below the Ay floor 0.001
+    D0191002 (Mg_24 185.0): natural sample (EXFOR SAMPLE), 79.0% Mg_24: below the 90% natural-target threshold
+    22121022 (Ar_40 7.75): 40Ar n Ay 7.8 MeV: same source and resolution as 22121004
+    13582006 (C_12 2.191): only 2 distinct angles
+    12927004 (S_32 10.0): same data as 14345005 (natural S, n Ay 10 and 14 MeV)
+    12927004 (S_32 14.0): same data as 14345005 (natural S, n Ay 10 and 14 MeV)
+    12927004 (S_32 17.0): same data as 14345005 (natural S, n Ay 10 and 14 MeV)
+    D0292002 (C_12 5.4): 12C Ay 8.6 MeV, the same values as C1018004 (both Rosen et al., PR 124, 199 (1961) and NP 33, 458 (1962))
+    D0292002 (C_12 6.6): 12C Ay 8.6 MeV, the same values as C1018004 (both Rosen et al., PR 124, 199 (1961) and NP 33, 458 (1962))
+    D0292002 (C_12 7.4): 12C Ay 8.6 MeV, the same values as C1018004 (both Rosen et al., PR 124, 199 (1961) and NP 33, 458 (1962))
+    D0292002 (C_12 8.6): 12C Ay 8.6 MeV, the same values as C1018004 (both Rosen et al., PR 124, 199 (1961) and NP 33, 458 (1962))
+    D0292002 (C_12 10.3): 12C Ay 8.6 MeV, the same values as C1018004 (both Rosen et al., PR 124, 199 (1961) and NP 33, 458 (1962))
+    D0292002 (C_12 14.2): 12C Ay 8.6 MeV, the same values as C1018004 (both Rosen et al., PR 124, 199 (1961) and NP 33, 458 (1962))
+    D0292002 (C_12 19.7): 12C Ay 8.6 MeV, the same values as C1018004 (both Rosen et al., PR 124, 199 (1961) and NP 33, 458 (1962))
+    E0926003 (C_12 65.0): C_12 p elastic_ay 65.0 MeV: within 3 % of E0243005 at 65.0 MeV, which is kept
+    E2076031 (C_12 64.9): C_12 p elastic_ay 64.9 MeV: within 3 % of E0243005 at 65.0 MeV, which is kept
+    F0566003 (C_12 21.1): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 22.3): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 23.5): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 24.6): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 26.4): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 28.1): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 29.7): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 32.7): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 34.5): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 39.6): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 44.7): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 49.6): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 54.4): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 59.5): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 64.9): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 69.5): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 74.8): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 79.8): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    F0566003 (C_12 83.4): the Ieiri/Sakaguchi 12C Ay 21-84 MeV, re-reported by the authors as E2076 (as F0566002 for dsigma)
+    O0257007 (C_12 38.0): EXFOR data set 1 of O0257007 is the asymmetry (beam polarisation 0.20-0.29 x Ay), not the analysing power; data set 2, the Ay itself, is kept
+    O1177002 (C_12 150.0): dropped for now: C_12 p elastic_ay: 14 of 23 points carry only the EXFOR reader (digitisation) error
+    C1177003 (C_12 14.0226): only 4 distinct angles
+    C1177003 (C_12 14.02264): only 4 distinct angles
+    C1177003 (C_12 14.02267): only 4 distinct angles
+    C1177003 (C_12 14.0227): only 4 distinct angles
+    C1177003 (C_12 14.02274): only 4 distinct angles
+    C1177003 (C_12 14.02277): only 4 distinct angles
+    C1177003 (C_12 14.02282): only 4 distinct angles
+    C1177003 (C_12 14.02286): only 4 distinct angles
+    C1177003 (C_12 14.02289): only 4 distinct angles
+    C1177003 (C_12 14.02292): only 4 distinct angles
+    C1177003 (C_12 14.02336): only 4 distinct angles
+    C1177003 (C_12 14.0234): only 4 distinct angles
+    C1177003 (C_12 14.02343): only 4 distinct angles
+    C1177003 (C_12 14.02346): only 4 distinct angles
+    C1177003 (C_12 14.0235): only 4 distinct angles
+    C1177003 (C_12 14.02354): only 4 distinct angles
+    C1177003 (C_12 14.02357): only 4 distinct angles
+    C1177003 (C_12 14.02361): only 4 distinct angles
+    C1177003 (C_12 14.02364): only 4 distinct angles
+    C1177003 (C_12 14.02368): only 4 distinct angles
+    C1177003 (C_12 14.02372): only 4 distinct angles
+    O0032052 (O_16 65.0): same data as E0166002 (16O, 65 MeV)
+    O0492003 (O_16 3.0): dropped for now: O_16 p elastic_ay: 1 of 5 points carry only the EXFOR reader (digitisation) error
+    O0492003 (O_16 3.4): dropped for now: O_16 p elastic_ay: 1 of 5 points carry only the EXFOR reader (digitisation) error
+    O0492003 (O_16 5.66): dropped for now: O_16 p elastic_ay: 2 of 7 points carry only the EXFOR reader (digitisation) error
+    O0492003 (O_16 6.0): dropped for now: O_16 p elastic_ay: 1 of 12 points carry only the EXFOR reader (digitisation) error
+    O0492003 (O_16 7.01): dropped for now: O_16 p elastic_ay: 1 of 14 points carry only the EXFOR reader (digitisation) error
+    O0492003 (O_16 8.5): dropped for now: O_16 p elastic_ay: 3 of 14 points carry only the EXFOR reader (digitisation) error
+    O0492003 (O_16 9.5): dropped for now: O_16 p elastic_ay: 4 of 11 points carry only the EXFOR reader (digitisation) error
+    O0492003 (O_16 10.74): dropped for now: O_16 p elastic_ay: 1 of 11 points carry only the EXFOR reader (digitisation) error
+    O0032003 (Ne_20 65.0): same data as E0166004 (20Ne, 65 MeV)
+    E0926013 (Mg_24 65.0): Mg_24 p elastic_ay 65.0 MeV: within 3 % of E0166007 at 65.0 MeV, which is kept
+    O0032053 (Mg_24 65.0): same data as E0166006 (24Mg, 65 MeV)
+    C0796003 (Si_28 180.0): 28Si Ay 180 MeV, the same data as C0152004 (Chen et al., PRC 41, 2514 (1990), compiled twice)
+    O0032054 (Si_28 65.0): same data as E0166008 (28Si, 65 MeV)
+    O0032055 (Ar_40 65.0): same data as E0166010 (40Ar, 65 MeV)
+  dropped as too sparse to constrain an optical potential (< 5 angles): 1254 measurements of 43 subentries
+    10248002: 19
+    10337002: 7
+    10808002: 53
+    10808003: 55
+    10808004: 56
+    10808005: 47
+    10808006: 45
+    10808007: 50
+    10808008: 51
+    10808009: 52
+    10808010: 50
+    13017002: 6
+    13105002: 3
+    13106002: 11
+    13582006: 12
+    13582007: 57
+    30212003: 19
+    C2713003: 35
+    D0349002: 11
+    D5104002: 8
+    E0243003: 10
+    F0961002: 46
+    F0961004: 43
+    F0961005: 8
+    F0961006: 126
+    O0267010: 101
+    O0267019: 1
+    O0268002: 21
+    O0268003: 7
+    O0268004: 11
+    O0268005: 10
+    O0268006: 23
+    O0268007: 9
+    O0268008: 15
+    O0268009: 9
+    O0268012: 11
+    O0486004: 18
+    O0492004: 34
+    O0492006: 6
+    O0492007: 28
+    O0495002: 7
+    O0495003: 7
+    O1367003: 56
+
+elm_light/charge_exchange
+  targets                6
+  measurements           13
+  data points            163
+  excluded
+    dXS/dA E1667 (O_18): sums the unresolved 18F quartet at 0.937 (3+), 1.042 (0+ IAS), 1.081 (0-) and 1.121 (5+) MeV, so it is not the analog transition alone
+    dXS/dA E1673 (O_18): the 1.0 MeV group is the same unresolved quartet, and most points carry no uncertainty
+    dXS/dA E1361 (S_34): the same Tohoku 35 MeV measurement as E1667009, with most uncertainties missing
+    dXS/dA C0733 (Mg_26): 5.5 MeV transition to the 26Al 5+ ground state, not the 0+ analog at 0.228 MeV
+    D0049008 (Mg_26 23.0 MeV, Ex None): 26Al 5+ ground state (EXFOR E-EXC 0.00), not the 0+ analog at 0.228 MeV
+    D0049008 (Mg_26 23.0 MeV, Ex 0.418): 26Al 3+ level at 0.417 MeV, not the 0+ analog at 0.228 MeV
+  repaired
+    dXS/dA C0807 (C_14): supplement rule preference:DATA-ERR -> ['DATA-ERR']
+    dXS/dA E1673 (O_18): supplement rule preference:ERR-T -> ['ERR-T']
+  dropped
+    proton dXS/dA C0132 (C_14): parse failed
+    proton dXS/dA C1016 (O_18): parse failed
+    proton dXS/dA C0133 (Mg_26): parse failed
+    proton dXS/dA E1793 (Mg_26): parse failed
+    proton dXS/dA C2570 (Ar_40): parse failed
+    C1523005: one or more uncertainties below the dXS/dA floor 1e-09
+    C1523005: one or more uncertainties below the dXS/dA floor 1e-09
+    C1523005: one or more uncertainties below the dXS/dA floor 1e-09
+    E1486002: one or more uncertainties below the dXS/dA floor 1e-09
+    E1360003: one or more uncertainties below the dXS/dA floor 1e-09
+    E1667006: one or more uncertainties below the dXS/dA floor 1e-09
+    E1667006: one or more uncertainties below the dXS/dA floor 1e-09
+  dropped as too sparse to constrain an optical potential (< 5 angles): 1 measurements of 1 subentries
+    C0807002: 1
+
+elm_light/neutron_total
+  targets                8
+  measurements           244
+  data points            112879
+  repaired
+    22184003: 179 of 1652 points above 5 MeV removed
+    14203002: 121 of 7347 points <= 0 removed
+    14203003: 8 of 7679 points <= 0 removed
+  dropped
+    10403004 (C_12): incident energy column in '', not an energy
+    10194005 (C_0): incident energy column in '', not an energy
+    10196002 (C_0): incident energy column in '', not an energy
+    11206003 (C_0): incident energy column in '', not an energy
+    13026004 (C_0): incident energy column in '', not an energy
+    23532002 (C_0): incident energy column in 'MILLI-EV', not an energy
+    10195002 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    10410006 (Ar_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    10618008 (S_34): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    10992002 (O_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11020003 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11145005 (Si_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11145006 (S_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11150005 (O_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11150006 (Ar_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11197008 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11197009 (O_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11215008 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11260004 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11260005 (O_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11260011 (S_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11261005 (O_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11261010 (S_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11265002 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11279002 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11279003 (O_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11282002 (C_12): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11294002 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11294003 (O_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11294005 (Si_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11294006 (S_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11316006 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11317002 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11344002 (C_0): not retrieved: retrieval failed: XS: AttributeError: 'NoneType' object has no attribute 'total_len'
+    11352002 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11359002 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11361002 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11363003 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11363004 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11363005 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11363006 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11363007 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11363008 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11379002 (O_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11392002 (O_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11428002 (O_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11432006 (O_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11452007 (Mg_26): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11473004 (Si_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11534003 (Si_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11534004 (S_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11547002 (Si_0): not retrieved: retrieval failed: XS: AttributeError: 'NoneType' object has no attribute 'total_len'
+    11560003 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11563002 (Ar_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    11576002 (Si_0): not retrieved: retrieval failed: XS: AttributeError: 'NoneType' object has no attribute 'total_len'
+    11595002 (Si_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    12683002 (S_34): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    13041005 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    13041009 (Si_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    13582010 (Mg_24): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    13759004 (C_0): not retrieved: retrieval failed: XS: AttributeError: 'NoneType' object has no attribute 'total_len'
+    13759002 (Si_0): not retrieved: retrieval failed: XS: AttributeError: 'NoneType' object has no attribute 'total_len'
+    13759003 (Si_0): not retrieved: retrieval failed: XS: AttributeError: 'NoneType' object has no attribute 'total_len'
+    13766002 (Si_0): not retrieved: retrieval failed: XS: AttributeError: 'NoneType' object has no attribute 'total_len'
+    13766003 (Si_0): not retrieved: retrieval failed: XS: AttributeError: 'NoneType' object has no attribute 'total_len'
+    13773002 (C_0): not retrieved: retrieval failed: XS: AttributeError: 'NoneType' object has no attribute 'total_len'
+    13873002 (S_0): not retrieved: retrieval failed: XS: AttributeError: 'NoneType' object has no attribute 'total_len'
+    13873003 (S_0): not retrieved: retrieval failed: XS: AttributeError: 'NoneType' object has no attribute 'total_len'
+    13873004 (S_0): not retrieved: retrieval failed: XS: AttributeError: 'NoneType' object has no attribute 'total_len'
+    14181002 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    14232002 (C_12): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    14232003 (C_12): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    14689002 (C_12): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    14689009 (S_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    14689010 (S_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    14806002 (Si_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    20010002 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    20010003 (O_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    20010005 (S_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    20012002 (Si_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    20202003 (Ne_0): not retrieved: uncertainty unresolved (unrecognised): no preferred uncertainty column among ['ERR-1']
+    20261003 (Ne_20): not retrieved: uncertainty unresolved (unrecognised): no preferred uncertainty column among ['ERR-1']
+    20311002 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    20909003 (C_12): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    20955024 (Si_0): not retrieved: uncertainty unresolved (unrecognised): no preferred uncertainty column among ['ERR-1']
+    21144002 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    21149004 (C_12): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    21149005 (C_12): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    21149002 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    21149003 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    21251003 (C_12): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    21251004 (O_16): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    21251007 (O_16): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    22007002 (Si_0): not retrieved: uncertainty unresolved (unrecognised): no preferred uncertainty column among ['TEMP-ERR']
+    22007003 (Si_0): not retrieved: uncertainty unresolved (unrecognised): no preferred uncertainty column among ['TEMP-ERR']
+    22610002 (C_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    22610003 (Si_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    22628002 (C_12): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    22628004 (Si_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    22628005 (S_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    30343004 (S_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    10017003: no data in the tabulated energy range 0.1-200.0 MeV
+    10017004: no data in the tabulated energy range 0.1-200.0 MeV
+    10082003: no data in the tabulated energy range 0.1-200.0 MeV
+    10943004: no data in the tabulated energy range 0.1-200.0 MeV
+    10992004: one or more data points carry no uncertainty
+    11026004: no data in the tabulated energy range 0.1-200.0 MeV
+    11026005: no data in the tabulated energy range 0.1-200.0 MeV
+    11026012: no data in the tabulated energy range 0.1-200.0 MeV
+    11026013: no data in the tabulated energy range 0.1-200.0 MeV
+    11059003: one or more data points carry no uncertainty
+    11060004: one or more data points carry no uncertainty
+    11060005: one or more data points carry no uncertainty
+    11060015: one or more data points carry no uncertainty
+    11060007: one or more data points carry no uncertainty
+    11060008: one or more data points carry no uncertainty
+    11087007: no data in the tabulated energy range 0.1-200.0 MeV
+    11106003: one or more data points carry no uncertainty
+    11106005: one or more data points carry no uncertainty
+    11112005: no data in the tabulated energy range 0.1-200.0 MeV
+    11175006: no data in the tabulated energy range 0.1-200.0 MeV
+    11175007: no data in the tabulated energy range 0.1-200.0 MeV
+    11176012: no data in the tabulated energy range 0.1-200.0 MeV
+    11176005: no data in the tabulated energy range 0.1-200.0 MeV
+    11244004: one or more data points carry no uncertainty
+    11284004: one or more data points carry no uncertainty
+    11381003: one or more data points carry no uncertainty
+    11382002: one or more data points carry no uncertainty
+    11419003: one or more data points carry no uncertainty
+    11432003: no data in the tabulated energy range 0.1-200.0 MeV
+    11432006: no data in the tabulated energy range 0.1-200.0 MeV
+    11432002: no data in the tabulated energy range 0.1-200.0 MeV
+    11499003: one or more data points carry no uncertainty
+    11558002: one or more data points carry no uncertainty
+    11575005: no data in the tabulated energy range 0.1-200.0 MeV
+    12589004: no data in the tabulated energy range 0.1-200.0 MeV
+    12661003: no data in the tabulated energy range 0.1-200.0 MeV
+    12839003: one or more data points carry no uncertainty
+    13568005: no data in the tabulated energy range 0.1-200.0 MeV
+    13568006: no data in the tabulated energy range 0.1-200.0 MeV
+    13568008: no data in the tabulated energy range 0.1-200.0 MeV
+    13733003: no data in the tabulated energy range 0.1-200.0 MeV
+    13733004: no data in the tabulated energy range 0.1-200.0 MeV
+    13761002: no data in the tabulated energy range 0.1-200.0 MeV
+    13761003: no data in the tabulated energy range 0.1-200.0 MeV
+    14031002: one or more data points carry no uncertainty
+    14170002: one or more data points carry no uncertainty
+    14225002: no data in the tabulated energy range 0.1-200.0 MeV
+    14824002: no data in the tabulated energy range 0.1-200.0 MeV
+    20420003: no data in the tabulated energy range 0.1-200.0 MeV
+    20420004: no data in the tabulated energy range 0.1-200.0 MeV
+    20603004: no data in the tabulated energy range 0.1-200.0 MeV
+    20793003: no data in the tabulated energy range 0.1-200.0 MeV
+    20857018: no data in the tabulated energy range 0.1-200.0 MeV
+    20857019: no data in the tabulated energy range 0.1-200.0 MeV
+    20910004: one or more data points carry no uncertainty
+    21016002: no data in the tabulated energy range 0.1-200.0 MeV
+    21016004: no data in the tabulated energy range 0.1-200.0 MeV
+    21227005: no data in the tabulated energy range 0.1-200.0 MeV
+    21227008: no data in the tabulated energy range 0.1-200.0 MeV
+    21285002: no data in the tabulated energy range 0.1-200.0 MeV
+    21285003: no data in the tabulated energy range 0.1-200.0 MeV
+    21353003: no data in the tabulated energy range 0.1-200.0 MeV
+    21353004: no data in the tabulated energy range 0.1-200.0 MeV
+    21680004: no data in the tabulated energy range 0.1-200.0 MeV
+    21680005: no data in the tabulated energy range 0.1-200.0 MeV
+    21864003: no data in the tabulated energy range 0.1-200.0 MeV
+    22217004: no data in the tabulated energy range 0.1-200.0 MeV
+    22217006: no data in the tabulated energy range 0.1-200.0 MeV
+    22217005: no data in the tabulated energy range 0.1-200.0 MeV
+    23198003: no data in the tabulated energy range 0.1-200.0 MeV
+    23198004: no data in the tabulated energy range 0.1-200.0 MeV
+    23721002: no data in the tabulated energy range 0.1-200.0 MeV
+    23721002: no data in the tabulated energy range 0.1-200.0 MeV
+    23721003: no data in the tabulated energy range 0.1-200.0 MeV
+    23721004: no data in the tabulated energy range 0.1-200.0 MeV
+    23721005: no data in the tabulated energy range 0.1-200.0 MeV
+    30466002: no data in the tabulated energy range 0.1-200.0 MeV
+    30469002: no data in the tabulated energy range 0.1-200.0 MeV
+    30747002: no data in the tabulated energy range 0.1-200.0 MeV
+    40615002: no data in the tabulated energy range 0.1-200.0 MeV
+    40615005: no data in the tabulated energy range 0.1-200.0 MeV
+    40729002: no data in the tabulated energy range 0.1-200.0 MeV
+    40810003: no data in the tabulated energy range 0.1-200.0 MeV
+    40980002: no data in the tabulated energy range 0.1-200.0 MeV
+    41208003: no data in the tabulated energy range 0.1-200.0 MeV
+    41261006: no data in the tabulated energy range 0.1-200.0 MeV
+    41261007: no data in the tabulated energy range 0.1-200.0 MeV
+    41382006: no data in the tabulated energy range 0.1-200.0 MeV
+    41382007: no data in the tabulated energy range 0.1-200.0 MeV
+    41422002: no data in the tabulated energy range 0.1-200.0 MeV
+
+elm_light/proton_reaction
+  targets                6
+  measurements           26
+  data points            240
+  dropped
+    E2041002 (Si_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    E2041002 (Si_0): not retrieved: uncertainty unresolved (no-uncertainty): subentry reports no uncertainty on the observable
+    A0057002: no data in the tabulated energy range 0.1-200.0 MeV
+    C1219007: no data in the tabulated energy range 0.1-200.0 MeV
+    C1232003: no data in the tabulated energy range 0.1-200.0 MeV
+    C1862002: one or more data points carry no uncertainty
+    C1862002: one or more data points carry no uncertainty
+    C2651003: no data in the tabulated energy range 0.1-200.0 MeV
+    O0213003: no data in the tabulated energy range 0.1-200.0 MeV
+    O0837005: no data in the tabulated energy range 0.1-200.0 MeV
+
+## same target/projectile/sector/energy, different EXFOR entries
+
+  (8470 further pairs judged distinct: elm_light.near_duplicates)
+
+## (p,n) records whose final state is not tabulated within 50 keV of the IAS
+
+  S_34 E1667009 35.0 MeV: Ex None vs IAS 0.0 MeV
+
+## summed (quasi-elastic) records
+
+
+## drop-table keys matching no record
+
+  none
+
+5441 records; 0 likely-duplicate pairs to review

@@ -84,17 +84,17 @@ def query_elastic(projectile: tuple[int, int], quantities: tuple[str, ...],
     }
 
 
-def query_pn(targets, einc_range, ias_window: float, vocal: bool = False) -> dict:
+def query_pn(targets, einc_range, ias_window: float, vocal: bool = False, ex_ias: dict | None = None) -> dict:
     """Query EXFOR for (p,n) scattering to the isobaric analog state.
 
     The analog state is selected by a window on the residual excitation energy rather
     than by ``elastic_only``. Entries that report the excitation energy some other way
     -- via a Q value, a level number, an analog-state number -- fall outside the window
-    and are re-added by hand in the notebook.
+    and are re-added by hand in the notebook. ``ex_ias``: {(A, Z): Ex MeV}, default spec.ELM_EX_IAS.
     """
     data = {}
     for (A, Z) in targets:
-        ex = spec.ELM_EX_IAS[(A, Z)]
+        ex = (spec.ELM_EX_IAS if ex_ias is None else ex_ias)[(A, Z)]
         settings = {
             "Einc_range": list(einc_range),
             "Ex_range": [ex - ias_window, ex + ias_window],
@@ -228,14 +228,16 @@ def apply_uncertainty_transplant(data: dict, result: ElmSectorResult) -> None:
 
 def finalize(data: dict, sector: str, projectile: str, result: ElmSectorResult,
              default_norm_err: float = munge.DEFAULT_SYSTEMATIC_NORM_ERR,
-             min_points: int = spec.ELM_MIN_NUM_PTS) -> None:
-    """Munge and serialize every measurement of one ELM sector."""
+             min_points: int = spec.ELM_MIN_NUM_PTS, corpus: str = "elm") -> None:
+    """Munge and serialize every measurement of one sector of an ELM-family corpus (spec.ELM_CORPORA)."""
+    if corpus not in spec.ELM_CORPORA:
+        raise ValueError(f"{corpus!r} is not an ELM-family corpus")
     for target, multi in data.items():
         for quantity, entries in multi.data.items():
             for entry_id, entry in entries.entries.items():
                 citation = entry.meta.citation() if entry.meta is not None else ""
                 for measurement in list(entry.measurements):
-                    why = (author_errors.drop_reason(str(measurement.subentry), "elm")
+                    why = (author_errors.drop_reason(str(measurement.subentry), corpus)
                            or _munge_one(measurement, sector, target, projectile, quantity,
                                          default_norm_err, min_points))
                     if why is not None:
@@ -246,7 +248,7 @@ def finalize(data: dict, sector: str, projectile: str, result: ElmSectorResult,
                     # quasi-elastic flag is applied here rather than in retrieve.
                     _flag_summed_scattering(measurement, entry_id)
                     result.records.append(serialize.to_record(
-                        measurement, corpus="elm", sector=sector,
+                        measurement, corpus=corpus, sector=sector,
                         projectile=projectile, target=target, citation=citation,
                     ))
                 # cite only entries that still contribute data

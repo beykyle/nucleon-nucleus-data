@@ -1,0 +1,22 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "proton",
+ "target": "Mg_24",
+ "energies": [
+  17.5,
+  25.0,
+  30.0,
+  35.0,
+  40.0,
+  45.0,
+  48.0
+ ],
+ "settings": [
+  "projectile p",
+  "element mg",
+  "mass 24",
+  "energy energies",
+  "filetotal y"
+ ],
+ "missing_angular": []
+}
