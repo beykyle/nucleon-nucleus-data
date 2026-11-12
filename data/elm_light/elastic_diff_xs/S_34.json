@@ -954,44 +954,25 @@
                 0.4684835507
             ],
             "y_err": [
-                0.030249396536000003,
-                0.0869018446,
-                0.1369522535,
-                0.3194420675,
-                0.4798072181,
-                0.7661929111,
-                1.2730006993,
-                1.7957167383,
-                3.3721029527,
-                1.1473195127,
-                6.6078983575,
-                2.1074170796,
-                2.3390461376,
-                3.2576163953,
-                4.6959142391,
-                9.6293546666,
-                12.9187888218
+                0.219308124886,
+                0.15034019119599998,
+                0.0616285140846,
+                0.04472188945510001,
+                0.1487402376162,
+                0.2911533062064,
+                0.6492303566668001,
+                0.6105436910327999,
+                0.22255879487955,
+                0.057365975636,
+                0.2907475277252,
+                0.0906189344215,
+                0.10759612232899998,
+                0.130304655815,
+                0.0892223705408,
+                0.0799236437328,
+                0.042632003113699996
             ],
-            "systematic_normalization_error": 0.05,
-            "y_err_before_floor": [
-                0.0117465519,
-                0.0869018446,
-                0.1369522535,
-                0.3194420675,
-                0.4798072181,
-                0.7661929111,
-                1.2730006993,
-                1.7957167383,
-                3.3721029527,
-                1.1473195127,
-                6.6078983575,
-                2.1074170796,
-                2.3390461376,
-                3.2576163953,
-                4.6959142391,
-                9.6293546666,
-                12.9187888218
-            ]
+            "systematic_normalization_error": 0.1
         },
         "corpus": "elm_light",
         "sector": "elastic_diff_xs",
@@ -1000,7 +981,9 @@
         "notes": [
             "divided by the Rutherford cross section (semi-relativistic kinematics) to give a ratio to Rutherford",
             "assigned a default normalisation uncertainty of 5%, none reported",
-            "relative error floor 2 % applied at 1 of 17 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
+            "per-point error = EXFOR DATA-ERR read as per cent of the value: Alarcon et al., PRC 31, 697 (1985), 34S(p,p) 29.8 MeV: DATA-ERR filed as MB/SR but the values are per cent (14.5, 11.1, ..., 9.1 against 1867 ... 0.33 mb/sr; read as mb/sr the error reaches 2700 % at 121 deg) (ELM-light review, 2026-11-11)",
+            "normalisation uncertainty 10.0 % from the authors: Alarcon et al., PRC 31, 697 (1985): normalised to an optical-model value calculated at 15 deg (EXFOR MONITOR ... CALC), no absolute uncertainty given: 10 % (ELM-light review, 2026-11-11)",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
         ]
     }

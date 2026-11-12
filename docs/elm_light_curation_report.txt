@@ -11,7 +11,7 @@ EXFOR X4-2025-12-31
 | O_16 | 115/2050 | 223/2515 | 14/161 | 29/763 | — | 51/11277 | 4/103 |
 | O_18 | 43/484 | 14/236 | — | — | — | 4/528 | — |
 | Ne_20 | 2/37 | 22/455 | — | 3/53 | — | 1/99 | 1/5 |
-| Mg_24 | 2/21 | 120/1937 | 1/10 | 114/1613 | — | 1/1600 | 1/7 |
+| Mg_24 | 2/21 | 119/1928 | 1/10 | 114/1613 | — | 1/1600 | 1/7 |
 | Mg_26 | 1/23 | 101/613 | — | 1/25 | 1/19 | — | — |
 | Si_28 | 2586/21505 | 284/2960 | 5/85 | 69/1393 | — | 33/40395 | 3/60 |
 | Si_30 | — | 1/28 | — | 1/28 | 1/13 | — | — |
@@ -21,8 +21,8 @@ EXFOR X4-2025-12-31
 
 elm_light/elastic_diff_xs
   targets                12
-  measurements           4654
-  data points            48715
+  measurements           4653
+  data points            48706
   excluded
     dXS/dA O0553: ratio to Rutherford does not go to 1 at low angle
     dXS/dRuth E0120: no uncertainties
@@ -682,6 +682,7 @@ elm_light/elastic_diff_xs
     O1030004 (Mg_24 2.6): dropped for now: Mg_24 p elastic_diff_xs: 12 of 12 points carry only the EXFOR reader (digitisation) error
     O1030004 (Mg_24 2.8): dropped for now: Mg_24 p elastic_diff_xs: 14 of 14 points carry only the EXFOR reader (digitisation) error
     O1030004 (Mg_24 3.0): dropped for now: Mg_24 p elastic_diff_xs: 10 of 10 points carry only the EXFOR reader (digitisation) error
+    O2096002 (Mg_24 9.63): Greenlees & Souch, PPS A 69, 686 (1956), Mg(p,p) 9.63 MeV coded as 24Mg: a 'piece of pure Mg foil', i.e. natural Mg (79 % 24Mg, excluded); digitised from a figure (CAJAD), ~300x below Rutherford at 7 deg
     C0828008 (Mg_24 17.5): same data as C0618004 (24Mg, 17.5 MeV)
     O1090002 (Mg_24 9.1): dropped for now: Mg_24 p elastic_diff_xs: 26 of 26 points carry only the EXFOR reader (digitisation) error
     F0256004 (Mg_24 35.0): dropped for now: Mg_24 p elastic_diff_xs: 30 of 30 points carry only the EXFOR reader (digitisation) error
@@ -1358,4 +1359,4 @@ elm_light/proton_reaction
 
   none
 
-5442 records; 0 likely-duplicate pairs to review
+5441 records; 0 likely-duplicate pairs to review

@@ -929,3 +929,8 @@ Confidence high.
   is Fannon et al.'s data reanalysed (p.385).
 - **O0480011/012**, N. M. Clarke et al., Nucl. Phys. A 157, 145 (1970): readings of the optical-model fit figures
   (Figs. 8, 9); the data are Fannon et al.'s and the paper's own O0480002/005, which EXFOR holds with errors.
+
+## Alarcon et al., PRC 31, 697 (1985): 34S(p,p) 29.8 MeV (C0826002; ELM-light review, 2026-11-11)
+EXFOR's DATA-ERR column carries per-cent values under the unit MB/SR (e.g. 14.5 at 1867 mb/sr, 9.1 at 0.33 mb/sr);
+`PERCENT_ERR` reads it as per cent of the value. EXFOR MONITOR: "relative to value calculated at 15 degrees", no
+absolute uncertainty: normalisation 10 % (`NORM`). From EXFOR (the paper was not read).

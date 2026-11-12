@@ -275,3 +275,17 @@ apart), Meigooni 12C 20.8-26 MeV (13 m flight path). Dropped (Kyle, `MANUAL_DROP
 Resolved: O0328014 (28Si (p,p), Fricke) failed `test_fricke_is_reader_plus_authors_column` by ~1e-5 because the test
 compared the `_direct` copy (measured − CE, with the CE uncertainty added) against EXFOR; it now uses `y_measured` and
 `y_err_before_compound` for those copies.
+
+## 6. Review before sampling (ELM-Lane-light stage 0, 2026-11-11; Kyle: agreed)
+An adversarial review of the calibration's training sets at the ELM-Lane prior centre found two corpus errors:
+- **O2096002 dropped** (`elm_light.MANUAL_DROPS`): Greenlees & Souch, PPS A 69, 686 (1956), Mg(p,p) 9.63 MeV, coded as
+  24Mg but measured on "a piece of pure Mg foil", i.e. natural Mg (79 % 24Mg; natMg is excluded, decision 5). The
+  sample text names no natural abundance, so `natural_sample` missed it. The CAJAD figure digitisation is also ~300x
+  below Rutherford at 7 deg.
+- **C0826002 errors read as per cent** (`author_errors.PERCENT_ERR`): Alarcon et al., PRC 31, 697 (1985), 34S(p,p)
+  29.8 MeV. EXFOR labels DATA-ERR MB/SR, but its values (14.5, 11.1, ..., 9.1 against 1867 ... 0.33 mb/sr) are per cent:
+  read as mb/sr the median error was 93 % and 2700 % at 121 deg. The data are normalised to an optical-model value
+  at 15 deg (MONITOR ... CALC), so the normalisation uncertainty is 10 % (`NORM`). The reader-error audit reads the
+  column the same way.
+Calibration-level choices from the same review (14C(p,n) below 14 MeV, F1068007, elastic anchors, Pruitt
+normalisation groups) live in the calibration (`calibrations/elm_lane_light/README.md`); the corpus keeps those data.

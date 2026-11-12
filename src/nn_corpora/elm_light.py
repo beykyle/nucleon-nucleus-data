@@ -77,6 +77,9 @@ MANUAL_DROPS: dict[str, str] = {
     "22480002": "Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (12C)",
     "22480003": "Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (natural Si)",
     "22480007": "Baba et al., JNST 39 Suppl. 2, 204 (2002); Ibaraki et al., NIM A 446, 536 (2000), TIARA 55-75 MeV: energy resolution not enough to separate elastic from inelastic; corrected with factors from the LA150 evaluation (as Hjort) (12C 75 MeV)",
+    # ELM-light review before sampling (2026-11-11; Kyle: drop)
+    "O2096002": "Greenlees & Souch, PPS A 69, 686 (1956), Mg(p,p) 9.63 MeV coded as 24Mg: a 'piece of pure Mg foil', "
+                "i.e. natural Mg (79 % 24Mg, excluded); digitised from a figure (CAJAD), ~300x below Rutherford at 7 deg",
     "13946002": "Osborne, Brady & Romero, PRC 70, 054613 (2004), 12C 65-185 MeV: resolution 2.5-4.5 MeV does not resolve "
                 "the 4.44 MeV 2+; its contribution estimated with DWUCK4 (< 1 %; Kyle: no model-corrected inelastic)",
     "20240003": "Deconninck & Meulders, PRC 1, 1326 (1970), 12C 17-20 MeV: 3.5 ns over 2 m (about 3-4 MeV at 20 MeV); "

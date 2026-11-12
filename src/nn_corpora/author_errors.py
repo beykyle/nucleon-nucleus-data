@@ -193,6 +193,13 @@ COLUMNS = {
     "E0243005": (["ERR-T"], [], "ERR-T is the total Delta P (relative (+) the normalisation at 47.5 deg), DATA-ERR its "
                                 "relative part (Kato et al., NIM 169 (1980) 589, Table 2)"),
 }
+#: subentry -> (column, why): an error column EXFOR labels with the data's units but which holds per-cent values; the
+#: per-point error is that column / 100 x |y|
+PERCENT_ERR = {
+    "C0826002": ("DATA-ERR", "Alarcon et al., PRC 31, 697 (1985), 34S(p,p) 29.8 MeV: DATA-ERR filed as MB/SR but the "
+                 "values are per cent (14.5, 11.1, ..., 9.1 against 1867 ... 0.33 mb/sr; read as mb/sr the error "
+                 "reaches 2700 % at 121 deg) (ELM-light review, 2026-11-11)"),
+}
 #: entry -> columns ERR-ANALYS (or their values) show to be a common uncertainty, not a per-point one
 COMMON = {
     "D0289": ({"DATA-ERR1", "DATA-ERR"}, "DATA-ERR1 an undescribed constant 5 % (cross sections); DATA-ERR the "
@@ -246,6 +253,8 @@ NORM = {
     "F0996": (0.10, "Hulubei: accuracy of the absolute cross sections 10 %"),
     "D0049": (0.11, "Carlson et al., NPA 249 (1975) 29, p.36: error bars are relative only; absolute cross sections "
               "+-11 %"),
+    "C0826002": (0.10, "Alarcon et al., PRC 31, 697 (1985): normalised to an optical-model value calculated at "
+                 "15 deg (EXFOR MONITOR ... CALC), no absolute uncertainty given: 10 % (ELM-light review, 2026-11-11)"),
     "D0049035": (0.25, "Carlson et al., NPA 249 (1975) 29, p.36: absolute cross sections +-25 % for 208Pb"),
 }
 # angle-integrated (energy-distribution) records: neutron total and proton reaction cross sections
@@ -489,7 +498,10 @@ def audit_record(rec: dict) -> dict | None:
         y = np.asarray(rec["data"]["y"], dtype=float)
         factor, ok = unit_factor(p, idx, y, is_ay)
         ok &= np.array([np.sum(x == v) == 1 for v in x])
-        author = np.max(list(p.author.values()), axis=0)[idx] * factor
+        if sub[:8] in PERCENT_ERR:  # the column is per cent of the value (PERCENT_ERR), not in the data's units
+            author = p.author[PERCENT_ERR[sub[:8]][0]][idx] / 100.0 * np.abs(y)
+        else:
+            author = np.max(list(p.author.values()), axis=0)[idx] * factor
         ye = np.asarray(rec["data"]["y_err"], dtype=float)
         unused = [float(x[k]) for k in np.flatnonzero(ok & (ye < 0.95 * author))]
     if not mask.any() and not unused:
@@ -624,6 +636,15 @@ def correct(payload: dict, corpus: str) -> dict | None:
         data["y_err"] = [v * scale * e / 100 for _, v, e in t]
         _note(payload, f"values and errors replaced by Doering thesis (MSU 1974) Table 5, {len(t)} rows "
                        f"(EXFOR {len(x)} digitised points); external/doering_1974_table5.csv")
+        changed = True
+    elif sub in PERCENT_ERR:  # 3. an error column in per cent, labelled with the data's units
+        label, why = PERCENT_ERR[sub]
+        p, idx = _matched(sub, x, energy, is_ay)
+        pct = p.author[label][idx]
+        if not (pct > 0).all():
+            raise ValueError(f"{sub} at {energy} MeV: no {label} at {list(x[pct <= 0])} deg")
+        data["y_err"] = [float(v) for v in pct / 100.0 * np.abs(y)]
+        _note(payload, f"per-point error = EXFOR {label} read as per cent of the value: {why}")
         changed = True
     elif entry in COLUMN_AUTHOR:  # 3a. the authors' column, filled where blank
         p, idx = _matched(sub, x, energy, is_ay)
