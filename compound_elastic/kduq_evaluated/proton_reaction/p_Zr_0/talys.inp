@@ -1,0 +1,30 @@
+# natural Zr: A = 90, abundance 0.514500
+projectile p
+element zr
+mass 90
+energy energies
+filetotal y
+# natural Zr: A = 91, abundance 0.112200
+projectile p
+element zr
+mass 91
+energy energies
+filetotal y
+# natural Zr: A = 92, abundance 0.171500
+projectile p
+element zr
+mass 92
+energy energies
+filetotal y
+# natural Zr: A = 94, abundance 0.173800
+projectile p
+element zr
+mass 94
+energy energies
+filetotal y
+# natural Zr: A = 96, abundance 0.028000
+projectile p
+element zr
+mass 96
+energy energies
+filetotal y

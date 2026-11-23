@@ -1,0 +1,64 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "neutron",
+ "target": "Ce_0",
+ "energies": [
+  0.98,
+  3.2,
+  21.6
+ ],
+ "settings": [
+  "# natural Ce: A = 136, abundance 0.001850",
+  "projectile n",
+  "element ce",
+  "mass 136",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ce: A = 138, abundance 0.002510",
+  "projectile n",
+  "element ce",
+  "mass 138",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ce: A = 140, abundance 0.884500",
+  "projectile n",
+  "element ce",
+  "mass 140",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ce: A = 142, abundance 0.111140",
+  "projectile n",
+  "element ce",
+  "mass 142",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": [],
+ "natural": true,
+ "isotopes": [
+  {
+   "A": 136,
+   "abundance": 0.00185
+  },
+  {
+   "A": 138,
+   "abundance": 0.00251
+  },
+  {
+   "A": 140,
+   "abundance": 0.8845000000000001
+  },
+  {
+   "A": 142,
+   "abundance": 0.11114
+  }
+ ]
+}

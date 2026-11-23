@@ -1,0 +1,50 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "proton",
+ "target": "Cu_0",
+ "energies": [
+  8.8,
+  8.9,
+  9.05,
+  9.15,
+  9.52,
+  9.85,
+  10.19,
+  15.8,
+  16.37,
+  28.0,
+  77.0,
+  95.0,
+  99.0,
+  113.0,
+  133.0,
+  134.0,
+  225.0
+ ],
+ "settings": [
+  "# natural Cu: A = 63, abundance 0.691700",
+  "projectile p",
+  "element cu",
+  "mass 63",
+  "energy energies",
+  "filetotal y",
+  "# natural Cu: A = 65, abundance 0.308300",
+  "projectile p",
+  "element cu",
+  "mass 65",
+  "energy energies",
+  "filetotal y"
+ ],
+ "missing_angular": [],
+ "natural": true,
+ "isotopes": [
+  {
+   "A": 63,
+   "abundance": 0.6917
+  },
+  {
+   "A": 65,
+   "abundance": 0.30829999999999996
+  }
+ ]
+}

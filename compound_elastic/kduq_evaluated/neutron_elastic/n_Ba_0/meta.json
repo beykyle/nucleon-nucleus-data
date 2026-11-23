@@ -1,0 +1,100 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "neutron",
+ "target": "Ba_0",
+ "energies": [
+  1.0,
+  4.1,
+  5.0
+ ],
+ "settings": [
+  "# natural Ba: A = 130, abundance 0.001060",
+  "projectile n",
+  "element ba",
+  "mass 130",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ba: A = 132, abundance 0.001010",
+  "projectile n",
+  "element ba",
+  "mass 132",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ba: A = 134, abundance 0.024170",
+  "projectile n",
+  "element ba",
+  "mass 134",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ba: A = 135, abundance 0.065920",
+  "projectile n",
+  "element ba",
+  "mass 135",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ba: A = 136, abundance 0.078540",
+  "projectile n",
+  "element ba",
+  "mass 136",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ba: A = 137, abundance 0.112320",
+  "projectile n",
+  "element ba",
+  "mass 137",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ba: A = 138, abundance 0.716980",
+  "projectile n",
+  "element ba",
+  "mass 138",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": [],
+ "natural": true,
+ "isotopes": [
+  {
+   "A": 130,
+   "abundance": 0.00106
+  },
+  {
+   "A": 132,
+   "abundance": 0.00101
+  },
+  {
+   "A": 134,
+   "abundance": 0.024169999999999997
+  },
+  {
+   "A": 135,
+   "abundance": 0.06591999999999999
+  },
+  {
+   "A": 136,
+   "abundance": 0.07854
+  },
+  {
+   "A": 137,
+   "abundance": 0.11231999999999999
+  },
+  {
+   "A": 138,
+   "abundance": 0.71698
+  }
+ ]
+}

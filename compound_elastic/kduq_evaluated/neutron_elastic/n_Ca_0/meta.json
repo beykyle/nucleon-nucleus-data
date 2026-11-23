@@ -1,0 +1,99 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "neutron",
+ "target": "Ca_0",
+ "energies": [
+  2.06,
+  3.29,
+  5.3,
+  5.88,
+  6.52,
+  7.91,
+  11.01,
+  19.0,
+  20.0,
+  21.6,
+  26.0,
+  30.3,
+  40.0,
+  65.0
+ ],
+ "settings": [
+  "# natural Ca: A = 40, abundance 0.969371",
+  "projectile n",
+  "element ca",
+  "mass 40",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ca: A = 42, abundance 0.006470",
+  "projectile n",
+  "element ca",
+  "mass 42",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ca: A = 43, abundance 0.001350",
+  "projectile n",
+  "element ca",
+  "mass 43",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ca: A = 44, abundance 0.020899",
+  "projectile n",
+  "element ca",
+  "mass 44",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ca: A = 46, abundance 0.000040",
+  "projectile n",
+  "element ca",
+  "mass 46",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ca: A = 48, abundance 0.001870",
+  "projectile n",
+  "element ca",
+  "mass 48",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": [],
+ "natural": true,
+ "isotopes": [
+  {
+   "A": 40,
+   "abundance": 0.9693709188724338
+  },
+  {
+   "A": 42,
+   "abundance": 0.006469805905822826
+  },
+  {
+   "A": 43,
+   "abundance": 0.0013499595012149636
+  },
+  {
+   "A": 44,
+   "abundance": 0.020899373018809436
+  },
+  {
+   "A": 46,
+   "abundance": 3.999880003599892e-05
+  },
+  {
+   "A": 48,
+   "abundance": 0.0018699439016829494
+  }
+ ]
+}

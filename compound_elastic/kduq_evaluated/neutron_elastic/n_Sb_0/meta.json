@@ -1,0 +1,55 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "neutron",
+ "target": "Sb_0",
+ "energies": [
+  1.55,
+  2.05,
+  2.55,
+  3.0,
+  3.4,
+  4.0,
+  4.5,
+  5.5,
+  5.9,
+  6.5,
+  7.14,
+  7.55,
+  8.08,
+  8.41,
+  9.06,
+  9.5,
+  9.99,
+  14.0
+ ],
+ "settings": [
+  "# natural Sb: A = 121, abundance 0.572100",
+  "projectile n",
+  "element sb",
+  "mass 121",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Sb: A = 123, abundance 0.427900",
+  "projectile n",
+  "element sb",
+  "mass 123",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": [],
+ "natural": true,
+ "isotopes": [
+  {
+   "A": 121,
+   "abundance": 0.5721
+  },
+  {
+   "A": 123,
+   "abundance": 0.4279
+  }
+ ]
+}

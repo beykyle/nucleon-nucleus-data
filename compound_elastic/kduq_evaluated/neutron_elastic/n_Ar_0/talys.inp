@@ -1,0 +1,24 @@
+# natural Ar: A = 36, abundance 0.003365
+projectile n
+element ar
+mass 36
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Ar: A = 38, abundance 0.000632
+projectile n
+element ar
+mass 38
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Ar: A = 40, abundance 0.996003
+projectile n
+element ar
+mass 40
+energy energies
+filetotal y
+outangle y
+fileelastic y

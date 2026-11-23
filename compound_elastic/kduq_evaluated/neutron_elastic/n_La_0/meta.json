@@ -1,0 +1,40 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "neutron",
+ "target": "La_0",
+ "energies": [
+  2.545,
+  3.07,
+  3.578
+ ],
+ "settings": [
+  "# natural La: A = 138, abundance 0.000900",
+  "projectile n",
+  "element la",
+  "mass 138",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural La: A = 139, abundance 0.999100",
+  "projectile n",
+  "element la",
+  "mass 139",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": [],
+ "natural": true,
+ "isotopes": [
+  {
+   "A": 138,
+   "abundance": 0.0009
+  },
+  {
+   "A": 139,
+   "abundance": 0.9991
+  }
+ ]
+}

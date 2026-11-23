@@ -1,0 +1,644 @@
+[
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "C0067002",
+        "source": "R.F.Carlson, R.M.Eisberg, et al., Nuclear Physics 36, 511 (1962);  Data taken from the EXFOR database, file EXFOR C0067001 dated 1962, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                8.9
+            ],
+            "y": [
+                0.89818113
+            ],
+            "y_err": [
+                0.08000569206579568
+            ],
+            "x_err": [
+                null
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                0.895
+            ],
+            "compound_elastic": [
+                0.00318113
+            ],
+            "ce_fraction": [
+                0.003554335195530726
+            ],
+            "talys_model": [
+                0.733236
+            ],
+            "ce_fraction_model": [
+                0.00433848038012318
+            ],
+            "y_err_before_compound": [
+                0.08
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "kduq_evaluated_direct",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Cu-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "derived from the kduq corpus",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "derived from the kduq_evaluated corpus"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "C1211004",
+        "source": "R.Goloskie, K.Strauch, Nuclear Physics 29, 474 (1962);  Data taken from the EXFOR database, file EXFOR C1211001 dated 1962, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                77.0,
+                95.0,
+                113.0,
+                133.0
+            ],
+            "y": [
+                0.7460000000980134,
+                0.7740000000938064,
+                0.7510000000916108,
+                0.7790000000900599
+            ],
+            "y_err": [
+                0.021,
+                0.022,
+                0.025,
+                0.023
+            ],
+            "x_err": [
+                2.5,
+                2.5,
+                2.5,
+                2.5
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                0.746,
+                0.774,
+                0.751,
+                0.779
+            ],
+            "compound_elastic": [
+                9.80134e-11,
+                9.38064e-11,
+                9.16108e-11,
+                9.00598e-11
+            ],
+            "ce_fraction": [
+                1.31385254691689e-10,
+                1.211968992248062e-10,
+                1.2198508655126498e-10,
+                1.1560949935815148e-10
+            ],
+            "talys_model": [
+                0.91391,
+                0.85494,
+                0.811878,
+                0.776673
+            ],
+            "ce_fraction_model": [
+                1.0724622774671467e-10,
+                1.0972278756403958e-10,
+                1.1283813577902099e-10,
+                1.1595587847137728e-10
+            ],
+            "y_err_before_compound": [
+                0.021,
+                0.022,
+                0.025,
+                0.023
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "kduq_evaluated_direct",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Cu-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "derived from the kduq corpus",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "derived from the kduq_evaluated corpus"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "C1212016",
+        "source": "M.Q.Makino, C.N.Waddell, et al., Physics Letters 9, 178 (1964);  Data taken from the EXFOR database, file EXFOR C1212001 dated 1964, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                28.0
+            ],
+            "y": [
+                1.02400000478535
+            ],
+            "y_err": [
+                0.03500000000000003
+            ],
+            "x_err": [
+                null
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                1.024
+            ],
+            "compound_elastic": [
+                4.78535e-09
+            ],
+            "ce_fraction": [
+                4.673193359375e-09
+            ],
+            "talys_model": [
+                1.14941
+            ],
+            "ce_fraction_model": [
+                4.1633098720212975e-09
+            ],
+            "y_err_before_compound": [
+                0.035
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "kduq_evaluated_direct",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Cu-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "derived from the kduq corpus",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "derived from the kduq_evaluated corpus"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "C1864003",
+        "source": "C.Hojvat, G.Jones, Nuclear Instrum.and Methods in Physics Res. 66, 13 (1968);  Data taken from the EXFOR database, file EXFOR C1864001 dated 1968, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                15.8
+            ],
+            "y": [
+                1.0380244546
+            ],
+            "y_err": [
+                0.10700000025150687
+            ],
+            "x_err": [
+                null
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                1.038
+            ],
+            "compound_elastic": [
+                2.44546e-05
+            ],
+            "ce_fraction": [
+                2.3559344894026976e-05
+            ],
+            "talys_model": [
+                1.0540699999999998
+            ],
+            "ce_fraction_model": [
+                2.3200166971832995e-05
+            ],
+            "y_err_before_compound": [
+                0.107
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "kduq_evaluated_direct",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Cu-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "derived from the kduq corpus",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "derived from the kduq_evaluated corpus"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "D0337003",
+        "source": "K.Bearpark, W.R.Graham, et al., Nuclear Instrum.and Methods in Physics Res. 35, 235 (1965);  Data taken from the EXFOR database, file EXFOR D0337001 dated 1965, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                9.15,
+                9.52,
+                9.85,
+                9.85,
+                10.19
+            ],
+            "y": [
+                0.67469224,
+                0.72210414,
+                0.75968924,
+                0.7916892400000001,
+                0.7843456400000001
+            ],
+            "y_err": [
+                0.10500310630671639,
+                0.09700205392909247,
+                0.09300138073093316,
+                0.03200401252749386,
+                0.08700093658823946
+            ],
+            "x_err": [
+                0.7,
+                0.68,
+                0.66,
+                0.66,
+                0.31
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                0.672,
+                0.72,
+                0.758,
+                0.79,
+                0.783
+            ],
+            "compound_elastic": [
+                0.00269224,
+                0.00210414,
+                0.00168924,
+                0.00168924,
+                0.00134564
+            ],
+            "ce_fraction": [
+                0.004006309523809523,
+                0.002922416666666667,
+                0.0022285488126649075,
+                0.002138278481012658,
+                0.0017185696040868453
+            ],
+            "talys_model": [
+                0.754154,
+                0.784065,
+                0.809381,
+                0.809381,
+                0.833863
+            ],
+            "ce_fraction_model": [
+                0.003569880952696664,
+                0.0026836295460197813,
+                0.0020870764201284687,
+                0.0020870764201284687,
+                0.0016137423053906935
+            ],
+            "y_err_before_compound": [
+                0.105,
+                0.097,
+                0.093,
+                0.032,
+                0.087
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "kduq_evaluated_direct",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Cu-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "derived from the kduq corpus",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "derived from the kduq_evaluated corpus"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "D0534006",
+        "source": "P.J.Bulman, J.A.R.Griffith, Nuclear Physics, Section A 111, 315 (1968);  Data taken from the EXFOR database, file EXFOR D0534001 dated 1968, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                9.05
+            ],
+            "y": [
+                0.77087203
+            ],
+            "y_err": [
+                0.02501484299508756
+            ],
+            "x_err": [
+                null
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                0.768
+            ],
+            "compound_elastic": [
+                0.0028720300000000002
+            ],
+            "ce_fraction": [
+                0.0037396223958333337
+            ],
+            "talys_model": [
+                0.7458440000000001
+            ],
+            "ce_fraction_model": [
+                0.003850711408820075
+            ],
+            "y_err_before_compound": [
+                0.025
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "kduq_evaluated_direct",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Cu-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "derived from the kduq corpus",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "derived from the kduq_evaluated corpus"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "D0535008",
+        "source": "P.J.Bulman, G.W.Greenlees, et al., Nuclear Physics 69, 536 (1965);  Data taken from the EXFOR database, file EXFOR D0535001 dated 1965, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                8.8
+            ],
+            "y": [
+                0.73839456
+            ],
+            "y_err": [
+                0.03001727957999232
+            ],
+            "x_err": [
+                null
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                0.735
+            ],
+            "compound_elastic": [
+                0.0033945599999999996
+            ],
+            "ce_fraction": [
+                0.004618448979591836
+            ],
+            "talys_model": [
+                0.7247469999999999
+            ],
+            "ce_fraction_model": [
+                0.0046837862040132626
+            ],
+            "y_err_before_compound": [
+                0.03
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "kduq_evaluated_direct",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Cu-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "derived from the kduq corpus",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "derived from the kduq_evaluated corpus"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "O0213006",
+        "source": "P.U.Renberg, D.F.Measday, et al., Nuclear Physics, Section A 183, 81 (1972);  Data taken from the EXFOR database, file EXFOR O0213001 dated 72, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                225.0,
+                225.0
+            ],
+            "y": [
+                0.7610000000859735,
+                0.7680000000859735
+            ],
+            "y_err": [
+                0.017,
+                0.017
+            ],
+            "x_err": [
+                null,
+                null
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                0.761,
+                0.768
+            ],
+            "compound_elastic": [
+                8.59734e-11,
+                8.59734e-11
+            ],
+            "ce_fraction": [
+                1.129742444152431e-10,
+                1.1194453125e-10
+            ],
+            "talys_model": [
+                0.743191,
+                0.743191
+            ],
+            "ce_fraction_model": [
+                1.1568143317128436e-10,
+                1.1568143317128436e-10
+            ],
+            "y_err_before_compound": [
+                0.017,
+                0.017
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "kduq_evaluated_direct",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Cu-0",
+        "notes": [
+            "restricted to the tabulated energy range 224.95-225.05 MeV, dropping 6 point(s)",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "derived from the kduq corpus",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "derived from the kduq_evaluated corpus"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "O0340014",
+        "source": "P.Kirkby, W.T.Link, Canadian Journal of Physics 44, 1847 (1966);  Data taken from the EXFOR database, file EXFOR O0340001 dated 66, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                99.0
+            ],
+            "y": [
+                0.835000000093049
+            ],
+            "y_err": [
+                0.02338
+            ],
+            "x_err": [
+                null
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                0.835
+            ],
+            "compound_elastic": [
+                9.3049e-11
+            ],
+            "ce_fraction": [
+                1.1143592814371257e-10
+            ],
+            "talys_model": [
+                0.8442000000000001
+            ],
+            "ce_fraction_model": [
+                1.1022151149016819e-10
+            ],
+            "y_err_before_compound": [
+                0.02338
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "kduq_evaluated_direct",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Cu-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "derived from the kduq corpus",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "derived from the kduq_evaluated corpus"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "O0368006",
+        "source": "R.E.Pollock, G.Schrank, Physical Review 140, B575 (1965);  Data taken from the EXFOR database, file EXFOR O0368001 dated 1965, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                16.37
+            ],
+            "y": [
+                0.9550159157
+            ],
+            "y_err": [
+                0.06400000017810825
+            ],
+            "x_err": [
+                null
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                0.955
+            ],
+            "compound_elastic": [
+                1.59157e-05
+            ],
+            "ce_fraction": [
+                1.6665654450261782e-05
+            ],
+            "talys_model": [
+                1.06532
+            ],
+            "ce_fraction_model": [
+                1.4939830285735742e-05
+            ],
+            "y_err_before_compound": [
+                0.064
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "kduq_evaluated_direct",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Cu-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "derived from the kduq corpus",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "derived from the kduq_evaluated corpus"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "O1947004",
+        "source": "J.M.Cassels, J.D.Lawson, Proc.Physical Society (London), Section A 67, 125 (1954);  Data taken from the EXFOR database, file EXFOR O1947001 dated 1954, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                134.0
+            ],
+            "y": [
+                0.7520000000899745
+            ],
+            "y_err": [
+                0.068
+            ],
+            "x_err": [
+                4.0
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                0.752
+            ],
+            "compound_elastic": [
+                8.99745e-11
+            ],
+            "ce_fraction": [
+                1.196469414893617e-10
+            ],
+            "talys_model": [
+                0.775173
+            ],
+            "ce_fraction_model": [
+                1.1607021916398017e-10
+            ],
+            "y_err_before_compound": [
+                0.068
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "kduq_evaluated_direct",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Cu-0",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "derived from the kduq corpus",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "derived from the kduq_evaluated corpus"
+        ]
+    }
+]

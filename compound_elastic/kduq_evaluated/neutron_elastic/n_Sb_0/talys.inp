@@ -1,0 +1,16 @@
+# natural Sb: A = 121, abundance 0.572100
+projectile n
+element sb
+mass 121
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Sb: A = 123, abundance 0.427900
+projectile n
+element sb
+mass 123
+energy energies
+filetotal y
+outangle y
+fileelastic y

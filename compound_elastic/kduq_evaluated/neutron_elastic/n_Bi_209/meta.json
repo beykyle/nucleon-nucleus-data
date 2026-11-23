@@ -1,0 +1,38 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "neutron",
+ "target": "Bi_209",
+ "energies": [
+  2.0,
+  2.5,
+  3.0,
+  3.53,
+  4.0,
+  4.5,
+  5.0,
+  5.5,
+  6.0,
+  6.5,
+  7.0,
+  7.5,
+  7.82,
+  8.0,
+  9.0,
+  10.0,
+  11.0,
+  12.0,
+  20.0,
+  21.6,
+  24.0
+ ],
+ "settings": [
+  "projectile n",
+  "element bi",
+  "mass 209",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": []
+}

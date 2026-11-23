@@ -1,0 +1,61 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "proton",
+ "target": "Pb_0",
+ "energies": [
+  16.31,
+  77.0,
+  95.0,
+  99.2,
+  113.0,
+  133.0,
+  134.0,
+  226.0
+ ],
+ "settings": [
+  "# natural Pb: A = 204, abundance 0.014000",
+  "projectile p",
+  "element pb",
+  "mass 204",
+  "energy energies",
+  "filetotal y",
+  "# natural Pb: A = 206, abundance 0.241000",
+  "projectile p",
+  "element pb",
+  "mass 206",
+  "energy energies",
+  "filetotal y",
+  "# natural Pb: A = 207, abundance 0.221000",
+  "projectile p",
+  "element pb",
+  "mass 207",
+  "energy energies",
+  "filetotal y",
+  "# natural Pb: A = 208, abundance 0.524000",
+  "projectile p",
+  "element pb",
+  "mass 208",
+  "energy energies",
+  "filetotal y"
+ ],
+ "missing_angular": [],
+ "natural": true,
+ "isotopes": [
+  {
+   "A": 204,
+   "abundance": 0.013999999999999999
+  },
+  {
+   "A": 206,
+   "abundance": 0.24100000000000002
+  },
+  {
+   "A": 207,
+   "abundance": 0.221
+  },
+  {
+   "A": 208,
+   "abundance": 0.524
+  }
+ ]
+}

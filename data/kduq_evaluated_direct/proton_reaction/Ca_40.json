@@ -1,0 +1,367 @@
+[
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "O0330003",
+        "source": "R.F.Carlson, A.J.Cox, et al., Physical Review, Part C, Nuclear Physics 12, 1167 (1975);  Data taken from the EXFOR database, file EXFOR O0330001 dated 1975, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                24.9,
+                30.0,
+                35.0,
+                40.0,
+                45.0,
+                48.0
+            ],
+            "y": [
+                0.8764037766999999,
+                0.879800185698,
+                0.8537000121949,
+                0.80730000101484,
+                0.778100000177275,
+                0.7689000001178891
+            ],
+            "y_err": [
+                0.03300000001945018,
+                0.026000000000059684,
+                0.02500000000000027,
+                0.024000000000000004,
+                0.023,
+                0.022
+            ],
+            "x_err": [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                0.8764,
+                0.8798,
+                0.8537,
+                0.8073,
+                0.7781,
+                0.7689
+            ],
+            "compound_elastic": [
+                3.7767e-06,
+                1.85698e-07,
+                1.21949e-08,
+                1.01484e-09,
+                1.7727500000000002e-10,
+                1.17889e-10
+            ],
+            "ce_fraction": [
+                4.309333637608399e-06,
+                2.1106842464196407e-07,
+                1.428476045449221e-08,
+                1.2570791527313265e-09,
+                2.27830613031744e-10,
+                1.533216283001691e-10
+            ],
+            "talys_model": [
+                0.914116,
+                0.8886649999999999,
+                0.860369,
+                0.8307749999999999,
+                0.8013830000000001,
+                0.784744
+            ],
+            "ce_fraction_model": [
+                4.131532540727872e-06,
+                2.0896288252603627e-07,
+                1.4174034629327648e-08,
+                1.2215581836237248e-09,
+                2.2121133091168643e-10,
+                1.5022606098294478e-10
+            ],
+            "y_err_before_compound": [
+                0.033,
+                0.026,
+                0.025,
+                0.024,
+                0.023,
+                0.022
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "kduq_evaluated_direct",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "derived from the kduq corpus",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "derived from the kduq_evaluated corpus"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "O0341003",
+        "source": "J.F.Dicello, G.Igo, Physical Review, Part C, Nuclear Physics 2, 488 (1970);  Data taken from the EXFOR database, file EXFOR O0341001 dated 70, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                10.34,
+                11.38,
+                12.42,
+                12.42,
+                13.45,
+                13.46,
+                13.97,
+                14.48,
+                14.48,
+                14.97,
+                15.51,
+                16.49,
+                17.51,
+                18.54,
+                19.55,
+                20.57,
+                21.59
+            ],
+            "y": [
+                0.5527298,
+                0.7594356,
+                0.7286792,
+                0.7536792,
+                0.93690421,
+                0.95886673,
+                0.88719637,
+                0.84900414,
+                0.9230041400000001,
+                0.82417546,
+                0.76752443,
+                0.7657820630000001,
+                0.8503946769999999,
+                0.8212008009999999,
+                0.806104997,
+                0.8510553061,
+                0.8710291569999999
+            ],
+            "y_err": [
+                0.06071270083535734,
+                0.05445576609747033,
+                0.06309735599957894,
+                0.06709155188350915,
+                0.046034089244984186,
+                0.05003096707920367,
+                0.04401800605327234,
+                0.0420096683769649,
+                0.04700864002651602,
+                0.03500608427629466,
+                0.0390026813157024,
+                0.03500078636299815,
+                0.034000206165464494,
+                0.03500005184130081,
+                0.03300001503322841,
+                0.0340000040483648,
+                0.0320000011954962
+            ],
+            "x_err": [
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05
+            ],
+            "systematic_normalization_error": 0.044721359549995794,
+            "y_measured": [
+                0.505,
+                0.736,
+                0.717,
+                0.742,
+                0.931,
+                0.953,
+                0.883,
+                0.846,
+                0.92,
+                0.822,
+                0.766,
+                0.765,
+                0.85,
+                0.821,
+                0.806,
+                0.851,
+                0.871
+            ],
+            "compound_elastic": [
+                0.047729799999999996,
+                0.0234356,
+                0.011679199999999999,
+                0.011679199999999999,
+                0.00590421,
+                0.00586673,
+                0.00419637,
+                0.00300414,
+                0.00300414,
+                0.00217546,
+                0.00152443,
+                0.0007820629999999999,
+                0.000394677,
+                0.00020080100000000002,
+                0.000104997,
+                5.5306099999999996e-05,
+                2.9157e-05
+            ],
+            "ce_fraction": [
+                0.09451445544554454,
+                0.031841847826086955,
+                0.016288981868898187,
+                0.015740161725067384,
+                0.0063417937701396344,
+                0.006156065057712487,
+                0.004752400906002265,
+                0.003550992907801419,
+                0.0032653695652173913,
+                0.0026465450121654507,
+                0.001990117493472585,
+                0.0010223045751633986,
+                0.0004643258823529412,
+                0.00024458099878197324,
+                0.00013026923076923076,
+                6.498954171562866e-05,
+                3.3475315729047074e-05
+            ],
+            "talys_model": [
+                0.7643099999999999,
+                0.803997,
+                0.83485,
+                0.83485,
+                0.8574579999999999,
+                0.857645,
+                0.866446,
+                0.8737849999999999,
+                0.8737849999999999,
+                0.879506,
+                0.884445,
+                0.890698,
+                0.89546,
+                0.90023,
+                0.905323,
+                0.910339,
+                0.914323
+            ],
+            "ce_fraction_model": [
+                0.06244822127147362,
+                0.029148864983327055,
+                0.013989578966281366,
+                0.013989578966281366,
+                0.006885713352723982,
+                0.0068405109340111585,
+                0.004843198537473771,
+                0.0034380768724571837,
+                0.0034380768724571837,
+                0.0024735021705366424,
+                0.0017236006761302285,
+                0.0008780338565933682,
+                0.0004407533558171219,
+                0.00022305521922175446,
+                0.00011597739149452737,
+                6.07533017919698e-05,
+                3.1889168269856496e-05
+            ],
+            "y_err_before_compound": [
+                0.059,
+                0.054,
+                0.063,
+                0.067,
+                0.046,
+                0.05,
+                0.044,
+                0.042,
+                0.047,
+                0.035,
+                0.039,
+                0.035,
+                0.034,
+                0.035,
+                0.033,
+                0.034,
+                0.032
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "kduq_evaluated_direct",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "derived from the kduq corpus",
+            "normalisation uncertainty 4.5 % from the authors: Dicello & Igo, PRC 2, 488 (1970): ERR-1 elastic corrections 4 % (absolute) (+) ERR-2 average areal density 2 %",
+            "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "derived from the kduq_evaluated corpus"
+        ]
+    },
+    {
+        "type": "CS",
+        "EXFORAccessionNumber": "O0579006",
+        "source": "A.Ingemarsson, J.Nyberg, et al., Nuclear Physics, Section A 653, 341 (1999);  Data taken from the EXFOR database, file EXFOR O0579001 dated 1999, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "MeV",
+        "y_units": "b",
+        "data": {
+            "x": [
+                65.5
+            ],
+            "y": [
+                0.6875000000987956
+            ],
+            "y_err": [
+                0.0167
+            ],
+            "x_err": [
+                0.15
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                0.6875
+            ],
+            "compound_elastic": [
+                9.87956e-11
+            ],
+            "ce_fraction": [
+                1.4370269090909093e-10
+            ],
+            "talys_model": [
+                0.704486
+            ],
+            "ce_fraction_model": [
+                1.402378471680062e-10
+            ],
+            "y_err_before_compound": [
+                0.0167
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "kduq_evaluated_direct",
+        "sector": "proton_reaction",
+        "projectile": "proton",
+        "target": "Ca-40",
+        "notes": [
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "derived from the kduq corpus",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "derived from the kduq_evaluated corpus"
+        ]
+    }
+]

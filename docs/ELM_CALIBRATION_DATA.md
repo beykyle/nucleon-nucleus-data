@@ -140,6 +140,50 @@ uv run python scripts/talys_compound.py apply --sector proton_reaction
   should keep data sets whose median `ce_fraction_model` is below a threshold (0.5 in ELM-Lane) and mask points above
   it.
 
+### kduq_evaluated_direct
+
+`data/kduq_evaluated_direct` is `kduq_evaluated` with the same correction, for fits on the KDUQ corpus. It keeps
+`kduq_evaluated`'s records and sector names, so a fit switches by changing only the corpus name:
+
+| sector | contents |
+|---|---|
+| `neutron_elastic`, `proton_elastic` | measured − CE(θ), with the fields above (`proton_elastic` is σ/σ_Ruth) |
+| `proton_reaction` | σ_R(OM) = σ_nonel + σ_CE |
+| `neutron_total`, `neutron_ay`, `proton_ay` | copied unchanged, as in ELM |
+
+**Natural targets.** KDUQ has natural targets (30 of 75 neutron elastic systems, 9 proton systems). TALYS's own
+natural-element run (`mass 0`) weights `all.tot` by abundance but not the elastic angular distribution: `angleout.f90`
+writes `nn*ang.L00` without the isotope suffix `natural.f90` looks for, so the file left is the last isotope's
+(TALYS 49ef834, still so at upstream ce6d44f). `run` therefore computes a natural target isotope by isotope and
+weights `all.tot` and the angular tables with TALYS's abundances (`structure/abundance/<El>.abun`); for (p,p),
+σ/σ_Ruth is the weighted cross section over the weighted Rutherford cross section. `meta.json` lists the isotopes.
+
+**What TALYS finds** (median over sets of the per-set median `ce_fraction_model`):
+
+| E (MeV) | neutron sets | median | largest set median |
+|---|---:|---:|---:|
+| 0–3 | 80 | 0.34 | 0.66 |
+| 3–6 | 158 | 0.096 | 0.74 |
+| 6–10 | 169 | 0.006 | 0.74 |
+| 10–15 | 82 | 2e-4 | 0.17 |
+| ≥ 15 | 90 | < 1e-8 | 0.004 |
+
+- Protons: at most 2 % (elastic) and 6 % (reaction, below 10 MeV).
+- 26 neutron sets have negative direct values somewhere; cut on `ce_fraction_model` as for ELM.
+- Where KDUQ and ELM share a system and energy, the CE agrees with ELM's cache (to 4e-7).
+
+```bash
+sbatch scripts/talys_compound.slurm      # compute node: run all three sectors (TALYS_ROOT: a TALYS build)
+for s in neutron_elastic proton_elastic proton_reaction; do
+  uv run python scripts/talys_compound.py apply --corpus kduq_evaluated --sector $s --out-corpus kduq_evaluated_direct; done
+for s in neutron_total neutron_ay proton_ay; do
+  uv run python scripts/talys_compound.py copy --corpus kduq_evaluated --sector $s --out-corpus kduq_evaluated_direct; done
+uv run python scripts/build_manifests.py
+```
+
+After `kduq_evaluated` is rebuilt (`scripts/apply_author_errors.py`), rerun `apply`/`copy`; rerun TALYS only if
+its energies or targets change.
+
 **Tests:**
 - [tests/test_talys_compound.py](../tests/test_talys_compound.py): TALYS output parsing, interpolation, and the
   subtraction on a synthetic case.

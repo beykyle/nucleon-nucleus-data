@@ -1,0 +1,36 @@
+# natural Fe: A = 54, abundance 0.058450
+projectile p
+element fe
+mass 54
+energy energies
+filetotal y
+outangle y
+fileelastic y
+cpang y
+# natural Fe: A = 56, abundance 0.917540
+projectile p
+element fe
+mass 56
+energy energies
+filetotal y
+outangle y
+fileelastic y
+cpang y
+# natural Fe: A = 57, abundance 0.021190
+projectile p
+element fe
+mass 57
+energy energies
+filetotal y
+outangle y
+fileelastic y
+cpang y
+# natural Fe: A = 58, abundance 0.002820
+projectile p
+element fe
+mass 58
+energy energies
+filetotal y
+outangle y
+fileelastic y
+cpang y

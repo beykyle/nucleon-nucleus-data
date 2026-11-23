@@ -1,0 +1,127 @@
+[
+    {
+        "type": "ECS",
+        "energy": 0.98,
+        "energy_err": 0.05,
+        "energy_units": "MeV",
+        "EXFORAccessionNumber": "21110009",
+        "source": "W.B.Gilboy, J.H.Towle, Nuclear Physics 42, 86 (1963);  Data taken from the EXFOR database, file EXFOR 21110001 dated 1963, retrieved from the IAEA Nuclear Data Services website.",
+        "x_units": "CM-degrees",
+        "y_units": "b/sr",
+        "data": {
+            "x": [
+                30.1994079186,
+                40.2555392628,
+                55.3257483349,
+                70.3739408315,
+                85.3964893048,
+                100.3930595342,
+                115.3597221606,
+                125.324039565,
+                136.7775208992
+            ],
+            "y": [
+                1.2428412115729084,
+                0.9073059795836768,
+                0.494665681525193,
+                0.21215307002891892,
+                0.05929951856467211,
+                0.013319514198996657,
+                0.04119232446623139,
+                0.07735310958099534,
+                0.1293657221540438
+            ],
+            "y_err": [
+                0.07106502324071612,
+                0.057204931864779006,
+                0.04339543895018639,
+                0.038681452328353225,
+                0.03887304510351606,
+                0.038511172757103536,
+                0.039445637503649135,
+                0.043323560949896235,
+                0.05277400976703687
+            ],
+            "systematic_normalization_error": 0.05,
+            "y_measured": [
+                1.472,
+                1.093,
+                0.6369,
+                0.3404,
+                0.1878,
+                0.1413,
+                0.172,
+                0.2208,
+                0.3041
+            ],
+            "compound_elastic": [
+                0.2291587884270915,
+                0.18569402041632324,
+                0.142234318474807,
+                0.12824692997108106,
+                0.12850048143532788,
+                0.12798048580100335,
+                0.1308076755337686,
+                0.14344689041900466,
+                0.1747342778459562
+            ],
+            "ce_fraction": [
+                0.15567852474666544,
+                0.16989388876150344,
+                0.22332284263590357,
+                0.37675361331104895,
+                0.6842411152040888,
+                0.9057359221585516,
+                0.7605097414753988,
+                0.6496688877672313,
+                0.5745947972573371
+            ],
+            "talys_model": [
+                1.3101283238338775,
+                0.9853857104724554,
+                0.5700965975433469,
+                0.30980044897383263,
+                0.18522202238715457,
+                0.14035735285268053,
+                0.15456115506570536,
+                0.20619279808940022,
+                0.3154173793079118
+            ],
+            "ce_fraction_model": [
+                0.1749132388470891,
+                0.18844805485081567,
+                0.24949161087387883,
+                0.41396624955154104,
+                0.6937645954795469,
+                0.9118188908516395,
+                0.8463166277332818,
+                0.6956930200676046,
+                0.5539779647822761
+            ],
+            "y_err_before_compound": [
+                0.018,
+                0.013,
+                0.0079,
+                0.004,
+                0.005,
+                0.003,
+                0.004,
+                0.005,
+                0.0061
+            ],
+            "compound_uncertainty": 0.3
+        },
+        "corpus": "kduq_evaluated_direct",
+        "sector": "neutron_elastic",
+        "projectile": "neutron",
+        "target": "Nd-0",
+        "notes": [
+            "EXFOR records this as scattering (SCT) summed over excitations up to 250 keV rather than as resolved elastic scattering; the supplement counts it as elastic, and it is kept on that basis",
+            "assigned a default normalisation uncertainty of 5%, none reported",
+            "derived from the kduq corpus",
+            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "derived from the kduq_evaluated corpus"
+        ],
+        "summed_excitation_max_MeV": 0.25
+    }
+]

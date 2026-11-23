@@ -1,0 +1,32 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "neutron",
+ "target": "Al_27",
+ "energies": [
+  3.2,
+  5.44,
+  6.44,
+  7.54,
+  8.56,
+  10.873,
+  13.883,
+  16.883,
+  18.0,
+  20.0,
+  22.0,
+  25.0,
+  26.0,
+  84.0,
+  136.0
+ ],
+ "settings": [
+  "projectile n",
+  "element al",
+  "mass 27",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": []
+}

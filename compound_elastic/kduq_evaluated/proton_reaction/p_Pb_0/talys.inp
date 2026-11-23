@@ -1,0 +1,24 @@
+# natural Pb: A = 204, abundance 0.014000
+projectile p
+element pb
+mass 204
+energy energies
+filetotal y
+# natural Pb: A = 206, abundance 0.241000
+projectile p
+element pb
+mass 206
+energy energies
+filetotal y
+# natural Pb: A = 207, abundance 0.221000
+projectile p
+element pb
+mass 207
+energy energies
+filetotal y
+# natural Pb: A = 208, abundance 0.524000
+projectile p
+element pb
+mass 208
+energy energies
+filetotal y

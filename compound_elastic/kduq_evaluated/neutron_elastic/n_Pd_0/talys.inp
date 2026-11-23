@@ -1,0 +1,48 @@
+# natural Pd: A = 102, abundance 0.010200
+projectile n
+element pd
+mass 102
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Pd: A = 104, abundance 0.111400
+projectile n
+element pd
+mass 104
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Pd: A = 105, abundance 0.223300
+projectile n
+element pd
+mass 105
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Pd: A = 106, abundance 0.273300
+projectile n
+element pd
+mass 106
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Pd: A = 108, abundance 0.264600
+projectile n
+element pd
+mass 108
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Pd: A = 110, abundance 0.117200
+projectile n
+element pd
+mass 110
+energy energies
+filetotal y
+outangle y
+fileelastic y

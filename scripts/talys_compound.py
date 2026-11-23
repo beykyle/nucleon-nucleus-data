@@ -16,6 +16,13 @@ Usage::
     uv run python scripts/talys_compound.py run --sector elastic_diff_xs [--targets Ca_40 ...] [--workers 8]
     uv run python scripts/talys_compound.py apply --sector elastic_diff_xs
 
+    # a separate corrected corpus (same sector names), e.g. kduq_evaluated -> kduq_evaluated_direct
+    uv run python scripts/talys_compound.py run   --corpus kduq_evaluated --sector neutron_elastic
+    uv run python scripts/talys_compound.py apply --corpus kduq_evaluated --sector neutron_elastic \\
+        --out-corpus kduq_evaluated_direct
+    uv run python scripts/talys_compound.py copy  --corpus kduq_evaluated --sector neutron_total \\
+        --out-corpus kduq_evaluated_direct
+
 ``run`` writes TALYS's parsed results per system (projectile, target) to compound_elastic/<corpus>/<sector>/<proj>_<Target>/:
 angular.csv (E, angle_cm, xs, direct, compound, ratio_rutherford) and integral.csv (E, compound_elastic,
 shape_elastic, reaction, total, nonelastic), plus talys.inp and meta.json (TALYS commit, settings). Raw TALYS output
@@ -47,7 +54,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 from nn_corpora import serialize, spec  # noqa: E402
 
-TALYS = REPO_ROOT / "external" / "talys"
+# TALYS checkout (binary + structure database); TALYS_ROOT points at another build, e.g. a worktree's submodule
+TALYS = Path(os.environ.get("TALYS_ROOT", REPO_ROOT / "external" / "talys"))
 CACHE = REPO_ROOT / "compound_elastic"  # parsed TALYS results, outside data/ (not corpus records)
 CE_UNCERTAINTY = 0.30  # fractional uncertainty of the TALYS compound elastic, added in quadrature
 PROJ = {"neutron": ("n", "nn"), "proton": ("p", "pp")}
@@ -173,45 +181,116 @@ def talys_dir(corpus: str, sector: str, proj: str, stem: str) -> Path:
     return CACHE / corpus / sector / f"{proj}_{stem}"
 
 
-def run_system(task) -> tuple[str, str]:
-    corpus, sector, projectile, stem, energies, angular = task
-    out = talys_dir(corpus, sector, PROJ[projectile][0], stem)
-    out.mkdir(parents=True, exist_ok=True)
+def abundances(sym: str) -> list[tuple[int, float]]:
+    """[(A, fraction)] of a natural element, from TALYS's structure database (the abundances TALYS itself uses)."""
+    rows = []
+    for line in (TALYS / "structure" / "abundance" / f"{sym.capitalize()}.abun").read_text().splitlines():
+        f = line.split()
+        if len(f) >= 3:
+            rows.append((int(f[1]), float(f[2]) / 100.0))
+    total = sum(a for _, a in rows)
+    return [(A, a / total) for A, a in rows]
+
+
+def talys_tables(projectile: str, stem: str, energies, angular: bool):
+    """Run TALYS for one isotopic target: (input, all.tot table, {E: angular table}, missing angular energies)."""
     inp = talys_input(projectile, stem, angular)
     with tempfile.TemporaryDirectory(prefix=f"talys_{stem}_") as d:
         Path(d, "talys.inp").write_text(inp)
         Path(d, "energies").write_text("\n".join(f"{e:.3f}" for e in energies) + "\n")
         r = subprocess.run(f"{talys_bin()} < talys.inp > talys.out", shell=True, cwd=d, env=talys_env())
         if r.returncode != 0:
-            return stem, f"TALYS failed (exit {r.returncode})"
+            raise RuntimeError(f"TALYS failed for {stem} (exit {r.returncode})")
         tot = parse_all_tot(Path(d) / "all.tot")
-        with open(out / "integral.csv", "w", newline="") as fh:
-            w = csv.writer(fh)
-            w.writerow(["E_MeV", "compound_elastic_mb", "shape_elastic_mb", "reaction_mb", "total_mb", "nonelastic_mb"])
-            for i in range(len(tot["e"])):
-                w.writerow([f"{tot['e'][i]:.6g}"] + [f"{tot[k][i]:.6g}" for k in
-                           ("compound_elastic", "shape_elastic", "reaction", "total", "nonelastic")])
+        ang, missing = {}, []
         if angular:
             pref = PROJ[projectile][1]
-            with open(out / "angular.csv", "w", newline="") as fh:
-                w = csv.writer(fh)
-                w.writerow(["E_MeV", "angle_cm_deg", "xs_mb_sr", "direct_mb_sr", "compound_mb_sr", "ratio_rutherford"])
-                missing = []
-                for e in energies:
-                    f = Path(d) / f"{pref}{energy_tag(e)}ang.L00"
-                    if not f.exists():
-                        missing.append(e)
-                        continue
-                    t = parse_table(f)
-                    rr = t.get("ratio_rutherford", np.full_like(t["angle"], np.nan))
-                    for j in range(len(t["angle"])):
-                        w.writerow([f"{e:.3f}", f"{t['angle'][j]:.4g}", f"{t['xs'][j]:.6g}", f"{t['direct'][j]:.6g}",
-                                    f"{t['compound'][j]:.6g}", f"{rr[j]:.6g}"])
-        shutil.copy(Path(d) / "talys.inp", out / "talys.inp")
+            for e in energies:
+                f = Path(d) / f"{pref}{energy_tag(e)}ang.L00"
+                if not f.exists():
+                    missing.append(e)
+                    continue
+                t = parse_table(f)
+                t.setdefault("ratio_rutherford", np.full_like(t["angle"], np.nan))
+                ang[e] = t
+    return inp, tot, ang, missing
+
+
+def combine_natural(parts):
+    """Abundance-weighted all.tot and angular tables of the isotopes [(fraction, tot, ang)] of a natural target.
+
+    TALYS's own natural-element run (mass 0) weights all.tot but leaves in nn*ang.L00 the angular distribution of
+    the last isotope it computed, so natural targets are run isotope by isotope and combined here. For (p,p) the
+    ratio to Rutherford is the weighted cross section over the weighted Rutherford cross section."""
+    w0, tot0, _ = parts[0]
+    tot = {k: (v if k == "e" else sum(w * t[k] for w, t, _ in parts)) for k, v in tot0.items()}
+    for _, t, _ in parts:
+        assert np.allclose(t["e"], tot0["e"]), "isotopes computed at different energies"
+    ang = {}
+    for e in set.intersection(*(set(a) for _, _, a in parts)):
+        tabs = [(w, a[e]) for w, _, a in parts]
+        theta = tabs[0][1]["angle"]
+        assert all(np.allclose(t["angle"], theta) for _, t in tabs), f"isotopes on different angle grids at {e} MeV"
+        comb = {"angle": theta}
+        for k in ("xs", "direct", "compound"):
+            comb[k] = sum(w * t[k] for w, t in tabs)
+        rr = [t["ratio_rutherford"] for _, t in tabs]
+        if np.all(np.isfinite(rr[0])):
+            ruth = sum(w * t["xs"] / t["ratio_rutherford"] for w, t in tabs)
+            comb["ratio_rutherford"] = comb["xs"] / ruth
+        else:
+            comb["ratio_rutherford"] = np.full_like(theta, np.nan)
+        ang[e] = comb
+    return tot, ang
+
+
+def run_system(task) -> tuple[str, str]:
+    corpus, sector, projectile, stem, energies, angular = task
+    out = talys_dir(corpus, sector, PROJ[projectile][0], stem)
+    out.mkdir(parents=True, exist_ok=True)
+    sym, A = stem.split("_")
+    natural = int(A) == 0
+    try:
+        if natural:
+            isotopes = abundances(sym)
+            parts, inputs = [], []
+            for iso_A, frac in isotopes:
+                inp_i, tot_i, ang_i, _ = talys_tables(projectile, f"{sym}_{iso_A}", energies, angular)
+                parts.append((frac, tot_i, ang_i))
+                inputs.append(f"# natural {sym}: A = {iso_A}, abundance {frac:.6f}\n{inp_i}")
+            tot, ang = combine_natural(parts)
+            inp = "".join(inputs)
+            missing = [e for e in energies if angular and e not in ang]
+        else:
+            inp, tot, ang, missing = talys_tables(projectile, stem, energies, angular)
+    except RuntimeError as err:
+        return stem, str(err)
+    with open(out / "integral.csv", "w", newline="") as fh:
+        w = csv.writer(fh)
+        w.writerow(["E_MeV", "compound_elastic_mb", "shape_elastic_mb", "reaction_mb", "total_mb", "nonelastic_mb"])
+        for i in range(len(tot["e"])):
+            w.writerow([f"{tot['e'][i]:.6g}"] + [f"{tot[k][i]:.6g}" for k in
+                       ("compound_elastic", "shape_elastic", "reaction", "total", "nonelastic")])
+    if angular:
+        with open(out / "angular.csv", "w", newline="") as fh:
+            w = csv.writer(fh)
+            w.writerow(["E_MeV", "angle_cm_deg", "xs_mb_sr", "direct_mb_sr", "compound_mb_sr", "ratio_rutherford"])
+            for e in energies:
+                if e not in ang:
+                    continue
+                t = ang[e]
+                for j in range(len(t["angle"])):
+                    w.writerow([f"{e:.3f}", f"{t['angle'][j]:.4g}", f"{t['xs'][j]:.6g}", f"{t['direct'][j]:.6g}",
+                                f"{t['compound'][j]:.6g}", f"{t['ratio_rutherford'][j]:.6g}"])
+    (out / "talys.inp").write_text(inp)
     meta = dict(talys_commit=talys_commit(), projectile=projectile, target=stem, energies=energies,
                 settings=inp.strip().splitlines(), missing_angular=missing if angular else [])
+    if natural:
+        meta["natural"] = True
+        meta["isotopes"] = [{"A": a, "abundance": f} for a, f in isotopes]
     (out / "meta.json").write_text(json.dumps(meta, indent=1) + "\n")
-    return stem, f"{len(energies)} energies" + (f", missing angular {missing}" if angular and missing else "")
+    return stem, f"{len(energies)} energies" + (f" ({len(isotopes)} isotopes)" if natural else "") + \
+        (f", missing angular {missing}" if angular and missing else "")
 
 
 def run(args) -> None:
@@ -257,10 +336,19 @@ def ce_at(table, E: float, theta_deg: np.ndarray, ratio: bool) -> np.ndarray:
     return talys_at(table, E, theta_deg, ratio)[0]
 
 
+def _target_dir(args) -> tuple[Path, str]:
+    """Where a corrected sector goes: data/<corpus>/<sector>_direct (ELM), or data/<out_corpus>/<sector>."""
+    out = getattr(args, "out_corpus", None)
+    if out:
+        return spec.DATA_DIR / out / args.sector, args.sector
+    return spec.DATA_DIR / args.corpus / f"{args.sector}_direct", f"{args.sector}_direct"
+
+
 def apply(args) -> None:
     src = spec.DATA_DIR / args.corpus / args.sector
-    dst = spec.DATA_DIR / args.corpus / f"{args.sector}_direct"
-    dst.mkdir(exist_ok=True)
+    dst, dst_sector = _target_dir(args)
+    out_corpus = getattr(args, "out_corpus", None)
+    dst.mkdir(parents=True, exist_ok=True)
     for stale in dst.glob("*.json"):
         stale.unlink()
     n_rec = 0
@@ -299,12 +387,38 @@ def apply(args) -> None:
             rec.setdefault("notes", []).append(
                 f"{note} (TALYS {json.loads((base / 'meta.json').read_text())['talys_commit'][:7]}, default settings + "
                 f"outangle/cpang; CE uncertainty {100 * CE_UNCERTAINTY:g} % in quadrature; scripts/talys_compound.py)")
-            rec["sector"] = f"{args.sector}_direct"
+            rec["sector"] = dst_sector
+            if out_corpus:
+                rec["corpus"] = out_corpus
+                rec["notes"].append(f"derived from the {args.corpus} corpus")
             out.append(rec)
             n_rec += 1
         (dst / path.name).write_text(json.dumps(out, indent=4) + "\n")
     for bib in src.glob("*.bib"):
-        shutil.copy(bib, dst / f"{args.sector}_direct.bib")
+        shutil.copy(bib, dst / f"{dst_sector}.bib")
+    print(f"wrote {dst} ({n_rec} records)")
+
+
+def copy(args) -> None:
+    """Copy a sector that needs no compound-elastic correction (sigma_tot, Ay) into the corrected corpus."""
+    src = spec.DATA_DIR / args.corpus / args.sector
+    dst = spec.DATA_DIR / args.out_corpus / args.sector
+    dst.mkdir(parents=True, exist_ok=True)
+    for stale in dst.glob("*.json"):
+        stale.unlink()
+    note = (f"copied unchanged from {args.corpus}: no compound-elastic correction (sigma_tot already contains "
+            "compound elastic; analysing powers as in ELM; scripts/talys_compound.py)")
+    n_rec = 0
+    for path in sorted(src.glob("*.json")):
+        out = []
+        for rec in json.loads(path.read_text()):
+            rec["corpus"] = args.out_corpus
+            rec.setdefault("notes", []).append(note)
+            out.append(rec)
+            n_rec += 1
+        (dst / path.name).write_text(json.dumps(out, indent=4) + "\n")
+    for bib in src.glob("*.bib"):
+        shutil.copy(bib, dst / bib.name)
     print(f"wrote {dst} ({n_rec} records)")
 
 
@@ -313,15 +427,18 @@ def main() -> None:
     sub = ap.add_subparsers(dest="cmd", required=True)
     b = sub.add_parser("build")
     b.add_argument("--rebuild", action="store_true")
-    for name in ("run", "apply"):
+    for name in ("run", "apply", "copy"):
         p = sub.add_parser(name)
         p.add_argument("--corpus", default="elm")
         p.add_argument("--sector", required=True)
         if name == "run":
             p.add_argument("--targets", nargs="*")
             p.add_argument("--workers", type=int, default=4)
+        if name in ("apply", "copy"):
+            p.add_argument("--out-corpus", required=name == "copy",
+                           help="write data/<out-corpus>/<sector>/ instead of data/<corpus>/<sector>_direct/")
     a = ap.parse_args()
-    {"build": build, "run": run, "apply": apply}[a.cmd](a)
+    {"build": build, "run": run, "apply": apply, "copy": copy}[a.cmd](a)
 
 
 if __name__ == "__main__":

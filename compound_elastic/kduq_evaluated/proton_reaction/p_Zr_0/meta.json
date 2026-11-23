@@ -1,0 +1,65 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "proton",
+ "target": "Zr_0",
+ "energies": [
+  9.2,
+  98.8
+ ],
+ "settings": [
+  "# natural Zr: A = 90, abundance 0.514500",
+  "projectile p",
+  "element zr",
+  "mass 90",
+  "energy energies",
+  "filetotal y",
+  "# natural Zr: A = 91, abundance 0.112200",
+  "projectile p",
+  "element zr",
+  "mass 91",
+  "energy energies",
+  "filetotal y",
+  "# natural Zr: A = 92, abundance 0.171500",
+  "projectile p",
+  "element zr",
+  "mass 92",
+  "energy energies",
+  "filetotal y",
+  "# natural Zr: A = 94, abundance 0.173800",
+  "projectile p",
+  "element zr",
+  "mass 94",
+  "energy energies",
+  "filetotal y",
+  "# natural Zr: A = 96, abundance 0.028000",
+  "projectile p",
+  "element zr",
+  "mass 96",
+  "energy energies",
+  "filetotal y"
+ ],
+ "missing_angular": [],
+ "natural": true,
+ "isotopes": [
+  {
+   "A": 90,
+   "abundance": 0.5145000000000001
+  },
+  {
+   "A": 91,
+   "abundance": 0.11220000000000001
+  },
+  {
+   "A": 92,
+   "abundance": 0.17149999999999999
+  },
+  {
+   "A": 94,
+   "abundance": 0.17379999999999998
+  },
+  {
+   "A": 96,
+   "abundance": 0.027999999999999997
+  }
+ ]
+}

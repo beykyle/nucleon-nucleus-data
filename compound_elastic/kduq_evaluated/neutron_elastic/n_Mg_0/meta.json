@@ -1,0 +1,57 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "neutron",
+ "target": "Mg_0",
+ "energies": [
+  5.44,
+  6.44,
+  7.55,
+  7.97,
+  8.56,
+  11.01,
+  14.1,
+  21.6
+ ],
+ "settings": [
+  "# natural Mg: A = 24, abundance 0.789900",
+  "projectile n",
+  "element mg",
+  "mass 24",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Mg: A = 25, abundance 0.100000",
+  "projectile n",
+  "element mg",
+  "mass 25",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Mg: A = 26, abundance 0.110100",
+  "projectile n",
+  "element mg",
+  "mass 26",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": [],
+ "natural": true,
+ "isotopes": [
+  {
+   "A": 24,
+   "abundance": 0.7899
+  },
+  {
+   "A": 25,
+   "abundance": 0.10000000000000002
+  },
+  {
+   "A": 26,
+   "abundance": 0.11010000000000002
+  }
+ ]
+}

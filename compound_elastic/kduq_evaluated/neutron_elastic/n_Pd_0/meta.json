@@ -1,0 +1,94 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "neutron",
+ "target": "Pd_0",
+ "energies": [
+  1.5,
+  1.8,
+  2.3,
+  2.8,
+  3.25,
+  3.75,
+  5.9,
+  7.14,
+  8.03
+ ],
+ "settings": [
+  "# natural Pd: A = 102, abundance 0.010200",
+  "projectile n",
+  "element pd",
+  "mass 102",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Pd: A = 104, abundance 0.111400",
+  "projectile n",
+  "element pd",
+  "mass 104",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Pd: A = 105, abundance 0.223300",
+  "projectile n",
+  "element pd",
+  "mass 105",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Pd: A = 106, abundance 0.273300",
+  "projectile n",
+  "element pd",
+  "mass 106",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Pd: A = 108, abundance 0.264600",
+  "projectile n",
+  "element pd",
+  "mass 108",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Pd: A = 110, abundance 0.117200",
+  "projectile n",
+  "element pd",
+  "mass 110",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": [],
+ "natural": true,
+ "isotopes": [
+  {
+   "A": 102,
+   "abundance": 0.0102
+  },
+  {
+   "A": 104,
+   "abundance": 0.1114
+  },
+  {
+   "A": 105,
+   "abundance": 0.22329999999999997
+  },
+  {
+   "A": 106,
+   "abundance": 0.2733
+  },
+  {
+   "A": 108,
+   "abundance": 0.2646
+  },
+  {
+   "A": 110,
+   "abundance": 0.11720000000000001
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+# natural Ba: A = 130, abundance 0.001060
+projectile n
+element ba
+mass 130
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Ba: A = 132, abundance 0.001010
+projectile n
+element ba
+mass 132
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Ba: A = 134, abundance 0.024170
+projectile n
+element ba
+mass 134
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Ba: A = 135, abundance 0.065920
+projectile n
+element ba
+mass 135
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Ba: A = 136, abundance 0.078540
+projectile n
+element ba
+mass 136
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Ba: A = 137, abundance 0.112320
+projectile n
+element ba
+mass 137
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Ba: A = 138, abundance 0.716980
+projectile n
+element ba
+mass 138
+energy energies
+filetotal y
+outangle y
+fileelastic y

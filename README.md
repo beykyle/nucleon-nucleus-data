@@ -11,6 +11,7 @@ Curation of corpora of nucleon-nucleus scattering data from
 | **Test** | Directly-measured data post-dating the KD and CH89 publications, drawn entirely from EXFOR. |
 | **sm3** | The data sets of Danielewicz, Singh & Lee, "Symmetry energy III" (2017): (p,n) to the isobaric analog state and elastic (p,p) and (n,n) on 48Ca, 90Zr, 120Sn and 208Pb. |
 | **kduq_evaluated**, **chuq_evaluated**, **test_evaluated** | KDUQ, CHUQ and Test with evaluated uncertainties (below). |
+| **kduq_evaluated_direct** | `kduq_evaluated` with compound elastic removed by TALYS, as for ELM: same records and sector names ([docs/ELM_CALIBRATION_DATA.md](docs/ELM_CALIBRATION_DATA.md#kduq_evaluated_direct)). |
 
 KDUQ, CHUQ and Test are specified by the tables of
 `supplement_experimentalCorpora.pdf`, part of the supplemental material of 
@@ -79,6 +80,12 @@ same pipeline as KDUQ, CHUQ and Test, with an optional evaluated copy:
 | test_evaluated | proton ay | 14 | 390 | 4 | — |
 | test_evaluated | proton elastic | 11 | 314 | 4 | — |
 | test_evaluated | proton reaction | 4 | 19 | 1 | — |
+| kduq_evaluated_direct | neutron ay | 30 | 637 | 12 | — |
+| kduq_evaluated_direct | neutron elastic | 579 | 14888 | 123 | — |
+| kduq_evaluated_direct | neutron total | 65 | 4497 | 35 | — |
+| kduq_evaluated_direct | proton ay | 54 | 1606 | 26 | — |
+| kduq_evaluated_direct | proton elastic | 100 | 4155 | 40 | — |
+| kduq_evaluated_direct | proton reaction | 62 | 204 | 23 | — |
 
 Coverage is the fraction of a sector's specification rows that produced data, and is given
 for the static corpora. ELM is a query rather than a list of subentries, sm3 a short list of
@@ -282,6 +289,10 @@ uv run python scripts/talys_compound.py run --sector elastic_diff_xs   # and --s
 uv run python scripts/talys_compound.py apply --sector elastic_diff_xs # from the cache in compound_elastic/
 uv run python scripts/talys_compound.py apply --sector proton_reaction
 uv run python scripts/apply_author_errors.py  # the *_evaluated corpora (ELM is corrected as it is written)
+for s in neutron_elastic proton_elastic proton_reaction; do  # kduq_evaluated_direct, from compound_elastic/
+  uv run python scripts/talys_compound.py apply --corpus kduq_evaluated --sector $s --out-corpus kduq_evaluated_direct; done
+for s in neutron_total neutron_ay proton_ay; do
+  uv run python scripts/talys_compound.py copy --corpus kduq_evaluated --sector $s --out-corpus kduq_evaluated_direct; done
 uv run python scripts/curate_sm3.py         # sm3, from ELM and KDUQ records
 uv run python scripts/build_manifests.py    # provenance manifests for each corpus
 ```

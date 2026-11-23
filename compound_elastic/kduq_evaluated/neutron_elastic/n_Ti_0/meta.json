@@ -1,0 +1,83 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "neutron",
+ "target": "Ti_0",
+ "energies": [
+  4.5,
+  5.5,
+  6.5,
+  7.55,
+  8.08,
+  8.41,
+  9.06,
+  9.5,
+  9.99,
+  13.95
+ ],
+ "settings": [
+  "# natural Ti: A = 46, abundance 0.082500",
+  "projectile n",
+  "element ti",
+  "mass 46",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ti: A = 47, abundance 0.074400",
+  "projectile n",
+  "element ti",
+  "mass 47",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ti: A = 48, abundance 0.737200",
+  "projectile n",
+  "element ti",
+  "mass 48",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ti: A = 49, abundance 0.054100",
+  "projectile n",
+  "element ti",
+  "mass 49",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "# natural Ti: A = 50, abundance 0.051800",
+  "projectile n",
+  "element ti",
+  "mass 50",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": [],
+ "natural": true,
+ "isotopes": [
+  {
+   "A": 46,
+   "abundance": 0.0825
+  },
+  {
+   "A": 47,
+   "abundance": 0.07440000000000001
+  },
+  {
+   "A": 48,
+   "abundance": 0.7372
+  },
+  {
+   "A": 49,
+   "abundance": 0.0541
+  },
+  {
+   "A": 50,
+   "abundance": 0.0518
+  }
+ ]
+}

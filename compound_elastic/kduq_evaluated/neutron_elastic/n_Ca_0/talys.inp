@@ -1,0 +1,48 @@
+# natural Ca: A = 40, abundance 0.969371
+projectile n
+element ca
+mass 40
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Ca: A = 42, abundance 0.006470
+projectile n
+element ca
+mass 42
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Ca: A = 43, abundance 0.001350
+projectile n
+element ca
+mass 43
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Ca: A = 44, abundance 0.020899
+projectile n
+element ca
+mass 44
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Ca: A = 46, abundance 0.000040
+projectile n
+element ca
+mass 46
+energy energies
+filetotal y
+outangle y
+fileelastic y
+# natural Ca: A = 48, abundance 0.001870
+projectile n
+element ca
+mass 48
+energy energies
+filetotal y
+outangle y
+fileelastic y
