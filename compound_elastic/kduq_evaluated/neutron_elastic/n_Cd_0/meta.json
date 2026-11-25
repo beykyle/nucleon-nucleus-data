@@ -1,0 +1,30 @@
+{
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
+ "projectile": "neutron",
+ "target": "Cd_0",
+ "energies": [
+  2.25,
+  2.85,
+  3.4,
+  4.0,
+  5.0,
+  5.5,
+  5.9,
+  6.5,
+  7.14,
+  7.5,
+  8.08,
+  14.6
+ ],
+ "settings": [
+  "projectile n",
+  "element cd",
+  "mass 0",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": [],
+ "natural": true
+}

@@ -1,0 +1,18 @@
+{
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
+ "projectile": "proton",
+ "target": "Zr_0",
+ "energies": [
+  9.2,
+  98.8
+ ],
+ "settings": [
+  "projectile p",
+  "element zr",
+  "mass 0",
+  "energy energies",
+  "filetotal y"
+ ],
+ "missing_angular": [],
+ "natural": true
+}

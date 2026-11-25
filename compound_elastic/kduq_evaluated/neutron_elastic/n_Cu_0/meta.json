@@ -1,0 +1,26 @@
+{
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
+ "projectile": "neutron",
+ "target": "Cu_0",
+ "energies": [
+  1.6,
+  2.0,
+  2.2,
+  2.6,
+  3.0,
+  3.4,
+  3.8,
+  84.0
+ ],
+ "settings": [
+  "projectile n",
+  "element cu",
+  "mass 0",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": [],
+ "natural": true
+}

@@ -79,3 +79,80 @@ def test_apply_subtracts_and_inflates_errors(tmp_path, monkeypatch):
     # the model fraction uses TALYS's elastic (20, 30 mb/sr), not the measured values
     assert out["talys_model"] == pytest.approx([0.020, 0.030])
     assert out["ce_fraction_model"] == pytest.approx([0.5, 0.4])
+
+
+def test_apply_to_a_separate_corpus_and_copy(tmp_path, monkeypatch):
+    """--out-corpus keeps the sector name and sets the corpus; copy carries uncorrected sectors over unchanged."""
+    data = tmp_path / "data"
+    sec = data / "kduq_evaluated" / "neutron_elastic"
+    sec.mkdir(parents=True)
+    (sec / "neutron_elastic.bib").write_text("@misc{x}\n")
+    tal = tmp_path / "cache" / "kduq_evaluated" / "neutron_elastic" / "n_Sn_120"
+    tal.mkdir(parents=True)
+    (tal / "angular.csv").write_text("E_MeV,angle_cm_deg,xs_mb_sr,direct_mb_sr,compound_mb_sr,ratio_rutherford\n"
+                                     "10.000,0,4000,3990,10,nan\n10.000,90,20,10,10,nan\n10.000,180,30,18,12,nan\n")
+    (tal / "meta.json").write_text(json.dumps({"talys_commit": "abcdef0"}))
+    rec = {"EXFORAccessionNumber": "X0000002", "projectile": "neutron", "energy": 10.0, "y_units": "b/sr",
+           "corpus": "kduq_evaluated", "sector": "neutron_elastic",
+           "data": {"x": [90.0, 180.0], "y": [0.020, 0.030], "y_err": [0.001, 0.001]}, "notes": []}
+    (sec / "Sn_120.json").write_text(json.dumps([rec]))
+    ay = data / "kduq_evaluated" / "neutron_ay"
+    ay.mkdir()
+    ay_rec = {**rec, "sector": "neutron_ay", "y_units": "no-dim", "data": {"x": [90.0], "y": [0.1], "y_err": [0.01]}}
+    (ay / "Sn_120.json").write_text(json.dumps([ay_rec]))
+    monkeypatch.setattr(tc.spec, "DATA_DIR", data)
+    monkeypatch.setattr(tc, "CACHE", tmp_path / "cache")
+
+    tc.apply(type("A", (), {"corpus": "kduq_evaluated", "sector": "neutron_elastic",
+                            "out_corpus": "kduq_evaluated_direct"})())
+    out_dir = data / "kduq_evaluated_direct" / "neutron_elastic"
+    out = json.loads((out_dir / "Sn_120.json").read_text())[0]
+    assert out["corpus"] == "kduq_evaluated_direct" and out["sector"] == "neutron_elastic"
+    assert out["data"]["y"] == pytest.approx([0.010, 0.018])
+    assert "derived from the kduq_evaluated corpus" in out["notes"]
+    assert (out_dir / "neutron_elastic.bib").exists()
+    assert not (data / "kduq_evaluated" / "neutron_elastic_direct").exists()
+
+    tc.copy(type("A", (), {"corpus": "kduq_evaluated", "sector": "neutron_ay",
+                           "out_corpus": "kduq_evaluated_direct"})())
+    copied = json.loads((data / "kduq_evaluated_direct" / "neutron_ay" / "Sn_120.json").read_text())[0]
+    assert copied["corpus"] == "kduq_evaluated_direct" and copied["sector"] == "neutron_ay"
+    assert copied["data"] == ay_rec["data"]
+    # the source corpus is untouched
+    assert json.loads((sec / "Sn_120.json").read_text())[0] == rec
+
+
+DIRECT = tc.spec.DATA_DIR / "kduq_evaluated_direct"
+
+
+@pytest.mark.skipif(not DIRECT.exists(), reason="kduq_evaluated_direct not built")
+def test_kduq_evaluated_direct_follows_kduq_evaluated():
+    """Same records as kduq_evaluated; corrected sectors start from its evaluated errors, the others are copies."""
+    src = tc.spec.DATA_DIR / "kduq_evaluated"
+    assert sorted(p.name for p in DIRECT.iterdir() if p.is_dir()) == \
+        sorted(p.name for p in src.iterdir() if p.is_dir())
+    for sector_dir in sorted(p for p in src.iterdir() if p.is_dir()):
+        for path in sorted(sector_dir.glob("*.json")):
+            mine = json.loads((DIRECT / sector_dir.name / path.name).read_text())
+            theirs = json.loads(path.read_text())
+            assert len(mine) == len(theirs), path
+            for a, b in zip(mine, theirs):
+                assert a["corpus"] == "kduq_evaluated_direct" and a["sector"] == b["sector"]
+                assert a["EXFORAccessionNumber"] == b["EXFORAccessionNumber"] and a.get("energy") == b.get("energy")
+                da, db = a["data"], b["data"]
+                assert da["x"] == db["x"]
+                if "y_measured" in da:  # corrected
+                    assert da["y_measured"] == pytest.approx(db["y"]) and da["y_err_before_compound"] == \
+                        pytest.approx(db["y_err"])
+                    assert np.all(np.asarray(da["y_err"]) >= np.asarray(db["y_err"]) * (1 - 1e-12))
+                else:
+                    assert sector_dir.name in ("neutron_total", "neutron_ay", "proton_ay"), path
+                    assert da == db
+
+
+def test_natural_rutherford_is_the_isotope_mean():
+    """Natural (p,p): sigma_Ruth from the per-isotope tables (xs / ratio), averaged over the isotopes."""
+    ruth = np.array([200.0, 20.0])
+    tabs = [{"xs": x * ruth, "ratio_rutherford": x * np.ones(2) / s}
+            for x, s in ((0.5, 1.0), (0.7, 1.002))]
+    assert tc.natural_rutherford(tabs) == pytest.approx(ruth * (1.0 + 1.002) / 2)

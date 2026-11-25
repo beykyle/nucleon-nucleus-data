@@ -1,0 +1,27 @@
+{
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
+ "projectile": "neutron",
+ "target": "Sc_45",
+ "energies": [
+  2.62,
+  2.86,
+  3.83,
+  5.0,
+  5.9,
+  6.5,
+  7.14,
+  8.03,
+  9.06,
+  10.0
+ ],
+ "settings": [
+  "projectile n",
+  "element sc",
+  "mass 45",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": []
+}

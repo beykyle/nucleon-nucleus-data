@@ -1,0 +1,24 @@
+{
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
+ "projectile": "neutron",
+ "target": "V_51",
+ "energies": [
+  7.99,
+  9.01,
+  10.07,
+  10.91,
+  11.9,
+  13.03,
+  14.37
+ ],
+ "settings": [
+  "projectile n",
+  "element v",
+  "mass 51",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": []
+}

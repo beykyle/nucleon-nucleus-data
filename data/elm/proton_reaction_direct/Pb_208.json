@@ -107,7 +107,7 @@
             "author-errors v4 (docs/AUTHOR_UNCERTAINTIES.md)",
             "relative error floor 2 % applied at 1 of 6 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
-            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 7629373, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
         ]
     },
     {
@@ -187,7 +187,7 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
-            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 7629373, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
         ]
     },
     {
@@ -209,9 +209,9 @@
                 48.0
             ],
             "y": [
-                1.5110000003641089,
-                1.706000000108949,
-                1.7510000001008699,
+                1.5110000003645059,
+                1.706000000108963,
+                1.751000000100871,
                 1.8620000001000172,
                 1.9740000001,
                 2.0120000001,
@@ -265,9 +265,9 @@
                 2.026
             ],
             "compound_elastic": [
-                3.6410900000000004e-10,
-                1.08949e-10,
-                1.0087e-10,
+                3.6450600000000003e-10,
+                1.0896299999999999e-10,
+                1.00871e-10,
                 1.0001700000000001e-10,
                 9.999999999999999e-11,
                 9.999999999999999e-11,
@@ -276,9 +276,9 @@
                 9.999999999999999e-11
             ],
             "ce_fraction": [
-                2.409722038385176e-10,
-                6.386225087924971e-11,
-                5.7607081667618503e-11,
+                2.412349437458637e-10,
+                6.38704572098476e-11,
+                5.760765276984581e-11,
                 5.371482277121375e-11,
                 5.0658561296859165e-11,
                 4.9701789264413516e-11,
@@ -294,18 +294,18 @@
                 1.87425,
                 1.94855,
                 1.996,
-                2.0061199999999997,
+                2.00613,
                 2.01273
             ],
             "ce_fraction_model": [
-                2.652637637236546e-10,
-                7.056236682404907e-11,
-                6.157856501858895e-11,
+                2.6555298951647567e-10,
+                7.0571434122836e-11,
+                6.15791754931108e-11,
                 5.6743370664125e-11,
                 5.33546752034147e-11,
                 5.1320212465679604e-11,
                 5.0100200400801596e-11,
-                4.984746675173968e-11,
+                4.98472182759841e-11,
                 4.968376284946316e-11
             ],
             "y_err_before_compound": [
@@ -329,7 +329,7 @@
             "assigned a default normalisation uncertainty of 5%, none reported",
             "relative error floor 2 % applied at 3 of 9 points (ELM calibration evaluation; errors before the floor in data.y_err_before_floor)",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
-            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 7629373, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
         ]
     },
     {
@@ -379,7 +379,7 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)",
-            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 7629373, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)"
         ]
     }
 ]

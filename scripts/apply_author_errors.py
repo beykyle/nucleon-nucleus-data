@@ -16,6 +16,9 @@ manifests, afterwards::
     source scripts/setup_exfor_db.sh 2025
     uv run python scripts/apply_author_errors.py [--elm] [--dry-run] [--report docs/AUTHOR_ERRORS_DIFF.md]
     uv run python scripts/curate_sm3.py && uv run python scripts/build_manifests.py
+
+kduq_evaluated_direct is derived from kduq_evaluated: after rebuilding it, rerun ``scripts/talys_compound.py
+apply/copy --corpus kduq_evaluated --out-corpus kduq_evaluated_direct`` (docs/ELM_CALIBRATION_DATA.md).
 """
 
 from __future__ import annotations

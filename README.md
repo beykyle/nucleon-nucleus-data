@@ -12,6 +12,7 @@ Curation of corpora of nucleon-nucleus scattering data from
 | **Test** | Directly-measured data post-dating the KD and CH89 publications, drawn entirely from EXFOR. |
 | **sm3** | The data sets of Danielewicz, Singh & Lee, "Symmetry energy III" (2017): (p,n) to the isobaric analog state and elastic (p,p) and (n,n) on 48Ca, 90Zr, 120Sn and 208Pb. |
 | **kduq_evaluated**, **chuq_evaluated**, **test_evaluated** | KDUQ, CHUQ and Test with evaluated uncertainties (below). |
+| **kduq_evaluated_direct** | `kduq_evaluated` with compound elastic removed by TALYS, as for ELM: same records and sector names ([docs/ELM_CALIBRATION_DATA.md](docs/ELM_CALIBRATION_DATA.md#kduq_evaluated_direct)). |
 
 KDUQ, CHUQ and Test are specified by the tables of
 `supplement_experimentalCorpora.pdf`, part of the supplemental material of 
@@ -41,18 +42,18 @@ same pipeline as KDUQ, CHUQ and Test, with an optional evaluated copy:
 |---|---|---:|---:|---:|---:|
 | elm | charge exchange | 30 | 614 | 7 | — |
 | elm | elastic ay | 105 | 2978 | 39 | — |
-| elm | elastic diff xs | 588 | 11941 | 92 | — |
-| elm | elastic diff xs direct | 588 | 11941 | 92 | — |
+| elm | elastic diff xs | 578 | 11765 | 91 | — |
+| elm | elastic diff xs direct | 578 | 11765 | 91 | — |
 | elm | neutron total | 13 | 25799 | 9 | — |
 | elm | proton reaction | 15 | 73 | 7 | — |
 | elm | proton reaction direct | 15 | 73 | 7 | — |
 | elm_light | charge exchange | 13 | 163 | 4 | — |
-| elm_light | elastic ay | 438 | 6854 | 69 | — |
-| elm_light | elastic diff xs | 1831 | 24933 | 185 | — |
-| elm_light | elastic diff xs direct | 1831 | 24933 | 185 | — |
-| elm_light | neutron total | 183 | 79661 | 128 | — |
-| elm_light | proton reaction | 24 | 181 | 20 | — |
-| elm_light | proton reaction direct | 24 | 181 | 20 | — |
+| elm_light | elastic ay | 505 | 8121 | 73 | — |
+| elm_light | elastic diff xs | 4653 | 48706 | 210 | — |
+| elm_light | elastic diff xs direct | 4653 | 48706 | 210 | — |
+| elm_light | neutron total | 244 | 112879 | 154 | — |
+| elm_light | proton reaction | 26 | 240 | 20 | — |
+| elm_light | proton reaction direct | 26 | 240 | 20 | — |
 | sm3 | charge exchange | 12 | 377 | 1 | — |
 | sm3 | elastic diff xs | 34 | 1451 | 18 | — |
 | kduq | neutron ay | 30 | 637 | 12 | 96.8% |
@@ -87,6 +88,12 @@ same pipeline as KDUQ, CHUQ and Test, with an optional evaluated copy:
 | test_evaluated | proton ay | 14 | 390 | 4 | — |
 | test_evaluated | proton elastic | 11 | 314 | 4 | — |
 | test_evaluated | proton reaction | 4 | 19 | 1 | — |
+| kduq_evaluated_direct | neutron ay | 30 | 637 | 12 | — |
+| kduq_evaluated_direct | neutron elastic | 579 | 14888 | 123 | — |
+| kduq_evaluated_direct | neutron total | 65 | 4497 | 35 | — |
+| kduq_evaluated_direct | proton ay | 54 | 1606 | 26 | — |
+| kduq_evaluated_direct | proton elastic | 100 | 4155 | 40 | — |
+| kduq_evaluated_direct | proton reaction | 62 | 204 | 23 | — |
 
 Coverage is the fraction of a sector's specification rows that produced data, and is given
 for the static corpora. ELM is a query rather than a list of subentries, sm3 a short list of
@@ -294,6 +301,10 @@ uv run python scripts/curate_elm_light.py   # ELM-light, all sectors (decisions 
 uv run python scripts/talys_compound.py run --corpus elm_light --sector elastic_diff_xs   # and proton_reaction
 uv run python scripts/talys_compound.py apply --corpus elm_light --sector elastic_diff_xs # and proton_reaction
 uv run python scripts/apply_author_errors.py  # the *_evaluated corpora (ELM is corrected as it is written)
+for s in neutron_elastic proton_elastic proton_reaction; do  # kduq_evaluated_direct, from compound_elastic/
+  uv run python scripts/talys_compound.py apply --corpus kduq_evaluated --sector $s --out-corpus kduq_evaluated_direct; done
+for s in neutron_total neutron_ay proton_ay; do
+  uv run python scripts/talys_compound.py copy --corpus kduq_evaluated --sector $s --out-corpus kduq_evaluated_direct; done
 uv run python scripts/curate_sm3.py         # sm3, from ELM and KDUQ records
 uv run python scripts/build_manifests.py    # provenance manifests for each corpus
 ```

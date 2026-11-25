@@ -1,0 +1,22 @@
+{
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
+ "projectile": "neutron",
+ "target": "Sr_0",
+ "energies": [
+  3.2,
+  3.66,
+  4.37,
+  14.76
+ ],
+ "settings": [
+  "projectile n",
+  "element sr",
+  "mass 0",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": [],
+ "natural": true
+}

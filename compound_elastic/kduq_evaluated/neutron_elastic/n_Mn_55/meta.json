@@ -1,0 +1,26 @@
+{
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
+ "projectile": "neutron",
+ "target": "Mn_55",
+ "energies": [
+  2.47,
+  3.0,
+  3.49,
+  4.0,
+  4.56,
+  6.09,
+  7.05,
+  8.05,
+  11.01
+ ],
+ "settings": [
+  "projectile n",
+  "element mn",
+  "mass 55",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": []
+}

@@ -1,0 +1,33 @@
+{
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
+ "projectile": "proton",
+ "target": "Cu_0",
+ "energies": [
+  8.8,
+  8.9,
+  9.05,
+  9.15,
+  9.52,
+  9.85,
+  10.19,
+  15.8,
+  16.37,
+  28.0,
+  77.0,
+  95.0,
+  99.0,
+  113.0,
+  133.0,
+  134.0,
+  225.0
+ ],
+ "settings": [
+  "projectile p",
+  "element cu",
+  "mass 0",
+  "energy energies",
+  "filetotal y"
+ ],
+ "missing_angular": [],
+ "natural": true
+}

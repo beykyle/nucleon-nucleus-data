@@ -135,39 +135,49 @@ From the independent review (2026-11-11; four reviewers: code, data vs docs, inp
   entry (O0253) or no uncertainties (E0795, C0078).
 - The report lists every drop-table key that matched no record (`tests/test_elm_light_evaluation.py` requires none).
 
-## 3. Compound elastic (scripts/talys_compound.py --corpus elm_light, 2026-11-10)
+## 3. Compound elastic (scripts/talys_compound.py --corpus elm_light; rerun 2026-11-25)
 
-TALYS 49ef834 (as ELM), default settings + outangle/cpang; natural targets run as their dominant isotope (their
-records are filed under it). `elastic_diff_xs_direct` (4670 records; 1831 before natural Si, S and Ne joined on 2026-11-11) and `proton_reaction_direct` (26). Systems with more than 500 energies (n+28Si, 2567) run in chunks (TALYS allows 600 incident energies per run). The table below is from 2026-11-10 (before the natural targets). Median over
-sets of each set's median `ce_fraction_model` (CE / TALYS elastic), with the number of sets, by energy (MeV):
+TALYS 7629373 (as ELM and kduq_evaluated_direct), default settings + outangle/cpang; natural targets run as their
+dominant isotope (their records are filed under it). `elastic_diff_xs_direct` (4653 records) and
+`proton_reaction_direct` (26). Systems with more than 500 energies (n+28Si, 2567) run in chunks (TALYS allows 600
+incident energies per run). Median over sets of each set's median `ce_fraction_model` (CE / TALYS elastic), with the
+number of sets, by energy (MeV):
 
 | system | 0–2 | 2–5 | 5–10 | 10–15 | 15–20 | 20–30 | 30–50 | 50–200 |
 |---|---|---|---|---|---|---|---|---|
-| n+12C | 0.60 (177) | 0.75 (321) | 0.71 (186) | 0.23 (52) | 0.11 (10) | 0.02 (5) | 0.00 (1) | 0.00 (14) |
-| p+12C | 0.53 (100) | 0.61 (51) | 0.72 (36) | 0.62 (24) | 0.14 (38) | 0.03 (9) | 0.00 (11) | 0.00 (19) |
-| p+14C | — | — | — | 0.07 (1) | — | — | — | — |
-| n+16O | 0.41 (11) | 0.78 (46) | 0.61 (25) | 0.21 (25) | 0.01 (2) | 0.00 (5) | — | 0.00 (1) |
+| n+12C | 0.52 (177) | 0.71 (321) | 0.68 (186) | 0.20 (51) | 0.09 (8) | 0.01 (5) | 0.00 (1) | 0.00 (1) |
+| p+12C | 0.53 (100) | 0.61 (51) | 0.72 (38) | 0.60 (30) | 0.14 (38) | 0.03 (9) | 0.00 (11) | 0.00 (19) |
+| p+14C | — | — | — | 0.08 (1) | — | — | — | — |
+| n+16O | 0.29 (11) | 0.55 (46) | 0.51 (25) | 0.16 (25) | 0.01 (2) | 0.00 (5) | — | 0.00 (1) |
 | p+16O | 0.19 (2) | 0.78 (73) | 0.84 (87) | 0.38 (12) | 0.08 (30) | 0.01 (3) | 0.00 (10) | 0.00 (5) |
 | n+18O | — | — | 0.41 (42) | — | — | 0.00 (1) | — | — |
-| p+18O | — | — | 0.09 (5) | 0.05 (6) | 0.00 (1) | 0.00 (1) | — | — |
-| p+20Ne | — | 0.28 (10) | 0.38 (1) | — | — | — | — | 0.00 (1) |
-| n+24Mg | 0.50 (1) | 0.74 (1) | 0.49 (2) | 0.03 (1) | — | — | — | — |
-| p+24Mg | — | 0.49 (51) | 0.59 (58) | — | 0.01 (1) | 0.00 (2) | 0.00 (5) | 0.00 (3) |
+| p+18O | — | — | 0.10 (6) | 0.05 (6) | 0.00 (1) | 0.00 (1) | — | — |
+| n+20Ne | — | — | 0.41 (2) | — | — | — | — | — |
+| p+20Ne | — | 0.28 (10) | 0.43 (11) | — | — | — | — | 0.00 (1) |
+| n+24Mg | 0.50 (1) | 0.74 (1) | — | — | — | — | — | — |
+| p+24Mg | — | 0.49 (51) | 0.59 (57) | — | 0.01 (1) | 0.00 (2) | 0.00 (5) | 0.00 (3) |
 | n+26Mg | — | — | — | — | — | 0.00 (1) | — | — |
 | p+26Mg | — | — | 0.47 (99) | 0.08 (1) | 0.00 (1) | — | — | — |
-| n+28Si | — | 0.54 (1) | 0.62 (3) | 0.03 (5) | 0.00 (2) | 0.00 (2) | — | — |
-| p+28Si | 0.09 (28) | 0.27 (18) | 0.33 (5) | 0.14 (4) | 0.02 (5) | 0.00 (1) | 0.00 (2) | 0.00 (7) |
+| n+28Si | 0.45 (1507) | 0.43 (1023) | 0.41 (30) | 0.05 (17) | 0.00 (3) | 0.00 (4) | 0.00 (2) | — |
+| p+28Si | 0.08 (34) | 0.76 (224) | 0.33 (6) | 0.14 (4) | 0.02 (5) | 0.00 (2) | 0.00 (2) | 0.00 (7) |
 | p+30Si | — | — | — | — | — | — | — | 0.00 (1) |
-| n+32S | — | — | 0.24 (7) | 0.00 (6) | 0.00 (3) | 0.00 (2) | — | — |
+| n+32S | — | 0.72 (9) | 0.21 (18) | 0.00 (16) | 0.00 (3) | 0.00 (5) | 0.00 (2) | — |
 | p+32S | — | 0.22 (1) | 0.74 (13) | — | 0.00 (1) | — | — | 0.00 (1) |
 | n+34S | — | — | — | — | — | 0.00 (2) | — | — |
 | p+34S | — | — | 0.60 (10) | — | — | 0.00 (1) | — | — |
-| n+40Ar | — | — | 0.09 (2) | 0.00 (1) | — | — | — | — |
+| n+40Ar | — | — | 0.14 (1) | 0.00 (1) | — | — | — | — |
 | p+40Ar | — | — | — | — | — | 0.00 (3) | 0.00 (4) | 0.00 (1) |
 
-1,198 sets have a median CE fraction above 0.5, none above 20 MeV. σ_R: CE adds < 8 % above 15 MeV (12C O0341002 at
+**Local neutron potentials for light targets.** TALYS uses a nucleus-specific optical potential where its database
+has one (`localomp y`, the default). Since upstream 5c714f3 (2026-10-16) it has local neutron potentials for Li–F
+(`structure/optical/neutron/n-C.omp`, `n-O.omp`, ...), so n+12C and n+16O no longer use the global KD03. Compared
+with the first run (TALYS 49ef834, 2026-11-10) their σ_R is about 15 % lower and their CE fraction 10–30 % lower
+(n+16O 0–2 MeV: 0.41 → 0.29); the CE of the other systems moved by less than 1 % of the cross section. Protons, and
+neutrons on Ne and heavier, still use KD03.
+
+1,337 sets have a median CE fraction above 0.5, none above 20 MeV. σ_R: CE adds < 8 % above 15 MeV (12C O0341002 at
 10 MeV: 1.7x, i.e. TALYS CE exceeds the measured nonelastic there). Caveats for the calibration's floors: KD03 is
-fitted for A = 24–209, so CE below A = 24 is an extrapolation; Hauser–Feshbach averages over resonances that the
+fitted for A = 24–209, so CE below A = 24 is an extrapolation (except n+C, N, O, F, which have TALYS local potentials); Hauser–Feshbach averages over resonances that the
 light-target data below ~10 MeV resolve, so CE there is an average, not a prediction of a given energy.
 
 

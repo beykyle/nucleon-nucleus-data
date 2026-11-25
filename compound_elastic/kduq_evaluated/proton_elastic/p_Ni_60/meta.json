@@ -1,0 +1,23 @@
+{
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
+ "projectile": "proton",
+ "target": "Ni_60",
+ "energies": [
+  16.0,
+  18.6,
+  30.3,
+  30.8,
+  65.0
+ ],
+ "settings": [
+  "projectile p",
+  "element ni",
+  "mass 60",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y",
+  "cpang y"
+ ],
+ "missing_angular": []
+}

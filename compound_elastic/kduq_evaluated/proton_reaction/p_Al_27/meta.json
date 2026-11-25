@@ -1,0 +1,40 @@
+{
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
+ "projectile": "proton",
+ "target": "Al_27",
+ "energies": [
+  8.8,
+  8.87,
+  9.37,
+  9.88,
+  10.39,
+  16.29,
+  24.8,
+  27.4,
+  29.0,
+  30.4,
+  33.7,
+  36.9,
+  39.8,
+  40.0,
+  43.2,
+  46.3,
+  60.8,
+  77.0,
+  95.0,
+  99.7,
+  113.0,
+  133.0,
+  134.0,
+  179.6,
+  234.0
+ ],
+ "settings": [
+  "projectile p",
+  "element al",
+  "mass 27",
+  "energy energies",
+  "filetotal y"
+ ],
+ "missing_angular": []
+}
