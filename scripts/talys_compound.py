@@ -31,6 +31,7 @@ part angle-dependent from Hauser-Feshbach Legendre coefficients, up to 50 MeV; i
 from __future__ import annotations
 
 import argparse
+from functools import lru_cache
 import csv
 import json
 import os
@@ -47,7 +48,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 from nn_corpora import serialize, spec  # noqa: E402
 
-TALYS = REPO_ROOT / "external" / "talys"
+#: the TALYS checkout (git submodule); NN_TALYS_DIR points at a built one elsewhere, e.g. another worktree's
+TALYS = Path(os.environ.get("NN_TALYS_DIR", REPO_ROOT / "external" / "talys"))
 CACHE = REPO_ROOT / "compound_elastic"  # parsed TALYS results, outside data/ (not corpus records)
 CE_UNCERTAINTY = 0.30  # fractional uncertainty of the TALYS compound elastic, added in quadrature
 PROJ = {"neutron": ("n", "nn"), "proton": ("p", "pp")}
@@ -173,41 +175,65 @@ def talys_dir(corpus: str, sector: str, proj: str, stem: str) -> Path:
     return CACHE / corpus / sector / f"{proj}_{stem}"
 
 
+#: TALYS's limit on incident energies per run (numenin = 600 in source/A0_talys_mod.f90); larger systems run in chunks
+MAX_ENERGIES = 500
+
+
+def _talys_chunk(projectile: str, stem: str, energies, angular: bool, inp: str):
+    """One TALYS run: (all.tot table, {energy: angular table}, missing angular energies)."""
+    with tempfile.TemporaryDirectory(prefix=f"talys_{stem}_") as d:
+        Path(d, "talys.inp").write_text(inp)
+        Path(d, "energies").write_text("\n".join(f"{e:.3f}" for e in energies) + "\n")
+        r = subprocess.run(f"{talys_bin()} < talys.inp > talys.out", shell=True, cwd=d, env=talys_env())
+        if r.returncode != 0 or not (Path(d) / "all.tot").exists():
+            return None
+        tot = parse_all_tot(Path(d) / "all.tot")
+        ang, missing = {}, []
+        if angular:
+            pref = PROJ[projectile][1]
+            for e in energies:
+                f = Path(d) / f"{pref}{energy_tag(e)}ang.L00"
+                if f.exists():
+                    ang[e] = parse_table(f)
+                else:
+                    missing.append(e)
+        return tot, ang, missing
+
+
 def run_system(task) -> tuple[str, str]:
     corpus, sector, projectile, stem, energies, angular = task
     out = talys_dir(corpus, sector, PROJ[projectile][0], stem)
     out.mkdir(parents=True, exist_ok=True)
     inp = talys_input(projectile, stem, angular)
-    with tempfile.TemporaryDirectory(prefix=f"talys_{stem}_") as d:
-        Path(d, "talys.inp").write_text(inp)
-        Path(d, "energies").write_text("\n".join(f"{e:.3f}" for e in energies) + "\n")
-        r = subprocess.run(f"{talys_bin()} < talys.inp > talys.out", shell=True, cwd=d, env=talys_env())
-        if r.returncode != 0:
-            return stem, f"TALYS failed (exit {r.returncode})"
-        tot = parse_all_tot(Path(d) / "all.tot")
-        with open(out / "integral.csv", "w", newline="") as fh:
+    tot, ang, missing = {}, {}, []
+    for i in range(0, len(energies), MAX_ENERGIES):
+        res = _talys_chunk(projectile, stem, energies[i:i + MAX_ENERGIES], angular, inp)
+        if res is None:
+            return stem, f"TALYS failed (energies {energies[i]}-{energies[min(i + MAX_ENERGIES, len(energies)) - 1]})"
+        t, a, m = res
+        for k, v in t.items():
+            tot[k] = np.concatenate([tot[k], v]) if k in tot else v
+        ang.update(a)
+        missing += m
+    with open(out / "integral.csv", "w", newline="") as fh:
+        w = csv.writer(fh)
+        w.writerow(["E_MeV", "compound_elastic_mb", "shape_elastic_mb", "reaction_mb", "total_mb", "nonelastic_mb"])
+        for i in range(len(tot["e"])):
+            w.writerow([f"{tot['e'][i]:.6g}"] + [f"{tot[k][i]:.6g}" for k in
+                       ("compound_elastic", "shape_elastic", "reaction", "total", "nonelastic")])
+    if angular:
+        with open(out / "angular.csv", "w", newline="") as fh:
             w = csv.writer(fh)
-            w.writerow(["E_MeV", "compound_elastic_mb", "shape_elastic_mb", "reaction_mb", "total_mb", "nonelastic_mb"])
-            for i in range(len(tot["e"])):
-                w.writerow([f"{tot['e'][i]:.6g}"] + [f"{tot[k][i]:.6g}" for k in
-                           ("compound_elastic", "shape_elastic", "reaction", "total", "nonelastic")])
-        if angular:
-            pref = PROJ[projectile][1]
-            with open(out / "angular.csv", "w", newline="") as fh:
-                w = csv.writer(fh)
-                w.writerow(["E_MeV", "angle_cm_deg", "xs_mb_sr", "direct_mb_sr", "compound_mb_sr", "ratio_rutherford"])
-                missing = []
-                for e in energies:
-                    f = Path(d) / f"{pref}{energy_tag(e)}ang.L00"
-                    if not f.exists():
-                        missing.append(e)
-                        continue
-                    t = parse_table(f)
-                    rr = t.get("ratio_rutherford", np.full_like(t["angle"], np.nan))
-                    for j in range(len(t["angle"])):
-                        w.writerow([f"{e:.3f}", f"{t['angle'][j]:.4g}", f"{t['xs'][j]:.6g}", f"{t['direct'][j]:.6g}",
-                                    f"{t['compound'][j]:.6g}", f"{rr[j]:.6g}"])
-        shutil.copy(Path(d) / "talys.inp", out / "talys.inp")
+            w.writerow(["E_MeV", "angle_cm_deg", "xs_mb_sr", "direct_mb_sr", "compound_mb_sr", "ratio_rutherford"])
+            for e in energies:
+                if e not in ang:
+                    continue
+                t = ang[e]
+                rr = t.get("ratio_rutherford", np.full_like(t["angle"], np.nan))
+                for j in range(len(t["angle"])):
+                    w.writerow([f"{e:.3f}", f"{t['angle'][j]:.4g}", f"{t['xs'][j]:.6g}", f"{t['direct'][j]:.6g}",
+                                f"{t['compound'][j]:.6g}", f"{rr[j]:.6g}"])
+    (out / "talys.inp").write_text(inp)
     meta = dict(talys_commit=talys_commit(), projectile=projectile, target=stem, energies=energies,
                 settings=inp.strip().splitlines(), missing_angular=missing if angular else [])
     (out / "meta.json").write_text(json.dumps(meta, indent=1) + "\n")
@@ -228,8 +254,9 @@ def run(args) -> None:
 
 
 # -- apply ----------------------------------------------------------------------------------------------------------
+@lru_cache(maxsize=8)
 def load_angular(path: Path) -> dict[float, tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]]:
-    """{E: (angle_deg, compound_mb_sr, xs_mb_sr, ratio_rutherford)}."""
+    """{E: (angle_deg, compound_mb_sr, xs_mb_sr, ratio_rutherford)}; cached, as apply asks once per record."""
     out: dict = {}
     with open(path) as fh:
         for row in csv.DictReader(fh):
