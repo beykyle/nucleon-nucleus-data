@@ -1,9 +1,8 @@
 {
- "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
  "projectile": "proton",
  "target": "Si_30",
  "energies": [
-  40.75,
   180.0
  ],
  "settings": [

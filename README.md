@@ -48,12 +48,12 @@ same pipeline as KDUQ, CHUQ and Test, with an optional evaluated copy:
 | elm | proton reaction | 15 | 73 | 7 | — |
 | elm | proton reaction direct | 15 | 73 | 7 | — |
 | elm_light | charge exchange | 13 | 163 | 4 | — |
-| elm_light | elastic ay | 438 | 6854 | 69 | — |
-| elm_light | elastic diff xs | 1831 | 24933 | 185 | — |
-| elm_light | elastic diff xs direct | 1831 | 24933 | 185 | — |
-| elm_light | neutron total | 183 | 79661 | 128 | — |
-| elm_light | proton reaction | 24 | 181 | 20 | — |
-| elm_light | proton reaction direct | 24 | 181 | 20 | — |
+| elm_light | elastic ay | 505 | 8121 | 73 | — |
+| elm_light | elastic diff xs | 4653 | 48706 | 210 | — |
+| elm_light | elastic diff xs direct | 4653 | 48706 | 210 | — |
+| elm_light | neutron total | 244 | 112879 | 154 | — |
+| elm_light | proton reaction | 26 | 240 | 20 | — |
+| elm_light | proton reaction direct | 26 | 240 | 20 | — |
 | sm3 | charge exchange | 12 | 377 | 1 | — |
 | sm3 | elastic diff xs | 34 | 1451 | 18 | — |
 | kduq | neutron ay | 30 | 637 | 12 | 96.8% |
