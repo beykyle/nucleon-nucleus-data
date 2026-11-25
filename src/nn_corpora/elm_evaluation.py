@@ -22,6 +22,8 @@ import copy
 
 import numpy as np
 
+from . import spec
+
 MARK = "elm-evaluation v1 (src/nn_corpora/elm_evaluation.py)"
 #: (A, Z) -> reason
 EXCLUDED_TARGETS: dict[tuple[int, int], str] = {
@@ -84,8 +86,8 @@ def excluded_record(payload: dict) -> str | None:
 
 
 def apply(records, corpus: str, sector: str):
-    """Evaluate a sector's records (serialize.Record) of the ELM corpus; excluded records removed."""
-    if corpus != "elm":
+    """Evaluate a sector's records (serialize.Record) of an ELM-family corpus; excluded records removed."""
+    if corpus not in spec.ELM_CORPORA:
         return records
     out = []
     for r in records:

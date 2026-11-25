@@ -1,0 +1,20 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "proton",
+ "target": "Ne_20",
+ "energies": [
+  22.9,
+  28.9,
+  35.9,
+  43.0,
+  47.0
+ ],
+ "settings": [
+  "projectile p",
+  "element ne",
+  "mass 20",
+  "energy energies",
+  "filetotal y"
+ ],
+ "missing_angular": []
+}

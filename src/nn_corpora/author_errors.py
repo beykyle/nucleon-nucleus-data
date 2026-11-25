@@ -50,7 +50,7 @@ DOERING_CSV = ROOT / "external" / "doering_1974_table5.csv"
 #: static (tabulated) corpus -> its evaluated copy, for those registered with one (``spec.TABULATED``)
 EVALUATED = {name: f"{name}_evaluated" for name, c in spec.TABULATED.items() if c.evaluated_copy}
 #: corpora the corrections cover; the static corpora never are
-SCOPE = {"elm", "sm3", *EVALUATED.values()}
+SCOPE = {*spec.ELM_CORPORA, "sm3", *EVALUATED.values()}
 #: largest angle difference (deg) at which a record point is the same point as an EXFOR row
 ANGLE_TOL = 0.06
 #: largest lab -> centre-of-mass angle shift (deg) accepted when matching records to EXFOR rows by position
@@ -149,6 +149,14 @@ PER_PAPER = {
     "O0456": (_rel(0.03), "Brussel & Williams, PR 114 (1959) 525: statistical accuracy about 3 %"),
     "F1100": (_step(30.0, 0.05, 0.03), "Kurepin, Madsen & Albek, Izv. 31 (1967) 195, as EXFOR's ERR-ANALYS "
               "quotes it (no ERR-S column): 5 % at 20 deg, 2-3 % beyond 30 deg"),
+    # ELM-light papers (Kyle supplied them, 2026-11-11)
+    "O1242": (_split(_rel(0.015), _abs(0.03)), "Guratzsch et al., NPA 129 (1969) 405, p.409 Table 1 (12C): mean "
+              "relative error 1.5 % (statistics, background, dead time), polarisation 3 % (absolute 0.03); EXFOR files "
+              "both as constant ERR-n columns"),
+    "O1367": (_split(_rel(0.05), _abs(0.05)), "Wienhard, Clausnitzer & Hartmann, Z. Phys. 256 (1972) 457, p.460: "
+              "5 % of sigma and 0.05 in A put into the phase-shift fit (no measured error stated; as Put, O0124)"),
+    "F0996": (_step(45.0, 0.15, 0.05), "Hulubei et al., NP 39 (1962) 686, p.688: relative errors < 5 % except at "
+              "small angles, up to 15 % (read as below 45 deg c.m.); absolute 10 %"),
     "O1104": (_split(_rel(0.02), lambda th, y, ay, tgt: np.maximum(0.02 * np.abs(y), 0.01)),
               "Petit et al., JPG 20 (1994) 1955: minimal error of 2 % assumed for cross section and analysing power"),
 }
@@ -157,7 +165,13 @@ PER_PAPER = {
 #: unit label. Fricke et al., PR 156 (1967) 1207: the authors' bars ("relative probable errors which include
 #: statistical errors and the uncertainty in background subtraction") are ERR-1, relabelled from ERR-T in 2023 and
 #: labelled PER-CENT although the values are absolute.
-COLUMN_AUTHOR = {"O0328": "ERR-1"}
+COLUMN_AUTHOR = {"O0328": "ERR-1", "O0484": "ERR-S"}
+#: entry -> what the COLUMN_AUTHOR column is (the per-record note)
+COLUMN_AUTHOR_WHY = {
+    "O0328": "the authors' errors; relabelled from ERR-T in 2023, absolute in data units",
+    "O0484": "the authors' statistical bars, Prior et al., NPA 167 (1971) 143, p.145; DATA-ERR is the data-point "
+             "reader uncertainty; ERR-S is blank where the bar is inside the symbol",
+}
 
 #: subentry or entry -> (the authors' per-point error columns, their normalisation columns, what ERR-ANALYS says).
 #: The per-point error is EXFOR's reader error (+) the per-point columns; the normalisation is the normalisation
@@ -176,6 +190,15 @@ COLUMNS = {
     "12701": (["DATA-ERR1"], ["DATA-ERR2"], "DATA-ERR1 relative uncertainties; DATA-ERR2 normalization error"),
     "22987": (["ERR-T"], [], "ERR-T total (statistical, background subtraction, multiple scattering); ERR-S its "
                              "statistical part"),
+    "E0243005": (["ERR-T"], [], "ERR-T is the total Delta P (relative (+) the normalisation at 47.5 deg), DATA-ERR its "
+                                "relative part (Kato et al., NIM 169 (1980) 589, Table 2)"),
+}
+#: subentry -> (column, why): an error column EXFOR labels with the data's units but which holds per-cent values; the
+#: per-point error is that column / 100 x |y|
+PERCENT_ERR = {
+    "C0826002": ("DATA-ERR", "Alarcon et al., PRC 31, 697 (1985), 34S(p,p) 29.8 MeV: DATA-ERR filed as MB/SR but the "
+                 "values are per cent (14.5, 11.1, ..., 9.1 against 1867 ... 0.33 mb/sr; read as mb/sr the error "
+                 "reaches 2700 % at 121 deg) (ELM-light review, 2026-11-11)"),
 }
 #: entry -> columns ERR-ANALYS (or their values) show to be a common uncertainty, not a per-point one
 COMMON = {
@@ -184,6 +207,9 @@ COMMON = {
     "O0090": ({"ERR-T"}, "an absolute error in the cross section of 10 %, including the efficiency"),
     "22987": ({"ERR-1"}, "the cross-section change from the angle uncertainty (target and chamber positions, about "
               "1 deg): an angle offset common to the data set"),
+    "20220": ({"ERR-S"}, "a constant 10 %, the statistical goal of the n-gamma coincidence runs (Spaargaren & Jonker, "
+              "NPA 161 (1971) 354, p.359), not an error of the elastic cross sections; ERR-T is their overall error "
+              "(Table 1, p.362)"),
 }
 
 
@@ -223,6 +249,13 @@ NORM = {
     "O0211015": (float(np.hypot(0.05, 0.10)), "Fulmer: thickness 5 % (+) charge collection 10 %"),
     "O0211016": (float(np.hypot(0.05, 0.10)), "Fulmer: thickness 5 % (+) charge collection 10 %"),
     "O0211017": (float(np.hypot(0.05, 0.10)), "Fulmer: thickness 5 % (+) charge collection 10 %"),
+    "O1242": (0.07, "Guratzsch: absolute-value error 7 % (thickness, enrichment, geometry, current), Table 1"),
+    "F0996": (0.10, "Hulubei: accuracy of the absolute cross sections 10 %"),
+    "D0049": (0.11, "Carlson et al., NPA 249 (1975) 29, p.36: error bars are relative only; absolute cross sections "
+              "+-11 %"),
+    "C0826002": (0.10, "Alarcon et al., PRC 31, 697 (1985): normalised to an optical-model value calculated at "
+                 "15 deg (EXFOR MONITOR ... CALC), no absolute uncertainty given: 10 % (ELM-light review, 2026-11-11)"),
+    "D0049035": (0.25, "Carlson et al., NPA 249 (1975) 29, p.36: absolute cross sections +-25 % for 208Pb"),
 }
 # angle-integrated (energy-distribution) records: neutron total and proton reaction cross sections
 _FINLAY = "Finlay et al., PRC 47, 237 (1993), ERR-ANALYS: normalization uncertainty is "
@@ -249,6 +282,8 @@ SYS_COLUMN = {
 #: thickness, beam integration, efficiency) cancel in a ratio of counts.
 NORM_AY = {
     "O0328": (0.018, "Fricke: beam polarisation (27.4 +- 0.5) %, including the uncertainty in P_C"),
+    "O1367": (0.029, "Wienhard: beam polarisation 69 % +- 2 %"),
+    "O0484": (0.09, "Prior: absolute beam-polarisation uncertainty < 0.05 at beam polarisations 0.4-0.7 (7-12 %)"),
 }
 
 # -- EXFOR error columns --------------------------------------------------------------------------------------------
@@ -463,7 +498,10 @@ def audit_record(rec: dict) -> dict | None:
         y = np.asarray(rec["data"]["y"], dtype=float)
         factor, ok = unit_factor(p, idx, y, is_ay)
         ok &= np.array([np.sum(x == v) == 1 for v in x])
-        author = np.max(list(p.author.values()), axis=0)[idx] * factor
+        if sub[:8] in PERCENT_ERR:  # the column is per cent of the value (PERCENT_ERR), not in the data's units
+            author = p.author[PERCENT_ERR[sub[:8]][0]][idx] / 100.0 * np.abs(y)
+        else:
+            author = np.max(list(p.author.values()), axis=0)[idx] * factor
         ye = np.asarray(rec["data"]["y_err"], dtype=float)
         unused = [float(x[k]) for k in np.flatnonzero(ok & (ye < 0.95 * author))]
     if not mask.any() and not unused:
@@ -599,6 +637,15 @@ def correct(payload: dict, corpus: str) -> dict | None:
         _note(payload, f"values and errors replaced by Doering thesis (MSU 1974) Table 5, {len(t)} rows "
                        f"(EXFOR {len(x)} digitised points); external/doering_1974_table5.csv")
         changed = True
+    elif sub in PERCENT_ERR:  # 3. an error column in per cent, labelled with the data's units
+        label, why = PERCENT_ERR[sub]
+        p, idx = _matched(sub, x, energy, is_ay)
+        pct = p.author[label][idx]
+        if not (pct > 0).all():
+            raise ValueError(f"{sub} at {energy} MeV: no {label} at {list(x[pct <= 0])} deg")
+        data["y_err"] = [float(v) for v in pct / 100.0 * np.abs(y)]
+        _note(payload, f"per-point error = EXFOR {label} read as per cent of the value: {why}")
+        changed = True
     elif entry in COLUMN_AUTHOR:  # 3a. the authors' column, filled where blank
         p, idx = _matched(sub, x, energy, is_ay)
         col = p.author[COLUMN_AUTHOR[entry]][idx]
@@ -611,7 +658,7 @@ def correct(payload: dict, corpus: str) -> dict | None:
         new = np.hypot(reader, author) * (1.0 if is_ay else np.abs(y))
         data["y_err"] = [float(v) for v in new]
         _note(payload, f"per-point error = EXFOR {'+'.join(p.reader_cols)} (reader) (+) {COLUMN_AUTHOR[entry]} "
-                       f"(the authors' errors; relabelled from ERR-T in 2023, absolute in data units); "
+                       f"({COLUMN_AUTHOR_WHY[entry]}); "
                        f"{int(np.isnan(known).sum())} of {len(x)} points without {COLUMN_AUTHOR[entry]} filled by "
                        f"linear interpolation in angle, flat beyond the ends")
         changed = True
@@ -642,14 +689,25 @@ def correct(payload: dict, corpus: str) -> dict | None:
             changed = True
     elif entry in PER_PAPER:  # 3c. the paper's statement where EXFOR has no author error
         rule, cite = PER_PAPER[entry]
-        p, idx = _matched(sub, x, energy, is_ay)
-        blank = ~p.has_author[idx]
-        # EXFOR's reader error, not the record's y_err: the record may already hold an author error EXFOR files as a
-        # constant ERR-n column (e.g. O0253 ERR-1 "relative uncertainties" 2 %), which would count twice
-        reader = to_record(p.reader[idx], p, idx, y, is_ay)
-        # where EXFOR has the authors' error the record must carry it (the curation may have taken the reader's)
-        exfor_author = to_record(np.max(list(p.author.values()) or [np.zeros(len(p.angles))], axis=0)[idx],
-                                 p, idx, y, is_ay)
+        try:
+            p, idx = _matched(sub, x, energy, is_ay)
+        except ValueError:
+            p = exfor_points(sub, energy, None, is_ay)
+            if p is None or p.author:
+                raise
+            # record angles not EXFOR's (e.g. an excitation function at lab angles, unrolled to c.m. angular
+            # distributions: Wienhard, O1367002) and no author column at all: the record's error is the reader's
+            p, idx = None, None
+        if p is None:
+            blank, reader, exfor_author = np.ones(len(x), bool), ye.copy(), np.zeros(len(x))
+        else:
+            blank = ~p.has_author[idx]
+            # EXFOR's reader error, not the record's y_err: the record may already hold an author error EXFOR files
+            # as a constant ERR-n column (e.g. O0253 ERR-1 "relative uncertainties" 2 %), which would count twice
+            reader = to_record(p.reader[idx], p, idx, y, is_ay)
+            # where EXFOR has the authors' error the record must carry it (the curation may have taken the reader's)
+            exfor_author = to_record(np.max(list(p.author.values()) or [np.zeros(len(p.angles))], axis=0)[idx],
+                                     p, idx, y, is_ay)
         low = ~blank & (ye < 0.95 * exfor_author)
         new = ye.copy()
         if blank.any():

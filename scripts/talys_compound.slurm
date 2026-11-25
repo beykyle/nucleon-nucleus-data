@@ -14,7 +14,7 @@
 #   sbatch --export=ALL,SECTORS=neutron_elastic,TARGETS=Fe_0 scripts/talys_compound.slurm
 #
 # Environment: CORPUS (default kduq_evaluated), SECTORS (space/comma separated; default the three corrected
-# sectors), TARGETS (optional file stems), TALYS_ROOT (optional: another TALYS build; default external/talys).
+# sectors), TARGETS (optional file stems), NN_TALYS_DIR (optional: another TALYS build; default external/talys).
 # Afterwards, on the login node: talys_compound.py apply / copy, then scripts/build_manifests.py.
 
 repo=/mnt/ufs18/rs/reactiontheoryinitiative/nucleon_nucleus_data
@@ -25,7 +25,7 @@ export PATH="${HOME}/.local/bin:${PATH}"
 command -v uv >/dev/null || { echo "error: uv not on PATH" >&2; exit 1; }
 uv sync --extra dev || exit 1
 
-export TALYS_ROOT="${TALYS_ROOT:-${repo}/external/talys}"
+export NN_TALYS_DIR="${NN_TALYS_DIR:-${repo}/external/talys}"
 export TMPDIR="${TMPDIR:-/tmp}/talys_${SLURM_JOB_ID}"
 mkdir -p "${TMPDIR}"
 export OMP_NUM_THREADS=1
@@ -35,7 +35,7 @@ SECTORS="${SECTORS:-neutron_elastic proton_elastic proton_reaction}"
 targets=()
 [ -n "${TARGETS:-}" ] && targets=(--targets ${TARGETS//,/ })
 
-echo "TALYS_ROOT=${TALYS_ROOT} CORPUS=${CORPUS} SECTORS=${SECTORS} TARGETS=${TARGETS:-all} node=$(hostname -s)"
+echo "NN_TALYS_DIR=${NN_TALYS_DIR} CORPUS=${CORPUS} SECTORS=${SECTORS} TARGETS=${TARGETS:-all} node=$(hostname -s)"
 status=0
 for s in ${SECTORS//,/ }; do
     echo "== ${s} $(date)"

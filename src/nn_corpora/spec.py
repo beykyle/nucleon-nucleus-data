@@ -276,6 +276,51 @@ ELM_EX_IAS: dict[tuple[int, int], float] = {
     (208, 82): 15.164,
 }
 ELM_IAS_WINDOW = 0.3
+#: corpora curated and evaluated the ELM way (elm_curate, author errors, elm_evaluation, TALYS compound elastic):
+#: ELM (A >= 40) and ELM-light (even-even 12 <= A <= 40, below)
+ELM_CORPORA = ("elm", "elm_light")
+
+
+# ---------------------------------------------------------------------------
+# ELM-light corpus (docs/ELM_LIGHT_DATA.md): even-even 12 <= A <= 40 except 40Ca (in ELM), deformed or not;
+# which of them a calibration uses is decided there, not here (Kyle, 2026-11-10). 36S and 36Ar are not curated: EXFOR
+# holds nothing usable for either (survey, 2026-11-10): none for 36S; for 36Ar only (p,p) excitation functions below
+# ~3.4 MeV (F0980, F1005) and sigma_tot below 6 keV (11570, 11573). 22Ne and 38Ar are not curated either (Kyle,
+# 2026-11-10): their only data are (p,n) sets that do not isolate the IAS, 22Ne E1667004 summing the 22Na 1+
+# (0.583 MeV) and 0+ IAS (0.657 MeV), 38Ar E1667010 naming no level and C0440002 summing the 38K 3+ ground state and
+# 0+ IAS (0-0.13 MeV).
+# ---------------------------------------------------------------------------
+ELM_LIGHT_TARGETS: tuple[tuple[int, int], ...] = (
+    (12, 6), (14, 6), (16, 8), (18, 8), (20, 10), (24, 12), (26, 12),
+    (28, 14), (30, 14), (32, 16), (34, 16), (40, 18),
+)
+#: natural targets used as their dominant isotope where it is >= 90 % (Kyle, 2026-11-11; it was ~99 % on 2026-09-24
+#: and 2026-11-10, until many EXFOR "isotopic" records proved to be natural samples): natNe (90.5 %), natSi (92.2 %),
+#: natS (95.0 %) join natC, natO, natAr; natMg (78.99 % 24Mg) is not used. {natural (0, Z): (dominant (A, Z),
+#: abundance)}; abundances IUPAC (CIAAW) representative values.
+ELM_LIGHT_NATURAL: dict[tuple[int, int], tuple[tuple[int, int], float]] = {
+    (0, 6): ((12, 6), 0.9893), (0, 8): ((16, 8), 0.99757), (0, 10): ((20, 10), 0.9048),
+    (0, 14): ((28, 14), 0.92223), (0, 16): ((32, 16), 0.9499), (0, 18): ((40, 18), 0.996035),
+}
+#: the threshold above, and the natural elements below it (their natural samples are dropped, also when EXFOR codes
+#: them as the dominant isotope: elm_light.natural_sample)
+ELM_LIGHT_NATURAL_MIN = 0.90
+ELM_LIGHT_NATURAL_EXCLUDED: dict[int, tuple[int, float]] = {12: (24, 0.7899)}
+#: IAS excitation energy (MeV) in (A, Z+1) for the N > Z targets: the lowest 0+ level with T = (N-Z)/2, from ENSDF
+#: via the IAEA LiveChart API (2026-11-10). Evaluations: 14N Ajzenberg-Selove 1991; 18F Tilley et al. 1995; 26Al
+#: Basunia & Hurst 2016; 30P Basunia & Chakraborty 2024; 34Cl Nica & Singh 2012 (the 0+ T=1 ground state); 40K Chen
+#: 2017 (0+ T=2).
+ELM_LIGHT_EX_IAS: dict[tuple[int, int], float] = {
+    (14, 6): 2.312798, (18, 8): 1.04155, (26, 12): 0.228305, (30, 14): 0.67711, (34, 16): 0.0, (40, 18): 4.3837,
+}
+ELM_LIGHT_ELASTIC_EINC_RANGE = ELM_ELASTIC_EINC_RANGE
+ELM_LIGHT_PN_EINC_RANGE = ELM_PN_EINC_RANGE
+ELM_LIGHT_INTEGRAL_EINC_RANGE = (0.1, 200.0)  # sigma_tot and sigma_R, as ELM's curate_elm_integral E_RANGE
+
+
+def elm_light_pn_targets() -> list[tuple[int, int]]:
+    """ELM-light (p,n) targets: N > Z with a tabulated IAS energy."""
+    return [t for t in ELM_LIGHT_TARGETS if t in ELM_LIGHT_EX_IAS]
 
 
 def elm_targets() -> list[tuple[int, int]]:

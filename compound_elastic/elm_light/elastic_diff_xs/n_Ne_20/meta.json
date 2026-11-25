@@ -1,0 +1,19 @@
+{
+ "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "projectile": "neutron",
+ "target": "Ne_20",
+ "energies": [
+  5.0,
+  8.0
+ ],
+ "settings": [
+  "projectile n",
+  "element ne",
+  "mass 20",
+  "energy energies",
+  "filetotal y",
+  "outangle y",
+  "fileelastic y"
+ ],
+ "missing_angular": []
+}

@@ -175,7 +175,7 @@ has no xs/Rutherford column, so for (p,p) σ/σ_Ruth uses the mean Rutherford cr
 - Where KDUQ and ELM share a system and energy, the CE agrees with ELM's (to 4e-7: output rounding).
 
 ```bash
-sbatch scripts/talys_compound.slurm      # compute node: run all three sectors (TALYS_ROOT: a TALYS build)
+sbatch scripts/talys_compound.slurm      # compute node: run all three sectors (NN_TALYS_DIR: a TALYS build)
 for s in neutron_elastic proton_elastic proton_reaction; do
   uv run python scripts/talys_compound.py apply --corpus kduq_evaluated --sector $s --out-corpus kduq_evaluated_direct; done
 for s in neutron_total neutron_ay proton_ay; do
