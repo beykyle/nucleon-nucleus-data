@@ -1,5 +1,5 @@
 {
- "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
  "projectile": "neutron",
  "target": "Se_0",
  "energies": [
@@ -9,81 +9,14 @@
   14.1
  ],
  "settings": [
-  "# natural Se: A = 74, abundance 0.008900",
   "projectile n",
   "element se",
-  "mass 74",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Se: A = 76, abundance 0.093700",
-  "projectile n",
-  "element se",
-  "mass 76",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Se: A = 77, abundance 0.076300",
-  "projectile n",
-  "element se",
-  "mass 77",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Se: A = 78, abundance 0.237700",
-  "projectile n",
-  "element se",
-  "mass 78",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Se: A = 80, abundance 0.496100",
-  "projectile n",
-  "element se",
-  "mass 80",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Se: A = 82, abundance 0.087300",
-  "projectile n",
-  "element se",
-  "mass 82",
+  "mass 0",
   "energy energies",
   "filetotal y",
   "outangle y",
   "fileelastic y"
  ],
  "missing_angular": [],
- "natural": true,
- "isotopes": [
-  {
-   "A": 74,
-   "abundance": 0.0089
-  },
-  {
-   "A": 76,
-   "abundance": 0.09369999999999999
-  },
-  {
-   "A": 77,
-   "abundance": 0.07629999999999999
-  },
-  {
-   "A": 78,
-   "abundance": 0.2377
-  },
-  {
-   "A": 80,
-   "abundance": 0.4961
-  },
-  {
-   "A": 82,
-   "abundance": 0.0873
-  }
- ]
+ "natural": true
 }

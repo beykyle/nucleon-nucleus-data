@@ -1,23 +1,6 @@
-# natural K: A = 39, abundance 0.932581
 projectile n
 element k
-mass 39
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural K: A = 40, abundance 0.000117
-projectile n
-element k
-mass 40
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural K: A = 41, abundance 0.067302
-projectile n
-element k
-mass 41
+mass 0
 energy energies
 filetotal y
 outangle y

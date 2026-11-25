@@ -1,74 +1,19 @@
 {
- "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
  "projectile": "neutron",
  "target": "Ge_0",
  "energies": [
   7.55
  ],
  "settings": [
-  "# natural Ge: A = 70, abundance 0.203700",
   "projectile n",
   "element ge",
-  "mass 70",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Ge: A = 72, abundance 0.273100",
-  "projectile n",
-  "element ge",
-  "mass 72",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Ge: A = 73, abundance 0.077600",
-  "projectile n",
-  "element ge",
-  "mass 73",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Ge: A = 74, abundance 0.367300",
-  "projectile n",
-  "element ge",
-  "mass 74",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Ge: A = 76, abundance 0.078300",
-  "projectile n",
-  "element ge",
-  "mass 76",
+  "mass 0",
   "energy energies",
   "filetotal y",
   "outangle y",
   "fileelastic y"
  ],
  "missing_angular": [],
- "natural": true,
- "isotopes": [
-  {
-   "A": 70,
-   "abundance": 0.20370000000000002
-  },
-  {
-   "A": 72,
-   "abundance": 0.2731
-  },
-  {
-   "A": 73,
-   "abundance": 0.0776
-  },
-  {
-   "A": 74,
-   "abundance": 0.36729999999999996
-  },
-  {
-   "A": 76,
-   "abundance": 0.0783
-  }
- ]
+ "natural": true
 }

@@ -41,8 +41,8 @@ same pipeline as KDUQ, CHUQ and Test, with an optional evaluated copy:
 |---|---|---:|---:|---:|---:|
 | elm | charge exchange | 30 | 614 | 7 | — |
 | elm | elastic ay | 105 | 2978 | 39 | — |
-| elm | elastic diff xs | 588 | 11941 | 92 | — |
-| elm | elastic diff xs direct | 588 | 11941 | 92 | — |
+| elm | elastic diff xs | 578 | 11765 | 91 | — |
+| elm | elastic diff xs direct | 578 | 11765 | 91 | — |
 | elm | neutron total | 13 | 25799 | 9 | — |
 | elm | proton reaction | 15 | 73 | 7 | — |
 | elm | proton reaction direct | 15 | 73 | 7 | — |

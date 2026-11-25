@@ -1,31 +1,6 @@
-# natural Ce: A = 136, abundance 0.001850
 projectile n
 element ce
-mass 136
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Ce: A = 138, abundance 0.002510
-projectile n
-element ce
-mass 138
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Ce: A = 140, abundance 0.884500
-projectile n
-element ce
-mass 140
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Ce: A = 142, abundance 0.111140
-projectile n
-element ce
-mass 142
+mass 0
 energy energies
 filetotal y
 outangle y

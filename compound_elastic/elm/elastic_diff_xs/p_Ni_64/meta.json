@@ -1,14 +1,9 @@
 {
- "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
  "projectile": "proton",
  "target": "Ni_64",
  "energies": [
-  5.9,
-  6.0,
   6.06,
-  6.1,
-  6.2,
-  6.3,
   9.6,
   11.0,
   11.7,

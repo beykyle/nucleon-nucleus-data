@@ -1,5 +1,5 @@
 {
- "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
  "projectile": "neutron",
  "target": "Cd_0",
  "energies": [
@@ -17,105 +17,14 @@
   14.6
  ],
  "settings": [
-  "# natural Cd: A = 106, abundance 0.012500",
   "projectile n",
   "element cd",
-  "mass 106",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Cd: A = 108, abundance 0.008900",
-  "projectile n",
-  "element cd",
-  "mass 108",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Cd: A = 110, abundance 0.124900",
-  "projectile n",
-  "element cd",
-  "mass 110",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Cd: A = 111, abundance 0.128000",
-  "projectile n",
-  "element cd",
-  "mass 111",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Cd: A = 112, abundance 0.241300",
-  "projectile n",
-  "element cd",
-  "mass 112",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Cd: A = 113, abundance 0.122200",
-  "projectile n",
-  "element cd",
-  "mass 113",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Cd: A = 114, abundance 0.287300",
-  "projectile n",
-  "element cd",
-  "mass 114",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Cd: A = 116, abundance 0.074900",
-  "projectile n",
-  "element cd",
-  "mass 116",
+  "mass 0",
   "energy energies",
   "filetotal y",
   "outangle y",
   "fileelastic y"
  ],
  "missing_angular": [],
- "natural": true,
- "isotopes": [
-  {
-   "A": 106,
-   "abundance": 0.012500000000000002
-  },
-  {
-   "A": 108,
-   "abundance": 0.008900000000000002
-  },
-  {
-   "A": 110,
-   "abundance": 0.12490000000000001
-  },
-  {
-   "A": 111,
-   "abundance": 0.12800000000000003
-  },
-  {
-   "A": 112,
-   "abundance": 0.24130000000000001
-  },
-  {
-   "A": 113,
-   "abundance": 0.12220000000000002
-  },
-  {
-   "A": 114,
-   "abundance": 0.28730000000000006
-  },
-  {
-   "A": 116,
-   "abundance": 0.07490000000000002
-  }
- ]
+ "natural": true
 }

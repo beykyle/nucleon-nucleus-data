@@ -1,23 +1,6 @@
-# natural Si: A = 28, abundance 0.922300
 projectile n
 element si
-mass 28
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Si: A = 29, abundance 0.046830
-projectile n
-element si
-mass 29
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Si: A = 30, abundance 0.030870
-projectile n
-element si
-mass 30
+mass 0
 energy energies
 filetotal y
 outangle y

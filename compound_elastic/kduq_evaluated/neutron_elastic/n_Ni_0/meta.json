@@ -1,5 +1,5 @@
 {
- "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
  "projectile": "neutron",
  "target": "Ni_0",
  "energies": [
@@ -16,69 +16,14 @@
   21.6
  ],
  "settings": [
-  "# natural Ni: A = 58, abundance 0.680770",
   "projectile n",
   "element ni",
-  "mass 58",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Ni: A = 60, abundance 0.262230",
-  "projectile n",
-  "element ni",
-  "mass 60",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Ni: A = 61, abundance 0.011400",
-  "projectile n",
-  "element ni",
-  "mass 61",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Ni: A = 62, abundance 0.036340",
-  "projectile n",
-  "element ni",
-  "mass 62",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Ni: A = 64, abundance 0.009260",
-  "projectile n",
-  "element ni",
-  "mass 64",
+  "mass 0",
   "energy energies",
   "filetotal y",
   "outangle y",
   "fileelastic y"
  ],
  "missing_angular": [],
- "natural": true,
- "isotopes": [
-  {
-   "A": 58,
-   "abundance": 0.68077
-  },
-  {
-   "A": 60,
-   "abundance": 0.26222999999999996
-  },
-  {
-   "A": 61,
-   "abundance": 0.011399999999999999
-  },
-  {
-   "A": 62,
-   "abundance": 0.03634
-  },
-  {
-   "A": 64,
-   "abundance": 0.009260000000000001
-  }
- ]
+ "natural": true
 }

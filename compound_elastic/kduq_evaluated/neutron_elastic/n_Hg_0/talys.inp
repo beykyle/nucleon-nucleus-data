@@ -1,55 +1,6 @@
-# natural Hg: A = 196, abundance 0.001500
 projectile n
 element hg
-mass 196
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Hg: A = 198, abundance 0.099700
-projectile n
-element hg
-mass 198
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Hg: A = 199, abundance 0.168700
-projectile n
-element hg
-mass 199
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Hg: A = 200, abundance 0.231000
-projectile n
-element hg
-mass 200
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Hg: A = 201, abundance 0.131800
-projectile n
-element hg
-mass 201
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Hg: A = 202, abundance 0.298600
-projectile n
-element hg
-mass 202
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Hg: A = 204, abundance 0.068700
-projectile n
-element hg
-mass 204
+mass 0
 energy energies
 filetotal y
 outangle y

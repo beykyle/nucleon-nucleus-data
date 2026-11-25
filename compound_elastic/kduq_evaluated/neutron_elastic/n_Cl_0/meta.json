@@ -1,38 +1,19 @@
 {
- "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
  "projectile": "neutron",
  "target": "Cl_0",
  "energies": [
   14.1
  ],
  "settings": [
-  "# natural Cl: A = 35, abundance 0.757700",
   "projectile n",
   "element cl",
-  "mass 35",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Cl: A = 37, abundance 0.242300",
-  "projectile n",
-  "element cl",
-  "mass 37",
+  "mass 0",
   "energy energies",
   "filetotal y",
   "outangle y",
   "fileelastic y"
  ],
  "missing_angular": [],
- "natural": true,
- "isotopes": [
-  {
-   "A": 35,
-   "abundance": 0.7576999999999999
-  },
-  {
-   "A": 37,
-   "abundance": 0.24230000000000002
-  }
- ]
+ "natural": true
 }

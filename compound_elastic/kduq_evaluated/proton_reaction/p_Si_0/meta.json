@@ -1,5 +1,5 @@
 {
- "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
  "projectile": "proton",
  "target": "Si_0",
  "energies": [
@@ -59,39 +59,12 @@
   47.8
  ],
  "settings": [
-  "# natural Si: A = 28, abundance 0.922300",
   "projectile p",
   "element si",
-  "mass 28",
-  "energy energies",
-  "filetotal y",
-  "# natural Si: A = 29, abundance 0.046830",
-  "projectile p",
-  "element si",
-  "mass 29",
-  "energy energies",
-  "filetotal y",
-  "# natural Si: A = 30, abundance 0.030870",
-  "projectile p",
-  "element si",
-  "mass 30",
+  "mass 0",
   "energy energies",
   "filetotal y"
  ],
  "missing_angular": [],
- "natural": true,
- "isotopes": [
-  {
-   "A": 28,
-   "abundance": 0.9223
-  },
-  {
-   "A": 29,
-   "abundance": 0.04683
-  },
-  {
-   "A": 30,
-   "abundance": 0.03087
-  }
- ]
+ "natural": true
 }

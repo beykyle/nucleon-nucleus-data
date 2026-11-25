@@ -1,98 +1,19 @@
 {
- "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
  "projectile": "neutron",
  "target": "Nd_0",
  "energies": [
   0.98
  ],
  "settings": [
-  "# natural Nd: A = 142, abundance 0.272000",
   "projectile n",
   "element nd",
-  "mass 142",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Nd: A = 143, abundance 0.122000",
-  "projectile n",
-  "element nd",
-  "mass 143",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Nd: A = 144, abundance 0.238000",
-  "projectile n",
-  "element nd",
-  "mass 144",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Nd: A = 145, abundance 0.083000",
-  "projectile n",
-  "element nd",
-  "mass 145",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Nd: A = 146, abundance 0.172000",
-  "projectile n",
-  "element nd",
-  "mass 146",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Nd: A = 148, abundance 0.057000",
-  "projectile n",
-  "element nd",
-  "mass 148",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Nd: A = 150, abundance 0.056000",
-  "projectile n",
-  "element nd",
-  "mass 150",
+  "mass 0",
   "energy energies",
   "filetotal y",
   "outangle y",
   "fileelastic y"
  ],
  "missing_angular": [],
- "natural": true,
- "isotopes": [
-  {
-   "A": 142,
-   "abundance": 0.272
-  },
-  {
-   "A": 143,
-   "abundance": 0.122
-  },
-  {
-   "A": 144,
-   "abundance": 0.23800000000000002
-  },
-  {
-   "A": 145,
-   "abundance": 0.083
-  },
-  {
-   "A": 146,
-   "abundance": 0.172
-  },
-  {
-   "A": 148,
-   "abundance": 0.057
-  },
-  {
-   "A": 150,
-   "abundance": 0.055999999999999994
-  }
- ]
+ "natural": true
 }

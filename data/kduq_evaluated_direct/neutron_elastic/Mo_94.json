@@ -108,7 +108,7 @@
             ],
             "talys_model": [
                 1.1168389117068007,
-                0.8380765987657048,
+                0.8380767955434699,
                 0.5999358753232318,
                 0.4207993480897272,
                 0.29739899075471105,
@@ -116,7 +116,7 @@
                 0.16303240732832067,
                 0.12743855728260436,
                 0.10424420658138159,
-                0.09391182317486539,
+                0.09391174987820033,
                 0.10161884785171545,
                 0.13296729300160234,
                 0.18692464456434363,
@@ -124,7 +124,7 @@
             ],
             "ce_fraction_model": [
                 0.12160121576470512,
-                0.1334294375067157,
+                0.13342940617790833,
                 0.15872443668942485,
                 0.200480464144998,
                 0.2576123887805534,
@@ -132,7 +132,7 @@
                 0.426230422626517,
                 0.5633557371981632,
                 0.7424224105875873,
-                0.9085781996236764,
+                0.9085789087548772,
                 0.9495093104186577,
                 0.8533074923296162,
                 0.7353455149658171,
@@ -164,7 +164,7 @@
             "the supplement tabulates this data set under 92Mo; EXFOR now assigns it to A=94, Z=42, which is used here",
             "assigned a default normalisation uncertainty of 5%, none reported",
             "derived from the kduq corpus",
-            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "direct (shape) elastic = measured - TALYS compound elastic (TALYS 7629373, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
             "derived from the kduq_evaluated corpus"
         ]
     }

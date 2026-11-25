@@ -1,31 +1,6 @@
-# natural S: A = 32, abundance 0.950200
 projectile n
 element s
-mass 32
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural S: A = 33, abundance 0.007500
-projectile n
-element s
-mass 33
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural S: A = 34, abundance 0.042100
-projectile n
-element s
-mass 34
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural S: A = 36, abundance 0.000200
-projectile n
-element s
-mass 36
+mass 0
 energy energies
 filetotal y
 outangle y

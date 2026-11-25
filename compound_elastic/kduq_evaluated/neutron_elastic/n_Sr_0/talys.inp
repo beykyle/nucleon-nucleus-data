@@ -1,31 +1,6 @@
-# natural Sr: A = 84, abundance 0.005600
 projectile n
 element sr
-mass 84
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Sr: A = 86, abundance 0.098600
-projectile n
-element sr
-mass 86
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Sr: A = 87, abundance 0.070000
-projectile n
-element sr
-mass 87
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Sr: A = 88, abundance 0.825800
-projectile n
-element sr
-mass 88
+mass 0
 energy energies
 filetotal y
 outangle y

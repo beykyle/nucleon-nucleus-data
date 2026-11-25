@@ -1,39 +1,6 @@
-# natural Ni: A = 58, abundance 0.680770
 projectile n
 element ni
-mass 58
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Ni: A = 60, abundance 0.262230
-projectile n
-element ni
-mass 60
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Ni: A = 61, abundance 0.011400
-projectile n
-element ni
-mass 61
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Ni: A = 62, abundance 0.036340
-projectile n
-element ni
-mass 62
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Ni: A = 64, abundance 0.009260
-projectile n
-element ni
-mass 64
+mass 0
 energy energies
 filetotal y
 outangle y

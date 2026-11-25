@@ -1,5 +1,5 @@
 {
- "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
  "projectile": "neutron",
  "target": "Cu_0",
  "energies": [
@@ -13,33 +13,14 @@
   84.0
  ],
  "settings": [
-  "# natural Cu: A = 63, abundance 0.691700",
   "projectile n",
   "element cu",
-  "mass 63",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Cu: A = 65, abundance 0.308300",
-  "projectile n",
-  "element cu",
-  "mass 65",
+  "mass 0",
   "energy energies",
   "filetotal y",
   "outangle y",
   "fileelastic y"
  ],
  "missing_angular": [],
- "natural": true,
- "isotopes": [
-  {
-   "A": 63,
-   "abundance": 0.6917
-  },
-  {
-   "A": 65,
-   "abundance": 0.30829999999999996
-  }
- ]
+ "natural": true
 }

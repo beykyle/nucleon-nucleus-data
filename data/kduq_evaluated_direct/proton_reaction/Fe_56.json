@@ -10,10 +10,10 @@
                 14.5
             ],
             "y": [
-                1.0122349720000001
+                1.012235838
             ],
             "y_err": [
-                0.019000130764436084
+                0.019000131730085502
             ],
             "x_err": [
                 null
@@ -23,16 +23,16 @@
                 1.012
             ],
             "compound_elastic": [
-                0.00023497199999999999
+                0.000235838
             ],
             "ce_fraction": [
-                0.00023218577075098814
+                0.00023304150197628456
             ],
             "talys_model": [
                 0.998707
             ],
             "ce_fraction_model": [
-                0.00023527621214229999
+                0.00023614333332999568
             ],
             "y_err_before_compound": [
                 0.019
@@ -46,7 +46,7 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "derived from the kduq corpus",
-            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 7629373, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
             "derived from the kduq_evaluated corpus"
         ]
     },
@@ -65,18 +65,18 @@
                 11.25
             ],
             "y": [
-                0.7080681,
-                0.7704018,
-                0.8126939900000001,
-                0.8356216599999999,
-                0.8298919699999999
+                0.7080747,
+                0.7704085,
+                0.8126966600000001,
+                0.83563435,
+                0.82989552
             ],
             "y_err": [
-                0.0323177085726216,
-                0.031156664935316807,
-                0.030020461365388926,
-                0.029010663196555916,
-                0.029005553943051685
+                0.03231798558400724,
+                0.031156866313904227,
+                0.03002049094475312,
+                0.029010766656416116,
+                0.02900557480289498
             ],
             "x_err": [
                 0.29,
@@ -94,18 +94,18 @@
                 0.828
             ],
             "compound_elastic": [
-                0.0150681,
-                0.0104018,
-                0.00369399,
-                0.00262166,
-                0.00189197
+                0.0150747,
+                0.0104085,
+                0.00369666,
+                0.00263435,
+                0.0018955200000000001
             ],
             "ce_fraction": [
-                0.021743290043290044,
-                0.01368657894736842,
-                0.004566118665018541,
-                0.0031472509003601444,
-                0.002284987922705314
+                0.021752813852813854,
+                0.013695394736842104,
+                0.004569419035846724,
+                0.003162484993997599,
+                0.002289275362318841
             ],
             "talys_model": [
                 0.788886,
@@ -115,11 +115,11 @@
                 0.892529
             ],
             "ce_fraction_model": [
-                0.01910047839611807,
-                0.012733478110776778,
-                0.004378134866830382,
-                0.003016592258480232,
-                0.0021197854635535652
+                0.01910884462393806,
+                0.012741679989619113,
+                0.004381299363782036,
+                0.0030311939061996593,
+                0.002123762925350325
             ],
             "y_err_before_compound": [
                 0.032,
@@ -138,7 +138,7 @@
             "the supplement tabulates this data set under natFe; EXFOR now assigns it to A=56, Z=26, which is used here",
             "assigned a default normalisation uncertainty of 5%, none reported",
             "derived from the kduq corpus",
-            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 7629373, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
             "derived from the kduq_evaluated corpus"
         ]
     },
@@ -154,7 +154,7 @@
                 60.8
             ],
             "y": [
-                0.991000000134429,
+                0.991000000134428,
                 0.899000000100001
             ],
             "y_err": [
@@ -171,20 +171,20 @@
                 0.899
             ],
             "compound_elastic": [
-                1.3442899999999999e-10,
+                1.34428e-10,
                 1.00001e-10
             ],
             "ce_fraction": [
-                1.3564984863773964e-10,
+                1.3564883955600405e-10,
                 1.1123581757508342e-10
             ],
             "talys_model": [
                 1.02293,
-                0.905308
+                0.9053089999999999
             ],
             "ce_fraction_model": [
-                1.3141563938881448e-10,
-                1.1046074926986175e-10
+                1.314146618048156e-10,
+                1.1046062725544539e-10
             ],
             "y_err_before_compound": [
                 0.043,
@@ -199,7 +199,7 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "derived from the kduq corpus",
-            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 7629373, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
             "derived from the kduq_evaluated corpus"
         ]
     },
@@ -220,17 +220,17 @@
                 47.8
             ],
             "y": [
-                1.1180039558100001,
-                1.101000278105,
-                1.0550000128630999,
-                1.014000000715616,
-                1.0050000001403079,
+                1.1180039675600002,
+                1.101000279342,
+                1.0550000128651,
+                1.0140000007156411,
+                1.005000000140307,
                 0.925000000102648,
                 0.903000000100607
             ],
             "y_err": [
-                0.034000000020711164,
-                0.02500000000013922,
+                0.03400000002083438,
+                0.025000000000140462,
                 0.02400000000000031,
                 0.029,
                 0.029,
@@ -257,20 +257,20 @@
                 0.903
             ],
             "compound_elastic": [
-                3.955809999999999e-06,
-                2.78105e-07,
-                1.2863100000000001e-08,
-                7.15616e-10,
-                1.40308e-10,
+                3.9675600000000005e-06,
+                2.79342e-07,
+                1.28651e-08,
+                7.15641e-10,
+                1.4030699999999998e-10,
                 1.02648e-10,
                 1.0060699999999999e-10
             ],
             "ce_fraction": [
-                3.5382915921288003e-06,
-                2.5259309718437787e-07,
-                1.2192511848341234e-08,
-                7.057357001972387e-10,
-                1.3960995024875622e-10,
+                3.5488014311270126e-06,
+                2.53716621253406e-07,
+                1.219440758293839e-08,
+                7.057603550295859e-10,
+                1.396089552238806e-10,
                 1.1097081081081081e-10,
                 1.1141417497231449e-10
             ],
@@ -284,11 +284,11 @@
                 0.976404
             ],
             "ce_fraction_model": [
-                3.6620410657088366e-06,
-                2.562801798813078e-07,
-                1.1932817544250252e-08,
-                6.796296120423572e-10,
-                1.3692592954035326e-10,
+                3.6729184795689773e-06,
+                2.574201039478049e-07,
+                1.1934672900664217e-08,
+                6.796533548601548e-10,
+                1.3692495364496925e-10,
                 1.0330252479711451e-10,
                 1.0303829152686796e-10
             ],
@@ -310,7 +310,7 @@
         "notes": [
             "assigned a default normalisation uncertainty of 5%, none reported",
             "derived from the kduq corpus",
-            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 7629373, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
             "derived from the kduq_evaluated corpus"
         ]
     }

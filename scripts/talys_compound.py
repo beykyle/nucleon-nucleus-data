@@ -181,116 +181,62 @@ def talys_dir(corpus: str, sector: str, proj: str, stem: str) -> Path:
     return CACHE / corpus / sector / f"{proj}_{stem}"
 
 
-def abundances(sym: str) -> list[tuple[int, float]]:
-    """[(A, fraction)] of a natural element, from TALYS's structure database (the abundances TALYS itself uses)."""
-    rows = []
-    for line in (TALYS / "structure" / "abundance" / f"{sym.capitalize()}.abun").read_text().splitlines():
-        f = line.split()
-        if len(f) >= 3:
-            rows.append((int(f[1]), float(f[2]) / 100.0))
-    total = sum(a for _, a in rows)
-    return [(A, a / total) for A, a in rows]
+def natural_rutherford(isotope_tables) -> np.ndarray:
+    """Rutherford cross section for a natural (p,p) target, from TALYS's per-isotope angular tables.
 
-
-def talys_tables(projectile: str, stem: str, energies, angular: bool):
-    """Run TALYS for one isotopic target: (input, all.tot table, {E: angular table}, missing angular energies)."""
-    inp = talys_input(projectile, stem, angular)
-    with tempfile.TemporaryDirectory(prefix=f"talys_{stem}_") as d:
-        Path(d, "talys.inp").write_text(inp)
-        Path(d, "energies").write_text("\n".join(f"{e:.3f}" for e in energies) + "\n")
-        r = subprocess.run(f"{talys_bin()} < talys.inp > talys.out", shell=True, cwd=d, env=talys_env())
-        if r.returncode != 0:
-            raise RuntimeError(f"TALYS failed for {stem} (exit {r.returncode})")
-        tot = parse_all_tot(Path(d) / "all.tot")
-        ang, missing = {}, []
-        if angular:
-            pref = PROJ[projectile][1]
-            for e in energies:
-                f = Path(d) / f"{pref}{energy_tag(e)}ang.L00"
-                if not f.exists():
-                    missing.append(e)
-                    continue
-                t = parse_table(f)
-                t.setdefault("ratio_rutherford", np.full_like(t["angle"], np.nan))
-                ang[e] = t
-    return inp, tot, ang, missing
-
-
-def combine_natural(parts):
-    """Abundance-weighted all.tot and angular tables of the isotopes [(fraction, tot, ang)] of a natural target.
-
-    TALYS's own natural-element run (mass 0) weights all.tot but leaves in nn*ang.L00 the angular distribution of
-    the last isotope it computed, so natural targets are run isotope by isotope and combined here. For (p,p) the
-    ratio to Rutherford is the weighted cross section over the weighted Rutherford cross section."""
-    w0, tot0, _ = parts[0]
-    tot = {k: (v if k == "e" else sum(w * t[k] for w, t, _ in parts)) for k, v in tot0.items()}
-    for _, t, _ in parts:
-        assert np.allclose(t["e"], tot0["e"]), "isotopes computed at different energies"
-    ang = {}
-    for e in set.intersection(*(set(a) for _, _, a in parts)):
-        tabs = [(w, a[e]) for w, _, a in parts]
-        theta = tabs[0][1]["angle"]
-        assert all(np.allclose(t["angle"], theta) for _, t in tabs), f"isotopes on different angle grids at {e} MeV"
-        comb = {"angle": theta}
-        for k in ("xs", "direct", "compound"):
-            comb[k] = sum(w * t[k] for w, t in tabs)
-        rr = [t["ratio_rutherford"] for _, t in tabs]
-        if np.all(np.isfinite(rr[0])):
-            ruth = sum(w * t["xs"] / t["ratio_rutherford"] for w, t in tabs)
-            comb["ratio_rutherford"] = comb["xs"] / ruth
-        else:
-            comb["ratio_rutherford"] = np.full_like(theta, np.nan)
-        ang[e] = comb
-    return tot, ang
+    TALYS (since 7629373) writes the abundance-weighted elastic angular distribution of a natural target, but without
+    the xs/Rutherford column; the per-isotope files (``pp....ang.L00.NNN``) keep it. The isotopes' Rutherford cross
+    sections differ only through the reduced mass (~0.1 %), so their mean is used."""
+    return np.mean([t["xs"] / t["ratio_rutherford"] for t in isotope_tables], axis=0)
 
 
 def run_system(task) -> tuple[str, str]:
     corpus, sector, projectile, stem, energies, angular = task
     out = talys_dir(corpus, sector, PROJ[projectile][0], stem)
     out.mkdir(parents=True, exist_ok=True)
-    sym, A = stem.split("_")
-    natural = int(A) == 0
-    try:
-        if natural:
-            isotopes = abundances(sym)
-            parts, inputs = [], []
-            for iso_A, frac in isotopes:
-                inp_i, tot_i, ang_i, _ = talys_tables(projectile, f"{sym}_{iso_A}", energies, angular)
-                parts.append((frac, tot_i, ang_i))
-                inputs.append(f"# natural {sym}: A = {iso_A}, abundance {frac:.6f}\n{inp_i}")
-            tot, ang = combine_natural(parts)
-            inp = "".join(inputs)
-            missing = [e for e in energies if angular and e not in ang]
-        else:
-            inp, tot, ang, missing = talys_tables(projectile, stem, energies, angular)
-    except RuntimeError as err:
-        return stem, str(err)
-    with open(out / "integral.csv", "w", newline="") as fh:
-        w = csv.writer(fh)
-        w.writerow(["E_MeV", "compound_elastic_mb", "shape_elastic_mb", "reaction_mb", "total_mb", "nonelastic_mb"])
-        for i in range(len(tot["e"])):
-            w.writerow([f"{tot['e'][i]:.6g}"] + [f"{tot[k][i]:.6g}" for k in
-                       ("compound_elastic", "shape_elastic", "reaction", "total", "nonelastic")])
-    if angular:
-        with open(out / "angular.csv", "w", newline="") as fh:
+    natural = stem.endswith("_0")  # mass 0: TALYS runs the isotopes and weights them by abundance itself
+    inp = talys_input(projectile, stem, angular)
+    with tempfile.TemporaryDirectory(prefix=f"talys_{stem}_") as d:
+        Path(d, "talys.inp").write_text(inp)
+        Path(d, "energies").write_text("\n".join(f"{e:.3f}" for e in energies) + "\n")
+        r = subprocess.run(f"{talys_bin()} < talys.inp > talys.out", shell=True, cwd=d, env=talys_env())
+        if r.returncode != 0:
+            return stem, f"TALYS failed (exit {r.returncode})"
+        tot = parse_all_tot(Path(d) / "all.tot")
+        with open(out / "integral.csv", "w", newline="") as fh:
             w = csv.writer(fh)
-            w.writerow(["E_MeV", "angle_cm_deg", "xs_mb_sr", "direct_mb_sr", "compound_mb_sr", "ratio_rutherford"])
-            for e in energies:
-                if e not in ang:
-                    continue
-                t = ang[e]
-                for j in range(len(t["angle"])):
-                    w.writerow([f"{e:.3f}", f"{t['angle'][j]:.4g}", f"{t['xs'][j]:.6g}", f"{t['direct'][j]:.6g}",
-                                f"{t['compound'][j]:.6g}", f"{t['ratio_rutherford'][j]:.6g}"])
-    (out / "talys.inp").write_text(inp)
+            w.writerow(["E_MeV", "compound_elastic_mb", "shape_elastic_mb", "reaction_mb", "total_mb", "nonelastic_mb"])
+            for i in range(len(tot["e"])):
+                w.writerow([f"{tot['e'][i]:.6g}"] + [f"{tot[k][i]:.6g}" for k in
+                           ("compound_elastic", "shape_elastic", "reaction", "total", "nonelastic")])
+        if angular:
+            pref = PROJ[projectile][1]
+            with open(out / "angular.csv", "w", newline="") as fh:
+                w = csv.writer(fh)
+                w.writerow(["E_MeV", "angle_cm_deg", "xs_mb_sr", "direct_mb_sr", "compound_mb_sr", "ratio_rutherford"])
+                missing = []
+                for e in energies:
+                    f = Path(d) / f"{pref}{energy_tag(e)}ang.L00"
+                    if not f.exists():
+                        missing.append(e)
+                        continue
+                    t = parse_table(f)
+                    rr = t.get("ratio_rutherford", np.full_like(t["angle"], np.nan))
+                    if natural and projectile == "proton":
+                        isotopes = sorted(Path(d).glob(f"{f.name}.*"))
+                        if not isotopes:
+                            raise RuntimeError(f"{stem} {e} MeV: no per-isotope {f.name}.* for the Rutherford ratio")
+                        rr = t["xs"] / natural_rutherford([parse_table(i) for i in isotopes])
+                    for j in range(len(t["angle"])):
+                        w.writerow([f"{e:.3f}", f"{t['angle'][j]:.4g}", f"{t['xs'][j]:.6g}", f"{t['direct'][j]:.6g}",
+                                    f"{t['compound'][j]:.6g}", f"{rr[j]:.6g}"])
+        shutil.copy(Path(d) / "talys.inp", out / "talys.inp")
     meta = dict(talys_commit=talys_commit(), projectile=projectile, target=stem, energies=energies,
                 settings=inp.strip().splitlines(), missing_angular=missing if angular else [])
     if natural:
         meta["natural"] = True
-        meta["isotopes"] = [{"A": a, "abundance": f} for a, f in isotopes]
     (out / "meta.json").write_text(json.dumps(meta, indent=1) + "\n")
-    return stem, f"{len(energies)} energies" + (f" ({len(isotopes)} isotopes)" if natural else "") + \
-        (f", missing angular {missing}" if angular and missing else "")
+    return stem, f"{len(energies)} energies" + (f", missing angular {missing}" if angular and missing else "")
 
 
 def run(args) -> None:

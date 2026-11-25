@@ -10,7 +10,7 @@
                 65.5
             ],
             "y": [
-                0.5547000000987906
+                0.5547000000984922
             ],
             "y_err": [
                 0.0152
@@ -23,16 +23,16 @@
                 0.5547
             ],
             "compound_elastic": [
-                9.87906e-11
+                9.84922e-11
             ],
             "ce_fraction": [
-                1.7809734991887508e-10
+                1.7755940147827657e-10
             ],
             "talys_model": [
                 0.542212
             ],
             "ce_fraction_model": [
-                1.8219921359173164e-10
+                1.8164887534765e-10
             ],
             "y_err_before_compound": [
                 0.0152
@@ -47,7 +47,7 @@
             "the supplement tabulates this data set under natSi; EXFOR now assigns it to A=28, Z=14, which is used here",
             "assigned a default normalisation uncertainty of 5%, none reported",
             "derived from the kduq corpus",
-            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 49ef834, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
+            "reaction (OM) = measured nonelastic + TALYS compound elastic (TALYS 7629373, default settings + outangle/cpang; CE uncertainty 30 % in quadrature; scripts/talys_compound.py)",
             "derived from the kduq_evaluated corpus"
         ]
     }

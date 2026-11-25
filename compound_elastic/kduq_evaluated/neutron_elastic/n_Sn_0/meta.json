@@ -1,5 +1,5 @@
 {
- "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
  "projectile": "neutron",
  "target": "Sn_0",
  "energies": [
@@ -19,129 +19,14 @@
   65.0
  ],
  "settings": [
-  "# natural Sn: A = 112, abundance 0.009700",
   "projectile n",
   "element sn",
-  "mass 112",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Sn: A = 114, abundance 0.006600",
-  "projectile n",
-  "element sn",
-  "mass 114",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Sn: A = 115, abundance 0.003400",
-  "projectile n",
-  "element sn",
-  "mass 115",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Sn: A = 116, abundance 0.145400",
-  "projectile n",
-  "element sn",
-  "mass 116",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Sn: A = 117, abundance 0.076800",
-  "projectile n",
-  "element sn",
-  "mass 117",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Sn: A = 118, abundance 0.242200",
-  "projectile n",
-  "element sn",
-  "mass 118",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Sn: A = 119, abundance 0.085900",
-  "projectile n",
-  "element sn",
-  "mass 119",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Sn: A = 120, abundance 0.325800",
-  "projectile n",
-  "element sn",
-  "mass 120",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Sn: A = 122, abundance 0.046300",
-  "projectile n",
-  "element sn",
-  "mass 122",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Sn: A = 124, abundance 0.057900",
-  "projectile n",
-  "element sn",
-  "mass 124",
+  "mass 0",
   "energy energies",
   "filetotal y",
   "outangle y",
   "fileelastic y"
  ],
  "missing_angular": [],
- "natural": true,
- "isotopes": [
-  {
-   "A": 112,
-   "abundance": 0.009700000000000002
-  },
-  {
-   "A": 114,
-   "abundance": 0.006600000000000001
-  },
-  {
-   "A": 115,
-   "abundance": 0.0034000000000000007
-  },
-  {
-   "A": 116,
-   "abundance": 0.14540000000000003
-  },
-  {
-   "A": 117,
-   "abundance": 0.07680000000000001
-  },
-  {
-   "A": 118,
-   "abundance": 0.24220000000000003
-  },
-  {
-   "A": 119,
-   "abundance": 0.08590000000000002
-  },
-  {
-   "A": 120,
-   "abundance": 0.32580000000000003
-  },
-  {
-   "A": 122,
-   "abundance": 0.04630000000000001
-  },
-  {
-   "A": 124,
-   "abundance": 0.05790000000000001
-  }
- ]
+ "natural": true
 }

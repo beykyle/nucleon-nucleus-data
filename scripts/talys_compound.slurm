@@ -14,7 +14,7 @@
 #   sbatch --export=ALL,SECTORS=neutron_elastic,TARGETS=Fe_0 scripts/talys_compound.slurm
 #
 # Environment: CORPUS (default kduq_evaluated), SECTORS (space/comma separated; default the three corrected
-# sectors), TARGETS (optional file stems), TALYS_ROOT (default: the ~/nnd-elm-cal worktree's TALYS build).
+# sectors), TARGETS (optional file stems), TALYS_ROOT (optional: another TALYS build; default external/talys).
 # Afterwards, on the login node: talys_compound.py apply / copy, then scripts/build_manifests.py.
 
 repo=/mnt/ufs18/rs/reactiontheoryinitiative/nucleon_nucleus_data
@@ -25,7 +25,7 @@ export PATH="${HOME}/.local/bin:${PATH}"
 command -v uv >/dev/null || { echo "error: uv not on PATH" >&2; exit 1; }
 uv sync --extra dev || exit 1
 
-export TALYS_ROOT="${TALYS_ROOT:-${HOME}/nnd-elm-cal/external/talys}"
+export TALYS_ROOT="${TALYS_ROOT:-${repo}/external/talys}"
 export TMPDIR="${TMPDIR:-/tmp}/talys_${SLURM_JOB_ID}"
 mkdir -p "${TMPDIR}"
 export OMP_NUM_THREADS=1

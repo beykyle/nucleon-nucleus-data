@@ -1,12 +1,5 @@
-# natural Cu: A = 63, abundance 0.691700
 projectile p
 element cu
-mass 63
-energy energies
-filetotal y
-# natural Cu: A = 65, abundance 0.308300
-projectile p
-element cu
-mass 65
+mass 0
 energy energies
 filetotal y

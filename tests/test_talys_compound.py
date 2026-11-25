@@ -150,20 +150,9 @@ def test_kduq_evaluated_direct_follows_kduq_evaluated():
                     assert da == db
 
 
-def test_combine_natural_weights_by_abundance():
-    """Natural targets: all.tot and the elastic angular tables are abundance-weighted; (p,p) ratios via Rutherford."""
-    th = np.array([10.0, 90.0])
-    def tables(scale, ruth):
-        tot = {k: np.array([scale]) for k in ("nonelastic", "elastic", "total", "compound_elastic", "shape_elastic",
-                                              "reaction")}
-        tot["e"] = np.array([5.0])
-        xs = scale * np.array([100.0, 10.0])
-        ang = {5.0: {"angle": th, "xs": xs, "direct": 0.9 * xs, "compound": 0.1 * xs, "ratio_rutherford": xs / ruth}}
-        return tot, ang
+def test_natural_rutherford_is_the_isotope_mean():
+    """Natural (p,p): sigma_Ruth from the per-isotope tables (xs / ratio), averaged over the isotopes."""
     ruth = np.array([200.0, 20.0])
-    (t1, a1), (t2, a2) = tables(1.0, ruth), tables(3.0, 1.02 * ruth)
-    tot, ang = tc.combine_natural([(0.75, t1, a1), (0.25, t2, a2)])
-    assert tot["compound_elastic"] == pytest.approx([1.5]) and tot["e"] == pytest.approx([5.0])
-    c = ang[5.0]
-    assert c["compound"] == pytest.approx(0.1 * 1.5 * np.array([100.0, 10.0]))
-    assert c["ratio_rutherford"] == pytest.approx(c["xs"] / (0.75 * ruth + 0.25 * 1.02 * ruth))
+    tabs = [{"xs": x * ruth, "ratio_rutherford": x * np.ones(2) / s}
+            for x, s in ((0.5, 1.0), (0.7, 1.002))]
+    assert tc.natural_rutherford(tabs) == pytest.approx(ruth * (1.0 + 1.002) / 2)

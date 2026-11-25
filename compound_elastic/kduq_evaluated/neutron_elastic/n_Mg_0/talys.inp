@@ -1,23 +1,6 @@
-# natural Mg: A = 24, abundance 0.789900
 projectile n
 element mg
-mass 24
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Mg: A = 25, abundance 0.100000
-projectile n
-element mg
-mass 25
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Mg: A = 26, abundance 0.110100
-projectile n
-element mg
-mass 26
+mass 0
 energy energies
 filetotal y
 outangle y

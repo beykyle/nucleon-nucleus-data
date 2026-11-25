@@ -1,5 +1,5 @@
 {
- "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
  "projectile": "proton",
  "target": "Fe_0",
  "energies": [
@@ -11,49 +11,12 @@
   230.0
  ],
  "settings": [
-  "# natural Fe: A = 54, abundance 0.058450",
   "projectile p",
   "element fe",
-  "mass 54",
-  "energy energies",
-  "filetotal y",
-  "# natural Fe: A = 56, abundance 0.917540",
-  "projectile p",
-  "element fe",
-  "mass 56",
-  "energy energies",
-  "filetotal y",
-  "# natural Fe: A = 57, abundance 0.021190",
-  "projectile p",
-  "element fe",
-  "mass 57",
-  "energy energies",
-  "filetotal y",
-  "# natural Fe: A = 58, abundance 0.002820",
-  "projectile p",
-  "element fe",
-  "mass 58",
+  "mass 0",
   "energy energies",
   "filetotal y"
  ],
  "missing_angular": [],
- "natural": true,
- "isotopes": [
-  {
-   "A": 54,
-   "abundance": 0.058449999999999995
-  },
-  {
-   "A": 56,
-   "abundance": 0.91754
-  },
-  {
-   "A": 57,
-   "abundance": 0.02119
-  },
-  {
-   "A": 58,
-   "abundance": 0.0028199999999999996
-  }
- ]
+ "natural": true
 }

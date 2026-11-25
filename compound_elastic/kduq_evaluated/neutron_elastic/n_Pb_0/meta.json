@@ -1,5 +1,5 @@
 {
- "talys_commit": "49ef834f330b1909ed305dfea52e18c28ffa1dd1",
+ "talys_commit": "762937329df3c2d23b1eb0a0e56c783ec7484a35",
  "projectile": "neutron",
  "target": "Pb_0",
  "energies": [
@@ -10,57 +10,14 @@
   136.0
  ],
  "settings": [
-  "# natural Pb: A = 204, abundance 0.014000",
   "projectile n",
   "element pb",
-  "mass 204",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Pb: A = 206, abundance 0.241000",
-  "projectile n",
-  "element pb",
-  "mass 206",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Pb: A = 207, abundance 0.221000",
-  "projectile n",
-  "element pb",
-  "mass 207",
-  "energy energies",
-  "filetotal y",
-  "outangle y",
-  "fileelastic y",
-  "# natural Pb: A = 208, abundance 0.524000",
-  "projectile n",
-  "element pb",
-  "mass 208",
+  "mass 0",
   "energy energies",
   "filetotal y",
   "outangle y",
   "fileelastic y"
  ],
  "missing_angular": [],
- "natural": true,
- "isotopes": [
-  {
-   "A": 204,
-   "abundance": 0.013999999999999999
-  },
-  {
-   "A": 206,
-   "abundance": 0.24100000000000002
-  },
-  {
-   "A": 207,
-   "abundance": 0.221
-  },
-  {
-   "A": 208,
-   "abundance": 0.524
-  }
- ]
+ "natural": true
 }

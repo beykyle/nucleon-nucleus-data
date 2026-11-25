@@ -1,15 +1,6 @@
-# natural Ag: A = 107, abundance 0.518390
 projectile n
 element ag
-mass 107
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Ag: A = 109, abundance 0.481610
-projectile n
-element ag
-mass 109
+mass 0
 energy energies
 filetotal y
 outangle y

@@ -101,8 +101,8 @@ its absorption. So:
 - **Proton reaction:** σ_R(OM) = σ_nonel + σ_CE (`talys_model` is TALYS's σ_R).
 - **Neutron total:** no correction.
 
-**TALYS** is the git submodule `external/talys` (github.com/arjankoning1/talys, MIT, commit 49ef834, TALYS-2.24
-output headers). It is shallow, with `update = none` in `.gitmodules`, because the repository with its structure
+**TALYS** is the git submodule `external/talys` (github.com/arjankoning1/talys, MIT, commit 7629373, TALYS-2.26;
+output headers say TALYS-2.24). It is shallow, with `update = none` in `.gitmodules`, because the repository with its structure
 database is about 9 GB, so a plain clone or CI never fetches it. Settings: TALYS defaults (KD03 optical potentials,
 Hauser–Feshbach with width fluctuations) plus `outangle y`, `fileelastic y`, `filetotal y`, and `cpang y` for
 protons.
@@ -122,17 +122,19 @@ uv run python scripts/talys_compound.py apply --sector proton_reaction
 - **Interpolation:** CE is interpolated to the data angles in cos θ. For (p,p) ratio data, CE/σ_Ruth uses TALYS's
   own Rutherford cross section (xs / (xs/Rutherford)).
 
-**What TALYS finds.** Compound elastic matters only below about 6 MeV:
+**What TALYS finds.** Compound elastic matters only below about 6 MeV (median over sets of the per-set median
+`ce_fraction_model`):
 
-| E (MeV) | neutron sets | median CE fraction (median over sets) | largest set median |
+| E (MeV) | neutron sets | median | largest set median |
 |---|---:|---:|---:|
-| 0–3 | 324 | 0.38 | 1.04 |
-| 3–6 | 43 | 0.18 | 0.83 |
-| 6–10 | 33 | 0.006 | 0.27 |
-| 10–15 | 28 | 4e-5 | 0.003 |
-| ≥ 15 | 41 | < 1e-6 | 2e-4 |
+| 0–3 | 294 | 0.37 | 0.77 |
+| 3–6 | 43 | 0.24 | 0.78 |
+| 6–10 | 33 | 0.005 | 0.41 |
+| 10–15 | 27 | 5e-5 | 0.004 |
+| ≥ 15 | 41 | < 1e-10 | 1e-4 |
 
-- **Protons:** CE is at most 1 % of the data (40Ca, 14 MeV).
+- **Protons:** CE is a few per cent of the elastic data at most, except at the lowest energies (90Zr at 5.45 MeV:
+  set median 3 %, back-angle points up to 14 %); up to 6 % of σ_R (40Ca).
 - **The 40Ca excess:** the audit found 40Ca at 10–20 MeV 20–60 % above KD03. Compound elastic does not explain
   this.
 - **Negative direct values:** below about 2 MeV, where TALYS's energy-averaged CE exceeds a measurement in the
@@ -151,12 +153,11 @@ uv run python scripts/talys_compound.py apply --sector proton_reaction
 | `proton_reaction` | σ_R(OM) = σ_nonel + σ_CE |
 | `neutron_total`, `neutron_ay`, `proton_ay` | copied unchanged, as in ELM |
 
-**Natural targets.** KDUQ has natural targets (30 of 75 neutron elastic systems, 9 proton systems). TALYS's own
-natural-element run (`mass 0`) weights `all.tot` by abundance but not the elastic angular distribution: `angleout.f90`
-writes `nn*ang.L00` without the isotope suffix `natural.f90` looks for, so the file left is the last isotope's
-(TALYS 49ef834, still so at upstream ce6d44f). `run` therefore computes a natural target isotope by isotope and
-weights `all.tot` and the angular tables with TALYS's abundances (`structure/abundance/<El>.abun`); for (p,p),
-σ/σ_Ruth is the weighted cross section over the weighted Rutherford cross section. `meta.json` lists the isotopes.
+**Natural targets.** KDUQ has natural targets (30 of 75 neutron elastic systems, 9 proton systems). TALYS runs
+them itself (`mass 0`) and weights `all.tot` and the elastic angular distribution by abundance. Before 5139b48 and
+7629373 (which we reported) it left the last isotope's angular distribution instead. TALYS's natural angular file
+has no xs/Rutherford column, so for (p,p) σ/σ_Ruth uses the mean Rutherford cross section of the per-isotope files
+(`pp….ang.L00.NNN`); the isotopes differ by at most 0.3 % (natSi). `meta.json` marks natural targets.
 
 **What TALYS finds** (median over sets of the per-set median `ce_fraction_model`):
 
@@ -168,9 +169,10 @@ weights `all.tot` and the angular tables with TALYS's abundances (`structure/abu
 | 10–15 | 82 | 2e-4 | 0.17 |
 | ≥ 15 | 90 | < 1e-8 | 0.004 |
 
-- Protons: at most 2 % (elastic) and 6 % (reaction, below 10 MeV).
+- Protons: per-set medians at most 2 % of the elastic data (back-angle points up to 19 %, 54Fe at 12 MeV), and up
+  to 6 % of σ_R (below 10 MeV).
 - 26 neutron sets have negative direct values somewhere; cut on `ce_fraction_model` as for ELM.
-- Where KDUQ and ELM share a system and energy, the CE agrees with ELM's cache (to 4e-7).
+- Where KDUQ and ELM share a system and energy, the CE agrees with ELM's (to 4e-7: output rounding).
 
 ```bash
 sbatch scripts/talys_compound.slurm      # compute node: run all three sectors (TALYS_ROOT: a TALYS build)

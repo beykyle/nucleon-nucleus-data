@@ -1,15 +1,6 @@
-# natural Cl: A = 35, abundance 0.757700
 projectile n
 element cl
-mass 35
-energy energies
-filetotal y
-outangle y
-fileelastic y
-# natural Cl: A = 37, abundance 0.242300
-projectile n
-element cl
-mass 37
+mass 0
 energy energies
 filetotal y
 outangle y
